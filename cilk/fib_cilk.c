@@ -15,8 +15,8 @@ int fib_small(int n) { // no serial fib. calc is offloaded
 
   int x, y;
   cilk_scope {
-    x = cilk_spawn fib_noif(n-1); // x and y assigned in parallel
-    y = fib_noif(n-2);
+    x = cilk_spawn fib_small(n-1); // x and y assigned in parallel
+    y = fib_small(n-2);
   }
   return x + y;
 }
