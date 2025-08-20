@@ -1,0 +1,117 @@
+2 threads -- >= 1 core
+cilkfor-count #0: (2) = 4951
+Time(cilkfor-count) = 0.149513688 sec
+
+cilkfor-count #1: (2) = 4951
+Time(cilkfor-count) = 0.001306170 sec
+
+cilkfor-count #2: (2) = 4951
+Time(cilkfor-count) = 0.000038230 sec
+
+cilkfor-count #3: (2) = 4951
+Time(cilkfor-count) = 0.000019390 sec
+
+4 threads -- >= 1 core
+cilkfor-count #0: (4) = 4953
+Time(cilkfor-count) = 0.145379816 sec
+
+cilkfor-count #1: (4) = 4953
+Time(cilkfor-count) = 0.001143370 sec
+
+cilkfor-count #2: (4) = 4953
+Time(cilkfor-count) = 0.000073570 sec
+
+cilkfor-count #3: (4) = 4953
+Time(cilkfor-count) = 0.000028460 sec
+
+8 threads -- >= 2 core
+cilkfor-count #0: (8) = 4957
+Time(cilkfor-count) = 0.149261507 sec
+
+cilkfor-count #1: (8) = 4957
+Time(cilkfor-count) = 0.001285460 sec
+
+cilkfor-count #2: (8) = 4957
+Time(cilkfor-count) = 0.000139400 sec
+
+cilkfor-count #3: (8) = 4957
+Time(cilkfor-count) = 0.000020300 sec
+
+16 threads -- >= 4 core
+cilkfor-count #0: (16) = 4965
+Time(cilkfor-count) = 0.144867476 sec
+
+cilkfor-count #1: (16) = 4965
+Time(cilkfor-count) = 0.001162321 sec
+
+cilkfor-count #2: (16) = 4965
+Time(cilkfor-count) = 0.000045400 sec
+
+cilkfor-count #3: (16) = 4965
+Time(cilkfor-count) = 0.000019200 sec
+
+32 threads -- >= 8 core
+cilkfor-count #0: (32) = 4981
+Time(cilkfor-count) = 0.149086577 sec
+
+cilkfor-count #1: (32) = 4981
+Time(cilkfor-count) = 0.001324001 sec
+
+cilkfor-count #2: (32) = 4981
+Time(cilkfor-count) = 0.000145590 sec
+
+cilkfor-count #3: (32) = 4981
+Time(cilkfor-count) = 0.000019390 sec
+
+64 threads -- >= 16 core
+cilkfor-count #0: (64) = 5013
+Time(cilkfor-count) = 0.145088466 sec
+
+cilkfor-count #1: (64) = 5013
+Time(cilkfor-count) = 0.001239481 sec
+
+cilkfor-count #2: (64) = 5013
+Time(cilkfor-count) = 0.000052130 sec
+
+cilkfor-count #3: (64) = 5013
+Time(cilkfor-count) = 0.000185220 sec
+
+128 threads -- >= 32 core
+cilkfor-count #0: (128) = 5077
+Time(cilkfor-count) = 0.151559289 sec
+
+cilkfor-count #1: (128) = 5077
+Time(cilkfor-count) = 0.001310541 sec
+
+cilkfor-count #2: (128) = 5077
+Time(cilkfor-count) = 0.000339560 sec
+
+cilkfor-count #3: (128) = 5077
+Time(cilkfor-count) = 0.000163930 sec
+
+256 threads -- >= 64 core
+cilkfor-count #0: (256) = 5205
+Time(cilkfor-count) = 0.144300045 sec
+
+cilkfor-count #1: (256) = 5205
+Time(cilkfor-count) = 0.001350961 sec
+
+cilkfor-count #2: (256) = 5205
+Time(cilkfor-count) = 0.000352830 sec
+
+cilkfor-count #3: (256) = 5205
+Time(cilkfor-count) = 0.000172240 sec
+
+272 threads -- >= 68 core
+cilkfor-count #0: (272) = 5221
+Time(cilkfor-count) = 0.150770038 sec
+
+cilkfor-count #1: (272) = 5221
+Time(cilkfor-count) = 0.001310991 sec
+
+cilkfor-count #2: (272) = 5221
+Time(cilkfor-count) = 0.000459790 sec
+
+cilkfor-count #3: (272) = 5221
+Time(cilkfor-count) = 0.000245260 sec
+

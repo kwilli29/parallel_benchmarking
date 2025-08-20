@@ -1,0 +1,36 @@
+2 threads -- >= 1 core
+while pt global counter no race_condition: (2) = 2
+Time(while pt global counter no race_condition) = 0.000923731 sec
+
+4 threads -- >= 1 core
+while pt global counter no race_condition: (4) = 4
+Time(while pt global counter no race_condition) = 0.001855781 sec
+
+8 threads -- >= 2 core
+while pt global counter no race_condition: (8) = 8
+Time(while pt global counter no race_condition) = 0.003241592 sec
+
+16 threads -- >= 4 core
+while pt global counter no race_condition: (16) = 16
+Time(while pt global counter no race_condition) = 0.006529054 sec
+
+32 threads -- >= 8 core
+while pt global counter no race_condition: (32) = 32
+Time(while pt global counter no race_condition) = 0.011595716 sec
+
+64 threads -- >= 16 core
+while pt global counter no race_condition: (64) = 64
+Time(while pt global counter no race_condition) = 0.022141152 sec
+
+128 threads -- >= 32 core
+while pt global counter no race_condition: (128) = 128
+Time(while pt global counter no race_condition) = 0.046311826 sec
+
+256 threads -- >= 64 core
+while pt global counter no race_condition: (256) = 256
+Time(while pt global counter no race_condition) = 0.091866040 sec
+
+272 threads -- >= 68 core
+while pt global counter no race_condition: (272) = 272
+Time(while pt global counter no race_condition) = 0.095091173 sec
+

@@ -1,0 +1,117 @@
+2 threads -- >= 1 core
+for-count cilk #0: (2) = 4951
+Time(for-count cilk) = 0.000000970 sec
+
+for-count cilk #1: (2) = 4951
+Time(for-count cilk) = 0.000000830 sec
+
+for-count cilk #2: (2) = 4951
+Time(for-count cilk) = 0.000000340 sec
+
+for-count cilk #3: (2) = 4951
+Time(for-count cilk) = 0.000000410 sec
+
+4 threads -- >= 1 core
+for-count cilk #0: (4) = 4953
+Time(for-count cilk) = 0.000000920 sec
+
+for-count cilk #1: (4) = 4953
+Time(for-count cilk) = 0.000000910 sec
+
+for-count cilk #2: (4) = 4953
+Time(for-count cilk) = 0.000000460 sec
+
+for-count cilk #3: (4) = 4953
+Time(for-count cilk) = 0.000000470 sec
+
+8 threads -- >= 2 core
+for-count cilk #0: (8) = 4957
+Time(for-count cilk) = 0.000001270 sec
+
+for-count cilk #1: (8) = 4957
+Time(for-count cilk) = 0.000001250 sec
+
+for-count cilk #2: (8) = 4957
+Time(for-count cilk) = 0.000000740 sec
+
+for-count cilk #3: (8) = 4957
+Time(for-count cilk) = 0.000000630 sec
+
+16 threads -- >= 4 core
+for-count cilk #0: (16) = 4965
+Time(for-count cilk) = 0.000001660 sec
+
+for-count cilk #1: (16) = 4965
+Time(for-count cilk) = 0.000001670 sec
+
+for-count cilk #2: (16) = 4965
+Time(for-count cilk) = 0.000001160 sec
+
+for-count cilk #3: (16) = 4965
+Time(for-count cilk) = 0.000001160 sec
+
+32 threads -- >= 8 core
+for-count cilk #0: (32) = 4981
+Time(for-count cilk) = 0.000002750 sec
+
+for-count cilk #1: (32) = 4981
+Time(for-count cilk) = 0.000002530 sec
+
+for-count cilk #2: (32) = 4981
+Time(for-count cilk) = 0.000002450 sec
+
+for-count cilk #3: (32) = 4981
+Time(for-count cilk) = 0.000002290 sec
+
+64 threads -- >= 16 core
+for-count cilk #0: (64) = 5013
+Time(for-count cilk) = 0.000005600 sec
+
+for-count cilk #1: (64) = 5013
+Time(for-count cilk) = 0.000004570 sec
+
+for-count cilk #2: (64) = 5013
+Time(for-count cilk) = 0.000004460 sec
+
+for-count cilk #3: (64) = 5013
+Time(for-count cilk) = 0.000004490 sec
+
+128 threads -- >= 32 core
+for-count cilk #0: (128) = 5077
+Time(for-count cilk) = 0.000009400 sec
+
+for-count cilk #1: (128) = 5077
+Time(for-count cilk) = 0.000009160 sec
+
+for-count cilk #2: (128) = 5077
+Time(for-count cilk) = 0.000013020 sec
+
+for-count cilk #3: (128) = 5077
+Time(for-count cilk) = 0.000008570 sec
+
+256 threads -- >= 64 core
+for-count cilk #0: (256) = 5205
+Time(for-count cilk) = 0.000022600 sec
+
+for-count cilk #1: (256) = 5205
+Time(for-count cilk) = 0.000019360 sec
+
+for-count cilk #2: (256) = 5205
+Time(for-count cilk) = 0.000017110 sec
+
+for-count cilk #3: (256) = 5205
+Time(for-count cilk) = 0.000018980 sec
+
+272 threads -- >= 68 core
+for-count cilk #0: (272) = 5221
+Time(for-count cilk) = 0.000023110 sec
+
+for-count cilk #1: (272) = 5221
+Time(for-count cilk) = 0.000018590 sec
+
+for-count cilk #2: (272) = 5221
+Time(for-count cilk) = 0.000018300 sec
+
+for-count cilk #3: (272) = 5221
+Time(for-count cilk) = 0.000018250 sec
+

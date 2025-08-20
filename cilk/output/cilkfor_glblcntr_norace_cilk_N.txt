@@ -1,0 +1,36 @@
+2 threads -- >= 1 core
+cilkfor gloabl counter NO race condtiion (2) = 2
+Time(cilkfor global counter NO race_condition) = 0.149153027 sec
+
+4 threads -- >= 1 core
+cilkfor gloabl counter NO race condtiion (4) = 4
+Time(cilkfor global counter NO race_condition) = 0.144548855 sec
+
+8 threads -- >= 2 core
+cilkfor gloabl counter NO race condtiion (8) = 8
+Time(cilkfor global counter NO race_condition) = 0.149587408 sec
+
+16 threads -- >= 4 core
+cilkfor gloabl counter NO race condtiion (16) = 16
+Time(cilkfor global counter NO race_condition) = 0.153965100 sec
+
+32 threads -- >= 8 core
+cilkfor gloabl counter NO race condtiion (32) = 32
+Time(cilkfor global counter NO race_condition) = 0.151867599 sec
+
+64 threads -- >= 16 core
+cilkfor gloabl counter NO race condtiion (64) = 64
+Time(cilkfor global counter NO race_condition) = 0.150443038 sec
+
+128 threads -- >= 32 core
+cilkfor gloabl counter NO race condtiion (128) = 128
+Time(cilkfor global counter NO race_condition) = 0.151249208 sec
+
+256 threads -- >= 64 core
+cilkfor gloabl counter NO race condtiion (256) = 256
+Time(cilkfor global counter NO race_condition) = 0.149349478 sec
+
+272 threads -- >= 68 core
+cilkfor gloabl counter NO race condtiion (272) = 272
+Time(cilkfor global counter NO race_condition) = 0.146860997 sec
+

@@ -1,0 +1,2418 @@
+2 threads -- >= 1 core
+
+Spawning thread: 0
+Time(threadroutine) = 0.000778371 sec
+
+Spawning thread: 1
+Time(threadroutine) = 0.000480390 sec
+
+ptfor  overall(2) = 0
+Time(ptfor overall) = 0.001301281 sec
+
+
+
+
+4 threads -- >= 1 core
+
+Spawning thread: 0
+Time(threadroutine) = 0.000791841 sec
+
+Spawning thread: 1
+Time(threadroutine) = 0.000351990 sec
+
+Spawning thread: 2
+Time(threadroutine) = 0.000389550 sec
+
+Spawning thread: 3
+Time(threadroutine) = 0.000423500 sec
+
+ptfor  overall(4) = 0
+Time(ptfor overall) = 0.002041901 sec
+
+
+
+
+8 threads -- >= 2 core
+
+Spawning thread: 0
+Time(threadroutine) = 0.000800361 sec
+
+Spawning thread: 1
+Time(threadroutine) = 0.000378450 sec
+
+Spawning thread: 2
+Time(threadroutine) = 0.000453850 sec
+
+Spawning thread: 3
+Time(threadroutine) = 0.000436600 sec
+
+Spawning thread: 4
+Time(threadroutine) = 0.000434701 sec
+
+Spawning thread: 5
+Time(threadroutine) = 0.000430720 sec
+
+Spawning thread: 6
+Time(threadroutine) = 0.000328080 sec
+
+Spawning thread: 7
+Time(threadroutine) = 0.000385940 sec
+
+ptfor  overall(8) = 0
+Time(ptfor overall) = 0.003726442 sec
+
+
+
+
+16 threads -- >= 4 core
+
+Spawning thread: 0
+Time(threadroutine) = 0.000873721 sec
+
+Spawning thread: 1
+Time(threadroutine) = 0.000543770 sec
+
+Spawning thread: 2
+Time(threadroutine) = 0.000468930 sec
+
+Spawning thread: 3
+Time(threadroutine) = 0.000404061 sec
+
+Spawning thread: 4
+Time(threadroutine) = 0.000432910 sec
+
+Spawning thread: 5
+Time(threadroutine) = 0.000372330 sec
+
+Spawning thread: 6
+Time(threadroutine) = 0.000457430 sec
+
+Spawning thread: 7
+Time(threadroutine) = 0.000319380 sec
+
+Spawning thread: 8
+Time(threadroutine) = 0.000369491 sec
+
+Spawning thread: 9
+Time(threadroutine) = 0.000331160 sec
+
+Spawning thread: 10
+Time(threadroutine) = 0.000308600 sec
+
+Spawning thread: 11
+Time(threadroutine) = 0.000374090 sec
+
+Spawning thread: 12
+Time(threadroutine) = 0.000334170 sec
+
+Spawning thread: 13
+Time(threadroutine) = 0.000289661 sec
+
+Spawning thread: 14
+Time(threadroutine) = 0.000397850 sec
+
+Spawning thread: 15
+Time(threadroutine) = 0.000314870 sec
+
+ptfor  overall(16) = 0
+Time(ptfor overall) = 0.006752614 sec
+
+
+
+
+32 threads -- >= 8 core
+
+Spawning thread: 0
+Time(threadroutine) = 0.000768750 sec
+
+Spawning thread: 1
+Time(threadroutine) = 0.000419020 sec
+
+Spawning thread: 2
+Time(threadroutine) = 0.000439231 sec
+
+Spawning thread: 3
+Time(threadroutine) = 0.000443580 sec
+
+Spawning thread: 4
+Time(threadroutine) = 0.000410110 sec
+
+Spawning thread: 5
+Time(threadroutine) = 0.000421730 sec
+
+Spawning thread: 6
+Time(threadroutine) = 0.000475840 sec
+
+Spawning thread: 7
+Time(threadroutine) = 0.000341731 sec
+
+Spawning thread: 8
+Time(threadroutine) = 0.000341830 sec
+
+Spawning thread: 9
+Time(threadroutine) = 0.000322930 sec
+
+Spawning thread: 10
+Time(threadroutine) = 0.000341620 sec
+
+Spawning thread: 11
+Time(threadroutine) = 0.000342450 sec
+
+Spawning thread: 12
+Time(threadroutine) = 0.000291331 sec
+
+Spawning thread: 13
+Time(threadroutine) = 0.000423510 sec
+
+Spawning thread: 14
+Time(threadroutine) = 0.000322380 sec
+
+Spawning thread: 15
+Time(threadroutine) = 0.000298120 sec
+
+Spawning thread: 16
+Time(threadroutine) = 0.000352360 sec
+
+Spawning thread: 17
+Time(threadroutine) = 0.000336121 sec
+
+Spawning thread: 18
+Time(threadroutine) = 0.000288010 sec
+
+Spawning thread: 19
+Time(threadroutine) = 0.000422690 sec
+
+Spawning thread: 20
+Time(threadroutine) = 0.000537240 sec
+
+Spawning thread: 21
+Time(threadroutine) = 0.000525111 sec
+
+Spawning thread: 22
+Time(threadroutine) = 0.000457550 sec
+
+Spawning thread: 23
+Time(threadroutine) = 0.000410400 sec
+
+Spawning thread: 24
+Time(threadroutine) = 0.000447490 sec
+
+Spawning thread: 25
+Time(threadroutine) = 0.000306351 sec
+
+Spawning thread: 26
+Time(threadroutine) = 0.000340770 sec
+
+Spawning thread: 27
+Time(threadroutine) = 0.000322260 sec
+
+Spawning thread: 28
+Time(threadroutine) = 0.000255820 sec
+
+Spawning thread: 29
+Time(threadroutine) = 0.000347630 sec
+
+Spawning thread: 30
+Time(threadroutine) = 0.000368970 sec
+
+Spawning thread: 31
+Time(threadroutine) = 0.000447121 sec
+
+ptfor  overall(32) = 0
+Time(ptfor overall) = 0.012943817 sec
+
+
+
+
+64 threads -- >= 16 core
+
+Spawning thread: 0
+Time(threadroutine) = 0.000702370 sec
+
+Spawning thread: 1
+Time(threadroutine) = 0.000428670 sec
+
+Spawning thread: 2
+Time(threadroutine) = 0.000492340 sec
+
+Spawning thread: 3
+Time(threadroutine) = 0.000418681 sec
+
+Spawning thread: 4
+Time(threadroutine) = 0.000457660 sec
+
+Spawning thread: 5
+Time(threadroutine) = 0.000332290 sec
+
+Spawning thread: 6
+Time(threadroutine) = 0.000363520 sec
+
+Spawning thread: 7
+Time(threadroutine) = 0.000319760 sec
+
+Spawning thread: 8
+Time(threadroutine) = 0.000303181 sec
+
+Spawning thread: 9
+Time(threadroutine) = 0.000333920 sec
+
+Spawning thread: 10
+Time(threadroutine) = 0.000304990 sec
+
+Spawning thread: 11
+Time(threadroutine) = 0.000299830 sec
+
+Spawning thread: 12
+Time(threadroutine) = 0.000355180 sec
+
+Spawning thread: 13
+Time(threadroutine) = 0.000308521 sec
+
+Spawning thread: 14
+Time(threadroutine) = 0.000320420 sec
+
+Spawning thread: 15
+Time(threadroutine) = 0.000370940 sec
+
+Spawning thread: 16
+Time(threadroutine) = 0.000317040 sec
+
+Spawning thread: 17
+Time(threadroutine) = 0.000302940 sec
+
+Spawning thread: 18
+Time(threadroutine) = 0.000330730 sec
+
+Spawning thread: 19
+Time(threadroutine) = 0.000315771 sec
+
+Spawning thread: 20
+Time(threadroutine) = 0.000304070 sec
+
+Spawning thread: 21
+Time(threadroutine) = 0.000384280 sec
+
+Spawning thread: 22
+Time(threadroutine) = 0.000303430 sec
+
+Spawning thread: 23
+Time(threadroutine) = 0.000301020 sec
+
+Spawning thread: 24
+Time(threadroutine) = 0.000374911 sec
+
+Spawning thread: 25
+Time(threadroutine) = 0.000298240 sec
+
+Spawning thread: 26
+Time(threadroutine) = 0.000295230 sec
+
+Spawning thread: 27
+Time(threadroutine) = 0.000365190 sec
+
+Spawning thread: 28
+Time(threadroutine) = 0.000315100 sec
+
+Spawning thread: 29
+Time(threadroutine) = 0.000219790 sec
+
+Spawning thread: 30
+Time(threadroutine) = 0.000343861 sec
+
+Spawning thread: 31
+Time(threadroutine) = 0.000331950 sec
+
+Spawning thread: 32
+Time(threadroutine) = 0.000298610 sec
+
+Spawning thread: 33
+Time(threadroutine) = 0.000363700 sec
+
+Spawning thread: 34
+Time(threadroutine) = 0.000511970 sec
+
+Spawning thread: 35
+Time(threadroutine) = 0.000582060 sec
+
+Spawning thread: 36
+Time(threadroutine) = 0.000552040 sec
+
+Spawning thread: 37
+Time(threadroutine) = 0.000587450 sec
+
+Spawning thread: 38
+Time(threadroutine) = 0.000545171 sec
+
+Spawning thread: 39
+Time(threadroutine) = 0.000491740 sec
+
+Spawning thread: 40
+Time(threadroutine) = 0.000299470 sec
+
+Spawning thread: 41
+Time(threadroutine) = 0.000343770 sec
+
+Spawning thread: 42
+Time(threadroutine) = 0.000342691 sec
+
+Spawning thread: 43
+Time(threadroutine) = 0.000311110 sec
+
+Spawning thread: 44
+Time(threadroutine) = 0.000362190 sec
+
+Spawning thread: 45
+Time(threadroutine) = 0.000307540 sec
+
+Spawning thread: 46
+Time(threadroutine) = 0.000290650 sec
+
+Spawning thread: 47
+Time(threadroutine) = 0.000369601 sec
+
+Spawning thread: 48
+Time(threadroutine) = 0.000292670 sec
+
+Spawning thread: 49
+Time(threadroutine) = 0.000294100 sec
+
+Spawning thread: 50
+Time(threadroutine) = 0.000312480 sec
+
+Spawning thread: 51
+Time(threadroutine) = 0.000309310 sec
+
+Spawning thread: 52
+Time(threadroutine) = 0.000306450 sec
+
+Spawning thread: 53
+Time(threadroutine) = 0.000351971 sec
+
+Spawning thread: 54
+Time(threadroutine) = 0.000356140 sec
+
+Spawning thread: 55
+Time(threadroutine) = 0.000303230 sec
+
+Spawning thread: 56
+Time(threadroutine) = 0.000357090 sec
+
+Spawning thread: 57
+Time(threadroutine) = 0.000359470 sec
+
+Spawning thread: 58
+Time(threadroutine) = 0.000292451 sec
+
+Spawning thread: 59
+Time(threadroutine) = 0.000352840 sec
+
+Spawning thread: 60
+Time(threadroutine) = 0.000346900 sec
+
+Spawning thread: 61
+Time(threadroutine) = 0.000290030 sec
+
+Spawning thread: 62
+Time(threadroutine) = 0.000349270 sec
+
+Spawning thread: 63
+Time(threadroutine) = 0.000298960 sec
+
+ptfor  overall(64) = 0
+Time(ptfor overall) = 0.023517962 sec
+
+
+
+
+128 threads -- >= 32 core
+
+Spawning thread: 0
+Time(threadroutine) = 0.000865001 sec
+
+Spawning thread: 1
+Time(threadroutine) = 0.000359600 sec
+
+Spawning thread: 2
+Time(threadroutine) = 0.000505430 sec
+
+Spawning thread: 3
+Time(threadroutine) = 0.000473071 sec
+
+Spawning thread: 4
+Time(threadroutine) = 0.000435300 sec
+
+Spawning thread: 5
+Time(threadroutine) = 0.000479880 sec
+
+Spawning thread: 6
+Time(threadroutine) = 0.000333510 sec
+
+Spawning thread: 7
+Time(threadroutine) = 0.000373030 sec
+
+Spawning thread: 8
+Time(threadroutine) = 0.000329741 sec
+
+Spawning thread: 9
+Time(threadroutine) = 0.000376800 sec
+
+Spawning thread: 10
+Time(threadroutine) = 0.000352910 sec
+
+Spawning thread: 11
+Time(threadroutine) = 0.000313980 sec
+
+Spawning thread: 12
+Time(threadroutine) = 0.000358790 sec
+
+Spawning thread: 13
+Time(threadroutine) = 0.000336391 sec
+
+Spawning thread: 14
+Time(threadroutine) = 0.000316510 sec
+
+Spawning thread: 15
+Time(threadroutine) = 0.000346130 sec
+
+Spawning thread: 16
+Time(threadroutine) = 0.000326660 sec
+
+Spawning thread: 17
+Time(threadroutine) = 0.000300050 sec
+
+Spawning thread: 18
+Time(threadroutine) = 0.000354551 sec
+
+Spawning thread: 19
+Time(threadroutine) = 0.000329000 sec
+
+Spawning thread: 20
+Time(threadroutine) = 0.000304980 sec
+
+Spawning thread: 21
+Time(threadroutine) = 0.000339270 sec
+
+Spawning thread: 22
+Time(threadroutine) = 0.000336220 sec
+
+Spawning thread: 23
+Time(threadroutine) = 0.000307471 sec
+
+Spawning thread: 24
+Time(threadroutine) = 0.000288860 sec
+
+Spawning thread: 25
+Time(threadroutine) = 0.000332430 sec
+
+Spawning thread: 26
+Time(threadroutine) = 0.000308760 sec
+
+Spawning thread: 27
+Time(threadroutine) = 0.000339980 sec
+
+Spawning thread: 28
+Time(threadroutine) = 0.000336510 sec
+
+Spawning thread: 29
+Time(threadroutine) = 0.000323301 sec
+
+Spawning thread: 30
+Time(threadroutine) = 0.000362050 sec
+
+Spawning thread: 31
+Time(threadroutine) = 0.000342550 sec
+
+Spawning thread: 32
+Time(threadroutine) = 0.000288880 sec
+
+Spawning thread: 33
+Time(threadroutine) = 0.000341080 sec
+
+Spawning thread: 34
+Time(threadroutine) = 0.000373551 sec
+
+Spawning thread: 35
+Time(threadroutine) = 0.000360470 sec
+
+Spawning thread: 36
+Time(threadroutine) = 0.000610350 sec
+
+Spawning thread: 37
+Time(threadroutine) = 0.000636890 sec
+
+Spawning thread: 38
+Time(threadroutine) = 0.000581241 sec
+
+Spawning thread: 39
+Time(threadroutine) = 0.000523850 sec
+
+Spawning thread: 40
+Time(threadroutine) = 0.000321360 sec
+
+Spawning thread: 41
+Time(threadroutine) = 0.000323320 sec
+
+Spawning thread: 42
+Time(threadroutine) = 0.000348041 sec
+
+Spawning thread: 43
+Time(threadroutine) = 0.000320370 sec
+
+Spawning thread: 44
+Time(threadroutine) = 0.000338100 sec
+
+Spawning thread: 45
+Time(threadroutine) = 0.000415770 sec
+
+Spawning thread: 46
+Time(threadroutine) = 0.000558201 sec
+
+Spawning thread: 47
+Time(threadroutine) = 0.000585980 sec
+
+Spawning thread: 48
+Time(threadroutine) = 0.000597630 sec
+
+Spawning thread: 49
+Time(threadroutine) = 0.000576331 sec
+
+Spawning thread: 50
+Time(threadroutine) = 0.000608250 sec
+
+Spawning thread: 51
+Time(threadroutine) = 0.000557970 sec
+
+Spawning thread: 52
+Time(threadroutine) = 0.000583251 sec
+
+Spawning thread: 53
+Time(threadroutine) = 0.000531280 sec
+
+Spawning thread: 54
+Time(threadroutine) = 0.000348530 sec
+
+Spawning thread: 55
+Time(threadroutine) = 0.000295870 sec
+
+Spawning thread: 56
+Time(threadroutine) = 0.000368770 sec
+
+Spawning thread: 57
+Time(threadroutine) = 0.000427111 sec
+
+Spawning thread: 58
+Time(threadroutine) = 0.000587200 sec
+
+Spawning thread: 59
+Time(threadroutine) = 0.000567680 sec
+
+Spawning thread: 60
+Time(threadroutine) = 0.000525471 sec
+
+Spawning thread: 61
+Time(threadroutine) = 0.000311420 sec
+
+Spawning thread: 62
+Time(threadroutine) = 0.000328070 sec
+
+Spawning thread: 63
+Time(threadroutine) = 0.000351380 sec
+
+Spawning thread: 64
+Time(threadroutine) = 0.000311770 sec
+
+Spawning thread: 65
+Time(threadroutine) = 0.000350551 sec
+
+Spawning thread: 66
+Time(threadroutine) = 0.000417890 sec
+
+Spawning thread: 67
+Time(threadroutine) = 0.000559420 sec
+
+Spawning thread: 68
+Time(threadroutine) = 0.000596480 sec
+
+Spawning thread: 69
+Time(threadroutine) = 0.000601711 sec
+
+Spawning thread: 70
+Time(threadroutine) = 0.000512610 sec
+
+Spawning thread: 71
+Time(threadroutine) = 0.000352680 sec
+
+Spawning thread: 72
+Time(threadroutine) = 0.000311041 sec
+
+Spawning thread: 73
+Time(threadroutine) = 0.000359010 sec
+
+Spawning thread: 74
+Time(threadroutine) = 0.000356190 sec
+
+Spawning thread: 75
+Time(threadroutine) = 0.000314210 sec
+
+Spawning thread: 76
+Time(threadroutine) = 0.000396350 sec
+
+Spawning thread: 77
+Time(threadroutine) = 0.000379501 sec
+
+Spawning thread: 78
+Time(threadroutine) = 0.000312060 sec
+
+Spawning thread: 79
+Time(threadroutine) = 0.000333310 sec
+
+Spawning thread: 80
+Time(threadroutine) = 0.000342380 sec
+
+Spawning thread: 81
+Time(threadroutine) = 0.000292230 sec
+
+Spawning thread: 82
+Time(threadroutine) = 0.000385001 sec
+
+Spawning thread: 83
+Time(threadroutine) = 0.000353260 sec
+
+Spawning thread: 84
+Time(threadroutine) = 0.000292880 sec
+
+Spawning thread: 85
+Time(threadroutine) = 0.000363940 sec
+
+Spawning thread: 86
+Time(threadroutine) = 0.000302630 sec
+
+Spawning thread: 87
+Time(threadroutine) = 0.000300230 sec
+
+Spawning thread: 88
+Time(threadroutine) = 0.000368901 sec
+
+Spawning thread: 89
+Time(threadroutine) = 0.000307070 sec
+
+Spawning thread: 90
+Time(threadroutine) = 0.000299700 sec
+
+Spawning thread: 91
+Time(threadroutine) = 0.000398960 sec
+
+Spawning thread: 92
+Time(threadroutine) = 0.000311750 sec
+
+Spawning thread: 93
+Time(threadroutine) = 0.000303921 sec
+
+Spawning thread: 94
+Time(threadroutine) = 0.000331650 sec
+
+Spawning thread: 95
+Time(threadroutine) = 0.000307190 sec
+
+Spawning thread: 96
+Time(threadroutine) = 0.000301360 sec
+
+Spawning thread: 97
+Time(threadroutine) = 0.000376920 sec
+
+Spawning thread: 98
+Time(threadroutine) = 0.000310770 sec
+
+Spawning thread: 99
+Time(threadroutine) = 0.000311341 sec
+
+Spawning thread: 100
+Time(threadroutine) = 0.000371430 sec
+
+Spawning thread: 101
+Time(threadroutine) = 0.000314880 sec
+
+Spawning thread: 102
+Time(threadroutine) = 0.000296280 sec
+
+Spawning thread: 103
+Time(threadroutine) = 0.000366210 sec
+
+Spawning thread: 104
+Time(threadroutine) = 0.000296371 sec
+
+Spawning thread: 105
+Time(threadroutine) = 0.000302110 sec
+
+Spawning thread: 106
+Time(threadroutine) = 0.000366340 sec
+
+Spawning thread: 107
+Time(threadroutine) = 0.000296120 sec
+
+Spawning thread: 108
+Time(threadroutine) = 0.000296280 sec
+
+Spawning thread: 109
+Time(threadroutine) = 0.000303370 sec
+
+Spawning thread: 110
+Time(threadroutine) = 0.000309181 sec
+
+Spawning thread: 111
+Time(threadroutine) = 0.000292090 sec
+
+Spawning thread: 112
+Time(threadroutine) = 0.000371170 sec
+
+Spawning thread: 113
+Time(threadroutine) = 0.000351050 sec
+
+Spawning thread: 114
+Time(threadroutine) = 0.000294330 sec
+
+Spawning thread: 115
+Time(threadroutine) = 0.000329271 sec
+
+Spawning thread: 116
+Time(threadroutine) = 0.000354930 sec
+
+Spawning thread: 117
+Time(threadroutine) = 0.000305610 sec
+
+Spawning thread: 118
+Time(threadroutine) = 0.000359750 sec
+
+Spawning thread: 119
+Time(threadroutine) = 0.000348590 sec
+
+Spawning thread: 120
+Time(threadroutine) = 0.000311920 sec
+
+Spawning thread: 121
+Time(threadroutine) = 0.000376201 sec
+
+Spawning thread: 122
+Time(threadroutine) = 0.000307270 sec
+
+Spawning thread: 123
+Time(threadroutine) = 0.000302400 sec
+
+Spawning thread: 124
+Time(threadroutine) = 0.000324080 sec
+
+Spawning thread: 125
+Time(threadroutine) = 0.000347920 sec
+
+Spawning thread: 126
+Time(threadroutine) = 0.000298841 sec
+
+Spawning thread: 127
+Time(threadroutine) = 0.000380410 sec
+
+ptfor  overall(128) = 0
+Time(ptfor overall) = 0.049798448 sec
+
+
+
+
+256 threads -- >= 64 core
+
+Spawning thread: 0
+Time(threadroutine) = 0.000748161 sec
+
+Spawning thread: 1
+Time(threadroutine) = 0.000524050 sec
+
+Spawning thread: 2
+Time(threadroutine) = 0.000607790 sec
+
+Spawning thread: 3
+Time(threadroutine) = 0.000501661 sec
+
+Spawning thread: 4
+Time(threadroutine) = 0.000458630 sec
+
+Spawning thread: 5
+Time(threadroutine) = 0.000509710 sec
+
+Spawning thread: 6
+Time(threadroutine) = 0.000366920 sec
+
+Spawning thread: 7
+Time(threadroutine) = 0.000343161 sec
+
+Spawning thread: 8
+Time(threadroutine) = 0.000321290 sec
+
+Spawning thread: 9
+Time(threadroutine) = 0.000366700 sec
+
+Spawning thread: 10
+Time(threadroutine) = 0.000341620 sec
+
+Spawning thread: 11
+Time(threadroutine) = 0.000309900 sec
+
+Spawning thread: 12
+Time(threadroutine) = 0.000357911 sec
+
+Spawning thread: 13
+Time(threadroutine) = 0.000368910 sec
+
+Spawning thread: 14
+Time(threadroutine) = 0.000314270 sec
+
+Spawning thread: 15
+Time(threadroutine) = 0.000358770 sec
+
+Spawning thread: 16
+Time(threadroutine) = 0.000573240 sec
+
+Spawning thread: 17
+Time(threadroutine) = 0.000613541 sec
+
+Spawning thread: 18
+Time(threadroutine) = 0.000591070 sec
+
+Spawning thread: 19
+Time(threadroutine) = 0.000596360 sec
+
+Spawning thread: 20
+Time(threadroutine) = 0.000507661 sec
+
+Spawning thread: 21
+Time(threadroutine) = 0.000350880 sec
+
+Spawning thread: 22
+Time(threadroutine) = 0.000322570 sec
+
+Spawning thread: 23
+Time(threadroutine) = 0.000357280 sec
+
+Spawning thread: 24
+Time(threadroutine) = 0.000360261 sec
+
+Spawning thread: 25
+Time(threadroutine) = 0.000306980 sec
+
+Spawning thread: 26
+Time(threadroutine) = 0.000366850 sec
+
+Spawning thread: 27
+Time(threadroutine) = 0.000365880 sec
+
+Spawning thread: 28
+Time(threadroutine) = 0.000581930 sec
+
+Spawning thread: 29
+Time(threadroutine) = 0.000509471 sec
+
+Spawning thread: 30
+Time(threadroutine) = 0.000425460 sec
+
+Spawning thread: 31
+Time(threadroutine) = 0.000522170 sec
+
+Spawning thread: 32
+Time(threadroutine) = 0.000459060 sec
+
+Spawning thread: 33
+Time(threadroutine) = 0.000503820 sec
+
+Spawning thread: 34
+Time(threadroutine) = 0.000375650 sec
+
+Spawning thread: 35
+Time(threadroutine) = 0.000361960 sec
+
+Spawning thread: 36
+Time(threadroutine) = 0.000311720 sec
+
+Spawning thread: 37
+Time(threadroutine) = 0.000353341 sec
+
+Spawning thread: 38
+Time(threadroutine) = 0.000425520 sec
+
+Spawning thread: 39
+Time(threadroutine) = 0.000609170 sec
+
+Spawning thread: 40
+Time(threadroutine) = 0.000509070 sec
+
+Spawning thread: 41
+Time(threadroutine) = 0.000368281 sec
+
+Spawning thread: 42
+Time(threadroutine) = 0.000357800 sec
+
+Spawning thread: 43
+Time(threadroutine) = 0.000317480 sec
+
+Spawning thread: 44
+Time(threadroutine) = 0.000460270 sec
+
+Spawning thread: 45
+Time(threadroutine) = 0.000599001 sec
+
+Spawning thread: 46
+Time(threadroutine) = 0.000539940 sec
+
+Spawning thread: 47
+Time(threadroutine) = 0.000312630 sec
+
+Spawning thread: 48
+Time(threadroutine) = 0.000370570 sec
+
+Spawning thread: 49
+Time(threadroutine) = 0.000435791 sec
+
+Spawning thread: 50
+Time(threadroutine) = 0.000523140 sec
+
+Spawning thread: 51
+Time(threadroutine) = 0.000346660 sec
+
+Spawning thread: 52
+Time(threadroutine) = 0.000318860 sec
+
+Spawning thread: 53
+Time(threadroutine) = 0.000440750 sec
+
+Spawning thread: 54
+Time(threadroutine) = 0.000590351 sec
+
+Spawning thread: 55
+Time(threadroutine) = 0.000525030 sec
+
+Spawning thread: 56
+Time(threadroutine) = 0.000309270 sec
+
+Spawning thread: 57
+Time(threadroutine) = 0.000357711 sec
+
+Spawning thread: 58
+Time(threadroutine) = 0.000349890 sec
+
+Spawning thread: 59
+Time(threadroutine) = 0.000307410 sec
+
+Spawning thread: 60
+Time(threadroutine) = 0.000423250 sec
+
+Spawning thread: 61
+Time(threadroutine) = 0.000516020 sec
+
+Spawning thread: 62
+Time(threadroutine) = 0.000431611 sec
+
+Spawning thread: 63
+Time(threadroutine) = 0.000517700 sec
+
+Spawning thread: 64
+Time(threadroutine) = 0.000328490 sec
+
+Spawning thread: 65
+Time(threadroutine) = 0.000355660 sec
+
+Spawning thread: 66
+Time(threadroutine) = 0.000317631 sec
+
+Spawning thread: 67
+Time(threadroutine) = 0.000389360 sec
+
+Spawning thread: 68
+Time(threadroutine) = 0.000509060 sec
+
+Spawning thread: 69
+Time(threadroutine) = 0.000302670 sec
+
+Spawning thread: 70
+Time(threadroutine) = 0.000362851 sec
+
+Spawning thread: 71
+Time(threadroutine) = 0.000308470 sec
+
+Spawning thread: 72
+Time(threadroutine) = 0.000311390 sec
+
+Spawning thread: 73
+Time(threadroutine) = 0.000318350 sec
+
+Spawning thread: 74
+Time(threadroutine) = 0.000312440 sec
+
+Spawning thread: 75
+Time(threadroutine) = 0.000350730 sec
+
+Spawning thread: 76
+Time(threadroutine) = 0.000356771 sec
+
+Spawning thread: 77
+Time(threadroutine) = 0.000317730 sec
+
+Spawning thread: 78
+Time(threadroutine) = 0.000354500 sec
+
+Spawning thread: 79
+Time(threadroutine) = 0.000347670 sec
+
+Spawning thread: 80
+Time(threadroutine) = 0.000313600 sec
+
+Spawning thread: 81
+Time(threadroutine) = 0.000364381 sec
+
+Spawning thread: 82
+Time(threadroutine) = 0.000315110 sec
+
+Spawning thread: 83
+Time(threadroutine) = 0.000305360 sec
+
+Spawning thread: 84
+Time(threadroutine) = 0.000371220 sec
+
+Spawning thread: 85
+Time(threadroutine) = 0.000311830 sec
+
+Spawning thread: 86
+Time(threadroutine) = 0.000308500 sec
+
+Spawning thread: 87
+Time(threadroutine) = 0.000371471 sec
+
+Spawning thread: 88
+Time(threadroutine) = 0.000306040 sec
+
+Spawning thread: 89
+Time(threadroutine) = 0.000312290 sec
+
+Spawning thread: 90
+Time(threadroutine) = 0.000359450 sec
+
+Spawning thread: 91
+Time(threadroutine) = 0.000313670 sec
+
+Spawning thread: 92
+Time(threadroutine) = 0.000306791 sec
+
+Spawning thread: 93
+Time(threadroutine) = 0.000374410 sec
+
+Spawning thread: 94
+Time(threadroutine) = 0.000314260 sec
+
+Spawning thread: 95
+Time(threadroutine) = 0.000298960 sec
+
+Spawning thread: 96
+Time(threadroutine) = 0.000360210 sec
+
+Spawning thread: 97
+Time(threadroutine) = 0.000308711 sec
+
+Spawning thread: 98
+Time(threadroutine) = 0.000320050 sec
+
+Spawning thread: 99
+Time(threadroutine) = 0.000340830 sec
+
+Spawning thread: 100
+Time(threadroutine) = 0.000308230 sec
+
+Spawning thread: 101
+Time(threadroutine) = 0.000330420 sec
+
+Spawning thread: 102
+Time(threadroutine) = 0.000352260 sec
+
+Spawning thread: 103
+Time(threadroutine) = 0.000313790 sec
+
+Spawning thread: 104
+Time(threadroutine) = 0.000340630 sec
+
+Spawning thread: 105
+Time(threadroutine) = 0.000354900 sec
+
+Spawning thread: 106
+Time(threadroutine) = 0.000308260 sec
+
+Spawning thread: 107
+Time(threadroutine) = 0.000335460 sec
+
+Spawning thread: 108
+Time(threadroutine) = 0.000359281 sec
+
+Spawning thread: 109
+Time(threadroutine) = 0.000312970 sec
+
+Spawning thread: 110
+Time(threadroutine) = 0.000368320 sec
+
+Spawning thread: 111
+Time(threadroutine) = 0.000344520 sec
+
+Spawning thread: 112
+Time(threadroutine) = 0.000311500 sec
+
+Spawning thread: 113
+Time(threadroutine) = 0.000363831 sec
+
+Spawning thread: 114
+Time(threadroutine) = 0.000341810 sec
+
+Spawning thread: 115
+Time(threadroutine) = 0.000317170 sec
+
+Spawning thread: 116
+Time(threadroutine) = 0.000311150 sec
+
+Spawning thread: 117
+Time(threadroutine) = 0.000350700 sec
+
+Spawning thread: 118
+Time(threadroutine) = 0.000311011 sec
+
+Spawning thread: 119
+Time(threadroutine) = 0.000274810 sec
+
+Spawning thread: 120
+Time(threadroutine) = 0.000422560 sec
+
+Spawning thread: 121
+Time(threadroutine) = 0.000618500 sec
+
+Spawning thread: 122
+Time(threadroutine) = 0.000614921 sec
+
+Spawning thread: 123
+Time(threadroutine) = 0.000549740 sec
+
+Spawning thread: 124
+Time(threadroutine) = 0.000314550 sec
+
+Spawning thread: 125
+Time(threadroutine) = 0.000346070 sec
+
+Spawning thread: 126
+Time(threadroutine) = 0.000432101 sec
+
+Spawning thread: 127
+Time(threadroutine) = 0.000593510 sec
+
+Spawning thread: 128
+Time(threadroutine) = 0.000614120 sec
+
+Spawning thread: 129
+Time(threadroutine) = 0.000557611 sec
+
+Spawning thread: 130
+Time(threadroutine) = 0.000554390 sec
+
+Spawning thread: 131
+Time(threadroutine) = 0.000637410 sec
+
+Spawning thread: 132
+Time(threadroutine) = 0.000615921 sec
+
+Spawning thread: 133
+Time(threadroutine) = 0.000607350 sec
+
+Spawning thread: 134
+Time(threadroutine) = 0.000552410 sec
+
+Spawning thread: 135
+Time(threadroutine) = 0.000309030 sec
+
+Spawning thread: 136
+Time(threadroutine) = 0.000304131 sec
+
+Spawning thread: 137
+Time(threadroutine) = 0.000358600 sec
+
+Spawning thread: 138
+Time(threadroutine) = 0.000322970 sec
+
+Spawning thread: 139
+Time(threadroutine) = 0.000359560 sec
+
+Spawning thread: 140
+Time(threadroutine) = 0.000356470 sec
+
+Spawning thread: 141
+Time(threadroutine) = 0.000314841 sec
+
+Spawning thread: 142
+Time(threadroutine) = 0.000380960 sec
+
+Spawning thread: 143
+Time(threadroutine) = 0.000317630 sec
+
+Spawning thread: 144
+Time(threadroutine) = 0.000311330 sec
+
+Spawning thread: 145
+Time(threadroutine) = 0.000334290 sec
+
+Spawning thread: 146
+Time(threadroutine) = 0.000312411 sec
+
+Spawning thread: 147
+Time(threadroutine) = 0.000304750 sec
+
+Spawning thread: 148
+Time(threadroutine) = 0.000368750 sec
+
+Spawning thread: 149
+Time(threadroutine) = 0.000320700 sec
+
+Spawning thread: 150
+Time(threadroutine) = 0.000330280 sec
+
+Spawning thread: 151
+Time(threadroutine) = 0.000342091 sec
+
+Spawning thread: 152
+Time(threadroutine) = 0.000320120 sec
+
+Spawning thread: 153
+Time(threadroutine) = 0.000378810 sec
+
+Spawning thread: 154
+Time(threadroutine) = 0.000354950 sec
+
+Spawning thread: 155
+Time(threadroutine) = 0.000310560 sec
+
+Spawning thread: 156
+Time(threadroutine) = 0.000361690 sec
+
+Spawning thread: 157
+Time(threadroutine) = 0.000356461 sec
+
+Spawning thread: 158
+Time(threadroutine) = 0.000306140 sec
+
+Spawning thread: 159
+Time(threadroutine) = 0.000342720 sec
+
+Spawning thread: 160
+Time(threadroutine) = 0.000338680 sec
+
+Spawning thread: 161
+Time(threadroutine) = 0.000309820 sec
+
+Spawning thread: 162
+Time(threadroutine) = 0.000355591 sec
+
+Spawning thread: 163
+Time(threadroutine) = 0.000321210 sec
+
+Spawning thread: 164
+Time(threadroutine) = 0.000308330 sec
+
+Spawning thread: 165
+Time(threadroutine) = 0.000354660 sec
+
+Spawning thread: 166
+Time(threadroutine) = 0.000349790 sec
+
+Spawning thread: 167
+Time(threadroutine) = 0.000315601 sec
+
+Spawning thread: 168
+Time(threadroutine) = 0.000325070 sec
+
+Spawning thread: 169
+Time(threadroutine) = 0.000352890 sec
+
+Spawning thread: 170
+Time(threadroutine) = 0.000324500 sec
+
+Spawning thread: 171
+Time(threadroutine) = 0.000353090 sec
+
+Spawning thread: 172
+Time(threadroutine) = 0.000349781 sec
+
+Spawning thread: 173
+Time(threadroutine) = 0.000315160 sec
+
+Spawning thread: 174
+Time(threadroutine) = 0.000361970 sec
+
+Spawning thread: 175
+Time(threadroutine) = 0.000310930 sec
+
+Spawning thread: 176
+Time(threadroutine) = 0.000307360 sec
+
+Spawning thread: 177
+Time(threadroutine) = 0.000384131 sec
+
+Spawning thread: 178
+Time(threadroutine) = 0.000317340 sec
+
+Spawning thread: 179
+Time(threadroutine) = 0.000292850 sec
+
+Spawning thread: 180
+Time(threadroutine) = 0.000365830 sec
+
+Spawning thread: 181
+Time(threadroutine) = 0.000326930 sec
+
+Spawning thread: 182
+Time(threadroutine) = 0.000307120 sec
+
+Spawning thread: 183
+Time(threadroutine) = 0.000370721 sec
+
+Spawning thread: 184
+Time(threadroutine) = 0.000310300 sec
+
+Spawning thread: 185
+Time(threadroutine) = 0.000329520 sec
+
+Spawning thread: 186
+Time(threadroutine) = 0.000374940 sec
+
+Spawning thread: 187
+Time(threadroutine) = 0.000313610 sec
+
+Spawning thread: 188
+Time(threadroutine) = 0.000382081 sec
+
+Spawning thread: 189
+Time(threadroutine) = 0.000587230 sec
+
+Spawning thread: 190
+Time(threadroutine) = 0.000572400 sec
+
+Spawning thread: 191
+Time(threadroutine) = 0.000618291 sec
+
+Spawning thread: 192
+Time(threadroutine) = 0.000642920 sec
+
+Spawning thread: 193
+Time(threadroutine) = 0.000668270 sec
+
+Spawning thread: 194
+Time(threadroutine) = 0.000611321 sec
+
+Spawning thread: 195
+Time(threadroutine) = 0.000638400 sec
+
+Spawning thread: 196
+Time(threadroutine) = 0.000632820 sec
+
+Spawning thread: 197
+Time(threadroutine) = 0.000524081 sec
+
+Spawning thread: 198
+Time(threadroutine) = 0.000385490 sec
+
+Spawning thread: 199
+Time(threadroutine) = 0.000360140 sec
+
+Spawning thread: 200
+Time(threadroutine) = 0.000319980 sec
+
+Spawning thread: 201
+Time(threadroutine) = 0.000376950 sec
+
+Spawning thread: 202
+Time(threadroutine) = 0.000427391 sec
+
+Spawning thread: 203
+Time(threadroutine) = 0.000661780 sec
+
+Spawning thread: 204
+Time(threadroutine) = 0.000617260 sec
+
+Spawning thread: 205
+Time(threadroutine) = 0.000639221 sec
+
+Spawning thread: 206
+Time(threadroutine) = 0.000625940 sec
+
+Spawning thread: 207
+Time(threadroutine) = 0.000495891 sec
+
+Spawning thread: 208
+Time(threadroutine) = 0.000354640 sec
+
+Spawning thread: 209
+Time(threadroutine) = 0.000317300 sec
+
+Spawning thread: 210
+Time(threadroutine) = 0.000376530 sec
+
+Spawning thread: 211
+Time(threadroutine) = 0.000364110 sec
+
+Spawning thread: 212
+Time(threadroutine) = 0.000311551 sec
+
+Spawning thread: 213
+Time(threadroutine) = 0.000349880 sec
+
+Spawning thread: 214
+Time(threadroutine) = 0.000355470 sec
+
+Spawning thread: 215
+Time(threadroutine) = 0.000315080 sec
+
+Spawning thread: 216
+Time(threadroutine) = 0.000366770 sec
+
+Spawning thread: 217
+Time(threadroutine) = 0.000351461 sec
+
+Spawning thread: 218
+Time(threadroutine) = 0.000324270 sec
+
+Spawning thread: 219
+Time(threadroutine) = 0.000356060 sec
+
+Spawning thread: 220
+Time(threadroutine) = 0.000347690 sec
+
+Spawning thread: 221
+Time(threadroutine) = 0.000290700 sec
+
+Spawning thread: 222
+Time(threadroutine) = 0.000332690 sec
+
+Spawning thread: 223
+Time(threadroutine) = 0.000347021 sec
+
+Spawning thread: 224
+Time(threadroutine) = 0.000322330 sec
+
+Spawning thread: 225
+Time(threadroutine) = 0.000377340 sec
+
+Spawning thread: 226
+Time(threadroutine) = 0.000317780 sec
+
+Spawning thread: 227
+Time(threadroutine) = 0.000306530 sec
+
+Spawning thread: 228
+Time(threadroutine) = 0.000361181 sec
+
+Spawning thread: 229
+Time(threadroutine) = 0.000320220 sec
+
+Spawning thread: 230
+Time(threadroutine) = 0.000293260 sec
+
+Spawning thread: 231
+Time(threadroutine) = 0.000332220 sec
+
+Spawning thread: 232
+Time(threadroutine) = 0.000321190 sec
+
+Spawning thread: 233
+Time(threadroutine) = 0.000310811 sec
+
+Spawning thread: 234
+Time(threadroutine) = 0.000368710 sec
+
+Spawning thread: 235
+Time(threadroutine) = 0.000318960 sec
+
+Spawning thread: 236
+Time(threadroutine) = 0.000307650 sec
+
+Spawning thread: 237
+Time(threadroutine) = 0.000369650 sec
+
+Spawning thread: 238
+Time(threadroutine) = 0.000309290 sec
+
+Spawning thread: 239
+Time(threadroutine) = 0.000306591 sec
+
+Spawning thread: 240
+Time(threadroutine) = 0.000355940 sec
+
+Spawning thread: 241
+Time(threadroutine) = 0.000315170 sec
+
+Spawning thread: 242
+Time(threadroutine) = 0.000292470 sec
+
+Spawning thread: 243
+Time(threadroutine) = 0.000331260 sec
+
+Spawning thread: 244
+Time(threadroutine) = 0.000307941 sec
+
+Spawning thread: 245
+Time(threadroutine) = 0.000309450 sec
+
+Spawning thread: 246
+Time(threadroutine) = 0.000338570 sec
+
+Spawning thread: 247
+Time(threadroutine) = 0.000360110 sec
+
+Spawning thread: 248
+Time(threadroutine) = 0.000310340 sec
+
+Spawning thread: 249
+Time(threadroutine) = 0.000376150 sec
+
+Spawning thread: 250
+Time(threadroutine) = 0.000309991 sec
+
+Spawning thread: 251
+Time(threadroutine) = 0.000298860 sec
+
+Spawning thread: 252
+Time(threadroutine) = 0.000375620 sec
+
+Spawning thread: 253
+Time(threadroutine) = 0.000320940 sec
+
+Spawning thread: 254
+Time(threadroutine) = 0.000299630 sec
+
+Spawning thread: 255
+Time(threadroutine) = 0.000398121 sec
+
+ptfor  overall(256) = 0
+Time(ptfor overall) = 0.102090357 sec
+
+
+
+
+272 threads -- >= 68 core
+
+Spawning thread: 0
+Time(threadroutine) = 0.000769690 sec
+
+Spawning thread: 1
+Time(threadroutine) = 0.000369371 sec
+
+Spawning thread: 2
+Time(threadroutine) = 0.000507360 sec
+
+Spawning thread: 3
+Time(threadroutine) = 0.000310070 sec
+
+Spawning thread: 4
+Time(threadroutine) = 0.000444110 sec
+
+Spawning thread: 5
+Time(threadroutine) = 0.000478861 sec
+
+Spawning thread: 6
+Time(threadroutine) = 0.000349920 sec
+
+Spawning thread: 7
+Time(threadroutine) = 0.000359860 sec
+
+Spawning thread: 8
+Time(threadroutine) = 0.000303660 sec
+
+Spawning thread: 9
+Time(threadroutine) = 0.000371670 sec
+
+Spawning thread: 10
+Time(threadroutine) = 0.000311711 sec
+
+Spawning thread: 11
+Time(threadroutine) = 0.000312160 sec
+
+Spawning thread: 12
+Time(threadroutine) = 0.000384470 sec
+
+Spawning thread: 13
+Time(threadroutine) = 0.000313940 sec
+
+Spawning thread: 14
+Time(threadroutine) = 0.000309400 sec
+
+Spawning thread: 15
+Time(threadroutine) = 0.000369940 sec
+
+Spawning thread: 16
+Time(threadroutine) = 0.000307751 sec
+
+Spawning thread: 17
+Time(threadroutine) = 0.000296420 sec
+
+Spawning thread: 18
+Time(threadroutine) = 0.000360520 sec
+
+Spawning thread: 19
+Time(threadroutine) = 0.000304230 sec
+
+Spawning thread: 20
+Time(threadroutine) = 0.000300530 sec
+
+Spawning thread: 21
+Time(threadroutine) = 0.000361971 sec
+
+Spawning thread: 22
+Time(threadroutine) = 0.000306910 sec
+
+Spawning thread: 23
+Time(threadroutine) = 0.000309840 sec
+
+Spawning thread: 24
+Time(threadroutine) = 0.000366170 sec
+
+Spawning thread: 25
+Time(threadroutine) = 0.000318690 sec
+
+Spawning thread: 26
+Time(threadroutine) = 0.000306510 sec
+
+Spawning thread: 27
+Time(threadroutine) = 0.000363361 sec
+
+Spawning thread: 28
+Time(threadroutine) = 0.000314860 sec
+
+Spawning thread: 29
+Time(threadroutine) = 0.000307270 sec
+
+Spawning thread: 30
+Time(threadroutine) = 0.000452750 sec
+
+Spawning thread: 31
+Time(threadroutine) = 0.000305300 sec
+
+Spawning thread: 32
+Time(threadroutine) = 0.000364291 sec
+
+Spawning thread: 33
+Time(threadroutine) = 0.000353030 sec
+
+Spawning thread: 34
+Time(threadroutine) = 0.000381180 sec
+
+Spawning thread: 35
+Time(threadroutine) = 0.000603700 sec
+
+Spawning thread: 36
+Time(threadroutine) = 0.000561861 sec
+
+Spawning thread: 37
+Time(threadroutine) = 0.000611710 sec
+
+Spawning thread: 38
+Time(threadroutine) = 0.000505530 sec
+
+Spawning thread: 39
+Time(threadroutine) = 0.000354781 sec
+
+Spawning thread: 40
+Time(threadroutine) = 0.000316550 sec
+
+Spawning thread: 41
+Time(threadroutine) = 0.000317820 sec
+
+Spawning thread: 42
+Time(threadroutine) = 0.000354770 sec
+
+Spawning thread: 43
+Time(threadroutine) = 0.000308310 sec
+
+Spawning thread: 44
+Time(threadroutine) = 0.000315030 sec
+
+Spawning thread: 45
+Time(threadroutine) = 0.000351321 sec
+
+Spawning thread: 46
+Time(threadroutine) = 0.000306900 sec
+
+Spawning thread: 47
+Time(threadroutine) = 0.000334140 sec
+
+Spawning thread: 48
+Time(threadroutine) = 0.000343430 sec
+
+Spawning thread: 49
+Time(threadroutine) = 0.000306560 sec
+
+Spawning thread: 50
+Time(threadroutine) = 0.000305361 sec
+
+Spawning thread: 51
+Time(threadroutine) = 0.000355250 sec
+
+Spawning thread: 52
+Time(threadroutine) = 0.000306250 sec
+
+Spawning thread: 53
+Time(threadroutine) = 0.000328430 sec
+
+Spawning thread: 54
+Time(threadroutine) = 0.000351240 sec
+
+Spawning thread: 55
+Time(threadroutine) = 0.000313661 sec
+
+Spawning thread: 56
+Time(threadroutine) = 0.000350640 sec
+
+Spawning thread: 57
+Time(threadroutine) = 0.000339600 sec
+
+Spawning thread: 58
+Time(threadroutine) = 0.000304590 sec
+
+Spawning thread: 59
+Time(threadroutine) = 0.000341270 sec
+
+Spawning thread: 60
+Time(threadroutine) = 0.000359320 sec
+
+Spawning thread: 61
+Time(threadroutine) = 0.000311141 sec
+
+Spawning thread: 62
+Time(threadroutine) = 0.000373930 sec
+
+Spawning thread: 63
+Time(threadroutine) = 0.000308110 sec
+
+Spawning thread: 64
+Time(threadroutine) = 0.000301640 sec
+
+Spawning thread: 65
+Time(threadroutine) = 0.000357730 sec
+
+Spawning thread: 66
+Time(threadroutine) = 0.000303771 sec
+
+Spawning thread: 67
+Time(threadroutine) = 0.000297250 sec
+
+Spawning thread: 68
+Time(threadroutine) = 0.000383700 sec
+
+Spawning thread: 69
+Time(threadroutine) = 0.000310270 sec
+
+Spawning thread: 70
+Time(threadroutine) = 0.000361860 sec
+
+Spawning thread: 71
+Time(threadroutine) = 0.000348721 sec
+
+Spawning thread: 72
+Time(threadroutine) = 0.000309240 sec
+
+Spawning thread: 73
+Time(threadroutine) = 0.000301980 sec
+
+Spawning thread: 74
+Time(threadroutine) = 0.000313630 sec
+
+Spawning thread: 75
+Time(threadroutine) = 0.000306130 sec
+
+Spawning thread: 76
+Time(threadroutine) = 0.000348201 sec
+
+Spawning thread: 77
+Time(threadroutine) = 0.000349370 sec
+
+Spawning thread: 78
+Time(threadroutine) = 0.000305800 sec
+
+Spawning thread: 79
+Time(threadroutine) = 0.000321680 sec
+
+Spawning thread: 80
+Time(threadroutine) = 0.000354200 sec
+
+Spawning thread: 81
+Time(threadroutine) = 0.000304980 sec
+
+Spawning thread: 82
+Time(threadroutine) = 0.000310290 sec
+
+Spawning thread: 83
+Time(threadroutine) = 0.000358810 sec
+
+Spawning thread: 84
+Time(threadroutine) = 0.000295020 sec
+
+Spawning thread: 85
+Time(threadroutine) = 0.000332140 sec
+
+Spawning thread: 86
+Time(threadroutine) = 0.000346600 sec
+
+Spawning thread: 87
+Time(threadroutine) = 0.000296181 sec
+
+Spawning thread: 88
+Time(threadroutine) = 0.000326240 sec
+
+Spawning thread: 89
+Time(threadroutine) = 0.000346100 sec
+
+Spawning thread: 90
+Time(threadroutine) = 0.000308800 sec
+
+Spawning thread: 91
+Time(threadroutine) = 0.000361670 sec
+
+Spawning thread: 92
+Time(threadroutine) = 0.000348141 sec
+
+Spawning thread: 93
+Time(threadroutine) = 0.000287540 sec
+
+Spawning thread: 94
+Time(threadroutine) = 0.000306650 sec
+
+Spawning thread: 95
+Time(threadroutine) = 0.000337260 sec
+
+Spawning thread: 96
+Time(threadroutine) = 0.000305150 sec
+
+Spawning thread: 97
+Time(threadroutine) = 0.000341920 sec
+
+Spawning thread: 98
+Time(threadroutine) = 0.000355571 sec
+
+Spawning thread: 99
+Time(threadroutine) = 0.000301010 sec
+
+Spawning thread: 100
+Time(threadroutine) = 0.000327030 sec
+
+Spawning thread: 101
+Time(threadroutine) = 0.000340900 sec
+
+Spawning thread: 102
+Time(threadroutine) = 0.000301240 sec
+
+Spawning thread: 103
+Time(threadroutine) = 0.000333691 sec
+
+Spawning thread: 104
+Time(threadroutine) = 0.000352840 sec
+
+Spawning thread: 105
+Time(threadroutine) = 0.000305480 sec
+
+Spawning thread: 106
+Time(threadroutine) = 0.000321680 sec
+
+Spawning thread: 107
+Time(threadroutine) = 0.000341640 sec
+
+Spawning thread: 108
+Time(threadroutine) = 0.000295260 sec
+
+Spawning thread: 109
+Time(threadroutine) = 0.000344171 sec
+
+Spawning thread: 110
+Time(threadroutine) = 0.000358410 sec
+
+Spawning thread: 111
+Time(threadroutine) = 0.000295660 sec
+
+Spawning thread: 112
+Time(threadroutine) = 0.000312200 sec
+
+Spawning thread: 113
+Time(threadroutine) = 0.000345960 sec
+
+Spawning thread: 114
+Time(threadroutine) = 0.000307391 sec
+
+Spawning thread: 115
+Time(threadroutine) = 0.000365360 sec
+
+Spawning thread: 116
+Time(threadroutine) = 0.000346120 sec
+
+Spawning thread: 117
+Time(threadroutine) = 0.000284180 sec
+
+Spawning thread: 118
+Time(threadroutine) = 0.000307530 sec
+
+Spawning thread: 119
+Time(threadroutine) = 0.000340470 sec
+
+Spawning thread: 120
+Time(threadroutine) = 0.000313851 sec
+
+Spawning thread: 121
+Time(threadroutine) = 0.000332130 sec
+
+Spawning thread: 122
+Time(threadroutine) = 0.000350540 sec
+
+Spawning thread: 123
+Time(threadroutine) = 0.000304900 sec
+
+Spawning thread: 124
+Time(threadroutine) = 0.000325410 sec
+
+Spawning thread: 125
+Time(threadroutine) = 0.000346261 sec
+
+Spawning thread: 126
+Time(threadroutine) = 0.000306010 sec
+
+Spawning thread: 127
+Time(threadroutine) = 0.000357120 sec
+
+Spawning thread: 128
+Time(threadroutine) = 0.000346240 sec
+
+Spawning thread: 129
+Time(threadroutine) = 0.000312650 sec
+
+Spawning thread: 130
+Time(threadroutine) = 0.000410761 sec
+
+Spawning thread: 131
+Time(threadroutine) = 0.000319880 sec
+
+Spawning thread: 132
+Time(threadroutine) = 0.000314200 sec
+
+Spawning thread: 133
+Time(threadroutine) = 0.000378800 sec
+
+Spawning thread: 134
+Time(threadroutine) = 0.000313130 sec
+
+Spawning thread: 135
+Time(threadroutine) = 0.000322911 sec
+
+Spawning thread: 136
+Time(threadroutine) = 0.000352920 sec
+
+Spawning thread: 137
+Time(threadroutine) = 0.000314600 sec
+
+Spawning thread: 138
+Time(threadroutine) = 0.000344210 sec
+
+Spawning thread: 139
+Time(threadroutine) = 0.000388020 sec
+
+Spawning thread: 140
+Time(threadroutine) = 0.000353131 sec
+
+Spawning thread: 141
+Time(threadroutine) = 0.000369990 sec
+
+Spawning thread: 142
+Time(threadroutine) = 0.000312660 sec
+
+Spawning thread: 143
+Time(threadroutine) = 0.000359090 sec
+
+Spawning thread: 144
+Time(threadroutine) = 0.000350540 sec
+
+Spawning thread: 145
+Time(threadroutine) = 0.000321351 sec
+
+Spawning thread: 146
+Time(threadroutine) = 0.000346690 sec
+
+Spawning thread: 147
+Time(threadroutine) = 0.000354970 sec
+
+Spawning thread: 148
+Time(threadroutine) = 0.000308080 sec
+
+Spawning thread: 149
+Time(threadroutine) = 0.000355840 sec
+
+Spawning thread: 150
+Time(threadroutine) = 0.000350841 sec
+
+Spawning thread: 151
+Time(threadroutine) = 0.000311200 sec
+
+Spawning thread: 152
+Time(threadroutine) = 0.000316150 sec
+
+Spawning thread: 153
+Time(threadroutine) = 0.000340540 sec
+
+Spawning thread: 154
+Time(threadroutine) = 0.000312540 sec
+
+Spawning thread: 155
+Time(threadroutine) = 0.000375230 sec
+
+Spawning thread: 156
+Time(threadroutine) = 0.000322451 sec
+
+Spawning thread: 157
+Time(threadroutine) = 0.000303400 sec
+
+Spawning thread: 158
+Time(threadroutine) = 0.000339500 sec
+
+Spawning thread: 159
+Time(threadroutine) = 0.000343570 sec
+
+Spawning thread: 160
+Time(threadroutine) = 0.000306150 sec
+
+Spawning thread: 161
+Time(threadroutine) = 0.000348761 sec
+
+Spawning thread: 162
+Time(threadroutine) = 0.000304770 sec
+
+Spawning thread: 163
+Time(threadroutine) = 0.000297420 sec
+
+Spawning thread: 164
+Time(threadroutine) = 0.000318960 sec
+
+Spawning thread: 165
+Time(threadroutine) = 0.000352120 sec
+
+Spawning thread: 166
+Time(threadroutine) = 0.000311850 sec
+
+Spawning thread: 167
+Time(threadroutine) = 0.000320301 sec
+
+Spawning thread: 168
+Time(threadroutine) = 0.000353490 sec
+
+Spawning thread: 169
+Time(threadroutine) = 0.000305980 sec
+
+Spawning thread: 170
+Time(threadroutine) = 0.000315920 sec
+
+Spawning thread: 171
+Time(threadroutine) = 0.000355540 sec
+
+Spawning thread: 172
+Time(threadroutine) = 0.000315311 sec
+
+Spawning thread: 173
+Time(threadroutine) = 0.000304530 sec
+
+Spawning thread: 174
+Time(threadroutine) = 0.000358590 sec
+
+Spawning thread: 175
+Time(threadroutine) = 0.000319240 sec
+
+Spawning thread: 176
+Time(threadroutine) = 0.000424550 sec
+
+Spawning thread: 177
+Time(threadroutine) = 0.000522111 sec
+
+Spawning thread: 178
+Time(threadroutine) = 0.000383190 sec
+
+Spawning thread: 179
+Time(threadroutine) = 0.000356510 sec
+
+Spawning thread: 180
+Time(threadroutine) = 0.000310020 sec
+
+Spawning thread: 181
+Time(threadroutine) = 0.000368890 sec
+
+Spawning thread: 182
+Time(threadroutine) = 0.000374471 sec
+
+Spawning thread: 183
+Time(threadroutine) = 0.000567320 sec
+
+Spawning thread: 184
+Time(threadroutine) = 0.000603540 sec
+
+Spawning thread: 185
+Time(threadroutine) = 0.000645371 sec
+
+Spawning thread: 186
+Time(threadroutine) = 0.000680770 sec
+
+Spawning thread: 187
+Time(threadroutine) = 0.000609290 sec
+
+Spawning thread: 188
+Time(threadroutine) = 0.000553781 sec
+
+Spawning thread: 189
+Time(threadroutine) = 0.000307570 sec
+
+Spawning thread: 190
+Time(threadroutine) = 0.000375920 sec
+
+Spawning thread: 191
+Time(threadroutine) = 0.000355560 sec
+
+Spawning thread: 192
+Time(threadroutine) = 0.000313951 sec
+
+Spawning thread: 193
+Time(threadroutine) = 0.000401390 sec
+
+Spawning thread: 194
+Time(threadroutine) = 0.000348290 sec
+
+Spawning thread: 195
+Time(threadroutine) = 0.000310740 sec
+
+Spawning thread: 196
+Time(threadroutine) = 0.000326180 sec
+
+Spawning thread: 197
+Time(threadroutine) = 0.000425801 sec
+
+Spawning thread: 198
+Time(threadroutine) = 0.000518010 sec
+
+Spawning thread: 199
+Time(threadroutine) = 0.000345400 sec
+
+Spawning thread: 200
+Time(threadroutine) = 0.000318300 sec
+
+Spawning thread: 201
+Time(threadroutine) = 0.000201660 sec
+
+Spawning thread: 202
+Time(threadroutine) = 0.000352831 sec
+
+Spawning thread: 203
+Time(threadroutine) = 0.000310320 sec
+
+Spawning thread: 204
+Time(threadroutine) = 0.000375190 sec
+
+Spawning thread: 205
+Time(threadroutine) = 0.000354620 sec
+
+Spawning thread: 206
+Time(threadroutine) = 0.000310390 sec
+
+Spawning thread: 207
+Time(threadroutine) = 0.000370221 sec
+
+Spawning thread: 208
+Time(threadroutine) = 0.000299560 sec
+
+Spawning thread: 209
+Time(threadroutine) = 0.000376500 sec
+
+Spawning thread: 210
+Time(threadroutine) = 0.000346110 sec
+
+Spawning thread: 211
+Time(threadroutine) = 0.000318890 sec
+
+Spawning thread: 212
+Time(threadroutine) = 0.000375281 sec
+
+Spawning thread: 213
+Time(threadroutine) = 0.000347610 sec
+
+Spawning thread: 214
+Time(threadroutine) = 0.000314170 sec
+
+Spawning thread: 215
+Time(threadroutine) = 0.000347380 sec
+
+Spawning thread: 216
+Time(threadroutine) = 0.000355840 sec
+
+Spawning thread: 217
+Time(threadroutine) = 0.000306361 sec
+
+Spawning thread: 218
+Time(threadroutine) = 0.000332480 sec
+
+Spawning thread: 219
+Time(threadroutine) = 0.000359820 sec
+
+Spawning thread: 220
+Time(threadroutine) = 0.000289980 sec
+
+Spawning thread: 221
+Time(threadroutine) = 0.000385960 sec
+
+Spawning thread: 222
+Time(threadroutine) = 0.000300960 sec
+
+Spawning thread: 223
+Time(threadroutine) = 0.000299811 sec
+
+Spawning thread: 224
+Time(threadroutine) = 0.000392280 sec
+
+Spawning thread: 225
+Time(threadroutine) = 0.000313840 sec
+
+Spawning thread: 226
+Time(threadroutine) = 0.000306390 sec
+
+Spawning thread: 227
+Time(threadroutine) = 0.000363310 sec
+
+Spawning thread: 228
+Time(threadroutine) = 0.000314331 sec
+
+Spawning thread: 229
+Time(threadroutine) = 0.000301910 sec
+
+Spawning thread: 230
+Time(threadroutine) = 0.000360260 sec
+
+Spawning thread: 231
+Time(threadroutine) = 0.000310570 sec
+
+Spawning thread: 232
+Time(threadroutine) = 0.000303910 sec
+
+Spawning thread: 233
+Time(threadroutine) = 0.000379971 sec
+
+Spawning thread: 234
+Time(threadroutine) = 0.000317920 sec
+
+Spawning thread: 235
+Time(threadroutine) = 0.000301930 sec
+
+Spawning thread: 236
+Time(threadroutine) = 0.000371430 sec
+
+Spawning thread: 237
+Time(threadroutine) = 0.000315480 sec
+
+Spawning thread: 238
+Time(threadroutine) = 0.000299900 sec
+
+Spawning thread: 239
+Time(threadroutine) = 0.000367261 sec
+
+Spawning thread: 240
+Time(threadroutine) = 0.000311280 sec
+
+Spawning thread: 241
+Time(threadroutine) = 0.000299270 sec
+
+Spawning thread: 242
+Time(threadroutine) = 0.000355250 sec
+
+Spawning thread: 243
+Time(threadroutine) = 0.000302630 sec
+
+Spawning thread: 244
+Time(threadroutine) = 0.000299911 sec
+
+Spawning thread: 245
+Time(threadroutine) = 0.000375290 sec
+
+Spawning thread: 246
+Time(threadroutine) = 0.000306350 sec
+
+Spawning thread: 247
+Time(threadroutine) = 0.000303630 sec
+
+Spawning thread: 248
+Time(threadroutine) = 0.000369600 sec
+
+Spawning thread: 249
+Time(threadroutine) = 0.000311480 sec
+
+Spawning thread: 250
+Time(threadroutine) = 0.000251301 sec
+
+Spawning thread: 251
+Time(threadroutine) = 0.000369120 sec
+
+Spawning thread: 252
+Time(threadroutine) = 0.000309970 sec
+
+Spawning thread: 253
+Time(threadroutine) = 0.000302390 sec
+
+Spawning thread: 254
+Time(threadroutine) = 0.000387440 sec
+
+Spawning thread: 255
+Time(threadroutine) = 0.000316571 sec
+
+Spawning thread: 256
+Time(threadroutine) = 0.000299100 sec
+
+Spawning thread: 257
+Time(threadroutine) = 0.000369540 sec
+
+Spawning thread: 258
+Time(threadroutine) = 0.000309290 sec
+
+Spawning thread: 259
+Time(threadroutine) = 0.000297880 sec
+
+Spawning thread: 260
+Time(threadroutine) = 0.000364271 sec
+
+Spawning thread: 261
+Time(threadroutine) = 0.000316720 sec
+
+Spawning thread: 262
+Time(threadroutine) = 0.000302180 sec
+
+Spawning thread: 263
+Time(threadroutine) = 0.000371730 sec
+
+Spawning thread: 264
+Time(threadroutine) = 0.000294590 sec
+
+Spawning thread: 265
+Time(threadroutine) = 0.000303180 sec
+
+Spawning thread: 266
+Time(threadroutine) = 0.000387661 sec
+
+Spawning thread: 267
+Time(threadroutine) = 0.000314060 sec
+
+Spawning thread: 268
+Time(threadroutine) = 0.000298280 sec
+
+Spawning thread: 269
+Time(threadroutine) = 0.000365310 sec
+
+Spawning thread: 270
+Time(threadroutine) = 0.000309750 sec
+
+Spawning thread: 271
+Time(threadroutine) = 0.000298241 sec
+
+ptfor  overall(272) = 0
+Time(ptfor overall) = 0.097023434 sec
+
+
+
+

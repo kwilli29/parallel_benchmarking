@@ -1,0 +1,117 @@
+2 threads -- >= 1 core
+ptfor-count #0: (2) = 0
+Time(ptfor-count) = 0.001809701 sec
+
+ptfor-count #1: (2) = 0
+Time(ptfor-count) = 0.000967041 sec
+
+ptfor-count #2: (2) = 0
+Time(ptfor-count) = 0.000978761 sec
+
+ptfor-count #3: (2) = 0
+Time(ptfor-count) = 0.000737310 sec
+
+4 threads -- >= 1 core
+ptfor-count #0: (4) = 0
+Time(ptfor-count) = 0.002757071 sec
+
+ptfor-count #1: (4) = 0
+Time(ptfor-count) = 0.001829431 sec
+
+ptfor-count #2: (4) = 0
+Time(ptfor-count) = 0.001366231 sec
+
+ptfor-count #3: (4) = 0
+Time(ptfor-count) = 0.001420301 sec
+
+8 threads -- >= 2 core
+ptfor-count #0: (8) = 0
+Time(ptfor-count) = 0.004647992 sec
+
+ptfor-count #1: (8) = 0
+Time(ptfor-count) = 0.002888602 sec
+
+ptfor-count #2: (8) = 0
+Time(ptfor-count) = 0.003551912 sec
+
+ptfor-count #3: (8) = 0
+Time(ptfor-count) = 0.003596602 sec
+
+16 threads -- >= 4 core
+ptfor-count #0: (16) = 0
+Time(ptfor-count) = 0.007205694 sec
+
+ptfor-count #1: (16) = 0
+Time(ptfor-count) = 0.008755165 sec
+
+ptfor-count #2: (16) = 0
+Time(ptfor-count) = 0.006902133 sec
+
+ptfor-count #3: (16) = 0
+Time(ptfor-count) = 0.007946845 sec
+
+32 threads -- >= 8 core
+ptfor-count #0: (32) = 0
+Time(ptfor-count) = 0.016697789 sec
+
+ptfor-count #1: (32) = 0
+Time(ptfor-count) = 0.016177949 sec
+
+ptfor-count #2: (32) = 0
+Time(ptfor-count) = 0.017487630 sec
+
+ptfor-count #3: (32) = 0
+Time(ptfor-count) = 0.016589649 sec
+
+64 threads -- >= 16 core
+ptfor-count #0: (64) = 0
+Time(ptfor-count) = 0.028972926 sec
+
+ptfor-count #1: (64) = 0
+Time(ptfor-count) = 0.034371209 sec
+
+ptfor-count #2: (64) = 0
+Time(ptfor-count) = 0.032726668 sec
+
+ptfor-count #3: (64) = 0
+Time(ptfor-count) = 0.030170527 sec
+
+128 threads -- >= 32 core
+ptfor-count #0: (128) = 0
+Time(ptfor-count) = 0.056619051 sec
+
+ptfor-count #1: (128) = 0
+Time(ptfor-count) = 0.064315706 sec
+
+ptfor-count #2: (128) = 0
+Time(ptfor-count) = 0.062921894 sec
+
+ptfor-count #3: (128) = 0
+Time(ptfor-count) = 0.065424866 sec
+
+256 threads -- >= 64 core
+ptfor-count #0: (256) = 0
+Time(ptfor-count) = 0.123330528 sec
+
+ptfor-count #1: (256) = 0
+Time(ptfor-count) = 0.128010411 sec
+
+ptfor-count #2: (256) = 0
+Time(ptfor-count) = 0.128600971 sec
+
+ptfor-count #3: (256) = 0
+Time(ptfor-count) = 0.126518920 sec
+
+272 threads -- >= 68 core
+ptfor-count #0: (272) = 0
+Time(ptfor-count) = 0.135158744 sec
+
+ptfor-count #1: (272) = 0
+Time(ptfor-count) = 0.139899467 sec
+
+ptfor-count #2: (272) = 0
+Time(ptfor-count) = 0.140562087 sec
+
+ptfor-count #3: (272) = 0
+Time(ptfor-count) = 0.140533748 sec
+

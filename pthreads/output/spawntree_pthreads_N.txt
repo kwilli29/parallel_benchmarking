@@ -1,0 +1,4972 @@
+2 threads -- >= 1 core
+Thread depth: 0
+Time(pthreadspawn) = 0.000172590 sec
+Time(pt_create1) = 0.000283900 sec
+Thread depth: 1602433416
+Time(pthreadspawn) = 0.000008111 sec
+Time(pt_create2) = 0.000188481 sec
+Time(pt_join1) = 0.000005530 sec
+Thread depth: 1602433416
+Time(pthreadspawn) = 0.000009010 sec
+Time(pt_join2) = 0.000220550 sec
+Time(RT: ) = 0.000905281 sec
+4 threads -- >= 1 core
+Thread depth: 0
+Time(pthreadspawn) = 0.000163450 sec
+Time(pt_create1) = 0.000287310 sec
+Thread depth: -1310797048
+Time(pthreadspawn) = 0.000008520 sec
+Time(pt_create2) = 0.000193250 sec
+Thread depth: -1310797048
+Time(pthreadspawn) = 0.000009470 sec
+Time(pt_create1) = 0.000370121 sec
+Thread depth: -2005852552
+Time(pthreadspawn) = 0.000008360 sec
+Time(pt_create1) = 0.000347041 sec
+Time(pt_create2) = 0.000217800 sec
+Thread depth: -2005852552
+Thread depth: -2014245256
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000010610 sec
+0.000011150 sec
+Time(pt_create1) = 0.000308390 sec
+Thread depth: -2022637960
+Time(pthreadspawn) = 0.000008580 sec
+Time(pt_create2) = 0.000373740 sec
+Thread depth: -2014245256
+Time(pthreadspawn) = 0.000012130 sec
+Time(pt_create1) = Time(pt_create1) = 0.001017070 sec
+0.000997440 sec
+Thread depth: -2039423368
+Time(pthreadspawn) = 0.000008490 sec
+Time(pt_create1) = 0.000988010 sec
+Time(pt_create2) = 0.001167380 sec
+Thread depth: -2022637960
+Thread depth: -2031030664
+Time(pthreadspawn) = 0.000005530 sec
+Time(pthreadspawn) = 0.000156510 sec
+Thread depth: -2047816072
+Time(pthreadspawn) = 0.000175510 sec
+Time(pt_create1) = 0.000418171 sec
+Thread depth: 2013261432
+Time(pthreadspawn) = 0.000009510 sec
+Time(pt_create2) = 0.001225021 sec
+Thread depth: -2031030664
+Time(pthreadspawn) = 0.000008390 sec
+Time(pt_create2) = 0.001243961 sec
+Time(pt_create2) = 0.001429741 sec
+Thread depth: -2047816072
+Time(pthreadspawn) = 0.000008790 sec
+Thread depth: -2039423368
+Time(pthreadspawn) = 0.000008210 sec
+Time(pt_create1) = 0.001261451 sec
+Thread depth: -2064601480
+Time(pthreadspawn) = 0.000006150 sec
+Time(pt_create1) = 0.001284571 sec
+Thread depth: 2004868728
+Time(pthreadspawn) = 0.000008450 sec
+Time(pt_create1) = 0.000759471 sec
+Time(pt_create1) = Time(pt_create1) = 0.001933872 sec
+Thread depth: 1962905208
+Time(pthreadspawn) = 0.000007610 sec
+0.003018512 sec
+Thread depth: 1870651000
+Time(pthreadspawn) = 0.000149100 sec
+Thread depth: -2056208776
+Time(pthreadspawn) = 0.000198110 sec
+Time(pt_create2) = 0.001104061 sec
+Thread depth: -2064601480
+Time(pthreadspawn) = 0.000008340 sec
+Time(pt_create2) = 0.001042511 sec
+Time(pt_join1) = 0.000002380 sec
+Thread depth: 2004868728
+Time(pthreadspawn) = 0.000011990 sec
+Time(pt_create2) = 0.002368811 sec
+Time(pt_join1) = 0.000003680 sec
+Thread depth: 2013261432
+Time(pthreadspawn) = 0.000009050 sec
+Time(pt_join2) = 0.000227390 sec
+Time(pt_create1) = 0.001521861 sec
+Thread depth: 1988083320
+Time(pthreadspawn) = 0.000008140 sec
+Time(pt_join1) = 0.001741031 sec
+Time(pt_create2) = 0.000193290 sec
+Thread depth: 1988083320
+Time(pthreadspawn) = 0.000011110 sec
+Time(pt_create2) = 0.001007600 sec
+Time(pt_join1) = 0.000006210 sec
+Thread depth: 1962905208
+Time(pthreadspawn) = 0.000011940 sec
+Time(pt_join1) = 0.000378420 sec
+Time(pt_join2) = 0.000965840 sec
+Time(pt_join1) = 0.002923302 sec
+Time(pt_create1) = Time(pt_create2) = 0.002377671 sec
+Time(pt_create1) = 0.003548392 sec
+Thread depth: -2056208776
+0.003313352 sec
+Time(pthreadspawn) = 0.000020890 sec
+Time(pt_join2) = 0.001200081 sec
+Time(pt_join2) = 0.001535011 sec
+Thread depth: 1879043704
+Time(pthreadspawn) = 0.000085660 sec
+Thread depth: 1971297912
+Time(pthreadspawn) = 0.000103150 sec
+Time(pt_join1) = 0.002361871 sec
+Time(pt_create2) = 0.000164440 sec
+Time(pt_join2) = 0.000653150 sec
+Time(pt_create1) = 0.000206210 sec
+Thread depth: 1879043704
+Time(pthreadspawn) = 0.000008420 sec
+Thread depth: 1442819704
+Time(pthreadspawn) = 0.000009630 sec
+Time(pt_join1) = Time(pt_create1) = Time(pt_create2) = 0.002705901 sec
+Time(pt_create1) = 0.000216980 sec
+0.002534711 sec
+Time(pt_join2) = 0.000001700 sec
+0.000368470 sec
+Time(pt_join1) = 0.000002870 sec
+Thread depth: 1996476024
+Time(pthreadspawn) = 0.000006560 sec
+Time(pt_create2) = 0.003018241 sec
+Thread depth: 1870651000
+Time(pt_join1) = Time(pthreadspawn) = 0.000064910 sec
+0.000019730 sec
+Time(pt_create2) = 0.000170350 sec
+Time(pt_create2) = Thread depth: 1996476024
+Time(pthreadspawn) = 0.000024520 sec
+Thread depth: 1971297912
+Thread depth: 1476390520
+Time(pt_create2) = 0.000195500 sec
+Time(pthreadspawn) = 0.000019720 sec
+Time(pthreadspawn) = 0.000006740 sec
+Time(pt_join2) = 0.000460420 sec
+0.000495721 sec
+Thread depth: 1442819704
+Thread depth: 1476390520
+Time(pthreadspawn) = 0.000741691 sec
+Time(pthreadspawn) = 0.000404811 sec
+Time(pt_join1) = 0.000353821 sec
+Time(pt_join1) = 0.000104540 sec
+Time(pt_join2) = 0.000083130 sec
+Time(pt_join2) = 0.001011561 sec
+Time(pt_join2) = 0.000357770 sec
+Time(pt_join1) = 0.001054131 sec
+Time(pt_join2) = 0.000037270 sec
+Time(pt_join2) = 0.004081022 sec
+Time(pt_join1) = 0.002598721 sec
+Time(pt_join2) = 0.000036080 sec
+Time(pt_join2) = 0.002614212 sec
+Time(pt_join1) = 0.007605285 sec
+Time(pt_join2) = 0.000030610 sec
+Time(pt_join1) = 0.006747114 sec
+Time(pt_join2) = 0.000078620 sec
+Time(pt_join1) = 0.009453385 sec
+Time(pt_join2) = 0.000049970 sec
+Time(pt_join1) = 0.009247425 sec
+Time(pt_join2) = 0.000069900 sec
+Time(pt_join1) = 0.010242066 sec
+Time(pt_join2) = 0.000028680 sec
+Time(RT: ) = 0.010961146 sec
+8 threads -- >= 2 core
+Thread depth: 0
+Time(pthreadspawn) = 0.000164410 sec
+Time(pt_create1) = 0.000404920 sec
+Thread depth: 100742312
+Time(pthreadspawn) = 0.000008140 sec
+Time(pt_create2) = 0.000219730 sec
+Time(pt_join1) = 0.000006820 sec
+Thread depth: 100742312
+Time(pthreadspawn) = 0.000008080 sec
+Time(pt_join2) = 0.000191520 sec
+Time(RT: ) = 0.001030280 sec
+16 threads -- >= 4 core
+Thread depth: 0
+Time(pthreadspawn) = 0.000168960 sec
+Time(pt_create1) = 0.000266540 sec
+Thread depth: -879745816
+Time(pthreadspawn) = 0.000008710 sec
+Time(pt_create2) = 0.000204880 sec
+Thread depth: -879745816
+Time(pthreadspawn) = 0.000009060 sec
+Time(pt_create1) = 0.000376850 sec
+Thread depth: -180625800
+Time(pthreadspawn) = 0.000008310 sec
+Time(pt_create1) = 0.000336120 sec
+Thread depth: -189018504
+Time(pthreadspawn) = 0.000008120 sec
+Time(pt_create2) = 0.000360501 sec
+Thread depth: -180625800
+Time(pthreadspawn) = 0.000012370 sec
+Time(pt_create2) = 0.000410191 sec
+Thread depth: -189018504
+Time(pthreadspawn) = 0.000009220 sec
+Time(pt_create1) = 0.000614841 sec
+Thread depth: -197411208
+Time(pthreadspawn) = 0.000008250 sec
+Time(pt_create1) = 0.000638880 sec
+Thread depth: -214196616
+Time(pthreadspawn) = 0.000009750 sec
+Time(pt_create2) = 0.000904700 sec
+Thread depth: -197411208
+Time(pthreadspawn) = 0.000008480 sec
+Time(pt_create1) = 0.001025820 sec
+Thread depth: -222589320
+Time(pthreadspawn) = 0.000008830 sec
+Time(pt_create2) = 0.000221811 sec
+Thread depth: -222589320
+Time(pthreadspawn) = 0.000009770 sec
+Time(pt_create1) = Time(pt_create1) = Time(pt_create1) = 0.002486432 sec
+0.000807091 sec
+Time(pt_create2) = 0.002032851 sec
+Thread depth: -478159240
+Time(pthreadspawn) = 0.000023850 sec
+0.001602511 sec
+Thread depth: -214196616
+Thread depth: -230982024
+Time(pthreadspawn) = 0.000069480 sec
+Time(pthreadspawn) = 0.000192930 sec
+Thread depth: -205803912
+Time(pthreadspawn) = 0.000159020 sec
+Time(pt_create1) = 0.001701641 sec
+Thread depth: -469766536
+Time(pthreadspawn) = 0.000008450 sec
+Time(pt_create1) = 0.002287541 sec
+Thread depth: -247767432
+Time(pthreadspawn) = Time(pt_create1) = 0.000008590 sec
+Time(pt_create2) = Thread depth: -469766536
+0.000269660 sec
+0.000680980 sec
+Time(pthreadspawn) = 0.000035970 sec
+Thread depth: -494944648
+Time(pthreadspawn) = 0.000065850 sec
+Time(pt_create1) = 0.001535601 sec
+Thread depth: -503337352
+Time(pthreadspawn) = 0.000008190 sec
+Time(pt_create1) = 0.002867641 sec
+Time(pt_create2) = 0.002282811 sec
+Thread depth: -486551944
+Time(pthreadspawn) = 0.000008680 sec
+Thread depth: -230982024
+Time(pthreadspawn) = 0.000008000 sec
+Time(pt_create2) = 0.002658651 sec
+Thread depth: -478159240
+Time(pthreadspawn) = 0.000010390 sec
+Time(pt_create1) = 0.000840911 sec
+Thread depth: -1182818696
+Time(pthreadspawn) = 0.000011820 sec
+Time(pt_create2) = 0.001793531 sec
+Thread depth: -503337352
+Time(pthreadspawn) = 0.000008550 sec
+Time(pt_create1) = 0.000374630 sec
+Thread depth: -1275072904
+Time(pthreadspawn) = 0.000008140 sec
+Time(pt_create1) = 0.000402940 sec
+Thread depth: -1291858312
+Time(pthreadspawn) = 0.000008060 sec
+Time(pt_create1) = 0.003996802 sec
+Thread depth: -256160136
+Time(pt_create2) = Time(pthreadspawn) = 0.003179542 sec
+0.000009440 sec
+Thread depth: -494944648
+Time(pthreadspawn) = 0.000009250 sec
+Time(pt_create1) = 0.002592361 sec
+Thread depth: -1191211400
+Time(pthreadspawn) = 0.000008120 sec
+Time(pt_create2) = 0.003584802 sec
+Time(pt_create2) = 0.004427242 sec
+Thread depth: -205803912
+Time(pthreadspawn) = 0.000031360 sec
+Time(pt_create2) = 0.000772730 sec
+Thread depth: -247767432
+Time(pthreadspawn) = 0.000101270 sec
+Thread depth: -1275072904
+Time(pthreadspawn) = 0.000008460 sec
+Time(pt_create1) = 0.004089263 sec
+Thread depth: -511730056
+Time(pthreadspawn) = 0.000008670 sec
+Time(pt_create1) = 0.004417053 sec
+Thread depth: -805310856
+Time(pthreadspawn) = 0.000008150 sec
+Time(pt_create2) = 0.000238850 sec
+Thread depth: -511730056
+Time(pthreadspawn) = 0.000008490 sec
+Time(pt_create1) = 0.000792080 sec
+Thread depth: -838881672
+Time(pthreadspawn) = 0.000008230 sec
+Time(pt_create2) = 0.002868321 sec
+Thread depth: -1182818696
+Time(pthreadspawn) = 0.000010400 sec
+Time(pt_create2) = 0.001368760 sec
+Thread depth: -805310856
+Time(pthreadspawn) = 0.000008820 sec
+Time(pt_create2) = 0.000533011 sec
+Thread depth: -838881672
+Time(pthreadspawn) = 0.000006470 sec
+Time(pt_create1) = 0.002396082 sec
+Thread depth: -1300251016
+Time(pthreadspawn) = 0.000009060 sec
+Time(pt_create1) = 0.002689942 sec
+Thread depth: -847274376
+Time(pthreadspawn) = 0.000268140 sec
+Time(pt_create1) = 0.003458912 sec
+Thread depth: -855667080
+Time(pthreadspawn) = 0.000008630 sec
+Time(pt_create1) = 0.002259772 sec
+Time(pt_create2) = 0.004388573 sec
+Time(pt_create1) = Thread depth: 2139086456
+Time(pt_create1) = Time(pt_create2) = Thread depth: -1635795336
+Thread depth: -813703560
+Time(pt_create1) = 0.007520745 sec
+Time(pt_create1) = Thread depth: -1191211400
+0.003189672 sec
+0.004282573 sec
+Time(pthreadspawn) = 0.000016610 sec
+Time(pthreadspawn) = 0.000014610 sec
+Thread depth: -1317036424
+Time(pt_create1) = 0.008433505 sec
+Time(pthreadspawn) = Thread depth: -239374728
+Time(pthreadspawn) = 0.000088720 sec
+0.000007190 sec
+Time(pt_create1) = Thread depth: -486551944
+0.007550585 sec
+Time(pt_create1) = Thread depth: -256160136
+Thread depth: -1140855176
+0.004622903 sec
+Time(pthreadspawn) = Time(pt_create2) = 0.005779394 sec
+0.006303724 sec
+Time(pthreadspawn) = Thread depth: -830488968
+0.004947023 sec
+Time(pthreadspawn) = Time(pthreadspawn) = Thread depth: -1308643720
+0.000023520 sec
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000028540 sec
+Time(pthreadspawn) = 0.000063400 sec
+0.000156350 sec
+Thread depth: -1291858312
+Time(pthreadspawn) = 0.000008470 sec
+0.000237010 sec
+0.000065460 sec
+Time(pt_create2) = 0.004934593 sec
+0.000214320 sec
+Time(pt_create1) = 0.005398153 sec
+Thread depth: -1157640584
+Time(pthreadspawn) = 0.000008350 sec
+Time(pt_create2) = 0.003129562 sec
+Thread depth: -847274376
+Time(pthreadspawn) = 0.000008950 sec
+Time(pt_create2) = 0.002710732 sec
+Time(pt_create1) = 0.003908092 sec
+Time(pt_create1) = 0.006162004 sec
+Thread depth: -855667080
+Time(pthreadspawn) = 0.000008860 sec
+Thread depth: -1518363016
+Time(pthreadspawn) = 0.000008310 sec
+Thread depth: -1325429128
+Time(pthreadspawn) = 0.000008170 sec
+Time(pt_create1) = 0.004816413 sec
+Thread depth: 2147479160
+Time(pthreadspawn) = 0.000007930 sec
+Time(pt_create1) = 0.003008082 sec
+Time(pt_create2) = 0.004327472 sec
+Thread depth: -1526755720
+Time(pthreadspawn) = 0.000019380 sec
+Thread depth: -1300251016
+Time(pthreadspawn) = 0.000008600 sec
+Time(pt_create2) = 0.000829230 sec
+Thread depth: 2147479160
+Time(pthreadspawn) = 0.000012830 sec
+Time(pt_create2) = 0.003174051 sec
+Time(pt_create1) = 0.003306462 sec
+Time(pt_create2) = 0.003185492 sec
+Thread depth: -830488968
+Time(pt_create2) = Time(pt_create1) = 0.006883064 sec
+0.002331822 sec
+Thread depth: -1140855176
+Time(pthreadspawn) = Time(pt_create1) = Time(pthreadspawn) = 0.000014630 sec
+Thread depth: -1317036424
+Time(pt_create2) = Thread depth: -1157640584
+0.003181762 sec
+Time(pthreadspawn) = 0.000040390 sec
+Time(pt_create1) = Thread depth: -1149247880
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000074480 sec
+0.009637666 sec
+0.000025780 sec
+Thread depth: -813703560
+Time(pthreadspawn) = 0.000008700 sec
+Time(pt_create1) = 0.004569533 sec
+0.000021650 sec
+Thread depth: -1509970312
+Time(pt_create2) = Time(pthreadspawn) = 0.000248560 sec
+Thread depth: -520122760
+Time(pt_create2) = Thread depth: -1509970312
+Time(pthreadspawn) = 0.000152080 sec
+0.000187540 sec
+Time(pthreadspawn) = 0.000023250 sec
+Time(pt_create2) = 0.003465812 sec
+0.003613922 sec
+0.005410833 sec
+Time(pt_create2) = Thread depth: -1635795336
+0.003820062 sec
+Time(pthreadspawn) = Thread depth: -1610617224
+Thread depth: 2122301048
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000243060 sec
+0.000114270 sec
+0.000012920 sec
+Time(pt_create2) = Thread depth: -1308643720
+Time(pthreadspawn) = 0.000017340 sec
+0.003554282 sec
+Time(pt_create2) = Thread depth: 2139086456
+0.003745122 sec
+Time(pthreadspawn) = 0.000083020 sec
+Thread depth: -239374728
+Time(pthreadspawn) = 0.000008060 sec
+Time(pt_create1) = Time(pt_create1) = 0.004282012 sec
+Thread depth: -1174425992
+Time(pthreadspawn) = 0.000008510 sec
+Thread depth: -1283465608
+Time(pthreadspawn) = 0.000002080 sec
+0.004310542 sec
+Time(pt_create1) = 0.004473582 sec
+Thread depth: -1484792200
+Time(pthreadspawn) = 0.000011610 sec
+Time(pt_create2) = 0.000239520 sec
+Thread depth: -1174425992
+Time(pthreadspawn) = 0.000011380 sec
+Time(pt_create1) = 0.005015963 sec
+Thread depth: -1627402632
+Time(pthreadspawn) = 0.000266710 sec
+Time(pt_create2) = 0.000770150 sec
+Thread depth: -1627402632
+Time(pthreadspawn) = 0.000010780 sec
+Time(pt_create2) = 0.004495992 sec
+Time(pt_join1) = 0.003213291 sec
+Thread depth: -1526755720
+Time(pthreadspawn) = 0.000008510 sec
+Time(pt_create1) = 0.006894854 sec
+Time(pt_create1) = 0.011413237 sec
+Thread depth: 2013261432
+Thread depth: -1476399496
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000020150 sec
+0.000019070 sec
+Thread depth: 2004868728
+Time(pthreadspawn) = 0.000001930 sec
+Time(pt_create1) = 0.007003134 sec
+Time(pt_create2) = Time(pt_create1) = Time(pt_create1) = Time(pt_create1) = 0.004890383 sec
+Thread depth: -822096264
+Time(pthreadspawn) = 0.004994243 sec
+Thread depth: -1619009928
+0.007040854 sec
+0.006698934 sec
+Time(pt_create2) = Time(pthreadspawn) = 0.005123553 sec
+Thread depth: -1518363016
+0.000008230 sec
+Time(pthreadspawn) = 0.000101160 sec
+Thread depth: -1166033288
+Time(pt_create1) = Time(pthreadspawn) = 0.000084420 sec
+0.009382955 sec
+Time(pt_join2) = Thread depth: -1660973448
+Time(pthreadspawn) = 0.000045790 sec
+0.000089730 sec
+Thread depth: -1325429128
+Time(pthreadspawn) = 0.000102470 sec
+Time(pt_create1) = 0.005248983 sec
+Time(pt_create2) = 0.000178670 sec
+Time(pt_create1) = 0.000525291 sec
+0.000342681 sec
+Thread depth: -1166033288
+Thread depth: -578838920
+Time(pthreadspawn) = 0.000034020 sec
+Thread depth: 1988083320
+Time(pthreadspawn) = 0.000094230 sec
+Time(pthreadspawn) = 0.000024490 sec
+Time(pt_join1) = 0.004535533 sec
+Time(pt_join2) = 0.000002850 sec
+Time(pt_create1) = 0.004910432 sec
+Thread depth: 956272248
+Time(pthreadspawn) = 0.000007960 sec
+Time(pt_create2) = 0.000164750 sec
+Thread depth: 956272248
+Time(pthreadspawn) = 0.000007790 sec
+Time(pt_create1) = 0.005978153 sec
+Thread depth: 1971297912
+Time(pthreadspawn) = 0.000008190 sec
+Time(pt_create1) = 0.005002303 sec
+Thread depth: 931094136
+Time(pthreadspawn) = 0.000007860 sec
+Time(pt_create2) = 0.000208480 sec
+Thread depth: 1971297912
+Time(pthreadspawn) = 0.000012940 sec
+Time(pt_create2) = 0.000275600 sec
+Thread depth: 931094136
+Time(pthreadspawn) = 0.000016570 sec
+Time(pt_create2) = 0.006800313 sec
+Time(pt_create1) = Thread depth: 2105515640
+Thread depth: -1149247880
+Thread depth: 2122301048
+Time(pt_join1) = Time(pthreadspawn) = Time(pthreadspawn) = 0.000514690 sec
+Time(pt_create2) = Time(pthreadspawn) = 0.009939945 sec
+0.000023670 sec
+Time(pt_join1) = 0.001735171 sec
+Time(pt_create1) = 0.006956773 sec
+Time(pt_create1) = 0.006912923 sec
+Time(pt_create2) = Thread depth: 947879544
+0.006580383 sec
+Time(pt_create1) = Time(pthreadspawn) = Time(pt_join1) = Time(pt_create2) = 0.005585693 sec
+Thread depth: -1283465608
+Time(pthreadspawn) = 0.000237880 sec
+0.000003550 sec
+Thread depth: 964664952
+Time(pthreadspawn) = 0.000004590 sec
+Time(pt_join2) = 0.000022140 sec
+Thread depth: -520122760
+Time(pt_create1) = Time(pthreadspawn) = 0.000029471 sec
+0.005475643 sec
+0.006954153 sec
+Thread depth: 905916024
+Thread depth: 92249720
+Time(pthreadspawn) = 0.000185201 sec
+Time(pthreadspawn) = 0.005528293 sec
+Time(pt_create1) = 0.010309376 sec
+0.000026870 sec
+Time(pt_create1) = Time(pt_join1) = 0.000018370 sec
+0.003098162 sec
+Thread depth: 2130693752
+0.000587580 sec
+Time(pthreadspawn) = 0.000058310 sec
+0.000024220 sec
+Time(pt_create2) = Thread depth: 2105515640
+Time(pt_create2) = 0.000406061 sec
+Time(pthreadspawn) = 0.007216284 sec
+Thread depth: 1979690616
+Thread depth: -1610617224
+Time(pthreadspawn) = Time(pthreadspawn) = Thread depth: 905916024
+0.000021900 sec
+Time(pthreadspawn) = 0.000011770 sec
+0.000170890 sec
+Time(pt_create1) = 0.000033350 sec
+0.000503581 sec
+Thread depth: -830488968
+Time(pt_create2) = Time(pthreadspawn) = 0.000347051 sec
+0.000074130 sec
+Time(pt_join1) = 0.000035580 sec
+0.012908947 sec
+Time(pt_create1) = 0.000376510 sec
+Time(pt_create2) = 0.000352750 sec
+Thread depth: -847274376
+Time(pthreadspawn) = 0.000033160 sec
+Thread depth: 92249720
+Time(pthreadspawn) = 0.000052680 sec
+Time(pt_create1) = 0.000303690 sec
+Thread depth: -855667080
+Time(pthreadspawn) = 0.000004660 sec
+Time(pt_create2) = 0.004505982 sec
+Thread depth: -1476399496
+Time(pthreadspawn) = 0.000269000 sec
+Time(pt_create2) = Thread depth: -822096264
+Time(pthreadspawn) = 0.000026740 sec
+0.006186923 sec
+Time(pt_create1) = 0.011537566 sec
+Thread depth: 847167096
+Time(pthreadspawn) = 0.000008430 sec
+Time(pt_create1) = 0.006795104 sec
+Thread depth: 880737912
+Time(pthreadspawn) = 0.000008440 sec
+Time(pt_create1) = 0.007184764 sec
+Thread depth: 821988984
+Time(pthreadspawn) = 0.000008120 sec
+Time(pt_create2) = 0.000600980 sec
+Thread depth: 821988984
+Time(pthreadspawn) = 0.000012180 sec
+Time(pt_join2) = 0.005129193 sec
+Time(pt_join1) = 0.004539782 sec
+Time(pt_join2) = Time(pt_create1) = 0.004703742 sec
+Time(pt_create1) = 0.013040077 sec
+0.009943175 sec
+Thread depth: 922701432
+Time(pt_create1) = 0.011792336 sec
+Time(pt_join1) = 0.004665612 sec
+Thread depth: 830381688
+Time(pthreadspawn) = 0.000004840 sec
+Time(pt_create1) = 0.012025626 sec
+Thread depth: 939486840
+Time(pthreadspawn) = 0.000016730 sec
+Time(pthreadspawn) = 0.000014920 sec
+Time(pt_create2) = Thread depth: 1006628472
+Time(pt_create1) = Time(pt_create1) = 0.013177567 sec
+0.011031846 sec
+0.008524434 sec
+Thread depth: 855559800
+Time(pthreadspawn) = 0.000011430 sec
+Time(pthreadspawn) = 0.000019960 sec
+Thread depth: 2004868728
+Time(pt_create1) = 0.012050336 sec
+Thread depth: 838774392
+Time(pthreadspawn) = 0.000005350 sec
+Time(pthreadspawn) = 0.000070610 sec
+Time(pt_create2) = 0.004899792 sec
+Thread depth: 914308728
+Time(pthreadspawn) = 0.000151650 sec
+Thread depth: -847274376
+Time(pthreadspawn) = 0.000044970 sec
+Time(pt_create1) = 0.012504967 sec
+Thread depth: 394255992
+Time(pthreadspawn) = 0.000008350 sec
+Time(pt_create1) = Time(pt_create1) = 0.012202957 sec
+Thread depth: -1652580744
+Time(pthreadspawn) = 0.000004840 sec
+Thread depth: 989843064
+Time(pthreadspawn) = 0.000001910 sec
+0.012585027 sec
+Time(pt_create2) = Time(pt_create1) = 0.012489546 sec
+Time(pt_create2) = 0.005367942 sec
+0.012111456 sec
+Thread depth: 2013261432
+Time(pthreadspawn) = 0.000008170 sec
+Thread depth: 880737912
+Time(pthreadspawn) = 0.000016810 sec
+Time(pt_create2) = 0.012439617 sec
+Thread depth: 872345208
+Time(pthreadspawn) = 0.000084381 sec
+Thread depth: -578838920
+Time(pthreadspawn) = 0.000006200 sec
+Time(pt_create2) = 0.012113267 sec
+Thread depth: -1619009928
+Time(pthreadspawn) = 0.000008530 sec
+Time(pt_create1) = 0.016091539 sec
+Time(pt_create1) = 0.015999099 sec
+Thread depth: -1644188040
+Time(pt_create1) = 0.012474047 sec
+Thread depth: -545268104
+Time(pthreadspawn) = 0.000008450 sec
+Time(pthreadspawn) = 0.000172420 sec
+Thread depth: 1962905208
+Time(pthreadspawn) = 0.000188210 sec
+Time(pt_join2) = 0.009969826 sec
+Time(pt_join2) = 0.005191903 sec
+Time(pt_create2) = 0.005523473 sec
+Time(pt_create2) = 0.005556253 sec
+Time(pt_join1) = Time(pt_join1) = 0.000001720 sec
+0.000003430 sec
+Time(pt_join1) = 0.010131315 sec
+Thread depth: 922701432
+Time(pthreadspawn) = 0.000008240 sec
+Thread depth: 830381688
+Time(pthreadspawn) = 0.000002430 sec
+Time(pt_create2) = Time(pt_create1) = 0.010404625 sec
+Time(pt_create2) = Thread depth: 939486840
+0.005700313 sec
+0.013894467 sec
+Thread depth: -553660808
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000019080 sec
+Thread depth: -830488968
+Time(pthreadspawn) = 0.000066950 sec
+Time(pt_create2) = 0.013957428 sec
+0.000007750 sec
+Thread depth: 1988083320
+Time(pthreadspawn) = 0.000011260 sec
+Time(pt_create1) = 0.011596157 sec
+Time(pt_join2) = 0.001008371 sec
+Time(pt_create2) = 0.011766937 sec
+Thread depth: 100642424
+Time(pt_join1) = 0.000004030 sec
+Time(pthreadspawn) = 0.000017530 sec
+Thread depth: 964664952
+Time(pthreadspawn) = 0.000069300 sec
+Time(pt_join2) = 0.000118010 sec
+Time(pt_create2) = 0.000251270 sec
+Thread depth: 100642424
+Time(pthreadspawn) = 0.000008140 sec
+Time(pt_create1) = 0.009111665 sec
+Thread depth: -1744834952
+Time(pthreadspawn) = 0.000008310 sec
+Time(pt_create2) = 0.006866434 sec
+Thread depth: 1006628472
+Time(pthreadspawn) = 0.000003660 sec
+Time(pt_create1) = 0.011642886 sec
+Time(pt_join1) = 0.000218490 sec
+Thread depth: 125820536
+Time(pthreadspawn) = 0.000007900 sec
+Time(pt_join1) = 0.006953404 sec
+Time(pt_create2) = 0.000199610 sec
+Time(pt_join1) = 0.007797504 sec
+Thread depth: 855559800
+Time(pthreadspawn) = 0.000007890 sec
+Thread depth: 125820536
+Time(pt_create1) = 0.007185674 sec
+Time(pthreadspawn) = 0.000271180 sec
+Thread depth: -1358967176
+Time(pthreadspawn) = 0.000008420 sec
+Time(pt_join2) = 0.000288210 sec
+Time(pt_create2) = 0.007239084 sec
+Time(pt_join2) = 0.000299561 sec
+Time(pt_join1) = 0.003904822 sec
+Time(pt_create1) = 0.007600004 sec
+Time(pt_create2) = 0.007419004 sec
+Time(pt_join1) = 0.000003100 sec
+Thread depth: 352292472
+Time(pthreadspawn) = 0.000033510 sec
+Thread depth: 989843064
+Time(pthreadspawn) = 0.000058400 sec
+Time(pt_create1) = 0.016298609 sec
+Time(pt_join2) = 0.000147370 sec
+Time(pt_create2) = 0.007580504 sec
+Time(pt_create2) = Thread depth: 1996476024
+0.000192570 sec
+Time(pthreadspawn) = 0.000012930 sec
+Time(pt_join1) = Thread depth: -1652580744
+Time(pthreadspawn) = 0.000015100 sec
+Time(pt_create1) = 0.021784722 sec
+0.000002660 sec
+Thread depth: 352292472
+Time(pt_create2) = 0.013622108 sec
+Time(pthreadspawn) = 0.000031230 sec
+Thread depth: 2097122936
+Time(pthreadspawn) = 0.000050640 sec
+Time(pt_create1) = 0.016968309 sec
+Time(pt_join1) = Thread depth: 947879544
+Thread depth: -1493184904
+Time(pt_join1) = Time(pt_join1) = Time(pt_join1) = Thread depth: 2130693752
+0.000003060 sec
+0.004539133 sec
+Time(pt_create2) = Time(pt_join2) = Time(pthreadspawn) = Time(pt_create2) = 0.004552813 sec
+0.019108511 sec
+Time(pt_create2) = Time(pt_join2) = Time(pt_join2) = Thread depth: -855667080
+Time(pt_create2) = 0.013410077 sec
+0.000193660 sec
+Time(pthreadspawn) = 0.000003780 sec
+Time(pt_join1) = 0.000039900 sec
+0.000003250 sec
+Time(pt_create2) = Time(pt_create1) = Thread depth: 2097122936
+0.000369440 sec
+Time(pthreadspawn) = 0.000009730 sec
+Time(pt_create1) = Time(pt_join1) = Time(pt_create1) = 0.000002720 sec
+Thread depth: 1979690616
+0.000023170 sec
+Time(pt_join1) = Thread depth: -1367359880
+0.000063010 sec
+0.018098110 sec
+Time(pt_join2) = Time(pthreadspawn) = 0.020598651 sec
+0.000019860 sec
+Thread depth: -1501577608
+0.019352531 sec
+Time(pt_create1) = Time(pt_create2) = Thread depth: 847167096
+0.004679472 sec
+0.000247240 sec
+Thread depth: -536875400
+Time(pt_create2) = Time(pt_create1) = 0.013381157 sec
+Thread depth: 377470584
+0.000293480 sec
+Thread depth: -1493184904
+Thread depth: 872345208
+Time(pthreadspawn) = 0.000011070 sec
+Thread depth: -1484792200
+Time(pthreadspawn) = Time(pthreadspawn) = Time(pthreadspawn) = 0.000023550 sec
+Time(pthreadspawn) = 0.000014020 sec
+0.000026760 sec
+Time(pthreadspawn) = Thread depth: -1929408904
+0.000134320 sec
+Time(pthreadspawn) = 0.000018950 sec
+Thread depth: 1962905208
+Time(pt_join2) = Time(pthreadspawn) = 0.000225860 sec
+Thread depth: 1996476024
+Time(pthreadspawn) = 0.000241470 sec
+Time(pthreadspawn) = Time(pt_create2) = 0.000296990 sec
+Time(pt_create1) = Time(pt_create1) = 0.004602722 sec
+Time(pt_create1) = Thread depth: 260038264
+0.000014040 sec
+Time(pt_create1) = Time(pthreadspawn) = Thread depth: -1753227656
+0.023225753 sec
+Time(pt_create2) = Time(pthreadspawn) = 0.004671692 sec
+Time(pt_create1) = Thread depth: -1786798472
+Time(pthreadspawn) = 0.017326749 sec
+Thread depth: -1644188040
+0.004746102 sec
+Time(pthreadspawn) = 0.000024400 sec
+0.012907187 sec
+0.012322537 sec
+Thread depth: -545268104
+Time(pthreadspawn) = Time(pt_create2) = Time(pthreadspawn) = 0.000060600 sec
+0.000003220 sec
+0.010841566 sec
+0.004674592 sec
+0.000014230 sec
+Time(pt_create2) = 0.013506167 sec
+0.000019730 sec
+0.000208100 sec
+Time(pthreadspawn) = Thread depth: 821988984
+Time(pt_create2) = Time(pthreadspawn) = 0.004857452 sec
+0.000146210 sec
+0.000016720 sec
+0.004819593 sec
+0.000334440 sec
+0.000067290 sec
+0.000048710 sec
+Thread depth: 973057656
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000234960 sec
+0.000464560 sec
+0.004844092 sec
+Time(pt_join2) = 0.009740756 sec
+Time(pt_join2) = 0.001336001 sec
+Time(pt_join1) = 0.004299522 sec
+Time(pt_join2) = 0.000051580 sec
+Time(pt_join1) = 0.006229003 sec
+Time(pt_join2) = 0.005228343 sec
+Time(pt_create1) = 0.015139138 sec
+Thread depth: 2147479160
+Time(pthreadspawn) = 0.000015270 sec
+Time(pt_join1) = 0.019788761 sec
+Time(pt_join2) = 0.005339353 sec
+Time(pt_create1) = 0.015738838 sec
+Thread depth: 402648696
+Time(pthreadspawn) = 0.000008130 sec
+Time(pt_join1) = 0.020816152 sec
+Time(pt_join1) = 0.004402753 sec
+Time(pt_join2) = 0.000002760 sec
+Time(pt_create2) = 0.004507203 sec
+Time(pt_create2) = 0.000183261 sec
+Thread depth: -1744834952
+Time(pthreadspawn) = 0.000008030 sec
+Time(pt_create1) = 0.004576383 sec
+Thread depth: 402648696
+Thread depth: -1761620360
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000176260 sec
+0.000007770 sec
+Time(pt_join1) = 0.000571660 sec
+Time(pt_join2) = 0.000071970 sec
+Time(pt_join1) = 0.011908097 sec
+Time(pt_join1) = 0.004841933 sec
+Time(pt_join2) = 0.000108470 sec
+Time(pt_create2) = 0.012082586 sec
+Time(pt_create2) = 0.005104463 sec
+Thread depth: 394255992
+Time(pt_join1) = 0.004932162 sec
+Time(pthreadspawn) = 0.000161360 sec
+Thread depth: -1358967176
+Time(pthreadspawn) = 0.000179590 sec
+Time(pt_join2) = 0.000142080 sec
+Time(pt_join1) = 0.007175934 sec
+Time(pt_create1) = 0.000219261 sec
+Thread depth: 402648696
+Time(pthreadspawn) = 0.000007870 sec
+Time(pt_join2) = 0.000265831 sec
+Time(pt_join1) = 0.004623233 sec
+Time(pt_create1) = 0.004824973 sec
+Time(pt_create2) = 0.004906763 sec
+Thread depth: -1392537992
+Time(pt_join1) = Time(pthreadspawn) = 0.000014780 sec
+Thread depth: 377470584
+Time(pthreadspawn) = 0.000062350 sec
+0.000003640 sec
+Thread depth: -1753227656
+Time(pt_create1) = 0.008017175 sec
+Time(pt_join2) = 0.000014220 sec
+Time(pthreadspawn) = 0.000020820 sec
+Thread depth: -1476399496
+Time(pt_create2) = 0.000299560 sec
+Time(pthreadspawn) = 0.000021790 sec
+Time(pt_create1) = 0.000216480 sec
+Time(pt_create2) = 0.004939353 sec
+Time(pt_join1) = 0.022058042 sec
+Thread depth: 218074744
+Time(pt_create2) = 0.000162270 sec
+Thread depth: -1392537992
+Time(pthreadspawn) = 0.000052290 sec
+Time(pthreadspawn) = 0.000031710 sec
+Thread depth: -1476399496
+Time(pthreadspawn) = Time(pt_join1) = 0.005046923 sec
+Time(pt_join2) = 0.000003160 sec
+0.000008630 sec
+Time(pt_create2) = 0.005139453 sec
+Thread depth: -1501577608
+Time(pthreadspawn) = 0.000010800 sec
+Time(pt_join1) = 0.005133013 sec
+Time(pt_join2) = 0.000003310 sec
+Time(pt_join1) = 0.005111723 sec
+Time(pt_create2) = 0.005276173 sec
+Thread depth: 973057656
+Time(pt_create1) = Time(pt_join2) = Time(pt_join2) = 0.000217410 sec
+0.005831203 sec
+Time(pthreadspawn) = 0.000002110 sec
+Time(pt_create2) = 0.005561583 sec
+0.000012660 sec
+Thread depth: 897523320
+Time(pthreadspawn) = 0.000027210 sec
+Thread depth: 821988984
+Time(pthreadspawn) = 0.000041310 sec
+Time(pt_create2) = 0.005345273 sec
+Thread depth: -1786798472
+Time(pthreadspawn) = 0.000008460 sec
+Time(pt_create1) = 0.001080851 sec
+Thread depth: 2122301048
+Time(pthreadspawn) = 0.000007920 sec
+Time(pt_join1) = 0.001542161 sec
+Time(pt_join2) = 0.000092520 sec
+Time(pt_join1) = 0.018359260 sec
+Time(pt_create1) = 0.007027644 sec
+Time(pt_join1) = 0.007048694 sec
+Time(pt_join2) = 0.000003850 sec
+Thread depth: -1912623496
+Time(pthreadspawn) = 0.000008380 sec
+Time(pt_join1) = 0.028817515 sec
+Time(pt_join2) = 0.000002950 sec
+Time(pt_create1) = 0.000204950 sec
+Time(pt_join1) = 0.034292259 sec
+Thread depth: 226467448
+Time(pthreadspawn) = 0.000008440 sec
+Time(pt_create2) = 0.000377481 sec
+Thread depth: -1912623496
+Time(pthreadspawn) = 0.000008330 sec
+Time(pt_join2) = 0.008121035 sec
+Time(pt_create1) = 0.007485945 sec
+Time(pt_create2) = 0.000175890 sec
+Thread depth: 889130616
+Time(pt_create2) = Time(pt_create1) = 0.025127464 sec
+0.007573015 sec
+Time(pt_join1) = Thread depth: -1660973448
+Time(pt_join1) = 0.032103338 sec
+Time(pthreadspawn) = Time(pthreadspawn) = Thread depth: -1375752584
+0.000012460 sec
+Time(pthreadspawn) = 0.000021060 sec
+0.000034230 sec
+Thread depth: 226467448
+Time(pthreadspawn) = 0.000154490 sec
+0.000041260 sec
+Time(pt_join2) = 0.000118080 sec
+Time(pt_create2) = 0.000223420 sec
+Thread depth: -1375752584
+Time(pthreadspawn) = 0.000004540 sec
+Time(pt_join2) = 0.010122606 sec
+Time(pt_create1) = 0.000172370 sec
+Time(pt_join1) = 0.029332826 sec
+Time(pt_join2) = 0.000002450 sec
+Time(pt_create2) = Thread depth: -1761620360
+0.006227693 sec
+Time(pthreadspawn) = 0.000026960 sec
+Time(pt_join1) = 0.012042267 sec
+Time(pt_create1) = 0.006110693 sec
+Time(pt_create2) = Time(pt_create1) = Thread depth: 863952504
+Time(pthreadspawn) = 0.000005990 sec
+0.006099103 sec
+0.017329660 sec
+Time(pt_create2) = 0.000256450 sec
+Thread depth: -1317036424
+Time(pt_join1) = Time(pthreadspawn) = 0.000461660 sec
+0.029511646 sec
+Time(pt_join1) = Thread depth: 914308728
+Thread depth: 830381688
+Time(pthreadspawn) = Time(pt_join1) = 0.000003590 sec
+0.005294173 sec
+Time(pthreadspawn) = Time(pt_join2) = Time(pt_join2) = 0.000366200 sec
+Thread depth: -1317036424
+0.000003630 sec
+Time(pthreadspawn) = 0.000299650 sec
+Time(pt_create2) = 0.000003500 sec
+0.017757870 sec
+Time(pt_join1) = 0.000002990 sec
+Time(pt_create1) = Time(pt_create2) = 0.010372475 sec
+Thread depth: -1015030152
+0.000350350 sec
+Time(pthreadspawn) = 0.000017420 sec
+Thread depth: 863952504
+Thread depth: 838774392
+0.000200210 sec
+Time(pt_join1) = 0.000002430 sec
+Time(pt_create1) = 0.000307740 sec
+Time(pt_create2) = Time(pthreadspawn) = 0.000180140 sec
+Time(pthreadspawn) = 0.000054000 sec
+0.000121560 sec
+Thread depth: 872345208
+Time(pthreadspawn) = 0.000008150 sec
+Time(pt_create2) = 0.009539575 sec
+Time(pt_join2) = 0.009596485 sec
+Thread depth: -1015030152
+Time(pthreadspawn) = Time(pt_create1) = 0.000367310 sec
+0.000005660 sec
+Thread depth: 2113908344
+Time(pthreadspawn) = 0.000008120 sec
+Time(pt_join1) = Thread depth: -536875400
+Time(pthreadspawn) = 0.000075180 sec
+Time(pt_create2) = 0.012677487 sec
+0.004003902 sec
+Time(pt_create1) = Time(pt_join2) = 0.000704920 sec
+0.000003000 sec
+Thread depth: -553660808
+Time(pthreadspawn) = 0.000008271 sec
+Thread depth: 1962905208
+Time(pthreadspawn) = 0.000001960 sec
+Time(pt_create1) = 0.009305536 sec
+Thread depth: 369077880
+Time(pthreadspawn) = 0.000008570 sec
+Time(pt_join2) = 0.000641771 sec
+Time(pt_create1) = 0.004067173 sec
+Thread depth: 268430968
+Time(pthreadspawn) = 0.000004050 sec
+Time(pt_join2) = 0.004632893 sec
+Time(pt_create1) = 0.000357301 sec
+Time(pt_create2) = 0.000218760 sec
+Time(pt_create2) = 0.000341401 sec
+Time(pt_create1) = 0.009755046 sec
+Thread depth: 377470584
+Time(pt_join2) = 0.000690261 sec
+Thread depth: 92249720
+Time(pthreadspawn) = Thread depth: 268430968
+Time(pthreadspawn) = 0.000029790 sec
+Thread depth: 1962905208
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000042850 sec
+0.000005680 sec
+Time(pt_join1) = 0.030907287 sec
+Time(pt_join2) = 0.000003710 sec
+0.000085220 sec
+Time(pt_create2) = 0.000222160 sec
+Time(pt_join1) = Time(pt_join1) = 0.002204481 sec
+Time(pt_create2) = 0.005104363 sec
+Time(pt_create1) = Time(pt_join1) = Thread depth: 218074744
+0.001299791 sec
+Thread depth: -1056993672
+0.010171166 sec
+Time(pthreadspawn) = 0.000040350 sec
+Time(pthreadspawn) = Time(pt_create1) = 0.000014090 sec
+0.002375771 sec
+0.010714956 sec
+Thread depth: 377470584
+Time(pthreadspawn) = 0.000141760 sec
+Time(pt_create1) = Thread depth: -1887445384
+Time(pt_join2) = 0.000150180 sec
+Time(pthreadspawn) = 0.000019550 sec
+0.002203091 sec
+Thread depth: -1778405768
+Time(pthreadspawn) = 0.000066180 sec
+Time(pt_join2) = 0.001343551 sec
+Time(pt_join1) = 0.000284360 sec
+Time(pt_join1) = 0.031174957 sec
+Time(pt_join1) = 0.027803295 sec
+Time(pt_create2) = 0.000218360 sec
+Time(pt_create1) = 0.000236420 sec
+Thread depth: -1778405768
+Thread depth: 1971297912
+Time(pthreadspawn) = Time(pthreadspawn) = Time(pt_create1) = 0.005656453 sec
+0.000010280 sec
+0.000011260 sec
+Time(pt_create1) = 0.010670716 sec
+Thread depth: 905916024
+Time(pt_create2) = 0.001748311 sec
+Thread depth: 931094136
+Time(pthreadspawn) = Time(pt_create1) = Thread depth: 830381688
+Thread depth: 125820536
+Time(pthreadspawn) = Time(pt_create1) = Time(pthreadspawn) = 0.000059940 sec
+Thread depth: 981450360
+0.000008980 sec
+Time(pthreadspawn) = 0.000437020 sec
+0.000017370 sec
+Time(pt_create2) = Time(pt_create1) = 0.000019390 sec
+0.010866146 sec
+0.010732436 sec
+Thread depth: -1023422856
+Time(pt_create2) = Time(pthreadspawn) = 0.010713666 sec
+Thread depth: 2147479160
+Time(pt_create1) = 0.010925026 sec
+Time(pt_create1) = 0.006122443 sec
+Time(pthreadspawn) = 0.000019240 sec
+0.000084580 sec
+Thread depth: -805310856
+Time(pthreadspawn) = 0.000025810 sec
+0.008947715 sec
+Time(pthreadspawn) = 0.000081790 sec
+Thread depth: 385863288
+Time(pthreadspawn) = 0.000354520 sec
+Time(pt_create2) = 0.010838226 sec
+Thread depth: -1929408904
+Time(pthreadspawn) = 0.000347581 sec
+Time(pt_create1) = 0.005704563 sec
+Thread depth: 880737912
+Time(pthreadspawn) = 0.000422251 sec
+Time(pt_create2) = 0.010889946 sec
+Thread depth: -1367359880
+Time(pthreadspawn) = 0.000433701 sec
+Thread depth: 260038264
+Time(pthreadspawn) = 0.000713071 sec
+Time(pt_join2) = 0.002979562 sec
+Time(pt_join1) = 0.042150464 sec
+Time(pt_create2) = 0.003447532 sec
+Thread depth: -1056993672
+Time(pthreadspawn) = 0.000004150 sec
+Thread depth: 1996476024
+Time(pthreadspawn) = 0.000003090 sec
+Time(pt_create1) = 0.003499922 sec
+Time(pt_create2) = Time(pt_create1) = 0.000169060 sec
+0.003599222 sec
+Thread depth: -1887445384
+Time(pthreadspawn) = 0.000008490 sec
+Time(pt_create2) = 0.008488075 sec
+Time(pt_create1) = Time(pt_join1) = 0.000003780 sec
+0.017020139 sec
+Thread depth: 956272248
+Time(pthreadspawn) = 0.000004310 sec
+Time(pt_create1) = Time(pt_create2) = 0.006122123 sec
+Thread depth: 897523320
+Time(pthreadspawn) = 0.000058410 sec
+0.004821133 sec
+Thread depth: 939486840
+Time(pt_create2) = 0.000315210 sec
+Time(pthreadspawn) = Time(pt_join1) = Time(pt_join1) = Thread depth: -1904230792
+Thread depth: 1996476024
+Time(pthreadspawn) = 0.000082470 sec
+0.000003220 sec
+0.000002720 sec
+Thread depth: 889130616
+0.000018030 sec
+Time(pt_join1) = 0.003445612 sec
+Time(pt_join2) = Time(pt_join1) = 0.000003200 sec
+0.035384219 sec
+Time(pt_join2) = 0.000003130 sec
+Time(pt_join1) = 0.028086705 sec
+Time(pthreadspawn) = 0.000172530 sec
+Time(pthreadspawn) = 0.000016190 sec
+Time(pt_create1) = 0.000174890 sec
+Time(pt_create1) = Thread depth: 863952504
+0.003634802 sec
+Time(pthreadspawn) = Time(pt_create2) = 0.000272680 sec
+Thread depth: 1006628472
+Time(pthreadspawn) = 0.000051470 sec
+0.000013300 sec
+Thread depth: 956272248
+Time(pthreadspawn) = 0.000033320 sec
+Time(pt_join2) = 0.000226410 sec
+Time(pt_create2) = 0.003835972 sec
+Time(pt_create2) = 0.003736902 sec
+Thread depth: 125820536
+Time(pthreadspawn) = 0.000030910 sec
+Thread depth: 931094136
+Time(pthreadspawn) = 0.000046030 sec
+Time(pt_create2) = 0.000976450 sec
+Thread depth: -1904230792
+Time(pthreadspawn) = 0.000016820 sec
+Time(pt_join1) = 0.005256303 sec
+Time(pt_join2) = 0.000350270 sec
+Time(pt_join1) = 0.004840933 sec
+Time(pt_join1) = 0.008020094 sec
+Time(pt_join2) = 0.005547093 sec
+Time(pt_join1) = 0.006076593 sec
+Time(pt_join2) = 0.000038260 sec
+Time(pt_join1) = 0.045321805 sec
+Time(pt_create2) = 0.005444073 sec
+Time(pt_join1) = 0.000003770 sec
+Thread depth: 385863288
+Time(pthreadspawn) = 0.000011500 sec
+Time(pt_join1) = 0.005509374 sec
+Time(pt_join2) = 0.000003110 sec
+Time(pt_join2) = 0.000191781 sec
+Thread depth: -838881672
+Time(pthreadspawn) = 0.000008690 sec
+Time(pt_create1) = 0.005670954 sec
+Time(pt_create2) = 0.005742324 sec
+Time(pt_create1) = 0.005679604 sec
+Thread depth: -587231624
+Time(pthreadspawn) = 0.000033400 sec
+Thread depth: -805310856
+Time(pthreadspawn) = 0.000054400 sec
+Time(pt_join1) = 0.007233174 sec
+Time(pt_join2) = 0.000041560 sec
+Time(pt_join2) = 0.007139784 sec
+Time(pt_create2) = 0.008212415 sec
+Thread depth: 872345208
+Time(pthreadspawn) = 0.000009940 sec
+Time(pt_create1) = 0.006183283 sec
+Thread depth: 360685176
+Time(pthreadspawn) = 0.000045270 sec
+Time(pt_join1) = 0.015124938 sec
+Time(pt_join2) = 0.000058170 sec
+Time(pt_create2) = 0.008395765 sec
+Thread depth: 2113908344
+Time(pthreadspawn) = 0.000004130 sec
+Time(pt_create1) = 0.008525285 sec
+Thread depth: 234860152
+Time(pthreadspawn) = 0.000010370 sec
+Time(pt_create1) = 0.008468024 sec
+Thread depth: 243252856
+Time(pthreadspawn) = 0.000007830 sec
+Time(pt_join1) = 0.000520590 sec
+Time(pt_join2) = 0.000044440 sec
+Time(pt_create2) = 0.009069345 sec
+Thread depth: 369077880
+Time(pthreadspawn) = 0.000036800 sec
+Time(pt_create2) = 0.008892725 sec
+Thread depth: 92249720
+Time(pthreadspawn) = 0.000004740 sec
+Time(pt_create2) = 0.014700508 sec
+Time(pt_join1) = 0.000004150 sec
+Thread depth: 402648696
+Time(pthreadspawn) = 0.000363580 sec
+Time(pt_join2) = 0.009002405 sec
+Time(pt_create1) = Time(pt_create1) = Thread depth: -1879052680
+Time(pthreadspawn) = 0.000005350 sec
+0.011166986 sec
+0.018536381 sec
+Time(pt_create2) = 0.004997313 sec
+Time(pt_join1) = 0.000003180 sec
+Thread depth: -1493184904
+Time(pt_join1) = 0.032631918 sec
+Time(pthreadspawn) = Time(pt_join1) = 0.004908673 sec
+Time(pt_join2) = 0.000002710 sec
+0.000401370 sec
+Time(pt_join1) = 0.033792769 sec
+Time(pt_create2) = Time(pt_create2) = Time(pt_create1) = 0.000191780 sec
+0.000207260 sec
+Thread depth: 981450360
+Time(pt_create2) = 0.008645005 sec
+Thread depth: -1493184904
+Time(pthreadspawn) = 0.000010540 sec
+Thread depth: -1879052680
+Time(pthreadspawn) = 0.000002780 sec
+Time(pthreadspawn) = 0.000061400 sec
+0.000228520 sec
+Time(pt_join1) = 0.000003680 sec
+Thread depth: 1476390520
+Time(pthreadspawn) = 0.000102680 sec
+Time(pt_join1) = 0.005062723 sec
+Time(pt_join2) = 0.000002810 sec
+Time(pt_create2) = 0.005333043 sec
+Thread depth: 863952504
+Thread depth: 2139086456
+Thread depth: 1476390520
+Time(pthreadspawn) = Time(pt_join1) = Time(pt_create1) = 0.040797032 sec
+0.000215780 sec
+Time(pt_create2) = Time(pthreadspawn) = Time(pthreadspawn) = Time(pt_create2) = 0.009187065 sec
+Thread depth: 1006628472
+Time(pthreadspawn) = 0.000050280 sec
+0.000010750 sec
+0.000009170 sec
+0.000203350 sec
+Time(pt_create1) = 0.000250860 sec
+Time(pt_create2) = 0.009261665 sec
+0.000054840 sec
+Thread depth: 905916024
+Thread depth: 1971297912
+Thread depth: -1006637448
+Time(pthreadspawn) = 0.000004290 sec
+Time(pthreadspawn) = 0.000119870 sec
+Thread depth: -1501577608
+Time(pthreadspawn) = 0.000079480 sec
+Time(pthreadspawn) = 0.000016190 sec
+Time(pt_create1) = 0.000260900 sec
+Time(pt_join1) = 0.000595800 sec
+Time(pt_join2) = 0.000083960 sec
+Time(pt_join2) = 0.006428634 sec
+Time(pt_join1) = 0.015026279 sec
+Time(pt_join2) = 0.000057230 sec
+Time(pt_join2) = 0.005107433 sec
+Time(pt_create1) = 0.005837243 sec
+Thread depth: 1442819704
+Time(pthreadspawn) = 0.000008040 sec
+Time(pt_create2) = 0.010139256 sec
+Time(pt_join1) = 0.020676072 sec
+Thread depth: -1023422856
+Time(pthreadspawn) = 0.000008320 sec
+Time(pt_create2) = 0.007246024 sec
+Time(pt_join1) = 0.000003390 sec
+Thread depth: 939486840
+Time(pthreadspawn) = 0.000007970 sec
+Time(pt_join1) = Time(pt_join2) = 0.020764092 sec
+0.000087730 sec
+Time(pt_create1) = 0.000216320 sec
+Time(pt_create1) = 0.004499192 sec
+Thread depth: 2147479160
+Time(pthreadspawn) = 0.000003890 sec
+Thread depth: 268430968
+Time(pthreadspawn) = 0.000007970 sec
+Time(pt_join1) = 0.016152969 sec
+Time(pt_create2) = 0.004563692 sec
+Thread depth: -838881672
+Time(pthreadspawn) = 0.000005150 sec
+Time(pt_create2) = 0.000178680 sec
+Time(pt_join1) = 0.000002520 sec
+Thread depth: 2147479160
+Time(pthreadspawn) = 0.000008150 sec
+Time(pt_create2) = 0.004688562 sec
+Time(pt_create2) = 0.000335630 sec
+Time(pt_create1) = 0.000201870 sec
+Time(pt_join1) = 0.000002770 sec
+Thread depth: -587231624
+Time(pt_join1) = Time(pt_join2) = Time(pthreadspawn) = 0.021443712 sec
+Thread depth: 268430968
+Time(pt_create1) = Time(pthreadspawn) = 0.000082560 sec
+0.004751252 sec
+Thread depth: 2130693752
+Time(pthreadspawn) = 0.000044630 sec
+0.000176310 sec
+Time(pt_create1) = 0.004781642 sec
+Thread depth: 922701432
+Time(pthreadspawn) = 0.000037250 sec
+Thread depth: 2105515640
+Time(pt_join1) = Time(pt_create2) = 0.004329362 sec
+Time(pthreadspawn) = 0.000051660 sec
+0.000051670 sec
+Thread depth: 2130693752
+Time(pthreadspawn) = 0.000008190 sec
+0.000194170 sec
+Time(pt_create2) = 0.000176600 sec
+Time(pt_join1) = 0.000044070 sec
+Time(pt_join2) = 0.000342060 sec
+Thread depth: 2105515640
+Time(pthreadspawn) = 0.000008300 sec
+Time(pt_join1) = 0.000633820 sec
+Thread depth: 880737912
+Time(pthreadspawn) = 0.000005620 sec
+Time(pt_create2) = Time(pt_create2) = Time(pt_create2) = 0.004558692 sec
+Thread depth: 922701432
+Time(pthreadspawn) = 0.000337720 sec
+0.000004730 sec
+Time(pt_join1) = Time(pt_join1) = 0.000136670 sec
+0.000002070 sec
+0.010624335 sec
+Time(pt_join1) = 0.000003550 sec
+Thread depth: 360685176
+Time(pthreadspawn) = 0.000429111 sec
+Time(pt_create2) = 0.004297803 sec
+Thread depth: 234860152
+Time(pthreadspawn) = 0.000326520 sec
+Time(pt_create2) = 0.004275243 sec
+Time(pt_create2) = Time(pt_join2) = Thread depth: 2122301048
+Time(pthreadspawn) = 0.000008880 sec
+Thread depth: 243252856
+0.016511259 sec
+Time(pthreadspawn) = 0.015141589 sec
+Time(pt_join1) = 0.000382980 sec
+0.004020972 sec
+Time(pt_join1) = 0.000126690 sec
+Time(pt_join2) = 0.000287260 sec
+Time(pt_join1) = 0.043996024 sec
+Time(pt_join2) = 0.003695312 sec
+Time(pt_join1) = 0.003942722 sec
+Time(pt_create2) = 0.004047282 sec
+Thread depth: 2139086456
+Time(pthreadspawn) = 0.000012170 sec
+Time(pt_create1) = Thread depth: -1308643720
+0.009967065 sec
+Time(pthreadspawn) = 0.000009170 sec
+Time(pt_join2) = 0.000347361 sec
+Time(pt_join1) = 0.013693568 sec
+Time(pt_create2) = 0.004547263 sec
+Thread depth: -1501577608
+Time(pthreadspawn) = 0.000013190 sec
+Time(pt_join1) = 0.013099488 sec
+Time(pt_join1) = 0.004612623 sec
+Time(pt_create1) = 0.000193060 sec
+Thread depth: 1467997816
+Time(pthreadspawn) = 0.000005700 sec
+Time(pt_join2) = 0.000114920 sec
+Time(pt_join1) = 0.005013313 sec
+Time(pt_join2) = 0.000041240 sec
+Time(pt_join2) = 0.005446883 sec
+Time(pt_create1) = 0.005203593 sec
+Thread depth: -562053512
+Time(pthreadspawn) = 0.000033790 sec
+Time(pt_join1) = 0.011519646 sec
+Time(pt_join2) = 0.006207413 sec
+Time(pt_join2) = 0.011636326 sec
+Time(pt_create2) = 0.005723034 sec
+Time(pt_join1) = 0.010984307 sec
+Thread depth: -1006637448
+Time(pthreadspawn) = 0.000008300 sec
+Time(pt_join1) = 0.012377477 sec
+Time(pt_join2) = 0.000003070 sec
+Time(pt_create1) = 0.000234650 sec
+Thread depth: 125820536
+Time(pthreadspawn) = 0.000008010 sec
+Time(pt_create2) = Thread depth: 1442819704
+Time(pthreadspawn) = 0.000004960 sec
+0.005373413 sec
+Time(pt_join2) = 0.004410913 sec
+Time(pt_join1) = 0.000093110 sec
+Time(pt_join2) = 0.000037260 sec
+Time(pt_join1) = 0.004084602 sec
+Time(pt_join2) = 0.000040260 sec
+Time(pt_join2) = 0.004399732 sec
+Time(pt_join2) = 0.004733173 sec
+Time(pt_join1) = 0.004359262 sec
+Time(pt_join2) = 0.000036080 sec
+Time(pt_join2) = 0.005144243 sec
+Time(pt_join1) = 0.004586202 sec
+Time(pt_join2) = 0.000038480 sec
+Time(pt_join1) = 0.008663004 sec
+Time(pt_join2) = 0.000065020 sec
+Time(pt_join1) = 0.013410658 sec
+Time(pt_join2) = 0.000057930 sec
+Time(pt_join2) = 0.014099008 sec
+Time(pt_create1) = 0.016765229 sec
+Time(pt_join2) = 0.004981163 sec
+Thread depth: 117427832
+Time(pthreadspawn) = 0.000007950 sec
+Time(pt_join1) = 0.004562103 sec
+Time(pt_create2) = 0.000203210 sec
+Time(pt_join2) = 0.009385785 sec
+Thread depth: 117427832
+Time(pthreadspawn) = 0.000007990 sec
+Time(pt_join2) = 0.004409722 sec
+Time(pt_create1) = 0.004867133 sec
+Time(pt_join1) = 0.020576771 sec
+Thread depth: 1451212408
+Time(pthreadspawn) = 0.000009540 sec
+Time(pt_create2) = 0.000167770 sec
+Time(pt_join1) = 0.000002690 sec
+Time(pt_create1) = 0.009033485 sec
+Thread depth: 1451212408
+Time(pt_join1) = 0.009514935 sec
+Time(pthreadspawn) = 0.000031570 sec
+Time(pt_create2) = Time(pt_create2) = 0.003854172 sec
+0.004448752 sec
+Thread depth: 2113908344
+Time(pthreadspawn) = Time(pt_join1) = 0.024126243 sec
+Time(pt_join2) = 0.000090260 sec
+0.000154060 sec
+Time(pt_create1) = 0.003929502 sec
+Thread depth: -562053512
+Time(pt_join2) = Thread depth: 1434427000
+Time(pthreadspawn) = 0.000009680 sec
+Thread depth: 1467997816
+Time(pthreadspawn) = 0.000083290 sec
+0.000003120 sec
+Time(pthreadspawn) = 0.000010150 sec
+Time(pt_create2) = 0.000367160 sec
+Thread depth: 2113908344
+Time(pthreadspawn) = 0.000017221 sec
+Time(pt_join1) = 0.020125972 sec
+Time(pt_join2) = 0.000062730 sec
+Time(pt_join1) = 0.020784662 sec
+Time(pt_create2) = 0.003599952 sec
+Thread depth: 125820536
+Time(pthreadspawn) = 0.000009520 sec
+Time(pt_create1) = 0.008216645 sec
+Time(pt_join2) = 0.000426080 sec
+Thread depth: -1770013064
+Time(pthreadspawn) = 0.000008600 sec
+Time(pt_join1) = 0.008617795 sec
+Time(pt_join2) = 0.008189535 sec
+Time(pt_create2) = 0.000206190 sec
+Time(pt_create1) = Thread depth: -1770013064
+Time(pthreadspawn) = 0.000308130 sec
+Thread depth: -838881672
+Time(pthreadspawn) = 0.000325500 sec
+Time(pt_join2) = 0.008191464 sec
+0.000219640 sec
+Time(pt_join1) = 0.021529872 sec
+Time(pt_join2) = 0.000003510 sec
+Time(pt_join2) = Time(pt_join2) = 0.001626711 sec
+0.009387305 sec
+Thread depth: 872345208
+Time(pthreadspawn) = Time(pt_create1) = Time(pt_create1) = 0.000222500 sec
+Thread depth: 2113908344
+0.000204670 sec
+Time(pthreadspawn) = 0.000058080 sec
+0.000003280 sec
+Time(pt_create2) = 0.000228320 sec
+Time(pt_join2) = 0.006677293 sec
+Thread depth: -838881672
+Time(pthreadspawn) = 0.000008150 sec
+Time(pt_join1) = 0.059920543 sec
+Time(pt_join2) = 0.009578606 sec
+Time(pt_create1) = 0.000231161 sec
+Time(pt_join1) = 0.002911832 sec
+Time(pt_join2) = 0.000003000 sec
+Thread depth: 956272248
+Time(pthreadspawn) = 0.000010410 sec
+Time(pt_create2) = 0.000176240 sec
+Time(pt_join1) = 0.002504142 sec
+Thread depth: 956272248
+Time(pthreadspawn) = 0.000008060 sec
+Time(pt_create2) = 0.007751835 sec
+Thread depth: -1308643720
+Time(pthreadspawn) = 0.000004420 sec
+Time(pt_join2) = 0.000192050 sec
+Time(pt_join1) = 0.002574902 sec
+Time(pt_create1) = 0.002868072 sec
+Time(pt_join2) = 0.000163460 sec
+Thread depth: -1174425992
+Time(pthreadspawn) = 0.000008400 sec
+Time(pt_join2) = 0.006256033 sec
+Time(pt_create1) = 0.000232720 sec
+Time(pt_join1) = 0.006504973 sec
+Thread depth: -1652580744
+Time(pthreadspawn) = 0.000008080 sec
+Time(pt_join1) = 0.002721481 sec
+Time(pt_join2) = 0.000039890 sec
+Time(pt_join2) = 0.030391166 sec
+Time(pt_join2) = 0.000424770 sec
+Time(pt_join1) = 0.012083836 sec
+Time(pt_join2) = 0.000033500 sec
+Time(pt_join2) = 0.004885173 sec
+Time(pt_join1) = 0.029755397 sec
+Time(pt_join2) = 0.000033920 sec
+Time(pt_join2) = 0.030356797 sec
+Time(pt_join1) = 0.047610936 sec
+Time(pt_create2) = 0.002792892 sec
+Thread depth: 872345208
+Time(pthreadspawn) = 0.000008160 sec
+Time(pt_join2) = 0.032465108 sec
+Time(pt_create2) = 0.002927202 sec
+Thread depth: 2113908344
+Time(pthreadspawn) = 0.000007900 sec
+Time(pt_join2) = 0.014630048 sec
+Time(pt_join1) = 0.002529111 sec
+Time(pt_create2) = 0.005155723 sec
+Time(pt_join1) = 0.002779841 sec
+Thread depth: 1434427000
+Time(pthreadspawn) = 0.000007930 sec
+Time(pt_create1) = 0.002810511 sec
+Time(pt_join1) = 0.000186680 sec
+Time(pt_join2) = 0.000001870 sec
+Thread depth: -239374728
+Time(pthreadspawn) = 0.000008360 sec
+Time(pt_join1) = 0.005537113 sec
+Time(pt_join2) = 0.013263097 sec
+Time(pt_create2) = 0.000308900 sec
+Time(pt_create2) = Time(pt_create1) = 0.002743982 sec
+Thread depth: -239374728
+Time(pthreadspawn) = 0.000015280 sec
+0.000274221 sec
+Time(pt_join1) = Thread depth: 1451212408
+Time(pthreadspawn) = 0.000022280 sec
+0.025375305 sec
+Thread depth: -1174425992
+Time(pthreadspawn) = 0.000065760 sec
+Time(pt_join2) = 0.000004030 sec
+Time(pt_create2) = 0.000180530 sec
+Time(pt_join1) = 0.000002560 sec
+Time(pt_create1) = Thread depth: 1451212408
+Time(pt_join2) = Time(pthreadspawn) = 0.000023880 sec
+0.000247940 sec
+Time(pt_create2) = 0.012358187 sec
+Thread depth: 973057656
+Time(pthreadspawn) = 0.000068540 sec
+0.002779392 sec
+Time(pt_create1) = Time(pt_join2) = Time(pt_join2) = 0.030763087 sec
+Thread depth: -1652580744
+0.000153310 sec
+Time(pt_create1) = 0.002804512 sec
+Time(pthreadspawn) = 0.000215200 sec
+0.000039790 sec
+Time(pt_join1) = Thread depth: -1342181768
+0.015756639 sec
+Thread depth: 360685176
+Time(pt_create2) = 0.000175860 sec
+Time(pt_join2) = 0.001652531 sec
+Time(pthreadspawn) = 0.000017810 sec
+Time(pt_join2) = 0.000002870 sec
+Time(pthreadspawn) = 0.000123720 sec
+Thread depth: 973057656
+Time(pthreadspawn) = 0.000022740 sec
+Time(pt_join1) = 0.001648101 sec
+Time(pt_create2) = 0.000182250 sec
+Thread depth: -1342181768
+Time(pthreadspawn) = 0.000011780 sec
+Time(pt_join1) = 0.030451987 sec
+Time(pt_create2) = 0.000180230 sec
+Thread depth: 360685176
+Time(pthreadspawn) = 0.000014900 sec
+Time(pt_create1) = 0.000213490 sec
+Thread depth: -1929408904
+Time(pthreadspawn) = 0.000009220 sec
+Thread depth: 1434427000
+Time(pthreadspawn) = 0.000007480 sec
+Time(pt_create1) = 0.000413020 sec
+Time(pt_join2) = 0.000301980 sec
+Time(pt_join2) = 0.033845209 sec
+Time(pt_join2) = 0.001792601 sec
+Time(pt_join1) = 0.036458910 sec
+Time(pt_join2) = 0.000048720 sec
+Time(pt_join1) = 0.057618161 sec
+Time(pt_join1) = 0.002699661 sec
+Time(pt_join2) = 0.000048860 sec
+Time(pt_join1) = 0.001378591 sec
+Time(pt_join2) = 0.000071020 sec
+Time(pt_join2) = 0.001500051 sec
+Time(pt_create1) = 0.001626441 sec
+Time(pt_join2) = 0.038167641 sec
+Thread depth: 880737912
+Time(pt_join1) = Time(pthreadspawn) = 0.000014100 sec
+0.001654361 sec
+Time(pt_create2) = Time(pt_create2) = 0.001718891 sec
+Time(pt_join1) = 0.025917854 sec
+Thread depth: -1929408904
+Time(pthreadspawn) = 0.000017980 sec
+0.000204160 sec
+Thread depth: 880737912
+Time(pthreadspawn) = 0.000003070 sec
+Time(pt_join2) = 0.000146310 sec
+Time(pt_join1) = 0.062122834 sec
+Time(pt_join2) = 0.000060980 sec
+Time(pt_join1) = 0.006943134 sec
+Time(pt_join2) = 0.000035920 sec
+Time(pt_join1) = 0.060669933 sec
+Time(pt_join2) = 0.000064110 sec
+Time(pt_join1) = 0.051432478 sec
+Time(pt_join2) = 0.000037360 sec
+Time(pt_join2) = 0.002451192 sec
+Time(pt_join1) = 0.004372403 sec
+Time(pt_join2) = 0.000040140 sec
+Time(pt_join2) = 0.002116781 sec
+Time(pt_join2) = 0.005282363 sec
+Time(pt_join1) = 0.002161541 sec
+Time(pt_create1) = 0.002391961 sec
+Time(pt_join2) = 0.014431008 sec
+Thread depth: 905916024
+Time(pthreadspawn) = 0.000008110 sec
+Time(pt_join1) = 0.009612945 sec
+Time(pt_join2) = 0.000002890 sec
+Time(pt_create2) = 0.000172850 sec
+Thread depth: 905916024
+Time(pthreadspawn) = 0.000008110 sec
+Time(pt_join2) = 0.008895325 sec
+Time(pt_join2) = 0.009985625 sec
+Time(pt_create2) = 0.004570103 sec
+Time(pt_join1) = 0.075677282 sec
+Thread depth: 1434427000
+Time(pthreadspawn) = 0.000008190 sec
+Time(pt_join1) = 0.057747992 sec
+Time(pt_join2) = 0.000047220 sec
+Time(pt_join2) = 0.001037071 sec
+Time(pt_join2) = 0.027345485 sec
+Time(pt_join2) = 0.025442414 sec
+Time(pt_join1) = 0.064212315 sec
+Time(pt_join2) = 0.000032500 sec
+Time(pt_join1) = 0.001600981 sec
+Time(pt_join2) = 0.000059720 sec
+Time(pt_join1) = 0.066503216 sec
+Time(pt_join2) = 0.000032010 sec
+Time(pt_join2) = 0.025653884 sec
+Time(pt_join1) = 0.072890330 sec
+Time(pt_join1) = 0.001844821 sec
+Time(pt_join2) = 0.000028900 sec
+Time(pt_join1) = 0.025477834 sec
+Time(pt_join2) = 0.000032570 sec
+Time(pt_join1) = 0.069553609 sec
+Time(pt_create1) = 0.006929464 sec
+Time(pt_join1) = 0.037638221 sec
+Time(pt_join2) = 0.000002420 sec
+Thread depth: -1006637448
+Time(pthreadspawn) = 0.000008630 sec
+Time(pt_join2) = 0.000312050 sec
+Time(pt_create2) = 0.000389060 sec
+Thread depth: -1006637448
+Time(pthreadspawn) = 0.000010640 sec
+Time(pt_join2) = 0.022183242 sec
+Time(pt_join2) = 0.034475139 sec
+Time(pt_join2) = 0.032913468 sec
+Time(pt_join2) = 0.001448311 sec
+Time(pt_join1) = 0.065658386 sec
+Time(pt_join2) = 0.000002530 sec
+Time(pt_join2) = 0.024284073 sec
+Time(pt_create1) = 0.001075830 sec
+Time(pt_join1) = 0.071788740 sec
+Time(pt_join2) = 0.003519222 sec
+Thread depth: 2105515640
+Time(pthreadspawn) = 0.000008080 sec
+Time(pt_create1) = Time(pt_create2) = 0.000174121 sec
+Time(pt_join2) = 0.000166990 sec
+0.000892021 sec
+Thread depth: -805310856
+Time(pthreadspawn) = 0.000008300 sec
+Thread depth: 2105515640
+Time(pthreadspawn) = 0.000001810 sec
+Time(pt_join1) = 0.068813998 sec
+Time(pt_join2) = 0.000002710 sec
+Time(pt_create2) = 0.000362000 sec
+Time(pt_join1) = 0.000418730 sec
+Time(pt_join2) = 0.000044390 sec
+Thread depth: -805310856
+Time(pthreadspawn) = 0.000018710 sec
+Time(pt_join1) = 0.073376181 sec
+Time(pt_join2) = 0.000002800 sec
+Thread depth: -830488968
+Time(pt_create1) = Time(pthreadspawn) = 0.000670060 sec
+Time(pt_create1) = 0.000246020 sec
+0.000012670 sec
+Thread depth: -1300251016
+Time(pthreadspawn) = 0.000061540 sec
+Time(pt_join1) = 0.074697721 sec
+Time(pt_join2) = 0.000034940 sec
+Time(pt_join1) = 0.002053671 sec
+Time(pt_join1) = 0.075663442 sec
+Time(pt_join1) = 0.078382343 sec
+Time(pt_join2) = 0.000031040 sec
+Time(pt_join2) = 0.000365020 sec
+Time(pt_create2) = 0.000767380 sec
+Thread depth: -830488968
+Time(pthreadspawn) = 0.000008540 sec
+Time(pt_join1) = 0.079577443 sec
+Time(pt_join2) = 0.000002120 sec
+Time(pt_create1) = 0.000897780 sec
+Time(pt_create1) = 0.000917000 sec
+Thread depth: -1518363016
+Time(pthreadspawn) = Time(pt_join1) = 0.000378500 sec
+0.080413435 sec
+Thread depth: -1300251016
+Thread depth: -494944648
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000342450 sec
+Thread depth: 855559800
+Time(pt_create2) = Time(pt_create2) = Time(pthreadspawn) = Time(pt_create1) = 0.000284620 sec
+0.000243011 sec
+0.000183540 sec
+Time(pt_create2) = 0.001001741 sec
+Thread depth: -1518363016
+Time(pthreadspawn) = 0.000021300 sec
+0.000438910 sec
+Thread depth: 855559800
+Time(pthreadspawn) = 0.000002850 sec
+0.000199730 sec
+Time(pt_join1) = 0.000110490 sec
+Thread depth: 2105515640
+Time(pthreadspawn) = 0.000014590 sec
+Time(pt_create1) = 0.000217390 sec
+Time(pt_create2) = 0.000156370 sec
+Time(pt_create1) = 0.000460680 sec
+Thread depth: 2105515640
+Time(pthreadspawn) = 0.000022460 sec
+Time(pt_join1) = 0.000095540 sec
+Time(pt_join2) = 0.000344290 sec
+Thread depth: -247767432
+Time(pthreadspawn) = 0.000017970 sec
+Time(pt_join2) = 0.000077800 sec
+Time(pt_create1) = 0.000587920 sec
+Time(pt_join1) = 0.000504590 sec
+Thread depth: -1140855176
+Time(pthreadspawn) = 0.000008310 sec
+Time(pt_create1) = 0.000639280 sec
+Time(pt_join1) = 0.001413111 sec
+Time(pt_create1) = Time(pt_create2) = 0.000233630 sec
+Thread depth: -486551944
+0.000747980 sec
+Time(pt_create2) = 0.000167110 sec
+Thread depth: -494944648
+Time(pthreadspawn) = Thread depth: -1140855176
+0.000018130 sec
+Time(pthreadspawn) = 0.000021730 sec
+Time(pthreadspawn) = 0.000049650 sec
+Thread depth: -205803912
+Time(pthreadspawn) = 0.000052010 sec
+Time(pt_create2) = 0.000176040 sec
+Time(pt_create1) = Time(pt_create2) = 0.000233470 sec
+0.000466870 sec
+Thread depth: -247767432
+Time(pthreadspawn) = 0.000023410 sec
+Time(pt_create2) = Thread depth: -230982024
+0.000165830 sec
+Thread depth: -486551944
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000042950 sec
+Thread depth: -205803912
+Time(pthreadspawn) = 0.000015560 sec
+0.000062600 sec
+Time(pt_create1) = 0.000513321 sec
+Thread depth: -503337352
+Time(pthreadspawn) = 0.000008580 sec
+Thread depth: -511730056
+Time(pthreadspawn) = 0.000002780 sec
+Time(pt_create1) = 0.000535301 sec
+Time(pt_create1) = 0.000552481 sec
+Time(pt_create1) = 0.000539681 sec
+Time(pt_create1) = 0.000753791 sec
+Time(pt_create1) = 0.000737301 sec
+Time(pt_create2) = Time(pt_create2) = 0.000703201 sec
+Time(pt_create1) = Thread depth: 2105515640
+Thread depth: -478159240
+Time(pthreadspawn) = 0.000004110 sec
+Thread depth: -230982024
+Time(pthreadspawn) = 0.000008280 sec
+Thread depth: -239374728
+Thread depth: -503337352
+Time(pthreadspawn) = 0.000568481 sec
+Thread depth: -222589320
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000014960 sec
+0.000006180 sec
+Time(pthreadspawn) = 0.000012310 sec
+0.000263130 sec
+Thread depth: 855559800
+Time(pt_create1) = Time(pthreadspawn) = 0.000163190 sec
+0.000760551 sec
+0.000083640 sec
+Thread depth: -256160136
+Time(pthreadspawn) = 0.000195690 sec
+Time(pt_create1) = 0.000580480 sec
+Time(pt_create1) = 0.000648840 sec
+Thread depth: -855667080
+Time(pthreadspawn) = 0.000029080 sec
+Thread depth: -813703560
+Time(pthreadspawn) = 0.000046580 sec
+Time(pt_create2) = 0.000682990 sec
+Thread depth: -222589320
+Time(pthreadspawn) = 0.000008360 sec
+Time(pt_create2) = 0.001130440 sec
+Time(pt_create2) = 0.000639690 sec
+Thread depth: -239374728
+Time(pthreadspawn) = 0.000008720 sec
+Thread depth: -813703560
+Time(pthreadspawn) = 0.000001960 sec
+Time(pt_create1) = 0.001368591 sec
+Thread depth: -847274376
+Time(pthreadspawn) = 0.000008250 sec
+Time(pt_create2) = 0.001721291 sec
+Time(pt_join1) = 0.000003580 sec
+Thread depth: 855559800
+Time(pthreadspawn) = 0.000008290 sec
+Time(pt_create2) = 0.000593020 sec
+Thread depth: -847274376
+Time(pthreadspawn) = 0.000008890 sec
+Time(pt_create1) = 0.002064251 sec
+Thread depth: -1166033288
+Time(pthreadspawn) = 0.000008020 sec
+Time(pt_create1) = 0.000215580 sec
+Time(pt_join2) = 0.000486690 sec
+Thread depth: -1610617224
+Time(pthreadspawn) = 0.000008210 sec
+Time(pt_create1) = 0.002290681 sec
+Time(pt_create2) = 0.002481151 sec
+Time(pt_create1) = 0.002407571 sec
+Thread depth: -838881672
+Time(pthreadspawn) = 0.000276920 sec
+Time(pt_join1) = 0.000002480 sec
+Thread depth: -1182818696
+Time(pthreadspawn) = 0.000326970 sec
+Thread depth: 2105515640
+Time(pthreadspawn) = 0.000324890 sec
+Time(pt_create2) = Time(pt_create2) = 0.000168490 sec
+Thread depth: -838881672
+Time(pthreadspawn) = 0.000008360 sec
+Thread depth: -1610617224
+Time(pt_create1) = Time(pthreadspawn) = 0.000430870 sec
+0.001293381 sec
+Thread depth: -1476399496
+Time(pthreadspawn) = Time(pt_create1) = 0.002886051 sec
+0.000436360 sec
+0.000203100 sec
+Thread depth: -822096264
+Time(pthreadspawn) = 0.000008210 sec
+Time(pt_create1) = 0.000609721 sec
+Time(pt_create2) = 0.003562582 sec
+Thread depth: -1619009928
+Time(pthreadspawn) = 0.000032050 sec
+Thread depth: -511730056
+Time(pthreadspawn) = 0.000008930 sec
+Time(pt_create1) = 0.003113372 sec
+Thread depth: -1484792200
+Time(pthreadspawn) = 0.000008350 sec
+Time(pt_join2) = 0.001814911 sec
+Time(pt_create2) = 0.002506461 sec
+Time(pt_create1) = 0.003204501 sec
+Time(pt_join1) = 0.004778192 sec
+Time(pt_create2) = 0.000495850 sec
+Time(pt_create1) = Time(pt_create1) = 0.004293722 sec
+0.004560842 sec
+Thread depth: -1484792200
+Time(pthreadspawn) = 0.000025830 sec
+Thread depth: -1501577608
+Thread depth: -1275072904
+Time(pthreadspawn) = 0.000066500 sec
+Time(pt_create2) = Thread depth: -520122760
+Time(pthreadspawn) = 0.000008530 sec
+Thread depth: -256160136
+Thread depth: -1166033288
+Time(pthreadspawn) = 0.000018300 sec
+Time(pthreadspawn) = 0.000120060 sec
+Time(pt_create1) = 0.004274162 sec
+Time(pthreadspawn) = Time(pt_create2) = Thread depth: -1308643720
+0.000009960 sec
+0.004965462 sec
+0.000250730 sec
+Thread depth: -1501577608
+Time(pthreadspawn) = 0.000008310 sec
+Time(pthreadspawn) = Time(pt_create2) = 0.004594923 sec
+0.000011480 sec
+Thread depth: -855667080
+Thread depth: -1627402632
+Time(pthreadspawn) = 0.000004690 sec
+Time(pthreadspawn) = 0.000020850 sec
+Time(pt_create1) = 0.002847462 sec
+Time(pt_create2) = 0.000299691 sec
+Thread depth: -1275072904
+Time(pthreadspawn) = 0.000008150 sec
+Time(pt_create2) = 0.003069352 sec
+Thread depth: -1476399496
+Time(pthreadspawn) = 0.000011500 sec
+Time(pt_create1) = 0.003300652 sec
+Thread depth: -1509970312
+Time(pthreadspawn) = 0.000008210 sec
+Time(pt_create1) = 0.000332320 sec
+Thread depth: 838774392
+Time(pthreadspawn) = 0.000008030 sec
+Time(pt_create2) = Time(pt_create1) = Time(pt_create1) = 0.003598692 sec
+Time(pt_create1) = 0.006570804 sec
+Time(pt_create1) = Time(pt_create2) = 0.000770341 sec
+Time(pt_create1) = 0.004057733 sec
+Thread depth: -822096264
+0.000710361 sec
+0.004409973 sec
+Time(pt_create2) = Time(pt_create2) = 0.004761123 sec
+Thread depth: -1182818696
+Thread depth: -1191211400
+Time(pthreadspawn) = 0.000002280 sec
+Time(pthreadspawn) = 0.000056160 sec
+Time(pthreadspawn) = Thread depth: 821988984
+0.003785982 sec
+Time(pthreadspawn) = 0.000076860 sec
+Thread depth: -1283465608
+Thread depth: -1619009928
+0.000028430 sec
+Time(pt_create1) = 0.002083081 sec
+Thread depth: 2105515640
+0.004163903 sec
+Thread depth: -1493184904
+Time(pthreadspawn) = 0.000005310 sec
+Time(pthreadspawn) = 0.000013000 sec
+Time(pthreadspawn) = 0.000032890 sec
+Time(pthreadspawn) = 0.000066810 sec
+Time(pt_create1) = 0.002621332 sec
+Thread depth: -1149247880
+Time(pthreadspawn) = 0.000004320 sec
+Thread depth: 1988083320
+Time(pt_create1) = Thread depth: -1635795336
+Time(pthreadspawn) = 0.000005220 sec
+0.004443613 sec
+Time(pthreadspawn) = 0.000015400 sec
+Thread depth: -1509970312
+Time(pthreadspawn) = 0.000316250 sec
+Time(pt_create2) = Time(pt_create1) = Thread depth: 838774392
+0.004828062 sec
+0.001776641 sec
+Time(pt_create1) = Time(pt_create1) = Thread depth: 2139086456
+Thread depth: -478159240
+Time(pthreadspawn) = Time(pthreadspawn) = Time(pt_create1) = 0.000014360 sec
+0.000677610 sec
+Time(pt_join1) = Time(pt_create1) = 0.000003880 sec
+Thread depth: -1526755720
+Time(pthreadspawn) = 0.000003770 sec
+Thread depth: 2130693752
+Thread depth: 2147479160
+Time(pt_create2) = Time(pt_create1) = Thread depth: 2004868728
+0.003461712 sec
+Thread depth: -1308643720
+Time(pthreadspawn) = 0.000008330 sec
+Time(pt_create2) = Time(pt_create1) = 0.003750462 sec
+0.001433981 sec
+Time(pthreadspawn) = 0.000099700 sec
+0.005354313 sec
+Thread depth: 377470584
+Time(pt_create1) = Time(pthreadspawn) = Time(pthreadspawn) = 0.003723132 sec
+Time(pthreadspawn) = 0.000026080 sec
+Thread depth: -1317036424
+Thread depth: 1979690616
+Time(pthreadspawn) = 0.000003840 sec
+Time(pthreadspawn) = 0.000519431 sec
+Thread depth: -520122760
+Time(pthreadspawn) = 0.008146034 sec
+0.003407322 sec
+Thread depth: 1996476024
+Time(pt_create2) = Time(pt_create1) = 0.003408652 sec
+Time(pt_create1) = Time(pt_create2) = Time(pt_create1) = Time(pthreadspawn) = 0.003270621 sec
+0.003395742 sec
+Thread depth: -1635795336
+Time(pthreadspawn) = 0.000030870 sec
+Thread depth: -1157640584
+Time(pt_create2) = Time(pt_create1) = Thread depth: -1291858312
+Thread depth: -1325429128
+Time(pthreadspawn) = 0.000408850 sec
+0.000018240 sec
+Time(pthreadspawn) = 0.000421461 sec
+0.000507730 sec
+Time(pt_create2) = Thread depth: -1627402632
+0.003651862 sec
+Time(pthreadspawn) = 0.000236290 sec
+0.000110860 sec
+Time(pt_create2) = Time(pthreadspawn) = 0.003792322 sec
+0.000497661 sec
+Thread depth: 2097122936
+0.003450572 sec
+0.001459341 sec
+Time(pt_create1) = 0.003329991 sec
+0.000514571 sec
+0.000028070 sec
+Thread depth: 377470584
+Thread depth: -1149247880
+0.006227343 sec
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000655920 sec
+0.000523871 sec
+Time(pthreadspawn) = 0.000166950 sec
+0.000834041 sec
+Time(pthreadspawn) = 0.000904151 sec
+0.003547622 sec
+Time(pt_join2) = 0.001474551 sec
+Time(pt_create2) = 0.002841651 sec
+Time(pt_join1) = 0.000004070 sec
+Time(pt_create1) = 0.002514301 sec
+Time(pt_create2) = 0.000602970 sec
+Thread depth: 821988984
+Time(pt_create1) = 0.002858061 sec
+Time(pt_create1) = 0.002832821 sec
+Time(pt_create1) = 0.002583701 sec
+Thread depth: 889130616
+Time(pt_create1) = Time(pt_create2) = Time(pt_create1) = 0.002936531 sec
+0.001091380 sec
+Time(pt_create2) = Thread depth: 863952504
+Thread depth: 2139086456
+Time(pthreadspawn) = 0.001229600 sec
+Time(pthreadspawn) = 0.000022920 sec
+Time(pt_join1) = Thread depth: 872345208
+Time(pt_create2) = Time(pthreadspawn) = 0.000087580 sec
+Thread depth: -536875400
+0.002951291 sec
+Time(pthreadspawn) = 0.000098740 sec
+Time(pt_join1) = 0.000005490 sec
+Time(pt_create2) = 0.000182080 sec
+Thread depth: 889130616
+Time(pthreadspawn) = 0.000007730 sec
+0.003045071 sec
+Thread depth: 402648696
+Time(pt_create1) = 0.000047370 sec
+Time(pthreadspawn) = 0.002992071 sec
+0.000083440 sec
+Thread depth: 2105515640
+0.000789270 sec
+Time(pt_join1) = Thread depth: -1325429128
+Thread depth: -1283465608
+0.000003290 sec
+Time(pthreadspawn) = Time(pt_create2) = 0.000317090 sec
+Time(pthreadspawn) = Thread depth: 1988083320
+0.002926791 sec
+Time(pthreadspawn) = Time(pt_join2) = 0.000014600 sec
+0.000003310 sec
+Time(pt_join1) = 0.000123790 sec
+0.000007300 sec
+Time(pt_create1) = Time(pthreadspawn) = 0.002826191 sec
+0.000039280 sec
+Time(pt_create1) = 0.006172894 sec
+Thread depth: 2122301048
+Time(pthreadspawn) = 0.000343091 sec
+Thread depth: 2013261432
+Time(pthreadspawn) = 0.000204160 sec
+Time(pthreadspawn) = 0.000019850 sec
+Time(pt_create2) = Time(pt_join2) = Time(pthreadspawn) = 0.000419281 sec
+0.003361642 sec
+Time(pt_create2) = 0.000165750 sec
+Thread depth: 830381688
+Time(pt_create2) = Thread depth: 2113908344
+Time(pt_create1) = Time(pt_create1) = Thread depth: 385863288
+Thread depth: -1493184904
+0.000197310 sec
+0.000239531 sec
+Thread depth: 385863288
+Thread depth: -1015030152
+Time(pthreadspawn) = Time(pthreadspawn) = Time(pthreadspawn) = 0.003088252 sec
+Time(pt_create2) = 0.000166790 sec
+0.000546011 sec
+Thread depth: 2013261432
+0.000028260 sec
+Time(pthreadspawn) = 0.000046350 sec
+Time(pthreadspawn) = 0.000466321 sec
+Thread depth: 872345208
+Time(pthreadspawn) = 0.000005760 sec
+Thread depth: -1375752584
+Time(pthreadspawn) = 0.000120460 sec
+Time(pt_create1) = 0.000272940 sec
+0.000308681 sec
+0.000162520 sec
+Time(pthreadspawn) = 0.000208040 sec
+Time(pt_create1) = Time(pthreadspawn) = 0.000312001 sec
+Time(pt_create2) = 0.000193300 sec
+0.000027830 sec
+Thread depth: 863952504
+Time(pthreadspawn) = 0.000314010 sec
+Thread depth: -1023422856
+Time(pthreadspawn) = 0.000342950 sec
+Time(pt_create1) = 0.002737472 sec
+Thread depth: 847167096
+Time(pthreadspawn) = 0.000119950 sec
+Time(pt_create1) = 0.002515011 sec
+Thread depth: 947879544
+Time(pthreadspawn) = 0.000054400 sec
+Time(pt_join2) = 0.001357481 sec
+Time(pt_create1) = Time(pt_create1) = Time(pt_create2) = 0.003117041 sec
+Time(pt_join2) = Time(pt_create1) = 0.001559320 sec
+Thread depth: 1962905208
+Time(pt_create2) = Time(pt_create2) = 0.002870421 sec
+Time(pt_create1) = 0.003020501 sec
+0.002664221 sec
+Time(pt_create2) = 0.002638731 sec
+Thread depth: -1526755720
+Thread depth: 2004868728
+Time(pthreadspawn) = Time(pt_create1) = 0.000018760 sec
+0.002870891 sec
+Time(pt_join2) = 0.001869621 sec
+Time(pt_create2) = Thread depth: 1996476024
+0.003734702 sec
+Time(pthreadspawn) = Thread depth: 1979690616
+Thread depth: 981450360
+0.000012500 sec
+Thread depth: 2097122936
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000137790 sec
+Time(pthreadspawn) = 0.000013950 sec
+Time(pthreadspawn) = Time(pt_create2) = Time(pt_join1) = 0.000087110 sec
+0.001592800 sec
+Time(pt_join1) = 0.003228591 sec
+Time(pt_join1) = 0.000003910 sec
+Thread depth: 914308728
+Time(pt_join1) = Time(pt_create2) = 0.003475391 sec
+0.002798611 sec
+Time(pthreadspawn) = 0.000218461 sec
+Time(pt_create2) = 0.000296671 sec
+Thread depth: 981450360
+Time(pthreadspawn) = Thread depth: 2130693752
+0.000007170 sec
+Thread depth: -1317036424
+Time(pt_join1) = Time(pthreadspawn) = 0.000022210 sec
+Time(pthreadspawn) = Time(pt_create1) = 0.000225281 sec
+Thread depth: -1644188040
+0.003270061 sec
+Time(pthreadspawn) = 0.000338111 sec
+Time(pthreadspawn) = Time(pt_join1) = Thread depth: -1644188040
+0.000109220 sec
+0.003239451 sec
+Time(pthreadspawn) = 0.000048600 sec
+Time(pt_create1) = 0.002597911 sec
+Time(pt_create1) = Thread depth: 964664952
+0.001535211 sec
+Time(pthreadspawn) = 0.000337901 sec
+Thread depth: -1291858312
+0.000003690 sec
+0.001349390 sec
+Time(pt_create2) = Thread depth: 134213240
+0.000279161 sec
+Time(pthreadspawn) = 0.000063780 sec
+Thread depth: 1971297912
+Time(pt_create2) = Time(pt_create2) = 0.001541910 sec
+Thread depth: 1962905208
+0.003136702 sec
+Time(pthreadspawn) = 0.000012110 sec
+Time(pt_create2) = Time(pthreadspawn) = Time(pthreadspawn) = 0.000002040 sec
+0.000507751 sec
+0.000473231 sec
+Time(pt_create2) = Thread depth: -1157640584
+0.003058842 sec
+Thread depth: 914308728
+Time(pthreadspawn) = 0.000061740 sec
+Thread depth: -587231624
+Time(pthreadspawn) = 0.000432931 sec
+Time(pt_create1) = 0.000592911 sec
+0.000017010 sec
+Thread depth: 251645560
+0.000218520 sec
+Time(pthreadspawn) = 0.000334810 sec
+Time(pthreadspawn) = 0.000088440 sec
+0.000003450 sec
+0.003255682 sec
+Time(pt_create2) = 0.003440682 sec
+Thread depth: -1015030152
+Time(pthreadspawn) = 0.000011580 sec
+Time(pt_create1) = 0.003620302 sec
+Thread depth: 897523320
+Time(pthreadspawn) = 0.000034110 sec
+Time(pt_join2) = 0.002566391 sec
+Time(pt_join1) = 0.003080381 sec
+Time(pt_join2) = 0.000041400 sec
+Time(pt_join1) = 0.005238313 sec
+Time(pt_join1) = 0.006350673 sec
+Time(pt_create2) = 0.003606432 sec
+Thread depth: 964664952
+Time(pthreadspawn) = Time(pt_join1) = 0.000011960 sec
+0.000003580 sec
+Time(pt_create1) = 0.003713522 sec
+Thread depth: -847274376
+Time(pt_create1) = Time(pt_join2) = 0.000032420 sec
+0.003693922 sec
+Time(pthreadspawn) = 0.000010550 sec
+Thread depth: -1056993672
+Time(pthreadspawn) = 0.000008120 sec
+Time(pt_create1) = 0.003748732 sec
+Thread depth: 956272248
+Time(pthreadspawn) = 0.000008220 sec
+Time(pt_create2) = 0.003814712 sec
+Thread depth: 1971297912
+Time(pthreadspawn) = 0.000004420 sec
+Time(pt_join1) = Time(pt_create2) = 0.000003140 sec
+0.000164740 sec
+Thread depth: -1056993672
+Time(pthreadspawn) = 0.000003410 sec
+Time(pt_join2) = 0.003759642 sec
+Time(pt_join2) = 0.003796822 sec
+Time(pt_join1) = 0.005833823 sec
+Time(pt_join2) = 0.000003860 sec
+Time(pt_create2) = 0.000293590 sec
+Thread depth: 956272248
+Time(pthreadspawn) = Time(pt_join1) = 0.007781454 sec
+Thread depth: 243252856
+Time(pthreadspawn) = 0.000003970 sec
+0.000009270 sec
+Time(pt_create1) = 0.000216070 sec
+Time(pt_create1) = Time(pt_create2) = 0.004295842 sec
+Thread depth: 1979690616
+Time(pthreadspawn) = 0.000212950 sec
+0.000558640 sec
+Thread depth: 134213240
+Time(pthreadspawn) = 0.000007980 sec
+Time(pt_join1) = 0.010216075 sec
+Time(pt_join2) = 0.000190820 sec
+Time(pt_join1) = 0.011613186 sec
+Time(pt_join2) = 0.000111471 sec
+Time(pt_create1) = Time(pt_create2) = 0.005252863 sec
+Time(pt_create2) = Thread depth: 251645560
+0.005564403 sec
+Time(pt_join1) = 0.000004010 sec
+Thread depth: -587231624
+Time(pthreadspawn) = 0.000004690 sec
+Time(pthreadspawn) = 0.000035500 sec
+Time(pt_create1) = 0.005355693 sec
+Thread depth: -1350574472
+Thread depth: 939486840
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000034260 sec
+0.000085970 sec
+0.005315443 sec
+Time(pt_create2) = 0.008165705 sec
+Time(pt_create2) = Time(pt_join1) = 0.000016980 sec
+0.000173360 sec
+Thread depth: -1350574472
+Time(pthreadspawn) = 0.000008310 sec
+Time(pt_create2) = 0.000194190 sec
+Time(pt_create2) = 0.008257335 sec
+Time(pt_join1) = 0.000002650 sec
+Time(pt_create1) = 0.000272270 sec
+Thread depth: 377470584
+Thread depth: 402648696
+Time(pthreadspawn) = Time(pt_create2) = 0.008277875 sec
+Time(pt_join1) = 0.000002910 sec
+0.000014300 sec
+Time(pt_join2) = Thread depth: 2122301048
+Time(pt_join2) = 0.000400370 sec
+Time(pt_create1) = 0.000224220 sec
+Time(pthreadspawn) = 0.000069540 sec
+Thread depth: 830381688
+Time(pthreadspawn) = 0.000003960 sec
+Thread depth: 821988984
+Time(pthreadspawn) = 0.000030940 sec
+Time(pthreadspawn) = 0.000202350 sec
+Thread depth: 939486840
+Time(pthreadspawn) = 0.000218690 sec
+0.006216223 sec
+Time(pt_join2) = 0.005905983 sec
+Thread depth: 2147479160
+Time(pthreadspawn) = 0.000005070 sec
+Time(pt_create2) = 0.010498966 sec
+Time(pt_create1) = 0.007987774 sec
+Thread depth: 394255992
+Time(pthreadspawn) = 0.000014180 sec
+Time(pt_create2) = Thread depth: 377470584
+0.000411950 sec
+Time(pthreadspawn) = 0.000007670 sec
+Time(pt_create2) = 0.008089904 sec
+Thread depth: -1023422856
+Time(pthreadspawn) = 0.000008530 sec
+Time(pt_create2) = 0.008790885 sec
+Time(pt_create2) = 0.008363894 sec
+Thread depth: -536875400
+Time(pt_create1) = 0.007847304 sec
+Thread depth: 2113908344
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000028840 sec
+0.000045630 sec
+Time(pt_create2) = 0.008482004 sec
+Thread depth: -545268104
+Time(pthreadspawn) = 0.000008030 sec
+Thread depth: -1375752584
+Time(pthreadspawn) = 0.000008220 sec
+Time(pt_join1) = 0.006602173 sec
+Time(pt_join2) = 0.000310820 sec
+Time(pt_join1) = 0.007306254 sec
+Thread depth: 897523320
+Time(pthreadspawn) = 0.000004130 sec
+Time(pt_create2) = 0.005317333 sec
+Time(pt_join2) = 0.000189410 sec
+Time(pt_join1) = 0.007232554 sec
+Time(pt_create2) = 0.008467595 sec
+Time(pt_create1) = 0.011034936 sec
+Thread depth: 922701432
+Time(pt_join2) = 0.004723653 sec
+Time(pthreadspawn) = 0.000028530 sec
+Thread depth: 947879544
+Time(pthreadspawn) = 0.000046000 sec
+Time(pt_join1) = 0.008515434 sec
+Time(pt_join2) = 0.000048770 sec
+Time(pt_join2) = 0.004763302 sec
+Time(pt_create1) = 0.004989582 sec
+Thread depth: -813703560
+Time(pthreadspawn) = 0.000008380 sec
+Time(pt_join1) = 0.008646694 sec
+Time(pt_join1) = 0.004738132 sec
+Time(pt_create1) = 0.000184561 sec
+Time(pt_join2) = 0.000146021 sec
+Thread depth: 973057656
+Time(pthreadspawn) = 0.000008120 sec
+Time(pt_create2) = 0.000320831 sec
+Thread depth: -813703560
+Time(pthreadspawn) = 0.000003280 sec
+Time(pt_create2) = 0.005508373 sec
+Thread depth: -847274376
+Time(pt_join1) = 0.011090796 sec
+Time(pthreadspawn) = 0.000025730 sec
+Time(pt_join2) = 0.000058370 sec
+Time(pt_join1) = 0.018907771 sec
+Time(pt_create2) = 0.005089653 sec
+Time(pt_join1) = 0.017381380 sec
+Thread depth: 1979690616
+Time(pthreadspawn) = 0.000008010 sec
+Time(pt_join1) = 0.000096430 sec
+Time(pt_join2) = 0.000164020 sec
+Time(pt_create2) = 0.015359478 sec
+Thread depth: -1191211400
+Time(pthreadspawn) = 0.000008300 sec
+Time(pt_join1) = 0.004235572 sec
+Time(pt_join2) = 0.000110210 sec
+Time(pt_join1) = 0.004124292 sec
+Time(pt_create2) = 0.004465382 sec
+Time(pt_join1) = 0.004798122 sec
+Thread depth: 821988984
+Time(pthreadspawn) = 0.000017300 sec
+Time(pt_join1) = 0.000145341 sec
+Time(pt_join2) = 0.004973333 sec
+Time(pt_create1) = 0.004584703 sec
+Time(pt_join1) = 0.004532653 sec
+Thread depth: -1484792200
+Time(pthreadspawn) = 0.000008420 sec
+Time(pt_join2) = 0.000482930 sec
+Time(pt_join2) = 0.005896073 sec
+Time(pt_create1) = 0.005282283 sec
+Time(pt_join1) = 0.014087178 sec
+Thread depth: -1795191176
+Time(pthreadspawn) = 0.000008410 sec
+Time(pt_join2) = 0.006013813 sec
+Time(pt_join1) = 0.002179621 sec
+Time(pt_join2) = 0.012197086 sec
+Time(pt_create2) = 0.000347880 sec
+Thread depth: -1795191176
+Time(pthreadspawn) = 0.000009890 sec
+Time(pt_create1) = 0.005647133 sec
+Time(pt_create1) = 0.000417690 sec
+Time(pt_join1) = Thread depth: -1887445384
+Thread depth: -1895838088
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000008290 sec
+0.019946970 sec
+0.000026330 sec
+Time(pt_join1) = 0.016043599 sec
+Time(pt_join2) = 0.000041010 sec
+Time(pt_join1) = 0.012470457 sec
+Time(pt_join2) = 0.000039040 sec
+Time(pt_join1) = 0.005547623 sec
+Time(pt_join2) = 0.009843486 sec
+Time(pt_join1) = 0.005385173 sec
+Time(pt_join2) = 0.000042800 sec
+Time(pt_join1) = 0.021024012 sec
+Time(pt_create2) = 0.005698713 sec
+Time(pt_join2) = 0.000223210 sec
+Thread depth: 922701432
+Time(pthreadspawn) = 0.000011910 sec
+Time(pt_join1) = 0.000101810 sec
+Time(pt_join1) = 0.025493474 sec
+Time(pt_join2) = 0.000104200 sec
+Time(pt_create2) = 0.009364455 sec
+Time(pt_join1) = 0.000003340 sec
+Thread depth: 243252856
+Time(pthreadspawn) = 0.000007950 sec
+Time(pt_create1) = 0.004656622 sec
+Time(pt_join1) = 0.009470235 sec
+Time(pt_join2) = 0.000002810 sec
+Thread depth: 989843064
+Time(pthreadspawn) = 0.000008020 sec
+Time(pt_join2) = 0.000278790 sec
+Time(pt_create2) = 0.000358011 sec
+Time(pt_join1) = 0.000002680 sec
+Thread depth: 989843064
+Time(pthreadspawn) = 0.000016930 sec
+Time(pt_join1) = 0.005205603 sec
+Time(pt_create1) = Thread depth: -1509970312
+Time(pthreadspawn) = 0.000005750 sec
+0.012650507 sec
+Time(pt_create1) = 0.014206418 sec
+Thread depth: -578838920
+Time(pt_join2) = Time(pthreadspawn) = 0.000008330 sec
+0.000242990 sec
+Time(pt_join1) = 0.017909180 sec
+Time(pt_join2) = 0.000003240 sec
+Time(pt_create1) = 0.000221500 sec
+Time(pt_create2) = 0.000313130 sec
+Thread depth: 369077880
+Time(pthreadspawn) = 0.000008050 sec
+Time(pt_join2) = 0.004463523 sec
+Thread depth: -578838920
+Time(pthreadspawn) = 0.000017710 sec
+Time(pt_join1) = 0.008638455 sec
+Time(pt_join2) = 0.000003360 sec
+Time(pt_create2) = 0.008789925 sec
+Thread depth: 394255992
+Time(pthreadspawn) = 0.000007810 sec
+Time(pt_create1) = 0.000431560 sec
+Thread depth: -1358967176
+Time(pthreadspawn) = 0.000012400 sec
+Time(pt_join2) = 0.004585042 sec
+Time(pt_join1) = 0.018998260 sec
+Time(pt_create2) = Time(pt_create2) = 0.009252475 sec
+Thread depth: -545268104
+Time(pthreadspawn) = 0.000008410 sec
+Time(pt_create1) = 0.004840042 sec
+Thread depth: 226467448
+0.004809422 sec
+Time(pthreadspawn) = 0.000007760 sec
+Time(pt_create1) = 0.009461575 sec
+Time(pt_create1) = 0.000213891 sec
+Thread depth: 83857016
+Time(pthreadspawn) = 0.000007960 sec
+Thread depth: -1484792200
+Time(pthreadspawn) = 0.000004820 sec
+Thread depth: -1912623496
+Time(pthreadspawn) = 0.000004310 sec
+Time(pt_join1) = 0.023687503 sec
+Time(pt_join2) = 0.002811582 sec
+Time(pt_join2) = 0.000003860 sec
+Time(pt_create1) = 0.010651406 sec
+Time(pt_join2) = 0.003441152 sec
+Time(pt_join2) = 0.006808814 sec
+Thread depth: 838774392
+Time(pthreadspawn) = 0.000018360 sec
+Time(pt_join1) = 0.016624509 sec
+Time(pt_create2) = 0.007624464 sec
+Thread depth: 973057656
+Time(pthreadspawn) = 0.000014470 sec
+Time(pt_join1) = Time(pt_create2) = Thread depth: 847167096
+0.017835010 sec
+Time(pthreadspawn) = 0.000012950 sec
+Time(pt_join2) = Time(pt_create2) = Time(pt_join1) = 0.000019580 sec
+Time(pt_join2) = Time(pt_join1) = 0.000003310 sec
+0.001541921 sec
+0.012462037 sec
+Thread depth: 838774392
+0.000166520 sec
+Time(pthreadspawn) = Thread depth: -1761620360
+Time(pthreadspawn) = 0.000015700 sec
+Time(pt_create1) = Time(pt_create1) = 0.002139131 sec
+Thread depth: -570446216
+0.002243421 sec
+Time(pt_create1) = 0.006707234 sec
+Time(pthreadspawn) = 0.000008880 sec
+0.000069110 sec
+Time(pt_create2) = 0.002268261 sec
+Thread depth: -1384145288
+Time(pt_create1) = 0.004617052 sec
+Time(pthreadspawn) = 0.000346120 sec
+0.007602034 sec
+Time(pt_create2) = Thread depth: -1912623496
+0.000769090 sec
+Time(pt_create2) = Thread depth: -1509970312
+Time(pthreadspawn) = 0.000190940 sec
+0.004619083 sec
+Thread depth: -1887445384
+Thread depth: -1770013064
+Thread depth: 369077880
+Time(pthreadspawn) = 0.000115320 sec
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000225000 sec
+Thread depth: 226467448
+Time(pt_create2) = Time(pt_create2) = 0.000201280 sec
+0.002441051 sec
+Time(pthreadspawn) = 0.001221131 sec
+0.000045150 sec
+Time(pthreadspawn) = 0.000116780 sec
+Time(pt_join1) = 0.025698594 sec
+Time(pt_join2) = 0.008842755 sec
+Time(pt_join2) = 0.010820936 sec
+Time(pt_create1) = 0.003040562 sec
+Time(pt_create1) = 0.006237914 sec
+Thread depth: 1962905208
+Time(pthreadspawn) = 0.000007950 sec
+Thread depth: 2113908344
+Time(pthreadspawn) = 0.000007940 sec
+Time(pt_join2) = 0.002008181 sec
+Time(pt_join2) = 0.000531270 sec
+Time(pt_join2) = 0.002194141 sec
+Time(pt_join1) = 0.012384297 sec
+Time(pt_join1) = 0.024421753 sec
+Time(pt_join2) = 0.000069530 sec
+Time(pt_join1) = 0.024678873 sec
+Time(pt_join2) = 0.000002570 sec
+Time(pt_create2) = 0.007025704 sec
+Time(pt_join2) = 0.002809721 sec
+Time(pt_create2) = 0.002727721 sec
+Thread depth: -1895838088
+Time(pthreadspawn) = 0.000008860 sec
+Thread depth: -1761620360
+Time(pthreadspawn) = 0.000008400 sec
+Time(pt_join1) = 0.019637040 sec
+Time(pt_join1) = 0.002540521 sec
+Time(pt_join2) = 0.000003370 sec
+Time(pt_create2) = 0.004266872 sec
+Thread depth: -1358967176
+Time(pthreadspawn) = 0.000009000 sec
+Time(pt_create2) = 0.002969432 sec
+Time(pt_create1) = 0.000250361 sec
+Time(pt_create1) = 0.002718502 sec
+Time(pt_join1) = 0.004914873 sec
+Thread depth: -1384145288
+Time(pthreadspawn) = 0.000008330 sec
+Time(pt_create1) = 0.000299071 sec
+Thread depth: 2147479160
+Time(pthreadspawn) = 0.000008720 sec
+Time(pt_create1) = 0.002826012 sec
+Thread depth: 947879544
+Time(pthreadspawn) = 0.000003230 sec
+Time(pt_join1) = 0.022416543 sec
+Thread depth: -1509970312
+Time(pthreadspawn) = 0.000005660 sec
+Time(pt_create2) = 0.002905632 sec
+Time(pt_create1) = 0.000210530 sec
+Thread depth: 2147479160
+Time(pthreadspawn) = 0.000008490 sec
+Thread depth: 394255992
+Time(pt_create1) = Time(pthreadspawn) = 0.000348380 sec
+Thread depth: 385863288
+Time(pthreadspawn) = 0.000004220 sec
+Time(pt_create2) = 0.000358650 sec
+Thread depth: -1509970312
+Time(pthreadspawn) = Thread depth: -1770013064
+0.000005370 sec
+0.000014380 sec
+Time(pt_create2) = Thread depth: 2147479160
+Time(pt_join1) = Time(pthreadspawn) = 0.002882162 sec
+Time(pt_join2) = 0.000002770 sec
+0.000439330 sec
+0.000008670 sec
+Time(pthreadspawn) = 0.000009470 sec
+Time(pt_create2) = 0.000350010 sec
+Thread depth: 947879544
+Time(pt_join1) = 0.000002500 sec
+Time(pthreadspawn) = 0.000013590 sec
+Time(pt_join1) = 0.027855595 sec
+Time(pt_join2) = 0.000088800 sec
+Time(pt_join1) = 0.003790422 sec
+Time(pt_create1) = 0.003147002 sec
+Thread depth: 2122301048
+Time(pthreadspawn) = 0.000006450 sec
+Time(pt_create1) = 0.000334890 sec
+Thread depth: -1040208264
+Time(pthreadspawn) = 0.000006330 sec
+Time(pt_join2) = 0.000149600 sec
+Time(pt_join1) = 0.014919258 sec
+Time(pt_create1) = 0.008469064 sec
+Time(pt_create1) = 0.004759592 sec
+Time(pt_create1) = 0.000373120 sec
+Thread depth: -1518363016
+Thread depth: 402648696
+Time(pthreadspawn) = 0.000015600 sec
+Time(pt_join2) = Time(pt_create2) = 0.000307430 sec
+Time(pthreadspawn) = 0.000029600 sec
+0.001233170 sec
+Time(pt_create1) = Time(pt_join1) = Thread depth: -1786798472
+0.019327780 sec
+Time(pthreadspawn) = 0.000120930 sec
+0.000980230 sec
+Thread depth: 2147479160
+Time(pthreadspawn) = 0.000152850 sec
+Thread depth: -1392537992
+Time(pt_join1) = Time(pt_join1) = 0.024983623 sec
+0.000128290 sec
+Time(pthreadspawn) = 0.000265600 sec
+Thread depth: -838881672
+Time(pthreadspawn) = 0.000019500 sec
+Time(pt_create1) = 0.000326780 sec
+Time(pt_create2) = 0.002933061 sec
+Time(pt_join2) = 0.000094491 sec
+Thread depth: 2113908344
+Time(pthreadspawn) = 0.000011200 sec
+Time(pt_join1) = 0.012585237 sec
+Time(pt_join1) = 0.035122970 sec
+Time(pt_join2) = 0.000003070 sec
+Time(pt_create1) = 0.005411553 sec
+Thread depth: 1988083320
+Time(pthreadspawn) = 0.000004980 sec
+Time(pt_join2) = 0.035697190 sec
+Time(pt_create1) = 0.006049743 sec
+Time(pt_create2) = 0.001715351 sec
+Thread depth: 863952504
+Time(pthreadspawn) = 0.000007920 sec
+Thread depth: 2122301048
+Time(pthreadspawn) = 0.000009180 sec
+Time(pt_join1) = 0.002167381 sec
+Time(pt_join2) = 0.000377820 sec
+Time(pt_create2) = 0.002931901 sec
+Time(pt_create1) = Time(pt_create2) = 0.005843303 sec
+Time(pt_create2) = 0.006957443 sec
+Thread depth: 385863288
+Thread depth: 134213240
+Time(pthreadspawn) = 0.000002800 sec
+0.005927493 sec
+Thread depth: -570446216
+Time(pthreadspawn) = 0.000003410 sec
+Time(pt_join1) = 0.000220351 sec
+Time(pt_join1) = 0.000009911 sec
+Time(pt_join1) = 0.007313635 sec
+Time(pt_create1) = 0.003387202 sec
+Thread depth: 83857016
+Time(pthreadspawn) = 0.000317431 sec
+Time(pthreadspawn) = 0.000098950 sec
+Thread depth: -1921016200
+Time(pthreadspawn) = 0.000015270 sec
+Time(pt_create2) = 0.000226891 sec
+Time(pt_create1) = 0.000255681 sec
+Thread depth: 134213240
+Time(pt_join1) = 0.003822762 sec
+Time(pthreadspawn) = 0.000028350 sec
+Thread depth: -1317036424
+Time(pthreadspawn) = 0.000045600 sec
+Time(pt_create2) = 0.003635652 sec
+Time(pt_join2) = 0.000413280 sec
+Thread depth: 394255992
+Time(pthreadspawn) = 0.000011600 sec
+Time(pt_join1) = 0.000097440 sec
+Time(pt_join2) = 0.000102740 sec
+Time(pt_join2) = 0.000403250 sec
+Time(pt_join2) = 0.011921987 sec
+Time(pt_join2) = 0.013521998 sec
+Time(pt_join1) = 0.002639441 sec
+Thread depth: 981450360
+Time(pthreadspawn) = 0.000005100 sec
+Time(pt_create1) = 0.002800822 sec
+Time(pt_create2) = 0.003092212 sec
+Time(pt_join2) = 0.000146000 sec
+Time(pt_create2) = 0.005794903 sec
+Thread depth: -1392537992
+Time(pthreadspawn) = 0.000016790 sec
+Time(pt_create1) = Thread depth: 1962905208
+0.002901502 sec
+Time(pthreadspawn) = 0.000009830 sec
+Thread depth: 821988984
+Time(pthreadspawn) = 0.000008190 sec
+Time(pt_join1) = 0.000466200 sec
+Time(pt_join2) = 0.000003270 sec
+Time(pt_join1) = 0.002737681 sec
+Time(pt_create2) = 0.002843051 sec
+Time(pt_join2) = 0.000087090 sec
+Thread depth: 863952504
+Time(pthreadspawn) = 0.000008320 sec
+Time(pt_join1) = 0.000078010 sec
+Time(pt_join1) = 0.005324803 sec
+Time(pt_create1) = 0.008246555 sec
+Thread depth: -1627402632
+Time(pthreadspawn) = 0.000008350 sec
+Time(pt_join1) = 0.002244461 sec
+Time(pt_join2) = 0.000003660 sec
+Time(pt_create2) = 0.004778933 sec
+Time(pt_create2) = 0.002398381 sec
+Thread depth: -1921016200
+Time(pt_create2) = 0.000273650 sec
+Time(pt_create1) = Time(pthreadspawn) = 0.000228100 sec
+Thread depth: -1786798472
+Time(pthreadspawn) = 0.000042220 sec
+0.000024240 sec
+Thread depth: -1627402632
+Time(pthreadspawn) = Time(pt_join2) = 0.000008390 sec
+0.017173660 sec
+Time(pt_join1) = 0.037447551 sec
+Time(pt_join2) = 0.000016260 sec
+Time(pt_create1) = 0.002440011 sec
+Thread depth: 998235768
+Time(pthreadspawn) = 0.000005860 sec
+Time(pt_create1) = 0.002614061 sec
+Thread depth: 2147479160
+Thread depth: 2130693752
+Time(pthreadspawn) = 0.000003080 sec
+Time(pt_create1) = 0.000231580 sec
+Time(pt_create2) = Thread depth: 2122301048
+0.002578251 sec
+Time(pt_create2) = 0.005140033 sec
+Time(pt_join2) = Time(pthreadspawn) = 0.000006140 sec
+Time(pt_join1) = 0.003112552 sec
+0.006547204 sec
+Time(pt_join1) = Time(pthreadspawn) = 0.006550944 sec
+0.000022540 sec
+Time(pt_join2) = Thread depth: -1317036424
+Time(pt_join1) = 0.000052490 sec
+0.001038521 sec
+Time(pthreadspawn) = 0.000043870 sec
+Time(pt_create2) = 0.002028671 sec
+Thread depth: 981450360
+Time(pt_create2) = 0.005711633 sec
+Time(pthreadspawn) = 0.000016530 sec
+Thread depth: 402648696
+Time(pthreadspawn) = 0.000214220 sec
+Time(pt_create1) = 0.002045611 sec
+Thread depth: -1040208264
+Time(pthreadspawn) = 0.000059890 sec
+Thread depth: 1971297912
+Time(pthreadspawn) = 0.000008840 sec
+Time(pt_create2) = 0.005113963 sec
+Thread depth: -838881672
+Time(pthreadspawn) = 0.000012330 sec
+Time(pt_create2) = 0.001894001 sec
+Thread depth: 998235768
+Time(pthreadspawn) = 0.000273060 sec
+Time(pt_create1) = 0.001957021 sec
+Time(pt_join2) = Time(pt_create2) = 0.001965451 sec
+0.001646021 sec
+Time(pt_join2) = 0.001905561 sec
+Thread depth: 2122301048
+Thread depth: -1493184904
+Time(pt_create1) = Thread depth: 2013261432
+Time(pthreadspawn) = 0.000013530 sec
+Time(pthreadspawn) = 0.010971986 sec
+Time(pt_join1) = 0.000020080 sec
+0.000269800 sec
+Time(pthreadspawn) = 0.000364930 sec
+Time(pt_join1) = 0.038172161 sec
+Time(pt_create1) = 0.002737751 sec
+Time(pt_join2) = 0.000131870 sec
+Time(pt_join1) = 0.041136072 sec
+Thread depth: -256160136
+Time(pthreadspawn) = 0.000008291 sec
+Time(pt_create2) = 0.000209421 sec
+Thread depth: -256160136
+Time(pthreadspawn) = 0.000008010 sec
+Time(pt_join2) = 0.000365631 sec
+Time(pt_create1) = 0.003169582 sec
+Thread depth: -1191211400
+Time(pthreadspawn) = 0.000005350 sec
+Time(pt_create1) = 0.008482425 sec
+Time(pt_create1) = Thread depth: 1996476024
+Time(pthreadspawn) = 0.000015870 sec
+0.002901122 sec
+Time(pt_create2) = 0.003676252 sec
+Time(pt_join2) = Time(pt_create2) = 0.003745962 sec
+Time(pt_join1) = 0.000003250 sec
+Thread depth: 2130693752
+0.003530362 sec
+Time(pt_create2) = 0.000219870 sec
+Thread depth: -1619009928
+Time(pt_create2) = Time(pt_create1) = Time(pt_join2) = 0.007759454 sec
+0.006546843 sec
+Thread depth: 2147479160
+Time(pthreadspawn) = Thread depth: -1182818696
+0.000015310 sec
+Thread depth: -1191211400
+Time(pthreadspawn) = 0.000210960 sec
+Time(pthreadspawn) = Thread depth: 1988083320
+Time(pthreadspawn) = 0.000017140 sec
+0.000025160 sec
+Time(pthreadspawn) = 0.000057160 sec
+Time(pt_join1) = 0.000003780 sec
+Time(pt_create2) = 0.009007975 sec
+0.000070160 sec
+Time(pthreadspawn) = 0.000082390 sec
+Thread depth: -1518363016
+Time(pthreadspawn) = 0.000008240 sec
+Time(pt_join1) = 0.000832331 sec
+Time(pt_join2) = 0.000114640 sec
+Time(pt_join1) = 0.045107905 sec
+Time(pt_join1) = 0.011534747 sec
+Time(pt_create2) = 0.003025262 sec
+Time(pt_join2) = 0.000148910 sec
+Thread depth: 2013261432
+Time(pthreadspawn) = 0.000008530 sec
+Time(pt_create1) = 0.003030462 sec
+Time(pt_join2) = 0.002877702 sec
+Thread depth: 2105515640
+Time(pthreadspawn) = 0.000008220 sec
+Time(pt_join2) = 0.011645986 sec
+Time(pt_create2) = 0.000207800 sec
+Time(pt_join1) = 0.000002890 sec
+Thread depth: 2105515640
+Time(pthreadspawn) = 0.000007980 sec
+Time(pt_create1) = 0.005447953 sec
+Time(pt_join2) = 0.015246088 sec
+Time(pt_join2) = 0.000237110 sec
+Thread depth: 1979690616
+Time(pthreadspawn) = 0.000015530 sec
+Time(pt_join1) = 0.005558143 sec
+Time(pt_create2) = 0.000179110 sec
+Thread depth: 1979690616
+Time(pthreadspawn) = 0.000010780 sec
+Time(pt_create2) = 0.005643933 sec
+Thread depth: 1971297912
+Time(pthreadspawn) = 0.000005290 sec
+Time(pt_join2) = 0.019602570 sec
+Time(pt_join1) = 0.000159340 sec
+Time(pt_join2) = 0.000034990 sec
+Time(pt_create2) = 0.008183845 sec
+Time(pt_join1) = 0.000015640 sec
+Thread depth: 821988984
+Time(pthreadspawn) = 0.000007910 sec
+Time(pt_create1) = 0.002676342 sec
+Thread depth: -1350574472
+Time(pt_join2) = Time(pt_create1) = 0.000118110 sec
+Time(pt_join2) = 0.002711722 sec
+Time(pthreadspawn) = 0.002699282 sec
+Time(pt_join2) = 0.000019800 sec
+0.002988852 sec
+Time(pt_create1) = Time(pt_create2) = 0.000170170 sec
+0.002744442 sec
+Time(pt_join1) = 0.005065153 sec
+Time(pt_join1) = 0.007078484 sec
+Time(pt_join1) = Thread depth: -1157640584
+Time(pthreadspawn) = 0.000093420 sec
+0.006219574 sec
+Thread depth: -1350574472
+Time(pthreadspawn) = 0.000007390 sec
+Thread depth: 1006628472
+Time(pthreadspawn) = 0.000082550 sec
+Time(pt_create2) = 0.000181080 sec
+Time(pt_create2) = 0.000174270 sec
+Time(pt_create1) = 0.000214670 sec
+Thread depth: -1157640584
+Time(pt_create2) = Time(pthreadspawn) = 0.000029720 sec
+Thread depth: 1006628472
+Time(pt_join2) = 0.000227800 sec
+Thread depth: 931094136
+Time(pthreadspawn) = 0.000008130 sec
+Time(pthreadspawn) = 0.000048070 sec
+Time(pt_join1) = 0.002113171 sec
+Time(pt_join2) = 0.000003730 sec
+0.003394032 sec
+Time(pt_create1) = 0.000249980 sec
+Time(pt_create2) = 0.005088033 sec
+Thread depth: 1996476024
+Time(pthreadspawn) = 0.000005550 sec
+Thread depth: -1493184904
+Time(pthreadspawn) = 0.000288880 sec
+Thread depth: 989843064
+Time(pthreadspawn) = 0.000312190 sec
+Time(pt_join1) = 0.016332019 sec
+Time(pt_join2) = 0.000004130 sec
+Time(pt_join2) = 0.001940711 sec
+Time(pt_join2) = 0.012732117 sec
+Time(pt_join1) = Time(pt_create1) = 0.000213050 sec
+Time(pt_create1) = 0.005196242 sec
+Thread depth: 2130693752
+Time(pt_join1) = 0.044485354 sec
+0.001997671 sec
+Thread depth: -1308643720
+Time(pthreadspawn) = 0.000035830 sec
+Time(pt_create1) = 0.004094772 sec
+Thread depth: -813703560
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000020140 sec
+0.000011480 sec
+Time(pt_create2) = 0.000175190 sec
+Thread depth: 2130693752
+Time(pthreadspawn) = 0.000008100 sec
+Time(pt_join1) = 0.009843315 sec
+Time(pt_join1) = 0.000072570 sec
+Time(pt_join2) = 0.000142291 sec
+Time(pt_create1) = 0.005362773 sec
+Thread depth: -1526755720
+Time(pthreadspawn) = 0.000008080 sec
+Time(pt_create1) = 0.001522461 sec
+Thread depth: -587231624
+Time(pthreadspawn) = 0.000019790 sec
+Time(pt_create2) = 0.000204580 sec
+Time(pt_join1) = 0.008353055 sec
+Thread depth: -1526755720
+Time(pt_create1) = Time(pthreadspawn) = 0.000224300 sec
+Thread depth: -1509970312
+Time(pt_create1) = 0.001662141 sec
+Time(pthreadspawn) = 0.000024440 sec
+0.000009030 sec
+Time(pt_join1) = 0.001391151 sec
+Thread depth: -1291858312
+Time(pt_join2) = Time(pthreadspawn) = 0.000017310 sec
+Time(pt_create2) = 0.000264520 sec
+0.000002920 sec
+Time(pt_create1) = 0.000215200 sec
+Time(pt_join1) = 0.001723421 sec
+Thread depth: -587231624
+Time(pthreadspawn) = 0.000032790 sec
+Time(pt_join1) = 0.001412591 sec
+Thread depth: 981450360
+Time(pthreadspawn) = 0.000052410 sec
+Time(pt_join2) = 0.000003100 sec
+Time(pt_create1) = 0.000198620 sec
+Time(pt_join1) = 0.009070625 sec
+Time(pt_create2) = 0.000302650 sec
+Thread depth: 1971297912
+Time(pt_create1) = 0.000229740 sec
+Time(pthreadspawn) = 0.000035060 sec
+Thread depth: -1509970312
+Time(pthreadspawn) = 0.000044740 sec
+Thread depth: -1501577608
+Time(pthreadspawn) = 0.000011780 sec
+Time(pt_join2) = 0.001126511 sec
+Time(pt_join2) = Time(pt_join2) = 0.001113451 sec
+0.002254471 sec
+Time(pt_create2) = 0.000402170 sec
+Time(pt_create1) = Time(pt_create2) = 0.000342660 sec
+0.000321320 sec
+Time(pt_join1) = Time(pt_create2) = 0.001254231 sec
+Thread depth: 931094136
+Thread depth: -1476399496
+Time(pt_create1) = Time(pthreadspawn) = Time(pthreadspawn) = 0.000571210 sec
+0.000018090 sec
+0.000022090 sec
+Time(pt_create2) = Time(pt_create2) = Thread depth: -1308643720
+0.000586750 sec
+Time(pthreadspawn) = 0.000065710 sec
+Time(pt_join1) = Time(pt_create2) = Thread depth: -1501577608
+Time(pt_join1) = Time(pthreadspawn) = 0.000056950 sec
+Time(pt_create1) = Time(pt_join1) = Thread depth: 981450360
+0.000185830 sec
+0.018053520 sec
+Time(pt_join1) = 0.000003060 sec
+Thread depth: 947879544
+0.009627935 sec
+Thread depth: -1761620360
+Time(pt_join2) = 0.000003050 sec
+Time(pthreadspawn) = Time(pt_create2) = 0.000022650 sec
+0.002136021 sec
+Time(pthreadspawn) = 0.000079300 sec
+Time(pt_join1) = 0.000208020 sec
+Thread depth: -1291858312
+Time(pthreadspawn) = 0.000205930 sec
+0.000003700 sec
+0.000329030 sec
+0.001326651 sec
+Thread depth: 1971297912
+Time(pthreadspawn) = Time(pthreadspawn) = Thread depth: -1476399496
+Time(pt_create2) = 0.001496801 sec
+Time(pthreadspawn) = Time(pt_join2) = Thread depth: -813703560
+0.000224300 sec
+Time(pt_create2) = 0.001138301 sec
+0.000165730 sec
+Thread depth: 947879544
+0.000079890 sec
+Time(pthreadspawn) = 0.000011770 sec
+Time(pt_create2) = 0.002233941 sec
+Time(pt_create1) = Time(pt_create1) = Time(pt_join1) = 0.001450741 sec
+Time(pt_create1) = Thread depth: 989843064
+Time(pt_join2) = 0.000215740 sec
+Time(pthreadspawn) = 0.000026050 sec
+Time(pthreadspawn) = Thread depth: 2105515640
+Thread depth: 134213240
+0.000002850 sec
+Time(pthreadspawn) = 0.000015720 sec
+0.000217670 sec
+Time(pt_create1) = 0.000242610 sec
+0.000182890 sec
+0.000017090 sec
+Thread depth: 377470584
+Thread depth: 998235768
+Time(pthreadspawn) = 0.000065550 sec
+Time(pthreadspawn) = Time(pt_create1) = Time(pthreadspawn) = 0.000086030 sec
+0.000280790 sec
+0.000102800 sec
+Thread depth: -1149247880
+Time(pthreadspawn) = 0.000261851 sec
+0.000147730 sec
+Time(pt_create1) = 0.000314830 sec
+0.028781236 sec
+Time(pt_create2) = 0.000277690 sec
+Time(pt_create2) = 0.000177730 sec
+Thread depth: -1761620360
+Time(pthreadspawn) = 0.000418731 sec
+Thread depth: -578838920
+Time(pthreadspawn) = 0.000450461 sec
+Thread depth: 134213240
+Time(pthreadspawn) = 0.000458591 sec
+Time(pt_join2) = 0.000678361 sec
+Time(pt_create2) = 0.000249260 sec
+Thread depth: 998235768
+Time(pthreadspawn) = 0.000564211 sec
+Time(pt_join2) = 0.001963221 sec
+Time(pt_join1) = 0.000255850 sec
+Time(pt_join1) = 0.000474130 sec
+Time(pt_create2) = 0.007070014 sec
+Time(pt_join1) = 0.001224261 sec
+Thread depth: -1619009928
+Time(pthreadspawn) = 0.000008100 sec
+Time(pt_join2) = 0.000073700 sec
+Time(pt_join2) = 0.002161431 sec
+Time(pt_join2) = 0.044916335 sec
+Time(pt_join1) = 0.017154139 sec
+Time(pt_join2) = 0.000037760 sec
+Time(pt_join2) = 0.001964301 sec
+Time(pt_create1) = 0.002275322 sec
+Time(pt_create1) = 0.002883542 sec
+Thread depth: 2122301048
+Time(pthreadspawn) = 0.000007940 sec
+Thread depth: -486551944
+Time(pthreadspawn) = 0.000002090 sec
+Time(pt_create2) = 0.008101955 sec
+Thread depth: -1182818696
+Time(pthreadspawn) = 0.000008270 sec
+Time(pt_join2) = 0.003596142 sec
+Time(pt_join1) = 0.022124312 sec
+Time(pt_join2) = 0.000042670 sec
+Time(pt_join2) = 0.002838061 sec
+Time(pt_join2) = 0.020603981 sec
+Time(pt_join1) = 0.004089583 sec
+Time(pt_join1) = 0.006958174 sec
+Time(pt_create1) = 0.003086152 sec
+Time(pt_join1) = 0.005018313 sec
+Time(pt_create1) = Thread depth: 2139086456
+Time(pthreadspawn) = 0.000023500 sec
+Time(pt_create1) = 0.003757222 sec
+Thread depth: -1166033288
+Time(pthreadspawn) = 0.000008410 sec
+Time(pt_join1) = 0.053549520 sec
+Time(pt_create2) = Time(pt_join2) = 0.000002820 sec
+0.000204880 sec
+Time(pt_join1) = 0.000002910 sec
+Thread depth: -1358967176
+Time(pthreadspawn) = 0.000005950 sec
+Time(pt_create2) = 0.000167660 sec
+Thread depth: 2139086456
+Time(pthreadspawn) = 0.000008150 sec
+Thread depth: -1358967176
+Time(pthreadspawn) = 0.000008550 sec
+Time(pt_join1) = 0.053719640 sec
+Time(pt_join2) = 0.017045659 sec
+Time(pt_create2) = 0.004646453 sec
+Time(pt_create1) = Time(pt_join1) = 0.000003780 sec
+0.000263200 sec
+Time(pt_join2) = 0.003686882 sec
+Time(pt_join2) = 0.000166740 sec
+Thread depth: 2130693752
+Time(pthreadspawn) = 0.000008060 sec
+Time(pt_join2) = 0.018567630 sec
+Time(pt_create1) = 0.000228940 sec
+Time(pt_create2) = 0.002602391 sec
+Time(pt_join1) = 0.000016130 sec
+Time(pt_create2) = Time(pt_create1) = Thread depth: 2122301048
+Thread depth: -486551944
+Time(pthreadspawn) = Thread depth: 931094136
+Thread depth: 377470584
+Time(pthreadspawn) = Thread depth: 2130693752
+0.002621251 sec
+Time(pt_create2) = Time(pthreadspawn) = 0.000180080 sec
+0.000027900 sec
+0.000016880 sec
+0.000021710 sec
+Time(pt_create1) = 0.002652501 sec
+Time(pt_create1) = Time(pt_create2) = 0.000241690 sec
+0.002561441 sec
+Thread depth: 1962905208
+Time(pt_create2) = Time(pt_create1) = Thread depth: -1149247880
+Time(pt_create1) = 0.005030483 sec
+Time(pt_create2) = Thread depth: 964664952
+Time(pt_join1) = Time(pt_create1) = 0.000244790 sec
+Time(pthreadspawn) = 0.036682290 sec
+0.000019060 sec
+Thread depth: 2013261432
+Time(pt_join1) = 0.006066313 sec
+Time(pthreadspawn) = 0.000018730 sec
+Thread depth: -520122760
+Time(pthreadspawn) = 0.000006990 sec
+Thread depth: 402648696
+Time(pthreadspawn) = 0.000087130 sec
+Thread depth: 2105515640
+Time(pthreadspawn) = 0.000102320 sec
+Time(pt_create2) = 0.004814842 sec
+Time(pthreadspawn) = Thread depth: 1962905208
+0.000007280 sec
+Time(pthreadspawn) = 0.000393080 sec
+0.005005453 sec
+Thread depth: -578838920
+Time(pthreadspawn) = 0.000208600 sec
+Time(pt_join2) = Time(pthreadspawn) = Time(pt_create2) = 0.000019790 sec
+0.000179430 sec
+Thread depth: 931094136
+0.000002170 sec
+Time(pthreadspawn) = 0.000018240 sec
+0.003993832 sec
+0.005033073 sec
+Time(pthreadspawn) = 0.004450182 sec
+0.005705733 sec
+0.000010190 sec
+Time(pthreadspawn) = Thread depth: 1988083320
+Time(pthreadspawn) = 0.000463340 sec
+0.000007170 sec
+Time(pt_join2) = 0.021470242 sec
+Time(pt_join1) = Thread depth: 1988083320
+0.041794483 sec
+Time(pt_create2) = Time(pt_join2) = 0.000002840 sec
+0.001332221 sec
+Time(pt_join1) = Time(pt_create2) = 0.001355111 sec
+0.001121601 sec
+Time(pt_join1) = Time(pthreadspawn) = Time(pt_join2) = 0.000003060 sec
+0.000023200 sec
+0.000002320 sec
+Time(pt_join1) = Time(pt_create1) = 0.001322611 sec
+0.000002340 sec
+Thread depth: 402648696
+Time(pthreadspawn) = 0.000101010 sec
+Thread depth: 2147479160
+Time(pthreadspawn) = 0.000003040 sec
+Time(pt_create2) = 0.001594681 sec
+Time(pt_create1) = Thread depth: 821988984
+0.001379951 sec
+Time(pthreadspawn) = 0.000020750 sec
+Thread depth: 964664952
+Time(pthreadspawn) = 0.000052580 sec
+Time(pt_join1) = 0.001559801 sec
+Time(pt_join2) = 0.000058750 sec
+Time(pt_join2) = 0.000408670 sec
+Time(pt_join2) = 0.002330301 sec
+Time(pt_create1) = 0.001926701 sec
+Thread depth: 1996476024
+Time(pthreadspawn) = 0.000008110 sec
+Time(pt_create2) = 0.000284300 sec
+Time(pt_create2) = Time(pt_join1) = 0.002189751 sec
+Thread depth: -1166033288
+Time(pthreadspawn) = 0.000016800 sec
+Thread depth: 1996476024
+0.000002970 sec
+Time(pthreadspawn) = 0.000014640 sec
+Time(pt_join1) = 0.002703192 sec
+Time(pt_join2) = 0.000003280 sec
+Time(pt_join1) = 0.002627242 sec
+Time(pt_join2) = 0.000002450 sec
+Time(pt_create2) = Time(pt_create2) = 0.002266272 sec
+0.002271042 sec
+Thread depth: 2013261432
+Time(pt_create1) = 0.000192310 sec
+Time(pthreadspawn) = 0.000019720 sec
+Thread depth: -520122760
+Time(pt_create1) = 0.002397942 sec
+Time(pt_join1) = 0.000144550 sec
+Thread depth: 1979690616
+Time(pthreadspawn) = 0.000049770 sec
+Time(pthreadspawn) = 0.000029070 sec
+Time(pt_join2) = 0.000033030 sec
+Thread depth: -503337352
+Time(pthreadspawn) = 0.000051010 sec
+Time(pt_join2) = 0.023251963 sec
+Time(pt_create2) = 0.000158910 sec
+Thread depth: 1979690616
+Time(pthreadspawn) = 0.000008040 sec
+Time(pt_create1) = 0.000215160 sec
+Time(pt_join2) = 0.022395723 sec
+Thread depth: -1518363016
+Time(pthreadspawn) = 0.000008190 sec
+Time(pt_join1) = 0.001553101 sec
+Time(pt_join2) = 0.000001890 sec
+Time(pt_join1) = 0.057202932 sec
+Time(pt_create2) = 0.001845581 sec
+Time(pt_create1) = 0.000227280 sec
+Time(pt_create2) = 0.001746521 sec
+Thread depth: 2147479160
+Thread depth: -570446216
+Time(pthreadspawn) = 0.000015110 sec
+Time(pt_join2) = 0.001980201 sec
+Time(pthreadspawn) = 0.000030220 sec
+Thread depth: 821988984
+Time(pthreadspawn) = 0.000051040 sec
+Time(pt_join1) = 0.008736505 sec
+Time(pt_create1) = 0.000318230 sec
+Time(pt_join2) = 0.000244790 sec
+Thread depth: -1325429128
+Time(pthreadspawn) = 0.000008090 sec
+Time(pt_join1) = 0.001294440 sec
+Time(pt_create1) = 0.000227000 sec
+Time(pt_join2) = 0.003976202 sec
+Thread depth: -1056993672
+Time(pthreadspawn) = 0.000008140 sec
+Time(pt_join2) = 0.004518452 sec
+Time(pt_join1) = 0.011956766 sec
+Time(pt_create1) = 0.000224011 sec
+Time(pt_join2) = 0.000119721 sec
+Thread depth: 2122301048
+Time(pthreadspawn) = 0.000008100 sec
+Time(pt_join1) = 0.001580141 sec
+Time(pt_join2) = 0.000002830 sec
+Time(pt_create2) = 0.000301910 sec
+Time(pt_create1) = 0.001808991 sec
+Time(pt_join1) = 0.004547113 sec
+Thread depth: 134213240
+Time(pthreadspawn) = 0.000029600 sec
+Thread depth: 2122301048
+Time(pthreadspawn) = 0.000049690 sec
+Time(pt_join1) = 0.054641810 sec
+Time(pt_create2) = 0.000168100 sec
+Time(pt_join1) = 0.000002910 sec
+Thread depth: 134213240
+Time(pthreadspawn) = 0.000011270 sec
+Time(pt_join2) = 0.001802461 sec
+Time(pt_create2) = 0.002120511 sec
+Thread depth: -1518363016
+Time(pt_join1) = Time(pthreadspawn) = 0.001863551 sec
+0.000010940 sec
+Time(pt_join1) = 0.059281773 sec
+Time(pt_join1) = 0.002108901 sec
+Time(pt_join2) = 0.000061840 sec
+Time(pt_join1) = 0.005909173 sec
+Time(pt_join2) = 0.000033270 sec
+Time(pt_join2) = 0.003369931 sec
+Time(pt_create2) = 0.002348271 sec
+Time(pt_join2) = 0.006890594 sec
+Thread depth: -1325429128
+Time(pthreadspawn) = 0.000008260 sec
+Time(pt_join1) = 0.006702994 sec
+Time(pt_create1) = 0.000216500 sec
+Thread depth: 821988984
+Time(pthreadspawn) = 0.000005850 sec
+Time(pt_join2) = 0.001705151 sec
+Time(pt_join1) = 0.001953941 sec
+Time(pt_join2) = 0.000041630 sec
+Time(pt_join2) = 0.001909731 sec
+Time(pt_join2) = 0.001664591 sec
+Time(pt_join2) = 0.008225754 sec
+Time(pt_create1) = 0.001968251 sec
+Thread depth: -855667080
+Time(pt_create2) = 0.003889712 sec
+Time(pt_join1) = Time(pthreadspawn) = 0.000021180 sec
+Time(pt_join1) = 0.011276876 sec
+Time(pt_join2) = 0.000009150 sec
+Time(pt_join2) = 0.001089360 sec
+0.013493587 sec
+Time(pt_join2) = 0.000002050 sec
+Thread depth: -570446216
+Time(pt_create2) = 0.000188770 sec
+Thread depth: -855667080
+Time(pthreadspawn) = 0.000019450 sec
+Time(pthreadspawn) = 0.000075620 sec
+Time(pt_create2) = 0.003426322 sec
+Thread depth: -1056993672
+Time(pthreadspawn) = 0.000012290 sec
+Time(pt_create1) = 0.000260420 sec
+Time(pt_create2) = 0.004882312 sec
+Thread depth: -1644188040
+Time(pthreadspawn) = 0.000009300 sec
+Thread depth: -503337352
+Time(pthreadspawn) = 0.000008320 sec
+Time(pt_join1) = 0.012389026 sec
+Time(pt_join2) = 0.000060390 sec
+Time(pt_join1) = 0.000586191 sec
+Time(pt_join1) = Time(pt_join2) = 0.015931879 sec
+0.013568438 sec
+Time(pt_join2) = 0.000003510 sec
+Time(pt_join1) = 0.000510251 sec
+Time(pt_join1) = 0.005491803 sec
+Time(pt_create1) = 0.000735141 sec
+Time(pt_create1) = 0.000795881 sec
+Time(pt_join1) = Thread depth: 989843064
+0.018975611 sec
+Time(pt_join2) = Time(pthreadspawn) = Time(pt_join1) = 0.020112161 sec
+0.000033840 sec
+Thread depth: 2013261432
+Time(pt_create2) = 0.001950001 sec
+Time(pt_create1) = Time(pt_create1) = 0.000770961 sec
+Thread depth: 402648696
+Thread depth: -813703560
+Time(pthreadspawn) = Thread depth: -1644188040
+Time(pthreadspawn) = 0.000018920 sec
+Time(pthreadspawn) = Thread depth: 2139086456
+0.000015470 sec
+Time(pthreadspawn) = 0.000667031 sec
+Time(pt_create2) = Time(pt_create1) = Time(pthreadspawn) = 0.000003770 sec
+0.000061280 sec
+0.000765391 sec
+0.000684061 sec
+0.000011080 sec
+Time(pt_create2) = 0.000304690 sec
+Thread depth: 2013261432
+Time(pthreadspawn) = 0.000002620 sec
+Time(pt_join2) = 0.000268310 sec
+Thread depth: 821988984
+Time(pthreadspawn) = 0.000042190 sec
+Time(pt_create2) = 0.000365000 sec
+Thread depth: 989843064
+Time(pthreadspawn) = 0.000008120 sec
+0.000015700 sec
+Time(pt_join1) = 0.000521790 sec
+Time(pt_join1) = 0.023365643 sec
+Time(pt_join1) = 0.000437060 sec
+Time(pt_join2) = 0.000001610 sec
+Time(pt_join1) = 0.000571720 sec
+Time(pt_join2) = 0.000001680 sec
+Time(pt_create1) = 0.000737550 sec
+Thread depth: 2122301048
+Time(pthreadspawn) = Time(pt_create1) = 0.000008030 sec
+Time(pt_create2) = 0.000723140 sec
+0.000740160 sec
+Time(pt_create2) = 0.000843370 sec
+Thread depth: -1619009928
+Time(pthreadspawn) = 0.000008090 sec
+Time(pt_join2) = 0.015116468 sec
+Time(pt_join2) = 0.000449580 sec
+Thread depth: -813703560
+Time(pthreadspawn) = 0.000015810 sec
+Thread depth: 2139086456
+Time(pthreadspawn) = 0.000007000 sec
+Time(pt_create2) = 0.000391970 sec
+Time(pt_create1) = Thread depth: -1526755720
+Time(pt_join1) = 0.000001920 sec
+Time(pthreadspawn) = 0.000017890 sec
+Thread depth: 2122301048
+Time(pthreadspawn) = 0.000002750 sec
+0.000251800 sec
+Time(pt_create2) = Time(pt_create1) = 0.001223990 sec
+Time(pt_join1) = 0.000003970 sec
+Time(pt_join1) = Time(pt_join2) = 0.000374770 sec
+Thread depth: 402648696
+Time(pthreadspawn) = 0.000008020 sec
+0.000082720 sec
+Thread depth: -486551944
+Time(pthreadspawn) = 0.000006870 sec
+0.000252010 sec
+Time(pt_join2) = 0.014960088 sec
+Time(pt_create1) = 0.000203201 sec
+Time(pt_create2) = 0.000186721 sec
+Thread depth: -256160136
+Time(pthreadspawn) = 0.000010400 sec
+Time(pt_join2) = 0.000166681 sec
+Thread depth: -1526755720
+Time(pthreadspawn) = 0.000007370 sec
+Time(pt_join2) = 0.000387961 sec
+Time(pt_create1) = 0.000264860 sec
+Time(pt_join2) = 0.001965861 sec
+Thread depth: -1518363016
+Time(pt_join1) = Time(pthreadspawn) = 0.000012740 sec
+0.034914880 sec
+Time(pt_create1) = 0.000446560 sec
+Time(pt_join2) = Time(pt_join2) = 0.002110601 sec
+0.000002520 sec
+Thread depth: -578838920
+Time(pthreadspawn) = 0.000008040 sec
+Time(pt_create2) = 0.001016241 sec
+Time(pt_create1) = 0.000298730 sec
+Time(pt_create2) = 0.000504260 sec
+Thread depth: -1627402632
+Time(pthreadspawn) = 0.000006450 sec
+Thread depth: -256160136
+Time(pthreadspawn) = 0.000313790 sec
+Thread depth: -1619009928
+Thread depth: -1518363016
+Time(pthreadspawn) = 0.000009020 sec
+Time(pt_create1) = Time(pt_create2) = 0.000913280 sec
+Thread depth: -486551944
+Time(pt_join1) = Time(pthreadspawn) = 0.000022190 sec
+Time(pt_join2) = 0.006532824 sec
+Time(pt_create1) = Thread depth: -578838920
+0.000211350 sec
+Time(pt_create1) = 0.000203380 sec
+Thread depth: -1358967176
+Time(pthreadspawn) = Time(pt_join1) = 0.010549226 sec
+Time(pt_create1) = Time(pt_join2) = Time(pthreadspawn) = 0.000001980 sec
+0.000340700 sec
+0.000249100 sec
+0.000349540 sec
+Thread depth: -1761620360
+Time(pt_create2) = 0.000015730 sec
+Time(pt_create1) = 0.000208080 sec
+0.000265330 sec
+Time(pt_create2) = Thread depth: 2147479160
+0.000496860 sec
+Thread depth: -222589320
+Time(pthreadspawn) = Time(pt_join1) = 0.000468410 sec
+Time(pthreadspawn) = 0.004287073 sec
+0.044697175 sec
+Thread depth: -1627402632
+Time(pthreadspawn) = 0.000517150 sec
+Thread depth: -205803912
+Time(pthreadspawn) = Thread depth: 1006628472
+0.000019540 sec
+Time(pt_create1) = 0.000317760 sec
+Time(pt_join2) = 0.000003490 sec
+Time(pthreadspawn) = 0.000220510 sec
+0.000069460 sec
+Time(pthreadspawn) = 0.000390550 sec
+Time(pt_create1) = Time(pt_join2) = Time(pthreadspawn) = 0.000643880 sec
+0.000003560 sec
+Thread depth: 377470584
+Time(pthreadspawn) = 0.000131170 sec
+0.000171210 sec
+Time(pt_create2) = 0.000294260 sec
+Time(pt_create2) = 0.000168580 sec
+Time(pt_create1) = 0.000200800 sec
+Thread depth: 2147479160
+Time(pthreadspawn) = 0.000010670 sec
+Time(pt_create1) = 0.000200740 sec
+Thread depth: -545268104
+Time(pthreadspawn) = 0.000003540 sec
+Thread depth: 2139086456
+Time(pthreadspawn) = 0.000008330 sec
+Time(pt_create1) = 0.000776291 sec
+Thread depth: -503337352
+Time(pthreadspawn) = 0.000008730 sec
+Time(pt_join2) = 0.040653853 sec
+Time(pt_join1) = 0.000561691 sec
+Time(pt_join1) = Time(pt_join2) = 0.000003220 sec
+0.004553853 sec
+Time(pt_create2) = 0.001058151 sec
+Time(pt_create2) = 0.001042891 sec
+Thread depth: 1006628472
+Time(pthreadspawn) = 0.000008100 sec
+Thread depth: -1358967176
+Time(pthreadspawn) = 0.000002200 sec
+Time(pt_create2) = 0.001103631 sec
+Thread depth: -1761620360
+Time(pthreadspawn) = 0.000008180 sec
+Time(pt_join2) = 0.000262570 sec
+Time(pt_join1) = 0.000228780 sec
+Time(pt_join1) = 0.007078544 sec
+Time(pt_create1) = 0.000225510 sec
+Time(pt_create1) = 0.000348080 sec
+Thread depth: -847274376
+Time(pthreadspawn) = 0.000055610 sec
+Thread depth: -838881672
+Time(pthreadspawn) = 0.000066460 sec
+Time(pt_create2) = 0.000210580 sec
+Time(pt_create2) = 0.000195910 sec
+Thread depth: -847274376
+Thread depth: -838881672
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000010960 sec
+0.000009750 sec
+Time(pt_create1) = Time(pt_create1) = 0.000206170 sec
+Thread depth: 2013261432
+Time(pthreadspawn) = 0.000008250 sec
+Thread depth: -1912623496
+Time(pthreadspawn) = 0.000002200 sec
+0.000200540 sec
+Time(pt_create2) = 0.001757111 sec
+Thread depth: -205803912
+Time(pthreadspawn) = 0.000005940 sec
+Time(pt_create2) = 0.000353590 sec
+Thread depth: -1912623496
+Time(pt_create1) = Time(pthreadspawn) = 0.000352050 sec
+Thread depth: -1476399496
+Time(pthreadspawn) = 0.000003430 sec
+0.000013740 sec
+Time(pt_create2) = 0.002169852 sec
+Time(pt_join1) = 0.000003870 sec
+Thread depth: 2139086456
+Time(pthreadspawn) = 0.000009280 sec
+Time(pt_create1) = 0.000397651 sec
+Time(pt_join2) = 0.008961925 sec
+Thread depth: 1971297912
+Time(pthreadspawn) = 0.000028140 sec
+Time(pt_create1) = 0.000571391 sec
+Time(pt_create1) = 0.002706922 sec
+Time(pt_create2) = 0.000619111 sec
+Time(pt_create1) = 0.002775762 sec
+Thread depth: -230982024
+Thread depth: 1988083320
+Time(pt_create1) = Time(pt_create1) = 0.001353071 sec
+Time(pthreadspawn) = 0.000031880 sec
+Time(pthreadspawn) = Time(pt_create1) = 0.000012680 sec
+0.001224161 sec
+Time(pt_create2) = Thread depth: -570446216
+Time(pt_create2) = Time(pt_create1) = Thread depth: -1476399496
+0.001206071 sec
+Time(pt_create2) = 0.000179070 sec
+0.002713052 sec
+Thread depth: -1140855176
+Time(pt_create2) = Time(pt_join2) = Thread depth: -1166033288
+Thread depth: 2013261432
+Thread depth: -503337352
+Time(pthreadspawn) = 0.000274260 sec
+0.002227821 sec
+Time(pthreadspawn) = Thread depth: -570446216
+0.000080350 sec
+Time(pthreadspawn) = 0.000056860 sec
+0.002327761 sec
+Time(pt_create2) = 0.000589900 sec
+Time(pt_join1) = 0.000408940 sec
+0.008819435 sec
+Thread depth: 83857016
+Time(pthreadspawn) = 0.000008880 sec
+Thread depth: 83857016
+Time(pt_create2) = Time(pthreadspawn) = Time(pthreadspawn) = 0.000585700 sec
+0.000025680 sec
+Thread depth: 402648696
+Thread depth: 402648696
+Time(pthreadspawn) = Time(pthreadspawn) = Time(pthreadspawn) = Time(pt_create1) = Time(pthreadspawn) = 0.000191870 sec
+Time(pt_join2) = Time(pt_create1) = Thread depth: 1971297912
+Time(pthreadspawn) = 0.024492923 sec
+0.000016270 sec
+Time(pt_join2) = Thread depth: 2147479160
+Time(pt_create1) = 0.002025601 sec
+Time(pthreadspawn) = Thread depth: -545268104
+0.002894802 sec
+Time(pthreadspawn) = 0.000735540 sec
+Time(pt_create2) = Time(pt_join2) = Thread depth: -1056993672
+0.000634460 sec
+0.000699780 sec
+0.001334301 sec
+0.000080370 sec
+0.000008220 sec
+0.000012300 sec
+Time(pt_create2) = Thread depth: 1988083320
+0.000421870 sec
+Time(pthreadspawn) = 0.000801930 sec
+Thread depth: -1308643720
+Time(pt_create2) = Time(pthreadspawn) = 0.000190830 sec
+0.003320032 sec
+0.000557820 sec
+Time(pt_join1) = Thread depth: 821988984
+Thread depth: 377470584
+0.000003310 sec
+Time(pt_create1) = 0.000351560 sec
+Time(pthreadspawn) = Time(pthreadspawn) = Time(pt_join1) = Thread depth: -1140855176
+Time(pt_create1) = Time(pt_create2) = 0.002990342 sec
+Time(pthreadspawn) = 0.000305900 sec
+0.000019480 sec
+Time(pt_join1) = 0.000263790 sec
+Thread depth: 2130693752
+Time(pthreadspawn) = 0.000022020 sec
+Thread depth: 2105515640
+Time(pthreadspawn) = 0.000001980 sec
+Time(pt_create1) = 0.000246701 sec
+Time(pt_create1) = Thread depth: -222589320
+0.000203661 sec
+Time(pt_join1) = 0.000614440 sec
+Time(pt_create2) = 0.002854242 sec
+0.000170321 sec
+Thread depth: 956272248
+0.000310580 sec
+Thread depth: 2147479160
+Time(pthreadspawn) = Time(pt_create2) = 0.000571730 sec
+Time(pt_create2) = 0.000003600 sec
+Time(pt_create1) = 0.000506360 sec
+0.000507270 sec
+0.000361510 sec
+Time(pt_join1) = Time(pt_join2) = 0.000002190 sec
+Thread depth: -478159240
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000096240 sec
+0.000018660 sec
+0.003076992 sec
+Time(pthreadspawn) = 0.003855342 sec
+Thread depth: 2105515640
+0.000186351 sec
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000087960 sec
+Time(pt_join1) = Time(pthreadspawn) = 0.000682960 sec
+0.000635190 sec
+0.000027630 sec
+0.000003290 sec
+0.000849571 sec
+Time(pt_join2) = 0.000061400 sec
+Time(pt_create1) = 0.000219980 sec
+Thread depth: 947879544
+Time(pthreadspawn) = 0.000008030 sec
+Time(pt_create1) = 0.000376410 sec
+Thread depth: 981450360
+Time(pthreadspawn) = 0.000033820 sec
+Time(pt_create2) = 0.000263950 sec
+Time(pt_join1) = 0.000002320 sec
+Thread depth: 947879544
+Time(pthreadspawn) = 0.000029520 sec
+Time(pt_create2) = 0.001902341 sec
+Thread depth: -230982024
+Time(pthreadspawn) = 0.000003590 sec
+Time(pt_create1) = 0.000476870 sec
+Thread depth: -1275072904
+Time(pthreadspawn) = 0.000010510 sec
+Thread depth: -1493184904
+Time(pt_create1) = Time(pthreadspawn) = Thread depth: -1317036424
+Time(pthreadspawn) = 0.000015150 sec
+Time(pt_create2) = 0.000013680 sec
+Time(pt_join2) = 0.000914411 sec
+Time(pt_create1) = 0.001206071 sec
+Time(pt_join2) = 0.001915751 sec
+Time(pt_join1) = 0.001053831 sec
+Time(pt_join2) = 0.000001990 sec
+0.001009581 sec
+0.000800640 sec
+Time(pt_create1) = 0.000186310 sec
+Time(pt_join1) = Time(pt_join1) = Thread depth: 897523320
+Time(pt_create1) = 0.000865180 sec
+Time(pt_join2) = Time(pthreadspawn) = 0.000033300 sec
+0.000901860 sec
+Thread depth: -1610617224
+Time(pthreadspawn) = 0.000016580 sec
+0.000818900 sec
+Time(pt_create2) = 0.000184020 sec
+Time(pt_create1) = 0.000205150 sec
+Time(pt_create2) = Thread depth: -1317036424
+Thread depth: -1493184904
+Time(pthreadspawn) = 0.000003150 sec
+Time(pthreadspawn) = 0.000015320 sec
+0.000187700 sec
+Time(pt_join2) = 0.001551731 sec
+Thread depth: -1325429128
+0.000840520 sec
+Time(pthreadspawn) = 0.000006390 sec
+Time(pt_create2) = Time(pt_join2) = Time(pt_create1) = Thread depth: 872345208
+Time(pt_create1) = 0.000378720 sec
+Time(pt_create2) = 0.000418700 sec
+Time(pthreadspawn) = Time(pt_create2) = 0.000296230 sec
+0.000476010 sec
+Thread depth: 2004868728
+Time(pt_join2) = Thread depth: -1308643720
+0.000199950 sec
+0.000747100 sec
+Time(pt_create1) = Thread depth: -1325429128
+Thread depth: 897523320
+0.000477830 sec
+Time(pthreadspawn) = 0.000344200 sec
+Time(pthreadspawn) = Time(pt_join2) = 0.000258180 sec
+Thread depth: 394255992
+Time(pthreadspawn) = 0.000002130 sec
+0.000226420 sec
+Time(pthreadspawn) = 0.000008720 sec
+Thread depth: -1610617224
+0.000015080 sec
+Time(pt_create1) = 0.000491040 sec
+Time(pt_create2) = 0.001651480 sec
+Time(pthreadspawn) = 0.000053720 sec
+Thread depth: 956272248
+Time(pt_join1) = 0.000002460 sec
+Time(pthreadspawn) = 0.000013480 sec
+0.000339500 sec
+Time(pt_join1) = Thread depth: 821988984
+0.004274312 sec
+Time(pt_join1) = Time(pthreadspawn) = 0.000024830 sec
+Time(pt_create2) = Time(pt_create2) = Time(pt_create2) = 0.001704210 sec
+Time(pt_join1) = 0.000165730 sec
+0.000091860 sec
+0.002011631 sec
+Thread depth: 83857016
+0.002924411 sec
+Time(pthreadspawn) = Time(pthreadspawn) = Thread depth: 2004868728
+0.000338030 sec
+Time(pthreadspawn) = 0.000071240 sec
+0.000082800 sec
+Thread depth: -478159240
+Time(pthreadspawn) = 0.000241151 sec
+Time(pt_create2) = 0.002654082 sec
+Time(pt_create2) = 0.002481412 sec
+Thread depth: -1166033288
+Time(pthreadspawn) = 0.000011140 sec
+Thread depth: -1056993672
+Time(pthreadspawn) = 0.000002030 sec
+Time(pt_join1) = 0.005002893 sec
+Time(pt_join2) = 0.000083150 sec
+Time(pt_create1) = 0.002301321 sec
+Time(pt_join1) = 0.007866294 sec
+Thread depth: 1996476024
+Time(pthreadspawn) = 0.000008030 sec
+Time(pt_create2) = 0.003402941 sec
+Time(pt_join1) = 0.001749781 sec
+Thread depth: 2130693752
+Time(pthreadspawn) = 0.000016411 sec
+Time(pt_create2) = 0.000199531 sec
+Time(pt_join1) = 0.000115491 sec
+Thread depth: 1996476024
+Time(pthreadspawn) = 0.000007980 sec
+Time(pt_create1) = 0.002931162 sec
+Thread depth: 385863288
+Time(pt_join2) = 0.000168680 sec
+Time(pthreadspawn) = 0.000012750 sec
+Time(pt_join1) = 0.003965343 sec
+Time(pt_create1) = 0.001942021 sec
+Thread depth: 838774392
+Time(pthreadspawn) = 0.000011870 sec
+Time(pt_create2) = 0.000284880 sec
+Thread depth: 385863288
+Time(pthreadspawn) = 0.000003850 sec
+Time(pt_create2) = 0.003537122 sec
+Thread depth: 981450360
+Time(pthreadspawn) = 0.000007890 sec
+Time(pt_join2) = 0.000507170 sec
+Time(pt_join2) = 0.002711642 sec
+Time(pt_join1) = 0.002802032 sec
+Time(pt_join2) = 0.000029520 sec
+Time(pt_join1) = 0.002996532 sec
+Time(pt_join2) = 0.003184642 sec
+Time(pt_join1) = 0.002577471 sec
+Time(pt_join2) = 0.003231232 sec
+Time(pt_create1) = 0.002982381 sec
+Time(pt_create1) = Thread depth: -1484792200
+Time(pthreadspawn) = 0.000015640 sec
+Thread depth: 352292472
+Time(pt_create2) = 0.002955791 sec
+0.003886992 sec
+Time(pt_join1) = 0.000003310 sec
+Thread depth: 855559800
+Time(pt_create1) = Time(pt_join1) = 0.008066535 sec
+Time(pthreadspawn) = 0.000003810 sec
+Time(pthreadspawn) = 0.003825592 sec
+0.000092471 sec
+Time(pt_create2) = 0.003876563 sec
+Time(pt_join1) = 0.000002860 sec
+Thread depth: 394255992
+Thread depth: 83857016
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000148791 sec
+Time(pt_create2) = Time(pt_create1) = 0.000214501 sec
+Time(pt_join1) = 0.000002910 sec
+Thread depth: 352292472
+0.000014940 sec
+Time(pt_create2) = 0.003961063 sec
+Time(pthreadspawn) = 0.003927333 sec
+Thread depth: -247767432
+Time(pt_create1) = 0.003900913 sec
+Time(pt_create2) = 0.000169900 sec
+Time(pt_join1) = 0.002083071 sec
+0.000029810 sec
+Thread depth: 872345208
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000055180 sec
+0.000016620 sec
+Thread depth: -1484792200
+Time(pthreadspawn) = 0.000002880 sec
+Time(pt_join2) = 0.002095922 sec
+Thread depth: 847167096
+Time(pthreadspawn) = 0.000091960 sec
+Time(pt_create1) = 0.006261164 sec
+Time(pt_join2) = 0.000488870 sec
+Thread depth: 973057656
+Time(pthreadspawn) = 0.000008160 sec
+Time(pt_join2) = 0.000448930 sec
+Time(pt_join1) = 0.002068141 sec
+Time(pt_join2) = 0.000062930 sec
+Time(pt_join2) = 0.004796163 sec
+Time(pt_join1) = 0.001009660 sec
+Time(pt_create1) = 0.001409681 sec
+Time(pt_join2) = 0.000161770 sec
+Thread depth: 134213240
+Time(pthreadspawn) = 0.000008060 sec
+Time(pt_join2) = 0.001191480 sec
+Time(pt_join1) = 0.005947383 sec
+Time(pt_create2) = 0.000159210 sec
+Thread depth: 134213240
+Time(pthreadspawn) = 0.000008210 sec
+Time(pt_create2) = 0.001637320 sec
+Thread depth: 855559800
+Time(pthreadspawn) = 0.000008260 sec
+Time(pt_join2) = 0.000135300 sec
+Time(pt_create2) = 0.001510590 sec
+Thread depth: 847167096
+Time(pthreadspawn) = 0.000008360 sec
+Time(pt_join1) = 0.000269900 sec
+Time(pt_create2) = 0.006856944 sec
+Thread depth: -1275072904
+Time(pthreadspawn) = 0.000030040 sec
+Time(pt_join1) = Time(pt_join2) = 0.008729445 sec
+Time(pt_create1) = 0.001954551 sec
+0.000176770 sec
+Time(pt_create1) = Thread depth: 939486840
+Time(pthreadspawn) = 0.000019170 sec
+0.000166880 sec
+Thread depth: 234860152
+Time(pthreadspawn) = 0.000007830 sec
+Time(pt_join1) = 0.006361904 sec
+Time(pt_create2) = 0.001981641 sec
+Time(pt_join1) = 0.000003180 sec
+Thread depth: 973057656
+Time(pthreadspawn) = 0.000005160 sec
+Time(pt_create2) = 0.000164410 sec
+Time(pt_join1) = 0.000002760 sec
+Time(pt_join2) = 0.003007792 sec
+Time(pt_create2) = Time(pt_create2) = 0.004049772 sec
+0.000168900 sec
+Thread depth: 939486840
+Time(pthreadspawn) = 0.000005300 sec
+Thread depth: 838774392
+Time(pthreadspawn) = 0.000008250 sec
+Time(pt_join1) = 0.004152572 sec
+Thread depth: 234860152
+Time(pthreadspawn) = 0.000004550 sec
+Time(pt_join2) = 0.000289230 sec
+Time(pt_join2) = 0.003073851 sec
+Time(pt_join1) = 0.001767861 sec
+Time(pt_join2) = 0.000076490 sec
+Time(pt_join1) = 0.008928175 sec
+Time(pt_create1) = 0.003424462 sec
+Thread depth: 117427832
+Time(pthreadspawn) = 0.000008150 sec
+Time(pt_join2) = 0.000300310 sec
+Time(pt_join1) = 0.001757751 sec
+Time(pt_join1) = 0.010515546 sec
+Time(pt_join2) = 0.002030761 sec
+Time(pt_join2) = 0.002133271 sec
+Time(pt_join2) = 0.002463691 sec
+Time(pt_create2) = 0.004601962 sec
+Thread depth: -247767432
+Time(pthreadspawn) = 0.000012630 sec
+Time(pt_join1) = 0.003314672 sec
+Time(pt_join2) = 0.000055520 sec
+Time(pt_join1) = 0.009156115 sec
+Time(pt_join1) = 0.002782011 sec
+Time(pt_join2) = 0.000041890 sec
+Time(pt_join1) = 0.005194603 sec
+Time(pt_join2) = 0.000072890 sec
+Time(pt_create2) = 0.001914251 sec
+Time(pt_join2) = 0.000480391 sec
+Thread depth: 117427832
+Time(pthreadspawn) = 0.000011290 sec
+Time(pt_join1) = 0.000091160 sec
+Time(pt_join1) = 0.003796972 sec
+Time(pt_join2) = 0.001784731 sec
+Time(pt_create1) = 0.001370631 sec
+Time(pt_join2) = 0.007030714 sec
+Thread depth: 1996476024
+Time(pthreadspawn) = 0.000007870 sec
+Time(pt_join2) = 0.006317673 sec
+Time(pt_create2) = 0.000182140 sec
+Time(pt_join2) = 0.000776980 sec
+Thread depth: 1996476024
+Time(pthreadspawn) = 0.000007990 sec
+Time(pt_join1) = 0.012359717 sec
+Time(pt_join2) = 0.000952300 sec
+Time(pt_join1) = 0.011827447 sec
+Time(pt_join2) = 0.000041600 sec
+Time(pt_join1) = 0.012251037 sec
+Time(pt_join1) = 0.012512277 sec
+Time(pt_join2) = 0.000040280 sec
+Time(pt_join1) = 0.003088972 sec
+Time(pt_join2) = 0.001327521 sec
+Time(pt_join1) = 0.016723899 sec
+Time(pt_join2) = 0.010286006 sec
+Time(pt_join2) = 0.000735230 sec
+Time(pt_join2) = 0.000314770 sec
+Time(pt_join1) = 0.002119501 sec
+Time(pt_join1) = 0.018353510 sec
+Time(pt_join2) = 0.000149600 sec
+Time(pt_join2) = 0.004506552 sec
+Time(pt_join2) = 0.001143701 sec
+Time(pt_join2) = 0.000501291 sec
+Time(pt_join2) = 0.006901644 sec
+Time(pt_join1) = 0.018114320 sec
+Time(pt_join2) = 0.000285160 sec
+Time(pt_join1) = 0.012896127 sec
+Time(pt_join2) = 0.000039170 sec
+Time(pt_join1) = 0.017831420 sec
+Time(pt_join2) = 0.000034480 sec
+Time(pt_join2) = 0.015676818 sec
+Time(pt_join1) = 0.020897941 sec
+Time(pt_join2) = 0.000039050 sec
+Time(pt_join1) = 0.021700342 sec
+Time(pt_join2) = 0.000039600 sec
+Time(pt_join1) = 0.021527222 sec
+Time(pt_join2) = 0.000032360 sec
+Time(pt_join1) = 0.022777993 sec
+Time(pt_join2) = 0.000031510 sec
+Time(pt_join1) = 0.023788943 sec
+Time(pt_join2) = 0.000036450 sec
+Time(pt_join1) = 0.025142394 sec
+Time(pt_join2) = 0.000041130 sec
+Time(pt_join2) = 0.020798961 sec
+Time(pt_join2) = 0.025085304 sec
+Time(pt_join1) = 0.038735802 sec
+Time(pt_join2) = 0.000039470 sec
+Time(pt_join1) = 0.039219292 sec
+Time(pt_join2) = 0.000035650 sec
+Time(pt_join2) = 0.034955679 sec
+Time(pt_join1) = 0.036936180 sec
+Time(pt_join2) = 0.000031060 sec
+Time(pt_join1) = 0.045428445 sec
+Time(pt_join2) = 0.000037310 sec
+Time(pt_join2) = 0.025850944 sec
+Time(pt_join2) = 0.050419827 sec
+Time(pt_join1) = 0.056568032 sec
+Time(pt_join2) = 0.000031950 sec
+Time(pt_join1) = 0.063892046 sec
+Time(pt_join2) = 0.000061480 sec
+Time(pt_join2) = 0.040237012 sec
+Time(pt_join2) = 0.061073674 sec
+Time(pt_join1) = 0.082452875 sec
+Time(pt_join2) = 0.000034020 sec
+Time(pt_join1) = 0.088836379 sec
+Time(pt_join2) = 0.000065540 sec
+Time(pt_join2) = 0.037357541 sec
+Time(pt_join2) = 0.091389071 sec
+Time(pt_join1) = 0.094132362 sec
+Time(pt_join2) = 0.000032330 sec
+Time(pt_join2) = 0.093741492 sec
+Time(pt_join1) = 0.101733926 sec
+Time(pt_join2) = 0.000036370 sec
+Time(pt_join1) = 0.103861707 sec
+Time(pt_join2) = 0.000058400 sec
+Time(pt_join1) = 0.104414387 sec
+Time(pt_join2) = 0.000042910 sec
+Time(pt_join1) = 0.105108868 sec
+Time(pt_join2) = 0.000037910 sec
+Time(pt_join2) = 0.105652769 sec
+Time(pt_join1) = 0.116079274 sec
+Time(pt_join2) = 0.000034010 sec
+Time(pt_join2) = 0.111719962 sec
+Time(pt_join2) = 0.133245963 sec
+Time(pt_join2) = 0.133689453 sec
+Time(pt_join1) = 0.174085397 sec
+Time(pt_join2) = 0.000035270 sec
+Time(pt_join2) = 0.096229003 sec
+Time(pt_join1) = 0.178155228 sec
+Time(pt_join2) = 0.000095570 sec
+Time(pt_join1) = 0.179173609 sec
+Time(pt_join2) = 0.000055020 sec
+Time(RT: ) = 0.179904809 sec
+32 threads -- >= 8 core
+Thread depth: 0
+Time(pthreadspawn) = 0.000167480 sec
+Time(pt_create1) = 0.000285140 sec
+Thread depth: 1389850360
+Time(pthreadspawn) = 0.000008160 sec
+Time(pt_create2) = 0.000184160 sec
+Time(pt_join1) = 0.000006460 sec
+Thread depth: 1389850360
+Time(pthreadspawn) = 0.000008300 sec
+Time(pt_join2) = 0.000138000 sec
+Time(RT: ) = 0.000820660 sec
+64 threads -- >= 16 core
+Thread depth: 0
+Time(pthreadspawn) = 0.000213020 sec
+Time(pt_create1) = 0.000260891 sec
+Thread depth: -134671848
+Time(pthreadspawn) = 0.000008450 sec
+Time(pt_create2) = 0.000176550 sec
+Thread depth: -134671848
+Time(pthreadspawn) = 0.000008620 sec
+Time(pt_create1) = 0.000338530 sec
+Thread depth: -549675400
+Time(pthreadspawn) = 0.000008210 sec
+Time(pt_create1) = 0.000354420 sec
+Thread depth: -558068104
+Time(pthreadspawn) = 0.000008120 sec
+Time(pt_create2) = 0.000257080 sec
+Thread depth: -549675400
+Time(pthreadspawn) = 0.000012820 sec
+Time(pt_create2) = 0.000613950 sec
+Thread depth: -558068104
+Time(pthreadspawn) = 0.000008440 sec
+Time(pt_create1) = 0.000880450 sec
+Thread depth: -566460808
+Time(pthreadspawn) = 0.000008410 sec
+Time(pt_create1) = 0.001416781 sec
+Thread depth: -583246216
+Time(pthreadspawn) = 0.000012400 sec
+Time(pt_create1) = 0.001190251 sec
+Time(pt_create2) = Thread depth: -805310856
+Time(pthreadspawn) = 0.000033900 sec
+Thread depth: -566460808
+Time(pthreadspawn) = 0.000058790 sec
+0.001187411 sec
+Time(pt_create1) = 0.000410510 sec
+Thread depth: -822096264
+Time(pt_create2) = Time(pthreadspawn) = 0.000287330 sec
+0.000016460 sec
+Thread depth: -805310856
+Time(pthreadspawn) = 0.000008670 sec
+Time(pt_create2) = 0.000322660 sec
+Thread depth: -822096264
+Time(pthreadspawn) = 0.000012660 sec
+Time(pt_create1) = 0.001731841 sec
+Thread depth: -591638920
+Time(pthreadspawn) = 0.000012770 sec
+Time(pt_create1) = 0.001298711 sec
+Time(pt_create1) = 0.001093601 sec
+Thread depth: -847274376
+Thread depth: -838881672
+Time(pthreadspawn) = 0.000011140 sec
+Time(pthreadspawn) = 0.000012610 sec
+Time(pt_create1) = 0.003502972 sec
+Thread depth: -574853512
+Time(pthreadspawn) = 0.000013160 sec
+Time(pt_create2) = 0.000768810 sec
+Thread depth: -838881672
+Time(pthreadspawn) = 0.000012200 sec
+Time(pt_create1) = 0.001815231 sec
+Thread depth: -830488968
+Time(pthreadspawn) = 0.000008760 sec
+Time(pt_create1) = 0.002207842 sec
+Time(pt_create2) = 0.002159612 sec
+Time(pt_create1) = 0.001085441 sec
+Thread depth: -956313992
+Time(pthreadspawn) = 0.000008900 sec
+Thread depth: -813703560
+Time(pthreadspawn) = 0.000141110 sec
+Thread depth: -591638920
+Time(pthreadspawn) = 0.000156420 sec
+Time(pt_create1) = 0.000429620 sec
+Thread depth: -1090531720
+Time(pthreadspawn) = 0.000009770 sec
+Time(pt_create1) = 0.004126632 sec
+Time(pt_create2) = Time(pt_create1) = 0.002802461 sec
+Time(pt_create2) = Time(pt_create1) = 0.004567792 sec
+Thread depth: -847274376
+0.002756761 sec
+Thread depth: -939528584
+Time(pthreadspawn) = 0.000003820 sec
+Time(pthreadspawn) = 0.000034590 sec
+Thread depth: -964706696
+Thread depth: -583246216
+Time(pthreadspawn) = 0.000068080 sec
+Time(pthreadspawn) = 0.000070740 sec
+Thread depth: -1098924424
+Time(pthreadspawn) = 0.000012660 sec
+0.001014720 sec
+Time(pt_create2) = 0.000437261 sec
+Thread depth: -1098924424
+Time(pthreadspawn) = 0.000010220 sec
+Time(pt_create1) = 0.001991891 sec
+Thread depth: -1082139016
+Time(pthreadspawn) = 0.000008250 sec
+Time(pt_create1) = 0.000419530 sec
+Time(pt_create1) = 0.004024452 sec
+Thread depth: 2063584888
+Time(pthreadspawn) = 0.000012640 sec
+Thread depth: -981492104
+Time(pthreadspawn) = 0.000020270 sec
+Time(pt_create2) = Time(pt_create2) = 0.003198862 sec
+Time(pt_create1) = Time(pt_create2) = 0.002400451 sec
+0.002952891 sec
+Time(pt_create2) = Time(pt_create1) = Thread depth: -1073746312
+0.002958921 sec
+0.002474831 sec
+Thread depth: -813703560
+Thread depth: -956313992
+Time(pthreadspawn) = 0.000003880 sec
+Thread depth: -830488968
+Time(pthreadspawn) = 0.000070080 sec
+Time(pthreadspawn) = 0.000021140 sec
+Thread depth: -1786798472
+0.003537312 sec
+Time(pt_create1) = Thread depth: -1107317128
+Thread depth: -1090531720
+Time(pthreadspawn) = 0.000004520 sec
+Time(pthreadspawn) = 0.000018310 sec
+0.003166712 sec
+Time(pthreadspawn) = 0.000031010 sec
+Time(pthreadspawn) = 0.000009250 sec
+Time(pt_create2) = 0.002299242 sec
+Time(pt_create2) = 0.001418441 sec
+Thread depth: -939528584
+Time(pt_create2) = Time(pthreadspawn) = 0.002469052 sec
+Time(pt_create2) = 0.005130233 sec
+Thread depth: -1082139016
+Time(pthreadspawn) = 0.000005760 sec
+Thread depth: -964706696
+Time(pthreadspawn) = 0.000351150 sec
+0.000018200 sec
+Thread depth: -574853512
+Time(pthreadspawn) = 0.000398730 sec
+Time(pt_create1) = Time(pt_create1) = 0.001367031 sec
+0.001538241 sec
+Thread depth: -1770013064
+Thread depth: -1795191176
+Time(pthreadspawn) = 0.000491370 sec
+Time(pthreadspawn) = 0.000014450 sec
+Time(pt_create1) = 0.003595972 sec
+Thread depth: -947921288
+Time(pthreadspawn) = 0.000008490 sec
+Time(pt_create1) = 0.008592205 sec
+Time(pt_create1) = 0.004522413 sec
+Time(pt_create2) = Time(pt_create1) = 0.000963941 sec
+Thread depth: -855667080
+Time(pt_create2) = Time(pt_create1) = 0.002926932 sec
+0.004708553 sec
+Time(pt_create2) = Thread depth: -1786798472
+Time(pt_create1) = 0.003574992 sec
+0.004681693 sec
+Thread depth: -1946161544
+Thread depth: -981492104
+Time(pt_create1) = Time(pthreadspawn) = 0.000086260 sec
+0.004695383 sec
+Time(pthreadspawn) = 0.000030090 sec
+Thread depth: -1753227656
+Thread depth: -1996517768
+Time(pthreadspawn) = 0.000015930 sec
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000021520 sec
+Thread depth: -1073746312
+Time(pthreadspawn) = 0.000086050 sec
+0.002939692 sec
+Time(pt_create1) = 0.000013330 sec
+Time(pt_create2) = 0.003168272 sec
+Thread depth: -1954554248
+Time(pthreadspawn) = 0.000221190 sec
+Thread depth: -1107317128
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000005070 sec
+Thread depth: -1778405768
+0.002921352 sec
+0.000084040 sec
+Time(pthreadspawn) = 0.000008330 sec
+Thread depth: -947921288
+Time(pthreadspawn) = 0.000010260 sec
+Thread depth: -973099400
+Time(pthreadspawn) = 0.000166910 sec
+Time(pt_create2) = 0.001402991 sec
+Time(pt_create1) = 0.003816012 sec
+Thread depth: -1744834952
+Time(pthreadspawn) = 0.000012840 sec
+Time(pt_create1) = 0.003848902 sec
+Thread depth: 2030014072
+Time(pthreadspawn) = 0.000008240 sec
+Time(pt_create1) = 0.003725592 sec
+Thread depth: -1971339656
+Time(pthreadspawn) = 0.000010050 sec
+Time(pt_create1) = Time(pt_create2) = 0.003737422 sec
+Time(pt_create2) = Thread depth: -1115709832
+Time(pthreadspawn) = 0.000019780 sec
+Thread depth: 2063584888
+Time(pthreadspawn) = 0.000002810 sec
+0.003710232 sec
+Time(pt_create2) = 0.005653773 sec
+Time(pt_join1) = 0.000003030 sec
+Thread depth: -1795191176
+Time(pt_create1) = 0.005090443 sec
+0.005067423 sec
+Thread depth: 2055192184
+Time(pthreadspawn) = 0.000008500 sec
+Time(pthreadspawn) = 0.000147320 sec
+Thread depth: -1770013064
+Time(pthreadspawn) = 0.000165890 sec
+Time(pt_create2) = 0.000189480 sec
+Time(pt_join1) = 0.000003540 sec
+Thread depth: 2055192184
+Time(pthreadspawn) = 0.000011190 sec
+Time(pt_create2) = 0.003293612 sec
+Time(pt_create2) = 0.003380022 sec
+Thread depth: -1946161544
+Time(pthreadspawn) = 0.000032830 sec
+Thread depth: -855667080
+Time(pthreadspawn) = 0.000063880 sec
+Time(pt_create1) = 0.000229980 sec
+Thread depth: 956272248
+Time(pthreadspawn) = 0.000008160 sec
+Time(pt_create2) = 0.003739842 sec
+Time(pt_create1) = 0.000392020 sec
+Thread depth: -1996517768
+Time(pthreadspawn) = 0.000012310 sec
+Time(pt_create2) = 0.000243910 sec
+Thread depth: 964664952
+Time(pthreadspawn) = 0.000008190 sec
+Thread depth: 956272248
+Time(pthreadspawn) = 0.000007910 sec
+Time(pt_create1) = 0.004368673 sec
+Time(pt_create1) = 0.004410573 sec
+Thread depth: 1535106680
+Thread depth: -1979732360
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000009690 sec
+0.000007910 sec
+Time(pt_create1) = 0.004460653 sec
+Time(pt_create1) = 0.007285884 sec
+Thread depth: 1627360888
+Time(pthreadspawn) = 0.000018040 sec
+Thread depth: -1962946952
+Time(pthreadspawn) = 0.000002320 sec
+Time(pt_create2) = Time(pt_create2) = Time(pt_create1) = 0.004187492 sec
+Time(pt_create1) = Time(pt_create2) = 0.008925645 sec
+Thread depth: 1543499384
+0.007411734 sec
+Time(pt_create1) = Time(pthreadspawn) = 0.007734744 sec
+0.005693833 sec
+Time(pt_create2) = Thread depth: 1400888952
+0.005009633 sec
+Time(pt_create1) = Time(pthreadspawn) = Time(pt_create1) = Thread depth: -1954554248
+0.005774143 sec
+Time(pt_join2) = 0.005748173 sec
+Thread depth: -1744834952
+Time(pthreadspawn) = 0.000008650 sec
+Thread depth: 1669324408
+Time(pt_create1) = Time(pthreadspawn) = Thread depth: -1753227656
+Time(pthreadspawn) = 0.000405700 sec
+Thread depth: 58711672
+Time(pthreadspawn) = 0.000010430 sec
+0.000027580 sec
+0.005614743 sec
+Time(pt_create1) = 0.000190441 sec
+Time(pthreadspawn) = 0.000028520 sec
+0.000020180 sec
+Thread depth: 1392496248
+Time(pthreadspawn) = 0.000012050 sec
+0.003634792 sec
+Time(pt_join1) = 0.000839201 sec
+Thread depth: -1124102536
+Time(pthreadspawn) = 0.000693181 sec
+0.000013650 sec
+0.003717202 sec
+Thread depth: 1509928568
+Time(pthreadspawn) = 0.001031401 sec
+Thread depth: 1702862456
+Time(pthreadspawn) = 0.000956291 sec
+Time(pt_create1) = 0.000363080 sec
+Thread depth: 2030014072
+Time(pthreadspawn) = 0.001243761 sec
+Thread depth: 1660931704
+Time(pthreadspawn) = 0.000008210 sec
+Thread depth: -973099400
+Time(pthreadspawn) = 0.001314391 sec
+Time(pt_join1) = 0.002062351 sec
+Time(pt_join2) = 0.000004270 sec
+Time(pt_create1) = 0.009559605 sec
+Time(pt_join2) = 0.003809892 sec
+Time(pt_create1) = 0.005459663 sec
+Time(pt_create2) = 0.005816673 sec
+Thread depth: -1761620360
+Time(pthreadspawn) = 0.001505091 sec
+Time(pt_create2) = 0.000389790 sec
+Time(pt_create2) = 0.000187700 sec
+Thread depth: -1761620360
+Time(pthreadspawn) = 0.000008830 sec
+Thread depth: -1988125064
+Time(pthreadspawn) = 0.001682331 sec
+Time(pt_create1) = 0.000232720 sec
+Thread depth: -1988125064
+Time(pthreadspawn) = 0.001778591 sec
+Time(pt_create1) = 0.006093353 sec
+Thread depth: 1652539000
+Time(pthreadspawn) = 0.000009160 sec
+Time(pt_create1) = 0.010016476 sec
+Thread depth: 1744825976
+Time(pthreadspawn) = 0.000011130 sec
+Time(pt_create2) = Time(pt_create2) = 0.008163755 sec
+Time(pt_create2) = 0.003647222 sec
+Time(pt_create2) = 0.004751723 sec
+Time(pt_join1) = 0.000002820 sec
+Thread depth: -1778405768
+Time(pt_create1) = Time(pt_create2) = 0.003682722 sec
+Thread depth: 964664952
+Time(pt_join1) = 0.000003620 sec
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000008330 sec
+Time(pt_join2) = 0.001951181 sec
+0.008101815 sec
+Thread depth: 2080370296
+0.000042580 sec
+Time(pthreadspawn) = Time(pt_create1) = 0.006326954 sec
+Thread depth: -1115709832
+Thread depth: 1644146296
+Time(pthreadspawn) = Time(pthreadspawn) = Thread depth: -1979732360
+0.000008690 sec
+0.000023430 sec
+0.000049890 sec
+0.008519115 sec
+Time(pt_create2) = 0.006976704 sec
+Thread depth: -1971339656
+Time(pthreadspawn) = 0.000008720 sec
+Time(pt_create1) = 0.006944284 sec
+Thread depth: 1728040568
+Time(pt_create2) = 0.000201500 sec
+Time(pthreadspawn) = 0.000020230 sec
+Thread depth: 1535106680
+Time(pthreadspawn) = 0.000237310 sec
+Time(pthreadspawn) = 0.000152210 sec
+Time(pt_create1) = 0.000225560 sec
+Thread depth: 2080370296
+Time(pthreadspawn) = 0.000008930 sec
+Thread depth: -109076872
+Time(pthreadspawn) = 0.000008950 sec
+Time(pt_create1) = 0.000378600 sec
+Thread depth: 327147128
+Time(pthreadspawn) = 0.000008200 sec
+Time(pt_create2) = 0.004291512 sec
+Thread depth: -1962946952
+Time(pthreadspawn) = 0.000009940 sec
+Time(pt_create1) = 0.000490171 sec
+Thread depth: -494944648
+Time(pthreadspawn) = 0.000008980 sec
+Time(pt_create2) = 0.004592742 sec
+Time(pt_join1) = 0.000003750 sec
+Time(pt_create1) = 0.011353886 sec
+Thread depth: 1702862456
+Time(pthreadspawn) = 0.000034550 sec
+Thread depth: 1711255160
+Time(pthreadspawn) = 0.000054640 sec
+Time(pt_create2) = 0.000193050 sec
+Thread depth: 1711255160
+Time(pthreadspawn) = 0.000008610 sec
+Time(pt_create1) = 0.004389163 sec
+Thread depth: 1493143160
+Time(pthreadspawn) = 0.000008020 sec
+Time(pt_create2) = 0.000247050 sec
+Time(pt_create1) = Thread depth: 1493143160
+Time(pthreadspawn) = 0.000025100 sec
+0.004584013 sec
+Thread depth: 310361720
+Time(pthreadspawn) = 0.000008120 sec
+Time(pt_join1) = 0.003973782 sec
+Time(pt_create1) = 0.012980347 sec
+Time(pt_create1) = 0.005926313 sec
+Time(pt_create2) = 0.005662463 sec
+Time(pt_create2) = Time(pt_join1) = 0.000003490 sec
+Thread depth: -989884808
+Thread depth: 1694469752
+Time(pt_create1) = Time(pt_create1) = Thread depth: 1384103544
+0.006666203 sec
+Time(pthreadspawn) = 0.012826257 sec
+0.000009950 sec
+Thread depth: 1526713976
+Time(pt_create2) = Thread depth: 1543499384
+Time(pt_create1) = Time(pthreadspawn) = Thread depth: 1275063928
+Time(pthreadspawn) = 0.000351690 sec
+Time(pt_create2) = 0.008139234 sec
+Time(pt_create1) = 0.010882246 sec
+Thread depth: 1400888952
+Time(pt_create2) = Time(pthreadspawn) = 0.000343111 sec
+0.007409374 sec
+Thread depth: 1627360888
+Thread depth: 1644146296
+Time(pthreadspawn) = 0.000023880 sec
+Time(pthreadspawn) = 0.016083739 sec
+0.000023340 sec
+Time(pthreadspawn) = Time(pt_create2) = 0.000025440 sec
+0.000490341 sec
+Time(pt_create2) = Time(pt_create2) = Thread depth: -989884808
+0.006288823 sec
+Time(pthreadspawn) = 0.000434401 sec
+Thread depth: 1669324408
+Time(pthreadspawn) = 0.000635611 sec
+Thread depth: 1526713976
+Time(pt_create2) = Time(pthreadspawn) = 0.000024560 sec
+Time(pt_create1) = Thread depth: 1660931704
+0.007317034 sec
+0.005124483 sec
+Thread depth: -1124102536
+0.004496702 sec
+Time(pthreadspawn) = Time(pt_create1) = 0.000020330 sec
+Thread depth: 998235768
+0.000014280 sec
+Time(pt_join1) = Thread depth: 2046799480
+0.000003430 sec
+Time(pt_create2) = 0.000180990 sec
+Time(pthreadspawn) = Thread depth: 2071977592
+0.007529184 sec
+0.000386441 sec
+Time(pthreadspawn) = Thread depth: 1375710840
+Time(pt_create1) = Time(pthreadspawn) = 0.013069867 sec
+0.000207350 sec
+Time(pthreadspawn) = Thread depth: 1409281656
+Time(pt_create1) = 0.000454521 sec
+0.007925654 sec
+Thread depth: 1509928568
+0.000419251 sec
+Time(pthreadspawn) = 0.000713211 sec
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000637971 sec
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000179410 sec
+0.013286147 sec
+0.007924335 sec
+0.000648931 sec
+0.000625411 sec
+Time(pt_join1) = 0.003201012 sec
+Time(pt_join2) = 0.000005640 sec
+Time(pt_join2) = 0.002122751 sec
+Time(pt_create2) = 0.004757982 sec
+Time(pt_create2) = 0.008639844 sec
+Thread depth: -494944648
+Time(pthreadspawn) = 0.000011810 sec
+Thread depth: 1392496248
+Time(pthreadspawn) = 0.000001760 sec
+Time(pt_create2) = 0.007801804 sec
+Thread depth: 1728040568
+Time(pthreadspawn) = 0.000008370 sec
+Time(pt_create2) = 0.008405164 sec
+Thread depth: 1744825976
+Time(pthreadspawn) = 0.000008490 sec
+Time(pt_join2) = 0.008946635 sec
+Time(pt_join2) = 0.009089215 sec
+Time(pt_create1) = 0.013963478 sec
+Thread depth: 335539832
+Time(pthreadspawn) = 0.000008110 sec
+Time(pt_join1) = 0.004241832 sec
+Time(pt_join2) = 0.000105390 sec
+Time(pt_join1) = 0.004460372 sec
+Time(pt_join1) = 0.012327917 sec
+Time(pt_join1) = 0.004620082 sec
+Time(pt_create2) = 0.004833912 sec
+Time(pt_join2) = 0.000167880 sec
+Thread depth: 2046799480
+Time(pthreadspawn) = 0.000008560 sec
+Time(pt_join1) = 0.000094570 sec
+Time(pt_join1) = 0.004564802 sec
+Time(pt_join2) = 0.007605844 sec
+Time(pt_join1) = 0.005296453 sec
+Time(pt_join2) = 0.000037900 sec
+Time(pt_join1) = 0.005365743 sec
+Time(pt_create1) = 0.005620663 sec
+Time(pt_join2) = 0.000178690 sec
+Thread depth: -511730056
+Time(pthreadspawn) = 0.000008330 sec
+Time(pt_join1) = 0.007356964 sec
+Time(pt_join2) = 0.000002570 sec
+Time(pt_create2) = 0.000166110 sec
+Thread depth: -511730056
+Time(pt_join1) = Time(pthreadspawn) = Time(pt_create1) = 0.000014010 sec
+0.000224550 sec
+Thread depth: -352334216
+Time(pthreadspawn) = 0.000007680 sec
+0.012114837 sec
+Thread depth: 998235768
+Time(pthreadspawn) = 0.000023020 sec
+Time(pt_create2) = 0.005855753 sec
+Time(pt_create1) = Time(pt_join1) = 0.012197377 sec
+0.000003470 sec
+Time(pt_join2) = 0.000001540 sec
+Thread depth: 2038406776
+Time(pthreadspawn) = Time(pt_join1) = 0.000008690 sec
+Time(pt_join2) = 0.006982644 sec
+Time(pt_create1) = 0.005001203 sec
+0.009758245 sec
+Time(pt_create2) = 0.005977023 sec
+Time(pt_create2) = Time(pt_join1) = 0.000375250 sec
+Thread depth: 2071977592
+0.010428396 sec
+Time(pt_create2) = 0.012151807 sec
+Thread depth: -1015030152
+Time(pt_create1) = Time(pthreadspawn) = 0.000071370 sec
+Thread depth: -352334216
+Thread depth: 1736433272
+Time(pthreadspawn) = 0.000079010 sec
+Time(pthreadspawn) = Thread depth: 2038406776
+0.000016540 sec
+0.000429090 sec
+Thread depth: 1652539000
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000044950 sec
+0.000072080 sec
+Time(pthreadspawn) = 0.000055170 sec
+Time(pt_create1) = 0.000552950 sec
+Time(pt_create2) = 0.000192130 sec
+Thread depth: -1006637448
+Time(pthreadspawn) = 0.000266650 sec
+Time(pt_join2) = 0.000677561 sec
+Time(pt_join1) = 0.007279184 sec
+Time(pt_create1) = 0.005913944 sec
+Time(pt_join2) = 0.000104010 sec
+Thread depth: -1040208264
+Time(pthreadspawn) = 0.000008840 sec
+Time(pt_join1) = 0.012628397 sec
+Time(pt_create2) = 0.012340827 sec
+Thread depth: -109076872
+Time(pthreadspawn) = 0.000012050 sec
+Time(pt_join1) = 0.004777723 sec
+Time(pt_create1) = 0.000239610 sec
+Thread depth: -1023422856
+Time(pt_create1) = 0.012708007 sec
+Thread depth: 33533560
+Time(pthreadspawn) = 0.000010640 sec
+Time(pt_create1) = 0.012563317 sec
+Time(pthreadspawn) = 0.000021130 sec
+Time(pt_create2) = Thread depth: -83898760
+0.012550367 sec
+Time(pthreadspawn) = Thread depth: 327147128
+Time(pt_create1) = Time(pt_join1) = Time(pt_create1) = 0.012575207 sec
+Time(pt_create2) = 0.000227690 sec
+0.013647868 sec
+Time(pthreadspawn) = 0.000056130 sec
+0.000017930 sec
+Thread depth: -385905032
+Thread depth: 318754424
+Thread depth: 58711672
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000054600 sec
+0.004848553 sec
+Time(pthreadspawn) = 0.000054840 sec
+0.000050850 sec
+Time(pt_create2) = 0.008586615 sec
+Time(pt_join1) = 0.000166040 sec
+Thread depth: 1384103544
+Time(pthreadspawn) = 0.000012320 sec
+Time(pt_join1) = 0.000604310 sec
+Time(pt_join2) = 0.000003570 sec
+Time(pt_join2) = 0.004454762 sec
+Time(pt_create2) = 0.004826872 sec
+Thread depth: 335539832
+Time(pthreadspawn) = 0.000008400 sec
+Time(pt_create2) = 0.009231025 sec
+Thread depth: 1694469752
+Time(pthreadspawn) = 0.000008460 sec
+Time(pt_join1) = 0.000629501 sec
+Time(pt_join2) = 0.000067190 sec
+Time(pt_join2) = 0.004752503 sec
+Time(pt_join1) = 0.023378653 sec
+Time(pt_join1) = Time(pt_create2) = Time(pt_create2) = 0.009848695 sec
+Time(pt_join1) = 0.000003490 sec
+0.003489152 sec
+Time(pt_create2) = 0.009664285 sec
+Thread depth: 1375710840
+Time(pt_create2) = 0.003638092 sec
+Thread depth: 1409281656
+Thread depth: 1275063928
+0.009871415 sec
+Thread depth: -1015030152
+Time(pthreadspawn) = 0.000009020 sec
+Time(pthreadspawn) = 0.000137090 sec
+Time(pt_join2) = 0.000265450 sec
+Time(pthreadspawn) = 0.000196630 sec
+Time(pthreadspawn) = 0.000078600 sec
+Time(pt_join1) = 0.003988502 sec
+Time(pt_join2) = 0.000040680 sec
+Time(pt_join1) = 0.015818638 sec
+Time(pt_join1) = 0.021014982 sec
+Time(pt_join2) = 0.000003270 sec
+Time(pt_create1) = 0.004433283 sec
+Time(pt_create1) = Thread depth: -1048600968
+Time(pthreadspawn) = 0.000023260 sec
+0.004465223 sec
+Thread depth: 1736433272
+Thread depth: 1258278520
+Time(pt_join1) = Time(pthreadspawn) = Time(pt_join1) = Time(pt_create2) = Time(pthreadspawn) = 0.004548893 sec
+Time(pt_create2) = Time(pt_join1) = 0.000003890 sec
+0.000021640 sec
+0.024486204 sec
+Time(pt_join2) = Time(pt_create2) = 0.000264940 sec
+0.003573392 sec
+0.000009580 sec
+0.004477853 sec
+Time(pt_join2) = 0.000088410 sec
+Thread depth: -1006637448
+0.004560943 sec
+Time(pt_join1) = Thread depth: -1317036424
+0.017512220 sec
+Time(pthreadspawn) = Time(pt_create1) = Time(pt_join2) = Time(pt_join1) = 0.000019500 sec
+0.016399929 sec
+Time(pt_create1) = 0.000249500 sec
+Thread depth: -1048600968
+0.000003290 sec
+Time(pthreadspawn) = 0.000087960 sec
+Thread depth: 1493143160
+Time(pt_create2) = 0.004406063 sec
+Time(pt_create2) = 0.004132572 sec
+Time(pthreadspawn) = 0.000260540 sec
+Thread depth: 1258278520
+0.000038410 sec
+Time(pt_join2) = Time(pt_join1) = 0.000010560 sec
+Time(pt_create2) = 0.000003870 sec
+Time(pthreadspawn) = Time(pthreadspawn) = Time(pt_join1) = 0.003761142 sec
+Time(pt_create2) = 0.003862852 sec
+0.000058070 sec
+Thread depth: -1040208264
+Time(pt_join2) = Thread depth: -83898760
+Time(pthreadspawn) = Time(pt_join2) = 0.000063520 sec
+0.003590472 sec
+0.003636462 sec
+Time(pt_join1) = Thread depth: -1023422856
+Time(pt_create1) = Time(pt_create1) = 0.005019283 sec
+0.000077480 sec
+Time(pt_create1) = Time(pt_join1) = 0.003868122 sec
+0.023447513 sec
+Time(pt_join2) = 0.000244150 sec
+Time(pt_create2) = Thread depth: 335539832
+0.000179140 sec
+Time(pt_join1) = Time(pt_create1) = 0.003814162 sec
+0.001639061 sec
+Thread depth: -1308643720
+Time(pthreadspawn) = 0.000004690 sec
+Thread depth: -1317036424
+Time(pt_create2) = 0.004182152 sec
+Time(pthreadspawn) = 0.000431880 sec
+0.000137450 sec
+Thread depth: 33533560
+Time(pthreadspawn) = 0.000402560 sec
+Time(pthreadspawn) = 0.000016740 sec
+Thread depth: 1249885816
+Thread depth: -360726920
+Time(pthreadspawn) = 0.000405190 sec
+0.000193260 sec
+Time(pt_create2) = 0.013160097 sec
+Time(pthreadspawn) = Time(pt_join1) = 0.000065780 sec
+0.002176871 sec
+Thread depth: 310361720
+Time(pthreadspawn) = 0.000536850 sec
+Time(pt_join2) = Time(pt_create2) = 0.000003050 sec
+Thread depth: -385905032
+0.003979412 sec
+Time(pthreadspawn) = 0.000606791 sec
+Time(pt_create2) = 0.000400120 sec
+Thread depth: -369119624
+Time(pt_join1) = 0.000002750 sec
+Time(pthreadspawn) = 0.000637301 sec
+Thread depth: 1526713976
+0.003618682 sec
+Time(pthreadspawn) = 0.000637051 sec
+Time(pt_create1) = Time(pt_create1) = Thread depth: 285183608
+Thread depth: 1266671224
+Time(pthreadspawn) = Time(pt_join2) = Time(pthreadspawn) = Time(pt_join1) = 0.002595132 sec
+Thread depth: 1224707704
+Time(pt_join1) = 0.002606521 sec
+Time(pthreadspawn) = 0.000626571 sec
+Time(pt_join2) = Time(pt_create1) = 0.000251160 sec
+Time(pt_create1) = 0.011879956 sec
+Time(pt_create1) = 0.000182040 sec
+0.011962316 sec
+Time(pt_create1) = 0.003931082 sec
+Thread depth: 989843064
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000020960 sec
+0.000020100 sec
+Time(pt_create1) = 0.000104640 sec
+0.000253660 sec
+Thread depth: 1736433272
+0.000396880 sec
+Time(pt_create2) = Time(pthreadspawn) = 0.000569261 sec
+0.003906212 sec
+Time(pt_create2) = 0.000920511 sec
+Thread depth: 1493143160
+0.020806811 sec
+0.000710811 sec
+Thread depth: 318754424
+0.001105531 sec
+Time(pthreadspawn) = Thread depth: 1249885816
+Time(pthreadspawn) = Time(pthreadspawn) = 0.000013360 sec
+0.000737921 sec
+Time(pthreadspawn) = 0.000951441 sec
+0.000113640 sec
+Time(pt_join2) = 0.000815710 sec
+Time(pt_join2) = 0.013387707 sec
+Time(pt_join1) = 0.000826880 sec
+Time(pt_join2) = 0.000030420 sec
+Time(pt_join2) = 0.002096591 sec
+Time(pt_create1) = 0.003861062 sec
+Thread depth: 2046799480
+Time(pthreadspawn) = 0.000007790 sec
+Time(pt_join1) = 0.002856252 sec
+Time(pt_join1) = 0.002470022 sec
+Time(pt_join2) = 0.000070040 sec
+Time(pt_create1) = 0.002841012 sec
+Time(pt_join2) = 0.007381374 sec
+Thread depth: -503337352
+Time(pthreadspawn) = 0.000008370 sec
+Time(pt_create2) = 0.000193330 sec
+Time(pt_join2) = 0.002741832 sec
+Thread depth: -503337352
+Time(pthreadspawn) = 0.000009220 sec
+Time(pt_create1) = 0.000236760 sec
+Time(pt_create1) = Thread depth: 1635753592
+0.003026482 sec
+Time(pthreadspawn) = 0.000021500 sec
+Thread depth: 1249885816
+Time(pt_join2) = 0.003623642 sec
+Time(pthreadspawn) = 0.000054160 sec
+Time(pt_create2) = 0.003187682 sec
+Time(pt_join1) = 0.000003650 sec
+Time(pt_join1) = 0.009464965 sec
+Thread depth: 335539832
+Time(pthreadspawn) = 0.000008240 sec
+Time(pt_create1) = 0.003829952 sec
+Time(pt_create1) = 0.003148462 sec
+Time(pt_create2) = 0.003795872 sec
+Thread depth: -1275072904
+Thread depth: -1308643720
+Time(pthreadspawn) = 0.000002770 sec
+Time(pthreadspawn) = 0.000073420 sec
+Thread depth: 2080370296
+Time(pthreadspawn) = 0.000099830 sec
+Time(pt_create1) = 0.000481900 sec
+Time(pt_join2) = Time(pt_join1) = 0.011273336 sec
+0.002885781 sec
+Time(pt_join2) = 0.002952381 sec
+Thread depth: 327147128
+Time(pthreadspawn) = 0.000053860 sec
+Time(pt_join2) = 0.000003620 sec
+Time(pt_join1) = Time(pt_create2) = 0.000267100 sec
+0.021810142 sec
+Thread depth: 2080370296
+Time(pthreadspawn) = 0.000035390 sec
+Time(pt_create2) = 0.003197461 sec
+Thread depth: 989843064
+Time(pthreadspawn) = 0.000008000 sec
+Time(pt_create2) = 0.003274191 sec
+Thread depth: 1266671224
+Time(pthreadspawn) = 0.000012910 sec
+Time(pt_join1) = 0.027701585 sec
+Time(pt_create2) = 0.003163351 sec
+Thread depth: 1224707704
+Time(pthreadspawn) = 0.000022280 sec
+Time(pt_join1) = 0.000132340 sec
+Time(pt_join1) = 0.026866045 sec
+Time(pt_create2) = 0.001176221 sec
+Thread depth: 1249885816
+Time(pt_create2) = Time(pthreadspawn) = 0.000019820 sec
+0.004714763 sec
+Thread depth: -360726920
+Time(pthreadspawn) = 0.000008680 sec
+Time(pt_create1) = Time(pt_create2) = 0.001692271 sec
+Thread depth: -1275072904
+Time(pthreadspawn) = 0.000009300 sec
+Time(pt_create2) = Thread depth: -67113352
+0.004223242 sec
+Time(pt_create1) = Time(pt_create2) = 0.001395941 sec
+Thread depth: 285183608
+Thread depth: 1258278520
+Time(pthreadspawn) = 0.000385520 sec
+Time(pthreadspawn) = 0.000332640 sec
+Time(pt_create2) = Time(pt_join2) = Time(pt_create2) = Thread depth: 1526713976
+0.004316232 sec
+0.001369801 sec
+Time(pthreadspawn) = 0.000337430 sec
+Thread depth: 1736433272
+Time(pt_join1) = 0.004275662 sec
+0.009985705 sec
+Time(pthreadspawn) = 0.000367260 sec
+0.004153262 sec
+Time(pt_join2) = 0.006196223 sec
+0.000879140 sec
+Thread depth: 327147128
+Time(pthreadspawn) = 0.000570540 sec
+Time(pthreadspawn) = 0.000429510 sec
+Time(pt_create1) = 0.005575363 sec
+Time(pt_join1) = 0.000201310 sec
+Thread depth: 1652539000
+Time(pthreadspawn) = 0.000008180 sec
+Time(pt_join2) = 0.000496241 sec
+Time(pt_join1) = 0.002442452 sec
+Time(pt_join1) = 0.005952603 sec
+Time(pt_join2) = 0.008720345 sec
+Time(pt_join1) = 0.002573142 sec
+Time(pt_join2) = 0.000054700 sec
+Time(pt_join1) = 0.002911652 sec
+Time(pt_join2) = 0.000071760 sec
+Time(pt_create2) = 0.004885623 sec
+Time(pt_join2) = 0.012796867 sec
+Thread depth: 2046799480
+Time(pthreadspawn) = 0.000013000 sec
+Time(pt_join1) = 0.000093990 sec
+Time(pt_join2) = 0.000123760 sec
+Time(pt_join1) = 0.033030208 sec
+Time(pt_join2) = 0.000039620 sec
+Time(pt_join1) = 0.033249018 sec
+Time(pt_create1) = 0.003093561 sec
+Time(pt_join1) = 0.038247611 sec
+Thread depth: -1325429128
+Time(pthreadspawn) = 0.000008460 sec
+Time(pt_join1) = 0.002404161 sec
+Time(pt_join2) = 0.000002670 sec
+Time(pt_create2) = 0.000158971 sec
+Thread depth: -1325429128
+Time(pt_join1) = 0.002371842 sec
+Time(pthreadspawn) = 0.000008630 sec
+Time(pt_create1) = 0.000228131 sec
+Time(pt_create2) = 0.002612972 sec
+Thread depth: 1711255160
+Time(pt_join2) = 0.000117520 sec
+Time(pthreadspawn) = 0.000027260 sec
+Thread depth: 1258278520
+Time(pthreadspawn) = 0.000041540 sec
+Time(pt_create2) = 0.007446344 sec
+Thread depth: -369119624
+Time(pthreadspawn) = 0.000034320 sec
+Time(pt_join1) = 0.002713202 sec
+Time(pt_join2) = 0.000061920 sec
+Time(pt_join1) = 0.000335830 sec
+Time(pt_create1) = 0.003053072 sec
+Time(pt_join2) = Thread depth: 1367318136
+Time(pthreadspawn) = 0.000016610 sec
+Time(pt_create2) = 0.003073652 sec
+0.004786583 sec
+Thread depth: -67113352
+Time(pthreadspawn) = Time(pt_join1) = 0.036794440 sec
+Time(pt_join2) = 0.000002730 sec
+0.000008380 sec
+Time(pt_create2) = 0.003071962 sec
+Thread depth: 1652539000
+Time(pthreadspawn) = Time(pt_join1) = 0.000007810 sec
+Time(pt_create2) = 0.000170740 sec
+0.000003390 sec
+Thread depth: 1367318136
+Time(pthreadspawn) = 0.000005760 sec
+Time(pt_create1) = 0.000191820 sec
+Thread depth: 16748152
+Time(pthreadspawn) = 0.000003800 sec
+Time(pt_join1) = 0.038902181 sec
+Time(pt_join2) = 0.000067630 sec
+Time(pt_join2) = 0.002858781 sec
+Time(pt_join1) = 0.038353481 sec
+Time(pt_join2) = 0.000066950 sec
+Time(pt_join1) = 0.026871235 sec
+Time(pt_join1) = 0.038670912 sec
+Time(pt_create2) = 0.006607044 sec
+Time(pt_join2) = 0.000167290 sec
+Thread depth: 1635753592
+Time(pt_join1) = Time(pthreadspawn) = 0.000013050 sec
+0.000063380 sec
+Thread depth: -1056993672
+Time(pthreadspawn) = 0.000004210 sec
+Time(pt_create1) = 0.006584894 sec
+Time(pt_join2) = 0.007094774 sec
+Time(pt_join2) = 0.003162322 sec
+Time(pt_create1) = 0.005461493 sec
+Time(pt_join1) = 0.039825982 sec
+Thread depth: 1501535864
+Time(pthreadspawn) = 0.000008220 sec
+Time(pt_create1) = 0.003015321 sec
+Thread depth: -981492104
+Time(pthreadspawn) = 0.000004970 sec
+Time(pt_join2) = 0.010449995 sec
+Time(pt_join1) = 0.011745056 sec
+Time(pt_create2) = 0.000185900 sec
+Time(pt_join1) = 0.003201021 sec
+Time(pt_join2) = 0.000003170 sec
+Time(pt_create1) = 0.000267990 sec
+Thread depth: -981492104
+Time(pthreadspawn) = 0.000008810 sec
+Time(pt_join1) = 0.031064847 sec
+Thread depth: 1535106680
+Time(pt_join2) = 0.000003590 sec
+Time(pthreadspawn) = 0.000023430 sec
+Time(pt_join1) = 0.002480641 sec
+Time(pt_create2) = 0.003456041 sec
+Time(pt_create2) = 0.000179401 sec
+Time(pt_join1) = 0.000002320 sec
+Thread depth: 1535106680
+Time(pthreadspawn) = 0.000262490 sec
+Thread depth: 1711255160
+Time(pthreadspawn) = 0.000279370 sec
+Time(pt_create1) = 0.000213131 sec
+Time(pt_create1) = 0.003366392 sec
+Time(pt_join2) = Time(pt_join2) = 0.007821795 sec
+Time(pt_join2) = 0.005379873 sec
+Thread depth: 981450360
+Time(pthreadspawn) = 0.000288560 sec
+0.000231041 sec
+Thread depth: 1719647864
+Time(pthreadspawn) = 0.000354470 sec
+Time(pt_create2) = 0.003018012 sec
+Time(pt_create2) = 0.000205090 sec
+Time(pt_join2) = 0.000341250 sec
+Thread depth: 16748152
+Time(pthreadspawn) = 0.000017480 sec
+Thread depth: 981450360
+Time(pthreadspawn) = 0.000008160 sec
+Time(pt_join2) = 0.002543241 sec
+Time(pt_join1) = 0.001074231 sec
+Time(pt_join2) = 0.008338175 sec
+Time(pt_join1) = 0.024381943 sec
+Time(pt_join2) = Time(pt_create1) = 0.002628991 sec
+0.002412671 sec
+Time(pt_join2) = 0.000003280 sec
+Time(pt_join2) = 0.003889492 sec
+Thread depth: 1006628472
+Time(pthreadspawn) = 0.000008220 sec
+Time(pt_create2) = 0.000171620 sec
+Time(pt_create2) = 0.002033671 sec
+Time(pt_join1) = 0.001451390 sec
+Thread depth: 1006628472
+Time(pthreadspawn) = 0.000008350 sec
+Thread depth: 1501535864
+Time(pt_create2) = Time(pthreadspawn) = 0.002707161 sec
+Thread depth: -1056993672
+Time(pthreadspawn) = 0.000015890 sec
+0.000002700 sec
+Time(pt_join2) = 0.000291660 sec
+Time(pt_join1) = 0.009018125 sec
+Time(pt_join2) = 0.000044100 sec
+Time(pt_join1) = 0.041785233 sec
+Time(pt_join1) = 0.010621336 sec
+Time(pt_join2) = 0.000042080 sec
+Time(pt_join1) = 0.001852551 sec
+Time(pt_join1) = 0.005292353 sec
+Time(pt_join2) = 0.008616025 sec
+Time(pt_join2) = 0.011879266 sec
+Time(pt_join1) = 0.034424919 sec
+Time(pt_join2) = 0.000031350 sec
+Time(pt_join2) = 0.007024774 sec
+Time(pt_join1) = 0.043033163 sec
+Time(pt_join1) = 0.049291347 sec
+Time(pt_join2) = 0.000032951 sec
+Time(pt_join1) = 0.002260972 sec
+Time(pt_join1) = 0.045799406 sec
+Time(pt_join2) = 0.000035830 sec
+Time(pt_join1) = 0.002604982 sec
+Time(pt_create1) = 0.002604572 sec
+Time(pt_join2) = 0.000168050 sec
+Thread depth: 1535106680
+Time(pthreadspawn) = 0.000016630 sec
+Time(pt_join2) = 0.002108201 sec
+Time(pt_create2) = 0.000338950 sec
+Thread depth: 1535106680
+Time(pthreadspawn) = 0.000011430 sec
+Time(pt_join1) = 0.004119892 sec
+Time(pt_join2) = 0.000088940 sec
+Time(pt_join2) = 0.017632820 sec
+Time(pt_join1) = 0.017044309 sec
+Time(pt_join1) = 0.039208801 sec
+Time(pt_join2) = 0.000048890 sec
+Time(pt_join2) = 0.001794361 sec
+Time(pt_join1) = 0.009264775 sec
+Time(pt_join2) = 0.003300412 sec
+Time(pt_create2) = 0.005635743 sec
+Time(pt_join1) = 0.046460826 sec
+Thread depth: 1719647864
+Time(pthreadspawn) = 0.000008390 sec
+Time(pt_join1) = 0.000094090 sec
+Time(pt_join1) = 0.004630003 sec
+Time(pt_join1) = 0.014225518 sec
+Time(pt_join2) = 0.000038210 sec
+Time(pt_join2) = 0.003967732 sec
+Time(pt_join1) = 0.018356400 sec
+Time(pt_join2) = 0.000066460 sec
+Time(pt_join1) = 0.013794187 sec
+Time(pt_join2) = 0.010023615 sec
+Time(pt_join2) = 0.001183041 sec
+Time(pt_join2) = 0.002182002 sec
+Time(pt_join1) = 0.046985166 sec
+Time(pt_join1) = 0.044674015 sec
+Time(pt_join2) = 0.000035630 sec
+Time(pt_join1) = 0.020434891 sec
+Time(pt_join2) = 0.000040010 sec
+Time(pt_join1) = 0.003938722 sec
+Time(pt_join2) = 0.000199070 sec
+Time(pt_join1) = 0.022172302 sec
+Time(pt_join2) = 0.002780631 sec
+Time(pt_join2) = 0.000287911 sec
+Time(pt_join2) = 0.003143622 sec
+Time(pt_join1) = 0.015543559 sec
+Time(pt_join1) = 0.031530998 sec
+Time(pt_join2) = 0.008692115 sec
+Time(pt_join2) = 0.000245120 sec
+Time(pt_join2) = 0.000220300 sec
+Time(pt_join2) = 0.004211172 sec
+Time(pt_join2) = 0.026841615 sec
+Time(pt_join2) = 0.010331366 sec
+Time(pt_join2) = 0.003316462 sec
+Time(pt_join2) = 0.018277660 sec
+Time(pt_join2) = 0.002939161 sec
+Time(pt_join2) = 0.028932046 sec
+Time(pt_join1) = 0.058223922 sec
+Time(pt_join2) = 0.011415006 sec
+Time(pt_join1) = 0.022781423 sec
+Time(pt_join2) = 0.000046720 sec
+Time(pt_join1) = 0.054538380 sec
+Time(pt_join2) = 0.023177813 sec
+Time(pt_join2) = 0.000148550 sec
+Time(pt_join2) = 0.008031075 sec
+Time(pt_join1) = 0.057674272 sec
+Time(pt_join2) = 0.000489680 sec
+Time(pt_join1) = 0.056313281 sec
+Time(pt_join2) = 0.000121970 sec
+Time(pt_join1) = 0.060781364 sec
+Time(pt_join2) = 0.000095040 sec
+Time(pt_join1) = 0.058907643 sec
+Time(pt_join1) = 0.061678524 sec
+Time(pt_join2) = 0.000165510 sec
+Time(pt_join2) = 0.002895702 sec
+Time(pt_join2) = 0.000636470 sec
+Time(RT: ) = 0.063005565 sec
+128 threads -- >= 32 core
+Thread depth: 0
+Time(pthreadspawn) = 0.000211170 sec
+Time(pt_create1) = 0.000248990 sec
+Thread depth: -9667048
+Time(pthreadspawn) = 0.000008380 sec
+Time(pt_create2) = 0.000174000 sec
+Thread depth: -9667048
+Time(pthreadspawn) = 0.000008370 sec
+Time(pt_create1) = 0.000337070 sec
+Thread depth: 527109752
+Time(pthreadspawn) = 0.000008320 sec
+Time(pt_create1) = 0.000358951 sec
+Thread depth: 518717048
+Time(pt_create2) = 0.000243531 sec
+Time(pt_join1) = 0.000002700 sec
+Time(pthreadspawn) = 0.000031750 sec
+Thread depth: 527109752
+Time(pthreadspawn) = 0.000047010 sec
+Time(pt_join2) = 0.000183390 sec
+Time(pt_create2) = 0.000369160 sec
+Time(pt_join1) = 0.000002510 sec
+Time(pt_join1) = 0.000837401 sec
+Thread depth: 518717048
+Time(pthreadspawn) = 0.000008270 sec
+Time(pt_join2) = 0.000286020 sec
+Time(pt_join2) = 0.000399550 sec
+Time(RT: ) = 0.001920701 sec
+256 threads -- >= 64 core
+Thread depth: 0
+Time(pthreadspawn) = 0.000211490 sec
+Time(pt_create1) = 0.000258320 sec
+Thread depth: 1217691592
+Time(pthreadspawn) = 0.000008190 sec
+Time(pt_create2) = 0.000180810 sec
+Time(pt_join1) = 0.000005670 sec
+Thread depth: 1217691592
+Time(pthreadspawn) = 0.000007870 sec
+Time(pt_join2) = 0.000123630 sec
+Time(RT: ) = 0.000809850 sec
+272 threads -- >= 68 core
+Thread depth: 0
+Time(pthreadspawn) = 0.000166430 sec
+Time(pt_create1) = 0.000285600 sec
+Thread depth: 1346560168
+Time(pthreadspawn) = 0.000008320 sec
+Time(pt_create2) = 0.000190800 sec
+Time(pt_join1) = 0.000006480 sec
+Thread depth: 1346560168
+Time(pthreadspawn) = 0.000009040 sec
+Time(pt_join2) = 0.000197910 sec
+Time(RT: ) = 0.000892120 sec
