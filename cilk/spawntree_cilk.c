@@ -33,7 +33,8 @@ void spawn_node(int depcnt, int DEPTH, int id){
     cilk_spawn runbench(depcnt+1, DEPTH); // cilk_spawn
     ctimer_stop(&t);
     ctimer_measure(&t);
-    ctimer_print(t, "cspawn #%d:", id); // Time cilk_spawn
+    printf("id: %d\t", id);
+	 ctimer_print(t, "cspawn:", id); // Time cilk_spawn
 
 }
 

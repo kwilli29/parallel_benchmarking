@@ -17,7 +17,7 @@ void spawn_function(int depcnt){ // 1 argument
 	return; 
 }
 
-void runbench(int depcnt){ //  int depcnt, int DEPTH){
+void runbench(int depcnt){ //  
 
 	ctimer_t t;
    ctimer_start(&t);
@@ -26,7 +26,6 @@ void runbench(int depcnt){ //  int depcnt, int DEPTH){
 
    ctimer_stop(&t);
 	ctimer_measure(&t);
-	// printf("SF: %lf\n", realTime);
 	ctimer_print(t, "pthreadspawn");
 
 	pthread_t thread1;
@@ -39,7 +38,6 @@ void runbench(int depcnt){ //  int depcnt, int DEPTH){
 			perror("pthread_create"); exit(1); }
       ctimer_stop(&t);
 		ctimer_measure(&t);
-      // printf("PC1: %lf\n", realTime);
       ctimer_print(t, "pt_create1");
 
       ctimer_start(&t);
@@ -47,7 +45,6 @@ void runbench(int depcnt){ //  int depcnt, int DEPTH){
 			perror("pthread_create"); exit(1); }
       ctimer_stop(&t);
 		ctimer_measure(&t);
-      // printf("PC2: %lf\n", realTime);
       ctimer_print(t, "pt_create2");
 
 		//// //// 
@@ -57,7 +54,6 @@ void runbench(int depcnt){ //  int depcnt, int DEPTH){
 			perror("pthread_join1"); exit(1); }
 		ctimer_stop(&t);
 		ctimer_measure(&t);
-      // printf("PJ1: %lf\n", realTime);
       ctimer_print(t,"pt_join1");
 
       ctimer_start(&t);
@@ -65,7 +61,6 @@ void runbench(int depcnt){ //  int depcnt, int DEPTH){
 			perror("pthread_join2"); exit(1); }
 		ctimer_stop(&t);
 		ctimer_measure(&t);
-      // printf("PJ2: %lf\n", realTime);
       ctimer_print(t,"pt_join2");
     }
     return;
@@ -75,17 +70,20 @@ int main(int argc, char *argv[]){
 
 	int depcnt = 0;
 	
-	//if(argc > 1){
-	//	DEPTH = atoi(argv[1]);
-	//}
-
+	if(argc > 1 && (atoi(argv[1]) <= 10) ){ // depth must be < 10 or else it takes too long
+	    DEPTH = atoi(argv[1]); // optional depth argument
+	}
+ 
 	ctimer_t t;
  
    ctimer_start(&t);
+
 	runbench(depcnt);
+
    ctimer_stop(&t);
 	ctimer_measure(&t);
-   // printf("RT: %lf\n", realTime);
+	
+	printf("D spawntree_pthreads :%d\n", DEPTH);
    ctimer_print(t, "Overall Time spawntree_pthreads :");
 
    return 0;
