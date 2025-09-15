@@ -15,7 +15,7 @@ int thread_routine1(int x){ // this thread function is called in for loop
 
 	int a = 0; 
 
-	while(a < 100){ // x is passed in and is the value of i in for loop
+	while(a < 1000){ // x is passed in and is the value of i in for loop
 		x = x + a;
 		a++;
 	}
@@ -29,32 +29,28 @@ int main(int argc, char*argv[]){
 	if (argc > 1){
    	n = atol(argv[1]);}
 
-	int NITER = 4; int iter = 0;
 	long result = 0;
 	ctimer_t t;
 
-	while(iter < NITER){ // call the for loop NITER times to see effect 
-								// the more the for loop is called
-		result = 0;
+    ////
 
-		ctimer_start(&t);
+    result = 0;
 
-		for(int i=0; i < n; i++){
-			result = cilk_spawn thread_routine1(i); // spawn threads, pass in i
-		}
-		cilk_sync;
+    ctimer_start(&t);
 
-		ctimer_stop(&t);
-		ctimer_measure(&t);
+    for(int i=0; i < n; i++){
+        result = cilk_spawn thread_routine1(i); // spawn threads, pass in i
+    }
+    cilk_sync;
 
-		printf("for-count cilk #%d: (%ld) = %ld\n", iter, n, result);
-		ctimer_print(t, "for-count cilk");
+    ctimer_stop(&t);
+    ctimer_measure(&t);
 
-		printf("\n");
+    printf("\nN for-count_cilk :%ld\n", n);
+    printf("Results for-count_cilk : %d: (%ld) = %ld\n", iter, n, result);
+    ctimer_print(t, "Overall Time for-count_cilk :");
 
-		iter++;
-
-	}
+    printf("\n");
 
 	return 0;
 }

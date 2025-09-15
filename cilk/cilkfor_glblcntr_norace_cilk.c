@@ -21,11 +21,13 @@ void thread_routine(){ // Locks
 	return;
 }
 
-// loop spawn 1000 children & return, each child incr. counter
+// loop spawn 1000 (or user specified #) children & return, each child incr. counter
 // for all of vary sz & params, measure times for for all
 
 int main(int argc, char *argv[]) {
-	int n = 1000000;
+	int n = 1000;
+	if (argc > 1){
+   	n = atol(argv[1]);}
 	
 	if (pthread_mutex_init(&m, NULL) != 0) { perror("Mutex initialization failed"); return 1;}
 
@@ -41,8 +43,9 @@ int main(int argc, char *argv[]) {
 	ctimer_stop(&t);
 	ctimer_measure(&t);
 
-	printf("cilkfor gloabl counter NO race condtiion (%d) = %ld\n", n, counter);
-	ctimer_print(t, "cilkfor global counter NO race_condition");
+	printf("\nN cilkfor_glbl_cntr_norace_cilk :%d\n", n);
+	printf("Results cilkfor_glbl_cntr_norace_cilk : (%d) = %ld\n", n, counter);
+	ctimer_print(t, "Overall Time cilkfor_glbl_cntr_norace_cilk :");
 
 	printf("\n");
 

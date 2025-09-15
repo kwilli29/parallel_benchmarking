@@ -1,0 +1,110 @@
+1000 threads -- >= 250 core
+GRAIN SIZE: 8
+
+Pragma: 8
+
+N cilkfor-count_cilk :1000
+Results cilkfor-count_cilk : (1000) = 500499
+
+Overall Time cilkfor-count_cilk = 0.148671
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.174955,0.173725,1.00708,0.173781,1.00675
+1000 threads -- >= 250 core
+GRAIN SIZE: 8
+
+Pragma: 8
+
+N cilkfor-count_cilk :1000
+Results cilkfor-count_cilk : (1000) = 499850
+
+Overall Time cilkfor-count_cilk = 0.154540
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.180014,0.178763,1.007,0.178825,1.00665
+1000 threads -- >= 250 core
+GRAIN SIZE: 8
+
+Pragma: 8
+
+N cilkfor-count_cilk :1000
+Results cilkfor-count_cilk : (1000) = 500483
+
+Overall Time cilkfor-count_cilk = 0.163541
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.188747,0.187549,1.00639,0.187611,1.00605
+1000 threads -- >= 250 core
+GRAIN SIZE: 8
+
+Pragma: 8
+
+N cilkfor-count_cilk :1000
+Results cilkfor-count_cilk : (1000) = 500186
+
+Overall Time cilkfor-count_cilk = 0.153639
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.180273,0.179077,1.00668,0.17914,1.00633
+1000 threads -- >= 250 core
+GRAIN SIZE: 8
+
+Pragma: 8
+
+N cilkfor-count_cilk :1000
+Results cilkfor-count_cilk : (1000) = 500467
+
+Overall Time cilkfor-count_cilk = 0.151070
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.175846,0.174722,1.00643,0.174784,1.00607
+1000 threads -- >= 250 core
+GRAIN SIZE: 8
+
+Pragma: 8
+
+N cilkfor-count_cilk :1000
+Results cilkfor-count_cilk : (1000) = 500249
+
+Overall Time cilkfor-count_cilk = 0.158268
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.184834,0.183639,1.00651,0.183702,1.00616
+1000 threads -- >= 250 core
+GRAIN SIZE: 8
+
+Pragma: 8
+
+N cilkfor-count_cilk :1000
+Results cilkfor-count_cilk : (1000) = 500499
+
+Overall Time cilkfor-count_cilk = 0.152538
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.178099,0.176932,1.0066,0.176994,1.00624
+1000 threads -- >= 250 core
+GRAIN SIZE: 8
+
+Pragma: 8
+
+N cilkfor-count_cilk :1000
+Results cilkfor-count_cilk : (1000) = 500483
+
+Overall Time cilkfor-count_cilk = 0.148970
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.176187,0.175055,1.00646,0.175117,1.00611
+1000 threads -- >= 250 core
+GRAIN SIZE: 8
+
+Pragma: 8
+
+N cilkfor-count_cilk :1000
+Results cilkfor-count_cilk : (1000) = 500487
+
+Overall Time cilkfor-count_cilk = 0.153021
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.179208,0.178057,1.00646,0.17812,1.00611
+1000 threads -- >= 250 core
+GRAIN SIZE: 8
+
+Pragma: 8
+
+N cilkfor-count_cilk :1000
+Results cilkfor-count_cilk : (1000) = 500459
+
+Overall Time cilkfor-count_cilk = 0.153550
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.179187,0.178008,1.00662,0.178071,1.00627

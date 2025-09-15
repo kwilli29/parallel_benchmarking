@@ -15,7 +15,7 @@ int thread_routine1(int x){
 
 	int a = 0; 
 
-	while(a < 100){
+	while(a < 1000){
 		x = x + a;
 		a++;
 	}
@@ -29,32 +29,29 @@ int main(int argc, char*argv[]){
 	if (argc > 1){
    	n = atol(argv[1]);}
 
-	int NITER = 4; int iter = 0;
 	long result = 0;
 	ctimer_t t;
 
-	while(iter < NITER){ // run the cilkfor count NITER times
-		result = 0;
+    ////
 
-		ctimer_start(&t);
+    result = 0;
 
-		cilk_for(int i=0; i < n; i++){
-	 		result = thread_routine1(i);
-		}
+    ctimer_start(&t);
 
-		ctimer_stop(&t);
-		ctimer_measure(&t);
+    cilk_for(int i=0; i < n; i++){
+        result = thread_routine1(i);
+    }
 
-		printf("cilkfor-count #%d: (%ld) = %ld\n", iter, n, result);
-		ctimer_print(t, "cilkfor-count");
+    ctimer_stop(&t);
+    ctimer_measure(&t);
 
-		printf("\n");
+    printf("\nN cilkfor-count_cilk :%ld\n", n);
+    printf("Results cilkfor-count_cilk : %d: (%ld) = %ld\n", iter, n, result);
+    ctimer_print(t, "Overall Time cilkfor-count_cilk :");
 
-		cilk_sync;
+    printf("\n");
 
-		iter++;
-
-	}
+    cilk_sync;
 
 	return 0;
 }

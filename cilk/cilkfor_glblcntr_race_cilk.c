@@ -16,12 +16,14 @@ void thread_routine(){ // race condition
 	return;
 }
 
-// loop spawn 1000 children & return, each child incr. counter
+// loop spawn 1000 (or user specified #) children & return, each child incr. counter
 // for all of vary sz & params, measure times for for all
 
 
 int main(int argc, char *argv[]) {
-	int n = 1000000;
+	int n = 1000;
+	if (argc > 1){
+   	n = atol(argv[1]);}
 
 	ctimer_t t;
 	ctimer_start(&t);
@@ -33,9 +35,10 @@ int main(int argc, char *argv[]) {
 
 	ctimer_stop(&t);
 	ctimer_measure(&t);
-	
-	printf("cilkfor global counter race_condition: (%d) = %ld\n", n, counter);
-	ctimer_print(t, "cilkfor glopbal counter race_condition");
+
+	printf("\nN cilkfor_glblcntr_race_cilk :%d\n", n);	
+	printf("Results cilkfor_glblcntr_race_cilk : (%d) = %ld\n", n, counter);
+	ctimer_print(t, "Overall Time cilkfor_glblcntr_race_cilk: ");
 
 	printf("\n");
 

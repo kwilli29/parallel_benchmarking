@@ -3,7 +3,7 @@
 #include <pthread.h>
 #include "ctimer.h"
 
-/* Benchmark: while loop spawns pthreads to incrememnt a gloabl counter.
+/* Benchmark: while loop spawns pthreads to incrememnt a global counter.
  * Counter is a race condition.
  */
 
@@ -46,8 +46,9 @@ int main(int argc, char *argv[]) {
 	ctimer_stop(&t);
 	ctimer_measure(&t);
 
-	printf("while pt global counter race_condition: (%d) = %ld\n", n, counter);
-	ctimer_print(t, "while pt global counter race_condition");
+	printf("N :%d\n", n);
+	printf("Results while_glblcntr_race_pthreads: (%d) = %ld\n", n, counter);
+	ctimer_print(t, "Overall Time while_glblcntr_race_pthreads :");
 
 	printf("\n");
 

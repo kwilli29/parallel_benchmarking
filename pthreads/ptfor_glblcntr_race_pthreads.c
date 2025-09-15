@@ -43,9 +43,10 @@ int main(int argc, char *argv[]) {
 
 	ctimer_stop(&t);
 	ctimer_measure(&t);
-	
-	printf("ptfor global counter race_condition: (%d) = %ld\n", n, counter);
-	ctimer_print(t, "ptfor glopbal counter race_condition");
+
+	printf("N :%d\n", n);	
+	printf("Results ptfor_glblcntr_race_pthreads : (%d) = %ld\n", n, counter);
+	ctimer_print(t, "ptfor_glblcntr_race_pthreads :");
 
 	printf("\n");
 

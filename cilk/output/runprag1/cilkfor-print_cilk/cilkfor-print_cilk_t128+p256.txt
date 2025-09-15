@@ -1,0 +1,2700 @@
+128 threads -- >= 32 core
+GRAIN SIZE: 256
+
+Spawning thread: 0
+
+Spawning thread: 1
+
+Spawning thread: 2
+
+Spawning thread: 3
+
+Spawning thread: 4
+
+Spawning thread: 5
+
+Spawning thread: 6
+
+Spawning thread: 7
+
+Spawning thread: 8
+
+Spawning thread: 9
+
+Spawning thread: 10
+
+Spawning thread: 11
+
+Spawning thread: 12
+
+Spawning thread: 13
+
+Spawning thread: 14
+
+Spawning thread: 15
+
+Spawning thread: 16
+
+Spawning thread: 17
+
+Spawning thread: 18
+
+Spawning thread: 19
+
+Spawning thread: 20
+
+Spawning thread: 21
+
+Spawning thread: 22
+
+Spawning thread: 23
+
+Spawning thread: 24
+
+Spawning thread: 25
+
+Spawning thread: 26
+
+Spawning thread: 27
+
+Spawning thread: 28
+
+Spawning thread: 29
+
+Spawning thread: 30
+
+Spawning thread: 31
+
+Spawning thread: 64
+
+Spawning thread: 65
+
+Spawning thread: 66
+
+Spawning thread: 67
+
+Spawning thread: 68
+
+Spawning thread: 69
+
+Spawning thread: 70
+
+Spawning thread: 71
+
+Spawning thread: 72
+
+Spawning thread: 73
+
+Spawning thread: 74
+
+Spawning thread: 75
+
+Spawning thread: 76
+
+Spawning thread: 77
+
+Spawning thread: 78
+
+Spawning thread: 79
+
+Spawning thread: 80
+
+Spawning thread: 81
+
+Spawning thread: 82
+
+Spawning thread: 83
+
+Spawning thread: 84
+
+Spawning thread: 85
+
+Spawning thread: 86
+
+Spawning thread: 87
+
+Spawning thread: 88
+
+Spawning thread: 89
+
+Spawning thread: 90
+
+Spawning thread: 91
+
+Spawning thread: 92
+
+Spawning thread: 93
+
+Spawning thread: 94
+
+Spawning thread: 95
+
+Spawning thread: 32
+
+Spawning thread: 33
+
+Spawning thread: 34
+
+Spawning thread: 35
+
+Spawning thread: 36
+
+Spawning thread: 37
+
+Spawning thread: 38
+
+Spawning thread: 39
+
+Spawning thread: 40
+
+Spawning thread: 41
+
+Spawning thread: 42
+
+Spawning thread: 43
+
+Spawning thread: 44
+
+Spawning thread: 45
+
+Spawning thread: 46
+
+Spawning thread: 47
+
+Spawning thread: 96
+
+Spawning thread: 97
+
+Spawning thread: 98
+
+Spawning thread: 99
+
+Spawning thread: 100
+
+Spawning thread: 101
+
+Spawning thread: 102
+
+Spawning thread: 103
+
+Spawning thread: 104
+
+Spawning thread: 105
+
+Spawning thread: 106
+
+Spawning thread: 107
+
+Spawning thread: 108
+
+Spawning thread: 109
+
+Spawning thread: 110
+
+Spawning thread: 111
+
+Spawning thread: 48
+
+Spawning thread: 49
+
+Spawning thread: 50
+
+Spawning thread: 51
+
+Spawning thread: 112
+
+Spawning thread: 56
+
+Spawning thread: 113
+
+Spawning thread: 114
+
+Spawning thread: 57
+
+Spawning thread: 115
+
+Spawning thread: 58
+
+Spawning thread: 116
+
+Spawning thread: 59
+
+Spawning thread: 117
+
+Spawning thread: 118
+
+Spawning thread: 119
+
+Spawning thread: 52
+
+Spawning thread: 53
+
+Spawning thread: 120
+
+Spawning thread: 121
+
+Spawning thread: 122
+
+Spawning thread: 123
+
+Spawning thread: 60
+
+Spawning thread: 61
+
+Spawning thread: 124
+
+Spawning thread: 125
+
+Spawning thread: 62
+
+Spawning thread: 126
+
+Spawning thread: 63
+
+Spawning thread: 54
+
+Spawning thread: 55
+
+Spawning thread: 127
+/nPragma: 256
+
+N cilkfor-print_cilk :128
+
+Results cilkfor-print_cilk : (128) = 0
+
+Overall Time cilkfor-print_cilk  = 0.148488
+
+
+
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.174487,0.174134,1.00202,0.174178,1.00177
+128 threads -- >= 32 core
+GRAIN SIZE: 256
+
+Spawning thread: 0
+
+Spawning thread: 1
+
+Spawning thread: 2
+
+Spawning thread: 3
+
+Spawning thread: 4
+
+Spawning thread: 5
+
+Spawning thread: 6
+
+Spawning thread: 7
+
+Spawning thread: 8
+
+Spawning thread: 9
+
+Spawning thread: 10
+
+Spawning thread: 11
+
+Spawning thread: 12
+
+Spawning thread: 13
+
+Spawning thread: 14
+
+Spawning thread: 15
+
+Spawning thread: 16
+
+Spawning thread: 17
+
+Spawning thread: 18
+
+Spawning thread: 19
+
+Spawning thread: 20
+
+Spawning thread: 21
+
+Spawning thread: 22
+
+Spawning thread: 23
+
+Spawning thread: 24
+
+Spawning thread: 25
+
+Spawning thread: 26
+
+Spawning thread: 27
+
+Spawning thread: 28
+
+Spawning thread: 29
+
+Spawning thread: 30
+
+Spawning thread: 31
+
+Spawning thread: 64
+
+Spawning thread: 65
+
+Spawning thread: 66
+
+Spawning thread: 67
+
+Spawning thread: 68
+
+Spawning thread: 69
+
+Spawning thread: 70
+
+Spawning thread: 71
+
+Spawning thread: 72
+
+Spawning thread: 73
+
+Spawning thread: 74
+
+Spawning thread: 75
+
+Spawning thread: 76
+
+Spawning thread: 77
+
+Spawning thread: 78
+
+Spawning thread: 79
+
+Spawning thread: 32
+
+Spawning thread: 33
+
+Spawning thread: 34
+
+Spawning thread: 35
+
+Spawning thread: 36
+
+Spawning thread: 37
+
+Spawning thread: 38
+
+Spawning thread: 39
+
+Spawning thread: 40
+
+Spawning thread: 41
+
+Spawning thread: 42
+
+Spawning thread: 43
+
+Spawning thread: 44
+
+Spawning thread: 45
+
+Spawning thread: 46
+
+Spawning thread: 47
+
+Spawning thread: 96
+
+Spawning thread: 97
+
+Spawning thread: 98
+
+Spawning thread: 99
+
+Spawning thread: 100
+
+Spawning thread: 101
+
+Spawning thread: 102
+
+Spawning thread: 103
+
+Spawning thread: 104
+
+Spawning thread: 105
+
+Spawning thread: 106
+
+Spawning thread: 107
+
+Spawning thread: 108
+
+Spawning thread: 109
+
+Spawning thread: 110
+
+Spawning thread: 111
+
+Spawning thread: 80
+
+Spawning thread: 81
+
+Spawning thread: 82
+
+Spawning thread: 83
+
+Spawning thread: 84
+
+Spawning thread: 85
+
+Spawning thread: 86
+
+Spawning thread: 87
+
+Spawning thread: 112
+
+Spawning thread: 113
+
+Spawning thread: 114
+
+Spawning thread: 115
+
+Spawning thread: 116
+
+Spawning thread: 117
+
+Spawning thread: 118
+
+Spawning thread: 119
+
+Spawning thread: 48
+
+Spawning thread: 49
+
+Spawning thread: 50
+
+Spawning thread: 51
+
+Spawning thread: 52
+
+Spawning thread: 53
+
+Spawning thread: 54
+
+Spawning thread: 55
+
+Spawning thread: 88
+
+Spawning thread: 89
+
+Spawning thread: 90
+
+Spawning thread: 56
+
+Spawning thread: 92
+
+Spawning thread: 120
+
+Spawning thread: 124
+
+Spawning thread: 60
+
+Spawning thread: 121
+
+Spawning thread: 61
+
+Spawning thread: 57
+
+Spawning thread: 125
+
+Spawning thread: 93
+
+Spawning thread: 58
+
+Spawning thread: 91
+
+Spawning thread: 59
+
+Spawning thread: 94
+
+Spawning thread: 122
+
+Spawning thread: 123
+
+Spawning thread: 62
+
+Spawning thread: 63
+
+Spawning thread: 95
+
+Spawning thread: 126
+
+Spawning thread: 127
+/nPragma: 256
+
+N cilkfor-print_cilk :128
+
+Results cilkfor-print_cilk : (128) = 0
+
+Overall Time cilkfor-print_cilk  = 0.152179
+
+
+
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.178174,0.17768,1.00278,0.177724,1.00253
+128 threads -- >= 32 core
+GRAIN SIZE: 256
+
+Spawning thread: 0
+
+Spawning thread: 1
+
+Spawning thread: 2
+
+Spawning thread: 3
+
+Spawning thread: 4
+
+Spawning thread: 5
+
+Spawning thread: 6
+
+Spawning thread: 7
+
+Spawning thread: 8
+
+Spawning thread: 9
+
+Spawning thread: 10
+
+Spawning thread: 11
+
+Spawning thread: 12
+
+Spawning thread: 13
+
+Spawning thread: 14
+
+Spawning thread: 15
+
+Spawning thread: 16
+
+Spawning thread: 17
+
+Spawning thread: 18
+
+Spawning thread: 19
+
+Spawning thread: 20
+
+Spawning thread: 21
+
+Spawning thread: 22
+
+Spawning thread: 23
+
+Spawning thread: 24
+
+Spawning thread: 25
+
+Spawning thread: 26
+
+Spawning thread: 27
+
+Spawning thread: 28
+
+Spawning thread: 29
+
+Spawning thread: 30
+
+Spawning thread: 31
+
+Spawning thread: 32
+
+Spawning thread: 33
+
+Spawning thread: 34
+
+Spawning thread: 35
+
+Spawning thread: 36
+
+Spawning thread: 37
+
+Spawning thread: 38
+
+Spawning thread: 39
+
+Spawning thread: 64
+
+Spawning thread: 65
+
+Spawning thread: 48
+
+Spawning thread: 49
+
+Spawning thread: 50
+
+Spawning thread: 66
+
+Spawning thread: 67
+
+Spawning thread: 68
+
+Spawning thread: 69
+
+Spawning thread: 70
+
+Spawning thread: 71
+
+Spawning thread: 72
+
+Spawning thread: 73
+
+Spawning thread: 74
+
+Spawning thread: 75
+
+Spawning thread: 76
+
+Spawning thread: 51
+
+Spawning thread: 77
+
+Spawning thread: 78
+
+Spawning thread: 52
+
+Spawning thread: 79
+
+Spawning thread: 53
+
+Spawning thread: 54
+
+Spawning thread: 80
+
+Spawning thread: 55
+
+Spawning thread: 81
+
+Spawning thread: 82
+
+Spawning thread: 83
+
+Spawning thread: 84
+
+Spawning thread: 85
+
+Spawning thread: 86
+
+Spawning thread: 87
+
+Spawning thread: 88
+
+Spawning thread: 89
+
+Spawning thread: 90
+
+Spawning thread: 91
+
+Spawning thread: 92
+
+Spawning thread: 93
+
+Spawning thread: 94
+
+Spawning thread: 95
+
+Spawning thread: 40
+
+Spawning thread: 41
+
+Spawning thread: 42
+
+Spawning thread: 43
+
+Spawning thread: 96
+
+Spawning thread: 97
+
+Spawning thread: 98
+
+Spawning thread: 99
+
+Spawning thread: 100
+
+Spawning thread: 101
+
+Spawning thread: 102
+
+Spawning thread: 103
+
+Spawning thread: 56
+
+Spawning thread: 57
+
+Spawning thread: 104
+
+Spawning thread: 60
+
+Spawning thread: 105
+
+Spawning thread: 106
+
+Spawning thread: 107
+
+Spawning thread: 61
+
+Spawning thread: 44
+
+Spawning thread: 45
+
+Spawning thread: 112
+
+Spawning thread: 113
+
+Spawning thread: 114
+
+Spawning thread: 115
+
+Spawning thread: 116
+
+Spawning thread: 117
+
+Spawning thread: 118
+
+Spawning thread: 119
+
+Spawning thread: 58
+
+Spawning thread: 108
+
+Spawning thread: 109
+
+Spawning thread: 110
+
+Spawning thread: 111
+
+Spawning thread: 120
+
+Spawning thread: 62
+
+Spawning thread: 121
+
+Spawning thread: 122
+
+Spawning thread: 123
+
+Spawning thread: 63
+
+Spawning thread: 59
+
+Spawning thread: 46
+
+Spawning thread: 124
+
+Spawning thread: 125
+
+Spawning thread: 47
+
+Spawning thread: 126
+
+Spawning thread: 127
+/nPragma: 256
+
+N cilkfor-print_cilk :128
+
+Results cilkfor-print_cilk : (128) = 0
+
+Overall Time cilkfor-print_cilk  = 0.160163
+
+
+
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.18693,0.186374,1.00298,0.186418,1.00275
+128 threads -- >= 32 core
+GRAIN SIZE: 256
+
+Spawning thread: 0
+
+Spawning thread: 1
+
+Spawning thread: 2
+
+Spawning thread: 3
+
+Spawning thread: 4
+
+Spawning thread: 5
+
+Spawning thread: 6
+
+Spawning thread: 7
+
+Spawning thread: 8
+
+Spawning thread: 9
+
+Spawning thread: 10
+
+Spawning thread: 11
+
+Spawning thread: 12
+
+Spawning thread: 13
+
+Spawning thread: 14
+
+Spawning thread: 15
+
+Spawning thread: 16
+
+Spawning thread: 17
+
+Spawning thread: 18
+
+Spawning thread: 19
+
+Spawning thread: 20
+
+Spawning thread: 21
+
+Spawning thread: 22
+
+Spawning thread: 23
+
+Spawning thread: 24
+
+Spawning thread: 25
+
+Spawning thread: 26
+
+Spawning thread: 27
+
+Spawning thread: 28
+
+Spawning thread: 29
+
+Spawning thread: 30
+
+Spawning thread: 31
+
+Spawning thread: 32
+
+Spawning thread: 33
+
+Spawning thread: 34
+
+Spawning thread: 35
+
+Spawning thread: 36
+
+Spawning thread: 37
+
+Spawning thread: 38
+
+Spawning thread: 39
+
+Spawning thread: 40
+
+Spawning thread: 41
+
+Spawning thread: 42
+
+Spawning thread: 43
+
+Spawning thread: 44
+
+Spawning thread: 45
+
+Spawning thread: 46
+
+Spawning thread: 47
+
+Spawning thread: 48
+
+Spawning thread: 49
+
+Spawning thread: 50
+
+Spawning thread: 51
+
+Spawning thread: 52
+
+Spawning thread: 53
+
+Spawning thread: 54
+
+Spawning thread: 55
+
+Spawning thread: 56
+
+Spawning thread: 57
+
+Spawning thread: 58
+
+Spawning thread: 59
+
+Spawning thread: 60
+
+Spawning thread: 61
+
+Spawning thread: 62
+
+Spawning thread: 63
+
+Spawning thread: 64
+
+Spawning thread: 65
+
+Spawning thread: 66
+
+Spawning thread: 67
+
+Spawning thread: 68
+
+Spawning thread: 69
+
+Spawning thread: 70
+
+Spawning thread: 71
+
+Spawning thread: 72
+
+Spawning thread: 73
+
+Spawning thread: 74
+
+Spawning thread: 75
+
+Spawning thread: 76
+
+Spawning thread: 77
+
+Spawning thread: 78
+
+Spawning thread: 79
+
+Spawning thread: 80
+
+Spawning thread: 81
+
+Spawning thread: 82
+
+Spawning thread: 83
+
+Spawning thread: 96
+
+Spawning thread: 97
+
+Spawning thread: 98
+
+Spawning thread: 99
+
+Spawning thread: 100
+
+Spawning thread: 101
+
+Spawning thread: 102
+
+Spawning thread: 84
+
+Spawning thread: 103
+
+Spawning thread: 85
+
+Spawning thread: 104
+
+Spawning thread: 105
+
+Spawning thread: 86
+
+Spawning thread: 106
+
+Spawning thread: 107
+
+Spawning thread: 108
+
+Spawning thread: 109
+
+Spawning thread: 110
+
+Spawning thread: 111
+
+Spawning thread: 88
+
+Spawning thread: 89
+
+Spawning thread: 90
+
+Spawning thread: 91
+
+Spawning thread: 92
+
+Spawning thread: 93
+
+Spawning thread: 94
+
+Spawning thread: 95
+
+Spawning thread: 112
+
+Spawning thread: 113
+
+Spawning thread: 114
+
+Spawning thread: 115
+
+Spawning thread: 116
+
+Spawning thread: 117
+
+Spawning thread: 118
+
+Spawning thread: 119
+
+Spawning thread: 87
+
+Spawning thread: 120
+
+Spawning thread: 121
+
+Spawning thread: 122
+
+Spawning thread: 123
+
+Spawning thread: 124
+
+Spawning thread: 125
+
+Spawning thread: 126
+
+Spawning thread: 127
+/nPragma: 256
+
+N cilkfor-print_cilk :128
+
+Results cilkfor-print_cilk : (128) = 0
+
+Overall Time cilkfor-print_cilk  = 0.150065
+
+
+
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.176265,0.175955,1.00176,0.175998,1.00151
+128 threads -- >= 32 core
+GRAIN SIZE: 256
+
+Spawning thread: 0
+
+Spawning thread: 1
+
+Spawning thread: 2
+
+Spawning thread: 3
+
+Spawning thread: 4
+
+Spawning thread: 5
+
+Spawning thread: 6
+
+Spawning thread: 7
+
+Spawning thread: 8
+
+Spawning thread: 9
+
+Spawning thread: 10
+
+Spawning thread: 11
+
+Spawning thread: 12
+
+Spawning thread: 13
+
+Spawning thread: 14
+
+Spawning thread: 15
+
+Spawning thread: 16
+
+Spawning thread: 17
+
+Spawning thread: 18
+
+Spawning thread: 19
+
+Spawning thread: 20
+
+Spawning thread: 21
+
+Spawning thread: 22
+
+Spawning thread: 23
+
+Spawning thread: 24
+
+Spawning thread: 25
+
+Spawning thread: 26
+
+Spawning thread: 27
+
+Spawning thread: 64
+
+Spawning thread: 65
+
+Spawning thread: 66
+
+Spawning thread: 67
+
+Spawning thread: 68
+
+Spawning thread: 69
+
+Spawning thread: 70
+
+Spawning thread: 71
+
+Spawning thread: 72
+
+Spawning thread: 73
+
+Spawning thread: 74
+
+Spawning thread: 75
+
+Spawning thread: 76
+
+Spawning thread: 77
+
+Spawning thread: 78
+
+Spawning thread: 79
+
+Spawning thread: 80
+
+Spawning thread: 81
+
+Spawning thread: 82
+
+Spawning thread: 83
+
+Spawning thread: 84
+
+Spawning thread: 85
+
+Spawning thread: 86
+
+Spawning thread: 87
+
+Spawning thread: 88
+
+Spawning thread: 89
+
+Spawning thread: 90
+
+Spawning thread: 91
+
+Spawning thread: 92
+
+Spawning thread: 93
+
+Spawning thread: 94
+
+Spawning thread: 95
+
+Spawning thread: 28
+
+Spawning thread: 29
+
+Spawning thread: 32
+
+Spawning thread: 33
+
+Spawning thread: 34
+
+Spawning thread: 35
+
+Spawning thread: 36
+
+Spawning thread: 37
+
+Spawning thread: 38
+
+Spawning thread: 39
+
+Spawning thread: 40
+
+Spawning thread: 41
+
+Spawning thread: 42
+
+Spawning thread: 43
+
+Spawning thread: 44
+
+Spawning thread: 45
+
+Spawning thread: 46
+
+Spawning thread: 47
+
+Spawning thread: 30
+
+Spawning thread: 31
+
+Spawning thread: 48
+
+Spawning thread: 49
+
+Spawning thread: 56
+
+Spawning thread: 50
+
+Spawning thread: 57
+
+Spawning thread: 51
+
+Spawning thread: 60
+
+Spawning thread: 61
+
+Spawning thread: 62
+
+Spawning thread: 96
+
+Spawning thread: 97
+
+Spawning thread: 98
+
+Spawning thread: 99
+
+Spawning thread: 100
+
+Spawning thread: 101
+
+Spawning thread: 102
+
+Spawning thread: 103
+
+Spawning thread: 104
+
+Spawning thread: 105
+
+Spawning thread: 106
+
+Spawning thread: 107
+
+Spawning thread: 108
+
+Spawning thread: 109
+
+Spawning thread: 110
+
+Spawning thread: 111
+
+Spawning thread: 58
+
+Spawning thread: 112
+
+Spawning thread: 52
+
+Spawning thread: 113
+
+Spawning thread: 53
+
+Spawning thread: 114
+
+Spawning thread: 115
+
+Spawning thread: 116
+
+Spawning thread: 117
+
+Spawning thread: 118
+
+Spawning thread: 119
+
+Spawning thread: 63
+
+Spawning thread: 120
+
+Spawning thread: 121
+
+Spawning thread: 122
+
+Spawning thread: 123
+
+Spawning thread: 54
+
+Spawning thread: 59
+
+Spawning thread: 124
+
+Spawning thread: 126
+
+Spawning thread: 55
+
+Spawning thread: 127
+
+Spawning thread: 125
+/nPragma: 256
+
+N cilkfor-print_cilk :128
+
+Results cilkfor-print_cilk : (128) = 0
+
+Overall Time cilkfor-print_cilk  = 0.149873
+
+
+
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.175804,0.17535,1.00259,0.175394,1.00234
+128 threads -- >= 32 core
+GRAIN SIZE: 256
+
+Spawning thread: 0
+
+Spawning thread: 1
+
+Spawning thread: 2
+
+Spawning thread: 3
+
+Spawning thread: 4
+
+Spawning thread: 5
+
+Spawning thread: 6
+
+Spawning thread: 7
+
+Spawning thread: 8
+
+Spawning thread: 9
+
+Spawning thread: 10
+
+Spawning thread: 11
+
+Spawning thread: 12
+
+Spawning thread: 13
+
+Spawning thread: 14
+
+Spawning thread: 15
+
+Spawning thread: 16
+
+Spawning thread: 17
+
+Spawning thread: 18
+
+Spawning thread: 19
+
+Spawning thread: 20
+
+Spawning thread: 21
+
+Spawning thread: 22
+
+Spawning thread: 23
+
+Spawning thread: 24
+
+Spawning thread: 25
+
+Spawning thread: 26
+
+Spawning thread: 27
+
+Spawning thread: 28
+
+Spawning thread: 29
+
+Spawning thread: 32
+
+Spawning thread: 33
+
+Spawning thread: 34
+
+Spawning thread: 35
+
+Spawning thread: 36
+
+Spawning thread: 37
+
+Spawning thread: 64
+
+Spawning thread: 65
+
+Spawning thread: 66
+
+Spawning thread: 67
+
+Spawning thread: 68
+
+Spawning thread: 69
+
+Spawning thread: 70
+
+Spawning thread: 71
+
+Spawning thread: 38
+
+Spawning thread: 72
+
+Spawning thread: 73
+
+Spawning thread: 74
+
+Spawning thread: 39
+
+Spawning thread: 75
+
+Spawning thread: 76
+
+Spawning thread: 40
+
+Spawning thread: 77
+
+Spawning thread: 41
+
+Spawning thread: 78
+
+Spawning thread: 42
+
+Spawning thread: 79
+
+Spawning thread: 43
+
+Spawning thread: 44
+
+Spawning thread: 45
+
+Spawning thread: 80
+
+Spawning thread: 81
+
+Spawning thread: 46
+
+Spawning thread: 82
+
+Spawning thread: 47
+
+Spawning thread: 83
+
+Spawning thread: 84
+
+Spawning thread: 85
+
+Spawning thread: 86
+
+Spawning thread: 87
+
+Spawning thread: 88
+
+Spawning thread: 89
+
+Spawning thread: 90
+
+Spawning thread: 91
+
+Spawning thread: 92
+
+Spawning thread: 93
+
+Spawning thread: 94
+
+Spawning thread: 95
+
+Spawning thread: 96
+
+Spawning thread: 30
+
+Spawning thread: 97
+
+Spawning thread: 98
+
+Spawning thread: 112
+
+Spawning thread: 48
+
+Spawning thread: 113
+
+Spawning thread: 114
+
+Spawning thread: 99
+
+Spawning thread: 115
+
+Spawning thread: 116
+
+Spawning thread: 117
+
+Spawning thread: 118
+
+Spawning thread: 49
+
+Spawning thread: 50
+
+Spawning thread: 51
+
+Spawning thread: 119
+
+Spawning thread: 56
+
+Spawning thread: 57
+
+Spawning thread: 104
+
+Spawning thread: 105
+
+Spawning thread: 106
+
+Spawning thread: 107
+
+Spawning thread: 58
+
+Spawning thread: 31
+
+Spawning thread: 59
+
+Spawning thread: 52
+
+Spawning thread: 53
+
+Spawning thread: 108
+
+Spawning thread: 54
+
+Spawning thread: 109
+
+Spawning thread: 110
+
+Spawning thread: 100
+
+Spawning thread: 101
+
+Spawning thread: 111
+
+Spawning thread: 102
+
+Spawning thread: 103
+
+Spawning thread: 60
+
+Spawning thread: 61
+
+Spawning thread: 62
+
+Spawning thread: 55
+
+Spawning thread: 63
+
+Spawning thread: 120
+
+Spawning thread: 121
+
+Spawning thread: 124
+
+Spawning thread: 125
+
+Spawning thread: 122
+
+Spawning thread: 123
+
+Spawning thread: 126
+
+Spawning thread: 127
+/nPragma: 256
+
+N cilkfor-print_cilk :128
+
+Results cilkfor-print_cilk : (128) = 0
+
+Overall Time cilkfor-print_cilk  = 0.154570
+
+
+
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.181371,0.180588,1.00434,0.180632,1.00409
+128 threads -- >= 32 core
+GRAIN SIZE: 256
+
+Spawning thread: 0
+
+Spawning thread: 1
+
+Spawning thread: 2
+
+Spawning thread: 3
+
+Spawning thread: 4
+
+Spawning thread: 5
+
+Spawning thread: 6
+
+Spawning thread: 7
+
+Spawning thread: 8
+
+Spawning thread: 9
+
+Spawning thread: 10
+
+Spawning thread: 11
+
+Spawning thread: 12
+
+Spawning thread: 13
+
+Spawning thread: 14
+
+Spawning thread: 15
+
+Spawning thread: 16
+
+Spawning thread: 17
+
+Spawning thread: 18
+
+Spawning thread: 19
+
+Spawning thread: 20
+
+Spawning thread: 21
+
+Spawning thread: 22
+
+Spawning thread: 23
+
+Spawning thread: 24
+
+Spawning thread: 25
+
+Spawning thread: 26
+
+Spawning thread: 27
+
+Spawning thread: 28
+
+Spawning thread: 29
+
+Spawning thread: 30
+
+Spawning thread: 31
+
+Spawning thread: 32
+
+Spawning thread: 33
+
+Spawning thread: 34
+
+Spawning thread: 35
+
+Spawning thread: 36
+
+Spawning thread: 37
+
+Spawning thread: 38
+
+Spawning thread: 39
+
+Spawning thread: 40
+
+Spawning thread: 41
+
+Spawning thread: 42
+
+Spawning thread: 43
+
+Spawning thread: 44
+
+Spawning thread: 45
+
+Spawning thread: 46
+
+Spawning thread: 47
+
+Spawning thread: 48
+
+Spawning thread: 49
+
+Spawning thread: 50
+
+Spawning thread: 51
+
+Spawning thread: 52
+
+Spawning thread: 53
+
+Spawning thread: 54
+
+Spawning thread: 55
+
+Spawning thread: 64
+
+Spawning thread: 65
+
+Spawning thread: 66
+
+Spawning thread: 67
+
+Spawning thread: 68
+
+Spawning thread: 69
+
+Spawning thread: 70
+
+Spawning thread: 71
+
+Spawning thread: 72
+
+Spawning thread: 73
+
+Spawning thread: 74
+
+Spawning thread: 75
+
+Spawning thread: 76
+
+Spawning thread: 77
+
+Spawning thread: 78
+
+Spawning thread: 56
+
+Spawning thread: 57
+
+Spawning thread: 79
+
+Spawning thread: 80
+
+Spawning thread: 81
+
+Spawning thread: 82
+
+Spawning thread: 83
+
+Spawning thread: 84
+
+Spawning thread: 85
+
+Spawning thread: 86
+
+Spawning thread: 87
+
+Spawning thread: 88
+
+Spawning thread: 89
+
+Spawning thread: 90
+
+Spawning thread: 91
+
+Spawning thread: 60
+
+Spawning thread: 61
+
+Spawning thread: 92
+
+Spawning thread: 93
+
+Spawning thread: 96
+
+Spawning thread: 97
+
+Spawning thread: 98
+
+Spawning thread: 99
+
+Spawning thread: 100
+
+Spawning thread: 101
+
+Spawning thread: 102
+
+Spawning thread: 103
+
+Spawning thread: 104
+
+Spawning thread: 105
+
+Spawning thread: 106
+
+Spawning thread: 107
+
+Spawning thread: 108
+
+Spawning thread: 109
+
+Spawning thread: 110
+
+Spawning thread: 111
+
+Spawning thread: 58
+
+Spawning thread: 59
+
+Spawning thread: 94
+
+Spawning thread: 95
+
+Spawning thread: 112
+
+Spawning thread: 62
+
+Spawning thread: 113
+
+Spawning thread: 120
+
+Spawning thread: 121
+
+Spawning thread: 114
+
+Spawning thread: 122
+
+Spawning thread: 115
+
+Spawning thread: 123
+
+Spawning thread: 116
+
+Spawning thread: 124
+
+Spawning thread: 117
+
+Spawning thread: 125
+
+Spawning thread: 118
+
+Spawning thread: 126
+
+Spawning thread: 127
+
+Spawning thread: 63
+
+Spawning thread: 119
+/nPragma: 256
+
+N cilkfor-print_cilk :128
+
+Results cilkfor-print_cilk : (128) = 0
+
+Overall Time cilkfor-print_cilk  = 0.149251
+
+
+
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.175215,0.1748,1.00238,0.174844,1.00213
+128 threads -- >= 32 core
+GRAIN SIZE: 256
+
+Spawning thread: 0
+
+Spawning thread: 1
+
+Spawning thread: 2
+
+Spawning thread: 3
+
+Spawning thread: 4
+
+Spawning thread: 5
+
+Spawning thread: 6
+
+Spawning thread: 7
+
+Spawning thread: 8
+
+Spawning thread: 9
+
+Spawning thread: 10
+
+Spawning thread: 11
+
+Spawning thread: 12
+
+Spawning thread: 13
+
+Spawning thread: 14
+
+Spawning thread: 15
+
+Spawning thread: 16
+
+Spawning thread: 17
+
+Spawning thread: 18
+
+Spawning thread: 19
+
+Spawning thread: 20
+
+Spawning thread: 21
+
+Spawning thread: 22
+
+Spawning thread: 23
+
+Spawning thread: 24
+
+Spawning thread: 25
+
+Spawning thread: 26
+
+Spawning thread: 27
+
+Spawning thread: 64
+
+Spawning thread: 65
+
+Spawning thread: 66
+
+Spawning thread: 32
+
+Spawning thread: 33
+
+Spawning thread: 34
+
+Spawning thread: 35
+
+Spawning thread: 36
+
+Spawning thread: 37
+
+Spawning thread: 38
+
+Spawning thread: 39
+
+Spawning thread: 40
+
+Spawning thread: 67
+
+Spawning thread: 68
+
+Spawning thread: 69
+
+Spawning thread: 70
+
+Spawning thread: 71
+
+Spawning thread: 41
+
+Spawning thread: 72
+
+Spawning thread: 73
+
+Spawning thread: 74
+
+Spawning thread: 42
+
+Spawning thread: 75
+
+Spawning thread: 43
+
+Spawning thread: 76
+
+Spawning thread: 44
+
+Spawning thread: 77
+
+Spawning thread: 45
+
+Spawning thread: 78
+
+Spawning thread: 46
+
+Spawning thread: 79
+
+Spawning thread: 47
+
+Spawning thread: 80
+
+Spawning thread: 81
+
+Spawning thread: 82
+
+Spawning thread: 83
+
+Spawning thread: 84
+
+Spawning thread: 85
+
+Spawning thread: 86
+
+Spawning thread: 87
+
+Spawning thread: 88
+
+Spawning thread: 89
+
+Spawning thread: 90
+
+Spawning thread: 91
+
+Spawning thread: 92
+
+Spawning thread: 93
+
+Spawning thread: 94
+
+Spawning thread: 95
+
+Spawning thread: 96
+
+Spawning thread: 97
+
+Spawning thread: 98
+
+Spawning thread: 28
+
+Spawning thread: 29
+
+Spawning thread: 99
+
+Spawning thread: 112
+
+Spawning thread: 113
+
+Spawning thread: 114
+
+Spawning thread: 100
+
+Spawning thread: 115
+
+Spawning thread: 101
+
+Spawning thread: 102
+
+Spawning thread: 116
+
+Spawning thread: 103
+
+Spawning thread: 117
+
+Spawning thread: 118
+
+Spawning thread: 119
+
+Spawning thread: 48
+
+Spawning thread: 49
+
+Spawning thread: 50
+
+Spawning thread: 51
+
+Spawning thread: 52
+
+Spawning thread: 53
+
+Spawning thread: 54
+
+Spawning thread: 55
+
+Spawning thread: 56
+
+Spawning thread: 30
+
+Spawning thread: 57
+
+Spawning thread: 104
+
+Spawning thread: 58
+
+Spawning thread: 105
+
+Spawning thread: 59
+
+Spawning thread: 106
+
+Spawning thread: 107
+
+Spawning thread: 120
+
+Spawning thread: 121
+
+Spawning thread: 122
+
+Spawning thread: 108
+
+Spawning thread: 109
+
+Spawning thread: 124
+
+Spawning thread: 60
+
+Spawning thread: 125
+
+Spawning thread: 126
+
+Spawning thread: 62
+
+Spawning thread: 127
+
+Spawning thread: 31
+
+Spawning thread: 61
+
+Spawning thread: 63
+
+Spawning thread: 123
+
+Spawning thread: 110
+
+Spawning thread: 111
+/nPragma: 256
+
+N cilkfor-print_cilk :128
+
+Results cilkfor-print_cilk : (128) = 0
+
+Overall Time cilkfor-print_cilk  = 0.148716
+
+
+
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.17507,0.174417,1.00375,0.174461,1.00349
+128 threads -- >= 32 core
+GRAIN SIZE: 256
+
+Spawning thread: 0
+
+Spawning thread: 1
+
+Spawning thread: 2
+
+Spawning thread: 3
+
+Spawning thread: 4
+
+Spawning thread: 5
+
+Spawning thread: 6
+
+Spawning thread: 7
+
+Spawning thread: 8
+
+Spawning thread: 9
+
+Spawning thread: 10
+
+Spawning thread: 11
+
+Spawning thread: 12
+
+Spawning thread: 13
+
+Spawning thread: 14
+
+Spawning thread: 15
+
+Spawning thread: 16
+
+Spawning thread: 17
+
+Spawning thread: 18
+
+Spawning thread: 19
+
+Spawning thread: 20
+
+Spawning thread: 21
+
+Spawning thread: 22
+
+Spawning thread: 23
+
+Spawning thread: 24
+
+Spawning thread: 25
+
+Spawning thread: 26
+
+Spawning thread: 27
+
+Spawning thread: 28
+
+Spawning thread: 29
+
+Spawning thread: 30
+
+Spawning thread: 31
+
+Spawning thread: 64
+
+Spawning thread: 65
+
+Spawning thread: 32
+
+Spawning thread: 66
+
+Spawning thread: 33
+
+Spawning thread: 67
+
+Spawning thread: 34
+
+Spawning thread: 35
+
+Spawning thread: 68
+
+Spawning thread: 36
+
+Spawning thread: 69
+
+Spawning thread: 37
+
+Spawning thread: 70
+
+Spawning thread: 38
+
+Spawning thread: 39
+
+Spawning thread: 71
+
+Spawning thread: 40
+
+Spawning thread: 41
+
+Spawning thread: 42
+
+Spawning thread: 43
+
+Spawning thread: 44
+
+Spawning thread: 45
+
+Spawning thread: 96
+
+Spawning thread: 97
+
+Spawning thread: 98
+
+Spawning thread: 46
+
+Spawning thread: 99
+
+Spawning thread: 100
+
+Spawning thread: 101
+
+Spawning thread: 102
+
+Spawning thread: 103
+
+Spawning thread: 104
+
+Spawning thread: 105
+
+Spawning thread: 106
+
+Spawning thread: 107
+
+Spawning thread: 108
+
+Spawning thread: 109
+
+Spawning thread: 110
+
+Spawning thread: 111
+
+Spawning thread: 72
+
+Spawning thread: 48
+
+Spawning thread: 73
+
+Spawning thread: 120
+
+Spawning thread: 56
+
+Spawning thread: 112
+
+Spawning thread: 121
+
+Spawning thread: 122
+
+Spawning thread: 123
+
+Spawning thread: 49
+
+Spawning thread: 113
+
+Spawning thread: 74
+
+Spawning thread: 114
+
+Spawning thread: 50
+
+Spawning thread: 57
+
+Spawning thread: 51
+
+Spawning thread: 47
+
+Spawning thread: 58
+
+Spawning thread: 115
+
+Spawning thread: 59
+
+Spawning thread: 75
+
+Spawning thread: 80
+
+Spawning thread: 81
+
+Spawning thread: 82
+
+Spawning thread: 83
+
+Spawning thread: 84
+
+Spawning thread: 85
+
+Spawning thread: 86
+
+Spawning thread: 87
+
+Spawning thread: 76
+
+Spawning thread: 77
+
+Spawning thread: 116
+
+Spawning thread: 88
+
+Spawning thread: 89
+
+Spawning thread: 117
+
+Spawning thread: 60
+
+Spawning thread: 61
+
+Spawning thread: 90
+
+Spawning thread: 91
+
+Spawning thread: 124
+
+Spawning thread: 125
+
+Spawning thread: 52
+
+Spawning thread: 53
+
+Spawning thread: 62
+
+Spawning thread: 126
+
+Spawning thread: 127
+
+Spawning thread: 92
+
+Spawning thread: 93
+
+Spawning thread: 118
+
+Spawning thread: 94
+
+Spawning thread: 119
+
+Spawning thread: 95
+
+Spawning thread: 63
+
+Spawning thread: 78
+
+Spawning thread: 54
+
+Spawning thread: 79
+
+Spawning thread: 55
+/nPragma: 256
+
+N cilkfor-print_cilk :128
+
+Results cilkfor-print_cilk : (128) = 0
+
+Overall Time cilkfor-print_cilk  = 0.153015
+
+
+
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.179029,0.17794,1.00612,0.177984,1.00587
+128 threads -- >= 32 core
+GRAIN SIZE: 256
+
+Spawning thread: 0
+
+Spawning thread: 1
+
+Spawning thread: 2
+
+Spawning thread: 3
+
+Spawning thread: 4
+
+Spawning thread: 5
+
+Spawning thread: 6
+
+Spawning thread: 7
+
+Spawning thread: 8
+
+Spawning thread: 9
+
+Spawning thread: 10
+
+Spawning thread: 11
+
+Spawning thread: 12
+
+Spawning thread: 13
+
+Spawning thread: 14
+
+Spawning thread: 15
+
+Spawning thread: 16
+
+Spawning thread: 17
+
+Spawning thread: 18
+
+Spawning thread: 19
+
+Spawning thread: 20
+
+Spawning thread: 21
+
+Spawning thread: 22
+
+Spawning thread: 23
+
+Spawning thread: 64
+
+Spawning thread: 24
+
+Spawning thread: 65
+
+Spawning thread: 66
+
+Spawning thread: 67
+
+Spawning thread: 25
+
+Spawning thread: 68
+
+Spawning thread: 69
+
+Spawning thread: 26
+
+Spawning thread: 70
+
+Spawning thread: 27
+
+Spawning thread: 71
+
+Spawning thread: 72
+
+Spawning thread: 73
+
+Spawning thread: 74
+
+Spawning thread: 75
+
+Spawning thread: 76
+
+Spawning thread: 77
+
+Spawning thread: 78
+
+Spawning thread: 79
+
+Spawning thread: 80
+
+Spawning thread: 81
+
+Spawning thread: 82
+
+Spawning thread: 83
+
+Spawning thread: 84
+
+Spawning thread: 85
+
+Spawning thread: 86
+
+Spawning thread: 87
+
+Spawning thread: 96
+
+Spawning thread: 32
+
+Spawning thread: 97
+
+Spawning thread: 98
+
+Spawning thread: 33
+
+Spawning thread: 99
+
+Spawning thread: 34
+
+Spawning thread: 28
+
+Spawning thread: 100
+
+Spawning thread: 101
+
+Spawning thread: 102
+
+Spawning thread: 35
+
+Spawning thread: 88
+
+Spawning thread: 103
+
+Spawning thread: 36
+
+Spawning thread: 29
+
+Spawning thread: 37
+
+Spawning thread: 38
+
+Spawning thread: 39
+
+Spawning thread: 89
+
+Spawning thread: 40
+
+Spawning thread: 41
+
+Spawning thread: 42
+
+Spawning thread: 90
+
+Spawning thread: 112
+
+Spawning thread: 113
+
+Spawning thread: 114
+
+Spawning thread: 43
+
+Spawning thread: 115
+
+Spawning thread: 116
+
+Spawning thread: 117
+
+Spawning thread: 91
+
+Spawning thread: 118
+
+Spawning thread: 119
+
+Spawning thread: 44
+
+Spawning thread: 45
+
+Spawning thread: 48
+
+Spawning thread: 49
+
+Spawning thread: 50
+
+Spawning thread: 51
+
+Spawning thread: 52
+
+Spawning thread: 53
+
+Spawning thread: 54
+
+Spawning thread: 55
+
+Spawning thread: 92
+
+Spawning thread: 94
+
+Spawning thread: 95
+
+Spawning thread: 120
+
+Spawning thread: 121
+
+Spawning thread: 93
+
+Spawning thread: 122
+
+Spawning thread: 123
+
+Spawning thread: 104
+
+Spawning thread: 105
+
+Spawning thread: 106
+
+Spawning thread: 107
+
+Spawning thread: 30
+
+Spawning thread: 31
+
+Spawning thread: 56
+
+Spawning thread: 57
+
+Spawning thread: 58
+
+Spawning thread: 59
+
+Spawning thread: 46
+
+Spawning thread: 47
+
+Spawning thread: 60
+
+Spawning thread: 62
+
+Spawning thread: 61
+
+Spawning thread: 124
+
+Spawning thread: 126
+
+Spawning thread: 127
+
+Spawning thread: 108
+
+Spawning thread: 109
+
+Spawning thread: 63
+
+Spawning thread: 125
+
+Spawning thread: 110
+
+Spawning thread: 111
+/nPragma: 256
+
+N cilkfor-print_cilk :128
+
+Results cilkfor-print_cilk : (128) = 0
+
+Overall Time cilkfor-print_cilk  = 0.162823
+
+
+
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.189782,0.188993,1.00418,0.189037,1.00394

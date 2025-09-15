@@ -53,8 +53,9 @@ int main(int argc, char *argv[]) {
 	ctimer_stop(&t);
 	ctimer_measure(&t);
 
-	printf("\nptfor  overall(%ld) = %ld\n", n, result); // overall time
-	ctimer_print(t, "ptfor overall");
+	printf("N :%ld\n", n);
+	printf("\nResult ptfor (%ld) = %ld\n", n, result); // overall time
+	ctimer_print(t, "Overall Time ptfor :");
 
 
 	printf("\n\n\n\n");

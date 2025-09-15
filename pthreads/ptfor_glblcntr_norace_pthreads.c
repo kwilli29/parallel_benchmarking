@@ -49,9 +49,9 @@ int main(int argc, char *argv[]) {
 	ctimer_stop(&t);
 	ctimer_measure(&t);
 
-	printf("ptfor gloabl counter NO race condtiion (%d) = %ld\n", n, counter);
-	ctimer_print(t, "ptfor global counter NO race_condition");
-
+	printf("N :%d\n", n);
+	printf("Results ptfor_glblcntr_norace_pthreads :(%d) = %ld\n", n, counter);
+	ctimer_print(t, "Overall Time ptfor_glblcntr_norace_pthreads :");
 	printf("\n");
 
 	pthread_mutex_destroy(&m);

@@ -2,30 +2,37 @@
 
 make all
 
-EXECS=$(ls -p | grep -v / | grep -E '*_cilk$')
+EXECS=$(ls -p | grep -v / | grep -E '^.*_cilk$')
 
 THPCORE=4
-THREADS=(2 4 8 16 32 64 128 256 272)
+THREADS=(256 260 264 268 272 280 288 296 300 340 380 420 480 520 544 600 640 700 740 800 840 900 940 1000)
+
+RUNS=100
 
 #for file in sample/*; do
 #    echo "$(basename "$file")"
 #done
 
-for v in $EXECS; do
-	echo $v
-done
+#for v in $EXECS; do
+#	echo $v
+#done
 
 for var in $EXECS; do
 	for num in "${THREADS[@]}"; do
-		echo $(basename "$var")
-		if (($num/$THPCORE == 0)); then
-			res=1
-		else
-  			res=$(($num/$THPCORE))
-		fi
-		echo "$num threads -- >= $res core" >> output/$(basename "$var")_N.txt
-		./$var $num >> output/$(basename "$var")_N.txt
+		touch "output/run3/$(basename "$var")/$(basename "$var")_$num.txt"
+		for (( i=0; i<$RUNS; i++ )); do
+			# echo $(basename "$var")
+			if (($num/$THPCORE == 0)); then
+				res=1
+			else
+  				res=$(($num/$THPCORE))
+			fi
+			echo "$num threads -- >= $res core" >> output/run3/$(basename "$var")/$(basename "$var")_$num.txt
+			./$var $num >> output/run3/$(basename "$var")/$(basename "$var")_$num.txt
+		done
+		echo "$(basename "$var") thread $num done"
 	done
+	echo "$(basename "$var") done"
 done
 
 #echo "2 threads, >= 1 core" >> output/for_cilk_N.txt

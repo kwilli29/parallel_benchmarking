@@ -52,8 +52,9 @@ int main(int argc, char *argv[]) {
 	ctimer_stop(&t);
 	ctimer_measure(&t);
 
-	printf("while pt global counter no race_condition: (%d) = %ld\n", n, counter);
-	ctimer_print(t, "while pt global counter no race_condition");
+	printf("N :%d\n", n);
+	printf("Results while_glblcntr_norace_pthreads: (%d) = %ld\n", n, counter);
+	ctimer_print(t, "Overall Time while_glblcntr_norace_pthreads :");
 
 	printf("\n");
 

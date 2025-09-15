@@ -1,0 +1,460 @@
+16 threads -- >= 4 core
+GRAIN SIZE: 1024
+
+Spawning thread: 0
+
+Spawning thread: 1
+
+Spawning thread: 2
+
+Spawning thread: 3
+
+Spawning thread: 4
+
+Spawning thread: 5
+
+Spawning thread: 6
+
+Spawning thread: 7
+
+Spawning thread: 8
+
+Spawning thread: 9
+
+Spawning thread: 10
+
+Spawning thread: 11
+
+Spawning thread: 12
+
+Spawning thread: 14
+
+Spawning thread: 13
+
+Spawning thread: 15
+/nPragma: 1024
+
+N cilkfor-print_cilk :16
+
+Results cilkfor-print_cilk : (16) = 0
+
+Overall Time cilkfor-print_cilk  = 0.147578
+
+
+
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.173093,0.17303,1.00037,0.173055,1.00022
+16 threads -- >= 4 core
+GRAIN SIZE: 1024
+
+Spawning thread: 0
+
+Spawning thread: 1
+
+Spawning thread: 2
+
+Spawning thread: 3
+
+Spawning thread: 4
+
+Spawning thread: 5
+
+Spawning thread: 6
+
+Spawning thread: 7
+
+Spawning thread: 8
+
+Spawning thread: 9
+
+Spawning thread: 10
+
+Spawning thread: 11
+
+Spawning thread: 12
+
+Spawning thread: 13
+
+Spawning thread: 14
+
+Spawning thread: 15
+/nPragma: 1024
+
+N cilkfor-print_cilk :16
+
+Results cilkfor-print_cilk : (16) = 0
+
+Overall Time cilkfor-print_cilk  = 0.149853
+
+
+
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.17673,0.17668,1.00029,0.176705,1.00014
+16 threads -- >= 4 core
+GRAIN SIZE: 1024
+
+Spawning thread: 0
+
+Spawning thread: 1
+
+Spawning thread: 2
+
+Spawning thread: 3
+
+Spawning thread: 4
+
+Spawning thread: 5
+
+Spawning thread: 6
+
+Spawning thread: 7
+
+Spawning thread: 8
+
+Spawning thread: 9
+
+Spawning thread: 10
+
+Spawning thread: 11
+
+Spawning thread: 12
+
+Spawning thread: 13
+
+Spawning thread: 14
+
+Spawning thread: 15
+/nPragma: 1024
+
+N cilkfor-print_cilk :16
+
+Results cilkfor-print_cilk : (16) = 0
+
+Overall Time cilkfor-print_cilk  = 0.154870
+
+
+
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.179879,0.179819,1.00033,0.179844,1.00019
+16 threads -- >= 4 core
+GRAIN SIZE: 1024
+
+Spawning thread: 0
+
+Spawning thread: 1
+
+Spawning thread: 2
+
+Spawning thread: 3
+
+Spawning thread: 4
+
+Spawning thread: 5
+
+Spawning thread: 6
+
+Spawning thread: 7
+
+Spawning thread: 8
+
+Spawning thread: 9
+
+Spawning thread: 10
+
+Spawning thread: 11
+
+Spawning thread: 12
+
+Spawning thread: 13
+
+Spawning thread: 14
+
+Spawning thread: 15
+/nPragma: 1024
+
+N cilkfor-print_cilk :16
+
+Results cilkfor-print_cilk : (16) = 0
+
+Overall Time cilkfor-print_cilk  = 0.149108
+
+
+
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.175689,0.175631,1.00033,0.175656,1.00019
+16 threads -- >= 4 core
+GRAIN SIZE: 1024
+
+Spawning thread: 0
+
+Spawning thread: 1
+
+Spawning thread: 2
+
+Spawning thread: 3
+
+Spawning thread: 4
+
+Spawning thread: 5
+
+Spawning thread: 6
+
+Spawning thread: 7
+
+Spawning thread: 8
+
+Spawning thread: 9
+
+Spawning thread: 10
+
+Spawning thread: 11
+
+Spawning thread: 12
+
+Spawning thread: 13
+
+Spawning thread: 14
+
+Spawning thread: 15
+/nPragma: 1024
+
+N cilkfor-print_cilk :16
+
+Results cilkfor-print_cilk : (16) = 0
+
+Overall Time cilkfor-print_cilk  = 0.148995
+
+
+
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.174868,0.174813,1.00031,0.174838,1.00017
+16 threads -- >= 4 core
+GRAIN SIZE: 1024
+
+Spawning thread: 0
+
+Spawning thread: 1
+
+Spawning thread: 2
+
+Spawning thread: 3
+
+Spawning thread: 4
+
+Spawning thread: 5
+
+Spawning thread: 6
+
+Spawning thread: 7
+
+Spawning thread: 8
+
+Spawning thread: 9
+
+Spawning thread: 10
+
+Spawning thread: 11
+
+Spawning thread: 12
+
+Spawning thread: 13
+
+Spawning thread: 14
+
+Spawning thread: 15
+/nPragma: 1024
+
+N cilkfor-print_cilk :16
+
+Results cilkfor-print_cilk : (16) = 0
+
+Overall Time cilkfor-print_cilk  = 0.155284
+
+
+
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.180739,0.180683,1.00031,0.180708,1.00017
+16 threads -- >= 4 core
+GRAIN SIZE: 1024
+
+Spawning thread: 0
+
+Spawning thread: 1
+
+Spawning thread: 2
+
+Spawning thread: 3
+
+Spawning thread: 4
+
+Spawning thread: 5
+
+Spawning thread: 6
+
+Spawning thread: 7
+
+Spawning thread: 8
+
+Spawning thread: 9
+
+Spawning thread: 10
+
+Spawning thread: 11
+
+Spawning thread: 12
+
+Spawning thread: 13
+
+Spawning thread: 14
+
+Spawning thread: 15
+/nPragma: 1024
+
+N cilkfor-print_cilk :16
+
+Results cilkfor-print_cilk : (16) = 0
+
+Overall Time cilkfor-print_cilk  = 0.151603
+
+
+
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.177971,0.177917,1.0003,0.177942,1.00016
+16 threads -- >= 4 core
+GRAIN SIZE: 1024
+
+Spawning thread: 0
+
+Spawning thread: 1
+
+Spawning thread: 2
+
+Spawning thread: 3
+
+Spawning thread: 4
+
+Spawning thread: 5
+
+Spawning thread: 6
+
+Spawning thread: 7
+
+Spawning thread: 8
+
+Spawning thread: 9
+
+Spawning thread: 12
+
+Spawning thread: 13
+
+Spawning thread: 10
+
+Spawning thread: 14
+
+Spawning thread: 11
+
+Spawning thread: 15
+/nPragma: 1024
+
+N cilkfor-print_cilk :16
+
+Results cilkfor-print_cilk : (16) = 0
+
+Overall Time cilkfor-print_cilk  = 0.145481
+
+
+
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.171963,0.17189,1.00042,0.171915,1.00028
+16 threads -- >= 4 core
+GRAIN SIZE: 1024
+
+Spawning thread: 0
+
+Spawning thread: 1
+
+Spawning thread: 2
+
+Spawning thread: 3
+
+Spawning thread: 4
+
+Spawning thread: 5
+
+Spawning thread: 6
+
+Spawning thread: 7
+
+Spawning thread: 8
+
+Spawning thread: 9
+
+Spawning thread: 10
+
+Spawning thread: 11
+
+Spawning thread: 12
+
+Spawning thread: 13
+
+Spawning thread: 14
+
+Spawning thread: 15
+/nPragma: 1024
+
+N cilkfor-print_cilk :16
+
+Results cilkfor-print_cilk : (16) = 0
+
+Overall Time cilkfor-print_cilk  = 0.143526
+
+
+
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.169529,0.169477,1.00031,0.169502,1.00016
+16 threads -- >= 4 core
+GRAIN SIZE: 1024
+
+Spawning thread: 0
+
+Spawning thread: 1
+
+Spawning thread: 2
+
+Spawning thread: 3
+
+Spawning thread: 4
+
+Spawning thread: 5
+
+Spawning thread: 6
+
+Spawning thread: 7
+
+Spawning thread: 8
+
+Spawning thread: 9
+
+Spawning thread: 12
+
+Spawning thread: 13
+
+Spawning thread: 10
+
+Spawning thread: 14
+
+Spawning thread: 11
+
+Spawning thread: 15
+/nPragma: 1024
+
+N cilkfor-print_cilk :16
+
+Results cilkfor-print_cilk : (16) = 0
+
+Overall Time cilkfor-print_cilk  = 0.155344
+
+
+
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.180867,0.180793,1.00041,0.180818,1.00027

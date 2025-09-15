@@ -1,0 +1,100 @@
+8 threads -- >= 2 core
+GRAIN SIZE: 256
+/nPragma: 256
+
+N cilkfor_glblcntr_race_cilk :8
+Results cilkfor_glblcntr_race_cilk : (8) = 8
+
+Overall Time cilkfor_glblcntr_race_cilk  = 0.150181
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.176441,0.176435,1.00003,0.176454,0.999929
+8 threads -- >= 2 core
+GRAIN SIZE: 256
+/nPragma: 256
+
+N cilkfor_glblcntr_race_cilk :8
+Results cilkfor_glblcntr_race_cilk : (8) = 8
+
+Overall Time cilkfor_glblcntr_race_cilk  = 0.155734
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.182246,0.182237,1.00005,0.182256,0.999943
+8 threads -- >= 2 core
+GRAIN SIZE: 256
+/nPragma: 256
+
+N cilkfor_glblcntr_race_cilk :8
+Results cilkfor_glblcntr_race_cilk : (8) = 8
+
+Overall Time cilkfor_glblcntr_race_cilk  = 0.145767
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.171401,0.171393,1.00005,0.171412,0.999938
+8 threads -- >= 2 core
+GRAIN SIZE: 256
+/nPragma: 256
+
+N cilkfor_glblcntr_race_cilk :8
+Results cilkfor_glblcntr_race_cilk : (8) = 8
+
+Overall Time cilkfor_glblcntr_race_cilk  = 0.150870
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.176582,0.176573,1.00005,0.176592,0.999944
+8 threads -- >= 2 core
+GRAIN SIZE: 256
+/nPragma: 256
+
+N cilkfor_glblcntr_race_cilk :8
+Results cilkfor_glblcntr_race_cilk : (8) = 8
+
+Overall Time cilkfor_glblcntr_race_cilk  = 0.149043
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.174948,0.174943,1.00003,0.174962,0.999918
+8 threads -- >= 2 core
+GRAIN SIZE: 256
+/nPragma: 256
+
+N cilkfor_glblcntr_race_cilk :8
+Results cilkfor_glblcntr_race_cilk : (8) = 8
+
+Overall Time cilkfor_glblcntr_race_cilk  = 0.154925
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.181525,0.181517,1.00004,0.181536,0.999941
+8 threads -- >= 2 core
+GRAIN SIZE: 256
+/nPragma: 256
+
+N cilkfor_glblcntr_race_cilk :8
+Results cilkfor_glblcntr_race_cilk : (8) = 8
+
+Overall Time cilkfor_glblcntr_race_cilk  = 0.154699
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.181044,0.181037,1.00003,0.181056,0.999931
+8 threads -- >= 2 core
+GRAIN SIZE: 256
+/nPragma: 256
+
+N cilkfor_glblcntr_race_cilk :8
+Results cilkfor_glblcntr_race_cilk : (8) = 8
+
+Overall Time cilkfor_glblcntr_race_cilk  = 0.151874
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.178412,0.178404,1.00005,0.178422,0.999941
+8 threads -- >= 2 core
+GRAIN SIZE: 256
+/nPragma: 256
+
+N cilkfor_glblcntr_race_cilk :8
+Results cilkfor_glblcntr_race_cilk : (8) = 8
+
+Overall Time cilkfor_glblcntr_race_cilk  = 0.159651
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.184121,0.184115,1.00003,0.184134,0.999929
+8 threads -- >= 2 core
+GRAIN SIZE: 256
+/nPragma: 256
+
+N cilkfor_glblcntr_race_cilk :8
+Results cilkfor_glblcntr_race_cilk : (8) = 8
+
+Overall Time cilkfor_glblcntr_race_cilk  = 0.154857
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.180802,0.180794,1.00005,0.180813,0.999942

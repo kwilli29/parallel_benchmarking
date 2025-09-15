@@ -38,7 +38,7 @@ int main(int argc, char*argv[]){
 	long result = 0;
 	ctimer_t t;
 
-	while(iter < NITER){ // run the for count NITER times
+	//while(iter < NITER){ // run the for count NITER times
 		result = 0;
 
 		ctimer_start(&t);
@@ -57,14 +57,15 @@ int main(int argc, char*argv[]){
 		ctimer_stop(&t);
 		ctimer_measure(&t);
 
-		printf("ptfor-count #%d: (%ld) = %ld\n", iter, n, result);
-		ctimer_print(t, "ptfor-count");
+		printf("N :%ld\n", n);
+		printf("Results ptfor-count #%d: (%ld) = %ld\n", iter, n, result);
+		ctimer_print(t, "Overall Time ptfor-count :");
 
 		printf("\n");
 
 		iter++;
 
-	}
+	// }
 
 	return 0;
 }

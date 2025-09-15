@@ -1,0 +1,1420 @@
+64 threads -- >= 16 core
+GRAIN SIZE: 4
+
+Spawning thread: 0
+
+Spawning thread: 1
+
+Spawning thread: 2
+
+Spawning thread: 3
+
+Spawning thread: 4
+
+Spawning thread: 5
+
+Spawning thread: 6
+
+Spawning thread: 7
+
+Spawning thread: 8
+
+Spawning thread: 9
+
+Spawning thread: 10
+
+Spawning thread: 11
+
+Spawning thread: 12
+
+Spawning thread: 13
+
+Spawning thread: 14
+
+Spawning thread: 15
+
+Spawning thread: 32
+
+Spawning thread: 33
+
+Spawning thread: 16
+
+Spawning thread: 34
+
+Spawning thread: 17
+
+Spawning thread: 35
+
+Spawning thread: 18
+
+Spawning thread: 19
+
+Spawning thread: 36
+
+Spawning thread: 20
+
+Spawning thread: 37
+
+Spawning thread: 21
+
+Spawning thread: 38
+
+Spawning thread: 22
+
+Spawning thread: 39
+
+Spawning thread: 23
+
+Spawning thread: 40
+
+Spawning thread: 41
+
+Spawning thread: 42
+
+Spawning thread: 43
+
+Spawning thread: 44
+
+Spawning thread: 45
+
+Spawning thread: 46
+
+Spawning thread: 47
+
+Spawning thread: 24
+
+Spawning thread: 25
+
+Spawning thread: 26
+
+Spawning thread: 27
+
+Spawning thread: 28
+
+Spawning thread: 48
+
+Spawning thread: 29
+
+Spawning thread: 49
+
+Spawning thread: 50
+
+Spawning thread: 51
+
+Spawning thread: 56
+
+Spawning thread: 57
+
+Spawning thread: 60
+
+Spawning thread: 61
+
+Spawning thread: 30
+
+Spawning thread: 52
+
+Spawning thread: 53
+
+Spawning thread: 54
+
+Spawning thread: 58
+
+Spawning thread: 55
+
+Spawning thread: 63
+
+Spawning thread: 62
+
+Spawning thread: 59
+
+Spawning thread: 31
+/nPragma: 4
+
+N cilkfor-print_cilk :64
+
+Results cilkfor-print_cilk : (64) = 0
+
+Overall Time cilkfor-print_cilk  = 0.155504
+
+
+
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.181686,0.181399,1.00158,0.181436,1.00138
+64 threads -- >= 16 core
+GRAIN SIZE: 4
+
+Spawning thread: 0
+
+Spawning thread: 1
+
+Spawning thread: 2
+
+Spawning thread: 3
+
+Spawning thread: 4
+
+Spawning thread: 5
+
+Spawning thread: 6
+
+Spawning thread: 7
+
+Spawning thread: 8
+
+Spawning thread: 9
+
+Spawning thread: 10
+
+Spawning thread: 11
+
+Spawning thread: 12
+
+Spawning thread: 13
+
+Spawning thread: 14
+
+Spawning thread: 15
+
+Spawning thread: 16
+
+Spawning thread: 17
+
+Spawning thread: 18
+
+Spawning thread: 19
+
+Spawning thread: 20
+
+Spawning thread: 21
+
+Spawning thread: 22
+
+Spawning thread: 23
+
+Spawning thread: 32
+
+Spawning thread: 33
+
+Spawning thread: 34
+
+Spawning thread: 35
+
+Spawning thread: 36
+
+Spawning thread: 37
+
+Spawning thread: 38
+
+Spawning thread: 39
+
+Spawning thread: 40
+
+Spawning thread: 41
+
+Spawning thread: 42
+
+Spawning thread: 43
+
+Spawning thread: 44
+
+Spawning thread: 45
+
+Spawning thread: 46
+
+Spawning thread: 47
+
+Spawning thread: 24
+
+Spawning thread: 25
+
+Spawning thread: 26
+
+Spawning thread: 27
+
+Spawning thread: 48
+
+Spawning thread: 49
+
+Spawning thread: 50
+
+Spawning thread: 51
+
+Spawning thread: 52
+
+Spawning thread: 53
+
+Spawning thread: 28
+
+Spawning thread: 29
+
+Spawning thread: 56
+
+Spawning thread: 57
+
+Spawning thread: 58
+
+Spawning thread: 59
+
+Spawning thread: 54
+
+Spawning thread: 60
+
+Spawning thread: 61
+
+Spawning thread: 62
+
+Spawning thread: 30
+
+Spawning thread: 31
+
+Spawning thread: 63
+
+Spawning thread: 55
+/nPragma: 4
+
+N cilkfor-print_cilk :64
+
+Results cilkfor-print_cilk : (64) = 0
+
+Overall Time cilkfor-print_cilk  = 0.152192
+
+
+
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.178487,0.17829,1.00111,0.178328,1.0009
+64 threads -- >= 16 core
+GRAIN SIZE: 4
+
+Spawning thread: 0
+
+Spawning thread: 1
+
+Spawning thread: 2
+
+Spawning thread: 3
+
+Spawning thread: 4
+
+Spawning thread: 5
+
+Spawning thread: 6
+
+Spawning thread: 7
+
+Spawning thread: 8
+
+Spawning thread: 9
+
+Spawning thread: 10
+
+Spawning thread: 11
+
+Spawning thread: 12
+
+Spawning thread: 13
+
+Spawning thread: 14
+
+Spawning thread: 15
+
+Spawning thread: 16
+
+Spawning thread: 17
+
+Spawning thread: 18
+
+Spawning thread: 19
+
+Spawning thread: 20
+
+Spawning thread: 21
+
+Spawning thread: 22
+
+Spawning thread: 23
+
+Spawning thread: 24
+
+Spawning thread: 25
+
+Spawning thread: 26
+
+Spawning thread: 27
+
+Spawning thread: 28
+
+Spawning thread: 29
+
+Spawning thread: 30
+
+Spawning thread: 31
+
+Spawning thread: 32
+
+Spawning thread: 33
+
+Spawning thread: 34
+
+Spawning thread: 35
+
+Spawning thread: 36
+
+Spawning thread: 37
+
+Spawning thread: 38
+
+Spawning thread: 39
+
+Spawning thread: 40
+
+Spawning thread: 41
+
+Spawning thread: 42
+
+Spawning thread: 43
+
+Spawning thread: 44
+
+Spawning thread: 45
+
+Spawning thread: 46
+
+Spawning thread: 47
+
+Spawning thread: 48
+
+Spawning thread: 49
+
+Spawning thread: 50
+
+Spawning thread: 51
+
+Spawning thread: 52
+
+Spawning thread: 53
+
+Spawning thread: 54
+
+Spawning thread: 55
+
+Spawning thread: 56
+
+Spawning thread: 57
+
+Spawning thread: 58
+
+Spawning thread: 59
+
+Spawning thread: 60
+
+Spawning thread: 62
+
+Spawning thread: 61
+
+Spawning thread: 63
+/nPragma: 4
+
+N cilkfor-print_cilk :64
+
+Results cilkfor-print_cilk : (64) = 0
+
+Overall Time cilkfor-print_cilk  = 0.150225
+
+
+
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.176124,0.175975,1.00085,0.176012,1.00063
+64 threads -- >= 16 core
+GRAIN SIZE: 4
+
+Spawning thread: 0
+
+Spawning thread: 1
+
+Spawning thread: 2
+
+Spawning thread: 3
+
+Spawning thread: 4
+
+Spawning thread: 5
+
+Spawning thread: 6
+
+Spawning thread: 7
+
+Spawning thread: 8
+
+Spawning thread: 9
+
+Spawning thread: 10
+
+Spawning thread: 11
+
+Spawning thread: 12
+
+Spawning thread: 13
+
+Spawning thread: 14
+
+Spawning thread: 15
+
+Spawning thread: 16
+
+Spawning thread: 17
+
+Spawning thread: 18
+
+Spawning thread: 19
+
+Spawning thread: 20
+
+Spawning thread: 21
+
+Spawning thread: 22
+
+Spawning thread: 23
+
+Spawning thread: 32
+
+Spawning thread: 33
+
+Spawning thread: 34
+
+Spawning thread: 35
+
+Spawning thread: 36
+
+Spawning thread: 37
+
+Spawning thread: 38
+
+Spawning thread: 39
+
+Spawning thread: 40
+
+Spawning thread: 41
+
+Spawning thread: 42
+
+Spawning thread: 43
+
+Spawning thread: 44
+
+Spawning thread: 45
+
+Spawning thread: 46
+
+Spawning thread: 47
+
+Spawning thread: 24
+
+Spawning thread: 25
+
+Spawning thread: 26
+
+Spawning thread: 27
+
+Spawning thread: 48
+
+Spawning thread: 49
+
+Spawning thread: 50
+
+Spawning thread: 51
+
+Spawning thread: 52
+
+Spawning thread: 53
+
+Spawning thread: 54
+
+Spawning thread: 55
+
+Spawning thread: 28
+
+Spawning thread: 29
+
+Spawning thread: 56
+
+Spawning thread: 57
+
+Spawning thread: 30
+
+Spawning thread: 60
+
+Spawning thread: 61
+
+Spawning thread: 58
+
+Spawning thread: 31
+
+Spawning thread: 62
+
+Spawning thread: 63
+
+Spawning thread: 59
+/nPragma: 4
+
+N cilkfor-print_cilk :64
+
+Results cilkfor-print_cilk : (64) = 0
+
+Overall Time cilkfor-print_cilk  = 0.150330
+
+
+
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.176342,0.176141,1.00114,0.176179,1.00093
+64 threads -- >= 16 core
+GRAIN SIZE: 4
+
+Spawning thread: 0
+
+Spawning thread: 1
+
+Spawning thread: 2
+
+Spawning thread: 3
+
+Spawning thread: 4
+
+Spawning thread: 5
+
+Spawning thread: 6
+
+Spawning thread: 7
+
+Spawning thread: 8
+
+Spawning thread: 9
+
+Spawning thread: 10
+
+Spawning thread: 11
+
+Spawning thread: 12
+
+Spawning thread: 13
+
+Spawning thread: 14
+
+Spawning thread: 15
+
+Spawning thread: 16
+
+Spawning thread: 17
+
+Spawning thread: 18
+
+Spawning thread: 32
+
+Spawning thread: 33
+
+Spawning thread: 34
+
+Spawning thread: 35
+
+Spawning thread: 36
+
+Spawning thread: 19
+
+Spawning thread: 37
+
+Spawning thread: 38
+
+Spawning thread: 39
+
+Spawning thread: 40
+
+Spawning thread: 41
+
+Spawning thread: 42
+
+Spawning thread: 43
+
+Spawning thread: 44
+
+Spawning thread: 45
+
+Spawning thread: 46
+
+Spawning thread: 47
+
+Spawning thread: 48
+
+Spawning thread: 49
+
+Spawning thread: 50
+
+Spawning thread: 51
+
+Spawning thread: 52
+
+Spawning thread: 53
+
+Spawning thread: 54
+
+Spawning thread: 55
+
+Spawning thread: 24
+
+Spawning thread: 25
+
+Spawning thread: 26
+
+Spawning thread: 27
+
+Spawning thread: 56
+
+Spawning thread: 57
+
+Spawning thread: 58
+
+Spawning thread: 59
+
+Spawning thread: 28
+
+Spawning thread: 29
+
+Spawning thread: 60
+
+Spawning thread: 20
+
+Spawning thread: 21
+
+Spawning thread: 61
+
+Spawning thread: 30
+
+Spawning thread: 31
+
+Spawning thread: 62
+
+Spawning thread: 63
+
+Spawning thread: 22
+
+Spawning thread: 23
+/nPragma: 4
+
+N cilkfor-print_cilk :64
+
+Results cilkfor-print_cilk : (64) = 0
+
+Overall Time cilkfor-print_cilk  = 0.149614
+
+
+
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.175323,0.174977,1.00198,0.175015,1.00176
+64 threads -- >= 16 core
+GRAIN SIZE: 4
+
+Spawning thread: 0
+
+Spawning thread: 1
+
+Spawning thread: 2
+
+Spawning thread: 3
+
+Spawning thread: 4
+
+Spawning thread: 5
+
+Spawning thread: 6
+
+Spawning thread: 7
+
+Spawning thread: 8
+
+Spawning thread: 9
+
+Spawning thread: 10
+
+Spawning thread: 11
+
+Spawning thread: 12
+
+Spawning thread: 13
+
+Spawning thread: 14
+
+Spawning thread: 15
+
+Spawning thread: 16
+
+Spawning thread: 17
+
+Spawning thread: 18
+
+Spawning thread: 19
+
+Spawning thread: 20
+
+Spawning thread: 21
+
+Spawning thread: 22
+
+Spawning thread: 23
+
+Spawning thread: 32
+
+Spawning thread: 24
+
+Spawning thread: 25
+
+Spawning thread: 26
+
+Spawning thread: 33
+
+Spawning thread: 34
+
+Spawning thread: 35
+
+Spawning thread: 36
+
+Spawning thread: 37
+
+Spawning thread: 38
+
+Spawning thread: 39
+
+Spawning thread: 40
+
+Spawning thread: 41
+
+Spawning thread: 42
+
+Spawning thread: 28
+
+Spawning thread: 29
+
+Spawning thread: 43
+
+Spawning thread: 27
+
+Spawning thread: 48
+
+Spawning thread: 49
+
+Spawning thread: 50
+
+Spawning thread: 51
+
+Spawning thread: 52
+
+Spawning thread: 53
+
+Spawning thread: 54
+
+Spawning thread: 55
+
+Spawning thread: 30
+
+Spawning thread: 56
+
+Spawning thread: 57
+
+Spawning thread: 58
+
+Spawning thread: 59
+
+Spawning thread: 44
+
+Spawning thread: 45
+
+Spawning thread: 46
+
+Spawning thread: 47
+
+Spawning thread: 60
+
+Spawning thread: 61
+
+Spawning thread: 31
+
+Spawning thread: 62
+
+Spawning thread: 63
+/nPragma: 4
+
+N cilkfor-print_cilk :64
+
+Results cilkfor-print_cilk : (64) = 0
+
+Overall Time cilkfor-print_cilk  = 0.148675
+
+
+
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.174559,0.174238,1.00184,0.174275,1.00163
+64 threads -- >= 16 core
+GRAIN SIZE: 4
+
+Spawning thread: 0
+
+Spawning thread: 1
+
+Spawning thread: 2
+
+Spawning thread: 3
+
+Spawning thread: 4
+
+Spawning thread: 5
+
+Spawning thread: 6
+
+Spawning thread: 7
+
+Spawning thread: 8
+
+Spawning thread: 9
+
+Spawning thread: 10
+
+Spawning thread: 11
+
+Spawning thread: 12
+
+Spawning thread: 13
+
+Spawning thread: 14
+
+Spawning thread: 15
+
+Spawning thread: 32
+
+Spawning thread: 33
+
+Spawning thread: 34
+
+Spawning thread: 35
+
+Spawning thread: 36
+
+Spawning thread: 37
+
+Spawning thread: 38
+
+Spawning thread: 39
+
+Spawning thread: 40
+
+Spawning thread: 41
+
+Spawning thread: 42
+
+Spawning thread: 43
+
+Spawning thread: 44
+
+Spawning thread: 45
+
+Spawning thread: 46
+
+Spawning thread: 47
+
+Spawning thread: 16
+
+Spawning thread: 17
+
+Spawning thread: 18
+
+Spawning thread: 19
+
+Spawning thread: 20
+
+Spawning thread: 21
+
+Spawning thread: 22
+
+Spawning thread: 23
+
+Spawning thread: 48
+
+Spawning thread: 49
+
+Spawning thread: 50
+
+Spawning thread: 51
+
+Spawning thread: 24
+
+Spawning thread: 25
+
+Spawning thread: 52
+
+Spawning thread: 53
+
+Spawning thread: 26
+
+Spawning thread: 27
+
+Spawning thread: 56
+
+Spawning thread: 57
+
+Spawning thread: 58
+
+Spawning thread: 59
+
+Spawning thread: 28
+
+Spawning thread: 29
+
+Spawning thread: 60
+
+Spawning thread: 61
+
+Spawning thread: 62
+
+Spawning thread: 63
+
+Spawning thread: 30
+
+Spawning thread: 54
+
+Spawning thread: 55
+
+Spawning thread: 31
+/nPragma: 4
+
+N cilkfor-print_cilk :64
+
+Results cilkfor-print_cilk : (64) = 0
+
+Overall Time cilkfor-print_cilk  = 0.151454
+
+
+
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.177004,0.176739,1.0015,0.176777,1.00128
+64 threads -- >= 16 core
+GRAIN SIZE: 4
+
+Spawning thread: 0
+
+Spawning thread: 1
+
+Spawning thread: 2
+
+Spawning thread: 3
+
+Spawning thread: 4
+
+Spawning thread: 5
+
+Spawning thread: 6
+
+Spawning thread: 7
+
+Spawning thread: 8
+
+Spawning thread: 9
+
+Spawning thread: 10
+
+Spawning thread: 11
+
+Spawning thread: 12
+
+Spawning thread: 13
+
+Spawning thread: 14
+
+Spawning thread: 15
+
+Spawning thread: 16
+
+Spawning thread: 17
+
+Spawning thread: 18
+
+Spawning thread: 19
+
+Spawning thread: 20
+
+Spawning thread: 21
+
+Spawning thread: 22
+
+Spawning thread: 23
+
+Spawning thread: 24
+
+Spawning thread: 25
+
+Spawning thread: 26
+
+Spawning thread: 27
+
+Spawning thread: 28
+
+Spawning thread: 29
+
+Spawning thread: 32
+
+Spawning thread: 33
+
+Spawning thread: 34
+
+Spawning thread: 35
+
+Spawning thread: 30
+
+Spawning thread: 36
+
+Spawning thread: 37
+
+Spawning thread: 38
+
+Spawning thread: 39
+
+Spawning thread: 48
+
+Spawning thread: 49
+
+Spawning thread: 50
+
+Spawning thread: 51
+
+Spawning thread: 52
+
+Spawning thread: 53
+
+Spawning thread: 54
+
+Spawning thread: 55
+
+Spawning thread: 31
+
+Spawning thread: 56
+
+Spawning thread: 57
+
+Spawning thread: 40
+
+Spawning thread: 41
+
+Spawning thread: 42
+
+Spawning thread: 58
+
+Spawning thread: 59
+
+Spawning thread: 43
+
+Spawning thread: 44
+
+Spawning thread: 60
+
+Spawning thread: 45
+
+Spawning thread: 61
+
+Spawning thread: 46
+
+Spawning thread: 47
+
+Spawning thread: 62
+
+Spawning thread: 63
+/nPragma: 4
+
+N cilkfor-print_cilk :64
+
+Results cilkfor-print_cilk : (64) = 0
+
+Overall Time cilkfor-print_cilk  = 0.171981
+
+
+
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.197304,0.196987,1.00161,0.197024,1.00142
+64 threads -- >= 16 core
+GRAIN SIZE: 4
+
+Spawning thread: 0
+
+Spawning thread: 1
+
+Spawning thread: 2
+
+Spawning thread: 3
+
+Spawning thread: 4
+
+Spawning thread: 5
+
+Spawning thread: 6
+
+Spawning thread: 7
+
+Spawning thread: 8
+
+Spawning thread: 9
+
+Spawning thread: 10
+
+Spawning thread: 11
+
+Spawning thread: 12
+
+Spawning thread: 13
+
+Spawning thread: 14
+
+Spawning thread: 15
+
+Spawning thread: 16
+
+Spawning thread: 17
+
+Spawning thread: 18
+
+Spawning thread: 19
+
+Spawning thread: 20
+
+Spawning thread: 21
+
+Spawning thread: 22
+
+Spawning thread: 23
+
+Spawning thread: 32
+
+Spawning thread: 33
+
+Spawning thread: 34
+
+Spawning thread: 35
+
+Spawning thread: 36
+
+Spawning thread: 37
+
+Spawning thread: 38
+
+Spawning thread: 39
+
+Spawning thread: 24
+
+Spawning thread: 25
+
+Spawning thread: 26
+
+Spawning thread: 40
+
+Spawning thread: 41
+
+Spawning thread: 42
+
+Spawning thread: 27
+
+Spawning thread: 48
+
+Spawning thread: 49
+
+Spawning thread: 43
+
+Spawning thread: 50
+
+Spawning thread: 51
+
+Spawning thread: 52
+
+Spawning thread: 53
+
+Spawning thread: 54
+
+Spawning thread: 55
+
+Spawning thread: 28
+
+Spawning thread: 29
+
+Spawning thread: 56
+
+Spawning thread: 30
+
+Spawning thread: 57
+
+Spawning thread: 58
+
+Spawning thread: 59
+
+Spawning thread: 60
+
+Spawning thread: 44
+
+Spawning thread: 46
+
+Spawning thread: 47
+
+Spawning thread: 61
+
+Spawning thread: 31
+
+Spawning thread: 62
+
+Spawning thread: 63
+
+Spawning thread: 45
+/nPragma: 4
+
+N cilkfor-print_cilk :64
+
+Results cilkfor-print_cilk : (64) = 0
+
+Overall Time cilkfor-print_cilk  = 0.148588
+
+
+
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.173916,0.173572,1.00198,0.17361,1.00177
+64 threads -- >= 16 core
+GRAIN SIZE: 4
+
+Spawning thread: 0
+
+Spawning thread: 1
+
+Spawning thread: 2
+
+Spawning thread: 3
+
+Spawning thread: 4
+
+Spawning thread: 5
+
+Spawning thread: 6
+
+Spawning thread: 7
+
+Spawning thread: 8
+
+Spawning thread: 9
+
+Spawning thread: 10
+
+Spawning thread: 11
+
+Spawning thread: 12
+
+Spawning thread: 13
+
+Spawning thread: 14
+
+Spawning thread: 15
+
+Spawning thread: 16
+
+Spawning thread: 17
+
+Spawning thread: 18
+
+Spawning thread: 19
+
+Spawning thread: 20
+
+Spawning thread: 21
+
+Spawning thread: 22
+
+Spawning thread: 23
+
+Spawning thread: 32
+
+Spawning thread: 33
+
+Spawning thread: 34
+
+Spawning thread: 35
+
+Spawning thread: 36
+
+Spawning thread: 37
+
+Spawning thread: 38
+
+Spawning thread: 39
+
+Spawning thread: 40
+
+Spawning thread: 41
+
+Spawning thread: 42
+
+Spawning thread: 43
+
+Spawning thread: 44
+
+Spawning thread: 45
+
+Spawning thread: 46
+
+Spawning thread: 47
+
+Spawning thread: 48
+
+Spawning thread: 49
+
+Spawning thread: 24
+
+Spawning thread: 50
+
+Spawning thread: 25
+
+Spawning thread: 51
+
+Spawning thread: 26
+
+Spawning thread: 27
+
+Spawning thread: 56
+
+Spawning thread: 57
+
+Spawning thread: 58
+
+Spawning thread: 59
+
+Spawning thread: 52
+
+Spawning thread: 60
+
+Spawning thread: 61
+
+Spawning thread: 62
+
+Spawning thread: 63
+
+Spawning thread: 53
+
+Spawning thread: 54
+
+Spawning thread: 55
+
+Spawning thread: 28
+
+Spawning thread: 29
+
+Spawning thread: 30
+
+Spawning thread: 31
+/nPragma: 4
+
+N cilkfor-print_cilk :64
+
+Results cilkfor-print_cilk : (64) = 0
+
+Overall Time cilkfor-print_cilk  = 0.149481
+
+
+
+tag,work (seconds),span (seconds),parallelism,burdened_span (seconds),burdened_parallelism
+,0.174961,0.174754,1.00118,0.174792,1.00097
