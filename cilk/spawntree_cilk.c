@@ -82,7 +82,7 @@ int main(int argc, char *argv[]){
 	ctimer_stop(&t);
 	ctimer_measure(&t);
 
-    printf("D while_glblcntr_norace_cilk :%d\n", DEPTH);
+    printf("D spawntree_cilk :%d\n", DEPTH);
 	ctimer_print(t, "Overall Time spawntree_cilk :");
    
 	return 0;
