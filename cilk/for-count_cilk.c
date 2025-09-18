@@ -47,7 +47,7 @@ int main(int argc, char*argv[]){
     ctimer_measure(&t);
 
     printf("\nN for-count_cilk :%ld\n", n);
-    printf("Results for-count_cilk : %d: (%ld) = %ld\n", iter, n, result);
+    printf("Results for-count_cilk : (%ld) = %ld\n", n, result);
     ctimer_print(t, "Overall Time for-count_cilk :");
 
     printf("\n");
