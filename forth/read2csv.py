@@ -38,8 +38,8 @@ def txt_to_data(filename):
     runs = 5.0
 
     filedata = filename.split('/')
-    threads = filedata[2].split('_')[1]
-    iters = filedata[2].split('_')[2].split('.')[0]
+    threads = filedata[-1].split('_')[1]
+    iters = filedata[-1].split('_')[2].split('.')[0]
 
     print(filename)
     gs = 1
@@ -111,13 +111,13 @@ def panda_to_excel(avg_overalltime, avg_work,avg_span,avg_para, glblcnt, opcnt, 
     # forming dataframe 
     df = pandas.DataFrame(data=dct)  
 
-    reader = pandas.read_excel(ss, sheet_name=['Sheet1'])
+    reader = pandas.read_excel(ss, sheet_name=['Sheet6'])
 
     print(type(list(reader.values())[0]))
     print(len(reader),list(reader.values())[0].shape[0])
 
     writer = pandas.ExcelWriter(ss, mode='a',if_sheet_exists='overlay')
-    df.to_excel(writer, sheet_name='Sheet1', index=False, header=False,startrow=list(reader.values())[0].shape[0]+1)
+    df.to_excel(writer, sheet_name='Sheet6', index=False, header=False,startrow=list(reader.values())[0].shape[0]+1)
     writer.close()
 
     return
