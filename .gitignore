@@ -1,3 +1,8 @@
 cilk/array_competition.c
 cilk/forcnt2_cilk.c
 cilk/fib_cilk.c
+cilk/pragmacilkfor/output/*
+cilk/output*
+forth/output/*
+galahad-output/*
+ricky-bobby-output/*

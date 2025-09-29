@@ -66,9 +66,9 @@ def txt_to_data(filename):
     threads=1
     cores_gte=1
     overall_time=0.0
-    work_s = 0.0
-    span_s = 0.0
-    parallelism = 0
+    #work_s = 0.0
+    #span_s = 0.0
+    #parallelism = 0
 
     runs = 10.0
 
@@ -77,7 +77,8 @@ def txt_to_data(filename):
     paradigm = filedata[0]
 
     print(filename)
-    pragma = filename.split('+')[1].split('.')[0][1:]
+    #pragma = filename.split('+')[1].split('.')[0][1:]
+    pragma = 'X'
 
     print(benchmark, paradigm, pragma)
 
@@ -89,13 +90,14 @@ def txt_to_data(filename):
                 threads = int(data.strip().split(":")[1])
                 thread_flag = False
                 pass
-            elif data[0] == 'O': # Overall Time
+            elif data[0:6] == 'Time(O': # Overall Time
                 print(data)
-                overall_time += float(data.strip().split("=")[1].strip())
-            elif data[0] == ',':
-                work_s += float(data.strip().split(',')[1])
-                span_s += float(data.strip().split(',')[2])
-                parallelism += float(data.strip().split(',')[3])
+                overall_time += float(data.strip().split("=")[1].lstrip().split(" ")[0])
+                #overall_time += float(data.strip().split("=")[1].strip())
+            #elif data[0] == ',':
+            #    work_s += float(data.strip().split(',')[1])
+            #    span_s += float(data.strip().split(',')[2])
+            #    parallelism += float(data.strip().split(',')[3])
 
         if threads > 1:
             if threads < 4:
@@ -104,12 +106,12 @@ def txt_to_data(filename):
                 cores_gte = math.ceil(threads/4)
 
         avg_overalltime = float(float(overall_time)/runs)
-        avg_work = float(float(work_s)/runs)
-        avg_span = float(float(span_s)/runs)
-        avg_para = float(float(parallelism)/runs)
+        #avg_work = float(float(work_s)/runs)
+        #avg_span = float(float(span_s)/runs)
+        #avg_para = float(float(parallelism)/runs)
 
-        print(paradigm, benchmark, avg_overalltime, threads, cores_gte, runs, pragma,avg_work,avg_span,avg_para)
-        panda_to_excel(paradigm, benchmark, avg_overalltime, threads, cores_gte, runs,pragma, avg_work,avg_span,avg_para)
+        print(paradigm, benchmark, avg_overalltime, threads, cores_gte, runs)#, pragma,avg_work,avg_span,avg_para)
+        panda_to_excel(paradigm, benchmark, avg_overalltime, threads, cores_gte, runs)#,pragma, avg_work,avg_span,avg_para)
 
 
     std_dev_sum = 0
@@ -126,40 +128,40 @@ def txt_to_data(filename):
     print(f"Std dev of times in {filename}: {std_dev}")
 
 
-def panda_to_excel(paradigm, benchmark, avg_overalltime, threads, cores_gte, runs, pragma,avg_work,avg_span,avg_para):
+def panda_to_excel(paradigm, benchmark, avg_overalltime, threads, cores_gte, runs):#, pragma,avg_work,avg_span,avg_para):
     
-    device =  'Galahad' # 'MacBook Pro' #'Ricky Bobby' # 'Galahad' # 'Lucata' # 'RPi'
-    compiler = 'OPT/CLANG' #'XCRUN CLANG'
+    device =  'Galahad' #'MacBook Pro' # 'Galahad' # 'Lucata' # 'RPi' #'Ricky-Bobby'
+    compiler = 'OPT/CLANG' #'XCRUN CLANG' #'OPT/CLANG'
 
     # dictionary of data  
     dct = {'BENCHMARK': [benchmark], 
         'THREADS': [threads],
-        'PRAGMA': [pragma],  
         '>= CORES': [cores_gte],
         'PARADIGM': [paradigm], 
         'AVG. OVERALL TIME':[avg_overalltime],
-        'AVG. WORK':[avg_work],
-        'AVG SPAN':[avg_span],
-        'AVG_PARALLELISM:':[avg_para],
         '# RUNS':[runs],
         'DEVICE':[device],
         'COMPILER':[compiler],
     }
     #dct = [[b, th, c, p, avgtime,runs,device,compiler]] 
-    # 	AVG. TIME	# RUNS	DEVICE	COMPILER
+    # 	AVG. TIME	# RUNS	DEVICE	COMPILER 
+    #        'AVG. OVERALL TIME':[avg_overalltime], 'PRAGMA': [pragma],
+    #  'AVG. WORK':[avg_work],
+    #      'AVG SPAN':[avg_span],
+    # 'AVG_PARALLELISM:':[avg_para],
 
     ss = '~/Documents/Github/parallel_benchmarking/parallelbenchmarking_times.xlsx'
 
     # forming dataframe 
     df = pandas.DataFrame(data=dct)  
 
-    reader = pandas.read_excel(ss, sheet_name=['Sheet7'])
+    reader = pandas.read_excel(ss, sheet_name=['Sheet10'])
 
     print(type(list(reader.values())[0]))
     print(len(reader),list(reader.values())[0].shape[0])
 
     writer = pandas.ExcelWriter(ss, mode='a',if_sheet_exists='overlay')
-    df.to_excel(writer, sheet_name='Sheet7', index=False, header=False,startrow=list(reader.values())[0].shape[0]+1)
+    df.to_excel(writer, sheet_name='Sheet10', index=False, header=False,startrow=list(reader.values())[0].shape[0]+1)
     writer.close()
 
     return

@@ -40,8 +40,8 @@ int main(int argc, char *argv[]) {
 	ctimer_stop(&t);
 	ctimer_measure(&t);
 
-	printf("\nN for_cilk :%ld\n", n);
-	printf("\nResults for_cilk : (%ld) = %ld\n", n, result); // overall time
+	printf("\nN cilkfor-print_cilk :%ld\n", n);
+	printf("\nResults cilkfor-print_cilk : (%ld) = %ld\n", n, result); // overall time
 	ctimer_print(t, "Overall Time cilkfor-print_cilk :");
 
 

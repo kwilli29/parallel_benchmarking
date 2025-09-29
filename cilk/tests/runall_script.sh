@@ -4,10 +4,10 @@ make all
 
 EXECS=$(ls -p | grep -v / | grep -E '^.*_cilk$')
 
-THPCORE=4
-THREADS=(256 260 264 268 272 280 288 296 300 340 380 420 480 520 544 600 640 700 740 800 840 900 940 1000)
+THPCORE=10
+THREADS=(2 4 8 16 32 48 64 128 256 512 1000 1024 2048 16000)
 
-RUNS=100
+RUNS=10
 
 #for file in sample/*; do
 #    echo "$(basename "$file")"
@@ -19,7 +19,7 @@ RUNS=100
 
 for var in $EXECS; do
 	for num in "${THREADS[@]}"; do
-		touch "output/run3/$(basename "$var")/$(basename "$var")_$num.txt"
+		touch "output/run4/$(basename "$var")/$(basename "$var")_$num.txt"
 		for (( i=0; i<$RUNS; i++ )); do
 			# echo $(basename "$var")
 			if (($num/$THPCORE == 0)); then
@@ -27,8 +27,8 @@ for var in $EXECS; do
 			else
   				res=$(($num/$THPCORE))
 			fi
-			echo "$num threads -- >= $res core" >> output/run3/$(basename "$var")/$(basename "$var")_$num.txt
-			./$var $num >> output/run3/$(basename "$var")/$(basename "$var")_$num.txt
+			echo "$num threads -- >= $res core" >> output/run4/$(basename "$var")/$(basename "$var")_$num.txt
+			./$var $num >> output/run4/$(basename "$var")/$(basename "$var")_$num.txt
 		done
 		echo "$(basename "$var") thread $num done"
 	done
