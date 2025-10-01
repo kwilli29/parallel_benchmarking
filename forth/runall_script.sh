@@ -1,6 +1,6 @@
 #!/bin/sh
 
-make doozy
+make fib
 
 ITERATIONS=(36)
 THREADS=(2 4 8 16 32 48 64 128 256 512 1000 1024 2048 16000)
@@ -9,11 +9,11 @@ RUNS=5
 
 for th in "${THREADS[@]}"; do
     for num in "${ITERATIONS[@]}"; do
-        touch "output/run2/doozy_${th}_$num.txt"
+        touch "output/frun0/fib_${th}_$num.txt"
         for (( i=0; i<$RUNS; i++ )); do
             # echo $(basename "$var")
-            echo "$num iters" >> output/run2/doozy_${th}_$num.txt
-            NCILKWORKERS=$th ./doozy $num >> output/run2/doozy_${th}_$num.txt
+            echo "$num iters" >> output/frun0/fib_${th}_$num.txt
+            NCILKWORKERS=$th ./fib $num >> output/frun0/fib_${th}_$num.txt
         done
         echo "thread $num done"
     done
@@ -25,9 +25,9 @@ done
 make clean
 
 
-BDIR=$(ls -p output/run2/ | grep -v /)
+BDIR=$(ls -p output/frun0/ | grep -v /)
 echo $BDIR
 for bnchmrk in $BDIR; do
-    echo "add output/run2/$bnchmrk to sheet"
-    python3 ./read2csv.py output/run2/$bnchmrk
+    echo "add output/frun0/$bnchmrk to sheet"
+    python3 ./read2csv.py output/frun0/$bnchmrk
 done

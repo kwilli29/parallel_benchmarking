@@ -9,6 +9,8 @@ all: $(TARGETS)
 doozy: doozy.c
 #	$(CC) $(CFLAGS) -fcilktool=cilkscale-benchmark -o $@ $<
 	$(CC) $(CFLAGS) -fcilktool=cilkscale -o $@ $<
+fib: fib.c
+	$(CC) $(CFLAGS) -fcilktool=cilkscale -o $@ $<
 
 %:%.c
 	$(CC) $(CFLAGS) -o $@ $<

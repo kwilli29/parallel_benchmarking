@@ -9,9 +9,9 @@
 # done
 
 
-BDIR=$(ls -p ../galahad-output/grun0/ | grep -v /)
+BDIR=$(ls -p ../output/frun0/ | grep -v /)
 echo $BDIR
 for bnchmrk in $BDIR; do
-    echo "add output/run0/$bnchmrk to sheet"
-    python3 ./read2csv.py ../galahad-output/grun0/$bnchmrk
+    echo "add output/frun0/$bnchmrk to sheet"
+    python3 ./read2csv.py ../output/frun0/$bnchmrk
 done
