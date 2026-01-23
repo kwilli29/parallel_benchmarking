@@ -1,4 +1,0 @@
-serial -- == 1 core
-while global counter serial: (1000000) = 1000000
-Time(while global counter serial) = 0.000000380 sec
-

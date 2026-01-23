@@ -1,3 +1,0 @@
-serial -- == 1 core
-serial fib(10) = 55
-Time(fib) = 0.000001870 sec
