@@ -1,0 +1,35 @@
+TODO:
+
+- run all tests in a script or something, see if they work
+- format so it makes data collection easy
+- apply to other languages
+
+- make 01A_spawntime_after_sequential.c (Cilk) use ctimer / clockgettime
+- same with 01B_spawntime_after_cilkscope.c (Cilk)
+- probably will need to make this adjustment for literally all cilk files, at LEAST
+
+
+/* Benchmark: 
+ * 01A_spawntime_after_sequential_cilk.c (Cilk)
+ * 01B_spawntime_after_cilkscope_cilk.c (Cilk)
+ * 01C_spawntime_after_for_cilk.c (Cilk)
+ * 01D_spawntime_after_cilkfor_1_cilk.c (Cilk) // 1 = gs
+ * 
+ * 02A_spawntime_before_sequential_cilk.c (Cilk)
+ * 02B_spawntime_before_cilkscope_cilk.c (Cilk)
+ * 02C_spawntime_before_for_cilk.c (Cilk)
+ * 02D_spawntime_before_cilkfor_1_cilk.c (Cilk) // 1 = gs
+ *
+ * 03A_spawntime_beforeafter_sequential_cilk.c (Cilk) 
+ * 03B_spawntime_beforeafter_cilkscope_cilk.c (Cilk)
+ * 03C_spawntime_beforeafter_for_cilk.c (Cilk)
+ * 03D_spawntime_beforeafter_cilkfor_1_cilk.c (Cilk) // 1 = gs
+ *
+ * 04C_spawntime_beforefunc_for_cilk.c (Cilk)
+ *
+ * 05A_spawntime_window_cilk.c
+ *
+ * 06A_spawntree_cilk.c
+ *
+ * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+ */ 

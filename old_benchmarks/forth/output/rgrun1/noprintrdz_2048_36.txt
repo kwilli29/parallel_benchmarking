@@ -1,0 +1,15 @@
+36 iters
+tag,time (seconds)
+,0.330895
+36 iters
+tag,time (seconds)
+,0.365786
+36 iters
+tag,time (seconds)
+,0.33474
+36 iters
+tag,time (seconds)
+,0.378782
+36 iters
+tag,time (seconds)
+,0.314075

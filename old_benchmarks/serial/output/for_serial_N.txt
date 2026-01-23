@@ -1,0 +1,44 @@
+serial -- == 1 core
+
+Not spawning thread [serial]: 0
+threadroutine(0) = 0
+Time(threadroutine) = 0.000169310 sec
+
+Not spawning thread [serial]: 1
+threadroutine(1) = 0
+Time(threadroutine) = 0.000000770 sec
+
+Not spawning thread [serial]: 2
+threadroutine(2) = 0
+Time(threadroutine) = 0.000000590 sec
+
+Not spawning thread [serial]: 3
+threadroutine(3) = 0
+Time(threadroutine) = 0.000000560 sec
+
+Not spawning thread [serial]: 4
+threadroutine(4) = 0
+Time(threadroutine) = 0.000000520 sec
+
+Not spawning thread [serial]: 5
+threadroutine(5) = 0
+Time(threadroutine) = 0.000000520 sec
+
+Not spawning thread [serial]: 6
+threadroutine(6) = 0
+Time(threadroutine) = 0.000000520 sec
+
+Not spawning thread [serial]: 7
+threadroutine(7) = 0
+Time(threadroutine) = 0.000000520 sec
+
+Not spawning thread [serial]: 8
+threadroutine(8) = 0
+Time(threadroutine) = 0.000000510 sec
+
+Not spawning thread [serial]: 9
+threadroutine(9) = 0
+Time(threadroutine) = 0.000000530 sec
+
+for serial threadroutine overall(10) = 0
+Time(for serial threadroutine overall) = 0.000197600 sec

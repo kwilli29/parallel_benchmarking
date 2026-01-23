@@ -1,0 +1,3 @@
+- understand tasks vs individual spawns for openmp to see if there can be more variations like other languages
+
+- get # of spawns for openmp scripts
