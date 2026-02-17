@@ -16,6 +16,7 @@
 
 // printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
+#define NCILK __cilkrts_get_nworkers()
 
 struct timespec spawn_function(){           // Simple Function to Spawn
 
@@ -35,19 +36,18 @@ struct timespec spawn_function(){           // Simple Function to Spawn
 
 int main(int argc, char *argv[]){
 
-	int DEPTH = 271;
-
 	struct timespec t_start, t_res;
-	struct timespec t_end[DEPTH];
+	struct timespec t_end[NCILK-1];
+
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
 	#pragma cilk grainsize 1
-	cilk_for(int i=0; i < DEPTH; i++){ 	
+	cilk_for(int i=0; i < NCILK-1; i++){ 	
 		t_end[i] = cilk_spawn spawn_function();
 
 	}
 
-	for(int i = 0; i < DEPTH; i++){
+	for(int i = 0; i < NCILK-1; i++){
 		
 		timespec_sub(&t_res, t_end[i], t_start);
 

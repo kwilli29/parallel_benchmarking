@@ -4,24 +4,18 @@
 #include <stdint.h>
 #include <unistd.h>
 #include <string.h>
-#include <cilk/cilk.h>
-#include <cilk/cilkscale.h>
 #include <assert.h>
-#include "ctimer.h"
+#include <sys/time.h>
 #include <math.h>
+#include "ctimer.h"
 
-/* Benchmark: 04C: Spawn time before thread function begins ; For-Loop Spawns (Cilk) 
+/* Benchmark: 02C: Spawn time before ; For-Loop Spawns (Serial)
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
 
 // printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
-#define NCILK __cilkrts_get_nworkers()
-
-struct timespec spawn_function(){           // Simple Function to Spawn
-
-	struct timespec t_end;
-	clock_gettime(CLOCK_MONOTONIC, &t_end);
+void spawn_function(){           // Simple Function to Spawn
 
 	int x = 100; int y = 5000; int z = 1000000;
 
@@ -31,23 +25,25 @@ struct timespec spawn_function(){           // Simple Function to Spawn
 
 	z = z + y + x;	
 
-	return t_end; //  end_time; 
+	return; 
 }
 
 int main(int argc, char *argv[]){
 
-	struct timespec t_start, t_res; 
-	struct timespec t_end[NCILK-1];
+	int N = 272;
+
+	struct timespec t_start, t_res;
+	struct timespec t_end[N-1];
 
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
+	for(int i=0; i < N-1; i++){
+		
+		clock_gettime(CLOCK_MONOTONIC, &t_end[i]); spawn_function();
 
-	for(int i=0; i < NCILK-1; i++){ 	
-		t_end[i] = cilk_spawn spawn_function();
+	}
 
-	} 
-	
-	for(int i = 0; i < NCILK-1; i++){
+	for(int i = 0; i < N-1; i++){
 		
 		timespec_sub(&t_res, t_end[i], t_start);
 
@@ -55,12 +51,10 @@ int main(int argc, char *argv[]){
 	
 	}
 
-	// printf("04C\n");
-	
-	
-	// cilk_rts_getworker_number;
+	//printf("02C\n");
 
 	return 0;
 }
+
 
 

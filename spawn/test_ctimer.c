@@ -11,7 +11,7 @@
 #include <math.h>
 #include "ctimer.h"
 
-/* Benchmark: Launch Done (Cilk)
+/* Timer 
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
 

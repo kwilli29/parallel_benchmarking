@@ -1,8 +1,8 @@
 #!/bin/sh
 
 #make all
-make 01C
 
+#make 01C
 
 #echo "01A"
 #for ((i=0;i<10;i++)); 

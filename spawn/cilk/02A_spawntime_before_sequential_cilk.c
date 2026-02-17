@@ -17,6 +17,8 @@
 
 // printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
+#define NCILK __cilkrts_get_nworkers()
+
 void spawn_function(){           // Simple Function to Spawn
 
 	int x = 100; int y = 5000; int z = 1000000;
@@ -32,10 +34,8 @@ void spawn_function(){           // Simple Function to Spawn
 
 int main(int argc, char *argv[]){
 
-	int DEPTH = 271;
-
 	struct timespec t_start, t_res;
-	struct timespec t_end[DEPTH];
+	struct timespec t_end[NCILK-1];
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
 		clock_gettime(CLOCK_MONOTONIC, &t_end[0]); cilk_spawn spawn_function(); // Take time stamp before each spawn
@@ -391,7 +391,7 @@ int main(int argc, char *argv[]){
 
 		clock_gettime(CLOCK_MONOTONIC, &t_end[270]); cilk_spawn spawn_function(); // 271
 
-	for(int i = 0; i < DEPTH; i++){
+	for(int i = 0; i < NCILK-1; i++){
 		
 		timespec_sub(&t_res, t_end[i], t_start);
 

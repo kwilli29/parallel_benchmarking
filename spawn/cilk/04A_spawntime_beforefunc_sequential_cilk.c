@@ -15,9 +15,11 @@
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
 
+#define NCILK __cilkrts_get_nworkers()
+
 struct timespec spawn_function(){           // Simple Spawn Function
 
-	struct timespec t_end; 						  // ADD TIMER END !!!!
+	struct timespec t_end; 						  
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	int x = 100; int y = 5000; int z = 1000000;
@@ -32,11 +34,10 @@ struct timespec spawn_function(){           // Simple Spawn Function
 }
 
 int main(int argc, char *argv[]){
-	
-	int DEPTH = 271;
-
+		
 	struct timespec t_start, t_res;
-	struct timespec t_end[DEPTH];
+	struct timespec t_end[NCILK-1];
+
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
 	// cilk_scope{
@@ -400,11 +401,8 @@ int main(int argc, char *argv[]){
 
 	cilk_sync; // */
 
-	//ctimer_stop(&t);
-	//ctimer_measure(&t);
-	//ctimer_print(t, "01A");
 	
-	for(int i = 0; i < DEPTH; i++){
+	for(int i = 0; i < NCILK-1; i++){
 		
 		timespec_sub(&t_res, t_end[i], t_start);
 

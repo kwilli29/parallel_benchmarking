@@ -1,28 +1,28 @@
-CC=		/opt/opencilk-2/bin/clang 
-CFLAGS=		-fopencilk -O3 -Og -g # -Wall -Wextra -Wconversion -std=c11 -Werror -lm
+CC=		gcc 
+CFLAGS=		-O3 -Og -g -Wall -Wconversion -lm
 SOURCE=		$(wildcard *.c)
 TARGETS=	$(SOURCE:.c=)	
 
 EXECS := $(foreach s,$(TARGETS),$(shell echo $(basename $(s)) | cut -c1-3))
 
-all: $(TARGETS)
+build: $(TARGETS)
 
-01A: 01A_spawntime_after_sequential_cilk.c
-	$(CC) $(CFLAGS) 01A_spawntime_after_sequential_cilk.c -o 01A
+01A: 01A_spawntime_after_sequential_serial.c
+	$(CC) $(CFLAGS) 01A_spawntime_after_sequential_serial.c -o 01A
 
-01C: 01C_spawntime_after_for_cilk.c
-	$(CC) $(CFLAGS) -fcilktool=cilkscale 01C_spawntime_after_for_cilk.c -o 01C
+01C: 01C_spawntime_after_for_serial.c
+	$(CC) $(CFLAGS) 01C_spawntime_after_for_serial.c -o 01C
 
-01D: 01D_spawntime_after_cilkfor_1_cilk.c
-	$(CC) $(CFLAGS) -fcilktool=cilkscale 01D_spawntime_after_cilkfor_1_cilk.c -o 01D
+01D: 01D_spawntime_after_cilkfor_1_serial.c
+	$(CC) $(CFLAGS) 01D_spawntime_after_cilkfor_1_serial.c -o 01D
 
-05A: 05A_spawntime_window_cilk.c
-	$(CC) $(CFLAGS) 05A_spawntime_window_cilk.c -o 05A
+05A: 05A_spawntime_window_serial.c
+	$(CC) $(CFLAGS) 05A_spawntime_window_serial.c -o 05A
 
-04B: 04B_spawntime_beforefunc_cilkscope_cilk.c
-	$(CC) $(CFLAGS) 04B_spawntime_beforefunc_cilkscope_cilk.c -o 04B
+04B: 04B_spawntime_beforefunc_cilkscope_serial.c
+	$(CC) $(CFLAGS) 04B_spawntime_beforefunc_cilkscope_serial.c -o 04B
 
-build:
+all:
 	@for s in $(SOURCE); do \
 		name=$$(basename $$s); \
 		exe=$$(echo $$name | cut -c1-3); \

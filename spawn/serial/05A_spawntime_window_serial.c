@@ -4,13 +4,11 @@
 #include <stdint.h>
 #include <unistd.h>
 #include <string.h>
-#include <cilk/cilk.h>
-#include <cilk/cilkscale.h>
 #include <assert.h>
 #include <sys/time.h>
 #include <math.h>
 
-/* Benchmark: 05A: Spawn # Count in Window ; While-Loop (Cilk) 
+/* Benchmark: 05A: Spawn # Count in Window ; While-Loop (Serial) 
  * Launch a bunch in a time window and measure when all done  
  */
 
@@ -40,16 +38,14 @@ int main(int argc, char *argv[]){
 	gettimeofday(&t_start, NULL); // struct timespec *tp
 	gettimeofday(&t_end, NULL);	
 	
-	while( ( (t_end.tv_sec+ (double)t_end.tv_usec/1000000) - (t_start.tv_sec+(double)t_start.tv_usec/1000000)  ) < TIMER ){
+	while( ( ((double)t_end.tv_sec+ (double)t_end.tv_usec/1000000) - ((double)t_start.tv_sec+(double)t_start.tv_usec/1000000)  ) < TIMER ){
 	
-		cilk_spawn spawn_function(); // spawn function could also keep the count
+		spawn_function(); // spawn function could also keep the count
 
 		gettimeofday(&t_end, NULL);
 
 		counter+=1;
 	}
-
-	cilk_sync;
 
 	printf("%d\n", counter);
 	// printf("05A\n");

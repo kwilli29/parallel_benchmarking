@@ -1,27 +1,10 @@
-TARGETS = ldc ldp ldo lsc lsp lso lwc lwp lwo
+CC = gcc
+CFLAGS = -lm
+TARGETS = x
 
 all: $(TARGETS)
 
-ldc: launch_done_cilk2.c
-	/opt/opencilk-2/bin/clang -fopencilk -O3 -Og -g launch_done_cilk2.c -o ldc
-ldp: launch_done_pthreads.c
-	gcc -fopenmp -std=gnu99 -Wall -O3 -Og -g launch_done_pthreads.c -o ldp
-ldo: launch_done_openmp2.c
-	gcc -fopenmp -std=gnu99 -Wall -O3 -Og -g launch_done_openmp2.c -o ldo
 
-lsc: launch_start_cilk2.c
-	/opt/opencilk-2/bin/clang -fopencilk -O3 -Og -g launch_start_cilk2.c -o ldc
-lsp: launch_start_pthreads.c
-	gcc -fopenmp -std=gnu99 -Wall -O3 -Og -g launch_start_pthreads.c -o ldp
-lso: launch_start_openmp2.c
-	gcc -fopenmp -std=gnu99 -Wall -O3 -Og -g launch_start_openmp2.c -o ldo
-
-lwc: launch_done_cilk2.c
-	/opt/opencilk-2/bin/clang -fopencilk -O3 -Og -g launch_window_cilk.c -o ldc
-lwp: launch_done_pthreads.c
-	gcc -fopenmp -std=gnu99 -Wall -O3 -Og -g launch_window_pthreads.c -o ldp
-lwo: launch_done_openmp2.c
-	gcc -fopenmp -std=gnu99 -Wall -O3 -Og -g launch_window_openmp.c -o ldo
 
 #clang  -fopenmp -lomp -O3 -Og -g omp/fib_omp.c -o ompfib
 # 

@@ -3,29 +3,29 @@ CFLAGS=		-fopencilk -O3 -Og -g # -Wall -Wextra -Wconversion -std=c11 -Werror -lm
 SOURCE=		$(wildcard *.c)
 TARGETS=	$(SOURCE:.c=)	
 
-EXECS := $(foreach s,$(TARGETS),$(shell echo $(basename $(s)) | cut -c1-3))
+EXECS := $(foreach s,$(TARGETS),$(shell echo $(basename $(s)) | cut -c1-2))
 
-all: $(TARGETS)
+build: $(TARGETS)
 
-01A: 01A_spawntime_after_sequential_cilk.c
-	$(CC) $(CFLAGS) 01A_spawntime_after_sequential_cilk.c -o 01A
+At: Atest_cilk.c
+	$(CC) $(CFLAGS) Atest_cilk.c -o At
 
-01C: 01C_spawntime_after_for_cilk.c
-	$(CC) $(CFLAGS) -fcilktool=cilkscale 01C_spawntime_after_for_cilk.c -o 01C
+Ct: Ctest_cilk.c
+	$(CC) $(CFLAGS) Ctest_cilk.c -o Ct
 
-01D: 01D_spawntime_after_cilkfor_1_cilk.c
-	$(CC) $(CFLAGS) -fcilktool=cilkscale 01D_spawntime_after_cilkfor_1_cilk.c -o 01D
+Dt: Dtest_cilk.c
+	$(CC) $(CFLAGS) Dtest_cilk.c -o Dt
 
-05A: 05A_spawntime_window_cilk.c
-	$(CC) $(CFLAGS) 05A_spawntime_window_cilk.c -o 05A
+Et: Etest_cilk.c
+	$(CC) $(CFLAGS) Etest_cilk.c -o Et
 
-04B: 04B_spawntime_beforefunc_cilkscope_cilk.c
-	$(CC) $(CFLAGS) 04B_spawntime_beforefunc_cilkscope_cilk.c -o 04B
+Pt: Ptest_cilk.c
+	$(CC) $(CFLAGS) Ptest_cilk.c -o Pt
 
-build:
+all:
 	@for s in $(SOURCE); do \
 		name=$$(basename $$s); \
-		exe=$$(echo $$name | cut -c1-3); \
+		exe=$$(echo $$name | cut -c1-2); \
 		$(CC) $(CFLAGS) $$s -o $$exe; \
 	done
 

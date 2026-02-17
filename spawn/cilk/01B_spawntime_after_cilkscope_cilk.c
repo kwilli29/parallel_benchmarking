@@ -15,6 +15,8 @@
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
 
+#define NCILK __cilkrts_get_nworkers()
+
 void spawn_function(){           // Simple Spawn Function
 	int x = 100; int y = 5000; int z = 1000000;
 
