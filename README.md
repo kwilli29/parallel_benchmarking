@@ -1,9 +1,21 @@
 # Parallel Benchmarking
 
-# SPAWN
+## SPAWN
+  - Cilk
+  - Pthreads
+  - OpenMP
 
+## SYNC
+  - Cilk
 
-# OLD BENCHMARKS
+## SCOPE / PARALLEL REGION
+  - Cilk
+
+## PARALLEL_FOR
+
+## REDUCE
+
+## OLD BENCHMARKS
 
 Short benchmarks so far experimenting with cilk-spawn,cilk-for, reducers, and data races within the programming language of Cilk. 
 
