@@ -37,13 +37,10 @@ int main(int argc, char *argv[]){
 	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
-	// cilk_scope{
 		cilk_spawn spawn_function(); //if(NCILK-1 <= 0) { goto end; }
 		cilk_spawn spawn_function(); //if(NCILK-2 <= 0) { goto end; }
 		cilk_spawn spawn_function();
 		cilk_spawn spawn_function();
-		// workerNum = __cilkrts_get_worker_number();
-		// printf("The current worker number is %d. That's because we are running serially.\n",workerNum);
 
 		cilk_spawn spawn_function();
 		cilk_spawn spawn_function();
@@ -391,15 +388,14 @@ int main(int argc, char *argv[]){
 		cilk_spawn spawn_function();
 		cilk_spawn spawn_function(); //if(NCILK-270 <= 0) { goto end; } // 270
 
-		cilk_spawn spawn_function();
+		cilk_spawn spawn_function(); 		// 271
 		// cilk_spawn spawn_function();
 		// cilk_spawn spawn_function();
 
-   //}
 
 end: 
 
-	cilk_sync; // */
+	cilk_sync; 
 	
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
@@ -407,19 +403,6 @@ end:
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
 	//printf("01A\n");
-
-	
-	/*clock_gettime(CLOCK_MONOTONIC, &t_start);
-
-	for(int i=0; i<NCILK; i++){
-		cilk_spawn spawn_function();
-
-	}
-	
-	clock_gettime(CLOCK_MONOTONIC, &t_end);
-
-	timespec_sub(&t_res, t_end, t_start);
-	printf("%ld.%09ld\n\n", (long)t_res.tv_sec, t_res.tv_nsec);*/
 
 	return 0;
 }

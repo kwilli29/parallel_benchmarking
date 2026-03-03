@@ -41,12 +41,10 @@ int main(int argc, char *argv[]){
 
 	cilk_scope{
 
-		// { 
-		// 	time
-		// 	spawn
+		// {  time ; spawn ;
 		// }
 
-			{ clock_gettime(CLOCK_MONOTONIC, &t_end[0]); cilk_spawn spawn_function(); }
+		{ clock_gettime(CLOCK_MONOTONIC, &t_end[0]); cilk_spawn spawn_function(); }
 		{ // Take time stamp before each spawn
 		clock_gettime(CLOCK_MONOTONIC, &t_end[1]); cilk_spawn spawn_function(); }
 		{ clock_gettime(CLOCK_MONOTONIC, &t_end[2]); cilk_spawn spawn_function(); }

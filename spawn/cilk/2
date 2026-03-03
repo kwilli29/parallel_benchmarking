@@ -39,6 +39,10 @@ void spawn_function(){           // Simple Spawn Function
 
 	return; 
 }
+void spawn_node(int depcnt, int DEPTH, int id){
+    cilk_spawn runbench(depcnt+1, DEPTH); // cilk_spawn
+	 
+}
 
 void runbench(int depcnt, int DEPTH){
 

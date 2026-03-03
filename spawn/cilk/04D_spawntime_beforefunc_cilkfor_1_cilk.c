@@ -14,13 +14,15 @@
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
 
+// **** TIMER NEEDS TO BE ADJUSTED **** // 
+
 // printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
 #define NCILK __cilkrts_get_nworkers()
 
 struct timespec spawn_function(){           // Simple Function to Spawn
 
-	struct timespec t_end; // ADD TIME END
+	struct timespec t_end; 
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	int x = 100; int y = 5000; int z = 1000000;
@@ -58,7 +60,6 @@ int main(int argc, char *argv[]){
 
 	// printf("04D\n");
 	
-	// cilk_rts_getworker_number;
 
 	return 0;
 }

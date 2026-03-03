@@ -1,12 +1,6 @@
 TODO:
 
-- run all tests in a script or something, see if they work
-- format so it makes data collection easy
-- apply to other languages
-
-- make 01A_spawntime_after_sequential.c (Cilk) use ctimer / clockgettime
-- same with 01B_spawntime_after_cilkscope.c (Cilk)
-- probably will need to make this adjustment for literally all cilk files, at LEAST
+- 
 
 
 /* Benchmark: 

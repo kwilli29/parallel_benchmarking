@@ -23,7 +23,7 @@
 
 struct timespec spawn_function(int x){           // Simple Function to Spawn
 
-	struct timespec t_end; // ADD TIME END
+	struct timespec t_end; 
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	int y = 5000; int z = 1000000;
@@ -39,12 +39,14 @@ struct timespec spawn_function(int x){           // Simple Function to Spawn
 
 int main(int argc, char *argv[]){
 
+	int x = 100;
+
 	struct timespec t_start, t_res;
 	struct timespec t_end;
 
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 	
-	t_end = cilk_spawn spawn_function(100); 
+	t_end = cilk_spawn spawn_function(x); 
 	
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
@@ -53,14 +55,7 @@ int main(int argc, char *argv[]){
 	timespec_sub(&t_res, t_end, t_start);
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
-	// printf("01C\n");
+	// printf("04F\n");
 
 	return 0;
 }
-/* 
-wsp_t start = wsp_getworkspan();
-
-wsp_t end = wsp_getworkspan();
-wsp_t elapsed = wsp_sub(end, start);
-wsp_dump(elapsed, "");
-*/

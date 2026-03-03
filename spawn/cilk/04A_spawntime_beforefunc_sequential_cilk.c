@@ -15,6 +15,8 @@
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
 
+ // **** TIMER NEEDS TO BE ADJUSTED **** //
+
 #define NCILK __cilkrts_get_nworkers()
 
 struct timespec spawn_function(){           // Simple Spawn Function

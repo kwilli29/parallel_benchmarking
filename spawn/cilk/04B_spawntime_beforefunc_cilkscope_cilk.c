@@ -15,7 +15,9 @@
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
 
-#define NCILK __cilkrts_get_nworkers() // trying to edit the # of threads will make t_end wonky
+// **** TIMER NEEDS TO BE ADJUSTED **** //
+
+#define NCILK __cilkrts_get_nworkers() // trying to edit the # of threads will make t_end not work
 
 struct timespec spawn_function(){           // Simple Spawn Function
 

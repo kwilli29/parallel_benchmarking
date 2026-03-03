@@ -20,8 +20,8 @@
 // printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
 
-void spawn_function(int x, int y){           // Simple Spawn Function
-	int z = 1000000;
+void spawn_function(int x){           // Simple Spawn Function
+	int y=5000; int z = 1000000;
 
 	x = x + y + z;
 
@@ -34,11 +34,13 @@ void spawn_function(int x, int y){           // Simple Spawn Function
 
 
 int main(int argc, char *argv[]){
+	
+	int x = 100;
 
 	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 	
-	cilk_spawn spawn_function(100, 5000); 
+	cilk_spawn spawn_function(x); 
 	
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
@@ -47,14 +49,7 @@ int main(int argc, char *argv[]){
 	timespec_sub(&t_res, t_end, t_start);
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
-	// printf("01C\n");
+	// printf("01F\n");
 
 	return 0;
 }
-/* 
-wsp_t start = wsp_getworkspan();
-
-wsp_t end = wsp_getworkspan();
-wsp_t elapsed = wsp_sub(end, start);
-wsp_dump(elapsed, "");
-*/

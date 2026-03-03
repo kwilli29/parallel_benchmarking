@@ -44,8 +44,6 @@ int main(int argc, char *argv[]){
 	#pragma cilk grainsize 1
 	cilk_for(int i = 0; i < NCILK-1; i++){
 		spawn_function();
-		// workerNum = __cilkrts_get_worker_number();
-		// printf("The current worker number is %d. \n",workerNum); 
 	} 
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end);

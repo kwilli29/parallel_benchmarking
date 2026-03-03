@@ -14,6 +14,8 @@
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
 
+// **** TIMER NEEDS TO BE ADJUSTED **** //
+
 // printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
 #define NCILK __cilkrts_get_nworkers()
@@ -58,9 +60,6 @@ int main(int argc, char *argv[]){
 
 	// printf("04C\n");
 	
-	
-	// cilk_rts_getworker_number;
-
 	return 0;
 }
 
