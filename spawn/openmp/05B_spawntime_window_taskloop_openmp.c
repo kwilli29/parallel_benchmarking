@@ -9,7 +9,7 @@
 #include <sys/time.h>
 #include <math.h>
 
-/* Benchmark: 05A: Spawn count in time window ; While-Loop Task Loop (OpenMP)
+/* Benchmark: 05A: Spawn count in time window ; While-Loop (OpenMP)
  * **this test is not really representative of how openmp is used
  * Launch a bunch in a time window and measure when all done  
  *
@@ -43,22 +43,19 @@ int main(int argc, char *argv[]){
 	gettimeofday(&t_end, NULL);	
 
 
-	#pragma omp parallel
-	{
-		#pragma omp single
-		{
+ #pragma omp parallel
+ {
 	
-			while( ( (t_end.tv_sec+ (double)t_end.tv_usec/1000000) - (t_start.tv_sec+(double)t_start.tv_usec/1000000)  ) < TIMER ){
+	while( ( (t_end.tv_sec+ (double)t_end.tv_usec/1000000) - (t_start.tv_sec+(double)t_start.tv_usec/1000000)  ) < TIMER ){
 
-				#pragma omp task
-				spawn_function();
+		#pragma omp task
+		spawn_function();
 
-				gettimeofday(&t_end, NULL);
-				counter+=1;
-			}
-
-		}
+		gettimeofday(&t_end, NULL);
+		counter+=1;
 	}
+
+ }
 
 	printf("%d\n", counter);
 

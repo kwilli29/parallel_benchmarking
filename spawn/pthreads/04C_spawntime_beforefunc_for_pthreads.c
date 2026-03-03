@@ -17,7 +17,7 @@
 
 pthread_barrier_t sync_barrier; /* to sync */
 
-void* spawn_function(void *t_end){           // Simple Math for Spawn Function
+void* spawn_function(void* t_end){           // Simple Math for Spawn Function
 
 	clock_gettime(CLOCK_MONOTONIC, (struct timespec *)t_end);
 
@@ -39,30 +39,41 @@ int main(int argc, char *argv[]){
 
 	int DEPTH = 271;
 
-	struct timespec t_start, t_res;
-	struct timespec t_end[DEPTH];
+	int ds, rc;
+	pthread_attr_t attr;
 
-	clock_gettime(CLOCK_MONOTONIC, &t_start);
+	rc = pthread_attr_init(&attr);
+	if (rc == -1) { perror("error in pthread_attr_init"); exit(1); }
 
-	/****/ 
+	ds = 1;
+	rc = pthread_attr_setdetachstate(&attr, ds);
+	if (rc == -1) { perror("error in pthread_attr_setdetachstate"); exit(2); }
 
 	pthread_t Threads[ DEPTH ];
 
-	// pthread_barrier_init ?
-	pthread_barrier_init(&sync_barrier, NULL, DEPTH);
+	// pthread_barrier_init
+	pthread_barrier_init(&sync_barrier, NULL, DEPTH+1);
+
+	struct timespec t_start, t_res;
+	struct timespec t_end[DEPTH];
+	clock_gettime(CLOCK_MONOTONIC, &t_start);	
+
+	/****/ 
 
 	for( int i = 0; i < DEPTH; i++ ) {                                     // # seq. for only
 		//int status = pthread_create( &Threads[ i ], NULL, spawn_function, NULL);
-		pthread_create( &Threads[ i ], NULL, spawn_function,(void*) &t_end[i]);
+		pthread_create( &Threads[ i ], NULL, spawn_function,(void*)&t_end[i]);
 	}
-
-	for(int i = 0; i < DEPTH; i++){
-		 pthread_join( Threads[i], NULL);
-	}
-
-	// pthread_destroy_barrier ?
-	pthread_barrier_destroy(&sync_barrier); // sync all threads before getting endtime
 	
+	// each thread waits until all threads have hit the barrier, then they all return
+	pthread_barrier_wait(&sync_barrier);
+
+	// pthread_destroy_barrier
+	pthread_barrier_destroy(&sync_barrier);
+
+	// destroy attr
+	pthread_attr_destroy(&attr);
+
 	for(int i = 0; i < DEPTH; i++){
 
 		timespec_sub(&t_res, t_end[i], t_start);

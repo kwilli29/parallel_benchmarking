@@ -49,7 +49,7 @@ int main(int argc, char *argv[]){
 		gettimeofday(&t_end, NULL);
 		counter+=1;
 
-		pthread_join(Threads[counter-1], NULL);	
+		// pthread_join(Threads[counter-1], NULL);	
 	}
 
 	for(int i = 0; i < counter; i++){

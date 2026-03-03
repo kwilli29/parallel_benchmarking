@@ -26,7 +26,7 @@ void* spawn_function(){           // Simple Math for Spawn Function
 
 	z = z + y + x;	
 
-	// pthread_barrier_wait ?
+	// pthread_barrier_wait 
 	pthread_barrier_wait(&sync_barrier);
 
 	return (void*) NULL; 
@@ -36,16 +36,25 @@ int main(int argc, char *argv[]){
 
 	int DEPTH = 271;
 
-	struct timespec t_start, t_res;
-	struct timespec t_end[DEPTH];
-	clock_gettime(CLOCK_MONOTONIC, &t_start);	
+	int ds, rc;
+	pthread_attr_t attr;
 
-	/****/ 
+	rc = pthread_attr_init(&attr);
+	if (rc == -1) { perror("error in pthread_attr_init"); exit(1); }
+
+	ds = 1;
+	rc = pthread_attr_setdetachstate(&attr, ds);
+	if (rc == -1) { perror("error in pthread_attr_setdetachstate"); exit(2); }
 
 	pthread_t Threads[ DEPTH ];
 
-	// pthread_barrier_init 
-	pthread_barrier_init(&sync_barrier, NULL, DEPTH);
+	// pthread_barrier_init
+	pthread_barrier_init(&sync_barrier, NULL, DEPTH+1);
+
+	struct timespec t_start, t_res, t_end;
+	clock_gettime(CLOCK_MONOTONIC, &t_start);	
+
+	/****/ 
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end[0]); pthread_create( &Threads[ 0 ], NULL, spawn_function, NULL);
 	clock_gettime(CLOCK_MONOTONIC, &t_end[1]); pthread_create( &Threads[ 1 ], NULL, spawn_function, NULL);
@@ -348,310 +357,15 @@ int main(int argc, char *argv[]){
 	// clock_gettime(CLOCK_MONOTONIC, &t_end[271]); pthread_create( &Threads[ 271 ], NULL, spawn_function, NULL); // 272
 	// clock_gettime(CLOCK_MONOTONIC, &t_end[272]); pthread_create( &Threads[ 272 ], NULL, spawn_function, NULL);
 
-	pthread_join(Threads[ 0 ], NULL);
-	pthread_join(Threads[ 1 ], NULL);
-	pthread_join(Threads[ 2 ], NULL);
-	pthread_join(Threads[ 3 ], NULL);
-	pthread_join(Threads[ 4 ], NULL);
-	pthread_join(Threads[ 5 ], NULL);
-	pthread_join(Threads[ 6 ], NULL);
-	pthread_join(Threads[ 7 ], NULL);
-	pthread_join(Threads[ 8 ], NULL);
-	pthread_join(Threads[ 9 ], NULL); // 10
+	// each thread waits until all threads have hit the barrier, then they all return
+	pthread_barrier_wait(&sync_barrier);
 
-	pthread_join(Threads[ 10 ], NULL);
-	pthread_join(Threads[ 11 ], NULL);
-	pthread_join(Threads[ 12 ], NULL);
-	pthread_join(Threads[ 13 ], NULL);
-	pthread_join(Threads[ 14 ], NULL);
-	pthread_join(Threads[ 15 ], NULL);
-	pthread_join(Threads[ 16 ], NULL);
-	pthread_join(Threads[ 17 ], NULL);
-	pthread_join(Threads[ 18 ], NULL);
-	pthread_join(Threads[ 19 ], NULL); // 20
+	// pthread_destroy_barrier
+	pthread_barrier_destroy(&sync_barrier);
 
-	pthread_join(Threads[ 20 ], NULL);
-	pthread_join(Threads[ 21 ], NULL);
-	pthread_join(Threads[ 22 ], NULL);
-	pthread_join(Threads[ 23 ], NULL);
-	pthread_join(Threads[ 24 ], NULL);
-	pthread_join(Threads[ 25 ], NULL);
-	pthread_join(Threads[ 26 ], NULL);
-	pthread_join(Threads[ 27 ], NULL);
-	pthread_join(Threads[ 28 ], NULL);
-	pthread_join(Threads[ 29 ], NULL); // 30
+	// destroy attr
+	pthread_attr_destroy(&attr);
 
-	pthread_join(Threads[ 30 ], NULL);
-	pthread_join(Threads[ 31 ], NULL);
-	pthread_join(Threads[ 32 ], NULL);
-	pthread_join(Threads[ 33 ], NULL);
-	pthread_join(Threads[ 34 ], NULL);
-	pthread_join(Threads[ 35 ], NULL);
-	pthread_join(Threads[ 36 ], NULL);
-	pthread_join(Threads[ 37 ], NULL);
-	pthread_join(Threads[ 38 ], NULL);
-	pthread_join(Threads[ 39 ], NULL); // 40
-
-	pthread_join(Threads[ 40 ], NULL);
-	pthread_join(Threads[ 41 ], NULL);
-	pthread_join(Threads[ 42 ], NULL);
-	pthread_join(Threads[ 43 ], NULL);
-	pthread_join(Threads[ 44 ], NULL);
-	pthread_join(Threads[ 45 ], NULL);
-	pthread_join(Threads[ 46 ], NULL);
-	pthread_join(Threads[ 47 ], NULL);
-	pthread_join(Threads[ 48 ], NULL);
-	pthread_join(Threads[ 49 ], NULL); // 50
-
-	pthread_join(Threads[ 50 ], NULL);
-	pthread_join(Threads[ 51 ], NULL);
-	pthread_join(Threads[ 52 ], NULL);
-	pthread_join(Threads[ 53 ], NULL);
-	pthread_join(Threads[ 54 ], NULL);
-	pthread_join(Threads[ 55 ], NULL);
-	pthread_join(Threads[ 56 ], NULL);
-	pthread_join(Threads[ 57 ], NULL);
-	pthread_join(Threads[ 58 ], NULL);
-	pthread_join(Threads[ 59 ], NULL); // 60
-
-	pthread_join(Threads[ 60 ], NULL);
-	pthread_join(Threads[ 61 ], NULL);
-	pthread_join(Threads[ 62 ], NULL);
-	pthread_join(Threads[ 63 ], NULL);
-	pthread_join(Threads[ 64 ], NULL);
-	pthread_join(Threads[ 65 ], NULL);
-	pthread_join(Threads[ 66 ], NULL);
-	pthread_join(Threads[ 67 ], NULL);
-	pthread_join(Threads[ 68 ], NULL);
-	pthread_join(Threads[ 69 ], NULL); // 70
-
-	pthread_join(Threads[ 70 ], NULL);
-	pthread_join(Threads[ 71 ], NULL);
-	pthread_join(Threads[ 72 ], NULL);
-	pthread_join(Threads[ 73 ], NULL);
-	pthread_join(Threads[ 74 ], NULL);
-	pthread_join(Threads[ 75 ], NULL);
-	pthread_join(Threads[ 76 ], NULL);
-	pthread_join(Threads[ 77 ], NULL);
-	pthread_join(Threads[ 78 ], NULL);
-	pthread_join(Threads[ 79 ], NULL); // 80
-
-	pthread_join(Threads[ 80 ], NULL);
-	pthread_join(Threads[ 81 ], NULL);
-	pthread_join(Threads[ 82 ], NULL);
-	pthread_join(Threads[ 83 ], NULL);
-	pthread_join(Threads[ 84 ], NULL);
-	pthread_join(Threads[ 85 ], NULL);
-	pthread_join(Threads[ 86 ], NULL);
-	pthread_join(Threads[ 87 ], NULL);
-	pthread_join(Threads[ 88 ], NULL);
-	pthread_join(Threads[ 89 ], NULL); // 90
-
-	pthread_join(Threads[ 90 ], NULL);
-	pthread_join(Threads[ 91 ], NULL);
-	pthread_join(Threads[ 92 ], NULL);
-	pthread_join(Threads[ 93 ], NULL);
-	pthread_join(Threads[ 94 ], NULL);
-	pthread_join(Threads[ 95 ], NULL);
-	pthread_join(Threads[ 96 ], NULL);
-	pthread_join(Threads[ 97 ], NULL);
-	pthread_join(Threads[ 98 ], NULL);
-	pthread_join(Threads[ 99 ], NULL); // 100
-
-	pthread_join(Threads[ 100 ], NULL);
-	pthread_join(Threads[ 101 ], NULL);
-	pthread_join(Threads[ 102 ], NULL);
-	pthread_join(Threads[ 103 ], NULL);
-	pthread_join(Threads[ 104 ], NULL);
-	pthread_join(Threads[ 105 ], NULL);
-	pthread_join(Threads[ 106 ], NULL);
-	pthread_join(Threads[ 107 ], NULL);
-	pthread_join(Threads[ 108 ], NULL);
-	pthread_join(Threads[ 109 ], NULL); // 110
-
-	pthread_join(Threads[ 110 ], NULL);
-	pthread_join(Threads[ 111 ], NULL);
-	pthread_join(Threads[ 112 ], NULL);
-	pthread_join(Threads[ 113 ], NULL);
-	pthread_join(Threads[ 114 ], NULL);
-	pthread_join(Threads[ 115 ], NULL);
-	pthread_join(Threads[ 116 ], NULL);
-	pthread_join(Threads[ 117 ], NULL);
-	pthread_join(Threads[ 118 ], NULL);
-	pthread_join(Threads[ 119 ], NULL); // 120
-
-	pthread_join(Threads[ 120 ], NULL);
-	pthread_join(Threads[ 121 ], NULL);
-	pthread_join(Threads[ 122 ], NULL);
-	pthread_join(Threads[ 123 ], NULL);
-	pthread_join(Threads[ 124 ], NULL);
-	pthread_join(Threads[ 125 ], NULL);
-	pthread_join(Threads[ 126 ], NULL);
-	pthread_join(Threads[ 127 ], NULL);
-	pthread_join(Threads[ 128 ], NULL);
-	pthread_join(Threads[ 129 ], NULL); // 130
-
-	pthread_join(Threads[ 130 ], NULL);
-	pthread_join(Threads[ 131 ], NULL);
-	pthread_join(Threads[ 132 ], NULL);
-	pthread_join(Threads[ 133 ], NULL);
-	pthread_join(Threads[ 134 ], NULL);
-	pthread_join(Threads[ 135 ], NULL);
-	pthread_join(Threads[ 136 ], NULL);
-	pthread_join(Threads[ 137 ], NULL);
-	pthread_join(Threads[ 138 ], NULL);
-	pthread_join(Threads[ 139 ], NULL); // 140
-
-	pthread_join(Threads[ 140 ], NULL);
-	pthread_join(Threads[ 141 ], NULL);
-	pthread_join(Threads[ 142 ], NULL);
-	pthread_join(Threads[ 143 ], NULL);
-	pthread_join(Threads[ 144 ], NULL);
-	pthread_join(Threads[ 145 ], NULL);
-	pthread_join(Threads[ 146 ], NULL);
-	pthread_join(Threads[ 147 ], NULL);
-	pthread_join(Threads[ 148 ], NULL);
-	pthread_join(Threads[ 149 ], NULL); // 150
-
-	pthread_join(Threads[ 150 ], NULL);
-	pthread_join(Threads[ 151 ], NULL);
-	pthread_join(Threads[ 152 ], NULL);
-	pthread_join(Threads[ 153 ], NULL);
-	pthread_join(Threads[ 154 ], NULL);
-	pthread_join(Threads[ 155 ], NULL);
-	pthread_join(Threads[ 156 ], NULL);
-	pthread_join(Threads[ 157 ], NULL);
-	pthread_join(Threads[ 158 ], NULL);
-	pthread_join(Threads[ 159 ], NULL); // 160
-
-	pthread_join(Threads[ 160 ], NULL);
-	pthread_join(Threads[ 161 ], NULL);
-	pthread_join(Threads[ 162 ], NULL);
-	pthread_join(Threads[ 163 ], NULL);
-	pthread_join(Threads[ 164 ], NULL);
-	pthread_join(Threads[ 165 ], NULL);
-	pthread_join(Threads[ 166 ], NULL);
-	pthread_join(Threads[ 167 ], NULL);
-	pthread_join(Threads[ 168 ], NULL);
-	pthread_join(Threads[ 169 ], NULL); // 170
-
-	pthread_join(Threads[ 170 ], NULL);
-	pthread_join(Threads[ 171 ], NULL);
-	pthread_join(Threads[ 172 ], NULL);
-	pthread_join(Threads[ 173 ], NULL);
-	pthread_join(Threads[ 174 ], NULL);
-	pthread_join(Threads[ 175 ], NULL);
-	pthread_join(Threads[ 176 ], NULL);
-	pthread_join(Threads[ 177 ], NULL);
-	pthread_join(Threads[ 178 ], NULL);
-	pthread_join(Threads[ 179 ], NULL); // 180
-
-	pthread_join(Threads[ 180 ], NULL);
-	pthread_join(Threads[ 181 ], NULL);
-	pthread_join(Threads[ 182 ], NULL);
-	pthread_join(Threads[ 183 ], NULL);
-	pthread_join(Threads[ 184 ], NULL);
-	pthread_join(Threads[ 185 ], NULL);
-	pthread_join(Threads[ 186 ], NULL);
-	pthread_join(Threads[ 187 ], NULL);
-	pthread_join(Threads[ 188 ], NULL);
-	pthread_join(Threads[ 189 ], NULL); // 190
-
-	pthread_join(Threads[ 190 ], NULL);
-	pthread_join(Threads[ 191 ], NULL);
-	pthread_join(Threads[ 192 ], NULL);
-	pthread_join(Threads[ 193 ], NULL);
-	pthread_join(Threads[ 194 ], NULL);
-	pthread_join(Threads[ 195 ], NULL);
-	pthread_join(Threads[ 196 ], NULL);
-	pthread_join(Threads[ 197 ], NULL);
-	pthread_join(Threads[ 198 ], NULL);
-	pthread_join(Threads[ 199 ], NULL); // 200
-
-	pthread_join(Threads[ 200 ], NULL);
-	pthread_join(Threads[ 201 ], NULL);
-	pthread_join(Threads[ 202 ], NULL);
-	pthread_join(Threads[ 203 ], NULL);
-	pthread_join(Threads[ 204 ], NULL);
-	pthread_join(Threads[ 205 ], NULL);
-	pthread_join(Threads[ 206 ], NULL);
-	pthread_join(Threads[ 207 ], NULL);
-	pthread_join(Threads[ 208 ], NULL);
-	pthread_join(Threads[ 209 ], NULL); // 210
-
-	pthread_join(Threads[ 210 ], NULL);
-	pthread_join(Threads[ 211 ], NULL);
-	pthread_join(Threads[ 212 ], NULL);
-	pthread_join(Threads[ 213 ], NULL);
-	pthread_join(Threads[ 214 ], NULL);
-	pthread_join(Threads[ 215 ], NULL);
-	pthread_join(Threads[ 216 ], NULL);
-	pthread_join(Threads[ 217 ], NULL);
-	pthread_join(Threads[ 218 ], NULL);
-	pthread_join(Threads[ 219 ], NULL); // 220
-
-	pthread_join(Threads[ 220 ], NULL);
-	pthread_join(Threads[ 221 ], NULL);
-	pthread_join(Threads[ 222 ], NULL);
-	pthread_join(Threads[ 223 ], NULL);
-	pthread_join(Threads[ 224 ], NULL);
-	pthread_join(Threads[ 225 ], NULL);
-	pthread_join(Threads[ 226 ], NULL);
-	pthread_join(Threads[ 227 ], NULL);
-	pthread_join(Threads[ 228 ], NULL);
-	pthread_join(Threads[ 229 ], NULL); // 230
-
-	pthread_join(Threads[ 230 ], NULL);
-	pthread_join(Threads[ 231 ], NULL);
-	pthread_join(Threads[ 232 ], NULL);
-	pthread_join(Threads[ 233 ], NULL);
-	pthread_join(Threads[ 234 ], NULL);
-	pthread_join(Threads[ 235 ], NULL);
-	pthread_join(Threads[ 236 ], NULL);
-	pthread_join(Threads[ 237 ], NULL);
-	pthread_join(Threads[ 238 ], NULL);
-	pthread_join(Threads[ 239 ], NULL); // 240
-
-	pthread_join(Threads[ 240 ], NULL);
-	pthread_join(Threads[ 241 ], NULL);
-	pthread_join(Threads[ 242 ], NULL);
-	pthread_join(Threads[ 243 ], NULL);
-	pthread_join(Threads[ 244 ], NULL);
-	pthread_join(Threads[ 245 ], NULL);
-	pthread_join(Threads[ 246 ], NULL);
-	pthread_join(Threads[ 247 ], NULL);
-	pthread_join(Threads[ 248 ], NULL);
-	pthread_join(Threads[ 249 ], NULL); // 250
-
-	pthread_join(Threads[ 250 ], NULL);
-	pthread_join(Threads[ 251 ], NULL);
-	pthread_join(Threads[ 252 ], NULL);
-	pthread_join(Threads[ 253 ], NULL);
-	pthread_join(Threads[ 254 ], NULL);
-	pthread_join(Threads[ 255 ], NULL);
-	pthread_join(Threads[ 256 ], NULL);
-	pthread_join(Threads[ 257 ], NULL);
-	pthread_join(Threads[ 258 ], NULL);
-	pthread_join(Threads[ 259 ], NULL); // 260
-
-	pthread_join(Threads[ 260 ], NULL);
-	pthread_join(Threads[ 261 ], NULL);
-	pthread_join(Threads[ 262 ], NULL);
-	pthread_join(Threads[ 263 ], NULL);
-	pthread_join(Threads[ 264 ], NULL);
-	pthread_join(Threads[ 265 ], NULL);
-	pthread_join(Threads[ 266 ], NULL);
-	pthread_join(Threads[ 267 ], NULL);
-	pthread_join(Threads[ 268 ], NULL);
-	pthread_join(Threads[ 269 ], NULL); // 270
-
-	pthread_join(Threads[ 270 ], NULL);
-	// pthread_join(Threads[ 271 ], NULL); // 272
-	// pthread_join(Threads[ 272 ], NULL);	
-	
-	// pthread_destroy_barrier ?
-	pthread_barrier_destroy(&sync_barrier); // sync all threads before getting endtime
-	
 	for(int i = 0; i < DEPTH; i++){
 
 		timespec_sub(&t_res, t_end[i], t_start);
@@ -663,4 +377,3 @@ int main(int argc, char *argv[]){
 		
 	return 0;
 }
-

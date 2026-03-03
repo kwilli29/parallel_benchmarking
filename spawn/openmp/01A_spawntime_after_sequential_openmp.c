@@ -11,6 +11,7 @@
 
 /* Benchmark: 01A: Spawn time after ; Sequential Spawns (OpenMP)
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+ * This is NOT how OpenMP is meant to be used
  */
 
 void spawn_function(){           // Simple Spawn Function
@@ -33,6 +34,10 @@ int main(int argc, char *argv[]){
 
 	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+
+	#pragma omp parallel
+	#pragma omp single   // one threads 'allocates' tasks to other threads
+	{
 
 	// 
 	#pragma omp task
@@ -929,6 +934,7 @@ int main(int argc, char *argv[]){
 	#pragma omp task
 		spawn_function(); // 271
 
+	}	
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 

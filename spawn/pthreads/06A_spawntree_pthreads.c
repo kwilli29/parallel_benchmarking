@@ -60,11 +60,11 @@ void runbench(int depcnt){ //
 
 int main(int argc, char *argv[]){
 
+	int depcnt = 0;
+
 	struct timespec t_start, t_res, t_end;
    clock_gettime(CLOCK_MONOTONIC, &t_start);
 
-	int depcnt = 0;
-	
 	runbench(depcnt); // Main Thread
 		
    clock_gettime(CLOCK_MONOTONIC, &t_end);

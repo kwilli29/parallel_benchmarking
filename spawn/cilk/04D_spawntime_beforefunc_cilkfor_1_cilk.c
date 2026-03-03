@@ -5,7 +5,7 @@
 #include <unistd.h>
 #include <string.h>
 #include <cilk/cilk.h>
-#include <cilk/cilkscale.h>
+#include <cilk/cilk_api.h>
 #include <assert.h>
 #include "ctimer.h"
 #include <math.h>
@@ -47,13 +47,14 @@ int main(int argc, char *argv[]){
 
 	}
 
+	printf("****\n");
 	for(int i = 0; i < NCILK-1; i++){
 		
 		timespec_sub(&t_res, t_end[i], t_start);
 
 		printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
-	} 
+	}
 
 	// printf("04D\n");
 	

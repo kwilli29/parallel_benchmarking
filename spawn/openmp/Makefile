@@ -16,6 +16,40 @@ all: $(TARGETS)
 06A: 06A_spawntree.openmp.c 
 	$(CC) $(CFLAGS) 06A_spawntree.openmp.c  -o 06A
 
+1:
+	@for s in $(wildcard 01*.c); do \
+		name=$$(basename $$s); \
+		exe=$$(echo $$name | cut -c1-3); \
+		$(CC) $(CFLAGS) $$s -o $$exe; \
+	done
+2:
+	@for s in $(wildcard 02*.c); do \
+		name=$$(basename $$s); \
+		exe=$$(echo $$name | cut -c1-3); \
+		$(CC) $(CFLAGS) $$s -o $$exe; \
+	done
+
+
+4:
+	@for s in $(wildcard 04*.c); do \
+		name=$$(basename $$s); \
+		exe=$$(echo $$name | cut -c1-3); \
+		$(CC) $(CFLAGS) $$s -o $$exe; \
+	done
+5:
+	@for s in $(wildcard 05*.c); do \
+		name=$$(basename $$s); \
+		exe=$$(echo $$name | cut -c1-3); \
+		$(CC) $(CFLAGS) $$s -o $$exe; \
+	done
+6:
+	@for s in $(wildcard 06*.c); do \
+		name=$$(basename $$s); \
+		exe=$$(echo $$name | cut -c1-3); \
+		$(CC) $(CFLAGS) $$s -o $$exe; \
+	done
+
+
 build:
 	@for s in $(SOURCE); do \
 		name=$$(basename $$s); \
@@ -37,4 +71,4 @@ build:
 #  export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
 
 clean:
-	rm -f $(TARGETS) $(EXECS) *.s *.o *_.c lib*.so lib*.a
+	rm -f $(EXECS) *.s *.o *_.c lib*.so lib*.a

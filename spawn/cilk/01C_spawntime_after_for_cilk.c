@@ -35,24 +35,18 @@ void spawn_function(){           // Simple Spawn Function
 
 int main(int argc, char *argv[]){
 
-	wsp_t start = wsp_getworkspan();
-
-	//struct timespec t_start, t_res, t_end;
-	//clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+	struct timespec t_start, t_res, t_end;
+	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 	
 	for(int i = 0; i < NCILK-1; i++){
 		cilk_spawn spawn_function(); 
 	}
  	
-	//clock_gettime(CLOCK_MONOTONIC, &t_end);
-	//timespec_sub(&t_res, t_end, t_start);
-	//printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+	clock_gettime(CLOCK_MONOTONIC, &t_end);
+	timespec_sub(&t_res, t_end, t_start);
+	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
 	// printf("01C\n");
-
-	wsp_t end = wsp_getworkspan();
-	wsp_t elapsed = wsp_sub(end, start);
-	wsp_dump(elapsed, "1C FOR CILK");
 
 	return 0;
 }

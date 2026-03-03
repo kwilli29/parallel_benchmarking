@@ -37,12 +37,9 @@ void spawn_function(){           // Simple Spawn Function
 
 int main(int argc, char *argv[]){
 
-	int workerNum = 0;
 
-	wsp_t start = wsp_getworkspan();
-
- 	//struct timespec t_start, t_res, t_end;
-	//clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+ 	struct timespec t_start, t_res, t_end;
+	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
 	#pragma cilk grainsize 1
 	cilk_for(int i = 0; i < NCILK-1; i++){
@@ -51,15 +48,10 @@ int main(int argc, char *argv[]){
 		// printf("The current worker number is %d. \n",workerNum); 
 	} 
 
-	//clock_gettime(CLOCK_MONOTONIC, &t_end);
+	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
-	//timespec_sub(&t_res, t_end, t_start);
-	//printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
-
-
-	wsp_t end = wsp_getworkspan();
-	wsp_t elapsed = wsp_sub(end, start);
-	wsp_dump(elapsed, "01D_spawn_cilkfor");
+	timespec_sub(&t_res, t_end, t_start);
+	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
 	// printf("01D\n");
 

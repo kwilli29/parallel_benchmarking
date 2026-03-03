@@ -391,7 +391,7 @@ int main(int argc, char *argv[]){
 
 	t_end[270] = spawn_function(); // 271
 
-	
+	printf("****\n");	
 	for(int i = 0; i < N-1; i++){
 		
 		timespec_sub(&t_res, t_end[i], t_start);

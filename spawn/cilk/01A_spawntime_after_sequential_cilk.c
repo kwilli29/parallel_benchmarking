@@ -32,10 +32,8 @@ void spawn_function(){           // Simple Spawn Function
 
 int main(int argc, char *argv[]){
 
-	printf("%d\n", NCILK);
+	//printf("%d\n", NCILK);
 
-	int cntr = NCILK;
-	
 	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 

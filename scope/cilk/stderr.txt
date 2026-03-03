@@ -1,0 +1,31 @@
+02C_scope_for_cilk.c:33:23: warning: '__cilkrts_get_worker_number' is deprecated [-Wdeprecated-declarations]
+        printf("%d hello\n", __cilkrts_get_worker_number());
+                             ^
+/opt/opencilk-2/lib/clang/16/include/cilk/cilk_api.h:17:59: note: '__cilkrts_get_worker_number' has been explicitly marked deprecated here
+unsigned __cilkrts_get_worker_number(void) __attribute__((deprecated));
+                                                          ^
+02C_scope_for_cilk.c:37:20: warning: '__cilkrts_get_worker_number' is deprecated [-Wdeprecated-declarations]
+        printf("%d hi\n", __cilkrts_get_worker_number());
+                          ^
+/opt/opencilk-2/lib/clang/16/include/cilk/cilk_api.h:17:59: note: '__cilkrts_get_worker_number' has been explicitly marked deprecated here
+unsigned __cilkrts_get_worker_number(void) __attribute__((deprecated));
+                                                          ^
+02C_scope_for_cilk.c:41:26: warning: '__cilkrts_get_worker_number' is deprecated [-Wdeprecated-declarations]
+        printf("%d greetings\n",__cilkrts_get_worker_number());
+                                ^
+/opt/opencilk-2/lib/clang/16/include/cilk/cilk_api.h:17:59: note: '__cilkrts_get_worker_number' has been explicitly marked deprecated here
+unsigned __cilkrts_get_worker_number(void) __attribute__((deprecated));
+                                                          ^
+02C_scope_for_cilk.c:45:25: warning: '__cilkrts_get_worker_number' is deprecated [-Wdeprecated-declarations]
+        printf("%d welcome\n", __cilkrts_get_worker_number());
+                               ^
+/opt/opencilk-2/lib/clang/16/include/cilk/cilk_api.h:17:59: note: '__cilkrts_get_worker_number' has been explicitly marked deprecated here
+unsigned __cilkrts_get_worker_number(void) __attribute__((deprecated));
+                                                          ^
+02C_scope_for_cilk.c:50:24: warning: '__cilkrts_get_worker_number' is deprecated [-Wdeprecated-declarations]
+        printf("%d byebye\n", __cilkrts_get_worker_number());
+                              ^
+/opt/opencilk-2/lib/clang/16/include/cilk/cilk_api.h:17:59: note: '__cilkrts_get_worker_number' has been explicitly marked deprecated here
+unsigned __cilkrts_get_worker_number(void) __attribute__((deprecated));
+                                                          ^
+5 warnings generated.

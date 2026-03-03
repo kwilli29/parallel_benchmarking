@@ -43,6 +43,7 @@ int main(int argc, char *argv[]){
 
 	}
 
+	printf("****\n");
 	for(int i = 0; i < N-1; i++){
 		
 		timespec_sub(&t_res, t_end[i], t_start);
@@ -55,6 +56,3 @@ int main(int argc, char *argv[]){
 
 	return 0;
 }
-
-
-

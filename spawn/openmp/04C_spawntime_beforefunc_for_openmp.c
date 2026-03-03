@@ -45,12 +45,13 @@ int main(int argc, char *argv[]){
 	{
 		#pragma omp single
 		{
-			for(int i = 0; i < DEPTH; i++){	
+			for(int i = 0; i < DEPTH; i++){
+				#pragma omp task	
 				t_end[i] = spawn_function(); 
 			} 
 		}
 	}
-
+	printf("****\n");
 	for(int i = 0; i < DEPTH; i++){
 
 		timespec_sub(&t_res, t_end[i], t_start);

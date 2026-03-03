@@ -33,11 +33,11 @@ int main(int argc, char *argv[]){
 	struct timespec t_start, t_res, t_end;
 
 	int N = 272;
-	int innerreps = 1000;
+	//int innerreps = 1000;
 
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 	
-	for(int i = 0; i < innerreps; i++){
+	for(int i = 0; i < N; i++){
 		spawn_function(); 
 	}
  	
@@ -52,5 +52,4 @@ int main(int argc, char *argv[]){
 
 	return 0;
 }
-
 

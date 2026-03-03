@@ -5,7 +5,7 @@
 #include <unistd.h>
 #include <string.h>
 #include <cilk/cilk.h>
-#include <cilk/cilkscale.h>
+#include <cilk/cilk_api.h>
 #include <assert.h>
 #include <sys/time.h>
 #include <math.h>
@@ -391,6 +391,7 @@ int main(int argc, char *argv[]){
 
 		clock_gettime(CLOCK_MONOTONIC, &t_end[270]); cilk_spawn spawn_function(); // 271
 
+	printf("****\n");
 	for(int i = 0; i < NCILK-1; i++){
 		
 		timespec_sub(&t_res, t_end[i], t_start);
@@ -398,8 +399,7 @@ int main(int argc, char *argv[]){
 		printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 	
 	}
-
-
+	
 	// printf("02A\n");
 	
 	return 0;

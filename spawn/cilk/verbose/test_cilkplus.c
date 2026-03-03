@@ -76,7 +76,29 @@ int main(int argc, char *argv[]){
 
 	printf("\n");
 
-	fcn();	
+	//fcn();	
+	
+	printf("scope:\n");
 
+	struct timespec ts, te;
+	clock_gettime(CLOCK_MONOTONIC, &ts); // struct timespec *tp
+
+	//long k, l;
+	long k[2];
+	cilk_scope{
+		k[0] = cilk_spawn do_work(10);
+		k[1] = cilk_spawn do_work(55);
+
+	}
+	clock_gettime(CLOCK_MONOTONIC, &te);
+
+	printf("%ld %ld\n", k[0], k[1]);
+
+	printf("fcn %ld.%09ld ", (long)te.tv_sec, te.tv_nsec);
+	
+	float ti = ((te.tv_nsec+0.000000000)/(1000000000)) ;
+	
+	printf("%.09lf\n", ti);
+		
 	return 0;
 }

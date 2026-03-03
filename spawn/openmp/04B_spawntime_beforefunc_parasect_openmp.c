@@ -42,8 +42,6 @@ int main(int argc, char *argv[]){
 
  #pragma omp parallel
  {
-  #pragma omp single
-  {
 	#pragma omp task
 	t_end[0] = spawn_function(); // Take time stamp before each spawn
 	#pragma omp task
@@ -667,9 +665,9 @@ int main(int argc, char *argv[]){
 
 	#pragma omp task
 	t_end[270] = spawn_function(); // 271
-  }
+
  }
-	
+	printf("****\n");	
 	for(int i = 0; i < DEPTH; i++){
 
 		timespec_sub(&t_res, t_end[i], t_start);
@@ -680,5 +678,3 @@ int main(int argc, char *argv[]){
 
 	return 0;
 }
-
-
