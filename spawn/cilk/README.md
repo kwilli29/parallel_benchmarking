@@ -18,7 +18,7 @@
 
   **Time metric: Time between spawns**
 
-## 04: Measure time at the start of the spawned function ** timer needs to be adjusted
+## 04: Measure time at the start of the spawned function
   - A: Individual cilk_spawn calls made sequentially
   - B: Individual cilk_spawn calls made within a cilk_scope parallel region
   - C: Regular for-loop cilk_spawn calls
@@ -26,7 +26,7 @@
   - E: Time 1 spawn call
   - F: Time 1 spawn call with a function argument
 
-  **Time metric: Time between spawn and function start ** needs to be adjusted**
+  **Time metric: Time between spawn and function start
 
 ## 05: Have a timer run for 2.0 seconds and call spawn & increment counter within loop
   - A: cilk_spawn called within a while loop
