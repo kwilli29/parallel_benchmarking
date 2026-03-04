@@ -6,6 +6,12 @@ TARGETS=	$(SOURCE:.c=)
 EXECS := $(foreach s,$(TARGETS),$(shell echo $(basename $(s)) | cut -c1-3))
 
 all: $(TARGETS)
+
+04E: 04E_spawntime_beforefunc_one_pthreads.c
+	$(CC) $(CFLAGS) 04E_spawntime_beforefunc_one_pthreads.c -o 04E
+04F: 04F_spawntime_beforefunc_oneargs_pthreads.c
+	$(CC) $(CFLAGS) 04F_spawntime_beforefunc_oneargs_pthreads.c -o 04F
+
 1:
 	@for s in $(wildcard 01*.c); do \
 		name=$$(basename $$s); \
@@ -65,4 +71,4 @@ build:
 #  export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
 
 clean:
-	rm -f $(TARGETS) $(EXECS) *.s *.o *_.c lib*.so lib*.a
+	rm -f $(EXECS) *.s *.o *_.c lib*.so lib*.a

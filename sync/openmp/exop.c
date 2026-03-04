@@ -45,7 +45,6 @@ int main2(){ // int argc, char *argv[]){
 	#pragma omp parallel for schedule (static, 1) // grainsize
 	for(int i = 0; i < DEPTH; i++){
 		spawn_function(i, t_start); 
-		// how to time the end of the *last thread * to complete
 	} 
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
@@ -76,7 +75,7 @@ int main(int argc, char *argv[]) {
 		{
 			clock_gettime(CLOCK_MONOTONIC, &t_end1[0]);
 
-			//#pragma omp task
+			#pragma omp task
 			spawn_function(0, t_end1[0]);
 		}
 
@@ -84,7 +83,7 @@ int main(int argc, char *argv[]) {
 		{
 			clock_gettime(CLOCK_MONOTONIC, &t_end1[1]);
 
-			//#pragma omp task
+			#pragma omp task
 			spawn_function(1, t_end1[1]);
 		}
 		
@@ -92,7 +91,7 @@ int main(int argc, char *argv[]) {
 		{
 			clock_gettime(CLOCK_MONOTONIC, &t_end1[2]);
 
-	 		//#pragma omp task
+	 		#pragma omp task
 			spawn_function(2, t_end1[2]);
 		}
 
@@ -100,7 +99,7 @@ int main(int argc, char *argv[]) {
 		{
 			clock_gettime(CLOCK_MONOTONIC, &t_end1[3]);
  		
-			//#pragma omp task
+			#pragma omp task
 			spawn_function(3, t_end1[3]);
 		}
 
@@ -108,7 +107,7 @@ int main(int argc, char *argv[]) {
 		{
 			clock_gettime(CLOCK_MONOTONIC, &t_end1[4]);
  	
-			//#pragma omp task
+			#pragma omp task
 			spawn_function(4, t_end1[4]);
 		}
  	} // End of parallel region

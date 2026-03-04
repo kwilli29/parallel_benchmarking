@@ -45,7 +45,7 @@ int main(int argc, char *argv[]){
 	}
 
 	for( int i = 0; i < DEPTH; i++ ) {                                     // # seq. for only
-		pthread_join( &Threads[ i ], NULL);
+		pthread_join( Threads[ i ], NULL);
 	}
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end);

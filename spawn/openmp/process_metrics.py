@@ -57,15 +57,18 @@ def thread_metrics(filename, runs):
 
     return
 
-def short_metrics(filename, runs):
+def short_metrics(filename):
     # METRICS
     AVG = 0.0
+    linecnt = 0
 
     with open(filename, 'r') as file:
         for line in file:
-            AVG += float(line.strip())
+            if line:
+                AVG += float(line.strip())
+                linecnt += 1
 
-    AVG = (AVG / float(runs))
+    AVG = (AVG / float(linecnt))
     
     AVG = AVG*1000000000.0
    
@@ -75,14 +78,14 @@ def short_metrics(filename, runs):
 
 def main():
         
-    if sys.argv[3] == '2' or sys.argv[3] == '4':
+    if sys.argv[3] == '2': #or sys.argv[3] == '4':
         long_metrics(sys.argv[2],sys.argv[1])
 
     elif sys.argv[3] == '5':
         thread_metrics(sys.argv[2],sys.argv[1])
 
     else:
-        short_metrics(sys.argv[2],sys.argv[1])
+        short_metrics(sys.argv[2])
 
     return
 

@@ -15,9 +15,9 @@
 
 // printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
-struct timespec t_end; 
+static struct timespec t_end; 
 
-void* spawn_function(void * x){           // Simple Math for Spawn Function
+void* spawn_function(void* x){           // Simple Math for Spawn Function
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
@@ -29,23 +29,13 @@ void* spawn_function(void * x){           // Simple Math for Spawn Function
 
 	z = z + y + *(int *)x;	
 
-
-	return (void*)NULL; 
+	return (void*)&t_end; 
 }
 
 int main(int argc, char *argv[]){
 
 	int x = 100;
-
-	int ds, rc;
-	pthread_attr_t attr;
-
-	rc = pthread_attr_init(&attr);
-	if (rc == -1) { perror("error in pthread_attr_init"); exit(1); }
-
-	ds = 1;
-	rc = pthread_attr_setdetachstate(&attr, ds);
-	if (rc == -1) { perror("error in pthread_attr_setdetachstate"); exit(2); }
+	int* xp= &x;
 
 	pthread_t Thread;
 
@@ -55,16 +45,15 @@ int main(int argc, char *argv[]){
 	/****/ 
 
 	//int status = pthread_create( &Threads[ i ], NULL, spawn_function, NULL);
-	pthread_create( &Thread, NULL, spawn_function,(void*)&x);
+	clock_gettime(CLOCK_MONOTONIC, &t_start);
+	pthread_create( &Thread, NULL, spawn_function, xp);
+
+	struct timespec* temp = &t_end;
 	
-
+	pthread_join(Thread, (void *)&temp);
 	
-
-	clock_gettime(CLOCK_MONOTONIC, &t_end);
-
-	// destroy attr
-	pthread_attr_destroy(&attr);
-
+	//printf("\n%p\n", &t_end);	
+	//printf("%ld\n", t_end.tv_sec);
 
 	timespec_sub(&t_res, t_end, t_start);
 

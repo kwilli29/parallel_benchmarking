@@ -17,9 +17,9 @@
 
 pthread_barrier_t sync_barrier; /* to sync */
 
-void* spawn_function(int x){           // Simple Math for Spawn Function
+void* spawn_function(void * xp){           // Simple Math for Spawn Function
 	
-	int y = 5000; int z = 1000000;
+	int x = (int)(intptr_t)xp; int y = 5000; int z = 1000000;
 
 	x = x + y + z;
 
@@ -33,6 +33,7 @@ void* spawn_function(int x){           // Simple Math for Spawn Function
 int main(int argc, char *argv[]){
 
 	int x = 100;
+	int* xp = &x;
 
 	int ds, rc;
 	pthread_attr_t attr;
@@ -52,7 +53,7 @@ int main(int argc, char *argv[]){
 
 	/****/ 
 
-	pthread_create( &Thread, &attr, spawn_function, (void *)(size_t)x);
+	pthread_create( &Thread, &attr, spawn_function, (void *)(intptr_t) xp);
 
 	// sync?
 

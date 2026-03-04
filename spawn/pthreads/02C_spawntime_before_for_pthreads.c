@@ -51,15 +51,11 @@ int main(int argc, char *argv[]){
 	// pthread_barrier_init
 	pthread_barrier_init(&sync_barrier, NULL, DEPTH+1);
 
-	struct timespec t_start, t_res, t_end;
+	struct timespec t_start, t_res;
+	struct timespec t_end[DEPTH];
 	clock_gettime(CLOCK_MONOTONIC, &t_start);
 
 	/****/ 
-
-	pthread_t Threads[ DEPTH ];
-
-	// pthread_barrier_init 
-	pthread_barrier_init(&sync_barrier, NULL, DEPTH);
 
 	for( int i = 0; i < DEPTH; i++ ) {                                     // # seq. for only
 		clock_gettime(CLOCK_MONOTONIC, &t_end[i]);
@@ -74,7 +70,9 @@ int main(int argc, char *argv[]){
 
 	// destroy attr
 	pthread_attr_destroy(&attr);
-	
+
+
+	printf("****\n");	
 	for(int i = 0; i < DEPTH; i++){
 
 		timespec_sub(&t_res, t_end[i], t_start);

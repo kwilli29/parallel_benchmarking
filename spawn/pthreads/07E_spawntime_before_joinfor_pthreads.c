@@ -33,12 +33,10 @@ int main(int argc, char *argv[]){
 
 	pthread_t Threads[ DEPTH ];
 
-	struct timespec t_start, t_res; struct timspec t_end[DEPTH];
+	struct timespec t_start, t_res; struct timespec t_end[DEPTH];
 	clock_gettime(CLOCK_MONOTONIC, &t_start);
 
 	/****/ 
-
-	pthread_t Threads[ DEPTH ];
 
 	for( int i = 0; i < DEPTH; i++ ) {                                     // # seq. for only
 		clock_gettime(CLOCK_MONOTONIC, &t_end[i]);
@@ -46,7 +44,7 @@ int main(int argc, char *argv[]){
 	}
 
 	for( int i = 0; i < DEPTH; i++ ) {                                     // # seq. for only
-		pthread_join( &Threads[ i ],NULL);
+		pthread_join( Threads[ i ],NULL);
 	}
 
 

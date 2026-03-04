@@ -145,12 +145,6 @@ echo "Starting benchmark on 07_'s"
 	# E
 	run_programs 7 E 0
 
-	# G
-	run_programs 7 G 0
-
-	# F 
-	run_programs 7 F 0
-
 	# Cleanup
 	make clean
 

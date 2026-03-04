@@ -35,19 +35,17 @@ int main(int argc, char *argv[]){
 
 	int DEPTH = 271;
 
-	struct timespec t_start, t_res;
+	struct timespec t_start[DEPTH]; struct timespec t_res;
 	struct timespec t_end[DEPTH];
-
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
 	#pragma omp parallel for schedule (static, 1) // grainsize
 	for(int i = 0; i < DEPTH; i++){	
-		t_end[i] = spawn_function(); 
+		clock_gettime(CLOCK_MONOTONIC, &t_start[i]); t_end[i] = spawn_function(); 
 	} 
-	printf("****\n");
+	// printf("****\n");
 	for(int i = 0; i < DEPTH; i++){
 
-		timespec_sub(&t_res, t_end[i], t_start);
+		timespec_sub(&t_res, t_end[i], t_start[i]);
 
 		printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 	

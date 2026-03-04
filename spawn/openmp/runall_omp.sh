@@ -46,6 +46,7 @@ run_programs() { # ex. 1 A 0
 }
 
 make clean
+'''
 ###############################
 
 echo "Starting benchmark on 01_'s"
@@ -103,7 +104,7 @@ echo ""
 #echo "Cleanup 03_'s"
 #echo ""
 ###############################
-
+'''
 echo "Starting benchmark on 04_'s"
 
 	# A
@@ -130,7 +131,7 @@ echo "Starting benchmark on 04_'s"
 echo "Cleanup 04_'s"
 echo ""
 ###############################
-
+'''
 echo "Starting benchmark on 05_'s"
 
 	# A 
@@ -158,3 +159,4 @@ echo "Starting benchmark on 06_'s"
 echo "Cleanup 06_'s"
 echo ""
 ###############################
+'''
