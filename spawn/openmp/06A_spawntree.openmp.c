@@ -53,14 +53,14 @@ void runbench(int depcnt, int DEPTH){
 
 		#pragma omp parallel
 		{
-			//#pragma omp single
-			//{
-				//#pragma omp task
+			#pragma omp single
+			{
+				#pragma omp task
             spawn_node(depcnt, DEPTH, 1); // spawn nodes in parallel
 				
-				//#pragma omp task
+				#pragma omp task
             spawn_node(depcnt, DEPTH, 2);
-			//}
+			}
       }     // all spawned children must complete before proceeding
 	}
 
