@@ -20,7 +20,7 @@
   - E: Time 1 spawn call
   - F: Time 1 spawn call with a function argument
 
-  **Time metric: Time between right before spawn and function start
+  **Time metric: Time between right before spawn and function start**
 
 ## 05: Have a timer run for 2.0 seconds and call spawn & increment counter within loop
   - A: pthread_create called within a while loop
