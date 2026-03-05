@@ -16,6 +16,9 @@ all: $(TARGETS)
 02G: 02G_spawntime_before_taskloop_openmp.c
 	$(CC) $(CFLAGS) 02G_spawntime_before_taskloop_openmp.c -o 02G
 
+04G: 04G_spawntime_beforefunc_taskloop_openmp.c
+	$(CC) $(CFLAGS) 04G_spawntime_beforefunc_taskloop_openmp.c -o 04G
+
 06A: 06A_spawntree.openmp.c 
 	$(CC) $(CFLAGS) 06A_spawntree.openmp.c  -o 06A
 
