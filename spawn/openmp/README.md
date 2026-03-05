@@ -7,6 +7,7 @@
   - D: Parallel for-loop calls the function. Grainsize = 1, Schedule=static
   - E: Time 1 spawn task call
   - F: Time 1 spawn task call with a function argument
+  - G: Single thread uses taskloop to parallelize the operations in the for loop, Grainsize = 1, simd
 
   **Time metric: overall time**
 
@@ -15,6 +16,8 @@
   - B: Parallel region executes task groups to measure the itme them spawn a task function
   - C: Single thread runs a regular for-loop which measures the time the spawns tasks
   - D: Parallel for-loop calls the function. Grainsize = 1, Schedule=static
+  - F: Time 1 spawn task call with a function argument
+  - G: Single thread uses taskloop to parallelize the operations in the for loop, Grainsize = 1, simd
 
   **Time metric: Time between spawns**
 
@@ -25,6 +28,8 @@
   - D: Parallel for-loop calls the function. Grainsize = 1, Schedule=static
   - E: Time 1 spawn task call
   - F: Time 1 spawn task call with a function argument
+  - F: Time 1 spawn task call with a function argument
+  - G: Single thread uses taskloop to parallelize the operations in the for loop, Grainsize = 1, simd
 
   **Time metric: Time between spawn and function start**
 

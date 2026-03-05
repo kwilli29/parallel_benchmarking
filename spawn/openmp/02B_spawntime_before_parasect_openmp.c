@@ -17,10 +17,7 @@
 
 // printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
-struct timespec spawn_function(){           // Simple Function to Spawn
-
-	struct timespec t_end;
-	clock_gettime(CLOCK_MONOTONIC, &t_end);
+void spawn_function(){           // Simple Function to Spawn
 
 	int x = 100; int y = 5000; int z = 1000000;
 
@@ -30,7 +27,7 @@ struct timespec spawn_function(){           // Simple Function to Spawn
 
 	z = z + y + x;	
 
-	return t_end; 
+	return; 
 }
 
 int main(int argc, char *argv[]){

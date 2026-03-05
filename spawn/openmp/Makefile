@@ -13,6 +13,9 @@ all: $(TARGETS)
 02B: 02B_spawntime_before_parasect_openmp.c
 	$(CC) $(CFLAGS) 02B_spawntime_before_parasect_openmp.c -o 02B
 
+02G: 02G_spawntime_before_taskloop_openmp.c
+	$(CC) $(CFLAGS) 02G_spawntime_before_taskloop_openmp.c -o 02G
+
 06A: 06A_spawntree.openmp.c 
 	$(CC) $(CFLAGS) 06A_spawntree.openmp.c  -o 06A
 

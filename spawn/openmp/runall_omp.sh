@@ -60,6 +60,7 @@ echo "Starting benchmark on 01_'s"
 	# C
 	run_programs 1 C 0
 
+
 	# D
 	run_programs 1 D 0
 
@@ -68,6 +69,9 @@ echo "Starting benchmark on 01_'s"
 
 	# F
 	run_programs 1 F 0
+
+	# G
+	run_programs 1 G 0
 
 	# Cleanup
 	make clean
@@ -91,6 +95,9 @@ echo "Starting benchmark on 02_'s"
 
 	# D
 	run_programs 2 D 0
+
+	# G
+	run_programs 2 G 0
 
 	# Cleanup
 	make clean
@@ -124,6 +131,9 @@ echo "Starting benchmark on 04_'s"
 
 	# F -- make sure it runs the single print process
 	run_programs 4 F 0
+
+	# G
+	run_programs 4 G 0
 
 	# Cleanup
 	make clean

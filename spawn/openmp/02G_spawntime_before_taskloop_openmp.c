@@ -9,7 +9,7 @@
 #include "ctimer.h"
 #include <math.h>
 
-/* Benchmark: 02C: Spawn time before ; For-Loop Para. Sects. Spawns (OpenMP)
+/* Benchmark: 02G: Spawn time before ; Taskloop For-Loop Spawns (OpenMP)
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
 
@@ -37,19 +37,14 @@ int main(int argc, char *argv[]){
 
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
-	// #pragma omp parallel for schedule (static, 1) // grainsize
-	#pragma omp parallel 
-	{
-		#pragma omp single
-		{
-			for(int i = 0; i < DEPTH; i++){
-				
-				clock_gettime(CLOCK_MONOTONIC, &t_end[i]); 
-				#pragma omp task
-				spawn_function(); 
-			} 
-		}
-	}
+	
+	#pragma omp parallel
+	#pragma omp single
+	#pragma omp taskloop simd grainsize(1)
+	for(int i = 0; i < DEPTH; i++){
+		clock_gettime(CLOCK_MONOTONIC, &t_end[i]); 
+		spawn_function(); 
+	} 
 
 	printf("****\n");
 	for(int i = 0; i < DEPTH; i++){
