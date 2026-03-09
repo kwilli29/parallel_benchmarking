@@ -19,9 +19,15 @@ all: $(TARGETS)
 05A: 05A_spawntime_window_cilk.c
 	$(CC) $(CFLAGS) 05A_spawntime_window_cilk.c -o 05A
 
-04B: 04B_spawntime_beforefunc_cilkscope_cilk.c
-	$(CC) $(CFLAGS) 04B_spawntime_beforefunc_cilkscope_cilk.c -o 04B
+04A: 04A_sync_single.c 
+	$(CC) $(CFLAGS) 04A_sync_single.c -o 04A
 
+1:
+	@for s in $(wildcard 01*.c); do \
+		name=$$(basename $$s); \
+		exe=$$(echo $$name | cut -c1-3); \
+		$(CC) $(CFLAGS) $$s -o $$exe; \
+	done
 2:
 	@for s in $(wildcard 02*.c); do \
 		name=$$(basename $$s); \
@@ -51,4 +57,4 @@ build:
 #  export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
 
 clean:
-	rm -f $(TARGETS) $(EXECS) *.s *.o *_.c lib*.so lib*.a
+	rm -f $(EXECS) *.s *.o *_.c lib*.so lib*.a

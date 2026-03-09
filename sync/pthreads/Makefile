@@ -1,20 +1,11 @@
 CC=		gcc
-CFLAGS=		-fopenmp -Wall -O3 -Og -g
+CFLAGS=		-pthread -Wall -O3 -Og -g
 SOURCE=		$(wildcard *.c)
 TARGETS=	$(SOURCE:.c=)	
 
 EXECS := $(foreach s,$(TARGETS),$(shell echo $(basename $(s)) | cut -c1-3))
 
 build: $(TARGETS)
-
-02A: 02A_spawntime_before_sequential_openmp.c
-	$(CC) $(CFLAGS) 02A_spawntime_before_sequential_openmp.c -o 02A
-
-02B: 02B_spawntime_before_parasect_openmp.c
-	$(CC) $(CFLAGS) 02B_spawntime_before_parasect_openmp.c -o 02B
-
-06A: 06A_spawntree.openmp.c 
-	$(CC) $(CFLAGS) 06A_spawntree.openmp.c  -o 06A
 
 all:
 	@for s in $(SOURCE); do \
@@ -23,7 +14,9 @@ all:
 		$(CC) $(CFLAGS) $$s -o $$exe; \
 	done
 
+
 #clang  -fopenmp -lomp -O3 -Og -g omp/fib_omp.c -o ompfib
+# 
 
 # For compilers to find libomp you may need to set:
 #  export LDFLAGS="-L/opt/homebrew/opt/libomp/lib"

@@ -4,8 +4,7 @@
 #include <stdint.h>
 #include <unistd.h>
 #include <string.h>
-#include <cilk/cilk.h>
-#include <cilk/cilkscale.h>
+#include <pthread.h>
 #include <assert.h>
 #include "ctimer.h"
 #include <math.h>
@@ -16,11 +15,7 @@
 
 // printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
-#define NCILK __cilkrts_get_nworkers()
-
-struct timespec spawn_function(){           // Simple Function to Spawn
-
-	struct timespec t_start; // 
+void * spawn_function(void* t_start){           // Simple Function to Spawn
 
 	int x = 100; int y = 5000; int z = 1000000;
 
@@ -30,18 +25,22 @@ struct timespec spawn_function(){           // Simple Function to Spawn
 
 	z = z + y + x;	
 
-	clock_gettime(CLOCK_MONOTONIC, &t_start);
+	clock_gettime(CLOCK_MONOTONIC, (struct timespec*)t_start);
 
-	return t_start; //  to get REALLY granular, could measure time to return timeval from fcn and sub from end
+	return (void*)t_start; //  to get REALLY granular, could measure time to return timeval from fcn and sub from end
 }
 
 int main(int argc, char *argv[]){
 
+	pthread_t Threads0;
+
 	struct timespec t_res,t_start, t_end;
+	struct timespec* temp = (struct timespec*)&t_start;
 
-	t_start = cilk_spawn spawn_function(); // Take time stamp before each spawn
+	pthread_create( &Threads0, NULL, spawn_function, (void *)&t_start);
 
-	cilk_sync;
+	//sync;
+	pthread_join(Threads0, (void*)&temp);
 	
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 	/**/
@@ -52,8 +51,6 @@ int main(int argc, char *argv[]){
 	
 	// printf("03G\n");
 	
-	// cilk_rts_getworker_number;
-
 	return 0;
 }
 

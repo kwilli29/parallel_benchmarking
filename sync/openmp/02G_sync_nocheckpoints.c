@@ -4,22 +4,18 @@
 #include <stdint.h>
 #include <unistd.h>
 #include <string.h>
-#include <cilk/cilk.h>
-#include <cilk/cilkscale.h>
-#include <cilk/cilk_api.h>
+#include <omp.h>
 #include <assert.h>
 #include <sys/time.h>
 #include <math.h>
 #include "ctimer.h"
 
 /* 
- * Benchmark: 02A: Spawn time after ; Checkpoint Syncs (Cilk)
+ * Benchmark: 02G: Spawn time after ; No sync checkpoints (OpenMP)
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
 
 // printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
-
-#define NCILK __cilkrts_get_nworkers()
 
 void spawn_function(){           // Simple Spawn Function
 
@@ -45,9 +41,8 @@ void timer_fcn(){
 	}
 
 	return; 
+
 }
-
-
 int main(int argc, char *argv[]){
 
  	struct timespec t_start, t_res, t_end;
@@ -57,35 +52,26 @@ int main(int argc, char *argv[]){
 	// or they're all same and diff ones are in like 02B,etc.
 	// Time per checkpoint?
 
-	cilk_spawn spawn_function();
+	#pragma omp parallel
+	#pragma omp single
+	{
+		#pragma omp task
+		spawn_function();
 
-	cilk_sync;					// Checkpoint
+		#pragma omp task
+		spawn_function();
 
-	cilk_spawn spawn_function();
-
-	cilk_sync;					// Checkpoint
-
-	cilk_spawn spawn_function();
-
-	cilk_sync;					// Checkpoint
-
-	timer_fcn(); // no thread spawn
+		#pragma omp task
+		spawn_function();
+	
+	timer_fcn(); // all threads complete before end time
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
-	// printf("02A\n");
-
+	// printf("02G\n");
+	}
 	return 0;
 }
-
-/* 
-wsp_t start = wsp_getworkspan();
-
-wsp_t end = wsp_getworkspan();
-wsp_t elapsed = wsp_sub(end, start);
-wsp_dump(elapsed, "");
-*/
-

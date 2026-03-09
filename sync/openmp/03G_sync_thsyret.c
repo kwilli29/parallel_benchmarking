@@ -4,19 +4,16 @@
 #include <stdint.h>
 #include <unistd.h>
 #include <string.h>
-#include <cilk/cilk.h>
-#include <cilk/cilkscale.h>
+#include <omp.h>
 #include <assert.h>
 #include "ctimer.h"
 #include <math.h>
 
-/* Benchmark: 03G: Time b/w thread complete and return ; ThSy Time (Cilk) 
+/* Benchmark: 03G: Time b/w thread complete and return ; ThSy Time (OpenMP) 
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
 
 // printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
-
-#define NCILK __cilkrts_get_nworkers()
 
 struct timespec spawn_function(){           // Simple Function to Spawn
 
@@ -39,10 +36,13 @@ int main(int argc, char *argv[]){
 
 	struct timespec t_res,t_start, t_end;
 
-	t_start = cilk_spawn spawn_function(); // Take time stamp before each spawn
-
-	cilk_sync;
-	
+	#pragma omp parallel
+	#pragma omp single
+	{
+		#pragma omp task
+		t_start = spawn_function(); // Take time stamp before each spawn
+	// sync;
+	}
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 	/**/
 
@@ -52,8 +52,6 @@ int main(int argc, char *argv[]){
 	
 	// printf("03G\n");
 	
-	// cilk_rts_getworker_number;
-
 	return 0;
 }
 

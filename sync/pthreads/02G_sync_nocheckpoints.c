@@ -4,24 +4,20 @@
 #include <stdint.h>
 #include <unistd.h>
 #include <string.h>
-#include <cilk/cilk.h>
-#include <cilk/cilkscale.h>
-#include <cilk/cilk_api.h>
+#include <pthread.h>
 #include <assert.h>
 #include <sys/time.h>
 #include <math.h>
 #include "ctimer.h"
 
 /* 
- * Benchmark: 02A: Spawn time after ; Checkpoint Syncs (Cilk)
+ * Benchmark: 02G: Spawn time after ; No sync checkpoints (Pthreads)
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
 
 // printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
-#define NCILK __cilkrts_get_nworkers()
-
-void spawn_function(){           // Simple Spawn Function
+void* spawn_function(){           // Simple Spawn Function
 
 	int x = 100; int y = 5000; int z = 1000000;
 
@@ -31,7 +27,7 @@ void spawn_function(){           // Simple Spawn Function
 
 	z = z + y + x;	
 
-	return; 
+	return (void*)NULL; 
 }
 
 void timer_fcn(){
@@ -45,10 +41,20 @@ void timer_fcn(){
 	}
 
 	return; 
+
 }
-
-
 int main(int argc, char *argv[]){
+
+	pthread_t Threads1, Threads2, Threads3;
+	int            ds, rc;
+	pthread_attr_t attr;
+
+	rc = pthread_attr_init(&attr);
+	if (rc == -1) { perror("error in pthread_attr_init"); exit(1); }
+
+	ds = 1;
+	rc = pthread_attr_setdetachstate(&attr, ds);
+	if (rc == -1) { perror("error in pthread_attr_setdetachstate"); exit(2); }
 
  	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
@@ -56,36 +62,27 @@ int main(int argc, char *argv[]){
 	// each checkpoint is a little different
 	// or they're all same and diff ones are in like 02B,etc.
 	// Time per checkpoint?
+	
+	pthread_create( &Threads1, &attr, spawn_function, NULL);
+	// no checkpoints
 
-	cilk_spawn spawn_function();
+	pthread_create( &Threads2, &attr, spawn_function, NULL);
 
-	cilk_sync;					// Checkpoint
 
-	cilk_spawn spawn_function();
+	pthread_create( &Threads3, &attr, spawn_function, NULL);
 
-	cilk_sync;					// Checkpoint
-
-	cilk_spawn spawn_function();
-
-	cilk_sync;					// Checkpoint
-
-	timer_fcn(); // no thread spawn
+	
+	timer_fcn(); // all threads complete before end time
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
-	// printf("02A\n");
+	// destroy attr
+	pthread_attr_destroy(&attr);
+
+	// printf("02G\n");
 
 	return 0;
 }
-
-/* 
-wsp_t start = wsp_getworkspan();
-
-wsp_t end = wsp_getworkspan();
-wsp_t elapsed = wsp_sub(end, start);
-wsp_dump(elapsed, "");
-*/
-

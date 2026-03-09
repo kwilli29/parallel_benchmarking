@@ -13,7 +13,7 @@
 #include "ctimer.h"
 
 /* 
- * Benchmark: 02A: Spawn time after ; CilkFor Spawns (Cilk)
+ * Benchmark: 02G: Spawn time after ; No sync checkpoints (Cilk)
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
 
@@ -75,7 +75,7 @@ int main(int argc, char *argv[]){
 	timespec_sub(&t_res, t_end, t_start);
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
-	// printf("01D\n");
+	// printf("02G\n");
 
 	return 0;
 }

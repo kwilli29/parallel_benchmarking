@@ -4,16 +4,14 @@
 #include <stdint.h>
 #include <unistd.h>
 #include <string.h>
-#include <cilk/cilk.h>
-#include <cilk/cilkscale.h>
-#include <cilk/cilk_api.h>
+#include <omp.h>
 #include <assert.h>
 #include <sys/time.h>
 #include <math.h>
 #include "ctimer.h"
 
 /* 
- * Benchmark: 01A: Sync time just the sync command ; Timer Sync (Cilk)
+ * Benchmark: 01A: Sync time just the sync command ; Timer Sync (OpenMP)
  * Try timing just the sync command after 1 thread / a few threads
  */
 
@@ -22,7 +20,6 @@
 float TIMER1 = 2.0;
 float TIMER2 = 4.0;
 
-#define NCILK __cilkrts_get_nworkers()
 
 void spawn_function1(){           // Simple Spawn Function
 
@@ -60,14 +57,20 @@ int main(int argc, char *argv[]){
 
  	struct timespec t_start, t_res, t_end;
 
-	cilk_spawn spawn_function1();
-	cilk_spawn spawn_function2();
+	#pragma omp parallel
+	#pragma omp single
+	{
+		#pragma omp task
+		spawn_function1();
+		
+		#pragma omp task
+		spawn_function2();
 
-	printf("done w/ spawns\n");
+		printf("done w/ spawns\n");
 
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
-	printf("start sync\n");
-	cilk_sync;
+	 clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+	 printf("start sync\n");
+	}
 	printf("done sync\n");
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
@@ -79,12 +82,3 @@ int main(int argc, char *argv[]){
 
 	return 0;
 }
-
-/* 
-wsp_t start = wsp_getworkspan();
-
-wsp_t end = wsp_getworkspan();
-wsp_t elapsed = wsp_sub(end, start);
-wsp_dump(elapsed, "");
-*/
-

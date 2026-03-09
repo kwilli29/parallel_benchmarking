@@ -115,7 +115,7 @@ int main(int argc, char *argv[]){
 
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 	
-	// printf("04D\n");
+	// printf("03A\n");
 	
 	// cilk_rts_getworker_number;
 
