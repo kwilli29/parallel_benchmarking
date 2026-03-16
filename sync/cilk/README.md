@@ -8,7 +8,7 @@
 
 ## 02: Spawn then call sync checkpoints several times, compare times with and without syncs
   - A: Sync checkpoints
-  - B: No checkpoints
+  - G: No checkpoints
 
   **Time metric: Sync overhead**
 
