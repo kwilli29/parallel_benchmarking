@@ -5,7 +5,7 @@ TARGETS=	$(SOURCE:.c=)
 
 EXECS := $(foreach s,$(TARGETS),$(shell echo $(basename $(s)) | cut -c1-3))
 
-all: $(TARGETS)
+build: $(TARGETS)
 
 01A: 01A_sync_timer.c 
 	$(CC) $(CFLAGS) 01A_sync_timer.c -o 01A
@@ -34,8 +34,19 @@ all: $(TARGETS)
 		exe=$$(echo $$name | cut -c1-3); \
 		$(CC) $(CFLAGS) $$s -o $$exe; \
 	done
-
-build:
+3:
+	@for s in $(wildcard 03*.c); do \
+		name=$$(basename $$s); \
+		exe=$$(echo $$name | cut -c1-3); \
+		$(CC) $(CFLAGS) $$s -o $$exe; \
+	done
+4:
+	@for s in $(wildcard 04*.c); do \
+		name=$$(basename $$s); \
+		exe=$$(echo $$name | cut -c1-3); \
+		$(CC) $(CFLAGS) $$s -o $$exe; \
+	done
+all:
 	@for s in $(SOURCE); do \
 		name=$$(basename $$s); \
 		exe=$$(echo $$name | cut -c1-3); \

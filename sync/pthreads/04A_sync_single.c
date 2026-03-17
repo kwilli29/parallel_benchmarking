@@ -17,7 +17,6 @@
 
 // printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
-
 void * spawn_function(){           // Simple Spawn Function
 	int x = 100; int y = 5000; int z = 1000000;
 
@@ -29,7 +28,6 @@ void * spawn_function(){           // Simple Spawn Function
 
 	return (void *)NULL; 
 }
-
 
 int main(int argc, char *argv[]){
 
@@ -46,14 +44,14 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
-	printf("## Spawn+Sync Time:\n%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+	printf("++++:\n%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
 	clock_gettime(CLOCK_MONOTONIC, &t_start);
 	pthread_create( &Threads1, NULL, spawn_function, NULL);
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
-	printf("## Spawn Time:\n%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+	printf("****:\n%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 	
 	gettimeofday(&tstart, NULL); //
 	gettimeofday(&tend, NULL);	
@@ -66,14 +64,14 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
-	printf("## Fcn Time: \n%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+	printf("####:\n%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
 	clock_gettime(CLOCK_MONOTONIC, &t_start); 
 	pthread_join(Threads1, NULL);
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
-	printf("## Sync Time:\n%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+	printf("----:\n%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
 
 	// printf("04A\n");

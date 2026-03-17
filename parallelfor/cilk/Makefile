@@ -1,11 +1,16 @@
-CC=		gcc
-CFLAGS=		-fopenmp -Wall -O3 -Og -g
+CC=		/opt/opencilk-2/bin/clang 
+CFLAGS=		-fopencilk -O3 -Og -g # -fcilktool=cilkscale -lm -Wall -Wextra -Wconversion -std=c11 -Werror
 SOURCE=		$(wildcard *.c)
 TARGETS=	$(SOURCE:.c=)	
 
 EXECS := $(foreach s,$(TARGETS),$(shell echo $(basename $(s)) | cut -c1-3))
 
-build: $(TARGETS)
+all: $(TARGETS)
+
+
+01A: 01A_pfor_gs_1_cilk.c
+	$(CC) $(CFLAGS) 01A_pfor_gs__1_cilk.c -o 01A
+
 
 1:
 	@for s in $(wildcard 01*.c); do \
@@ -13,29 +18,37 @@ build: $(TARGETS)
 		exe=$$(echo $$name | cut -c1-3); \
 		$(CC) $(CFLAGS) $$s -o $$exe; \
 	done
-
 2:
 	@for s in $(wildcard 02*.c); do \
 		name=$$(basename $$s); \
 		exe=$$(echo $$name | cut -c1-3); \
 		$(CC) $(CFLAGS) $$s -o $$exe; \
 	done
-
 3:
 	@for s in $(wildcard 03*.c); do \
 		name=$$(basename $$s); \
 		exe=$$(echo $$name | cut -c1-3); \
 		$(CC) $(CFLAGS) $$s -o $$exe; \
 	done
-
 4:
 	@for s in $(wildcard 04*.c); do \
 		name=$$(basename $$s); \
 		exe=$$(echo $$name | cut -c1-3); \
 		$(CC) $(CFLAGS) $$s -o $$exe; \
 	done
-
-all:
+5:
+	@for s in $(wildcard 05*.c); do \
+		name=$$(basename $$s); \
+		exe=$$(echo $$name | cut -c1-3); \
+		$(CC) $(CFLAGS) $$s -o $$exe; \
+	done
+6:
+	@for s in $(wildcard 06*.c); do \
+		name=$$(basename $$s); \
+		exe=$$(echo $$name | cut -c1-3); \
+		$(CC) $(CFLAGS) $$s -o $$exe; \
+	done
+build:
 	@for s in $(SOURCE); do \
 		name=$$(basename $$s); \
 		exe=$$(echo $$name | cut -c1-3); \
@@ -43,6 +56,7 @@ all:
 	done
 
 #clang  -fopenmp -lomp -O3 -Og -g omp/fib_omp.c -o ompfib
+# 
 
 # For compilers to find libomp you may need to set:
 #  export LDFLAGS="-L/opt/homebrew/opt/libomp/lib"

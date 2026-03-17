@@ -11,7 +11,7 @@
 #include "ctimer.h"
 
 /* 
- * Benchmark: 02A: Spawn time after ; Checkpoint Syncs (OpenMP)
+ * Benchmark: 02A: Spawns and Syncs ; Checkpoint Syncs (OpenMP)
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
 

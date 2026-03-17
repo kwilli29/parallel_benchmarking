@@ -141,7 +141,7 @@ int main(int argc, char *argv[]){
 
 	timespec_sub(&t_res, t_syncend, maxtime);
 
-	printf("t b/w last fcn complete & sync complete\n");
+	printf("*t b/w last fcn complete & sync complete\n");
 
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 	

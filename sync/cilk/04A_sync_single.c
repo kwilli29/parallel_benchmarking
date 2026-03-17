@@ -47,14 +47,17 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
-	printf("## Spawn+Sync Time:\n%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+//	printf("## Spawn+Sync Time:\n%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+	printf("++++\n%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
 	clock_gettime(CLOCK_MONOTONIC, &t_start);
 	cilk_spawn spawn_function();
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
-	printf("## Spawn Time:\n%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+//	printf("## Spawn Time:\n%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+	printf("****\n%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+
 
 	gettimeofday(&tstart, NULL); //
 	gettimeofday(&tend, NULL);	
@@ -67,14 +70,16 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
-	printf("## Fcn Time: \n%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+//	printf("## Fcn Time: \n%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+	printf("####\n%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
 	clock_gettime(CLOCK_MONOTONIC, &t_start); 
 	cilk_sync;
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
-	printf("## Sync Time:\n%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+//	printf("## Sync Time:\n%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+	printf("----\n%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
 
 	// printf("04A\n");

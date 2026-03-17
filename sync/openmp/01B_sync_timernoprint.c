@@ -65,10 +65,10 @@ int main(int argc, char *argv[]){
 		#pragma omp task
 		spawn_function2();
 
-		printf("done w/ spawns\n");
+//		printf("done w/ spawns\n");
 
 	 clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
-	 printf("start sync\n");
+//	 printf("start sync\n");
 	}
 	//printf("done sync\n");
 	clock_gettime(CLOCK_MONOTONIC, &t_end);

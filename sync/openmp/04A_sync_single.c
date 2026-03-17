@@ -46,7 +46,7 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
-	printf("## Spawn+Sync Time:\n%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+	printf("++++\n%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
 	#pragma omp parallel
 	#pragma omp single
@@ -58,7 +58,7 @@ int main(int argc, char *argv[]){
 	}
 
 	timespec_sub(&t_res, t_end, t_start);
-	printf("## Spawn Time:\n%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+	printf("****\n%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
 	gettimeofday(&tstart, NULL); //
 	gettimeofday(&tend, NULL);	
@@ -71,7 +71,7 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
-	printf("## Fcn Time: \n%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+	printf("####\n%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
 	// BARRIER
 
@@ -88,7 +88,7 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
-	printf("## Barrier:\n%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+	printf("----\n%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
 
 	// printf("04A\n");
