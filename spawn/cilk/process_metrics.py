@@ -96,6 +96,10 @@ def long_overhead(parallel_filename, serial_filename, runs):
                     #print(prevline, cntr)
                     SERI_AVGDIFFS[cntr] = SERI_ACC / float(thcnt)
                     cntr+=1
+                elif prevline and SERI_ACC <= 0.0:
+                    SERI_AVGDIFFS[cntr] = float(prevline)
+                    cntr+=1
+
                 # reset individual run metrics
                 SERI_ACC = 0.0
                 thcnt = 0

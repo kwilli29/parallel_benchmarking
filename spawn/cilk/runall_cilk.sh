@@ -43,8 +43,6 @@ run_programs() { # ex. 1 A 0
 		./$CURRPROG >> $EXEC # Capture program output
 	done
 
-	echo "script run"
-
 	# Metrics
 	EXECS="serial/data/${CURRPROG}_000.txt"
 	EXECE="serial/data/${CURRPROGS}_000.txt"
