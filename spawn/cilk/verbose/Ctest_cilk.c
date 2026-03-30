@@ -32,12 +32,12 @@ void delay(float delaylength){           // Simple Spawn Function
 int main(int argc, char *argv[]){
 
 	int innerreps = 100;
-	float delaylength = 10000.0;
+	float delaylength = 10000000.0;
 
 	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
-	for(int i=1; i <= NCILK; i++){
+	for(int i=1; i <= innerreps; i++){
 			delay(delaylength);
 	}
 

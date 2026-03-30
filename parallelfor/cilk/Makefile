@@ -5,12 +5,17 @@ TARGETS=	$(SOURCE:.c=)
 
 EXECS := $(foreach s,$(TARGETS),$(shell echo $(basename $(s)) | cut -c1-3))
 
-all: $(TARGETS)
+build: $(TARGETS)
 
 
 01A: 01A_pfor_gs_1_cilk.c
 	$(CC) $(CFLAGS) 01A_pfor_gs__1_cilk.c -o 01A
 
+01D: 01D_pfor_gs_all_cilk.c
+	$(CC) $(CFLAGS) 01D_pfor_gs_all_cilk.c -o 01D
+
+02D: 02D_pfor_loopbh_print_cilk.c
+	$(CC) $(CFLAGS) 02D_pfor_loopbh_print_cilk.c -o 02D 2> /dev/null
 
 1:
 	@for s in $(wildcard 01*.c); do \
@@ -22,7 +27,7 @@ all: $(TARGETS)
 	@for s in $(wildcard 02*.c); do \
 		name=$$(basename $$s); \
 		exe=$$(echo $$name | cut -c1-3); \
-		$(CC) $(CFLAGS) $$s -o $$exe; \
+		$(CC) $(CFLAGS) $$s -o $$exe 2> /dev/null; \
 	done
 3:
 	@for s in $(wildcard 03*.c); do \
@@ -48,7 +53,7 @@ all: $(TARGETS)
 		exe=$$(echo $$name | cut -c1-3); \
 		$(CC) $(CFLAGS) $$s -o $$exe; \
 	done
-build:
+all:
 	@for s in $(SOURCE); do \
 		name=$$(basename $$s); \
 		exe=$$(echo $$name | cut -c1-3); \

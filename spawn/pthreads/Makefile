@@ -5,7 +5,7 @@ TARGETS=	$(SOURCE:.c=)
 
 EXECS := $(foreach s,$(TARGETS),$(shell echo $(basename $(s)) | cut -c1-3))
 
-all: $(TARGETS)
+build: $(TARGETS)
 
 04E: 04E_spawntime_beforefunc_one_pthreads.c
 	$(CC) $(CFLAGS) 04E_spawntime_beforefunc_one_pthreads.c -o 04E
@@ -50,7 +50,8 @@ all: $(TARGETS)
 		exe=$$(echo $$name | cut -c1-3); \
 		$(CC) $(CFLAGS) $$s -o $$exe; \
 	done
-build:
+
+all:
 	@for s in $(SOURCE); do \
 		name=$$(basename $$s); \
 		exe=$$(echo $$name | cut -c1-3); \

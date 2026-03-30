@@ -5,7 +5,7 @@ TARGETS=	$(SOURCE:.c=)
 
 EXECS := $(foreach s,$(TARGETS),$(shell echo $(basename $(s)) | cut -c1-3))
 
-all: $(TARGETS)
+build: $(TARGETS)
 
 02A: 02A_spawntime_before_sequential_openmp.c
 	$(CC) $(CFLAGS) 02A_spawntime_before_sequential_openmp.c -o 02A
@@ -56,7 +56,7 @@ all: $(TARGETS)
 	done
 
 
-build:
+all:
 	@for s in $(SOURCE); do \
 		name=$$(basename $$s); \
 		exe=$$(echo $$name | cut -c1-3); \

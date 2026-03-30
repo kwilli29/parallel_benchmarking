@@ -1,10 +1,44 @@
+.PHONY: cilk cilkclean omp ompclean pt ptclean serial serialclean
+
 CC = gcc
 CFLAGS = -lm
+
+CCCILK=		/opt/opencilk-2/bin/clang 
+CFLAGSCILK=		-fopencilk -O3 -Og -g # -fcilktool=cilkscale -lm -Wall -Wextra -Wconversion -std=c11 -Werror
+
+
 TARGETS = x
+CILKSOURCE= $(wildcard cilk/*.c)
 
-all: $(TARGETS)
 
+cilk:
+	$(MAKE) -C cilk all
 
+cilkclean:
+	$(MAKE) -C cilk clean
+
+####
+omp:
+	$(MAKE) -C openmp all
+
+ompclean:
+	$(MAKE) -C openmp clean
+
+####
+pt:
+	$(MAKE) -C pthreads all
+
+ptclean:
+	$(MAKE) -C pthreads clean
+
+####
+serial:
+	$(MAKE) -C serial all
+
+serialclean:
+	$(MAKE) -C serial clean
+
+####
 
 #clang  -fopenmp -lomp -O3 -Og -g omp/fib_omp.c -o ompfib
 # 

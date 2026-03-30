@@ -43,7 +43,6 @@ run_programs() { # ex. 1 A 0
 
 	rm $EXEC
 
-}
 
 make clean
 ###############################
@@ -78,6 +77,9 @@ echo "Starting benchmark on 02_'s"
 
 	# C
 	run_programs 2 C 0
+
+	# E
+	run_programs 2 E 0
 
 	# Cleanup
 	make clean

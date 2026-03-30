@@ -1,0 +1,16 @@
+BENCHMARK IDEAS
+
+- different grain sizes
+- different scheduling (if an option)
+- default behavior?
+
+2
+- function inside loop
+- for loop inside loop
+- nothing inside loop
+- print thread id info inside loop
+- double for loop inside loop [that one script? -- more of a kernel/app]
+
+- limit # of overall available threads
+- compare overhead to regular for-loop when applicable
+

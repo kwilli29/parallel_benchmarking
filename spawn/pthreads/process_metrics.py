@@ -39,7 +39,7 @@ def long_metrics(filename, runs):
 
     avgdiff_overall = avgdiff_overall*1000000000.0     
 
-    print(f'OVERALL AVERAGE TIME B/W: {avgdiff_overall:.1f} ns') 
+    print(f'*OVERALL AVERAGE TIME B/W: {avgdiff_overall:.1f} ns') 
 
     return
 
@@ -53,7 +53,7 @@ def thread_metrics(filename, runs):
 
     AVG = (AVG / float(runs))
    
-    print(f'AVERAGE COUNT # THREADS: {AVG:.2f}') 
+    print(f'*AVERAGE COUNT # THREADS: {AVG:.2f}') 
 
     return
 
@@ -72,7 +72,7 @@ def short_metrics(filename):
     
     AVG = AVG*1000000000.0
    
-    print(f'AVERAGE TIME: {AVG:.1f} ns') 
+    print(f'*AVERAGE TIME: {AVG:.1f} ns') 
     return
 
 

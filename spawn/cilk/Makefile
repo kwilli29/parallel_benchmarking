@@ -1,3 +1,5 @@
+.PHONY: serial
+
 CC=		/opt/opencilk-2/bin/clang 
 CFLAGS=		-fopencilk -O3 -Og -g # -fcilktool=cilkscale -lm -Wall -Wextra -Wconversion -std=c11 -Werror
 SOURCE=		$(wildcard *.c)
@@ -5,7 +7,17 @@ TARGETS=	$(SOURCE:.c=)
 
 EXECS := $(foreach s,$(TARGETS),$(shell echo $(basename $(s)) | cut -c1-3))
 
-all: $(TARGETS)
+all:
+	@for s in $(SOURCE); do \
+		name=$$(basename $$s); \
+		exe=$$(echo $$name | cut -c1-3); \
+		$(CC) $(CFLAGS) $$s -o $$exe; \
+	done
+
+build: $(TARGETS)
+
+serial:
+	$(MAKE) -C serial all
 
 01A: 01A_spawntime_after_sequential_cilk.c
 	$(CC) $(CFLAGS) 01A_spawntime_after_sequential_cilk.c -o 01A
@@ -73,12 +85,7 @@ all: $(TARGETS)
 		exe=$$(echo $$name | cut -c1-3); \
 		$(CC) $(CFLAGS) $$s -o $$exe; \
 	done
-build:
-	@for s in $(SOURCE); do \
-		name=$$(basename $$s); \
-		exe=$$(echo $$name | cut -c1-3); \
-		$(CC) $(CFLAGS) $$s -o $$exe; \
-	done
+
 
 #clang  -fopenmp -lomp -O3 -Og -g omp/fib_omp.c -o ompfib
 # 

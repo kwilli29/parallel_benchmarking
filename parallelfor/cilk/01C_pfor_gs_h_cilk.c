@@ -37,12 +37,10 @@ void spawn_function(){           // Simple Spawn Function
 
 int main(int argc, char *argv[]){
 
-	int th = (NCILK>=2) ? (int)NCILK/2 : 1;
-
  	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
-	#pragma cilk grainsize th
+	#pragma cilk grainsize 272/2 // !!!!
 	cilk_for(int i = 0; i < NCILK-1; i++){
 		spawn_function();
 	} 
@@ -52,7 +50,7 @@ int main(int argc, char *argv[]){
 	timespec_sub(&t_res, t_end, t_start);
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
-	// printf("01D\n");
+	// printf("01C\n");
 
 	return 0;
 }
