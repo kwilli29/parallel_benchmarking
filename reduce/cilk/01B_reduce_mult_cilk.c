@@ -4,12 +4,12 @@
 #include <sys/time.h>
 #include "ctimer.h"
 
-/* 01A Reduce Sum benchmark : (OpenCilk)
+/* 01B Reduce Multiply benchmark : (OpenCilk)
 * Benchmark
 */
 
-void zero(void *view) { *(long *)view = 0; }
-void add(void *left, void *right) { *(long *)left += *(long *)right; } // Addition
+void zero(void *view) { *(long *)view = 1; }
+void mult(void *left, void *right) { *(long *)left *= *(long *)right; } // Multiplication
 
 // extern long f(int index);
 
@@ -17,19 +17,19 @@ long f( int index){
 	return index;
 }
 
-void compute_sum(long cilk_reducer(zero, add) *sum)
+void compute_mult(long cilk_reducer(zero, mult) *multaccum)
 {
-    cilk_for (int i = 0; i < 10000000; ++i)
-        *sum += f(i); // dereferenced pointer converts to current view
+    cilk_for (int i = 1; i < 20; ++i)
+        *multaccum *= f(i); // dereferenced pointer converts to current view
 }
 
 long provide_reducer()
 {
-	long cilk_reducer(zero, add) sum = 0L; // must be initialized
+	long cilk_reducer(zero, mult) multaccum = 1L; // must be initialized
 
-	compute_sum(__builtin_addressof(sum));
+	compute_mult(__builtin_addressof(multaccum));
 
-	return sum;
+	return multaccum;
 
 }
 
@@ -38,8 +38,8 @@ int main(int argc, char*argv[]){
 	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
-	long reducersum = provide_reducer();
-	printf("*sum: %ld\n", reducersum);    
+	long reducermult = provide_reducer();
+	printf("*mult: %ld\n", reducermult);   
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 

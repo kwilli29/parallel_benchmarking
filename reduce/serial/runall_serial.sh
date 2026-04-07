@@ -41,7 +41,7 @@ run_programs() { # ex. 1 A 0
 		single_output_metrics $EXEC $CURRPROG $1
 	fi
 
-	rm $EXEC
+	#rm $EXEC
 }
 
 make clean
@@ -52,14 +52,11 @@ echo "Starting benchmark on 01_'s"
 	# A
 	run_programs 1 A 0
 
+	# B
+	run_programs 1 B 0
+
 	# C
 	run_programs 1 C 0
-
-	# E
-	run_programs 1 E 0
-
-	# F
-	run_programs 1 F 0
 
 	# Cleanup
 	make clean
@@ -70,22 +67,16 @@ echo ""
 
 ###############################
 
-echo "Starting benchmark on 02_'s"
+#echo "Starting benchmark on 02_'s"
 
 	# A
-	run_programs 2 A 0
-
-	# C
-	run_programs 2 C 0
-
-	# E
-	run_programs 2 E 0
+#	run_programs 2 A 0
 
 	# Cleanup
-	make clean
+#	make clean
 
-echo "Cleanup 02_'s"
-echo ""
+#echo "Cleanup 02_'s"
+#echo ""
 ###############################
 
 #echo "Starting benchmark on 03_'s"
@@ -94,47 +85,38 @@ echo ""
 #echo ""
 ###############################
 
-echo "Starting benchmark on 04_'s"
+#echo "Starting benchmark on 04_'s"
 
 	# A
-	run_programs 4 A 0
-
-	# C
-	run_programs 4 C 0
-
-	# E  -- make sure it runs the single print process
-	run_programs 4 E 0
-
-	# F -- make sure it runs the single print process
-	run_programs 4 F 0
+#	run_programs 4 A 0
 
 	# Cleanup
-	make clean
+#	make clean
 
-echo "Cleanup 04_'s"
-echo ""
+#echo "Cleanup 04_'s"
+#echo ""
 ###############################
 
-echo "Starting benchmark on 05_'s"
+#echo "Starting benchmark on 05_'s"
 
 	# A 
-	run_programs 5 A 0
+#	run_programs 5 A 0
 
 	# Cleanup
-	make clean
+#	make clean
 
-echo "Cleanup 05_'s"
-echo ""
+#echo "Cleanup 05_'s"
+#echo ""
 ###############################
 
-echo "Starting benchmark on 06_'s"
+#echo "Starting benchmark on 06_'s"
 
 	# A
-	run_programs 6 A 0
+#	run_programs 6 A 0
 
 	# Cleanup
-	make clean
+#	make clean
 
-echo "Cleanup 06_'s"
-echo ""
+#echo "Cleanup 06_'s"
+#echo ""
 ###############################
