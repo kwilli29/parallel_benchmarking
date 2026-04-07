@@ -15,19 +15,27 @@
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
 
+#define COUNT 4 // 273 // 4
+static const int ITERATION = 1000000;
+long arr[COUNT];
+
 void spawn_function(){           // Simple Spawn Function
 
 	int x = 100; int y = 5000; int z = 1000000;
-
 	x = x + y + z;
-
 	y = y + x + z;
-
 	z = z + y + x;	
 
 	return; 
 }
 
+long do_work(long k){
+	long x = 15;
+	static const int nn = 87;
+	for (long i = 1; i < nn; ++i)
+		x = x / i + k % i;
+	return x;
+}
 
 int main(int argc, char *argv[]){
 
@@ -37,11 +45,11 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
 	#pragma omp parallel for schedule (static, 1) // grainsize
-	for(int i = 0; i < DEPTH; i++){
-		spawn_function(); 
-		// how to time the end of the *last thread * to complete
+	for(int j = 0; j < ITERATION; j++){	
+		for (int i = 0; i < COUNT; i++)
+			arr[i] += do_work( j * i + i + j); // race condition? 
 	}
-	 
+
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);

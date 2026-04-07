@@ -18,11 +18,8 @@
 void spawn_function(){           // Simple Spawn Function
 
 	int x = 100; int y = 5000; int z = 1000000;
-
 	x = x + y + z;
-
 	y = y + x + z;
-
 	z = z + y + x;	
 
 	return; 
@@ -36,7 +33,7 @@ int main(int argc, char *argv[]){
  	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
-	#pragma omp parallel for schedule (static, 1) // grainsize
+	#pragma omp parallel for schedule(static, 1) // grainsize
 	for(int i = 0; i < DEPTH; i++){
 		spawn_function(); 
 		// how to time the end of the *last thread * to complete

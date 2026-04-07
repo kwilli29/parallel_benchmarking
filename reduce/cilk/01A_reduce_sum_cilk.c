@@ -2,58 +2,65 @@
 #include <stdlib.h>
 #include <cilk/cilk.h>
 #include <sys/time.h>
+#include "ctimer.h"
 
 /* 01A Reduce Sum benchmark : (OpenCilk)
 * Benchmark
-*
 */
 
-// Global Array
+void zero(void *view) { *(long *)view = 0; }
+void add(void *left, void *right) { *(long *)left += *(long *)right; } // Addition
 
-int N = 36;
+// extern long f(int index);
 
-// Array of Reducers or Array of Reducer Pointers
+long f( int index){
+	return index;
+}
 
-void zero(void *view) { *(float *)view = 0; }
-void add(void *left, void *right) { *(float *)left += *(float *)right; } // Addition
+void compute_sum(long cilk_reducer(zero, add) *sum)
+{
+    cilk_for (int i = 0; i < 10000000; ++i)
+        *sum += f(i); // dereferenced pointer converts to current view
+}
 
-float cilk_reducer(zero, add)* ; // Defined Reducer
+long provide_reducer()
+{
+	long cilk_reducer(zero, add) sum = 0L; // must be initialized
 
-float* global_array;
+	compute_sum(__builtin_addressof(sum));
 
+	return sum;
 
-float fib(int n){
-
-    count_per_arg[n] += 1.0;
-
-    if (n < 2){
-        return n;
-    } 
-
-    int x, y; // local variables
-    x = cilk_spawn fib((n - 1));   // incr. global count array per arg. for # of calls
-    x = fib((n - 2));              // atomic add
-
-    cilk_sync; 
-
-    return x + y;
 }
 
 int main(int argc, char*argv[]){
 
-   global_array  = calloc(N+1, sizeof(float));
-   count_per_arg = calloc((N+1),sizeof(float cilk_reducer(zero,add))); 
-    
+	struct timespec t_start, t_res, t_end;
+	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
-	#pragma grainsize = 1
-	cilk_for(int k=0; k <= N; k++){
-	 	global_array[k] = fib(k);
-	}
+	long reducersum = provide_reducer();    
 
-    free(global_array);
-    free(count_per_arg);
+	clock_gettime(CLOCK_MONOTONIC, &t_end);
+
+	timespec_sub(&t_res, t_end, t_start);
+	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);	
 
 	return 0;
 }
 
 // +, *, GCD/LCM, inter./union,functino composition, mat mul, min/max (R, ordered set)
+
+//extern long f(int index);
+// The argument is a pointer to a reducer.
+/*void compute_sum(long cilk_reducer(zero, add) *sum)
+{
+    cilk_for (int i = 0; i < 10000000; ++i)
+        *sum += f(i); // dereferenced pointer converts to current view
+}
+long provide_reducer()
+{
+    long cilk_reducer(zero, add) sum = 0L; // must be initialized
+    compute_sum(__builtin_addressof(sum));
+    return sum;
+}
+*/

@@ -1,0 +1,99 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <unistd.h>
+#include <string.h>
+#include <assert.h>
+#include <sys/time.h>
+#include <math.h>
+#include "ctimer.h"
+
+/* 
+ * Benchmark: 02E: DoubleFor Function in CilkFor  ; CilkFor (Cilk)
+ * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+ */
+
+// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
+
+//#define NCILK __cilkrts_get_nworkers()
+
+#define COUNT 4 // 273 // 4
+static const int ITERATION = 1000000;
+long arr[COUNT];
+
+long do_work(long k){
+	long x = 15;
+	static const int nn = 87;
+	for (long i = 1; i < nn; ++i)
+		x = x / i + k % i;
+	return x;
+}
+
+int main(int argc, char *argv[]){
+
+ 	struct timespec t_start, t_res, t_end;
+	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+
+	for (int j = 0; j < ITERATION; j++){
+		for (int i = 0; i < COUNT; i++)
+			arr[i] += do_work( j * i + i + j); // race condition?
+	}
+
+	clock_gettime(CLOCK_MONOTONIC, &t_end);
+
+	timespec_sub(&t_res, t_end, t_start);
+	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+
+	// printf("02E\n");
+
+	return 0;
+}
+
+////
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <cilk/cilk.h>
+//#include "ctimer.h"
+//#include <math.h>
+
+/* Benchmark: sufficientwork cilk
+ * Use a cilk_for loop to iterate through an array and call a function
+ * Each thread iterates through the array
+ * Function iterates through array and does math on the elements.
+ * Race conditions present but it does not matter here.
+ */
+// https://www.csd.uwo.ca/~mmorenom/HPC-Slides/Multithreaded_Parallelism_and_Performance_Measures.pdf
+
+/*static const int COUNT = 4;
+static const int ITERATION = 1000000;
+long arr[4];
+
+long do_work(long k){
+	long x = 15;
+	static const int nn = 87;
+	for (long i = 1; i < nn; ++i)
+		x = x / i + k % i;
+	return x;
+}
+
+// array of for elements
+// each thread iterates through the array
+// each thread does math on the elements of the same array
+
+int main(int argc, char*argv[]){
+
+	int n = ITERATION;
+	int gs = (int)(n/(8*68)) < 512 ? (int)(n/(8*68)) : 512;  // min((int)(n/8*68),512);
+
+	#pragma grainsize = gs
+	cilk_for (int j = 0; j < ITERATION; j++){
+		for (int i = 0; i < COUNT; i++)
+			arr[i] += do_work( j * i + i + j); // race condition?
+	}
+   
+	cilk_sync;
+
+	return 0;
+}
+*/

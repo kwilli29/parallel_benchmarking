@@ -14,6 +14,16 @@ single_output_metrics() {	# ex. 25 data/01A_000.txt 1
 
 }
 
+multi_output_metrics() {	# ex. 25 data/01A_000.txt 1 serial/data/01A_000.txt
+
+	echo "Process $2 $3"
+
+	python3 ./process_metrics.py $RUNS "$1" "$3" "$4" > output/$PLANG/"$2".txt
+
+	cat output/$PLANG/"$2".txt
+
+}
+
 run_programs() { # ex. 1 A 0
 
 	make "$1" # Number
@@ -23,6 +33,7 @@ run_programs() { # ex. 1 A 0
 	#	Run the Programs
 
 	CURRPROG="$3$1$2"
+	CURRPROGS="$3$1E"
 	EXEC="data/${CURRPROG}_000.txt"
 
 	touch $EXEC 
@@ -32,13 +43,38 @@ run_programs() { # ex. 1 A 0
 			./$CURRPROG >> $EXEC # Capture program output
 	done
 
+	EXECS="serial/data/${CURRPROG}_000.txt"
+	EXECE="serial/data/${CURRPROGS}_000.txt"
+
 	# Metrics
-	if [ "$2" == 'E' ]; then
-		single_output_metrics $EXEC $CURRPROG 1
-	elif [ "$2" == 'F' ]; then
-		single_output_metrics $EXEC $CURRPROG 1
-	else	
-		single_output_metrics $EXEC $CURRPROG $1
+	#if [ "$2" == 'E' ]; then
+	#	single_output_metrics $EXEC $CURRPROG 1
+	#elif [ "$2" == 'F' ]; then
+	#	single_output_metrics $EXEC $CURRPROG 1
+	#else	
+	#	single_output_metrics $EXEC $CURRPROG $1
+	#fi
+
+	# compare to same letter
+	if [ "$4" == "1" ]; then
+		if [ "$2" == 'E' ]; then
+			multi_output_metrics $EXEC $CURRPROG 1 $EXECS
+		elif [ "$2" == 'F' ]; then
+			multi_output_metrics $EXEC $CURRPROG 1 $EXECS
+		else	
+			multi_output_metrics $EXEC $CURRPROG $1 $EXECS 
+		fi
+	fi
+
+	# compare to E
+	if [ "$2" != E ]; then
+		if [ "$2" == 'E' ]; then
+			multi_output_metrics $EXEC $CURRPROG 1 $EXECE
+		elif [ "$2" == 'F' ]; then
+			multi_output_metrics $EXEC $CURRPROG 1 $EXECE
+		else	
+			multi_output_metrics $EXEC $CURRPROG $1 $EXECE 
+		fi
 	fi
 
 	rm $EXEC
@@ -51,16 +87,16 @@ make clean
 echo "Starting benchmark on 01_'s"
 
 	# A
-	run_programs 1 A 0
+	run_programs 1 A 0 1
 
 	# C
-	run_programs 1 C 0
+	run_programs 1 C 0 1
 
 	# E
-	run_programs 1 E 0
+	run_programs 1 E 0 1
 
 	# F
-	run_programs 1 F 0
+	run_programs 1 F 0 1
 
 	# Cleanup
 	make clean
@@ -74,10 +110,10 @@ echo ""
 echo "Starting benchmark on 02_'s"
 
 	# A
-	run_programs 2 A 0
+	run_programs 2 A 0 1
 
 	# C
-	run_programs 2 C 0
+	run_programs 2 C 0 1
 
 	# Cleanup
 	make clean
@@ -95,16 +131,16 @@ echo ""
 echo "Starting benchmark on 04_'s"
 
 	# A
-	run_programs 4 A 0
+	run_programs 4 A 0 1
 
 	# C
-	run_programs 4 C 0
+	run_programs 4 C 0 1
 
 	# E  -- make sure it runs the single print process
-	run_programs 4 E 0
+	run_programs 4 E 0 1
 
 	# F -- make sure it runs the single print process
-	run_programs 4 F 0
+	run_programs 4 F 0 1
 
 	# Cleanup
 	make clean
@@ -116,7 +152,7 @@ echo ""
 echo "Starting benchmark on 05_'s"
 
 	# A 
-	run_programs 5 A 0
+	run_programs 5 A 0 0
 
 	# Cleanup
 	make clean
@@ -128,7 +164,7 @@ echo ""
 echo "Starting benchmark on 06_'s"
 
 	# A
-	run_programs 6 A 0
+	run_programs 6 A 0 0
 
 	# Cleanup
 	make clean
@@ -143,7 +179,7 @@ echo "Starting benchmark on 07_'s"
 	run_programs 7 C 0
 
 	# E
-	run_programs 7 E 0
+	run_programs 7 D 0
 
 	# Cleanup
 	make clean

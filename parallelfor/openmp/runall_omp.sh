@@ -95,7 +95,19 @@ echo ""
 #echo "Starting benchmark on 03_'s"
 
 	# A
-	#run_programs 3 A 0
+	run_programs 3 A 0
+
+	# B
+	run_programs 3 B 0
+
+	# C
+	run_programs 3 C 0
+
+	# D
+	run_programs 3 D 0
+
+	# E
+	#run_programs 3 E 0
 
 	# G
 	#run_programs 3 G 0
