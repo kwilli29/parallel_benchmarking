@@ -10,10 +10,8 @@
 #include <math.h>
 
 /* Benchmark: 04F: Spawn time before function ; One Spawn w/ fcn arg (Pthreads)
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+ * Launch a bunch and measure when all done
  */
-
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
 static struct timespec t_end; 
 

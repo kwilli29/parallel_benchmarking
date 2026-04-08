@@ -10,10 +10,8 @@
 #include <math.h>
 
 /* Benchmark: 01F: Spawn timer after ; One Spawn w/ fcn args (Pthreads)
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+ * Launch a bunch and measure when all done
  */
-
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
 pthread_barrier_t sync_barrier; /* to sync */
 

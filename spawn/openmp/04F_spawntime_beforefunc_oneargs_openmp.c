@@ -9,11 +9,9 @@
 #include "ctimer.h"
 #include <math.h>
 
-/* Benchmark: 04E: Spawn time beforefunc ; One Spawns (OpenMP)
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+/* Benchmark: 04F: Spawn time beforefunc ; One Spawns (OpenMP)
+ * Launch a bunch and measure when all done 
  */
-
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
 struct timespec spawn_function(int x){           // Simple Function to Spawn
 

@@ -8,6 +8,10 @@
 #include "ctimer.h"
 #include <math.h>
 
+/* 06A : SpawnTree (Pthreads)
+ *
+ */
+
 int DEPTH = 10;
 
 void runbench(int);

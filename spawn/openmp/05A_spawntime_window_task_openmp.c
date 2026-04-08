@@ -12,11 +12,7 @@
 /* Benchmark: 05A: Spawn count in time window ; While-Loop Task Loop (OpenMP)
  * **this test is not really representative of how openmp is used
  * Launch a bunch in a time window and measure when all done  
- *
  */
-
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
-
 
 void spawn_function(){           // Simple Spawn Function
 
@@ -39,11 +35,8 @@ int main(int argc, char *argv[]){
 
 	struct timeval t_start, t_end;
 	
-	gettimeofday(&t_start, NULL); // struct timespec *tp
+	gettimeofday(&t_start, NULL); //
 	gettimeofday(&t_end, NULL);	
-
-
-	 // taskloop? 
 
 	#pragma omp parallel
 	{

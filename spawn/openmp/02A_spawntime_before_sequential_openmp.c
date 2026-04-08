@@ -10,10 +10,8 @@
 #include <math.h>
 
 /* Benchmark: 02A: Spawn time before ; Sequential Spawns (OpenMP)
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+ * Launch a bunch and measure when all done 
  */
-
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
 void spawn_function(){           // Simple Function to Spawn
 
@@ -36,6 +34,9 @@ int main(int argc, char *argv[]){
 	struct timespec t_end[DEPTH];
 
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+
+	// use sections to guarantee order of timestamp then spawn
+	// sections go in order
 
  #pragma omp parallel
  #pragma omp sections

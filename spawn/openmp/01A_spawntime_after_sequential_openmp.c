@@ -10,7 +10,7 @@
 #include <math.h>
 
 /* Benchmark: 01A: Spawn time after ; Sequential Spawns (OpenMP)
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+ * Launch a bunch and measure when all done
  * This is NOT how OpenMP is meant to be used
  */
 

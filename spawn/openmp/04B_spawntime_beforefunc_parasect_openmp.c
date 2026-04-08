@@ -10,10 +10,8 @@
 #include <math.h>
 
 /* Benchmark: 04B: Spawn time beforefunc ; Parallel Section Spawns (OpenMP)
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+ * Launch a bunch and measure when all done
  */
-
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
 struct timespec spawn_function(){           // Simple Function to Spawn
 
@@ -37,6 +35,8 @@ int main(int argc, char *argv[]){
 
 	struct timespec t_start[DEPTH]; struct timespec t_res;
 	struct timespec t_end[DEPTH];
+
+	// spawn tasks in parallel using sections
 
  #pragma omp parallel
  #pragma omp sections

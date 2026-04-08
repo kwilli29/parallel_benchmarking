@@ -12,7 +12,7 @@
 #define OMP_THREADS 271
 
 /* Benchmark: 01B: Spawn time after ; Parallel Region Spawns (OpenMP)
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+ * Launch a bunch and measure when all done
  */
 
 void spawn_function(){           // Simple Spawn Function
@@ -34,7 +34,10 @@ int main(int argc, char *argv[]){
 	/* int DEPTH = 271; */
 
 	struct timespec t_start, t_res, t_end;
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+	clock_gettime(CLOCK_MONOTONIC, &t_start);
+
+
+	// omp parallel region will call spawn_function in parallel OMP_THREAD # of times
 
   #pragma omp parallel num_threads(OMP_THREADS) 
   {

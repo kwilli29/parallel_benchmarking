@@ -10,10 +10,8 @@
 #include <math.h>
 
 /* Benchmark: 04D: Spawn time beforefunc ; ParallelFor-Loop Spawns (OpenMP)
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+ * Launch a bunch and measure when all done
  */
-
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
 struct timespec spawn_function(){           // Simple Function to Spawn
 

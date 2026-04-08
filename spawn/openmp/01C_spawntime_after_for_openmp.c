@@ -10,7 +10,7 @@
 #include <math.h>
 
 /* Benchmark: 01C: Spawn time after ; For-Loop Spawns (OpenMP)
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+ * Launch a bunch and measure when all done 
  */
 
 void spawn_function(){           // Simple Spawn Function
@@ -32,9 +32,8 @@ int main(int argc, char *argv[]){
 	int DEPTH = 271;
 
 	struct timespec t_start, t_res, t_end;
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+	clock_gettime(CLOCK_MONOTONIC, &t_start); // 
 
-	// #pragma omp parallel for schedule (static, 1) // grainsize
 	#pragma omp parallel  
 	{									// thread pool
 		#pragma omp single		// one thread on the for loop

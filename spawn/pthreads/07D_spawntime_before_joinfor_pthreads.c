@@ -10,10 +10,8 @@
 #include <math.h>
 
 /* Benchmark: 07E Spawn time before ; For-Loop + Join Spawns (Pthreads)
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+ * Launch a bunch and measure when all done 
  */
-
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
 void* spawn_function(){           // Simple Math for Spawn Function
 	int x = 100; int y = 5000; int z = 1000000;

@@ -10,7 +10,7 @@
 #include <math.h>
 
 /* Benchmark: 01E: Spawn time after ; One Spawns (OpenMP)
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+ * Launch a bunch and measure when all done 
  */
 
 void spawn_function(){           // Simple Spawn Function
@@ -30,9 +30,10 @@ void spawn_function(){           // Simple Spawn Function
 int main(int argc, char *argv[]){
 
 	struct timespec t_start, t_res, t_end;
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+	clock_gettime(CLOCK_MONOTONIC, &t_start); // 
 
 	// I really think this is the most representative way to spawn 1 "thread" in a pool of 200
+	// Not really what openmp is for
 
 	#pragma omp parallel //num_threads(1) 
 	#pragma omp single
@@ -41,9 +42,6 @@ int main(int argc, char *argv[]){
 		spawn_function();
 	}	
 	
-
-	// #pragma omp task
-	// spawn_function(); 	// available threads perform tasks
 	
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
