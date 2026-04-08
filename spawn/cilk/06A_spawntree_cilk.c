@@ -18,8 +18,6 @@
  * then calls 2 cilk_spawns which invoke runbench
  */
 
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
-
 void runbench(int, int);
 
 /*void spawn_function1(int depcnt){           // Print Depth Function

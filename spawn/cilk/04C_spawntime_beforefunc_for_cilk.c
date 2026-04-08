@@ -11,10 +11,9 @@
 #include <math.h>
 
 /* Benchmark: 04C: Spawn time before thread function begins ; For-Loop Spawns (Cilk) 
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+ * Launch a bunch and measure when all done
  */
 
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
 #define NCILK __cilkrts_get_nworkers()
 
@@ -39,6 +38,7 @@ int main(int argc, char *argv[]){
 	struct timespec t_start[NCILK-1]; struct timespec t_res; 
 	struct timespec t_end[NCILK-1];
 
+	// Use for loop, timestamp before spawn to right at start of spawn_function
 
 	for(int i=0; i < NCILK-1; i++){ 	
 		clock_gettime(CLOCK_MONOTONIC, &t_start[i]); t_end[i] = cilk_spawn spawn_function();

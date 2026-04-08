@@ -14,10 +14,8 @@
 
 /* 
  * Benchmark: 04F: Spawn time beforefunc ; One Spawns w/ Fcn args (Cilk)
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+ * Launch a bunch and measure when all done 
  */
-
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
 #define NCILK __cilkrts_get_nworkers()
 
@@ -46,7 +44,7 @@ int main(int argc, char *argv[]){
 
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 	
-	t_end = cilk_spawn spawn_function(x); 
+	t_end = cilk_spawn spawn_function(x); // spawn with one int argument
 	
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 

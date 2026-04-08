@@ -14,11 +14,8 @@
 
 /* 
  * Benchmark: 01E: Spawn time after ; One Spawns (Cilk)
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+ * Launch a bunch and measure when all done
  */
-
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
-
 
 void spawn_function(){           // Simple Spawn Function
 	int x = 100; int y = 5000; int z = 1000000;
@@ -36,9 +33,9 @@ void spawn_function(){           // Simple Spawn Function
 int main(int argc, char *argv[]){
 
 	struct timespec t_start, t_res, t_end;
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+	clock_gettime(CLOCK_MONOTONIC, &t_start); //
 	
-	cilk_spawn spawn_function(); 
+	cilk_spawn spawn_function(); // single spawn 
 	
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 

@@ -15,8 +15,6 @@
  *
  */
 
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
-
 #define NCILK __cilkrts_get_nworkers()
 
 void spawn_function(){           // Simple Function to Spawn
@@ -38,6 +36,8 @@ int main(int argc, char *argv[]){
 	struct timespec t_start, t_res;
 	struct timespec t_end[NCILK-1];
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+
+	// the brackets are so the spawns can be parallel, but there is a guarantee that a time is marked before the spawn
 
 	cilk_scope{
 

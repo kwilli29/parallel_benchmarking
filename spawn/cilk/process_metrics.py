@@ -3,7 +3,7 @@
 import sys
 import time
 
-def long_metrics(filename, runs):
+def long_metrics(filename, runs): # for 02 benchmarks --> get the difference between time measurements
 
     ACC = 0.0
     thcnt = 0
@@ -118,7 +118,7 @@ def long_overhead(parallel_filename, serial_filename, runs):
 
     return
 
-def thread_metrics(filename, runs):
+def thread_metrics(filename, runs): # Time window metric
     # METRICS
     AVG = 0.0
 
@@ -132,7 +132,7 @@ def thread_metrics(filename, runs):
 
     return
 
-def short_metrics(filename):
+def short_metrics(filename): # average times
     # METRICS
     AVG = 0.0
     linecnt = 0
@@ -207,7 +207,7 @@ def main():
         if sys.argv[3] == '2': #or sys.argv[3] == '4':
             long_overhead(sys.argv[2],sys.argv[4],sys.argv[1])
         elif sys.argv[3] == '5':
-            pass # thread_metrics(sys.argv[2],sys.argv[1])
+            pass # 
         else:
             short_overhead(sys.argv[2], sys.argv[4])
 

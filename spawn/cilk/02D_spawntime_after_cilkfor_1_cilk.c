@@ -15,8 +15,6 @@
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
 
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
-
 #define NCILK __cilkrts_get_nworkers()
 
 void spawn_function(){           // Simple Function to Spawn
@@ -40,7 +38,7 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
 	#pragma cilk grainsize 1
-	cilk_for(int i=0; i < NCILK-1; i++){
+	cilk_for(int i=0; i < NCILK-1; i++){ // parallel for loop time then spawn
 		
 		clock_gettime(CLOCK_MONOTONIC, &t_end[i]); cilk_spawn spawn_function();
 

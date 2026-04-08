@@ -12,10 +12,8 @@
 #include "ctimer.h"
 
 /* Benchmark: 04B: Spawn time beforefunc ; Sequential Spawns (Cilk)
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+ * Launch a bunch and measure when all done 
  */
-
-// **** TIMER NEEDS TO BE ADJUSTED **** //
 
 #define NCILK __cilkrts_get_nworkers() // trying to edit the # of threads will make t_end not work
 

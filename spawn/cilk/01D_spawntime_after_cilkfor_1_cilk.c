@@ -14,10 +14,8 @@
 
 /* 
  * Benchmark: 01D: Spawn time after ; CilkFor Spawns (Cilk)
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+ * Launch a bunch and measure when all done 
  */
-
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
 #define NCILK __cilkrts_get_nworkers()
 
@@ -39,10 +37,10 @@ int main(int argc, char *argv[]){
 
 
  	struct timespec t_start, t_res, t_end;
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+	clock_gettime(CLOCK_MONOTONIC, &t_start); //
 
 	#pragma cilk grainsize 1
-	cilk_for(int i = 0; i < NCILK-1; i++){
+	cilk_for(int i = 0; i < NCILK-1; i++){ // use parallel for to spawn simple function threads in parallel
 		spawn_function();
 	} 
 
@@ -55,12 +53,3 @@ int main(int argc, char *argv[]){
 
 	return 0;
 }
-
-/* 
-wsp_t start = wsp_getworkspan();
-
-wsp_t end = wsp_getworkspan();
-wsp_t elapsed = wsp_sub(end, start);
-wsp_dump(elapsed, "qsort_sample");
-*/
-

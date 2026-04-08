@@ -12,7 +12,7 @@
 #include "ctimer.h"
 
 /* Benchmark: 01B: Spawn time after ; CilkScope Spawns (Cilk)
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+ * Launch a bunch and measure when all done -
  */
 
 #define NCILK __cilkrts_get_nworkers()
@@ -34,6 +34,8 @@ int main(int argc, char *argv[]){
 
 	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+
+	// use cilk scope to spawn threads in a parallel region
 
 	cilk_scope{
 		cilk_spawn spawn_function();

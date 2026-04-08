@@ -14,11 +14,8 @@
 
 /* 
  * Benchmark: 04E: Spawn time before func ; One Spawns (Cilk)
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+ * Launch a bunch and measure when all done
  */
-
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
-
 
 #define NCILK __cilkrts_get_nworkers()
 
@@ -47,7 +44,7 @@ int main(int argc, char *argv[]){
 
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 	
-	t_end = cilk_spawn spawn_function(); 
+	t_end = cilk_spawn spawn_function(); // single instance of time, spawn, end time before function 
 	
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 

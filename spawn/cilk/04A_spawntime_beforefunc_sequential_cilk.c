@@ -12,10 +12,8 @@
 #include "ctimer.h"
 
 /* Benchmark: 04A: Spawn time beforefunc ; Sequential Spawns (Cilk)
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+ * Launch a bunch and measure when all done 
  */
-
- // **** TIMER NEEDS TO BE ADJUSTED **** //
 
 #define NCILK __cilkrts_get_nworkers()
 
@@ -32,7 +30,7 @@ struct timespec spawn_function(){           // Simple Spawn Function
 
 	z = z + y + x;	
 
-	return t_end; 
+	return t_end; // return individual timestamps 
 }
 
 int main(int argc, char *argv[]){
@@ -40,7 +38,10 @@ int main(int argc, char *argv[]){
 	struct timespec t_start[NCILK-1]; struct timespec t_res;
 	struct timespec t_end[NCILK-1];
 
-	// cilk_scope{
+
+	// Time before spawn, then take time stamp at the beginning of the spawn function
+	// Time b/w spawn and beginning of function running
+
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[0]); t_end[0] = cilk_spawn spawn_function(); 
 		 // Take time stamp before each spawn
 		clock_gettime(CLOCK_MONOTONIC, &t_start[1]); t_end[1] = cilk_spawn spawn_function(); 
@@ -344,9 +345,8 @@ int main(int argc, char *argv[]){
 		// cilk_spawn spawn_function();
 		// cilk_spawn spawn_function();
 		
-   //}
 
-	cilk_sync; // */
+	cilk_sync; // 
 
 	//printf("****\n");	
 	for(int i = 0; i < NCILK-1; i++){

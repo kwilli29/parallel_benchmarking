@@ -11,10 +11,8 @@
 #include <math.h>
 
 /* Benchmark: 04D: Spawn time before thread function begins ; CilkFor Spawns (Cilk) 
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+ * Launch a bunch and measure when all done
  */
-
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
 #define NCILK __cilkrts_get_nworkers()
 
@@ -38,6 +36,8 @@ int main(int argc, char *argv[]){
 
 	struct timespec t_start[NCILK-1]; struct timespec t_res;
 	struct timespec t_end[NCILK-1];
+
+	// parallel for timestamp before spawn to beginning of spawned function
 
 	#pragma cilk grainsize 1
 	cilk_for(int i=0; i < NCILK-1; i++){ 	

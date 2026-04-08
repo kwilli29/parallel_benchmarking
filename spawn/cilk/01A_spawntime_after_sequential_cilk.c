@@ -15,10 +15,10 @@
 #define NCILK __cilkrts_get_nworkers()
 
 /* Benchmark: 01A: Spawn time after ; Sequential Spawns (Cilk)
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+ * Launch a bunch and measure when all done 
  */
 
-void spawn_function(){           // Simple Spawn Function
+void spawn_function(){           // Simple Spawn Function -- can be changed
 	int x = 100; int y = 5000; int z = 1000000;
 
 	x = x + y + z;
@@ -37,7 +37,9 @@ int main(int argc, char *argv[]){
 	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
-		cilk_spawn spawn_function(); //if(NCILK-1 <= 0) { goto end; }
+	// sequentially spawn functions
+
+		cilk_spawn spawn_function(); //if(NCILK-1 <= 0) { goto end; } // one solution to make it more 'dynamic'
 		cilk_spawn spawn_function(); //if(NCILK-2 <= 0) { goto end; }
 		cilk_spawn spawn_function();
 		cilk_spawn spawn_function();
@@ -393,7 +395,7 @@ int main(int argc, char *argv[]){
 		// cilk_spawn spawn_function();
 
 
-end: 
+// end: // unused label 
 
 	cilk_sync; 
 	
