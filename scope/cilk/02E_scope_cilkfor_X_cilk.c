@@ -11,7 +11,7 @@
 #include <math.h>
 #include "ctimer.h"
 
-/* Benchmark: 01A: Scope time after ; CilkScope  (Cilk)
+/* Benchmark: 02E: Scope time after ; CilkScope  (Cilk)
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
 
@@ -30,53 +30,53 @@ void spawn_function(){           // Simple Spawn Function
 }
 
 void hello(){
-	printf("%d hello\n", __cilkrts_get_worker_number());
+	printf("* %d hello\n", __cilkrts_get_worker_number());
 	return;
 }
 void hi(){
-	printf("%d hi\n", __cilkrts_get_worker_number());
+	printf("* %d hi\n", __cilkrts_get_worker_number());
 	return;
 }
 void greetings(){
-	printf("%d greetings\n",__cilkrts_get_worker_number());
+	printf("* %d greetings\n",__cilkrts_get_worker_number());
 	return;
 }
 void welcome(){
-	printf("%d welcome\n", __cilkrts_get_worker_number());
+	printf("* %d welcome\n", __cilkrts_get_worker_number());
 	return;
 
 }
 void byebye(){
-	printf("%d byebye\n", __cilkrts_get_worker_number());
+	printf("* %d byebye\n", __cilkrts_get_worker_number());
 	return;
 }
 
 int main(int argc, char *argv[]){
 
 	struct timespec t_start, t_res, t_end;
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+	clock_gettime(CLOCK_MONOTONIC, &t_start); //
 
 
 	cilk_scope{
 
 		cilk_for(int i=0 ; i < 100; i++){
-			cilk_spawn hello();
+			hello();
 		}
 
 		cilk_for(int i=0 ; i < 100; i++){
-			cilk_spawn hi();
+			hi();
 		}
 
 		cilk_for(int i=0 ; i < 100; i++){
-			cilk_spawn greetings();
+			greetings();
 		}
 
 		cilk_for(int i=0 ; i < 100; i++){
-			cilk_spawn welcome();
+			welcome();
 		}	
 
 		cilk_for(int i=0 ; i < 100; i++){
-			cilk_spawn byebye();
+			byebye();
 		}
    }
 
@@ -85,7 +85,7 @@ int main(int argc, char *argv[]){
 	timespec_sub(&t_res, t_end, t_start);
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
-	// printf("01B\n");
+	// printf("02E\n");
 
 	return 0;
 }

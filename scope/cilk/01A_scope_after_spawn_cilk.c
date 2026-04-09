@@ -12,7 +12,7 @@
 #include "ctimer.h"
 
 /* Benchmark: 01A: Scope time after ; CilkScope  (Cilk)
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+ * Launch a bunch and measure when all done 
  */
 
 #define NCILK __cilkrts_get_nworkers()
@@ -30,24 +30,24 @@ void spawn_function(){           // Simple Spawn Function
 }
 
 void hello(){
-	printf("%d hello\n", __cilkrts_get_worker_number());
-	return;
+	printf("* %d hello\n", __cilkrts_get_worker_number());
+	return; 
 }
 void hi(){
-	printf("%d hi\n", __cilkrts_get_worker_number());
+	printf("* %d hi\n", __cilkrts_get_worker_number());
 	return;
 }
 void greetings(){
-	printf("%d greetings\n",__cilkrts_get_worker_number());
+	printf("* %d greetings\n",__cilkrts_get_worker_number());
 	return;
 }
 void welcome(){
-	printf("%d welcome\n", __cilkrts_get_worker_number());
+	printf("* %d welcome\n", __cilkrts_get_worker_number());
 	return;
 
 }
 void byebye(){
-	printf("%d byebye\n", __cilkrts_get_worker_number());
+	printf("* %d byebye\n", __cilkrts_get_worker_number());
 	return;
 }
 
@@ -76,7 +76,7 @@ int main(int argc, char *argv[]){
 	timespec_sub(&t_res, t_end, t_start);
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
-	// printf("01B\n");
+	// printf("01A\n");
 
 	return 0;
 }
