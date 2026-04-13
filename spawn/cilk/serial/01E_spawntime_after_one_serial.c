@@ -42,7 +42,7 @@ int main(int argc, char *argv[]){
 
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
-	// printf("01C\n");
+	// printf("01E\n");
 
 
 	return 0;

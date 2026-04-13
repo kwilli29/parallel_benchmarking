@@ -3,6 +3,8 @@
 import sys
 import time
 
+NUM_PROCS = 68
+
 def long_metrics(filename, runs): # for 02 benchmarks --> get the difference between time measurements
 
     ACC = 0.0
@@ -46,8 +48,8 @@ def long_metrics(filename, runs): # for 02 benchmarks --> get the difference bet
 
 def long_overhead(parallel_filename, serial_filename, runs):
 
-    # (Tp - Ts) / innerloop
-    # (Time of 25 parallel fcns - Time 25 serial fcns) / innerloop
+    # (Tp) - (Ts / #procs)
+    # (Time of #runs parallel fcns) - (Time #runs serial fcns / #procs)
 
     # get serial output
     # get parallel output
@@ -111,10 +113,11 @@ def long_overhead(parallel_filename, serial_filename, runs):
                 thcnt += 1
             prevline = line.strip()
 
-    avgdiff_overhead= (sum(PARA_AVGDIFFS) - sum(SERI_AVGDIFFS)) / len(PARA_AVGDIFFS)
+    avgdiff_overhead= sum(PARA_AVGDIFFS) - (sum(SERI_AVGDIFFS) / NUM_PROCS) 
     avgdiff_overhead = avgdiff_overhead*1000000000.0     
 
-    print(f'*OVERHEAD AVERAGE TIME B/W: {avgdiff_overhead:.1f} ns') 
+    print(f'*OVERHEAD AVERAGE TIME B/W ??: {avgdiff_overhead:.1f} ns')
+    print(f'*OVERHEAD AVERAGE TIME B/W ?? / # runs: {(avgdiff_overhead/len(PARA_AVGDIFFS)):.1f} ns') 
 
     return
 
@@ -152,10 +155,10 @@ def short_metrics(filename): # average times
  
     return
 
-def short_overhead(parallel_filename, serial_filename):
+def short_overhead(parallel_filename, serial_filename,runs):
 
-    # (Tp - Ts) / innerloop
-    # (Time of 25 parallel fcns - Time 25 serial fcns) / innerloop
+    # (Tp) - (Ts / #procs)
+    # (Time of #runs parallel fcns) - (Time #runs serial fcns / #procs)
 
     # get serial output
     # get parallel output
@@ -163,7 +166,6 @@ def short_overhead(parallel_filename, serial_filename):
     # separately accumulate each 
     # subtract
 
-    # divide by # runs
 
     # METRICS
     PARA_ACC = 0.0
@@ -182,12 +184,12 @@ def short_overhead(parallel_filename, serial_filename):
             if line:
                 SERI_ACC += float(line.strip())
 
-    AVG = ((PARA_ACC - SERI_ACC) / float(linecnt))
+    AVG = (PARA_ACC) - (SERI_ACC / NUM_PROCS) # # of processors
     
     AVG = AVG*1000000000.0
    
     print(f'*OVERHEAD TIME: {AVG:.1f} ns') 
-    
+    print(f'*OVERHEAD TIME / # runs: {(AVG/float(runs)):.1f} ns')
     return
 
 def main():
@@ -209,7 +211,7 @@ def main():
         elif sys.argv[3] == '5':
             pass # 
         else:
-            short_overhead(sys.argv[2], sys.argv[4])
+            short_overhead(sys.argv[2], sys.argv[4],sys.argv[1])
 
 
     return

@@ -3,6 +3,8 @@
 import sys
 import time
 
+NUM_PROCS=68
+
 def short_metrics(filename):
     # METRICS
     AVG = 0.0
@@ -22,9 +24,9 @@ def short_metrics(filename):
     print(f'AVERAGE TIME: {AVG:.1f} ns') 
     return
 
-def short_overhead(parallel_filename, serial_filename):
-    # (Tp - Ts) / innerloop
-    # (Time of 25 parallel fcns - Time 25 serial fcns) / innerloop
+def short_overhead(parallel_filename, serial_filename,runs):
+    # (Tp - (Ts/ p))
+    # (Time of 25 parallel fcns - Time 25 serial fcns) / p
 
     # METRICS
     PARA_ACC = 0.0
@@ -44,11 +46,13 @@ def short_overhead(parallel_filename, serial_filename):
             if line:
                 SERI_ACC += float(line.strip())
 
-    AVG = ((PARA_ACC - SERI_ACC) / float(linecnt))
+
+    AVG = (PARA_ACC) - (SERI_ACC / NUM_PROCS) # # of processors
     
     AVG = AVG*1000000000.0
    
     print(f'*OVERHEAD TIME: {AVG:.1f} ns') 
+    print(f'*OVERHEAD TIME / # runs: {(AVG/float(runs)):.1f} ns')
     
     return
 
@@ -71,7 +75,7 @@ def main():
         elif sys.argv[3] == '5':
             pass # thread_metrics(sys.argv[2],sys.argv[1])
         else:
-            short_overhead(sys.argv[2], sys.argv[4])
+            short_overhead(sys.argv[2], sys.argv[4],sys.argv[1])
 
     return
 
