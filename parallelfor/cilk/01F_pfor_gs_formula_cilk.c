@@ -13,11 +13,12 @@
 #include "ctimer.h"
 
 /* 
- * Benchmark: 02A: Function in CilkFor  ; CilkFor (Cilk)
- * Launch a bunch and measure when all done 
+ * Benchmark: 01F: Grainsize = Formula Result; CilkFor (Cilk)
+ * Launch a bunch and measure when all done
  */
 
 #define NCILK __cilkrts_get_nworkers()
+// #define FORMULA min(2048, (NCILK-1/(8*NCILK)))
 
 void spawn_function(){           // Simple Spawn Function
 
@@ -35,11 +36,10 @@ void spawn_function(){           // Simple Spawn Function
 
 int main(int argc, char *argv[]){
 
-
  	struct timespec t_start, t_res, t_end;
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+	clock_gettime(CLOCK_MONOTONIC, &t_start); // 
 
-	#pragma cilk grainsize 1
+	//#pragma cilk grainsize FORMULA 
 	cilk_for(int i = 0; i < NCILK-1; i++){
 		spawn_function();
 	} 
@@ -49,7 +49,8 @@ int main(int argc, char *argv[]){
 	timespec_sub(&t_res, t_end, t_start);
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
-	// printf("02A\n");
+	// printf("01F\n");
 
 	return 0;
 }
+

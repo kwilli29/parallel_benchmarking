@@ -4,20 +4,17 @@
 #include <stdint.h>
 #include <unistd.h>
 #include <string.h>
-#include <cilk/cilk.h>
-#include <cilk/cilkscale.h>
-#include <cilk/cilk_api.h>
 #include <assert.h>
 #include <sys/time.h>
 #include <math.h>
 #include "ctimer.h"
 
 /* 
- * Benchmark: 02A: Function in CilkFor  ; CilkFor (Cilk)
- * Launch a bunch and measure when all done 
+ * Benchmark: 02A: Function in Parallel For  ; Serial For (Serial)
+ * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
 
-#define NCILK __cilkrts_get_nworkers()
+#define NCILK 272
 
 void spawn_function(){           // Simple Spawn Function
 
@@ -39,8 +36,7 @@ int main(int argc, char *argv[]){
  	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
-	#pragma cilk grainsize 1
-	cilk_for(int i = 0; i < NCILK-1; i++){
+	for(int i = 0; i < NCILK-1; i++){
 		spawn_function();
 	} 
 

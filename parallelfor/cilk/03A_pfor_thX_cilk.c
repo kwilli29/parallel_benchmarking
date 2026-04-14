@@ -13,7 +13,7 @@
 #include "ctimer.h"
 
 /* 
- * Benchmark: 02A: Function in CilkFor  ; CilkFor (Cilk)
+ * Benchmark: 03A: Grainsize = 1  ; CilkFor (Cilk)
  * Launch a bunch and measure when all done 
  */
 
@@ -49,7 +49,7 @@ int main(int argc, char *argv[]){
 	timespec_sub(&t_res, t_end, t_start);
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
-	// printf("02A\n");
+	// printf("03A\n");
 
 	return 0;
 }

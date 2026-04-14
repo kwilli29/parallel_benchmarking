@@ -13,11 +13,9 @@
 #include "ctimer.h"
 
 /* 
- * Benchmark: 01D: Grainsize = all available threads ; CilkFor (Cilk)
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+ * Benchmark: 01E: Grainsize = all available threads ; CilkFor (Cilk)
+ * Launch a bunch and measure when all done
  */
-
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
 #define NCILK __cilkrts_get_nworkers()
 

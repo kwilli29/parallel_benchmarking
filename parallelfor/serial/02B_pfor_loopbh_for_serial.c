@@ -4,20 +4,17 @@
 #include <stdint.h>
 #include <unistd.h>
 #include <string.h>
-#include <cilk/cilk.h>
-#include <cilk/cilkscale.h>
-#include <cilk/cilk_api.h>
 #include <assert.h>
 #include <sys/time.h>
 #include <math.h>
 #include "ctimer.h"
 
 /* 
- * Benchmark: 02A: Function in CilkFor  ; CilkFor (Cilk)
- * Launch a bunch and measure when all done 
+ * Benchmark: 02B: ForLoop in Parallel For  ; Serial For (Serial )
+ * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
 
-#define NCILK __cilkrts_get_nworkers()
+#define NCILK 272
 
 void spawn_function(){           // Simple Spawn Function
 
@@ -32,16 +29,17 @@ void spawn_function(){           // Simple Spawn Function
 	return; 
 }
 
-
 int main(int argc, char *argv[]){
 
+    int sum[10000] = {0};
 
  	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
-	#pragma cilk grainsize 1
-	cilk_for(int i = 0; i < NCILK-1; i++){
-		spawn_function();
+	for(int i = 0; i < NCILK-1; i++){
+		for(int j = 0; j < 10000; j++){
+            sum[j] += j;
+      }
 	} 
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
@@ -49,7 +47,7 @@ int main(int argc, char *argv[]){
 	timespec_sub(&t_res, t_end, t_start);
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
-	// printf("02A\n");
+	// printf("02B\n");
 
 	return 0;
 }

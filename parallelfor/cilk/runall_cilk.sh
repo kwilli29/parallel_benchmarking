@@ -38,7 +38,27 @@ run_programs() { # ex. 1 A 0
 	rm $EXEC
 
 }
+run_thread_programs() { # ex. 1 A 0 2
 
+	make "$1" # Number
+	echo "$2" # Letter
+
+	#	Run the Programs
+	CURRPROG="$3$1$2"
+	EXEC="data/${CURRPROG}_000.txt"
+
+	touch $EXEC 
+	for((i=0;i<($RUNS);i++)); 
+	do	
+			CILK_NWORKERS=$4 ./$CURRPROG >> $EXEC # Capture program output
+	done
+	
+	# Metrics
+	single_output_metrics $EXEC $CURRPROG $1
+
+	rm $EXEC
+
+}
 make clean
 ###############################
 
@@ -92,29 +112,47 @@ echo "Cleanup 02_'s"
 echo ""
 ###############################
 
-#echo "Starting benchmark on 03_'s"
+echo "Starting benchmark on 03_'s"
 
 	# A
-	#run_programs 3 A 0
+	run_thread_programs 3 A 0 2
 
-	# G
-	#run_programs 3 G 0
+	# B
+	run_thread_programs 3 A 0 272/2
+
+	# C
+	run_thread_programs 3 A 0 272/4
+
+	# D
+	run_thread_programs 3 A 0 272/8
+
+	# E
+	run_thread_programs 3 A 0 272
 
 	# Cleanup
-	#make clean
+	make clean
 
-#echo "Cleanup 03_'s"
-#echo ""
+echo "Cleanup 03_'s"
+#cho ""
 ###############################
 
-#echo "Starting benchmark on 04_'s"
+echo "Starting benchmark on 04_'s"
 
 	# A
-	#run_programs 4 A 0
+	run_programs 4 A 0
+	
+	# B
+	run_programs 4 B 0
 
+	# C
+	run_programs 4 C 0
+	
+	# D
+	run_programs 4 D 0
+	
 	# Cleanup
-	#make clean
+	make clean
 
-#echo "Cleanup 04_'s"
-#echo ""
+echo "Cleanup 04_'s"
+echo ""
 ###############################

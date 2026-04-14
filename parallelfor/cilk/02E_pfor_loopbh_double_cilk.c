@@ -14,12 +14,8 @@
 
 /* 
  * Benchmark: 02E: DoubleFor Function in CilkFor  ; CilkFor (Cilk)
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+ * Launch a bunch and measure when all done 
  */
-
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
-
-//#define NCILK __cilkrts_get_nworkers()
 
 #define COUNT 4 // 273 // 4
 static const int ITERATION = 1000000;

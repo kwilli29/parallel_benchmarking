@@ -14,10 +14,8 @@
 
 /* 
  * Benchmark: 01C: Grainsize = 1/2 (half) available threads ; CilkFor (Cilk)
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+ * Launch a bunch and measure when all done
  */
-
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
 #define NCILK __cilkrts_get_nworkers()
 
