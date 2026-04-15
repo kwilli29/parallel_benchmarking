@@ -11,9 +11,11 @@
 #include "ctimer.h"
 
 /* 
- * Benchmark: 03A: Schedule = Static ; ParallelFor (OpenMP)
+ * Benchmark: 05C: Schedule = Guided ; ParallelFor (OpenMP)
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
+
+#define NITER 272
 
 void spawn_function(){           // Simple Spawn Function
 
@@ -25,16 +27,13 @@ void spawn_function(){           // Simple Spawn Function
 	return; 
 }
 
-
 int main(int argc, char *argv[]){
-
-	int DEPTH = 271;
 
  	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
-	#pragma omp parallel for schedule(static, 1) // grainsize
-	for(int i = 0; i < DEPTH; i++){
+	#pragma omp parallel for schedule(guided, 1) // grainsize
+	for(int i = 0; i < NITER-1; i++){
 		spawn_function(); 
 		// how to time the end of the *last thread * to complete
 	}
@@ -44,7 +43,7 @@ int main(int argc, char *argv[]){
 	timespec_sub(&t_res, t_end, t_start);
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
-	// printf("03A\n");
+	// printf("05C\n");
 
 	return 0;
 }

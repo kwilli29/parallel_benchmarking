@@ -19,6 +19,12 @@ build: $(TARGETS)
 		exe=$$(echo $$name | cut -c1-3); \
 		$(CC) $(CFLAGS) $$s -o $$exe; \
 	done
+3:
+	@for s in $(wildcard 03*.c); do \
+		name=$$(basename $$s); \
+		exe=$$(echo $$name | cut -c1-3); \
+		$(CC) $(CFLAGS) $$s -o $$exe; \
+	done
 4:
 	@for s in $(wildcard 04*.c); do \
 		name=$$(basename $$s); \

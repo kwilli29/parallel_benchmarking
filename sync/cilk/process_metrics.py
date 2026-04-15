@@ -3,6 +3,8 @@
 import sys
 import time
 
+NUM_PROCS=68
+
 def long_metrics(filename, runs):
 
     avg_spsy = 0.0
@@ -100,12 +102,12 @@ def short_overhead(parallel_filename, serial_filename):
             if line:
                 SERI_ACC += float(line.strip())
 
-    AVG = ((PARA_ACC - SERI_ACC) / float(linecnt))
-    
+    AVG = (PARA_ACC) - (SERI_ACC / NUM_PROCS) # # of processors
     AVG = AVG*1000000000.0
-   
+
     print(f'*OVERHEAD TIME: {AVG:.1f} ns') 
-    
+    print(f'*OVERHEAD TIME / # runs: {(AVG/float(runs)):.1f} ns')
+
     return
 
 def main():

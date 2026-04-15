@@ -114,8 +114,12 @@ def long_overhead(parallel_filename, serial_filename, runs):
             prevline = line.strip()
 
     avgdiff_overhead= sum(PARA_AVGDIFFS) - (sum(SERI_AVGDIFFS) / NUM_PROCS) 
-    avgdiff_overhead = avgdiff_overhead*1000000000.0     
+    avgdiff_overhead = avgdiff_overhead*1000000000.0  
 
+    samediff = (sum(PARA_AVGDIFFS) - sum(SERI_AVGDIFFS))/float(len(PARA_AVGDIFFS))
+    samediff = samediff*1000000000.0   
+
+    print(f'*SAME DIFF AVG ?? : {samediff:.1f} ns')
     print(f'*OVERHEAD AVERAGE TIME B/W ??: {avgdiff_overhead:.1f} ns')
     print(f'*OVERHEAD AVERAGE TIME B/W ?? / # runs: {(avgdiff_overhead/len(PARA_AVGDIFFS)):.1f} ns') 
 
@@ -185,9 +189,12 @@ def short_overhead(parallel_filename, serial_filename,runs):
                 SERI_ACC += float(line.strip())
 
     AVG = (PARA_ACC) - (SERI_ACC / NUM_PROCS) # # of processors
-    
     AVG = AVG*1000000000.0
-   
+
+    samediff = (PARA_ACC - SERI_ACC)/(linecnt*1.0)
+    samediff = samediff*1000000000.0   
+
+    print(f'*SAME DIFF AVG ?? : {samediff:.1f} ns')
     print(f'*OVERHEAD TIME: {AVG:.1f} ns') 
     print(f'*OVERHEAD TIME / # runs: {(AVG/float(runs)):.1f} ns')
     return
