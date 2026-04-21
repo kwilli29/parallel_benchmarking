@@ -1,7 +1,7 @@
 #!/bin/sh
 
-RUNS=25
-PLANG="serial"
+RUNS=100
+PLANG="openmp"
 ###############################
 
 single_output_metrics() {	# ex. 25 data/01A_000.txt 1
@@ -92,7 +92,7 @@ echo ""
 #echo "Starting benchmark on 04_'s"
 
 	# A
-	#run_programs 4 A 0
+	run_programs 4 A 0
 
 	# Cleanup
 	#make clean

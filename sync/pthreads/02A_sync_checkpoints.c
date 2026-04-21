@@ -12,10 +12,8 @@
 
 /* 
  * Benchmark: 02A: Spawn time after ; Checkpoint Syncs (Pthreads)
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
 
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
 void* spawn_function(){           // Simple Spawn Function
 

@@ -47,7 +47,7 @@ run_programs() { # ex. 1 A 0
 
 	# compare to same letter
 	if [ $4 -eq 1 ]; then
-		if [ "$2" == 'E' ]; then
+		if [ "$2" == 'X' ]; then
 			multi_output_metrics $EXEC $CURRPROG 1 $EXECS
 		elif [ "$2" == 'F' ]; then
 			multi_output_metrics $EXEC $CURRPROG 1 $EXECS
@@ -63,7 +63,8 @@ run_programs() { # ex. 1 A 0
 				multi_output_metrics $EXEC $CURRPROG 1 $EXECE
 			elif [ "$2" == 'F' ]; then
 				multi_output_metrics $EXEC $CURRPROG 1 $EXECE
-			else	
+			else
+				echo "$EXECE"
 				multi_output_metrics $EXEC $CURRPROG $1 $EXECE 
 			fi
 		fi
@@ -92,7 +93,7 @@ run_thread_programs() { # ex. 1 A 0 2
 	EXECS="serial/data/${CURRPROG}_000.txt"
 	
 	# compare to same letter
-	if [ "$2" == 'E' ]; then
+	if [ "$2" == 'X' ]; then
 		multi_output_metrics $EXEC $CURRPROG 1 $EXECS
 	elif [ "$2" == 'F' ]; then
 		multi_output_metrics $EXEC $CURRPROG 1 $EXECS
@@ -121,7 +122,7 @@ echo "Starting benchmark on 01_'s"
 	run_programs 1 D 0 0
 
 	# E
-	run_programs 1 E 0 0
+	run_programs 1 E 0 1
 
 	# Cleanup
 	make clean

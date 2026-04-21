@@ -11,11 +11,9 @@
 #include "ctimer.h"
 
 /* 
- * Benchmark: 04A: Sync time just the single sync command ; Compare sync with time for function (Cilk)
+ * Benchmark: 04A: Sync time just the single sync command ; Compare sync with time for function (Pthreads)
  * Try timing just the sync command after 1 thread / a few threads
  */
-
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
 void * spawn_function(){           // Simple Spawn Function
 	int x = 100; int y = 5000; int z = 1000000;
@@ -39,7 +37,7 @@ int main(int argc, char *argv[]){
 	
 	pthread_create( &Threads0, NULL, spawn_function, NULL);
 
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+	clock_gettime(CLOCK_MONOTONIC, &t_start); //
 	pthread_join(Threads0, NULL);
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 

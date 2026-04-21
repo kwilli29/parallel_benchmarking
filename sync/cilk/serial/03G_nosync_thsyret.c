@@ -11,10 +11,8 @@
 #include <math.h>
 
 /* Benchmark: 03G: Time b/w thread complete and return ; ThSy Time (Cilk) 
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+ * 
  */
-
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
 #define NCILK __cilkrts_get_nworkers()
 
@@ -41,7 +39,7 @@ int main(int argc, char *argv[]){
 
 	t_start = cilk_spawn spawn_function(); // Take time stamp before each spawn
 
-	cilk_sync;
+	//cilk_sync;
 	
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 	/**/

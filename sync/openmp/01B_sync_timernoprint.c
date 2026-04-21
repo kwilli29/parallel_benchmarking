@@ -15,8 +15,6 @@
  * Try timing just the sync command after 1 thread / a few threads
  */
 
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
-
 float TIMER1 = 2.0;
 float TIMER2 = 4.0;
 

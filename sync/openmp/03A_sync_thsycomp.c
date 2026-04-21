@@ -10,11 +10,7 @@
 #include <math.h>
 
 /* Benchmark: 03A: Time b/w thread complete and sync complete ; ThSy Time (OpenMP) 
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
-
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
-
 
 struct timespec spawn_function(){           // Simple Function to Spawn
 

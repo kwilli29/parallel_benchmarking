@@ -31,7 +31,7 @@ run_programs() { # ex. 1 A 0
 	#	Run the Programs
 	CURRPROG="$3$1$2"
 	CURRPROGS="$3$1E"
-    CURRPROGA="$3$1A"
+   CURRPROGA="$3$1A"
 	EXEC="data/${CURRPROG}_000.txt"
 
 	touch $EXEC 
@@ -44,7 +44,7 @@ run_programs() { # ex. 1 A 0
 	# Metrics
 	EXECS="serial/data/${CURRPROG}_000.txt"
 	EXECE="serial/data/${CURRPROGS}_000.txt"
-    EXECA="serial/data/${CURRPROGA}_000.txt"
+   EXECA="serial/data/${CURRPROGA}_000.txt"
     
 	if [ "$1" == "1" ]; then	
 		multi_output_metrics $EXEC $CURRPROG $1 $EXECE
@@ -118,6 +118,15 @@ echo "Starting benchmark on 03_'s"
 	# A
 	run_programs 3 A 0
 
+	# B
+	run_programs 3 B 0
+
+	# C
+	run_programs 3 C 0
+
+	# D
+	run_programs 3 D 0
+
 	# Cleanup
 	make clean
 
@@ -167,7 +176,7 @@ echo "Starting benchmark on 05_'s"
 	#run_programs 5 G 0
 
 	# Cleanup
-	#make clean
+	make clean
 
 echo "Cleanup 05_'s"
 echo ""

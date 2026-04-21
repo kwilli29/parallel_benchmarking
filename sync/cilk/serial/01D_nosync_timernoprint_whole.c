@@ -13,11 +13,9 @@
 #include "ctimer.h"
 
 /* 
- * Benchmark: 01D: Sync time just the sync command ; Timer Sync (Cilk)
+ * Benchmark: 01D: Sync time no sync command ; Timer Sync (Cilk)
  * Try timing just the sync command after 1 thread / a few threads
  */
-
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
 float TIMER1 = 2.0;
 float TIMER2 = 4.0;
@@ -40,7 +38,7 @@ void spawn_function1(){           // Simple Spawn Function
 void spawn_function2(){           // Simple Spawn Function
 
 	struct timeval t_start, t_end;
-	gettimeofday(&t_start, NULL); // struct timespec *tp
+	gettimeofday(&t_start, NULL); //
 	gettimeofday(&t_end, NULL);	
 
 	while( ( (t_end.tv_sec+ (double)t_end.tv_usec/1000000) - (t_start.tv_sec+(double)t_start.tv_usec/1000000)  ) < TIMER2 ){	
@@ -55,12 +53,12 @@ void spawn_function2(){           // Simple Spawn Function
 int main(int argc, char *argv[]){
 
  	struct timespec t_start, t_res, t_end;
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+	clock_gettime(CLOCK_MONOTONIC, &t_start); // 
 
 	cilk_spawn spawn_function1();
 	cilk_spawn spawn_function2();
 
-	cilk_sync;
+	// cilk_sync;
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);

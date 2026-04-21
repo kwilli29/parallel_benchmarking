@@ -14,9 +14,6 @@
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
 
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
-
-//#define NCILK __cilkrts_get_nworkers()
 
 #define COUNT 4 // 273 // 4
 static const int ITERATION = 1000000;
@@ -35,7 +32,7 @@ int main(int argc, char *argv[]){
  	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
-	for (int j = 0; j < ITERATION; j++){
+	for(int j=0; j<ITERATION; j++){
 		for (int i = 0; i < COUNT; i++)
 			arr[i] += do_work( j * i + i + j); // race condition?
 	}

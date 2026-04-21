@@ -10,10 +10,7 @@
 #include <math.h>
 
 /* Benchmark: 03A: Time b/w thread complete and sync complete ; ThSy Time (OpenMP) 
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
-
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
 
 struct timespec spawn_function(){           // Simple Function to Spawn
@@ -112,7 +109,7 @@ int main(int argc, char *argv[]){
 	#pragma omp task
 	t_end[29] = spawn_function(); // 30
 
-	clock_gettime(CLOCK_MONOTONIC, &t_syncend); // sync
+	clock_gettime(CLOCK_MONOTONIC, &t_syncend); // no sync
 	}
 
 

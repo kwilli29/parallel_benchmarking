@@ -106,6 +106,9 @@ def short_overhead(parallel_filename, serial_filename,runs):
     AVG = (PARA_ACC) - (SERI_ACC / NUM_PROCS) # # of processors
     AVG = AVG*1000000000.0
 
+    samediff = ((PARA_ACC-SERI_ACC)/float(linecnt))*1000000000.0
+    print(f'samediff: {samediff:.1f} ns')
+
     print(f'*OVERHEAD TIME: {AVG:.1f} ns') 
     print(f'*OVERHEAD TIME / # runs: {(AVG/float(runs)):.1f} ns')
 

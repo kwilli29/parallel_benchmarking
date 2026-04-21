@@ -10,11 +10,7 @@
 #include <math.h>
 
 /* Benchmark: 03A: Time b/w thread complete and sync complete ; ThSy Time (Pthreads) 
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
-
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
-
 
 void* spawn_function(void *t_end){           // Simple Function to Spawn
 

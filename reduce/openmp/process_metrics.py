@@ -24,7 +24,7 @@ def short_metrics(filename):
     print(f'AVERAGE TIME: {AVG:.1f} ns') 
     return
 
-def short_overhead(parallel_filename, serial_filename,runs):
+def short_overhead(parallel_filename, serial_filename, runs):
     # (Tp - (Ts / p))
     # Time of 25 parallel fcns - Time 25 serial fcns / p
 
@@ -49,7 +49,7 @@ def short_overhead(parallel_filename, serial_filename,runs):
     AVG = (PARA_ACC) - (SERI_ACC / NUM_PROCS) # # of processors
     AVG = AVG*1000000000.0
     
-    samediff = (sum(PARA_ACC) - sum(SERI_ACC))/float(linecnt))
+    samediff = (PARA_ACC - SERI_ACC)/float(linecnt)
     samediff = samediff*1000000000.0   
 
     print(f'*SAME DIFF AVG ?? : {samediff:.1f} ns')

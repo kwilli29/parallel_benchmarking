@@ -1,3 +1,4 @@
-AVERAGE TIME: 409.2 ns
-*OVERHEAD TIME: 1897.8 ns
-*OVERHEAD TIME / # runs: 75.9 ns
+AVERAGE TIME: 401.3 ns
+samediff: -5264.6 ns
+*OVERHEAD TIME: 31797.8 ns
+*OVERHEAD TIME / # runs: 318.0 ns

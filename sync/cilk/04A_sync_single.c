@@ -17,8 +17,6 @@
  * Try timing just the sync command after 1 thread / a few threads
  */
 
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
-
 #define NCILK __cilkrts_get_nworkers()
 
 void spawn_function(){           // Simple Spawn Function
@@ -42,7 +40,7 @@ int main(int argc, char *argv[]){
 
 	cilk_spawn spawn_function();
 
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+	clock_gettime(CLOCK_MONOTONIC, &t_start); // 
 	cilk_sync;
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 

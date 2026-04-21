@@ -1,1 +1,0 @@
-AVERAGE TIME: 416.8 ns

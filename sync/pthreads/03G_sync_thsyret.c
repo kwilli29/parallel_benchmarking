@@ -9,11 +9,8 @@
 #include "ctimer.h"
 #include <math.h>
 
-/* Benchmark: 03G: Time b/w thread complete and return ; ThSy Time (Cilk) 
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+/* Benchmark: 03G: Time b/w thread complete and return ; ThSy Time (Pthreads) 
  */
-
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
 void * spawn_function(void* t_start){           // Simple Function to Spawn
 

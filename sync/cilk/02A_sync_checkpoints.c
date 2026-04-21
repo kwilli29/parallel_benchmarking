@@ -14,10 +14,7 @@
 
 /* 
  * Benchmark: 02A: Spawn time after ; Checkpoint Syncs (Cilk)
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
-
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
 #define NCILK __cilkrts_get_nworkers()
 
@@ -36,7 +33,7 @@ void spawn_function(){           // Simple Spawn Function
 
 void timer_fcn(){
 	struct timeval t_start, t_end;
-	gettimeofday(&t_start, NULL); // struct timespec *tp
+	gettimeofday(&t_start, NULL); 
 	gettimeofday(&t_end, NULL);	
 
 	while( ( (t_end.tv_sec+ (double)t_end.tv_usec/1000000) - (t_start.tv_sec+(double)t_start.tv_usec/1000000)  ) < 3.0 ){	
@@ -47,11 +44,10 @@ void timer_fcn(){
 	return; 
 }
 
-
 int main(int argc, char *argv[]){
 
  	struct timespec t_start, t_res, t_end;
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+	clock_gettime(CLOCK_MONOTONIC, &t_start); // 
 
 	// each checkpoint is a little different
 	// or they're all same and diff ones are in like 02B,etc.

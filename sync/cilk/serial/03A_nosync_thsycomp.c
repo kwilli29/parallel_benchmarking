@@ -11,13 +11,11 @@
 #include <math.h>
 
 /* Benchmark: 03A: Time b/w thread complete and sync complete ; ThSy Time (Cilk) 
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+ * 
  */
 
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
 #define NCILK __cilkrts_get_nworkers()
-
 
 struct timespec spawn_function(){           // Simple Function to Spawn
 
@@ -82,8 +80,7 @@ int main(int argc, char *argv[]){
 	t_end[28] = cilk_spawn spawn_function();
 	t_end[29] = cilk_spawn spawn_function(); // 30
 
-
-	cilk_sync;
+	// cilk_sync;
 	clock_gettime(CLOCK_MONOTONIC, &t_syncend);	
 
 
@@ -103,9 +100,9 @@ int main(int argc, char *argv[]){
 
 	// for(int i = 0; i < N; i++){
 		
-	//	timespec_sub(&t_res, t_syncend, t_end[i]);
+	//		timespec_sub(&t_res, t_syncend, t_end[i]);
 
-	//	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+	//		printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
 	//}
 
