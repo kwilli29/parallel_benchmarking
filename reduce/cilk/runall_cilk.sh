@@ -45,7 +45,8 @@ run_programs() { # ex. 1 A 0
 	EXECS="serial/data/${CURRPROG}_000.txt"
 		
 	# Metrics
-	single_output_metrics $EXEC $CURRPROG $1
+	# single_output_metrics $EXEC $CURRPROG $1
+
 	# compare to same letter
 	if [ "$4" == "1" ]; then
 		if [ "$2" == 'E' ]; then
@@ -77,7 +78,6 @@ echo "Starting benchmark on 01_'s"
 
 	# Cleanup
 	make clean
-
 
 echo "Cleanup 01_'s"
 echo ""

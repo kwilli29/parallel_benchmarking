@@ -64,10 +64,6 @@ def main():
     # AVERAGES   
     if sys.argv[3] == '4': #or sys.argv[3] == '2':
         long_metrics(sys.argv[2],sys.argv[1])
-
-    #elif sys.argv[3] == '5':
-    #    thread_metrics(sys.argv[2],sys.argv[1])
-
     else:
         short_metrics(sys.argv[2])
 
@@ -75,8 +71,6 @@ def main():
     if len(sys.argv) > 4:
         if sys.argv[3] == '4': #or sys.argv[3] == '2':
             long_overhead(sys.argv[2],sys.argv[4],sys.argv[1])
-        elif sys.argv[3] == '5':
-            pass # thread_metrics(sys.argv[2],sys.argv[1])
         else:
             short_overhead(sys.argv[2], sys.argv[4],sys.argv[1])
 

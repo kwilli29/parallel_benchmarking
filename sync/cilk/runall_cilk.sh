@@ -46,6 +46,7 @@ run_programs() { # ex. 1 A 0
 		
 	# Metrics
 	single_output_metrics $EXEC $CURRPROG $1
+
 	# compare to same letter
 	if [ "$4" == "1" ]; then
 		if [ "$2" == 'E' ]; then
@@ -76,7 +77,7 @@ echo "Starting benchmark on 01_'s"
 	run_programs 1 C 0 0
 
 	# D
-	run_programs 1 D 0 1
+	run_programs 1 D 0 0
 
 	# Cleanup
 	make clean
@@ -91,9 +92,6 @@ echo "Starting benchmark on 02_'s"
 
 	# A
 	run_programs 2 A 0 0
-
-	# G
-	run_programs 2 G 0 1
 
 	# Cleanup
 	make clean

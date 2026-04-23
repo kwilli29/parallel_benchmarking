@@ -1,6 +1,6 @@
 #!/bin/sh
 
-RUNS=25
+RUNS=100
 PLANG="serial"
 ###############################
 
@@ -49,7 +49,12 @@ make clean
 ###############################
 
 echo "Starting benchmark on 01_'s"
-
+	# A
+	run_programs 1 A 0
+	# B
+	run_programs 1 B 0
+	# C
+	run_programs 1 C 0
 	# D
 	run_programs 1 D 0
 
@@ -65,10 +70,10 @@ echo ""
 echo "Starting benchmark on 02_'s"
 
 	# G
-	run_programs 2 G 0
+	#run_programs 2 G 0
 
 	# Cleanup
-	make clean
+	#make clean
 
 echo "Cleanup 02_'s"
 echo ""

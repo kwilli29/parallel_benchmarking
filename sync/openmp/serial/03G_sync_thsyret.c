@@ -31,7 +31,7 @@ struct timespec spawn_function(){           // Simple Function to Spawn
 
 int main(int argc, char *argv[]){
 
-	struct timespec t_res,t_start, t_end;
+	struct timespec t_res, t_start, t_end;
 
 	#pragma omp parallel
 	#pragma omp single
@@ -42,13 +42,20 @@ int main(int argc, char *argv[]){
 	}
 	/**/
 
-	timespec_sub(&t_res, t_end, t_start);
+	// timespec_sub(&t_res, t_end, t_start);
+	//printf("%ld.%09ld\n", (long)t_start.tv_sec, t_start.tv_nsec);
+	//printf("%ld.%09ld\n", (long)t_end.tv_sec, t_end.tv_nsec);
 
-	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
-	
+	if( ((double)((long)t_end.tv_sec + (t_end.tv_nsec/1000000000.0) ))  > ((double)((long)t_start.tv_sec + (t_start.tv_nsec/1000000000.0) ))  ){
+		timespec_sub(&t_res, t_end, t_start);
+		printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+	}
+	else{
+		timespec_sub(&t_res, t_start, t_end);
+		printf("-%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+	}
+
 	// printf("03G\n");
 	
 	return 0;
 }
-
-

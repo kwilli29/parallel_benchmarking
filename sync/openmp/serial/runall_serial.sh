@@ -33,7 +33,7 @@ run_programs() { # ex. 1 A 0
 	done
 
 	# Metrics
-	if [ "$2" == 'E' ]; then
+	if [ "$2" == 'X' ]; then
 		single_output_metrics $EXEC $CURRPROG 1
 	elif [ "$2" == 'F' ]; then
 		single_output_metrics $EXEC $CURRPROG 1

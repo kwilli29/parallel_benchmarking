@@ -112,7 +112,6 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_syncend); // no sync
 	}
 
-
 	struct timespec maxtime = t_end[0];
 	double t = 0.0; double mt = 0.0;
 
@@ -134,16 +133,23 @@ int main(int argc, char *argv[]){
 	//	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
 	//}
-
-	timespec_sub(&t_res, t_syncend, maxtime);
-
+	
 	printf("*t b/w last fcn complete & sync complete\n");
 
-	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+	if( ((double)((long)t_syncend.tv_sec + (t_syncend.tv_nsec/1000000000.0) ))  > ((double)((long)maxtime.tv_sec + (maxtime.tv_nsec/1000000000.0) ))  ){
+		timespec_sub(&t_res, t_syncend, maxtime);
+		printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+	}
+	else{
+		timespec_sub(&t_res, maxtime, t_syncend);
+		printf("-%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+	}
+
+	// timespec_sub(&t_res, t_syncend, maxtime);
+
+	// printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 	
 	// printf("03A\n");
 	
 	return 0;
 }
-
-

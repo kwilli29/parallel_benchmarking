@@ -48,7 +48,7 @@ run_programs() { # ex. 1 A 0
 	single_output_metrics $EXEC $CURRPROG $1
 
 	# compare to same letter
-	if [ "$4" == "1" ]; then
+	if [ "$4" == "X" ]; then
 		if [ "$2" == 'E' ]; then
 			multi_output_metrics $EXEC $CURRPROG 1 $EXECS
 		elif [ "$2" == 'F' ]; then

@@ -56,6 +56,7 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
+    printf("+\n");
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
 	clock_gettime(CLOCK_MONOTONIC, &t_start); 
@@ -63,6 +64,7 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
+    printf("*\n");
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
 	clock_gettime(CLOCK_MONOTONIC, &t_start); 
@@ -70,6 +72,7 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
+    printf("#\n");
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
 	clock_gettime(CLOCK_MONOTONIC, &t_start); 
@@ -77,6 +80,7 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
+    printf("-\n");
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
 	clock_gettime(CLOCK_MONOTONIC, &t_start); 
@@ -84,6 +88,7 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
+    printf("&\n");
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
 	clock_gettime(CLOCK_MONOTONIC, &t_start); 
@@ -91,6 +96,7 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
+    printf("+\n");
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
 	clock_gettime(CLOCK_MONOTONIC, &t_start); 
@@ -98,6 +104,7 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
+    printf("*\n");
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
 	clock_gettime(CLOCK_MONOTONIC, &t_start); 
@@ -105,6 +112,7 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
+    printf("#\n");
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
 	clock_gettime(CLOCK_MONOTONIC, &t_start); 
@@ -112,6 +120,7 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
+    printf("-\n");
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
 	clock_gettime(CLOCK_MONOTONIC, &t_start); 
@@ -119,6 +128,7 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
+    printf("&\n");
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
 	// printf("01E\n");
