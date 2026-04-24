@@ -43,19 +43,27 @@ run_programs() { # ex. 1 A 0
 	done
 
 	EXECS="serial/data/${CURRPROG}_000.txt"
-
+	EXECO="../serial/data/${CURRPROG}_000.txt"
 	
 	# Metrics
-	#single_output_metrics $EXEC $CURRPROG $1
+	single_output_metrics $EXEC $CURRPROG $1
+
+	# 1c, 2a, 3a, 3g, 4a -- not 1a. 1b, 1d
+	var1="$1$2"
+	
+	# compare to openmp no sync
+	if [ "$var1" != "1B" ]; then
+		if [ "$var1" != "1D" ]; then
+			if [ "$var1" != "1A" ]; then
+				multi_output_metrics $EXEC $CURRPROG $1 $EXECS 
+			fi
+		fi
+	fi
 
 	# compare to same letter
-	if [ "$4" == "1" ]; then
-		if [ "$2" == 'E' ]; then
-			multi_output_metrics $EXEC $CURRPROG 1 $EXECS
-		elif [ "$2" == 'F' ]; then
-			multi_output_metrics $EXEC $CURRPROG 1 $EXECS
-		else	
-			multi_output_metrics $EXEC $CURRPROG $1 $EXECS 
+	if [ "$1" != "2" ]; then
+		if [ "$1" != '4' ]; then
+			multi_output_metrics $EXEC $CURRPROG $1 $EXECO
 		fi
 	fi
 

@@ -31,7 +31,6 @@ run_programs() { # ex. 1 A 0
 	#	Run the Programs
 	
 	CURRPROG="$3$1$2"
-	CURRPROGS="$3$1E"
 	EXEC="data/${CURRPROG}_000.txt"
 
 	touch $EXEC 
@@ -42,36 +41,35 @@ run_programs() { # ex. 1 A 0
 	done
 
 	# Metrics
-	EXECS="serial/data/${CURRPROG}_000.txt"
-	EXECE="serial/data/${CURRPROGS}_000.txt"
+	EXECS="serial/data/${CURRPROG}_000.txt" # 1a 1b
+	EXECO="../serial/data/${CURRPROG}_000.txt" # 1a 1e 2a 2c, no 
 
 	single_output_metrics $EXEC $CURRPROG $1
 
 	# compare to same letter
-	#if [ $4 -eq 10 ]; then
-	#	if [ "$2" == 'X' ]; then
-	#		multi_output_metrics $EXEC $CURRPROG 1 $EXECS
-	#	elif [ "$2" == 'F' ]; then
-	#		multi_output_metrics $EXEC $CURRPROG 1 $EXECS
-	#	else	
-	#		multi_output_metrics $EXEC $CURRPROG $1 $EXECS 
-	#	fi
-	#fi
+	if [ "$1" == "1" ]; then
+		if [ "$2" == "A" ]; then
+			multi_output_metrics $EXEC $CURRPROG $1 $EXECS
+		elif [ "$2" == "B" ]; then
+			multi_output_metrics $EXEC $CURRPROG $1 $EXECS
+		fi
+	fi
 
-	# compare to E
-	#if [ "$1" != "4" ]; then
-	#	if [ "$2" == 'X' ]; then
-	#		if [ "$2" == 'E' ]; then
-	#			multi_output_metrics $EXEC $CURRPROG 1 $EXECE
-	#		elif [ "$2" == 'F' ]; then
-	#			multi_output_metrics $EXEC $CURRPROG 1 $EXECE
-	#		else
-	#			echo "$EXECE"
-	#			multi_output_metrics $EXEC $CURRPROG $1 $EXECE 
-	#		fi
-	#	fi
-	#fi
-
+	# compare to O
+	if [ "$1" != "1" ]; then
+		if [ "$2" == "A" ]; then
+			multi_output_metrics $EXEC $CURRPROG $1 $EXECO
+		elif [ "$2" == "F" ]; then
+			multi_output_metrics $EXEC $CURRPROG $1 $EXECO
+		fi
+	elif [ "$1" != "2" ]; then
+		if [ "$2" == "A" ]; then
+			multi_output_metrics $EXEC $CURRPROG $1 $EXECO
+		elif [ "$2" == "C" ]; then
+			multi_output_metrics $EXEC $CURRPROG $1 $EXECO
+		fi
+	fi
+	
 	rm $EXEC
 
 }
