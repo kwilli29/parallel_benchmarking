@@ -47,30 +47,7 @@ run_programs() { # ex. 1 A 0
 
 	single_output_metrics $EXEC $CURRPROG $1
 
-	# compare to same letter
-	#if [ $4 -eq 10 ]; then
-	#	if [ "$2" == 'X' ]; then
-	#		multi_output_metrics $EXEC $CURRPROG 1 $EXECS
-	#	elif [ "$2" == 'F' ]; then
-	#		multi_output_metrics $EXEC $CURRPROG 1 $EXECS
-	#	else	
-	#		multi_output_metrics $EXEC $CURRPROG $1 $EXECS 
-	#	fi
-	#fi
-
-	# compare to E
-	#if [ "$1" != "4" ]; then
-	#	if [ "$2" == 'X' ]; then
-	#		if [ "$2" == 'E' ]; then
-	#			multi_output_metrics $EXEC $CURRPROG 1 $EXECE
-	#		elif [ "$2" == 'F' ]; then
-	#			multi_output_metrics $EXEC $CURRPROG 1 $EXECE
-	#		else
-	#			echo "$EXECE"
-	#			multi_output_metrics $EXEC $CURRPROG $1 $EXECE 
-	#		fi
-	#	fi
-	#fi
+    # get overhead metrics?
 
 	# rm $EXEC
 
@@ -83,9 +60,9 @@ echo "Starting benchmark on 01_'s"
 
 	# A
 	run_programs 1 A 0 0
- 
-	# B
-	run_programs 1 B 0 0
+
+    # E
+	run_programs 1 E 0 0
 
 	# Cleanup
 	make clean
@@ -99,47 +76,17 @@ echo ""
 echo "Starting benchmark on 02_'s"
 
 	# A
-	#run_programs 2 A 0 0
-
-	# B
-	#run_programs 2 B 0 1
-
-	# C
-	#run_programs 2 C 0 1
+	run_programs 2 A 0 0
 
 	# D
-	#run_programs 2 D 0 0
+	run_programs 2 D 0 0
 
 	# E
-	#run_programs 2 E 0 0
+	run_programs 2 E 0 0
 
 	# Cleanup
-	#make clean
+	make clean
 
 echo "Cleanup 02_'s"
-echo ""
-###############################
-
-echo "Starting benchmark on 03_'s"
-
-	# A
-	# run_thread_programs 3 A 0 2
-
-	# Cleanup
-	#make clean
-
-echo "Cleanup 03_'s"
-#cho ""
-###############################
-
-echo "Starting benchmark on 04_'s"
-
-	# A
-	# run_programs 4 A 0 1
-	
-	# Cleanup
-	#make clean
-
-echo "Cleanup 04_'s"
 echo ""
 ###############################

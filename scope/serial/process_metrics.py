@@ -122,17 +122,16 @@ def main():
     # sys.argv = [ ./X , #runs , filename , # , 'Letter']
 
     # AVERAGES
-    if (sys.argv[3] == '1' and sys.argv[4] == 'E') or ((sys.argv[3] == '2' and sys.argv[4] == 'C')): # 01E or 02C so far
+    if (sys.argv[3] == '1' and sys.argv[4] == 'G') or ((sys.argv[3] == '2' and sys.argv[4] == 'C')): # 01G or 02C so far
         long_metrics(sys.argv[2],sys.argv[1])
     else:
         short_metrics(sys.argv[2])
-
     return
 
 # average outputs
 # computing any other metrics
 #   time
-#   “overhead” --> Tp - (Ts/inerreps)
+#   “overhead” --> Tp - (Ts/innerreps)
 #   code size?
 
 if __name__== '__main__':

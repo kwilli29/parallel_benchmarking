@@ -1,0 +1,5 @@
++ OVERALL AVERAGE hello +: 346326.8 ns
+* OVERALL AVERAGE hi *: 1316.2 ns
+# OVERALL AVERAGE greetings #: 1409.8 ns
+- OVERALL AVERAGE welcome -: 1028.9 ns
+& OVERALL AVERAGE bye &: 991.0 ns

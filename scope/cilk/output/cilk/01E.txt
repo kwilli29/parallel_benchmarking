@@ -1,0 +1,4 @@
+AVERAGE TIME: 423.2 ns
+*Tparallel - Tserial: -425.4 ns
+*OVERHEAD TIME: 41072.0 ns
+*OVERHEAD TIME / # runs: 410.7 ns
