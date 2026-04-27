@@ -11,9 +11,7 @@
 #include <math.h>
 
 /* Benchmark: 03A: Time b/w thread complete and sync complete ; ThSy Time (Cilk) 
- * 
  */
-
 
 #define NCILK __cilkrts_get_nworkers()
 

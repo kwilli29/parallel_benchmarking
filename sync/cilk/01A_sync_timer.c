@@ -53,7 +53,6 @@ void spawn_function2(){           // Simple Spawn Function
 	return; 
 }
 
-
 int main(int argc, char *argv[]){
 
  	struct timespec t_start, t_res, t_end;
@@ -63,7 +62,7 @@ int main(int argc, char *argv[]){
 
 	printf("*done w/ spawns\n");
 
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+	clock_gettime(CLOCK_MONOTONIC, &t_start);
 	printf("*start sync\n");
 	cilk_sync;
 	printf("*done sync\n");
@@ -77,10 +76,3 @@ int main(int argc, char *argv[]){
 
 	return 0;
 }
-/* 
-wsp_t start = wsp_getworkspan();
-
-wsp_t end = wsp_getworkspan();
-wsp_t elapsed = wsp_sub(end, start);
-wsp_dump(elapsed, "");
-*/

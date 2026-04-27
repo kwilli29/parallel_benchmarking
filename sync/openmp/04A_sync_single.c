@@ -15,8 +15,6 @@
  * Try timing just the sync command after 1 thread / a few threads
  */
 
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
-
 void spawn_function(){           // Simple Spawn Function
 	int x = 100; int y = 5000; int z = 1000000;
 
@@ -29,7 +27,6 @@ void spawn_function(){           // Simple Spawn Function
 	return; 
 }
 
-
 int main(int argc, char *argv[]){
 
  	struct timespec t_start, t_res, t_end;
@@ -41,7 +38,7 @@ int main(int argc, char *argv[]){
 		#pragma omp task
 		spawn_function();
 
-	 clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+	 clock_gettime(CLOCK_MONOTONIC, &t_start);
 	} // sync
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 

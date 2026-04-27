@@ -38,19 +38,15 @@ def long_metrics(filename, runs):
             if flag == 0:
                 avg_hello += float(line.strip())
                 flag = -1
-
             elif flag == 1:
                 avg_hi += float(line.strip())
                 flag = -1
-       
             elif flag == 2:
                 avg_greet += float(line.strip())
                 flag = -1
-
             elif flag == 3:
                 avg_wel += float(line.strip())
                 flag = -1
-
             elif flag == 4:
                 avg_bye += float(line.strip())
                 flag = -1
@@ -63,15 +59,16 @@ def long_metrics(filename, runs):
     avg_wel   = (avg_wel/float(runs) ) * 1000000000.0
     avg_bye   = (avg_bye/float(runs) ) * 1000000000.0
 
-    print(f'OVERALL AVERAGE hello+: {avg_hello:.1f} ns') 
-    print(f'OVERALL AVERAGE hi*: {avg_hi:.1f} ns') 
-    print(f'OVERALL AVERAGE greetings#: {avg_greet:.1f} ns') 
-    print(f'OVERALL AVERAGE welcome-: {avg_wel:.1f} ns') 
-    print(f'OVERALL AVERAGE bye&: {avg_bye:.1f} ns')
+    print(f'+ OVERALL AVERAGE hello +: {avg_hello:.1f} ns') 
+    print(f'* OVERALL AVERAGE hi *: {avg_hi:.1f} ns') 
+    print(f'# OVERALL AVERAGE greetings #: {avg_greet:.1f} ns') 
+    print(f'- OVERALL AVERAGE welcome -: {avg_wel:.1f} ns') 
+    print(f'& OVERALL AVERAGE bye &: {avg_bye:.1f} ns')
 
     return
 
 def short_metrics(filename):
+
     # METRICS
     AVG = 0.0
     linecnt = 0
@@ -90,8 +87,6 @@ def short_metrics(filename):
     return
 
 def short_overhead(parallel_filename, serial_filename,runs):
-    # (Tp - Ts) / innerloop
-    # (Time of #runs parallel fcns - Time #runs serial fcns) / innerloop
 
     # METRICS
     PARA_ACC = 0.0
@@ -115,7 +110,7 @@ def short_overhead(parallel_filename, serial_filename,runs):
     AVG = AVG*1000000000.0
 
     samediff = ((PARA_ACC-SERI_ACC)/float(linecnt))*1000000000.0
-    print(f'samediff: {samediff:.1f} ns')
+    print(f'*Tparallel - Tserial: {samediff:.1f} ns')
 
     print(f'*OVERHEAD TIME: {AVG:.1f} ns') 
     print(f'*OVERHEAD TIME / # runs: {(AVG/float(runs)):.1f} ns')
@@ -124,25 +119,20 @@ def short_overhead(parallel_filename, serial_filename,runs):
 
 def main():
         
+    # sys.argv = [ ./X , #runs , filename , # , 'Letter']
+
     # AVERAGES
     if (sys.argv[3] == '1' and sys.argv[4] == 'E') or ((sys.argv[3] == '2' and sys.argv[4] == 'C')): # 01E or 02C so far
         long_metrics(sys.argv[2],sys.argv[1])
     else:
         short_metrics(sys.argv[2])
 
-    # OVERHEADS
-    if len(sys.argv) > 5:
-        if sys.argv[3] == '9':
-            long_overhead(sys.argv[2],sys.argv[4],sys.argv[1])
-        else:
-            short_overhead(sys.argv[2], sys.argv[4],sys.argv[1])
-
     return
 
 # average outputs
 # computing any other metrics
 #   time
-#   “overhead”
+#   “overhead” --> Tp - (Ts/inerreps)
 #   code size?
 
 if __name__== '__main__':

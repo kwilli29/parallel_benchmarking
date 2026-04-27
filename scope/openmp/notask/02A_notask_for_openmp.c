@@ -4,15 +4,17 @@
 #include <stdint.h>
 #include <unistd.h>
 #include <string.h>
+#include <omp.h>
 #include <assert.h>
 #include <sys/time.h>
 #include <math.h>
 #include "ctimer.h"
 
-/* Benchmark: 02A: Scope time after ; Serial Region (Serial)
+/* Benchmark: 02A: No Scope time after ; Parallel Region (OpenMP)
  * Launch a bunch and measure when all done 
  */
 
+#define OMP_THREADS 271 
 
 void spawn_function(){           // Simple Spawn Function
 	int x = 100; int y = 5000; int z = 1000000;
@@ -27,24 +29,23 @@ void spawn_function(){           // Simple Spawn Function
 }
 
 void hello(){
-	printf("* 0 hello\n");
+	printf("* %d hello\n", omp_get_thread_num());
 	return;
 }
 void hi(){
-	printf("* 0 hi\n");
+	printf("* %d hi\n", omp_get_thread_num());
 	return;
 }
 void greetings(){
-	printf("* 0 greetings\n");
+	printf("* %d greetings\n", omp_get_thread_num());
 	return;
 }
 void welcome(){
-	printf("* 0 welcome\n");
+	printf("* %d welcome\n", omp_get_thread_num());
 	return;
-
 }
 void byebye(){
-	printf("* 0 byebye\n");
+	printf("* %d byebye\n", omp_get_thread_num());
 	return;
 }
 
@@ -53,26 +54,30 @@ int main(int argc, char *argv[]){
 	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // 
 
+	#pragma omp parallel
+	#pragma omp single
+	{
 
 		for(int i=0 ; i < 100; i++){
-			hello();
+		    hello();
 		}
 
-		for(int i=0 ; i < 100; i++){
-			hi();
-		}
+        for(int i=0 ; i < 100; i++){
+            hi();
+        }
 
 		for(int i=0 ; i < 100; i++){
 			greetings();
 		}
 
 		for(int i=0 ; i < 100; i++){
-			welcome();
-		}	
+		    welcome();
+		}
 
 		for(int i=0 ; i < 100; i++){
-			byebye();
+		    byebye();
 		}
+   }
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 

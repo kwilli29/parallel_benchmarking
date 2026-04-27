@@ -49,7 +49,7 @@ echo "Starting benchmark on 01_'s"
 	run_programs 1 A 0 0
  
 	# E
-	run_programs 1 E 0 0
+	run_programs 1 G 0 0
 
 	# Cleanup
 	make clean

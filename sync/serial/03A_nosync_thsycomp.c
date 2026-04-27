@@ -10,8 +10,7 @@
 #include "ctimer.h"
 #include <math.h>
 
-/* Benchmark: 03A: Time b/w thread complete and sync complete ; ThSy Time (Serial) 
- * 
+/* Benchmark: 03A: Time b/w thread complete and sync complete ; ThSy Time (Serial)
  */
 
 struct timespec spawn_function(){           // Simple Function to Spawn

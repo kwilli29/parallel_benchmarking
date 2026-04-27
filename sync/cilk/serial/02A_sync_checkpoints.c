@@ -14,7 +14,6 @@
 
 /* 
  * Benchmark: 02A: Spawn time after ; Checkpoint Syncs (Cilk)
- * 
  */
 
 #define NCILK __cilkrts_get_nworkers()

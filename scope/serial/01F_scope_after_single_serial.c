@@ -9,11 +9,8 @@
 #include <math.h>
 #include "ctimer.h"
 
-/* Benchmark: 01C: Spawn time after ; For-Loop Spawns (Serial)
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+/* Benchmark: 01F: Scope time after single function; Serial Region (Serial)
  */
-
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
 void spawn_function(){           // Simple Spawn Function
 	int x = 100; int y = 5000; int z = 1000000;
@@ -27,29 +24,43 @@ void spawn_function(){           // Simple Spawn Function
 	return; 
 }
 
+void hello(){
+	printf("* 0 hello\n");
+	return;
+}
+void hi(){
+	printf("* 0 hi\n");
+	return;
+}
+void greetings(){
+	printf("* 0 greetings\n");
+	return;
+}
+void welcome(){
+	printf("* 0 welcome\n");
+	return;
+
+}
+void byebye(){
+	printf("* 0 byebye\n");
+	return;
+}
 
 int main(int argc, char *argv[]){
 
 	struct timespec t_start, t_res, t_end;
+	clock_gettime(CLOCK_MONOTONIC, &t_start);
 
-	int N = 272;
-	//int innerreps = 1000;
+ 	spawn_function();
 
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
-	
-	for(int i = 0; i < N; i++){
-		spawn_function(); 
-	}
- 	
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
-
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
-	// printf("01C\n");
-
+	// printf("01F\n");
 
 	return 0;
 }
+
 

@@ -4,15 +4,18 @@
 #include <stdint.h>
 #include <unistd.h>
 #include <string.h>
+#include <cilk/cilk.h>
+#include <cilk/cilk_api.h>
 #include <assert.h>
 #include <sys/time.h>
 #include <math.h>
 #include "ctimer.h"
 
-/* Benchmark: 02A: Scope time after ; Serial Region (Serial)
+/* Benchmark: 01E: Scope time after sinlge spawn ; CilkScope (Cilk)
  * Launch a bunch and measure when all done 
  */
 
+#define NCILK __cilkrts_get_nworkers()
 
 void spawn_function(){           // Simple Spawn Function
 	int x = 100; int y = 5000; int z = 1000000;
@@ -27,59 +30,43 @@ void spawn_function(){           // Simple Spawn Function
 }
 
 void hello(){
-	printf("* 0 hello\n");
-	return;
+	printf("* %d hello\n", __cilkrts_get_worker_number());
+	return; 
 }
 void hi(){
-	printf("* 0 hi\n");
+	printf("* %d hi\n", __cilkrts_get_worker_number());
 	return;
 }
 void greetings(){
-	printf("* 0 greetings\n");
+	printf("* %d greetings\n",__cilkrts_get_worker_number());
 	return;
 }
 void welcome(){
-	printf("* 0 welcome\n");
+	printf("* %d welcome\n", __cilkrts_get_worker_number());
 	return;
 
 }
 void byebye(){
-	printf("* 0 byebye\n");
+	printf("* %d byebye\n", __cilkrts_get_worker_number());
 	return;
 }
 
 int main(int argc, char *argv[]){
 
 	struct timespec t_start, t_res, t_end;
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // 
+	clock_gettime(CLOCK_MONOTONIC, &t_start);
 
-
-		for(int i=0 ; i < 100; i++){
-			hello();
-		}
-
-		for(int i=0 ; i < 100; i++){
-			hi();
-		}
-
-		for(int i=0 ; i < 100; i++){
-			greetings();
-		}
-
-		for(int i=0 ; i < 100; i++){
-			welcome();
-		}	
-
-		for(int i=0 ; i < 100; i++){
-			byebye();
-		}
-
+	cilk_scope{
+		cilk_spawn spawn_function();
+    }
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
-	// printf("02A\n");
+	// printf("01E\n");
 
 	return 0;
 }
+
+

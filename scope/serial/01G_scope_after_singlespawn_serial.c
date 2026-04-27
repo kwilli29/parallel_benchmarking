@@ -9,7 +9,7 @@
 #include <math.h>
 #include "ctimer.h"
 
-/* Benchmark: 01E: Scope time after ; Serial Region  (Serial)
+/* Benchmark: 01G: Scope time after each print function; Serial Region (Serial)
  * Launch a bunch and measure when all done 
  */
 
@@ -131,7 +131,7 @@ int main(int argc, char *argv[]){
     printf("&\n");
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
-	// printf("01E\n");
+	// printf("01G\n");
 
 	return 0;
 }

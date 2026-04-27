@@ -12,7 +12,6 @@
 /* Benchmark: 03A: Time b/w thread complete and sync complete ; ThSy Time (OpenMP) 
  */
 
-
 struct timespec spawn_function(){           // Simple Function to Spawn
 
 	struct timespec t_end; // ADD TIME END

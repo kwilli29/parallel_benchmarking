@@ -10,8 +10,7 @@
 #include <math.h>
 #include "ctimer.h"
 
-/* Benchmark: 02C: Scope time after ; Parallel Region (OpenMP)
- * Launch a bunch and measure when all done 
+/* Benchmark: 02D: No Scope time after ; Parallel Region (OpenMP)
  */
 
 #define OMP_THREADS 271 
@@ -37,7 +36,7 @@ void hi(){
 	return;
 }
 void greetings(){
-	printf("* %d greetings\n", omp_get_thread_num());
+	printf("* %d greetings\n",omp_get_thread_num());
 	return;
 }
 void welcome(){
@@ -58,43 +57,42 @@ int main(int argc, char *argv[]){
 	#pragma omp parallel
 	#pragma omp single
 	{
-
-		#pragma omp task //group
+		#pragma omp task
 		{
+		  #pragma omp parallel for schedule(static,1)
 		  for(int i=0 ; i < 100; i++){
-			#pragma omp task
 			hello();
 		  }
 		}
 
-		#pragma omp task //group
+		#pragma omp task
 		{
+		  #pragma omp parallel for schedule(static,1)
 		  for(int i=0 ; i < 100; i++){
-			#pragma omp task
 			hi();
 		  }
 		}
 
-		#pragma omp task //group
+		#pragma omp task
 		{
+		  #pragma omp parallel for schedule(static,1)
 		  for(int i=0 ; i < 100; i++){
-			#pragma omp task
 			greetings();
 		  }
 		}
 
-		#pragma omp task //group
+		#pragma omp task
 		{
+		  #pragma omp parallel for schedule(static,1)
 		  for(int i=0 ; i < 100; i++){
-			#pragma omp task
 			welcome();
-		  }
-		}	
+		  }	
+		}
 
-		#pragma omp task //group
+		#pragma omp task
 		{
+		  #pragma omp parallel for schedule(static,1)
 		  for(int i=0 ; i < 100; i++){
-			#pragma omp task
 			byebye();
 		  }
 		}
@@ -105,7 +103,9 @@ int main(int argc, char *argv[]){
 	timespec_sub(&t_res, t_end, t_start);
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
-	// printf("02C\n");
+	// printf("02D\n");
 
 	return 0;
 }
+
+

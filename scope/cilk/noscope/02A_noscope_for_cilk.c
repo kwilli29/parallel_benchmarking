@@ -4,18 +4,18 @@
 #include <stdint.h>
 #include <unistd.h>
 #include <string.h>
-#include <omp.h>
+#include <cilk/cilk.h>
+#include <cilk/cilk_api.h>
 #include <assert.h>
 #include <sys/time.h>
 #include <math.h>
 #include "ctimer.h"
 
-/* Benchmark: 01A: Scope time after ; Parallel Region (OpenMP)
- * Launch a bunch and measure when all done 
+/* Benchmark: 02A: No Scope time after ; CilkScope  (Cilk)
+ * 
  */
 
 #define NCILK __cilkrts_get_nworkers()
-#define OMP_THREADS 271
 
 void spawn_function(){           // Simple Spawn Function
 	int x = 100; int y = 5000; int z = 1000000;
@@ -30,24 +30,24 @@ void spawn_function(){           // Simple Spawn Function
 }
 
 void hello(){
-	printf("* %d hello\n", omp_get_thread_num());
+	printf("* %d hello\n", __cilkrts_get_worker_number());
 	return;
 }
 void hi(){
-	printf("* %d hi\n", omp_get_thread_num());
+	printf("* %d hi\n", __cilkrts_get_worker_number());
 	return;
 }
 void greetings(){
-	printf("* %d greetings\n",omp_get_thread_num());
+	printf("* %d greetings\n",__cilkrts_get_worker_number());
 	return;
 }
 void welcome(){
-	printf("* %d welcome\n", omp_get_thread_num());
+	printf("* %d welcome\n", __cilkrts_get_worker_number());
 	return;
 
 }
 void byebye(){
-	printf("* %d byebye\n", omp_get_thread_num());
+	printf("* %d byebye\n", __cilkrts_get_worker_number());
 	return;
 }
 
@@ -56,38 +56,32 @@ int main(int argc, char *argv[]){
 	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
-	#pragma omp parallel
-	#pragma omp single
-	{
-		#pragma omp task
-		hello();
-		#pragma omp task
-		hi();
-		#pragma omp task
-		greetings();
-		#pragma omp task
-		welcome();
-		#pragma omp task
-		byebye();
+    for(int i=0 ; i < 100; i++){
+        cilk_spawn hello();
+    }
 
-		#pragma omp task
-		hello();
-		#pragma omp task
-		hi();
-		#pragma omp task
-		greetings();
-		#pragma omp task
-		welcome();
-		#pragma omp task
-		byebye();
-	}
-	
+    for(int i=0 ; i < 100; i++){
+        cilk_spawn hi();
+    }
+
+    for(int i=0 ; i < 100; i++){
+        cilk_spawn greetings();
+    }
+
+    for(int i=0 ; i < 100; i++){
+        cilk_spawn welcome();
+    }	
+
+    for(int i=0 ; i < 100; i++){
+        cilk_spawn byebye();
+    }
+
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
-	// printf("01A\n");
+	// printf("02A\n");
 
 	return 0;
 }

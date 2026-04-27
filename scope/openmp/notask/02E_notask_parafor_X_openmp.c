@@ -10,12 +10,10 @@
 #include <math.h>
 #include "ctimer.h"
 
-/* Benchmark: 01A: Scope time after ; Parallel Region (OpenMP)
- * Launch a bunch and measure when all done 
+/* Benchmark: 02E: No Scope time after ; Parallel Region  (OpenMP)
  */
 
-#define NCILK __cilkrts_get_nworkers()
-#define OMP_THREADS 271
+#define OMP_THREADS 271 
 
 void spawn_function(){           // Simple Spawn Function
 	int x = 100; int y = 5000; int z = 1000000;
@@ -38,7 +36,7 @@ void hi(){
 	return;
 }
 void greetings(){
-	printf("* %d greetings\n",omp_get_thread_num());
+	printf("* %d greetings\n", omp_get_thread_num());
 	return;
 }
 void welcome(){
@@ -59,37 +57,39 @@ int main(int argc, char *argv[]){
 	#pragma omp parallel
 	#pragma omp single
 	{
-		#pragma omp task
-		hello();
-		#pragma omp task
-		hi();
-		#pragma omp task
-		greetings();
-		#pragma omp task
-		welcome();
-		#pragma omp task
-		byebye();
 
-		#pragma omp task
-		hello();
-		#pragma omp task
-		hi();
-		#pragma omp task
-		greetings();
-		#pragma omp task
-		welcome();
-		#pragma omp task
-		byebye();
-	}
-	
+        #pragma omp parallel for
+        for(int i=0 ; i < 100; i++){
+            hello();
+        }
+        
+        #pragma omp parallel for
+        for(int i=0 ; i < 100; i++){
+            hi();
+        }
+        
+        #pragma omp parallel for
+        for(int i=0 ; i < 100; i++){
+            greetings();
+        }
+
+        #pragma omp parallel for
+        for(int i=0 ; i < 100; i++){
+            welcome();
+        }
+
+        #pragma omp parallel for
+        for(int i=0 ; i < 100; i++){
+            byebye();
+        }
+   }
+
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
-	// printf("01A\n");
+	// printf("02E\n");
 
 	return 0;
 }
-
-
