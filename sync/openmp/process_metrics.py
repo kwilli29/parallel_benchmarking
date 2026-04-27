@@ -145,10 +145,10 @@ def long_overhead(parallel_filename, serial_filename, runs):
     avg_fcn  = ((pavg_fcn)  - (savg_fcn/float(NUM_PROCS)) ) * 1000000000.0
     avg_sy   = ((pavg_sy)   - (savg_sy/float(NUM_PROCS)) ) * 1000000000.0
 
-    print(f'SAMEDIFF AVERAGE SPAWN+SYNC+: {sd_spsy:.1f} ns') 
-    print(f'SAMEDIFF AVERAGE SPAWN*: {sd_sp:.1f} ns') 
-    print(f'SAMEDIFF AVERAGE FCN#: {sd_fcn:.1f} ns') 
-    print(f'SAMEDIFF AVERAGE SYNC-: {sd_sy:.1f} ns') 
+    print(f'Tparallel - Tserial AVERAGE SPAWN+SYNC+: {sd_spsy:.1f} ns') 
+    print(f'Tparallel - Tserial AVERAGE SPAWN*: {sd_sp:.1f} ns') 
+    print(f'Tparallel - Tserial AVERAGE FCN#: {sd_fcn:.1f} ns') 
+    print(f'Tparallel - Tserial AVERAGE SYNC-: {sd_sy:.1f} ns') 
     print(f'\nOVERHEAD AVERAGE SPAWN+SYNC+: {avg_spsy:.1f} ns') 
     print(f'OVERHEAD AVERAGE SPAWN*: {avg_sp:.1f} ns') 
     print(f'OVERHEAD AVERAGE FCN#: {avg_fcn:.1f} ns') 
@@ -158,6 +158,7 @@ def long_overhead(parallel_filename, serial_filename, runs):
     return
 
 def short_metrics(filename):
+
     # METRICS
     AVG = 0.0
     linecnt = 0
@@ -177,8 +178,6 @@ def short_metrics(filename):
     return
 
 def short_overhead(parallel_filename, serial_filename, runs):
-    # (Tp - Ts) / innerloop
-    # (Time of 25 parallel fcns - Time 25 serial fcns) / innerloop
 
     # METRICS
     PARA_ACC = 0.0
@@ -204,7 +203,7 @@ def short_overhead(parallel_filename, serial_filename, runs):
     samediff = (PARA_ACC - SERI_ACC)/float(linecnt)
     samediff = samediff*1000000000.0   
 
-    print(f'*SAME DIFF AVG ?? : {samediff:.1f} ns')
+    print(f'*Tparallel - Tserial: {samediff:.1f} ns')
     print(f'*OVERHEAD TIME: {AVG:.1f} ns') 
     print(f'*OVERHEAD TIME / # runs: {(AVG/float(runs)):.1f} ns')
 
@@ -213,17 +212,15 @@ def short_overhead(parallel_filename, serial_filename, runs):
 def main():
         
     # AVERAGES   
-    if sys.argv[3] == '4': #or sys.argv[3] == '2':
+    if sys.argv[3] == '4':
         long_metrics(sys.argv[2],sys.argv[1])
     else:
         short_metrics(sys.argv[2])
 
     # OVERHEADS
     if len(sys.argv) > 4:
-        if sys.argv[3] == '4': #or sys.argv[3] == '2':
+        if sys.argv[3] == '4':
             long_overhead(sys.argv[2],sys.argv[4],sys.argv[1])
-        elif sys.argv[3] == '5':
-            pass # 
         else:
             short_overhead(sys.argv[2], sys.argv[4], sys.argv[1])
 
@@ -232,7 +229,7 @@ def main():
 # average outputs
 # computing any other metrics
 #   time
-#   “overhead”
+#   “overhead” --> Tp - (Ts/# procs)
 #   code size?
 
 if __name__== '__main__':
