@@ -34,7 +34,7 @@ run_programs() { # ex. 1 A 0
 	EXEC="data/${CURRPROG}_000.txt"
 
 	touch $EXEC 
-	
+	 
 	for((i=0;i<($RUNS);i++)); 
 	do	
 		./$CURRPROG >> $EXEC # Capture program output

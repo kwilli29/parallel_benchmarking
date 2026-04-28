@@ -10,7 +10,7 @@
 #include "ctimer.h"
 
 /* 
- * Benchmark: 01D: Sync time just the sync command ; Timer Serial Sync (Serial)
+ * Benchmark: 01B: Sync time just the sync command ; Timer Serial Sync (Serial)
  * Try timing just the sync command after 1 thread / a few threads
  */
 

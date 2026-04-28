@@ -4,23 +4,19 @@
 #include <stdint.h>
 #include <unistd.h>
 #include <string.h>
-#include <cilk/cilk.h>
-#include <cilk/cilkscale.h>
-#include <cilk/cilk_api.h>
+#include <omp.h>
 #include <assert.h>
 #include <sys/time.h>
 #include <math.h>
 #include "ctimer.h"
 
 /* 
- * Benchmark: 01B: Sync time No sync command ; Timer Sync No Prints (Cilk)
- * Try timing no sync command after 1 thread / a few threads
+ * Benchmark: 01A: No Sync time just the sync command ; Timer Sync No Prints (OpenMP)
+ * Try timing just the sync command after 1 thread / a few threads
  */
 
 float TIMER1 = 2.0;
 float TIMER2 = 4.0;
-
-#define NCILK __cilkrts_get_nworkers()
 
 void spawn_function1(){           // Simple Spawn Function
 
@@ -53,27 +49,28 @@ void spawn_function2(){           // Simple Spawn Function
 	return; 
 }
 
-
 int main(int argc, char *argv[]){
 
  	struct timespec t_start, t_res, t_end;
 
-	cilk_spawn spawn_function1();
-	cilk_spawn spawn_function2();
+	#pragma omp parallel
+	#pragma omp single
+	{
+		#pragma omp task
+		spawn_function1();
+		
+		#pragma omp task
+		spawn_function2();
 
-	//printf("done w/ spawns\n");
+	clock_gettime(CLOCK_MONOTONIC, &t_start);
+    clock_gettime(CLOCK_MONOTONIC, &t_end);
 
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
-	//printf("start sync\n");
-	// cilk_sync;
-	//printf("done sync\n");
-	clock_gettime(CLOCK_MONOTONIC, &t_end);
-
-	timespec_sub(&t_res, t_end, t_start);
+    timespec_sub(&t_res, t_end, t_start);
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
+	}
 
-	// printf("01B\n");
+	// printf("01A\n");
 
 	return 0;
 }

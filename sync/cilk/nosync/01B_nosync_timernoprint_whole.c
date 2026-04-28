@@ -13,7 +13,7 @@
 #include "ctimer.h"
 
 /* 
- * Benchmark: 01D: Sync time just the sync command ; Timer Sync (Cilk)
+ * Benchmark: 01B: Sync time no sync command ; Timer Sync (Cilk)
  * Try timing just the sync command after 1 thread / a few threads
  */
 
@@ -53,12 +53,12 @@ void spawn_function2(){           // Simple Spawn Function
 int main(int argc, char *argv[]){
 
  	struct timespec t_start, t_res, t_end;
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+	clock_gettime(CLOCK_MONOTONIC, &t_start); // 
 
 	cilk_spawn spawn_function1();
 	cilk_spawn spawn_function2();
 
-	cilk_sync;
+	// cilk_sync;
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);

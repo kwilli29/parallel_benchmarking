@@ -1,600 +1,600 @@
-*done w/ spawns
-*start sync
-*done sync
-0.000249940
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000211561
+*start no sync
+*done no sync
+0.000000760
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000227960
+*start no sync
+*done no sync
+0.000000780
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000233620
+*start no sync
+*done no sync
+0.000000770
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000617550
+*start no sync
+*done no sync
+0.000000770
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000463651
+*start no sync
+*done no sync
+0.000000780
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000198520
+*start no sync
+*done no sync
+0.000000760
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000219680
+*start no sync
+*done no sync
+0.000000770
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000227500
+*start no sync
+*done no sync
+0.000001300
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000198810
+*start no sync
+*done no sync
+0.000000920
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000209590
+*start no sync
+*done no sync
+0.000001030
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000206390
+*start no sync
+*done no sync
+0.000000470
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000235290
+*start no sync
+*done no sync
+0.000000770
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000428481
+*start no sync
+*done no sync
+0.000001200
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000182520
+*start no sync
+*done no sync
+0.000000770
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000201840
+*start no sync
+*done no sync
+0.000001250
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000237690
+*start no sync
+*done no sync
+0.000000730
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000219150
+*start no sync
+*done no sync
+0.000000770
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000262090
+*start no sync
+*done no sync
+0.000000770
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000224070
+*start no sync
+*done no sync
+0.000000780
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000197351
+*start no sync
+*done no sync
+0.000000770
 *done w/ timer1: 2.000000
-*done w/ timer2: 4.000000
+*done w/ timer2: 4.000012
 *done w/ spawns
-*start sync
-*done sync
-0.000226550
+*start no sync
+*done no sync
+0.000000740
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000208380
+*start no sync
+*done no sync
+0.000001180
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000228440
+*start no sync
+*done no sync
+0.000001200
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000133251
+*start no sync
+*done no sync
+0.000000791
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000210910
+*start no sync
+*done no sync
+0.000000710
 *done w/ timer1: 2.000000
-*done w/ timer2: 4.000000
+*done w/ timer2: 4.000021
 *done w/ spawns
-*start sync
-*done sync
-0.000343700
+*start no sync
+*done no sync
+0.000000720
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000212640
+*start no sync
+*done no sync
+0.000000760
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000224840
+*start no sync
+*done no sync
+0.000000880
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000211031
+*start no sync
+*done no sync
+0.000000760
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000201820
+*start no sync
+*done no sync
+0.000000780
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000542541
+*start no sync
+*done no sync
+0.000000620
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000227580
+*start no sync
+*done no sync
+0.000001230
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000188820
+*start no sync
+*done no sync
+0.000000720
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000196780
+*start no sync
+*done no sync
+0.000000730
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000539320
+*start no sync
+*done no sync
+0.000000730
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000214070
+*start no sync
+*done no sync
+0.000000730
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000744901
+*start no sync
+*done no sync
+0.000000650
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000215120
+*start no sync
+*done no sync
+0.000000680
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000322200
+*start no sync
+*done no sync
+0.000000740
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000215500
+*start no sync
+*done no sync
+0.000000610
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000242070
+*start no sync
+*done no sync
+0.000000740
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000213310
+*start no sync
+*done no sync
+0.000001110
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000252220
+*start no sync
+*done no sync
+0.000000760
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000208830
+*start no sync
+*done no sync
+0.000000840
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000298701
+*start no sync
+*done no sync
+0.000000790
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000242230
+*start no sync
+*done no sync
+0.000000720
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000192220
+*start no sync
+*done no sync
+0.000000730
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000237151
+*start no sync
+*done no sync
+0.000000740
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000383670
-*done w/ timer1: 2.000000
+*start no sync
+*done no sync
+0.000000740
+*done w/ timer1: 2.000008
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000232470
+*start no sync
+*done no sync
+0.000000860
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000238740
+*start no sync
+*done no sync
+0.000000750
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000204910
+*start no sync
+*done no sync
+0.000000750
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000182061
+*start no sync
+*done no sync
+0.000000730
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000222270
+*start no sync
+*done no sync
+0.000000820
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000317580
+*start no sync
+*done no sync
+0.000000800
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000208710
+*start no sync
+*done no sync
+0.000000800
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000197580
+*start no sync
+*done no sync
+0.000000920
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000526931
+*start no sync
+*done no sync
+0.000000790
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000354660
+*start no sync
+*done no sync
+0.000000830
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000219140
+*start no sync
+*done no sync
+0.000000780
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000259310
+*start no sync
+*done no sync
+0.000000700
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000197211
+*start no sync
+*done no sync
+0.000000670
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000959390
+*start no sync
+*done no sync
+0.000000810
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000203380
+*start no sync
+*done no sync
+0.000000790
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000214390
+*start no sync
+*done no sync
+0.000000810
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000160910
+*start no sync
+*done no sync
+0.000001210
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000194941
+*start no sync
+*done no sync
+0.000000700
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000203590
+*start no sync
+*done no sync
+0.000000800
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000512700
+*start no sync
+*done no sync
+0.000000730
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000190570
+*start no sync
+*done no sync
+0.000000790
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000221841
+*start no sync
+*done no sync
+0.000000790
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000462890
+*start no sync
+*done no sync
+0.000000760
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000372091
+*start no sync
+*done no sync
+0.000000740
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000254250
+*start no sync
+*done no sync
+0.000000750
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000250141
+*start no sync
+*done no sync
+0.000000800
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000214400
+*start no sync
+*done no sync
+0.000000790
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000241930
+*start no sync
+*done no sync
+0.000000730
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000265700
+*start no sync
+*done no sync
+0.000000740
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000554261
+*start no sync
+*done no sync
+0.000000750
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000248290
+*start no sync
+*done no sync
+0.000000760
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000227750
+*start no sync
+*done no sync
+0.000000760
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000243060
+*start no sync
+*done no sync
+0.000000720
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000226131
+*start no sync
+*done no sync
+0.000001090
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000259960
+*start no sync
+*done no sync
+0.000001230
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000215660
+*start no sync
+*done no sync
+0.000000800
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000282190
+*start no sync
+*done no sync
+0.000001150
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000258870
+*start no sync
+*done no sync
+0.000000730
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000357930
+*start no sync
+*done no sync
+0.000000760
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000747150
+*start no sync
+*done no sync
+0.000000720
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000304780
+*start no sync
+*done no sync
+0.000000700
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000569900
+*start no sync
+*done no sync
+0.000000750
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000177480
+*start no sync
+*done no sync
+0.000000770
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000332120
+*start no sync
+*done no sync
+0.000000830
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000233210
+*start no sync
+*done no sync
+0.000000780
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000207131
+*start no sync
+*done no sync
+0.000001190
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000219530
+*start no sync
+*done no sync
+0.000000720
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000200690
+*start no sync
+*done no sync
+0.000001190
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000199151
+*start no sync
+*done no sync
+0.000000750
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
 *done w/ spawns
-*start sync
-*done sync
-0.000415121
+*start no sync
+*done no sync
+0.000000770
 *done w/ timer1: 2.000000
 *done w/ timer2: 4.000000
+*done w/ spawns
+*start no sync
+*done no sync
+0.000000830

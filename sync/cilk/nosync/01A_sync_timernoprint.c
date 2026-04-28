@@ -4,24 +4,28 @@
 #include <stdint.h>
 #include <unistd.h>
 #include <string.h>
-#include <omp.h>
+#include <cilk/cilk.h>
+#include <cilk/cilkscale.h>
+#include <cilk/cilk_api.h>
 #include <assert.h>
 #include <sys/time.h>
 #include <math.h>
 #include "ctimer.h"
 
 /* 
- * Benchmark: 01C: Sync time no sync command ; Timer Sync No Prints (OpenMP)
+ * Benchmark: 01A: Sync time No sync command ; Timer Sync No Prints (Cilk)
  * Try timing no sync command after 1 thread / a few threads
  */
 
 float TIMER1 = 2.0;
 float TIMER2 = 4.0;
 
+#define NCILK __cilkrts_get_nworkers()
+
 void spawn_function1(){           // Simple Spawn Function
 
 	struct timeval t_start, t_end;
-	gettimeofday(&t_start, NULL); // 
+	gettimeofday(&t_start, NULL); // struct timespec *tp
 	gettimeofday(&t_end, NULL);	
 
 	while( ( (t_end.tv_sec+ (double)t_end.tv_usec/1000000) - (t_start.tv_sec+(double)t_start.tv_usec/1000000)  ) < TIMER1 ){	
@@ -36,7 +40,7 @@ void spawn_function1(){           // Simple Spawn Function
 void spawn_function2(){           // Simple Spawn Function
 
 	struct timeval t_start, t_end;
-	gettimeofday(&t_start, NULL); // 
+	gettimeofday(&t_start, NULL); // struct timespec *tp
 	gettimeofday(&t_end, NULL);	
 
 	while( ( (t_end.tv_sec+ (double)t_end.tv_usec/1000000) - (t_start.tv_sec+(double)t_start.tv_usec/1000000)  ) < TIMER2 ){	
@@ -53,29 +57,23 @@ void spawn_function2(){           // Simple Spawn Function
 int main(int argc, char *argv[]){
 
  	struct timespec t_start, t_res, t_end;
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // 
 
-	#pragma omp parallel
-	#pragma omp single
-	{
-		#pragma omp task
-		spawn_function1();
-		
-		#pragma omp task
-		spawn_function2();
+	cilk_spawn spawn_function1();
+	cilk_spawn spawn_function2();
 
-//		printf("done w/ spawns\n");
+	//printf("done w/ spawns\n");
 
-//	 printf("start sync\n");
-	clock_gettime(CLOCK_MONOTONIC, &t_end);
-	}
+	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+	//printf("start sync\n");
+	// cilk_sync;
 	//printf("done sync\n");
+	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
 
-	// printf("01C\n");
+	// printf("01A\n");
 
 	return 0;
 }

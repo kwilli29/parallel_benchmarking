@@ -33,16 +33,10 @@ run_programs() { # ex. 1 A 0
 	done
 
 	# Metrics
-	if [ "$2" == 'X' ]; then
-		single_output_metrics $EXEC $CURRPROG 1
-	elif [ "$2" == 'F' ]; then
-		single_output_metrics $EXEC $CURRPROG 1
-	else	
-		single_output_metrics $EXEC $CURRPROG $1
-	fi
+
+	single_output_metrics $EXEC $CURRPROG $1
 
 	#rm $EXEC
-
 }
 
 make clean
@@ -50,8 +44,11 @@ make clean
 
 echo "Starting benchmark on 01_'s"
 
-	# C
-	run_programs 1 C 0
+	# A
+	run_programs 1 A 0
+
+    # B
+	run_programs 1 B 0
 
 	# Cleanup
 	make clean
@@ -59,7 +56,6 @@ echo "Starting benchmark on 01_'s"
 
 echo "Cleanup 01_'s"
 echo ""
-
 ###############################
 
 echo "Starting benchmark on 02_'s"
@@ -89,14 +85,14 @@ echo "Cleanup 03_'s"
 echo ""
 ###############################
 
-#echo "Starting benchmark on 04_'s"
+echo "Starting benchmark on 04_'s"
 
 	# A
 	run_programs 4 A 0
 
 	# Cleanup
-	#make clean
+	make clean
 
-#echo "Cleanup 04_'s"
-#echo ""
+echo "Cleanup 04_'s"
+echo ""
 ###############################

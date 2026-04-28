@@ -18,7 +18,7 @@ multi_output_metrics() {	# ex. 25 data/01A_000.txt 1 serial/data/01A_000.txt
 
 	echo "Process $2 $3"
 
-	python3 ./process_metrics.py $RUNS "$1" "$3" "$4" > output/$PLANG/"$2".txt
+	python3 ./process_metrics.py $RUNS "$1" "$3" "$4" "$5" > output/$PLANG/"$2".txt
 
 	cat output/$PLANG/"$2".txt
 
@@ -42,30 +42,21 @@ run_programs() { # ex. 1 A 0
 			./$CURRPROG >> $EXEC # Capture program output
 	done
 
-	EXECS="serial/data/${CURRPROG}_000.txt"
-	EXECO="../serial/data/${CURRPROG}_000.txt"
+    # Metrics
+	EXECN="nosync/data/${CURRPROG}_000.txt"
+	EXECS="../serial/data/${CURRPROG}_000.txt"
 	
-	# Metrics
-	single_output_metrics $EXEC $CURRPROG $1
+    # Averages
+	# single_output_metrics $EXEC $CURRPROG $1
 
-	# 1c, 2a, 3a, 3g, 4a -- not 1a. 1b, 1d
-	var1="$1$2"
-	
-	# compare to openmp no sync
-	if [ "$var1" != "1B" ]; then
-		if [ "$var1" != "1D" ]; then
-			if [ "$var1" != "1A" ]; then
-				multi_output_metrics $EXEC $CURRPROG $1 $EXECS 
-			fi
-		fi
-	fi
+    FLAG=3
 
-	# compare to same letter
-	if [ "$1" != "2" ]; then
-		if [ "$1" != '4' ]; then
-			multi_output_metrics $EXEC $CURRPROG $1 $EXECO
-		fi
-	fi
+    # Tp - Ts & Overheads
+    FLAG=1
+    multi_output_metrics $EXEC $CURRPROG $1 $EXECS $FLAG
+
+    FLAG=2
+    multi_output_metrics $EXEC $CURRPROG $1 $EXECN $FLAG
 
 	rm $EXEC
 
@@ -82,9 +73,6 @@ echo "Starting benchmark on 01_'s"
 	# B
 	run_programs 1 B 0 0
 
-	# C
-	run_programs 1 C 0 1
-
 	# Cleanup
 	make clean
 
@@ -97,7 +85,7 @@ echo ""
 echo "Starting benchmark on 02_'s"
 
 	# A
-	run_programs 2 A 0 1
+	run_programs 2 A 0 0
 
 	# Cleanup
 	make clean
@@ -109,10 +97,10 @@ echo ""
 echo "Starting benchmark on 03_'s"
 
 	# A
-	run_programs 3 A 0 1
+	run_programs 3 A 0 0
 
 	# G
-	run_programs 3 G 0 1
+	run_programs 3 G 0 0
 
 	# Cleanup
 	make clean

@@ -17,7 +17,7 @@ multi_output_metrics() {	# ex. 25 data/01A_000.txt 1 serial/data/01A_000.txt
 
 	echo "Process $2 $3"
 
-	python3 ./process_metrics.py $RUNS "$1" "$3" "$4" > output/$PLANG/"$2".txt
+	python3 ./process_metrics.py $RUNS "$1" "$3" "$4" "$5"> output/$PLANG/"$2".txt
 
 	cat output/$PLANG/"$2".txt
 

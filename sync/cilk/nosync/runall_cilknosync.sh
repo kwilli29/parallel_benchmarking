@@ -47,17 +47,6 @@ run_programs() { # ex. 1 A 0
 	# Metrics
 	single_output_metrics $EXEC $CURRPROG $1
 
-	# compare to same letter
-	if [ "$4" == "X" ]; then
-		if [ "$2" == 'E' ]; then
-			multi_output_metrics $EXEC $CURRPROG 1 $EXECS
-		elif [ "$2" == 'F' ]; then
-			multi_output_metrics $EXEC $CURRPROG 1 $EXECS
-		else	
-			multi_output_metrics $EXEC $CURRPROG $1 $EXECS 
-		fi
-	fi
-
 	#rm $EXEC
 
 }
@@ -72,12 +61,6 @@ echo "Starting benchmark on 01_'s"
 
 	# B
 	run_programs 1 B 0 0
-
-	# C
-	run_programs 1 C 0 0
-
-	# D
-	run_programs 1 D 0 0
 
 	# Cleanup
 	make clean
