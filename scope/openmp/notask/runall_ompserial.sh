@@ -1,7 +1,7 @@
 #!/bin/sh
 
 RUNS=100
-PLANG="cilk"
+PLANG="openmp"
 ###############################
 
 single_output_metrics() {	# ex. 25 data/01A_000.txt 1
@@ -13,15 +13,17 @@ single_output_metrics() {	# ex. 25 data/01A_000.txt 1
 	cat output/$PLANG/"$2".txt
 
 }
+
 multi_output_metrics() {	# ex. 25 data/01A_000.txt 1 serial/data/01A_000.txt
 
 	echo "Process $2 $3"
 
-	python3 ./process_metrics.py $RUNS "$1" "$3" "$4" "$5" > output/$PLANG/"$2".txt
+	python3 ./process_metrics.py $RUNS "$1" "$3" "$4" > output/$PLANG/"$2".txt
 
 	cat output/$PLANG/"$2".txt
 
 }
+
 run_programs() { # ex. 1 A 0
 
 	make "$1" # Number
@@ -29,60 +31,45 @@ run_programs() { # ex. 1 A 0
 	echo "$2" # Letter
 
 	#	Run the Programs
-	
+
 	CURRPROG="$3$1$2"
+	CURRPROGS="$3$1E"
 	EXEC="data/${CURRPROG}_000.txt"
 
 	touch $EXEC 
-	
+
 	for((i=0;i<($RUNS);i++)); 
 	do	
-		./$CURRPROG >> $EXEC # Capture program output
+			./$CURRPROG >> $EXEC # Capture program output
 	done
 
 	# Metrics
-	EXECN="noscope/data/${CURRPROG}_000.txt"   #
+	
+	EXECN="notask/data/${CURRPROG}_000.txt"   #
 	EXECS="../serial/data/${CURRPROG}_000.txt" #
 
     # Averages
-	# single_output_metrics $EXEC $CURRPROG $1
+	single_output_metrics $EXEC $CURRPROG $1
 
-    FLAG=3
-
-    # Tp - Ts & Overheads
-    FLAG=1
-    multi_output_metrics $EXEC $CURRPROG $1 $EXECS $FLAG
-
-    FLAG=2
-    multi_output_metrics $EXEC $CURRPROG $1 $EXECN $FLAG
-
-	
-	rm $EXEC
+	#rm $EXEC
 
 }
 
 make clean
+
 ###############################
 
-echo "Starting benchmark on 01_'s"
+#echo "Starting benchmark on 01_'s"
 
 	# A
-	run_programs 1 A 0 0
- 
-	# B
-	run_programs 1 B 0 0
-
-	# E
-	run_programs 1 E 0 0
-    
-    # F
-	run_programs 1 F 0 0
+	#run_programs 1 A 0 1 # 
 
 	# Cleanup
-	make clean
+	#make clean
 
-echo "Cleanup 01_'s"
-echo ""
+
+#echo "Cleanup 01_'s"
+#echo ""
 
 ###############################
 

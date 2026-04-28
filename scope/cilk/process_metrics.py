@@ -96,7 +96,7 @@ def main():
 
         if flag == '0': # neither
             pass
-        elif flag == '1': # jsut Tp-Ts
+        elif flag == '1': # just Tp-Ts
             short_tpts(sys.argv[2], sys.argv[4],sys.argv[1])
         elif flag == '2': # just overhead
             short_overhead(sys.argv[2], sys.argv[4],sys.argv[1])
