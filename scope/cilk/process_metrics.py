@@ -2,8 +2,17 @@
 
 import sys
 import time
+import string
+import subprocess
 
-NUM_PROCS=68
+# Get # of processors
+process = subprocess.Popen( "lscpu | grep -E 'Core\(s\) per socket:'", shell=True, 
+    stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True
+)
+output, _ = process.communicate()
+
+NUM_PROCS= int(output.strip().split(":")[1].split(" ")[-1])
+# print('numproc: ', NUM_PROCS)
 
 def short_metrics(filename):
     # METRICS
