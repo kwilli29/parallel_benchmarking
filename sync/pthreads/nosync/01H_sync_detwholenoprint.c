@@ -4,14 +4,14 @@
 #include <stdint.h>
 #include <unistd.h>
 #include <string.h>
-#include <pthread.h>
 #include <assert.h>
+#include <pthread.h>
 #include <sys/time.h>
 #include <math.h>
 #include "ctimer.h"
 
 /* 
- * Benchmark: 01G: Sync time no sync command ; Timer Sync (Pthreads)
+ * Benchmark: 01H: Detach Threads ; Sync time no sync command ; Timer Sync No Prints (Pthreads)
  * Try timing no sync command after 1 thread / a few threads
  */
 
@@ -29,7 +29,7 @@ void* spawn_function1(){           // Simple Spawn Function
 		gettimeofday(&t_end, NULL);
 	}
 
-	printf("*done w/ timer1: %lf\n", (t_end.tv_sec+ (double)t_end.tv_usec/1000000) - (t_start.tv_sec+(double)t_start.tv_usec/1000000));
+	//printf("done w/ timer1: %lf\n", (t_end.tv_sec+ (double)t_end.tv_usec/1000000) - (t_start.tv_sec+(double)t_start.tv_usec/1000000));
 
 	return (void*)NULL; 
 }
@@ -44,9 +44,9 @@ void* spawn_function2(){           // Simple Spawn Function
 		gettimeofday(&t_end, NULL);
 	}
 
-	printf("*done w/ timer2: %lf\n", (t_end.tv_sec+ (double)t_end.tv_usec/1000000) - (t_start.tv_sec+(double)t_start.tv_usec/1000000));
+	//printf("done w/ timer2: %lf\n", (t_end.tv_sec+ (double)t_end.tv_usec/1000000) - (t_start.tv_sec+(double)t_start.tv_usec/1000000));
 
-	return (void*)NULL;
+	return (void*)NULL; 
 }
 
 
@@ -64,18 +64,18 @@ int main(int argc, char *argv[]){
 	if (rc == -1) { perror("error in pthread_attr_setdetachstate"); exit(2); }
 
  	struct timespec t_start, t_res, t_end;
-	
-	clock_gettime(CLOCK_MONOTONIC, &t_start);
- 
+
+	clock_gettime(CLOCK_MONOTONIC, &t_start); //
+
 	pthread_create( &Threads1, &attr, spawn_function1, NULL);
 	pthread_create( &Threads2, &attr, spawn_function2, NULL);
 
-	clock_gettime(CLOCK_MONOTONIC, &t_end);
+    clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
-	// printf("01G\n");
+	// printf("01H\n");
 
 	// destroy attr
 	pthread_attr_destroy(&attr);

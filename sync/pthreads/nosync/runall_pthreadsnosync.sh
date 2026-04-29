@@ -32,10 +32,12 @@ run_programs() { # ex. 1 A 0
 			./$CURRPROG >> $EXEC # Capture program output
 	done
 	
-	# Metrics
+    # Metrics
+	
+    # Averages
 	single_output_metrics $EXEC $CURRPROG $1
 
-	rm $EXEC
+	#rm $EXEC
 
 }
 
@@ -50,6 +52,8 @@ echo "Starting benchmark on 01_'s"
 	# B
 	run_programs 1 B 0
 
+	# H
+	run_programs 1 H 0
 
 	# Cleanup
 	make clean
@@ -65,8 +69,8 @@ echo "Starting benchmark on 02_'s"
 	# A
 	run_programs 2 A 0
 
-	# G
-	run_programs 2 G 0
+	# H
+	run_programs 2 H 0
 
 	# Cleanup
 	make clean
@@ -94,6 +98,9 @@ echo "Starting benchmark on 04_'s"
 
 	# A
 	run_programs 4 A 0
+
+    # B
+	run_programs 4 B 0
 
 	# Cleanup
 	make clean

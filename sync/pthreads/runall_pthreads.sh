@@ -14,6 +14,16 @@ single_output_metrics() {	# ex. 25 data/01A_000.txt 1
 
 }
 
+multi_output_metrics() {	# ex. 25 data/01A_000.txt 1 serial/data/01A_000.txt
+
+	echo "Process $2 $3"
+
+	python3 ./process_metrics.py $RUNS "$1" "$3" "$4" "$5" > output/$PLANG/"$2".txt
+
+	cat output/$PLANG/"$2".txt
+
+}
+
 run_programs() { # ex. 1 A 0
 
 	make "$1" # Number
@@ -29,11 +39,26 @@ run_programs() { # ex. 1 A 0
 
 	for((i=0;i<($RUNS);i++)); 
 	do	
-			./$CURRPROG >> $EXEC # Capture program output
+		./$CURRPROG >> $EXEC # Capture program output
 	done
 	
-	# Metrics
-	single_output_metrics $EXEC $CURRPROG $1
+    # Metrics
+	EXECN="nosync/data/${CURRPROG}_000.txt"
+	EXECS="../serial/data/${CURRPROG}_000.txt"
+	
+    # Averages
+	# single_output_metrics $EXEC $CURRPROG $1
+
+    FLAG=3
+
+    # Tp - Ts & Overheads
+    FLAG=1
+    multi_output_metrics $EXEC $CURRPROG $1 $EXECS $FLAG
+
+    FLAG=2
+    if [ '$1' != '3' ]; then
+        multi_output_metrics $EXEC $CURRPROG $1 $EXECN $FLAG
+    fi
 
 	rm $EXEC
 
@@ -64,9 +89,6 @@ echo "Starting benchmark on 02_'s"
 
 	# A
 	run_programs 2 A 0
-
-	# G
-	run_programs 2 G 0
 
 	# Cleanup
 	make clean

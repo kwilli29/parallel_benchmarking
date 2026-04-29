@@ -34,7 +34,6 @@ int main(int argc, char *argv[]){
  	struct timespec t_start, t_res, t_end;
 	struct timeval tstart, tend;
 
-	
 	pthread_create( &Threads0, NULL, spawn_function, NULL);
 
 	clock_gettime(CLOCK_MONOTONIC, &t_start); //
@@ -70,7 +69,6 @@ int main(int argc, char *argv[]){
 
 	timespec_sub(&t_res, t_end, t_start);
 	printf("----:\n%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
-
 
 	// printf("04A\n");
 

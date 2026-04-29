@@ -11,7 +11,7 @@
 #include "ctimer.h"
 
 /* 
- * Benchmark: 01B: Sync time just the sync command ; Timer Sync No Prints (Pthreads)
+ * Benchmark: 01A: Sync time just the sync command ; Timer Sync No Prints (Pthreads)
  * Try timing just the sync command after 1 thread / a few threads
  */
 
@@ -73,7 +73,7 @@ int main(int argc, char *argv[]){
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
 
-	// printf("01B\n");
+	// printf("01A\n");
 
 	return 0;
 }
