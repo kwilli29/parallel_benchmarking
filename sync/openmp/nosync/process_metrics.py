@@ -3,6 +3,19 @@
 import sys
 import time
 
+# Get # of processors
+NUM_PROCS=2
+try:
+    process = subprocess.Popen( "lscpu | grep -E 'Core\(s\) per socket:'", shell=True, 
+        stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True
+    )
+    output, _ = process.communicate()
+
+    NUM_PROCS= int(output.strip().split(":")[1].split(" ")[-1])
+    # print('numproc: ', NUM_PROCS)
+except Exception as e:
+    NUM_PROCS=2
+
 def long_metrics(filename, runs):
 
     avg_spsy = 0.0
