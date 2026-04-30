@@ -5,7 +5,6 @@ import time
 
 # Get # of processors
 NUM_PROCS=2
-
 try:
     process = subprocess.Popen( "lscpu | grep -E 'Core\(s\) per socket:'", shell=True, 
         stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True

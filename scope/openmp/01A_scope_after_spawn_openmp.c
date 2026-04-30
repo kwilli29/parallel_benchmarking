@@ -14,7 +14,6 @@
  * Launch a bunch and measure when all done 
  */
 
-#define NCILK __cilkrts_get_nworkers()
 #define OMP_THREADS 271
 
 void spawn_function(){           // Simple Spawn Function

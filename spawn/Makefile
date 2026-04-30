@@ -3,7 +3,7 @@
 CC = gcc
 CFLAGS = -lm
 
-CCCILK=		/opt/opencilk-2/bin/clang 
+CCCILK=		/opt/$$(ls /opt | grep "opencilk")/bin/clang # /opt/opencilk-2/bin/clang 
 CFLAGSCILK=		-fopencilk -O3 -Og -g # -fcilktool=cilkscale -lm -Wall -Wextra -Wconversion -std=c11 -Werror
 
 

@@ -1,4 +1,4 @@
-CC=		/opt/opencilk-2/bin/clang 
+CC=		/opt/$$(ls /opt | grep "opencilk")/bin/clang # /opt/opencilk-2/bin/clang 
 CFLAGS=		-fopencilk -O3 -Og -g # -fcilktool=cilkscale -lm -Wall -Wextra -Wconversion -std=c11 -Werror
 SOURCE=		$(wildcard *.c)
 TARGETS=	$(SOURCE:.c=)	
