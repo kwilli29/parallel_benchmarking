@@ -1,5 +1,6 @@
 CC=		gcc
 CFLAGS=		-fopenmp -Wall -O3 -Og -g
+INCFILES=   ../../include/numthreads.c
 SOURCE=		$(wildcard *.c)
 TARGETS=	$(SOURCE:.c=)	
 

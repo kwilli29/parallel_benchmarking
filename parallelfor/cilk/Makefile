@@ -7,7 +7,6 @@ EXECS := $(foreach s,$(TARGETS),$(shell echo $(basename $(s)) | cut -c1-3))
 
 build: $(TARGETS)
 
-
 01A: 01A_pfor_gs_1_cilk.c
 	$(CC) $(CFLAGS) 01A_pfor_gs__1_cilk.c -o 01A
 
