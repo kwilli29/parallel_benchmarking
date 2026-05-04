@@ -17,9 +17,6 @@
  * Launch a bunch and measure when all done 
  */
 
-#define NITER 272 
-#define NUMTH 272/4
-
 void spawn_function(){           // Simple Spawn Function
 
 	int x = 100; int y = 5000; int z = 1000000;
@@ -36,8 +33,8 @@ void spawn_function(){           // Simple Spawn Function
 
 int main(int argc, char *argv[]){
 
-    int NITER = number_threads();;
-    int NUMTH = (int)NITER/4;
+    int NITER = number_threads();
+    int NUMTH = (int)(NITER/4);
 
  	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); //

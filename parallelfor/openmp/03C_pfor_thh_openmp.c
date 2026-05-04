@@ -30,11 +30,10 @@ void spawn_function(){           // Simple Spawn Function
 	return; 
 }
 
-
 int main(int argc, char *argv[]){
 
     int NITER = number_threads(); 
-    int NUMTH = 2;
+    int NUMTH = (int)(NITER/2);
 
  	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); //

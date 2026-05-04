@@ -43,7 +43,6 @@ int main(int argc, char *argv[]){
 		t_end = spawn_function();
 	}
 
-
 	timespec_sub(&t_res, t_end, t_start);
 
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);

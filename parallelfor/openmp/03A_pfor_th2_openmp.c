@@ -30,7 +30,6 @@ void spawn_function(){           // Simple Spawn Function
 	return; 
 }
 
-
 int main(int argc, char *argv[]){
 
     int NITER = number_threads();

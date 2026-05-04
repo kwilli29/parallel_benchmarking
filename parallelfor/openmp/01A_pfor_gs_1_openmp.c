@@ -33,7 +33,7 @@ void spawn_function(){           // Simple Spawn Function
 int main(int argc, char *argv[]){
 
     int OMP_THREADS = number_threads()-1;
-    printf("numthreads: %i\n", OMP_THREADS);
+    printf("*numthreads: %i\n", OMP_THREADS);
 
  	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start);

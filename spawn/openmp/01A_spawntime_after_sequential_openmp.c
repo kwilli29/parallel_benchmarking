@@ -27,10 +27,7 @@ void spawn_function(){           // Simple Spawn Function
 	return; 
 }
 
-
 int main(int argc, char *argv[]){
-
-	/* int DEPTH = 271; */
 
 	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
