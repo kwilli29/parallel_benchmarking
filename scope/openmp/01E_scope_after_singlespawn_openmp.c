@@ -13,9 +13,6 @@
 /* Benchmark: 01E: Scope time after sinlge task; Parallel Region (OpenMP)
  */
 
-#define NCILK __cilkrts_get_nworkers()
-#define OMP_THREADS 271
-
 void spawn_function(){           // Simple Spawn Function
 	int x = 100; int y = 5000; int z = 1000000;
 

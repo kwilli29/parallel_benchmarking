@@ -42,7 +42,7 @@ long provide_reducer()
 int main(int argc, char*argv[]){
 
 	struct timespec t_start, t_res, t_end;
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+	clock_gettime(CLOCK_MONOTONIC, &t_start); //
 
 	long reducermax = provide_reducer();
 	printf("*max: %ld\n", reducermax);    

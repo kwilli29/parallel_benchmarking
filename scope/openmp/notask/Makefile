@@ -1,5 +1,6 @@
 CC=		gcc
 CFLAGS=		-fopenmp -Wall -O3 -Og -g
+INCFILES=   ../../include/numthreads.c
 SOURCE=		$(wildcard *.c)
 TARGETS=	$(SOURCE:.c=)	
 
@@ -9,39 +10,39 @@ all:
 	@for s in $(SOURCE); do \
 		name=$$(basename $$s); \
 		exe=$$(echo $$name | cut -c1-3); \
-		$(CC) $(CFLAGS) $$s -o $$exe; \
+		$(CC) $(CFLAGS) $(INCFILES) $$s -o $$exe; \
 	done
 
 1:
 	@for s in $(wildcard 01*.c); do \
 		name=$$(basename $$s); \
 		exe=$$(echo $$name | cut -c1-3); \
-		$(CC) $(CFLAGS) $$s -o $$exe; \
+		$(CC) $(CFLAGS) $(INCFILES) $$s -o $$exe; \
 	done
 2:
 	@for s in $(wildcard 02*.c); do \
 		name=$$(basename $$s); \
 		exe=$$(echo $$name | cut -c1-3); \
-		$(CC) $(CFLAGS) $$s -o $$exe; \
+		$(CC) $(CFLAGS) $(INCFILES) $$s -o $$exe; \
 	done
 
 4:
 	@for s in $(wildcard 04*.c); do \
 		name=$$(basename $$s); \
 		exe=$$(echo $$name | cut -c1-3); \
-		$(CC) $(CFLAGS) $$s -o $$exe; \
+		$(CC) $(CFLAGS) $(INCFILES) $$s -o $$exe; \
 	done
 5:
 	@for s in $(wildcard 05*.c); do \
 		name=$$(basename $$s); \
 		exe=$$(echo $$name | cut -c1-3); \
-		$(CC) $(CFLAGS) $$s -o $$exe; \
+		$(CC) $(CFLAGS) $(INCFILES) $$s -o $$exe; \
 	done
 6:
 	@for s in $(wildcard 06*.c); do \
 		name=$$(basename $$s); \
 		exe=$$(echo $$name | cut -c1-3); \
-		$(CC) $(CFLAGS) $$s -o $$exe; \
+		$(CC) $(CFLAGS) $(INCFILES) $$s -o $$exe; \
 	done
 
 build: $(TARGETS)

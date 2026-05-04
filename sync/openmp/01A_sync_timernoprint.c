@@ -21,7 +21,7 @@ float TIMER2 = 4.0;
 void spawn_function1(){           // Simple Spawn Function
 
 	struct timeval t_start, t_end;
-	gettimeofday(&t_start, NULL); // struct timespec *tp
+	gettimeofday(&t_start, NULL); // 
 	gettimeofday(&t_end, NULL);	
 
 	while( ( (t_end.tv_sec+ (double)t_end.tv_usec/1000000) - (t_start.tv_sec+(double)t_start.tv_usec/1000000)  ) < TIMER1 ){	

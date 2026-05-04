@@ -17,7 +17,6 @@
  * then calls 2 cilk_spawns which invoke runbench
  */
 
-
 void spawn_node(int,int,int);
 void runbench(int, int);
 
@@ -85,5 +84,3 @@ int main(int argc, char *argv[]){
  
 	return 0;
 }
-
-

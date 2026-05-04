@@ -10,6 +10,8 @@
 #include <math.h>
 #include "ctimer.h"
 
+#include "../../include/numthreads.h"
+
 /* 
  * Benchmark: 02A: Function in ParallelFor  ; ParallelFor (OpenMP)
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
@@ -38,8 +40,6 @@ long do_work(long k){
 }
 
 int main(int argc, char *argv[]){
-
-	int DEPTH = 271;
 
  	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp

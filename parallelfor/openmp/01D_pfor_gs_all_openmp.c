@@ -10,6 +10,8 @@
 #include <math.h>
 #include "ctimer.h"
 
+#include "../../include/numthreads.h"
+
 /* 
  * Benchmark: 01D: Grainsize = #threads  ; ParallelFor (OpenMP)
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
@@ -34,13 +36,13 @@ void spawn_function(){           // Simple Spawn Function
 
 int main(int argc, char *argv[]){
 
-	int DEPTH = 271;
+	int OMP_THREADS = number_threads()-1;
 
  	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
 	#pragma omp parallel for schedule (static, DEPTH) // grainsize
-	for(int i = 0; i < DEPTH; i++){
+	for(int i = 0; i < OMP_THREADS; i++){
 		spawn_function(); 
 		// how to time the end of the *last thread * to complete
 	} 

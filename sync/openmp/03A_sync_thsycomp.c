@@ -112,7 +112,6 @@ int main(int argc, char *argv[]){
 	}
 	clock_gettime(CLOCK_MONOTONIC, &t_syncend);	
 
-
 	struct timespec maxtime = t_end[0];
 	double t = 0.0; double mt = 0.0;
 
@@ -145,5 +144,3 @@ int main(int argc, char *argv[]){
 	
 	return 0;
 }
-
-

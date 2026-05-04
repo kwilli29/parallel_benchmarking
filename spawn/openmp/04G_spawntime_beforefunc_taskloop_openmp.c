@@ -31,21 +31,21 @@ struct timespec spawn_function(){           // Simple Function to Spawn
 
 int main(int argc, char *argv[]){
 
-	int DEPTH = 271;
+	int OMP_THREADS = number_threads()-1;
 
-	struct timespec t_start[DEPTH]; struct timespec t_res;
-	struct timespec t_end[DEPTH];
+	struct timespec t_start[OMP_THREADS]; struct timespec t_res;
+	struct timespec t_end[OMP_THREADS];
 	
 	#pragma omp parallel
 	#pragma omp single
 	#pragma omp taskloop simd grainsize(1)
-	for(int i = 0; i < DEPTH; i++){
+	for(int i = 0; i < OMP_THREADS; i++){
 		clock_gettime(CLOCK_MONOTONIC, &t_start[i]);
 		t_end[i] = spawn_function(); 
 	}
 
 	// printf("****\n");
-	for(int i = 0; i < DEPTH; i++){
+	for(int i = 0; i < OMP_THREADS; i++){
 
 		timespec_sub(&t_res, t_end[i], t_start[i]);
 

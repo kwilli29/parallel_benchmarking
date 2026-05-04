@@ -10,6 +10,8 @@
 #include <math.h>
 #include "ctimer.h"
 
+#include "../../include/numthreads.h"
+
 /* 
  * Benchmark: 04C: Iter = 1000  ; ParallelFor (OpenMP)
  * Launch a bunch and measure when all done 
@@ -32,7 +34,6 @@ void spawn_function(){           // Simple Spawn Function
 
 
 int main(int argc, char *argv[]){
-
 
  	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // 

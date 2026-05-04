@@ -42,7 +42,6 @@ int main(int argc, char *argv[]){
 		spawn_function();
 	}	
 	
-	
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
@@ -51,5 +50,3 @@ int main(int argc, char *argv[]){
 
 	return 0;
 }
-
-

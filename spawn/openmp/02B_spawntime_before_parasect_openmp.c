@@ -9,8 +9,6 @@
 #include "ctimer.h"
 #include <math.h>
 
-#define OMP_THREADS 271
-
 /* Benchmark: 02B: Spawn time before ; Parallel Section Spawns (OpenMP)
  * Launch a bunch and measure when all done
  */
@@ -30,10 +28,10 @@ void spawn_function(){           // Simple Function to Spawn
 
 int main(int argc, char *argv[]){
 
-	int DEPTH = 271;
+	int OMP_THREADS = number_threads();
 
 	struct timespec t_start, t_res;
-	struct timespec t_end[DEPTH];
+	struct timespec t_end[OMP_THREADS-1];
 
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // 
 
@@ -1753,7 +1751,7 @@ int main(int argc, char *argv[]){
 
  }
 	printf("****\n");
-	for(int i = 0; i < DEPTH; i++){
+	for(int i = 0; i < OMP_THREADS-1; i++){
 
 		timespec_sub(&t_res, t_end[i], t_start);
 

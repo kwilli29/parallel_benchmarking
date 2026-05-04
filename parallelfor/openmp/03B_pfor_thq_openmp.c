@@ -10,8 +10,10 @@
 #include <math.h>
 #include "ctimer.h"
 
+#include "../../include/numthreads.h"
+
 /* 
- * Benchmark: 03B: Parallel For 272/4; (OpenMP)
+ * Benchmark: 03B: Parallel For #threads/4; (OpenMP)
  * Launch a bunch and measure when all done 
  */
 
@@ -34,6 +36,8 @@ void spawn_function(){           // Simple Spawn Function
 
 int main(int argc, char *argv[]){
 
+    int NITER = number_threads();;
+    int NUMTH = (int)NITER/4;
 
  	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); //

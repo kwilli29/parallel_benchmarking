@@ -14,7 +14,6 @@
  * Benchmark: 02A: Spawns and Syncs ; Checkpoint Syncs (OpenMP)
  */
 
-
 void spawn_function(){           // Simple Spawn Function
 
 	int x = 100; int y = 5000; int z = 1000000;
@@ -40,7 +39,6 @@ void timer_fcn(){
 
 	return; 
 }
-
 
 int main(int argc, char *argv[]){
 

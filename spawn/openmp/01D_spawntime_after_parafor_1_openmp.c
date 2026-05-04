@@ -29,13 +29,13 @@ void spawn_function(){           // Simple Spawn Function
 
 int main(int argc, char *argv[]){
 
-	int DEPTH = 271;
+	int OMP_THREADS = number_threads()-1;
 
 	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // 
 
 	#pragma omp parallel for schedule (static, 1) // grainsize=1
-	for(int i = 0; i < DEPTH; i++){
+	for(int i = 0; i < OMP_THREADS; i++){
 		spawn_function(); 
 	} 
 
@@ -47,5 +47,3 @@ int main(int argc, char *argv[]){
 
 	return 0;
 }
-
-

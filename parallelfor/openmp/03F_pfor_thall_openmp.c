@@ -10,13 +10,12 @@
 #include <math.h>
 #include "ctimer.h"
 
+#include "../../include/numthreads.h"
+
 /* 
- * Benchmark: 03F: Serial For 272; (Serial)
+ * Benchmark: 03F: Serial For #threads; (Serial)
  * Launch a bunch and measure when all done 
  */
-
-#define NITER 272 
-#define NUMTH 272
 
 void spawn_function(){           // Simple Spawn Function
 
@@ -34,6 +33,8 @@ void spawn_function(){           // Simple Spawn Function
 
 int main(int argc, char *argv[]){
 
+    int NITER = number_threads();
+    int NUMTH = number_threads();
 
  	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); //

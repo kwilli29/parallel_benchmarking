@@ -31,7 +31,6 @@ struct timespec spawn_function(){           // Simple Function to Spawn
 
 int main(int argc, char *argv[]){
 
-
 	struct timespec t_start, t_res;
 	struct timespec t_end;
 

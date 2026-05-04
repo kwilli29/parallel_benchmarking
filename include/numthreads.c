@@ -18,7 +18,7 @@
 int number_threads() {
     FILE *fp;
     char buffer[buffersize];
-    int NUM_THREADS = 2; // Default to 2 if command fails or parsing fails
+    int NUM_THREADS = (int)2; // Default to 2 if command fails or parsing fails
 
     // Open the pipe to the command
     fp = popen("lscpu | grep '^CPU(s):'", "r");
@@ -30,17 +30,22 @@ int number_threads() {
             // Find the colon and scan the integer following it 
             if (sscanf(buffer, "CPU(s): %d", &NUM_THREADS) != 1) {
                 // If parsing fails, reset to 2 
-                NUM_THREADS = 2;
+                NUM_THREADS = (int)2;
             }
         }
         
         // Close the pipe and get exit status
         if (pclose(fp) != 0) {
-            NUM_THREADS = 2;
+            NUM_THREADS = (int)2;
         }
     }
 
-    // printf("%d\n", NUM_THREADS);
+    //printf("%d\n", (int)NUM_THREADS);
 
-    return NUM_THREADS;
+    return (int)NUM_THREADS;
 }
+/*int main(int argc, char *argv[]){
+    int NUM_THREADS = number_threads();
+    printf("%d\n", NUM_THREADS);
+    return 0;
+}*/

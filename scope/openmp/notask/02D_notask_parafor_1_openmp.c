@@ -13,8 +13,6 @@
 /* Benchmark: 02D: No Scope time after ; Parallel Region (OpenMP)
  */
 
-#define OMP_THREADS 271 
-
 void spawn_function(){           // Simple Spawn Function
 	int x = 100; int y = 5000; int z = 1000000;
 
@@ -107,5 +105,3 @@ int main(int argc, char *argv[]){
 
 	return 0;
 }
-
-

@@ -13,7 +13,6 @@
 * Benchmark
 */
 
-
 long f( int index){
 	return index;
 }

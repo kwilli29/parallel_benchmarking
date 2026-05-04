@@ -26,10 +26,9 @@ void spawn_function(){           // Simple Spawn Function
 	return; 
 }
 
-
 int main(int argc, char *argv[]){
 
-	int DEPTH = 271;
+	int OMP_THREADS = number_threads()-1;
 
 	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); //
@@ -39,7 +38,7 @@ int main(int argc, char *argv[]){
 	#pragma omp parallel
 	#pragma omp single
 	#pragma omp taskloop simd grainsize(1)
-	for(int i = 0; i < DEPTH; i++){
+	for(int i = 0; i < OMP_THREADS; i++){
 		spawn_function(); 	// available threads perform tasks
 	}
 

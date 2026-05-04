@@ -15,9 +15,6 @@
  *
  */
 
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
-
-
 void spawn_function(){           // Simple Spawn Function
 
 	int x = 100; int y = 5000; int z = 1000000;
@@ -30,7 +27,6 @@ void spawn_function(){           // Simple Spawn Function
 
 	return; 
 }
-
 
 int main(int argc, char *argv[]){
 
@@ -62,5 +58,3 @@ int main(int argc, char *argv[]){
 
 	return 0;
 }
-
-
