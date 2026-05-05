@@ -39,7 +39,7 @@ run_programs() { # ex. 1 A 0
 
 	for((i=0;i<($RUNS);i++)); 
 	do	
-			./$CURRPROG >> $EXEC # Capture program output
+		./$CURRPROG >> $EXEC # Capture program output
 	done
 
     # Metrics
