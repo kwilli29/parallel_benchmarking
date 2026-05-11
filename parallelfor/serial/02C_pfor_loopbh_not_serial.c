@@ -8,13 +8,11 @@
 #include <sys/time.h>
 #include <math.h>
 #include "ctimer.h"
-
+#include "../../include/numthreads.h"
 /* 
  * Benchmark: 02C: Function in Parallel For  ; Serial For (Serial)
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
-
-#define NCILK 272
 
 void spawn_function(){           // Simple Spawn Function
 
@@ -31,6 +29,8 @@ void spawn_function(){           // Simple Spawn Function
 
 
 int main(int argc, char *argv[]){
+
+    int NCILK = number_threads();
 
  	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp

@@ -8,7 +8,7 @@
 #include <assert.h>
 #include "ctimer.h"
 #include <math.h>
-
+#include "../../include/numthreads.h"
 /* Benchmark: 07C: Spawn timer after ; For-Loop+Join Spawns (Pthreads)
  */
 
@@ -27,9 +27,9 @@ void* spawn_function(){           // Simple Math for Spawn Function
 
 int main(int argc, char *argv[]){
 
-	int DEPTH = 271;
+	int PTH = number_threads()-1;
 
-	pthread_t Threads[ DEPTH ];
+	pthread_t Threads[ PTH ];
 
 
 	struct timespec t_start, t_res, t_end;
@@ -38,11 +38,11 @@ int main(int argc, char *argv[]){
 
 	/****/ 
 
-	for( int i = 0; i < DEPTH; i++ ) {                                     // # seq. for only
+	for( int i = 0; i < PTH; i++ ) {                                     // # seq. for only
 		pthread_create( &Threads[ i ], NULL, spawn_function, NULL);
 	}
 
-	for( int i = 0; i < DEPTH; i++ ) {                                     // # seq. for only
+	for( int i = 0; i < PTH; i++ ) {                                     // # seq. for only
 		pthread_join( Threads[ i ], NULL);
 	}
 

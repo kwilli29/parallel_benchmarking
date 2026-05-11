@@ -8,7 +8,7 @@
 #include <assert.h>
 #include "ctimer.h"
 #include <math.h>
-
+#include "../../include/numthreads.h"
 /* Benchmark: 02A: Spawn time before ; Sequential Spawns (OpenMP)
  * Launch a bunch and measure when all done 
  */

@@ -16,12 +16,12 @@ single_output_metrics() {	# ex. 25 data/01A_000.txt 1
 
 multi_output_metrics() {	# ex. 25 data/01A_000.txt 1 serial/data/01A_000.txt
 
-	echo "Process $2 $3"
+	echo "Python Process $2 $3"
+    #echo "python3 ./process_metrics.py $RUNS $1 $3 $4 $5 > output/$PLANG/R1_$2.txt"
 
-	python3 ./process_metrics.py $RUNS "$1" "$3" "$4" > output/$PLANG/"$2".txt
+	python3 ./process_metrics.py $RUNS "$1" "$3" "$4" "$5" > output/$PLANG/R1_"$2".txt
 
-	cat output/$PLANG/"$2".txt
-
+	cat output/$PLANG/R1_"$2".txt
 }
 
 run_programs() { # ex. 1 A 0
@@ -47,34 +47,30 @@ run_programs() { # ex. 1 A 0
 	EXECE="serial/data/${CURRPROGS}_000.txt"
 
 	# Metrics
-	#if [ "$2" == 'E' ]; then
-	#	single_output_metrics $EXEC $CURRPROG 1
-	#elif [ "$2" == 'F' ]; then
-	#	single_output_metrics $EXEC $CURRPROG 1
-	#else	
-	#	single_output_metrics $EXEC $CURRPROG $1
-	#fi
 
-	# compare to same letter
+	# Tp - Ts
+    FLAG=1
 	if [ "$4" == "1" ]; then
 		if [ "$2" == 'E' ]; then
-			multi_output_metrics $EXEC $CURRPROG 1 $EXECS
+			multi_output_metrics $EXEC $CURRPROG 1 $EXECS $FLAG
 		elif [ "$2" == 'F' ]; then
-			multi_output_metrics $EXEC $CURRPROG 1 $EXECS
+			multi_output_metrics $EXEC $CURRPROG 1 $EXECS $FLAG
 		else	
-			multi_output_metrics $EXEC $CURRPROG $1 $EXECS 
+			multi_output_metrics $EXEC $CURRPROG $1 $EXECS $FLAG
 		fi
 	fi
 
-	# compare to E
+	# Overhead -- compare to E
+    FLAG=2
 	if [ "$2" != E ]; then
 		if [ "$2" == 'E' ]; then
-			multi_output_metrics $EXEC $CURRPROG 1 $EXECE
+			multi_output_metrics $EXEC $CURRPROG 1 $EXECE $FLAG
 		elif [ "$2" == 'F' ]; then
-			multi_output_metrics $EXEC $CURRPROG 1 $EXECE
+			multi_output_metrics $EXEC $CURRPROG 1 $EXECE $FLAG
 		else	
-			multi_output_metrics $EXEC $CURRPROG $1 $EXECE 
+			multi_output_metrics $EXEC $CURRPROG $1 $EXECE $FLAG
 		fi
+	
 	fi
 
 	rm $EXEC
@@ -106,6 +102,7 @@ echo "Cleanup 01_'s"
 echo ""
 
 ###############################
+
 
 echo "Starting benchmark on 02_'s"
 

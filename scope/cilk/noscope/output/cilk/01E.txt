@@ -1,1 +1,1 @@
-AVERAGE TIME: 412.3 ns
+*SHAV,571.6,ns, 

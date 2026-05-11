@@ -41,7 +41,7 @@ int main(int argc, char *argv[]){
  	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
-	#pragma omp parallel for schedule (static, DEPTH) // grainsize
+	#pragma omp parallel for schedule (static, OMP_THREADS) // grainsize
 	for(int i = 0; i < OMP_THREADS; i++){
 		spawn_function(); 
 		// how to time the end of the *last thread * to complete

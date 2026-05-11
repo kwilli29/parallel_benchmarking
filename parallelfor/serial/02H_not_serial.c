@@ -14,8 +14,6 @@
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
 
-#define NCILK 272
-
 void spawn_function(){           // Simple Spawn Function
 
 	int x = 100; int y = 5000; int z = 1000000;

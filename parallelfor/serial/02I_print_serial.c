@@ -14,8 +14,6 @@
  * Launch a bunch and measure when all done -  
  */
 
-#define NCILK 272
-
 void spawn_function(){           // Simple Spawn Function
 
 	printf("**0\t"); // print thread id

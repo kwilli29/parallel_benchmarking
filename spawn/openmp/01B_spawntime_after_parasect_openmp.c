@@ -9,6 +9,8 @@
 #include "ctimer.h"
 #include <math.h>
 
+#include "../../include/numthreads.h"
+
 /* Benchmark: 01B: Spawn time after ; Parallel Region Spawns (OpenMP)
  * Launch a bunch and measure when all done
  */

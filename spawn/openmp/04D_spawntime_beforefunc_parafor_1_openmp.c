@@ -8,7 +8,7 @@
 #include <assert.h>
 #include "ctimer.h"
 #include <math.h>
-
+#include "../../include/numthreads.h"
 /* Benchmark: 04D: Spawn time beforefunc ; ParallelFor-Loop Spawns (OpenMP)
  * Launch a bunch and measure when all done
  */
@@ -33,8 +33,8 @@ int main(int argc, char *argv[]){
 
 	int OMP_THREADS = number_threads()-1;
 
-	struct timespec t_start[DEPTH]; struct timespec t_res;
-	struct timespec t_end[DEPTH];
+	struct timespec t_start[OMP_THREADS]; struct timespec t_res;
+	struct timespec t_end[OMP_THREADS];
 
 	#pragma omp parallel for schedule (static, 1) // grainsize
 	for(int i = 0; i < OMP_THREADS; i++){	

@@ -15,12 +15,12 @@ single_output_metrics() {	# ex. 25 data/01A_000.txt 1
 }
 multi_output_metrics() {	# ex. 25 data/01A_000.txt 1 serial/data/01A_000.txt
 
-	echo "Process $2 $3"
+    echo "Python Process $2 $3"
+    # echo "python3 ./process_metrics.py $RUNS $1 $3 $4 $5 > output/$PLANG/R1_$2.txt"
 
-	python3 ./process_metrics.py $RUNS "$1" "$3" "$4" > output/$PLANG/"$2".txt
+	python3 ./process_metrics.py $RUNS "$1" "$3" "$4" "$5" > output/$PLANG/R1_"$2".txt
 
-	cat output/$PLANG/"$2".txt
-
+	cat output/$PLANG/R1_"$2".txt
 }
 run_programs() { # ex. 1 A 0
 
@@ -31,7 +31,7 @@ run_programs() { # ex. 1 A 0
 	#	Run the Programs
 	CURRPROG="$3$1$2"
 	CURRPROGS="$3$1E"
-   CURRPROGA="$3$1A"
+    CURRPROGA="$3$1A"
 	EXEC="data/${CURRPROG}_000.txt"
 
 	touch $EXEC 
@@ -44,20 +44,50 @@ run_programs() { # ex. 1 A 0
 	# Metrics
 	EXECS="serial/data/${CURRPROG}_000.txt"
 	EXECE="serial/data/${CURRPROGS}_000.txt"
-   EXECA="serial/data/${CURRPROGA}_000.txt"
+    EXECA="serial/data/${CURRPROGA}_000.txt"
     
-	if [ "$1" == "1" ]; then	
-		multi_output_metrics $EXEC $CURRPROG $1 $EXECE
+    #             TpTs     Overhead
+    # 1A-E        01E        01G  #
+    # 2A          02A        01G  # 
+    # 2B          02B        02G
+    # 2C          02C        02H
+    # 2D          02D        02I
+    # 2E          02E        02J
+    # 3A-F        03A        01G 
+    # 4A-D        04A-D      01G
+    # 5A-D        03A/01E    01G
+
+    # TpTs
+    FLAG=1
+	if [ "$1" == "1" ]; then
+		multi_output_metrics $EXEC $CURRPROG $1 $EXECE $FLAG
     elif [ "$1" == "3" ]; then
-        multi_output_metrics $EXEC $CURRPROG $1 $EXECA
+        multi_output_metrics $EXEC $CURRPROG $1 $EXECA $FLAG
     elif [ "$1" == "5" ]; then
-        multi_output_metrics $EXEC $CURRPROG $1 "serial/data/01E_000.txt"
+        multi_output_metrics $EXEC $CURRPROG $1 "serial/data/01E_000.txt" $FLAG
     else
-        multi_output_metrics $EXEC $CURRPROG $1 $EXECS
+        multi_output_metrics $EXEC $CURRPROG $1 $EXECS $FLAG
+	fi
+
+    # Overhead
+    FLAG=2
+	if [ "$1" != "2" ]; then	
+		multi_output_metrics $EXEC $CURRPROG $1 "serial/data/01G_000.txt" $FLAG
+    elif [ "$1" == "2" ]; then
+        if [ "$2" == "A" ]; then
+            multi_output_metrics $EXEC $CURRPROG $1 "serial/data/01G_000.txt" $FLAG
+        elif [ "$2" == "B" ]; then
+            multi_output_metrics $EXEC $CURRPROG $1 "serial/data/02G_000.txt" $FLAG
+        elif [ "$2" == "C" ]; then
+            multi_output_metrics $EXEC $CURRPROG $1 "serial/data/02H_000.txt" $FLAG
+        elif [ "$2" == "D" ]; then
+            multi_output_metrics $EXEC $CURRPROG $1 "serial/data/02I_000.txt" $FLAG
+        elif [ "$2" == "E" ]; then
+            multi_output_metrics $EXEC $CURRPROG $1 "serial/data/02J_000.txt" $FLAG
+        fi
 	fi
 
 	rm $EXEC
-
 }
 
 make clean
@@ -127,6 +157,9 @@ echo "Starting benchmark on 03_'s"
 	# D
 	run_programs 3 D 0
 
+    # F
+	run_programs 3 F 0
+
 	# Cleanup
 	make clean
 
@@ -169,27 +202,9 @@ echo "Starting benchmark on 05_'s"
 	# D
 	run_programs 5 D 0
 
-	# E
-	#run_programs 5 E 0
-
-	# G
-	#run_programs 5 G 0
-
 	# Cleanup
 	make clean
 
 echo "Cleanup 05_'s"
 echo ""
-###############################
-
-#echo "Starting benchmark on 04_'s"
-
-	# A
-	#run_programs 4 A 0
-
-	# Cleanup
-	#make clean
-
-#echo "Cleanup 04_'s"
-#echo ""
 ###############################

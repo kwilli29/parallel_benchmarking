@@ -56,7 +56,6 @@ build: $(TARGETS)
 		$(CC) $(CFLAGS) $(INCFILES) $$s -o $$exe; \
 	done
 
-
 all:
 	@for s in $(SOURCE); do \
 		name=$$(basename $$s); \

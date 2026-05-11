@@ -32,7 +32,7 @@ def short_metrics(filename):
     AVG = (AVG / float(linecnt))
     AVG = AVG*1000000000.0
    
-    print(f'AVERAGE TIME: {AVG:.1f} ns') 
+    print(f'*SHAV,{AVG:.1f},ns, ',end='')
     return
 
 def short_overhead(parallel_filename, serial_filename,runs):
@@ -59,10 +59,10 @@ def short_overhead(parallel_filename, serial_filename,runs):
     AVG = AVG*1000000000.0
 
     samediff = ((PARA_ACC-SERI_ACC)/float(linecnt))*1000000000.0
-    print(f'*Tparallel - Tserial: {samediff:.1f} ns')
+    print(f'*SHTPTS,{samediff:.1f},' ,end='')
 
-    print(f'*OVERHEAD TIME: {AVG:.1f} ns') 
-    print(f'*OVERHEAD TIME / # runs: {(AVG/float(runs)):.1f} ns')
+    print(f'*SHOV,{AVG:.1f},ns, ',end='') 
+    print(f'*SHOV/#R,{(AVG/float(runs)):.1f},ns, ',end='')
 
     return
 

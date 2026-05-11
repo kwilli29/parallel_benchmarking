@@ -40,7 +40,6 @@ void greetings(){
 void welcome(){
 	printf("* %d welcome\n", omp_get_thread_num());
 	return;
-
 }
 void byebye(){
 	printf("* %d byebye\n", omp_get_thread_num());

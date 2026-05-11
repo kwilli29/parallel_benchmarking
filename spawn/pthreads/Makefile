@@ -1,5 +1,6 @@
 CC=		gcc
 CFLAGS=		-pthread -Wall -O3 -Og -g
+INCFILES=   ../../include/numthreads.c
 SOURCE=		$(wildcard *.c)
 TARGETS=	$(SOURCE:.c=)	
 
@@ -8,54 +9,54 @@ EXECS := $(foreach s,$(TARGETS),$(shell echo $(basename $(s)) | cut -c1-3))
 build: $(TARGETS)
 
 04E: 04E_spawntime_beforefunc_one_pthreads.c
-	$(CC) $(CFLAGS) 04E_spawntime_beforefunc_one_pthreads.c -o 04E
+	$(CC) $(CFLAGS) $(INCFILES) 04E_spawntime_beforefunc_one_pthreads.c -o 04E
 04F: 04F_spawntime_beforefunc_oneargs_pthreads.c
-	$(CC) $(CFLAGS) 04F_spawntime_beforefunc_oneargs_pthreads.c -o 04F
+	$(CC) $(CFLAGS) $(INCFILES) 04F_spawntime_beforefunc_oneargs_pthreads.c -o 04F
 
 1:
 	@for s in $(wildcard 01*.c); do \
 		name=$$(basename $$s); \
 		exe=$$(echo $$name | cut -c1-3); \
-		$(CC) $(CFLAGS) $$s -o $$exe; \
+		$(CC) $(CFLAGS) $(INCFILES) $$s -o $$exe; \
 	done
 
 2:
 	@for s in $(wildcard 02*.c); do \
 		name=$$(basename $$s); \
 		exe=$$(echo $$name | cut -c1-3); \
-		$(CC) $(CFLAGS) $$s -o $$exe; \
+		$(CC) $(CFLAGS) $(INCFILES) $$s -o $$exe; \
 	done
 
 4:
 	@for s in $(wildcard 04*.c); do \
 		name=$$(basename $$s); \
 		exe=$$(echo $$name | cut -c1-3); \
-		$(CC) $(CFLAGS) $$s -o $$exe; \
+		$(CC) $(CFLAGS) $(INCFILES) $$s -o $$exe; \
 	done
 5:
 	@for s in $(wildcard 05*.c); do \
 		name=$$(basename $$s); \
 		exe=$$(echo $$name | cut -c1-3); \
-		$(CC) $(CFLAGS) $$s -o $$exe; \
+		$(CC) $(CFLAGS) $(INCFILES) $$s -o $$exe; \
 	done
 6:
 	@for s in $(wildcard 06*.c); do \
 		name=$$(basename $$s); \
 		exe=$$(echo $$name | cut -c1-3); \
-		$(CC) $(CFLAGS) $$s -o $$exe; \
+		$(CC) $(CFLAGS) $(INCFILES) $$s -o $$exe; \
 	done
 7:
 	@for s in $(wildcard 07*.c); do \
 		name=$$(basename $$s); \
 		exe=$$(echo $$name | cut -c1-3); \
-		$(CC) $(CFLAGS) $$s -o $$exe; \
+		$(CC) $(CFLAGS) $(INCFILES) $$s -o $$exe; \
 	done
 
 all:
 	@for s in $(SOURCE); do \
 		name=$$(basename $$s); \
 		exe=$$(echo $$name | cut -c1-3); \
-		$(CC) $(CFLAGS) $$s -o $$exe; \
+		$(CC) $(CFLAGS) $(INCFILES) $$s -o $$exe; \
 	done
 
 #clang  -fopenmp -lomp -O3 -Og -g omp/fib_omp.c -o ompfib

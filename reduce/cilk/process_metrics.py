@@ -32,7 +32,7 @@ def short_metrics(filename):
     
     AVG = AVG*1000000000.0
    
-    print(f'AVERAGE TIME: {AVG:.1f} ns') 
+    print(f'*SHAV,{AVG:.1f},ns, ',end='')
     return
 
 def short_overhead(parallel_filename, serial_filename,runs):
@@ -61,8 +61,8 @@ def short_overhead(parallel_filename, serial_filename,runs):
     AVG = (PARA_ACC) - (SERI_ACC / NUM_PROCS) # # of processors
     AVG = AVG*1000000000.0
     
-    print(f'*OVERHEAD TIME: {AVG:.1f} ns') 
-    print(f'*OVERHEAD TIME / # runs: {(AVG/float(runs)):.1f} ns')
+    print(f'*SHOV,{AVG:.1f},ns, ',end='') 
+    print(f'*SHOV/#R,{(AVG/float(runs)):.1f},ns, ',end='')
     
     return
 def short_tpts(parallel_filename, serial_filename,runs):
@@ -93,7 +93,7 @@ def short_tpts(parallel_filename, serial_filename,runs):
     
     samediff = (PARA_ACC - SERI_ACC)/float(linecnt)
     samediff = samediff*1000000000.0   
-    print(f'*SAME DIFF AVG ?? : {samediff:.1f} ns')
+    print(f'*SHTPTS,{samediff:.1f},' ,end='')
     
     return
 

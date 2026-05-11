@@ -17,11 +17,11 @@ single_output_metrics() {	# ex. 25 data/01A_000.txt 1
 multi_output_metrics() {	# ex. 25 data/01A_000.txt 1 serial/data/01A_000.txt
 
 	echo "Python Process $2 $3"
-    echo "python3 ./process_metrics.py $RUNS $1 $3 $4 $5 > output/$PLANG/R1_$2.txt"
+   #echo "python3 ./process_metrics.py $RUNS $1 $3 $4 $5 > output/$PLANG/R1_$2.txt"
 
 	python3 ./process_metrics.py $RUNS "$1" "$3" "$4" "$5" > output/$PLANG/R1_"$2".txt
 
-	cat output/$PLANG/"$2".txt
+	cat output/$PLANG/R1_"$2".txt
 }
 
 run_programs() { # ex. 1 A 0

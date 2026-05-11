@@ -8,13 +8,12 @@
 #include <sys/time.h>
 #include <math.h>
 #include "ctimer.h"
+#include "../../include/numthreads.h"
 
 /* 
  * Benchmark: 04D: Iter = 2720  ; For (Serial)
  * Launch a bunch and measure when all done 
  */
-
-#define NITER 2720
 
 void spawn_function(){           // Simple Spawn Function
 
@@ -32,6 +31,7 @@ void spawn_function(){           // Simple Spawn Function
 
 int main(int argc, char *argv[]){
 
+    int NITER = number_threads()*10;
 
  	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp

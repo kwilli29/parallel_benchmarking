@@ -8,7 +8,7 @@
 #include <assert.h>
 #include "ctimer.h"
 #include <math.h>
-
+#include "../../include/numthreads.h"
 /* Benchmark: 04A: Spawn time before function ; Sequential Spawns (Pthreads)
  * Launch a bunch and measure when all done 
  */
@@ -30,13 +30,13 @@ void* spawn_function(void *t_end){           // Simple Math for Spawn Function
 
 int main(int argc, char *argv[]){
 
-	int DEPTH = 271;
+	int PTH = number_threads()-1;
 
-	pthread_t Threads[ DEPTH ];
+	pthread_t Threads[ PTH ];
 
 
-	struct timespec t_start[DEPTH]; struct timespec t_res;
-	struct timespec t_end[DEPTH];
+	struct timespec t_start[PTH]; struct timespec t_res;
+	struct timespec t_end[PTH];
 
 	/****/
 
@@ -648,7 +648,7 @@ int main(int argc, char *argv[]){
 
 	/****/
 
-	for(int i = 0; i < DEPTH; i++){
+	for(int i = 0; i < PTH; i++){
 
 		timespec_sub(&t_res, t_end[i], t_start[i]);
 

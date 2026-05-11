@@ -8,7 +8,7 @@
 #include <assert.h>
 #include "ctimer.h"
 #include <math.h>
-
+#include "../../include/numthreads.h"
 /* Benchmark: 02C: Spawn time before ; For-Loop Para. Sects. Spawns (OpenMP)
  * Launch a bunch and measure when all done 
  */
