@@ -41,7 +41,7 @@ run_programs() { # ex. 1 A 0
 		single_output_metrics $EXEC $CURRPROG $1
 	fi
 
-	rm $EXEC
+	# rm $EXEC
 }
 
 make clean
@@ -138,3 +138,17 @@ echo "Starting benchmark on 06_'s"
 echo "Cleanup 06_'s"
 echo ""
 ###############################
+
+echo "Starting benchmark on 07_'s"
+
+	# A 
+	run_programs 7 A 0
+
+    # C
+	run_programs 7 C 0
+
+	# Cleanup
+	make clean
+
+echo "Cleanup 07_'s"
+echo ""

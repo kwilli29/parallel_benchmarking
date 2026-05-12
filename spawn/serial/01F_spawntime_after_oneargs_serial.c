@@ -13,8 +13,6 @@
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
 
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
-
 void spawn_function(int x){           // Simple Spawn Function
 	//int x = 100; 
 	int y = 5000; int z = 1000000;
@@ -27,7 +25,6 @@ void spawn_function(int x){           // Simple Spawn Function
 
 	return; 
 }
-
 
 int main(int argc, char *argv[]){
 
@@ -50,5 +47,3 @@ int main(int argc, char *argv[]){
 
 	return 0;
 }
-
-
