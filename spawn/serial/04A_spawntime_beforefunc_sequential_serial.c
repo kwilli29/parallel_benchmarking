@@ -8,7 +8,7 @@
 #include <sys/time.h>
 #include <math.h>
 #include "ctimer.h"
-
+#include "../../include/numthreads.h"
 /* Benchmark: 04A: Spawn time beforefunc ; Sequential Spawns (Serial)
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
@@ -31,7 +31,7 @@ struct timespec spawn_function(){           // Simple Spawn Function
 
 int main(int argc, char *argv[]){
 	
-	int N = 272;
+	int N = number_threads();
 
 	struct timespec t_start, t_res;
 	struct timespec t_end[N-1];

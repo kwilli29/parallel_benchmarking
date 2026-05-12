@@ -30,8 +30,6 @@ struct timespec spawn_function(int x){           // Simple Spawn Function
 }
 
 int main(int argc, char *argv[]){
-	
-	//int N = 272;
 
 	int x = 100;
 
