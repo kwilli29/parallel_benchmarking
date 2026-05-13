@@ -76,7 +76,6 @@ int main(int argc, char *argv[]){
 
 	return 0;
 }
-
 /* 
 wsp_t start = wsp_getworkspan();
 
@@ -84,4 +83,3 @@ wsp_t end = wsp_getworkspan();
 wsp_t elapsed = wsp_sub(end, start);
 wsp_dump(elapsed, "");
 */
-

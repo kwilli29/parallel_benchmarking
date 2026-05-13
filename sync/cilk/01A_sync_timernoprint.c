@@ -53,7 +53,6 @@ void spawn_function2(){           // Simple Spawn Function
 	return; 
 }
 
-
 int main(int argc, char *argv[]){
 
  	struct timespec t_start, t_res, t_end;
@@ -71,7 +70,6 @@ int main(int argc, char *argv[]){
 
 	timespec_sub(&t_res, t_end, t_start);
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
-
 
 	// printf("01B\n");
 
