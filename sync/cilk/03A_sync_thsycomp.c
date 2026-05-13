@@ -16,7 +16,6 @@
 
 #define NCILK __cilkrts_get_nworkers()
 
-
 struct timespec spawn_function(){           // Simple Function to Spawn
 
 	struct timespec t_end; // ADD TIME END
