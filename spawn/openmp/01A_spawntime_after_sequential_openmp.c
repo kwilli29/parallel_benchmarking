@@ -139,7 +139,7 @@ int main(int argc, char *argv[]){
 	#pragma omp task
 		spawn_function();
 	// 
-	#pragma omp task
+/*	#pragma omp task
 		spawn_function();
 	// 
 	#pragma omp task
@@ -931,7 +931,7 @@ int main(int argc, char *argv[]){
 	#pragma omp task
 		spawn_function(); // 271
 
-	}	
+*/	}	
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 

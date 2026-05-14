@@ -32,7 +32,7 @@ void spawn_function(){           // Simple Spawn Function -- can be changed
 
 int main(int argc, char *argv[]){
 
-	//printf("%d\n", NCILK);
+//	printf("%d\n", NCILK);
 
 	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
@@ -79,7 +79,7 @@ int main(int argc, char *argv[]){
 		cilk_spawn spawn_function(); //if(NCILK-30 <= 0) { goto end; }
 
 		cilk_spawn spawn_function();
-		cilk_spawn spawn_function();
+/*		cilk_spawn spawn_function();
 		cilk_spawn spawn_function();
 		cilk_spawn spawn_function();
 
@@ -391,7 +391,7 @@ int main(int argc, char *argv[]){
 		cilk_spawn spawn_function(); //if(NCILK-270 <= 0) { goto end; } // 270
 
 		cilk_spawn spawn_function(); 		// 271
-		// cilk_spawn spawn_function();
+*/		// cilk_spawn spawn_function();
 		// cilk_spawn spawn_function();
 
 

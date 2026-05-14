@@ -78,7 +78,7 @@ int main(int argc, char *argv[]){
 		cilk_spawn spawn_function();
 
 		cilk_spawn spawn_function();
-		cilk_spawn spawn_function();
+/*		cilk_spawn spawn_function();
 		cilk_spawn spawn_function();
 		cilk_spawn spawn_function();
 
@@ -390,7 +390,7 @@ int main(int argc, char *argv[]){
 		cilk_spawn spawn_function(); // 270
 
 		cilk_spawn spawn_function();
-		// cilk_spawn spawn_function();
+*/		// cilk_spawn spawn_function();
 		// cilk_spawn spawn_function();
 
    }
