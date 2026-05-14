@@ -267,7 +267,7 @@ int main(int argc, char *argv[]){
 	t_end[30] = spawn_function();
  	}
  
-	#pragma omp section
+/*	#pragma omp section
 	{
 	clock_gettime(CLOCK_MONOTONIC, &t_start[31]);
 	#pragma omp task
@@ -2018,6 +2018,7 @@ int main(int argc, char *argv[]){
 	#pragma omp task
 	t_end[270] = spawn_function();
  	} // 271
+*/
  }
 	// printf("****\n");	
 	for(int i = 0; i < OMP_THREADS; i++){

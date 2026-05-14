@@ -74,7 +74,7 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_start[29]); pthread_create( &Threads[ 29 ], NULL, spawn_function, (void *)&t_end[29]); // 30
 
 	clock_gettime(CLOCK_MONOTONIC, &t_start[30]); pthread_create( &Threads[ 30 ], NULL, spawn_function, (void *)&t_end[30]);
-	clock_gettime(CLOCK_MONOTONIC, &t_start[31]); pthread_create( &Threads[ 31 ], NULL, spawn_function, (void *)&t_end[31]);
+/*	clock_gettime(CLOCK_MONOTONIC, &t_start[31]); pthread_create( &Threads[ 31 ], NULL, spawn_function, (void *)&t_end[31]);
 	clock_gettime(CLOCK_MONOTONIC, &t_start[32]); pthread_create( &Threads[ 32 ], NULL, spawn_function, (void *)&t_end[32]);
 	clock_gettime(CLOCK_MONOTONIC, &t_start[33]); pthread_create( &Threads[ 33 ], NULL, spawn_function, (void *)&t_end[33]);
 	clock_gettime(CLOCK_MONOTONIC, &t_start[34]); pthread_create( &Threads[ 34 ], NULL, spawn_function, (void *)&t_end[34]);
@@ -338,7 +338,7 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_start[269]); pthread_create( &Threads[ 269 ], NULL, spawn_function, (void *)&t_end[269]); // 270
 
 	clock_gettime(CLOCK_MONOTONIC, &t_start[270]); pthread_create( &Threads[ 270 ], NULL, spawn_function, (void *)&t_end[270]);
-	// clock_gettime(CLOCK_MONOTONIC, &t_start[271]); pthread_create( &Threads[ 271 ], NULL, spawn_function, (void *)&t_end[271]); // 272
+*/	// clock_gettime(CLOCK_MONOTONIC, &t_start[271]); pthread_create( &Threads[ 271 ], NULL, spawn_function, (void *)&t_end[271]); // 272
 	// clock_gettime(CLOCK_MONOTONIC, &t_start[272]); pthread_create( &Threads[ 272 ], NULL, spawn_function, (void *)&t_end[272]);
 	
 	/****/
@@ -378,7 +378,7 @@ int main(int argc, char *argv[]){
 	pthread_join( Threads[ 29 ], (void *)&temp); temp = &t_end[30]; // 30
 
 	pthread_join( Threads[ 30 ], (void *)&temp); temp = &t_end[31];
-	pthread_join( Threads[ 31 ], (void *)&temp); temp = &t_end[32];
+/*	pthread_join( Threads[ 31 ], (void *)&temp); temp = &t_end[32];
 	pthread_join( Threads[ 32 ], (void *)&temp); temp = &t_end[33];
 	pthread_join( Threads[ 33 ], (void *)&temp); temp = &t_end[34];
 	pthread_join( Threads[ 34 ], (void *)&temp); temp = &t_end[35];
@@ -642,7 +642,7 @@ int main(int argc, char *argv[]){
 	pthread_join( Threads[ 269 ], (void *)&temp); temp = &t_end[270]; // 270
 
 	pthread_join( Threads[ 270 ], (void *)&temp);
-	// pthread_join( Threads[ 271 ], (void *)&temp); // 272
+*/	// pthread_join( Threads[ 271 ], (void *)&temp); // 272
 	// pthread_join( Threads[ 272 ], (void *)&temp);
 
 

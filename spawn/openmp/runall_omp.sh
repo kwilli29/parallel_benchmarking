@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 RUNS=100
 PLANG="openmp"
@@ -80,7 +80,7 @@ run_programs() { # ex. 1 A 0
 make clean
 
 ###############################
-'''
+
 echo "Starting benchmark on 01_'s"
 
 	# A
@@ -142,7 +142,7 @@ echo ""
 #echo "Cleanup 03_'s"
 #echo ""
 ###############################
-'''
+
 echo "Starting benchmark on 04_'s"
 
 	# A

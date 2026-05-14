@@ -9,7 +9,7 @@
 #include "ctimer.h"
 #include <math.h>
 #include "../../include/numthreads.h"
-/* Benchmark: 07E Spawn time before ; For-Loop + Join Spawns (Pthreads)
+/* Benchmark: 07D Spawn time before ; For-Loop + Join Spawns (Pthreads)
  * Launch a bunch and measure when all done 
  */
 

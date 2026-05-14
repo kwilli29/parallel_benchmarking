@@ -5,4 +5,5 @@ cilk/pragmacilkfor/output/*
 cilk/output*
 forth/output/*
 galahad-output/*
+forth/*
 ricky-bobby-output/*

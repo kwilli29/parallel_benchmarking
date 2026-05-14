@@ -78,7 +78,7 @@ int main(int argc, char *argv[]){
 		clock_gettime(CLOCK_MONOTONIC, &t_end[29]); cilk_spawn spawn_function(); // 30
 
 		clock_gettime(CLOCK_MONOTONIC, &t_end[30]); cilk_spawn spawn_function();
-		clock_gettime(CLOCK_MONOTONIC, &t_end[31]); cilk_spawn spawn_function();
+/*		clock_gettime(CLOCK_MONOTONIC, &t_end[31]); cilk_spawn spawn_function();
 		clock_gettime(CLOCK_MONOTONIC, &t_end[32]); cilk_spawn spawn_function();
 		clock_gettime(CLOCK_MONOTONIC, &t_end[33]); cilk_spawn spawn_function();
 
@@ -390,7 +390,7 @@ int main(int argc, char *argv[]){
 		clock_gettime(CLOCK_MONOTONIC, &t_end[269]); cilk_spawn spawn_function(); // 270
 
 		clock_gettime(CLOCK_MONOTONIC, &t_end[270]); cilk_spawn spawn_function(); // 271
-
+*/
 	printf("****\n");
 	for(int i = 0; i < NCILK-1; i++){
 		

@@ -1,2 +1,2 @@
 avg, tpts, overhead
-*SHAV,409.0,ns, *SHTPTS,308.2,
+*SHAV,135.0,ns, *SHTPTS,34.2,

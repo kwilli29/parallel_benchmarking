@@ -175,7 +175,7 @@ int main(int argc, char *argv[]){
 	#pragma omp task
 	t_end[30] = spawn_function();
  
-	clock_gettime(CLOCK_MONOTONIC, &t_start[31]);
+/*	clock_gettime(CLOCK_MONOTONIC, &t_start[31]);
 	#pragma omp task
 	t_end[31] = spawn_function();
  
@@ -1206,7 +1206,7 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_start[270]);
 	#pragma omp task
 	t_end[270] = spawn_function(); // 271
-
+*/
 	}
 
 	// printf("****\n");

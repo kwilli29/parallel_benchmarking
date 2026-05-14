@@ -1,2 +1,2 @@
 avg, tpts, overhead
-*AVBW,87.4,ns, *LOV,3921.1,ns, *LOV/#R,39.2,ns, 
+*AVBW,62.5,ns, *LOV,1432.3,ns, *LOV/#R,14.3,ns, 

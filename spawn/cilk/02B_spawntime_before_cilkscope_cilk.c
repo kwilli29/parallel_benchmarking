@@ -32,7 +32,6 @@ void spawn_function(){           // Simple Function to Spawn
 
 int main(int argc, char *argv[]){
 
-
 	struct timespec t_start, t_res;
 	struct timespec t_end[NCILK-1];
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
@@ -79,7 +78,7 @@ int main(int argc, char *argv[]){
 		{ clock_gettime(CLOCK_MONOTONIC, &t_end[29]); cilk_spawn spawn_function(); }
 		{ // 30
 		clock_gettime(CLOCK_MONOTONIC, &t_end[30]); cilk_spawn spawn_function(); }
-		{ clock_gettime(CLOCK_MONOTONIC, &t_end[31]); cilk_spawn spawn_function(); }
+/*		{ clock_gettime(CLOCK_MONOTONIC, &t_end[31]); cilk_spawn spawn_function(); }
 		{ clock_gettime(CLOCK_MONOTONIC, &t_end[32]); cilk_spawn spawn_function(); }
 		{ clock_gettime(CLOCK_MONOTONIC, &t_end[33]); cilk_spawn spawn_function(); }
 		{ clock_gettime(CLOCK_MONOTONIC, &t_end[34]); cilk_spawn spawn_function(); }
@@ -344,7 +343,7 @@ int main(int argc, char *argv[]){
 		{ // 270
 		clock_gettime(CLOCK_MONOTONIC, &t_end[270]); cilk_spawn spawn_function(); // 271
 		}
-		// cilk_spawn spawn_function();
+*/		// cilk_spawn spawn_function();
 		// cilk_spawn spawn_function();
 
 

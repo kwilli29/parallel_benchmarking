@@ -89,7 +89,7 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_end[29] ); pthread_create( &Threads[ 29 ], &attr, spawn_function, NULL); // 30
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end[30] ); pthread_create( &Threads[ 30 ], &attr, spawn_function, NULL);
-	clock_gettime(CLOCK_MONOTONIC, &t_end[31] ); pthread_create( &Threads[ 31 ], &attr, spawn_function, NULL);
+/*	clock_gettime(CLOCK_MONOTONIC, &t_end[31] ); pthread_create( &Threads[ 31 ], &attr, spawn_function, NULL);
 	clock_gettime(CLOCK_MONOTONIC, &t_end[32] ); pthread_create( &Threads[ 32 ], &attr, spawn_function, NULL);
 	clock_gettime(CLOCK_MONOTONIC, &t_end[33] ); pthread_create( &Threads[ 33 ], &attr, spawn_function, NULL);
 	clock_gettime(CLOCK_MONOTONIC, &t_end[34] ); pthread_create( &Threads[ 34 ], &attr, spawn_function, NULL);
@@ -353,7 +353,7 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_end[269] ); pthread_create( &Threads[ 269 ], &attr, spawn_function, NULL); // 270
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end[270] ); pthread_create( &Threads[ 270 ], &attr, spawn_function, NULL);
-	// clock_gettime(CLOCK_MONOTONIC, &t_end[271] ); pthread_create( &Threads[ 271 ], &attr, spawn_function, NULL); // 272
+*/	// clock_gettime(CLOCK_MONOTONIC, &t_end[271] ); pthread_create( &Threads[ 271 ], &attr, spawn_function, NULL); // 272
 	// clock_gettime(CLOCK_MONOTONIC, &t_end[272] ); pthread_create( &Threads[ 272 ], &attr, spawn_function, NULL);
 
 
