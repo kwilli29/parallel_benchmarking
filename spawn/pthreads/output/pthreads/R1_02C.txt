@@ -1,2 +1,5 @@
 avg, tpts, overhead
-*AVBW,248843.4,ns, *LOV,24879528.9,ns, *LOV/#R,248795.3,ns, 
+*AVBW,238246.4,ns, *LTPTS,238220.4,ns
+
+avg, tpts, overhead
+*AVBW,238246.4,ns, *LOV,23819605.9,ns, *LOV/#R,238196.1,ns, 

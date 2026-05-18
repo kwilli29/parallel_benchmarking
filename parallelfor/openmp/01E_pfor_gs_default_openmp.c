@@ -33,13 +33,13 @@ void spawn_function(){           // Simple Spawn Function
 
 int main(int argc, char *argv[]){
 
-	int OMP_THREADS = number_threads()-1;
+	int OMP_THREADS = number_threads();
 
  	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
 	#pragma omp parallel for schedule (static) // grainsize
-	for(int i = 0; i < OMP_THREADS; i++){
+	for(int i = 0; i < OMP_THREADS-1; i++){
 		spawn_function(); 
 		// how to time the end of the *last thread * to complete
 	} 
