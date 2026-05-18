@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 RUNS=25
 PLANG="serial"

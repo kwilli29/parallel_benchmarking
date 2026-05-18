@@ -1,2 +1,4 @@
 avg, tpts, overhead
-*SHAV,5124547.8,ns, *SHOV,512449740.0,ns, *SHOV/#R,5124497.4,ns, 
+*SHAV,2940499.9,ns, *SHTPTS,2940488.1,
+avg, tpts, overhead
+*SHAV,2940499.9,ns, *SHOV,294049313.0,ns, *SHOV/#R,2940493.1,ns, 

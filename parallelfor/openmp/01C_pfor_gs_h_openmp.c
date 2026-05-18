@@ -17,7 +17,6 @@
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
 
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
 
 void spawn_function(){           // Simple Spawn Function
 
@@ -35,7 +34,7 @@ void spawn_function(){           // Simple Spawn Function
 
 int main(int argc, char *argv[]){
 
-	int OMP_THREADS = number_threads()-1;
+	int OMP_THREADS = number_threads();
     printf("*numthreads: %i\n", OMP_THREADS);
 	const int numth = (int)OMP_THREADS/2;
 
@@ -43,7 +42,7 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
 	#pragma omp parallel for schedule (static, numth) // grainsize
-	for(int i = 0; i < OMP_THREADS; i++){
+	for(int i = 0; i < OMP_THREADS-1; i++){
 		spawn_function(); 
 		// how to time the end of the *last thread * to complete
 	} 

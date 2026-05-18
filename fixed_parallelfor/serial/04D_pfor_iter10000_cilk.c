@@ -11,7 +11,7 @@
 #include "../../include/numthreads.h"
 
 /* 
- * Benchmark: 04D: Iter = 2720  ; For (Serial)
+ * Benchmark: 04D: Iter = 10000  ; For (Serial)
  * Launch a bunch and measure when all done 
  */
 

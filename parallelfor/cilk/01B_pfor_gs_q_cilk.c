@@ -38,7 +38,7 @@ int main(int argc, char *argv[]){
  	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
-	#pragma cilk grainsize 272/4 // !!!!
+	#pragma cilk grainsize 32/4 // !!!!
 	cilk_for(int i = 0; i < NCILK-1; i++){
 		spawn_function();
 	} 

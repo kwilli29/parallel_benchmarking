@@ -31,7 +31,7 @@ int main(int argc, char *argv[]){
 	float TIMER = 2.0;
 	int counter = 0;
 
-	int DEPTH = 10000;
+	int DEPTH = 660000;
 	pthread_t Threads[ DEPTH ];
 
 	struct timeval t_start, t_end;
@@ -48,6 +48,7 @@ int main(int argc, char *argv[]){
 
 		// pthread_join(Threads[counter-1], NULL);	
 	}
+
 
 	for(int i = 0; i < counter; i++){
 		 pthread_join(Threads[i], NULL);

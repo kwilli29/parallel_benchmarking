@@ -70,7 +70,7 @@ int main(int argc, char *argv[]){
 	spawn_function();
 
 	spawn_function();
-	spawn_function();
+/*	spawn_function();
 	spawn_function();
 	spawn_function();
 
@@ -382,7 +382,7 @@ int main(int argc, char *argv[]){
 	spawn_function(); // 270
 
 	spawn_function(); 
-	// spawn_function();
+*/	// spawn_function();
 	// spawn_function();
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end);

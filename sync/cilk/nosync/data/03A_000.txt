@@ -198,3 +198,203 @@
 0.000000160
 *t b/w last fcn complete & sync complete
 0.000000170
+*t b/w last fcn complete & sync complete
+0.000000043
+*t b/w last fcn complete & sync complete
+0.000000027
+*t b/w last fcn complete & sync complete
+0.-00001241
+*t b/w last fcn complete & sync complete
+0.000000047
+*t b/w last fcn complete & sync complete
+0.000000064
+*t b/w last fcn complete & sync complete
+0.000000056
+*t b/w last fcn complete & sync complete
+0.000000048
+*t b/w last fcn complete & sync complete
+0.000000048
+*t b/w last fcn complete & sync complete
+0.000000035
+*t b/w last fcn complete & sync complete
+0.-00000615
+*t b/w last fcn complete & sync complete
+0.000000029
+*t b/w last fcn complete & sync complete
+0.000000028
+*t b/w last fcn complete & sync complete
+0.000000030
+*t b/w last fcn complete & sync complete
+0.000000054
+*t b/w last fcn complete & sync complete
+0.000000038
+*t b/w last fcn complete & sync complete
+0.000000054
+*t b/w last fcn complete & sync complete
+0.000000028
+*t b/w last fcn complete & sync complete
+0.000000030
+*t b/w last fcn complete & sync complete
+0.000000048
+*t b/w last fcn complete & sync complete
+0.000000027
+*t b/w last fcn complete & sync complete
+0.000000406
+*t b/w last fcn complete & sync complete
+0.-00000466
+*t b/w last fcn complete & sync complete
+0.000000055
+*t b/w last fcn complete & sync complete
+0.000000132
+*t b/w last fcn complete & sync complete
+0.000000046
+*t b/w last fcn complete & sync complete
+0.000000057
+*t b/w last fcn complete & sync complete
+0.000000057
+*t b/w last fcn complete & sync complete
+0.000000028
+*t b/w last fcn complete & sync complete
+0.000000028
+*t b/w last fcn complete & sync complete
+0.000000027
+*t b/w last fcn complete & sync complete
+0.000000055
+*t b/w last fcn complete & sync complete
+0.000000059
+*t b/w last fcn complete & sync complete
+0.000000057
+*t b/w last fcn complete & sync complete
+0.000000056
+*t b/w last fcn complete & sync complete
+0.000000039
+*t b/w last fcn complete & sync complete
+0.000000034
+*t b/w last fcn complete & sync complete
+0.000000061
+*t b/w last fcn complete & sync complete
+0.-00001502
+*t b/w last fcn complete & sync complete
+0.000000029
+*t b/w last fcn complete & sync complete
+0.000000038
+*t b/w last fcn complete & sync complete
+0.000000060
+*t b/w last fcn complete & sync complete
+0.000000047
+*t b/w last fcn complete & sync complete
+0.000000030
+*t b/w last fcn complete & sync complete
+0.000000047
+*t b/w last fcn complete & sync complete
+0.000000034
+*t b/w last fcn complete & sync complete
+0.000000053
+*t b/w last fcn complete & sync complete
+0.000000247
+*t b/w last fcn complete & sync complete
+0.000000056
+*t b/w last fcn complete & sync complete
+0.000000039
+*t b/w last fcn complete & sync complete
+0.000000028
+*t b/w last fcn complete & sync complete
+0.000000031
+*t b/w last fcn complete & sync complete
+0.000000053
+*t b/w last fcn complete & sync complete
+0.000000028
+*t b/w last fcn complete & sync complete
+0.000000058
+*t b/w last fcn complete & sync complete
+0.000000047
+*t b/w last fcn complete & sync complete
+0.000000135
+*t b/w last fcn complete & sync complete
+0.000000054
+*t b/w last fcn complete & sync complete
+0.000000039
+*t b/w last fcn complete & sync complete
+0.000000030
+*t b/w last fcn complete & sync complete
+0.000000050
+*t b/w last fcn complete & sync complete
+0.-00000366
+*t b/w last fcn complete & sync complete
+0.000000029
+*t b/w last fcn complete & sync complete
+0.000000055
+*t b/w last fcn complete & sync complete
+0.000000028
+*t b/w last fcn complete & sync complete
+0.000000050
+*t b/w last fcn complete & sync complete
+0.000000029
+*t b/w last fcn complete & sync complete
+0.000000029
+*t b/w last fcn complete & sync complete
+0.000000221
+*t b/w last fcn complete & sync complete
+0.000000038
+*t b/w last fcn complete & sync complete
+0.000000048
+*t b/w last fcn complete & sync complete
+0.000000051
+*t b/w last fcn complete & sync complete
+0.000000376
+*t b/w last fcn complete & sync complete
+0.000000029
+*t b/w last fcn complete & sync complete
+0.000000050
+*t b/w last fcn complete & sync complete
+0.000000034
+*t b/w last fcn complete & sync complete
+0.000000029
+*t b/w last fcn complete & sync complete
+0.000000067
+*t b/w last fcn complete & sync complete
+0.000000030
+*t b/w last fcn complete & sync complete
+0.000000045
+*t b/w last fcn complete & sync complete
+0.000000051
+*t b/w last fcn complete & sync complete
+0.000000052
+*t b/w last fcn complete & sync complete
+0.000000051
+*t b/w last fcn complete & sync complete
+0.000000048
+*t b/w last fcn complete & sync complete
+0.000000051
+*t b/w last fcn complete & sync complete
+0.000000038
+*t b/w last fcn complete & sync complete
+0.000000034
+*t b/w last fcn complete & sync complete
+0.000000030
+*t b/w last fcn complete & sync complete
+0.000000053
+*t b/w last fcn complete & sync complete
+0.000000028
+*t b/w last fcn complete & sync complete
+0.000000030
+*t b/w last fcn complete & sync complete
+0.000000075
+*t b/w last fcn complete & sync complete
+0.000000050
+*t b/w last fcn complete & sync complete
+0.000000034
+*t b/w last fcn complete & sync complete
+0.000000030
+*t b/w last fcn complete & sync complete
+0.000000030
+*t b/w last fcn complete & sync complete
+0.000000037
+*t b/w last fcn complete & sync complete
+0.000000030
+*t b/w last fcn complete & sync complete
+0.000000052
+*t b/w last fcn complete & sync complete
+0.000000030
+*t b/w last fcn complete & sync complete
+0.000000044

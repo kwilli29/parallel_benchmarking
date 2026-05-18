@@ -89,7 +89,7 @@ int main(int argc, char *argv[]){
 	pthread_create( &Threads[ 29 ], &attr, spawn_function, NULL); // 30
 
 	pthread_create( &Threads[ 30 ], &attr, spawn_function, NULL);
-	pthread_create( &Threads[ 31 ], &attr, spawn_function, NULL);
+/*	pthread_create( &Threads[ 31 ], &attr, spawn_function, NULL);
 	pthread_create( &Threads[ 32 ], &attr, spawn_function, NULL);
 	pthread_create( &Threads[ 33 ], &attr, spawn_function, NULL);
 	pthread_create( &Threads[ 34 ], &attr, spawn_function, NULL);
@@ -353,7 +353,7 @@ int main(int argc, char *argv[]){
 	pthread_create( &Threads[ 269 ], &attr, spawn_function, NULL); // 270
 
 	pthread_create( &Threads[ 270 ], &attr, spawn_function, NULL);
-	// pthread_create( &Threads[ 271 ], &attr, spawn_function, NULL); // 272
+*/	// pthread_create( &Threads[ 271 ], &attr, spawn_function, NULL); // 272
 	// pthread_create( &Threads[ 272 ], &attr, spawn_function, NULL);
 
 	// each thread waits until all threads have hit the barrier, then they all return

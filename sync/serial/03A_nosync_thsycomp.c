@@ -4,8 +4,6 @@
 #include <stdint.h>
 #include <unistd.h>
 #include <string.h>
-#include <cilk/cilk.h>
-#include <cilk/cilkscale.h>
 #include <assert.h>
 #include "ctimer.h"
 #include <math.h>

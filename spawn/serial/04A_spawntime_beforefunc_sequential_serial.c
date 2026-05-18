@@ -78,7 +78,7 @@ int main(int argc, char *argv[]){
 	t_end[29] = spawn_function(); // 30
 
 	t_end[30] = spawn_function();
-	t_end[31] = spawn_function();
+/*	t_end[31] = spawn_function();
 	t_end[32] = spawn_function();
 	t_end[33] = spawn_function();
 
@@ -390,7 +390,7 @@ int main(int argc, char *argv[]){
 	t_end[269] = spawn_function(); // 270
 
 	t_end[270] = spawn_function(); // 271
-
+*/
 	printf("****\n");	
 	for(int i = 0; i < N-1; i++){
 		

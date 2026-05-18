@@ -13,7 +13,7 @@
 #include "../../include/numthreads.h"
 
 /* 
- * Benchmark: 02A: Function in ParallelFor  ; ParallelFor (OpenMP)
+ * Benchmark: 02E: Function in ParallelFor  ; ParallelFor (OpenMP)
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
 

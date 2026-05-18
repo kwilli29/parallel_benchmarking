@@ -2,18 +2,21 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <stdint.h>
+#include <omp.h>
 #include <unistd.h>
 #include <string.h>
 #include <assert.h>
 #include <sys/time.h>
 #include <math.h>
 #include "ctimer.h"
+
 #include "../../include/numthreads.h"
 
 /* 
- * Benchmark: 04D: Iter = 2720  ; For (Serial)
+ * Benchmark: 04D: Iter = 2720  ; ParallelFor (OpenMP)
  * Launch a bunch and measure when all done 
  */
+
 
 void spawn_function(){           // Simple Spawn Function
 
@@ -31,11 +34,12 @@ void spawn_function(){           // Simple Spawn Function
 
 int main(int argc, char *argv[]){
 
-    int NITER = number_threads()*10;
+	int NITER = number_threads()*10;
 
  	struct timespec t_start, t_res, t_end;
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+	clock_gettime(CLOCK_MONOTONIC, &t_start); // 
 
+    #pragma omp parallel for
 	for(int i = 0; i < NITER; i++){
 		spawn_function();
 	} 

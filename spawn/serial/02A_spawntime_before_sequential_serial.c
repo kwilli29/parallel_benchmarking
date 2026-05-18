@@ -33,7 +33,7 @@ int main(int argc, char *argv[]){
 	struct timespec t_start, t_res;
 	struct timespec t_end[N-1];
 
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+	clock_gettime(CLOCK_MONOTONIC, &t_start); // 
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end[0]);  spawn_function(); // Take time stamp before each spawn
 	clock_gettime(CLOCK_MONOTONIC, &t_end[1]);  spawn_function();
@@ -75,7 +75,7 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_end[29]);  spawn_function(); // 30
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end[30]);  spawn_function();
-	clock_gettime(CLOCK_MONOTONIC, &t_end[31]);  spawn_function();
+/*	clock_gettime(CLOCK_MONOTONIC, &t_end[31]);  spawn_function();
 	clock_gettime(CLOCK_MONOTONIC, &t_end[32]);  spawn_function();
 	clock_gettime(CLOCK_MONOTONIC, &t_end[33]);  spawn_function();
 
@@ -387,7 +387,7 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_end[269]);  spawn_function(); // 270
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end[270]);  spawn_function(); // 271
-
+*/
 	printf("****\n");
 	for(int i = 0; i < N-1; i++){
 		
