@@ -100,6 +100,9 @@ run_thread_programs() { # ex. 1 A 0 2
 	EXEC="data/${CURRPROG}_000.txt"
 
 	touch $EXEC 
+    rm  "output/$PLANG/R1_$CURRPROG.txt"
+    touch  "output/$PLANG/R1_$CURRPROG.txt"
+
 	for((i=0;i<($RUNS);i++)); 
 	do	
 		CILK_NWORKERS=$4 ./$CURRPROG >> $EXEC # Capture program output
