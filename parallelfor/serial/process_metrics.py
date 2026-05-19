@@ -25,6 +25,7 @@ def short_metrics(filename, runs):
             if line[0] == '*': continue
             AVG += float(line.strip())
 
+    print(AVG, float(runs))
     AVG = (AVG / float(runs))
     
     AVG = AVG*1000000000.0
@@ -45,7 +46,6 @@ def main():
 #   time
 #   “overhead”
 #   code size?
-
 
 if __name__== '__main__':
     main()

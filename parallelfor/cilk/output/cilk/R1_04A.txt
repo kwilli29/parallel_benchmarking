@@ -1,2 +1,2 @@
-*SHAV,411.4,ns, *SHTPTS,-1294.4,
-*SHAV,411.4,ns, *SHOV,-20655.0,ns, *SHOV/#R,-206.5,ns, 
+*SHAV,409.5,ns, *SHTPTS,-166.7,
+*SHAV,409.5,ns, *SHOV,19980.0,ns, *SHOV/#R,199.8,ns, 
