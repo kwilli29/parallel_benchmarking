@@ -36,7 +36,7 @@ int main(int argc, char *argv[]){
         } else {
             PTH = atoi(argv[1]);
             if (PTH > 301){
-                PTH = number_threads();;
+                PTH = number_threads();
             }
         }
     }
