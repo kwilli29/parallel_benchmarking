@@ -13,7 +13,6 @@
  * Launch a bunch and measure when all done
  */
 
-
 pthread_barrier_t sync_barrier; /* to sync */
 
 void* spawn_function(){           // Simple Math for Spawn Function
@@ -33,7 +32,20 @@ void* spawn_function(){           // Simple Math for Spawn Function
 
 int main(int argc, char *argv[]){
 
-	int PTH = number_threads()-1;
+	int PTH = number_threads();
+
+    // Process Command-Line Arguments
+    if(argc >= 2){
+        if(atoi(argv[1]) == 0){
+            PTH = number_threads();
+        } else {
+            PTH = atoi(argv[1]);
+            if (PTH > 301){
+                PTH = number_threads();;
+            }
+        }
+    }
+	printf("* # Spawns: %d\n", PTH);
 
 	int            ds, rc;
 	pthread_attr_t attr;
@@ -54,25 +66,28 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_start);	
 
 	/****/ 
+    // all threads spawn detached,
+    // hit the barrier,
+    // and are immmediately freed w/o joining
 
-	pthread_create( &Threads[ 0 ], &attr, spawn_function, NULL); // all threads spawn detached,
-	pthread_create( &Threads[ 1 ], &attr, spawn_function, NULL); // hit the barrier,
-	pthread_create( &Threads[ 2 ], &attr, spawn_function, NULL); // and are immmediately freed w/o joining
-	pthread_create( &Threads[ 3 ], &attr, spawn_function, NULL);
-	pthread_create( &Threads[ 4 ], &attr, spawn_function, NULL);
-	pthread_create( &Threads[ 5 ], &attr, spawn_function, NULL);
-	pthread_create( &Threads[ 6 ], &attr, spawn_function, NULL);
-	pthread_create( &Threads[ 7 ], &attr, spawn_function, NULL);
-	pthread_create( &Threads[ 8 ], &attr, spawn_function, NULL);
-	pthread_create( &Threads[ 9 ], &attr, spawn_function, NULL); // 10
+	pthread_create( &Threads[ 0 ], &attr, spawn_function, NULL); if(PTH-1 <= 0){ goto end; } 
+	pthread_create( &Threads[ 1 ], &attr, spawn_function, NULL); if(PTH-2 <= 0){ goto end; } 
+	pthread_create( &Threads[ 2 ], &attr, spawn_function, NULL); if(PTH-3 <= 0){ goto end; } 
+	pthread_create( &Threads[ 3 ], &attr, spawn_function, NULL); if(PTH-4 <= 0){ goto end; } 
+	pthread_create( &Threads[ 4 ], &attr, spawn_function, NULL); if(PTH-5 <= 0){ goto end; } 
+	pthread_create( &Threads[ 5 ], &attr, spawn_function, NULL); if(PTH-6 <= 0){ goto end; } 
+	pthread_create( &Threads[ 6 ], &attr, spawn_function, NULL); if(PTH-7 <= 0){ goto end; } 
+	pthread_create( &Threads[ 7 ], &attr, spawn_function, NULL); if(PTH-8 <= 0){ goto end; }
+	pthread_create( &Threads[ 8 ], &attr, spawn_function, NULL); if(PTH-9 <= 0){ goto end; } 
+	pthread_create( &Threads[ 9 ], &attr, spawn_function, NULL); if(PTH-10 <= 0){ goto end; }  // 10
 
-	pthread_create( &Threads[ 10 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 10 ], &attr, spawn_function, NULL); if(PTH-11 <= 0){ goto end; }
 	pthread_create( &Threads[ 11 ], &attr, spawn_function, NULL);
 	pthread_create( &Threads[ 12 ], &attr, spawn_function, NULL);
 	pthread_create( &Threads[ 13 ], &attr, spawn_function, NULL);
-	pthread_create( &Threads[ 14 ], &attr, spawn_function, NULL);
-	pthread_create( &Threads[ 15 ], &attr, spawn_function, NULL);
-	pthread_create( &Threads[ 16 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 14 ], &attr, spawn_function, NULL); if(PTH-15 <= 0){ goto end; }
+	pthread_create( &Threads[ 15 ], &attr, spawn_function, NULL); if(PTH-16 <= 0){ goto end; }
+	pthread_create( &Threads[ 16 ], &attr, spawn_function, NULL); if(PTH-17 <= 0){ goto end; }
 	pthread_create( &Threads[ 17 ], &attr, spawn_function, NULL);
 	pthread_create( &Threads[ 18 ], &attr, spawn_function, NULL);
 	pthread_create( &Threads[ 19 ], &attr, spawn_function, NULL); // 20
@@ -88,9 +103,9 @@ int main(int argc, char *argv[]){
 	pthread_create( &Threads[ 28 ], &attr, spawn_function, NULL);
 	pthread_create( &Threads[ 29 ], &attr, spawn_function, NULL); // 30
 
-	pthread_create( &Threads[ 30 ], &attr, spawn_function, NULL);
-	pthread_create( &Threads[ 31 ], &attr, spawn_function, NULL);
-	pthread_create( &Threads[ 32 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 30 ], &attr, spawn_function, NULL); if(PTH-31 <= 0){ goto end; }
+	pthread_create( &Threads[ 31 ], &attr, spawn_function, NULL); if(PTH-32 <= 0){ goto end; }
+	pthread_create( &Threads[ 32 ], &attr, spawn_function, NULL); if(PTH-33 <= 0){ goto end; }
 	pthread_create( &Threads[ 33 ], &attr, spawn_function, NULL);
 	pthread_create( &Threads[ 34 ], &attr, spawn_function, NULL);
 	pthread_create( &Threads[ 35 ], &attr, spawn_function, NULL);
@@ -105,9 +120,9 @@ int main(int argc, char *argv[]){
 	pthread_create( &Threads[ 43 ], &attr, spawn_function, NULL);
 	pthread_create( &Threads[ 44 ], &attr, spawn_function, NULL);
 	pthread_create( &Threads[ 45 ], &attr, spawn_function, NULL);
-	pthread_create( &Threads[ 46 ], &attr, spawn_function, NULL);
-	pthread_create( &Threads[ 47 ], &attr, spawn_function, NULL);
-	pthread_create( &Threads[ 48 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 46 ], &attr, spawn_function, NULL); if(PTH-47 <= 0){ goto end; }
+	pthread_create( &Threads[ 47 ], &attr, spawn_function, NULL); if(PTH-48 <= 0){ goto end; }
+	pthread_create( &Threads[ 48 ], &attr, spawn_function, NULL); if(PTH-49 <= 0){ goto end; }
 	pthread_create( &Threads[ 49 ], &attr, spawn_function, NULL); // 50
 
 	pthread_create( &Threads[ 50 ], &attr, spawn_function, NULL);
@@ -123,9 +138,9 @@ int main(int argc, char *argv[]){
 
 	pthread_create( &Threads[ 60 ], &attr, spawn_function, NULL);
 	pthread_create( &Threads[ 61 ], &attr, spawn_function, NULL);
-	pthread_create( &Threads[ 62 ], &attr, spawn_function, NULL);
-	pthread_create( &Threads[ 63 ], &attr, spawn_function, NULL);
-	pthread_create( &Threads[ 64 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 62 ], &attr, spawn_function, NULL); if(PTH-63 <= 0){ goto end; }
+	pthread_create( &Threads[ 63 ], &attr, spawn_function, NULL); if(PTH-64 <= 0){ goto end; }
+	pthread_create( &Threads[ 64 ], &attr, spawn_function, NULL); if(PTH-65 <= 0){ goto end; }
 	pthread_create( &Threads[ 65 ], &attr, spawn_function, NULL);
 	pthread_create( &Threads[ 66 ], &attr, spawn_function, NULL);
 	pthread_create( &Threads[ 67 ], &attr, spawn_function, NULL);
@@ -193,9 +208,9 @@ int main(int argc, char *argv[]){
 	pthread_create( &Threads[ 123 ], &attr, spawn_function, NULL);
 	pthread_create( &Threads[ 124 ], &attr, spawn_function, NULL);
 	pthread_create( &Threads[ 125 ], &attr, spawn_function, NULL);
-	pthread_create( &Threads[ 126 ], &attr, spawn_function, NULL);
-	pthread_create( &Threads[ 127 ], &attr, spawn_function, NULL);
-	pthread_create( &Threads[ 128 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 126 ], &attr, spawn_function, NULL); if(PTH-127 <= 0){ goto end; }
+	pthread_create( &Threads[ 127 ], &attr, spawn_function, NULL); if(PTH-128 <= 0){ goto end; }
+	pthread_create( &Threads[ 128 ], &attr, spawn_function, NULL); if(PTH-129 <= 0){ goto end; }
 	pthread_create( &Threads[ 129 ], &attr, spawn_function, NULL); // 130
 
 	pthread_create( &Threads[ 130 ], &attr, spawn_function, NULL);
@@ -334,9 +349,9 @@ int main(int argc, char *argv[]){
 	pthread_create( &Threads[ 251 ], &attr, spawn_function, NULL);
 	pthread_create( &Threads[ 252 ], &attr, spawn_function, NULL);
 	pthread_create( &Threads[ 253 ], &attr, spawn_function, NULL);
-	pthread_create( &Threads[ 254 ], &attr, spawn_function, NULL);
-	pthread_create( &Threads[ 255 ], &attr, spawn_function, NULL);
-	pthread_create( &Threads[ 256 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 254 ], &attr, spawn_function, NULL); if(PTH-255 <= 0){ goto end; }
+	pthread_create( &Threads[ 255 ], &attr, spawn_function, NULL); if(PTH-256 <= 0){ goto end; }
+	pthread_create( &Threads[ 256 ], &attr, spawn_function, NULL); if(PTH-257 <= 0){ goto end; }
 	pthread_create( &Threads[ 257 ], &attr, spawn_function, NULL);
 	pthread_create( &Threads[ 258 ], &attr, spawn_function, NULL);
 	pthread_create( &Threads[ 259 ], &attr, spawn_function, NULL); // 260
@@ -352,9 +367,42 @@ int main(int argc, char *argv[]){
 	pthread_create( &Threads[ 268 ], &attr, spawn_function, NULL);
 	pthread_create( &Threads[ 269 ], &attr, spawn_function, NULL); // 270
 
-	pthread_create( &Threads[ 270 ], &attr, spawn_function, NULL);
-	// pthread_create( &Threads[ 271 ], &attr, spawn_function, NULL); // 272
-	// pthread_create( &Threads[ 272 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 270 ], &attr, spawn_function, NULL); if(PTH-271 <= 0){ goto end; }
+	pthread_create( &Threads[ 271 ], &attr, spawn_function, NULL); if(PTH-272 <= 0){ goto end; }
+	pthread_create( &Threads[ 272 ], &attr, spawn_function, NULL); if(PTH-273 <= 0){ goto end; }
+	pthread_create( &Threads[ 273 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 274 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 275 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 276 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 277 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 278 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 279 ], &attr, spawn_function, NULL); // 270
+
+    pthread_create( &Threads[ 280 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 281 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 282 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 283 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 284 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 285 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 286 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 287 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 288 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 289 ], &attr, spawn_function, NULL); // 280
+
+    pthread_create( &Threads[ 290 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 291 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 292 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 293 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 294 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 295 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 296 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 297 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 298 ], &attr, spawn_function, NULL);
+	pthread_create( &Threads[ 299 ], &attr, spawn_function, NULL);  if(PTH-300 <= 0){ goto end; } // 300
+
+    pthread_create( &Threads[ 300 ], &attr, spawn_function, NULL); // 301
+
+end:
 
 	// each thread waits until all threads have hit the barrier, then they all return
 	pthread_barrier_wait(&sync_barrier);

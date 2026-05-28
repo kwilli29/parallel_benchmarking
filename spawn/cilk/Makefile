@@ -40,6 +40,9 @@ serial:
 05A: 05A_spawntime_window_cilk.c
 	$(CC) $(CFLAGS) 05A_spawntime_window_cilk.c -o 05A
 
+04A: 04A_spawntime_beforefunc_sequential_cilk.c
+	$(CC) $(CFLAGS) 04A_spawntime_beforefunc_sequential_cilk.c -o 04A
+
 04B: 04B_spawntime_beforefunc_cilkscope_cilk.c
 	$(CC) $(CFLAGS) 04B_spawntime_beforefunc_cilkscope_cilk.c -o 04B
 

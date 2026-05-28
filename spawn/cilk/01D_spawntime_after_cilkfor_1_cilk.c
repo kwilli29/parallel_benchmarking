@@ -17,8 +17,6 @@
  * Launch a bunch and measure when all done 
  */
 
-#define NCILK __cilkrts_get_nworkers()
-
 void spawn_function(){           // Simple Spawn Function
 
 	int x = 100; int y = 5000; int z = 1000000;
@@ -35,6 +33,21 @@ void spawn_function(){           // Simple Spawn Function
 
 int main(int argc, char *argv[]){
 
+    int NCILK = __cilkrts_get_nworkers();
+
+    // Process Command-Line Arguments
+    if(argc >= 2){
+        if(atoi(argv[1]) == 0){
+            NCILK = __cilkrts_get_nworkers();
+        } else {
+            NCILK = atoi(argv[1]);
+            if (NCILK > 301){
+                NCILK = __cilkrts_get_nworkers();
+            }
+        }
+    }
+
+	printf("* # Spawns: %d\n", NCILK);
 
  	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); //

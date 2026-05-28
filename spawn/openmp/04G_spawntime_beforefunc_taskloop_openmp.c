@@ -31,7 +31,20 @@ struct timespec spawn_function(){           // Simple Function to Spawn
 
 int main(int argc, char *argv[]){
 
-	int OMP_THREADS = number_threads()-1;
+	int OMP_THREADS = number_threads();
+
+    // Process Command-Line Arguments
+    if(argc >= 2){
+        if(atoi(argv[1]) == 0){
+            OMP_THREADS = number_threads();
+        } else {
+            OMP_THREADS = atoi(argv[1]);
+            if (OMP_THREADS > 301){
+                OMP_THREADS = number_threads();;
+            }
+        }
+    }  
+    printf("* # Spawns: %d\n", OMP_THREADS);  
 
 	struct timespec t_start[OMP_THREADS]; struct timespec t_res;
 	struct timespec t_end[OMP_THREADS];

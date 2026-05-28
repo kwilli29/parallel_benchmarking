@@ -30,7 +30,20 @@ void* spawn_function(void* t_end){           // Simple Math for Spawn Function
 
 int main(int argc, char *argv[]){
 
-	int PTH = number_threads()-1;
+	int PTH = number_threads();
+
+    // Process Command-Line Arguments
+    if(argc >= 2){
+        if(atoi(argv[1]) == 0){
+            PTH = number_threads();
+        } else {
+            PTH = atoi(argv[1]);
+            if (PTH > 301){
+                PTH = number_threads();;
+            }
+        }
+    }
+	printf("* # Spawns: %d\n", PTH);
 
 	pthread_t Threads[ PTH ];
 
@@ -64,4 +77,3 @@ int main(int argc, char *argv[]){
 
 	return 0;
 }
-

@@ -3,6 +3,8 @@
 import sys
 import time
 
+# !!!! ACCOUNT FOR TIME TAKEN BY IF STATEMENTS !!!!
+
 # Get # of processors
 NUM_PROCS=2
 try:
@@ -77,6 +79,7 @@ def long_overhead(parallel_filename, serial_filename, runs):
                 thcnt = 0
                 prevline = ''
                 continue
+            elif line[0] == '#': continue
             if prevline:
                 # get difference b/w this and prev time
                 PARA_ACC += ( float(line.strip()) - float(prevline) )

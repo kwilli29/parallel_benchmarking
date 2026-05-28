@@ -14,8 +14,6 @@
  * Launch a bunch and measure when all done
  */
 
-#define NCILK __cilkrts_get_nworkers()
-
 struct timespec spawn_function(){           // Simple Function to Spawn
 
 	struct timespec t_end; 
@@ -34,19 +32,35 @@ struct timespec spawn_function(){           // Simple Function to Spawn
 
 int main(int argc, char *argv[]){
 
-	struct timespec t_start[NCILK-1]; struct timespec t_res;
-	struct timespec t_end[NCILK-1];
+    int NCILK = __cilkrts_get_nworkers();
+
+    // Process Command-Line Arguments
+    if(argc >= 2){
+        if(atoi(argv[1]) == 0){
+            NCILK = __cilkrts_get_nworkers();
+        } else {
+            NCILK = atoi(argv[1]);
+            if (NCILK > 301){
+                NCILK = __cilkrts_get_nworkers();
+            }
+        }
+    }
+
+	printf("* # Spawns: %d\n", NCILK);
+
+	struct timespec t_start[NCILK]; struct timespec t_res;
+	struct timespec t_end[NCILK];
 
 	// parallel for timestamp before spawn to beginning of spawned function
 
 	#pragma cilk grainsize 1
-	cilk_for(int i=0; i < NCILK-1; i++){ 	
+	cilk_for(int i=0; i < NCILK; i++){ 	
 		clock_gettime(CLOCK_MONOTONIC, &t_start[i]); t_end[i] = cilk_spawn spawn_function();
 
 	}
 
 	// printf("****\n");
-	for(int i = 0; i < NCILK-1; i++){
+	for(int i = 0; i < NCILK; i++){
 		
 		timespec_sub(&t_res, t_end[i], t_start[i]);
 
@@ -59,5 +73,3 @@ int main(int argc, char *argv[]){
 
 	return 0;
 }
-
-

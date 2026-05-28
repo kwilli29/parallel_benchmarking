@@ -15,8 +15,6 @@
  * Launch a bunch and measure when all done 
  */
 
-#define NCILK __cilkrts_get_nworkers()
-
 struct timespec spawn_function(){           // Simple Spawn Function
 
 	struct timespec t_end; 						  
@@ -28,42 +26,77 @@ struct timespec spawn_function(){           // Simple Spawn Function
 
 	y = y + x + z;
 
-	z = z + y + x;	
+	z = z + y + x;
 
 	return t_end; // return individual timestamps 
 }
 
+void end_program(struct timespec* t_start, struct timespec* t_end, int NCILK){ 
+
+    struct timespec t_res;
+
+	//printf("****\n");	
+	for(int i = 0; i < NCILK; i++){
+		
+		timespec_sub(&t_res, t_end[i], t_start[i]);
+
+        // printf("%d\t", i);
+		printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+	
+	}
+
+	// printf("04A\n");
+
+    return;
+
+}
+
 int main(int argc, char *argv[]){
 		
-	struct timespec t_start[NCILK-1]; struct timespec t_res;
-	struct timespec t_end[NCILK-1];
+    int NCILK = __cilkrts_get_nworkers();
+
+    // Process Command-Line Arguments
+    if(argc >= 2){
+        if(atoi(argv[1]) == 0){
+            NCILK = __cilkrts_get_nworkers();
+        } else {
+            NCILK = atoi(argv[1]);
+            if (NCILK > 301){
+                NCILK = __cilkrts_get_nworkers();
+            }
+        }
+    }
+
+	printf("* # Spawns: %d\n", NCILK);
+
+	struct timespec t_start[NCILK]; // struct timespec *
+	struct timespec t_end[NCILK];
 
 
 	// Time before spawn, then take time stamp at the beginning of the spawn function
 	// Time b/w spawn and beginning of function running
 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[0]); t_end[0] = cilk_spawn spawn_function(); 
-		 // Take time stamp before each spawn
-		clock_gettime(CLOCK_MONOTONIC, &t_start[1]); t_end[1] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[2]); t_end[2] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[3]); t_end[3] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[4]); t_end[4] = cilk_spawn spawn_function(); 
+		clock_gettime(CLOCK_MONOTONIC, &t_start[0]); t_end[0] = cilk_spawn spawn_function(); if(NCILK-1 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0;} // 1  // Take time stamp before each spawn
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[1]); t_end[1] = cilk_spawn spawn_function(); if(NCILK-2 <= 0){ cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0;} // 2
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[2]); t_end[2] = cilk_spawn spawn_function(); if(NCILK-3 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0;} // 3
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[3]); t_end[3] = cilk_spawn spawn_function(); if(NCILK-4 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0;} // 4
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[4]); t_end[4] = cilk_spawn spawn_function(); if(NCILK-5 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0;} // 5
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[5]); t_end[5] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[6]); t_end[6] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[7]); t_end[7] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[8]); t_end[8] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[9]); t_end[9] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[6]); t_end[6] = cilk_spawn spawn_function(); if(NCILK-7 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0;} // 7
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[7]); t_end[7] = cilk_spawn spawn_function(); if(NCILK-8 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0;} // 8
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[8]); t_end[8] = cilk_spawn spawn_function(); if(NCILK-9 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0;} // 9
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[9]); t_end[9] = cilk_spawn spawn_function(); if(NCILK-10<= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0;}  // 10
 		 // 10
-		clock_gettime(CLOCK_MONOTONIC, &t_start[10]); t_end[10] = cilk_spawn spawn_function(); 
+		clock_gettime(CLOCK_MONOTONIC, &t_start[10]); t_end[10] = cilk_spawn spawn_function(); if(NCILK-11 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0;}  // 11
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[11]); t_end[11] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[12]); t_end[12] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[13]); t_end[13] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[14]); t_end[14] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[15]); t_end[15] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[16]); t_end[16] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[14]); t_end[14] = cilk_spawn spawn_function(); if(NCILK-15 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0;}  // 15
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[15]); t_end[15] = cilk_spawn spawn_function(); if(NCILK-16 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0;}  // 16
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[16]); t_end[16] = cilk_spawn spawn_function(); if(NCILK-17 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0;}  // 17
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[17]); t_end[17] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[18]); t_end[18] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[19]); t_end[19] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[19]); t_end[19] = cilk_spawn spawn_function(); // 20
 		 // 20
 		clock_gettime(CLOCK_MONOTONIC, &t_start[20]); t_end[20] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[21]); t_end[21] = cilk_spawn spawn_function(); 
@@ -74,18 +107,18 @@ int main(int argc, char *argv[]){
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[26]); t_end[26] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[27]); t_end[27] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[28]); t_end[28] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[29]); t_end[29] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[29]); t_end[29] = cilk_spawn spawn_function(); // 30
 		 // 30
-		clock_gettime(CLOCK_MONOTONIC, &t_start[30]); t_end[30] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[31]); t_end[31] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[32]); t_end[32] = cilk_spawn spawn_function(); 
+		clock_gettime(CLOCK_MONOTONIC, &t_start[30]); t_end[30] = cilk_spawn spawn_function(); if(NCILK-31 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0;}  // 31
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[31]); t_end[31] = cilk_spawn spawn_function(); if(NCILK-32 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0;}  // 32
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[32]); t_end[32] = cilk_spawn spawn_function(); if(NCILK-33 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0;}  // 33
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[33]); t_end[33] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[34]); t_end[34] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[35]); t_end[35] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[36]); t_end[36] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[37]); t_end[37] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[38]); t_end[38] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[39]); t_end[39] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[39]); t_end[39] = cilk_spawn spawn_function(); // 40
 		 // 40
 		clock_gettime(CLOCK_MONOTONIC, &t_start[40]); t_end[40] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[41]); t_end[41] = cilk_spawn spawn_function(); 
@@ -93,10 +126,10 @@ int main(int argc, char *argv[]){
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[43]); t_end[43] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[44]); t_end[44] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[45]); t_end[45] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[46]); t_end[46] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[47]); t_end[47] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[48]); t_end[48] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[49]); t_end[49] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[46]); t_end[46] = cilk_spawn spawn_function(); if(NCILK-47 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0;}  // 47
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[47]); t_end[47] = cilk_spawn spawn_function(); if(NCILK-48 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0;}  // 48
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[48]); t_end[48] = cilk_spawn spawn_function(); if(NCILK-49 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0;}  // 49
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[49]); t_end[49] = cilk_spawn spawn_function(); // 50
 		 // 50
 		clock_gettime(CLOCK_MONOTONIC, &t_start[50]); t_end[50] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[51]); t_end[51] = cilk_spawn spawn_function(); 
@@ -107,18 +140,18 @@ int main(int argc, char *argv[]){
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[56]); t_end[56] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[57]); t_end[57] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[58]); t_end[58] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[59]); t_end[59] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[59]); t_end[59] = cilk_spawn spawn_function(); // 60
 		 // 60
 		clock_gettime(CLOCK_MONOTONIC, &t_start[60]); t_end[60] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[61]); t_end[61] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[62]); t_end[62] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[63]); t_end[63] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[64]); t_end[64] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[62]); t_end[62] = cilk_spawn spawn_function(); if(NCILK-63 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0;}  // 63 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[63]); t_end[63] = cilk_spawn spawn_function(); if(NCILK-64 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0;}  // 64
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[64]); t_end[64] = cilk_spawn spawn_function(); if(NCILK-65 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0;}  // 65
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[65]); t_end[65] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[66]); t_end[66] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[67]); t_end[67] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[68]); t_end[68] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[69]); t_end[69] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[69]); t_end[69] = cilk_spawn spawn_function(); // 70
 		 // 70
 		clock_gettime(CLOCK_MONOTONIC, &t_start[70]); t_end[70] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[71]); t_end[71] = cilk_spawn spawn_function(); 
@@ -129,7 +162,7 @@ int main(int argc, char *argv[]){
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[76]); t_end[76] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[77]); t_end[77] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[78]); t_end[78] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[79]); t_end[79] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[79]); t_end[79] = cilk_spawn spawn_function(); // 80
 		 // 80
 		clock_gettime(CLOCK_MONOTONIC, &t_start[80]); t_end[80] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[81]); t_end[81] = cilk_spawn spawn_function(); 
@@ -140,7 +173,7 @@ int main(int argc, char *argv[]){
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[86]); t_end[86] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[87]); t_end[87] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[88]); t_end[88] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[89]); t_end[89] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[89]); t_end[89] = cilk_spawn spawn_function(); // 90
 		 // 90
 		clock_gettime(CLOCK_MONOTONIC, &t_start[90]); t_end[90] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[91]); t_end[91] = cilk_spawn spawn_function(); 
@@ -151,7 +184,7 @@ int main(int argc, char *argv[]){
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[96]); t_end[96] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[97]); t_end[97] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[98]); t_end[98] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[99]); t_end[99] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[99]); t_end[99] = cilk_spawn spawn_function(); // 100
 		 // 100
 		clock_gettime(CLOCK_MONOTONIC, &t_start[100]); t_end[100] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[101]); t_end[101] = cilk_spawn spawn_function(); 
@@ -162,7 +195,7 @@ int main(int argc, char *argv[]){
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[106]); t_end[106] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[107]); t_end[107] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[108]); t_end[108] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[109]); t_end[109] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[109]); t_end[109] = cilk_spawn spawn_function(); // 110
 		 // 110
 		clock_gettime(CLOCK_MONOTONIC, &t_start[110]); t_end[110] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[111]); t_end[111] = cilk_spawn spawn_function(); 
@@ -173,7 +206,7 @@ int main(int argc, char *argv[]){
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[116]); t_end[116] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[117]); t_end[117] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[118]); t_end[118] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[119]); t_end[119] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[119]); t_end[119] = cilk_spawn spawn_function(); // 120
 		 // 120
 		clock_gettime(CLOCK_MONOTONIC, &t_start[120]); t_end[120] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[121]); t_end[121] = cilk_spawn spawn_function(); 
@@ -181,10 +214,10 @@ int main(int argc, char *argv[]){
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[123]); t_end[123] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[124]); t_end[124] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[125]); t_end[125] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[126]); t_end[126] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[127]); t_end[127] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[128]); t_end[128] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[129]); t_end[129] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[126]); t_end[126] = cilk_spawn spawn_function(); if(NCILK-127 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0;}  // 127
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[127]); t_end[127] = cilk_spawn spawn_function(); if(NCILK-128 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0;}  // 128
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[128]); t_end[128] = cilk_spawn spawn_function(); if(NCILK-129 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0;}  // 129
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[129]); t_end[129] = cilk_spawn spawn_function(); // 130
 		 // 130
 		clock_gettime(CLOCK_MONOTONIC, &t_start[130]); t_end[130] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[131]); t_end[131] = cilk_spawn spawn_function(); 
@@ -195,7 +228,7 @@ int main(int argc, char *argv[]){
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[136]); t_end[136] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[137]); t_end[137] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[138]); t_end[138] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[139]); t_end[139] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[139]); t_end[139] = cilk_spawn spawn_function(); // 140
 		 // 140
 		clock_gettime(CLOCK_MONOTONIC, &t_start[140]); t_end[140] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[141]); t_end[141] = cilk_spawn spawn_function(); 
@@ -206,7 +239,7 @@ int main(int argc, char *argv[]){
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[146]); t_end[146] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[147]); t_end[147] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[148]); t_end[148] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[149]); t_end[149] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[149]); t_end[149] = cilk_spawn spawn_function(); // 150
 		 // 150
 		clock_gettime(CLOCK_MONOTONIC, &t_start[150]); t_end[150] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[151]); t_end[151] = cilk_spawn spawn_function(); 
@@ -217,7 +250,7 @@ int main(int argc, char *argv[]){
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[156]); t_end[156] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[157]); t_end[157] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[158]); t_end[158] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[159]); t_end[159] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[159]); t_end[159] = cilk_spawn spawn_function(); // 160
 		 // 160
 		clock_gettime(CLOCK_MONOTONIC, &t_start[160]); t_end[160] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[161]); t_end[161] = cilk_spawn spawn_function(); 
@@ -228,7 +261,7 @@ int main(int argc, char *argv[]){
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[166]); t_end[166] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[167]); t_end[167] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[168]); t_end[168] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[169]); t_end[169] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[169]); t_end[169] = cilk_spawn spawn_function(); // 170
 		 // 170
 		clock_gettime(CLOCK_MONOTONIC, &t_start[170]); t_end[170] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[171]); t_end[171] = cilk_spawn spawn_function(); 
@@ -239,7 +272,7 @@ int main(int argc, char *argv[]){
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[176]); t_end[176] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[177]); t_end[177] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[178]); t_end[178] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[179]); t_end[179] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[179]); t_end[179] = cilk_spawn spawn_function(); // 180
 		 // 180
 		clock_gettime(CLOCK_MONOTONIC, &t_start[180]); t_end[180] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[181]); t_end[181] = cilk_spawn spawn_function(); 
@@ -250,7 +283,7 @@ int main(int argc, char *argv[]){
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[186]); t_end[186] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[187]); t_end[187] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[188]); t_end[188] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[189]); t_end[189] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[189]); t_end[189] = cilk_spawn spawn_function(); // 190
 		 // 190
 		clock_gettime(CLOCK_MONOTONIC, &t_start[190]); t_end[190] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[191]); t_end[191] = cilk_spawn spawn_function(); 
@@ -261,7 +294,7 @@ int main(int argc, char *argv[]){
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[196]); t_end[196] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[197]); t_end[197] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[198]); t_end[198] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[199]); t_end[199] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[199]); t_end[199] = cilk_spawn spawn_function(); // 200
 		 // 200
 		clock_gettime(CLOCK_MONOTONIC, &t_start[200]); t_end[200] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[201]); t_end[201] = cilk_spawn spawn_function(); 
@@ -272,7 +305,7 @@ int main(int argc, char *argv[]){
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[206]); t_end[206] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[207]); t_end[207] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[208]); t_end[208] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[209]); t_end[209] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[209]); t_end[209] = cilk_spawn spawn_function(); // 210
 		 // 210
 		clock_gettime(CLOCK_MONOTONIC, &t_start[210]); t_end[210] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[211]); t_end[211] = cilk_spawn spawn_function(); 
@@ -283,7 +316,7 @@ int main(int argc, char *argv[]){
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[216]); t_end[216] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[217]); t_end[217] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[218]); t_end[218] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[219]); t_end[219] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[219]); t_end[219] = cilk_spawn spawn_function(); // 220
 		 // 220
 		clock_gettime(CLOCK_MONOTONIC, &t_start[220]); t_end[220] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[221]); t_end[221] = cilk_spawn spawn_function(); 
@@ -294,7 +327,7 @@ int main(int argc, char *argv[]){
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[226]); t_end[226] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[227]); t_end[227] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[228]); t_end[228] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[229]); t_end[229] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[229]); t_end[229] = cilk_spawn spawn_function(); // 230
 		 // 230
 		clock_gettime(CLOCK_MONOTONIC, &t_start[230]); t_end[230] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[231]); t_end[231] = cilk_spawn spawn_function(); 
@@ -305,7 +338,7 @@ int main(int argc, char *argv[]){
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[236]); t_end[236] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[237]); t_end[237] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[238]); t_end[238] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[239]); t_end[239] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[239]); t_end[239] = cilk_spawn spawn_function(); // 240
 		 // 240
 		clock_gettime(CLOCK_MONOTONIC, &t_start[240]); t_end[240] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[241]); t_end[241] = cilk_spawn spawn_function(); 
@@ -316,18 +349,18 @@ int main(int argc, char *argv[]){
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[246]); t_end[246] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[247]); t_end[247] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[248]); t_end[248] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[249]); t_end[249] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[249]); t_end[249] = cilk_spawn spawn_function(); // 250
 		 // 250
 		clock_gettime(CLOCK_MONOTONIC, &t_start[250]); t_end[250] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[251]); t_end[251] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[252]); t_end[252] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[253]); t_end[253] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[254]); t_end[254] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[255]); t_end[255] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[256]); t_end[256] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[254]); t_end[254] = cilk_spawn spawn_function(); if(NCILK-255 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0;}  // 255 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[255]); t_end[255] = cilk_spawn spawn_function(); if(NCILK-256 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0;}  // 256
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[256]); t_end[256] = cilk_spawn spawn_function(); if(NCILK-257 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0;}  // 257
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[257]); t_end[257] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[258]); t_end[258] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[259]); t_end[259] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[259]); t_end[259] = cilk_spawn spawn_function(); // 260
 		 // 260
 		clock_gettime(CLOCK_MONOTONIC, &t_start[260]); t_end[260] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[261]); t_end[261] = cilk_spawn spawn_function(); 
@@ -338,18 +371,49 @@ int main(int argc, char *argv[]){
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[266]); t_end[266] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[267]); t_end[267] = cilk_spawn spawn_function(); 
 		 clock_gettime(CLOCK_MONOTONIC, &t_start[268]); t_end[268] = cilk_spawn spawn_function(); 
-		 clock_gettime(CLOCK_MONOTONIC, &t_start[269]); t_end[269] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[269]); t_end[269] = cilk_spawn spawn_function(); // 270
 		 // 270
-		clock_gettime(CLOCK_MONOTONIC, &t_start[270]); t_end[270] = cilk_spawn spawn_function(); // 271
-		
-		// cilk_spawn spawn_function();
-		// cilk_spawn spawn_function();
-		
+		clock_gettime(CLOCK_MONOTONIC, &t_start[270]); t_end[270] = cilk_spawn spawn_function(); if(NCILK-271 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0; } // 271
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[271]); t_end[271] = cilk_spawn spawn_function(); if(NCILK-272 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0; } // 272
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[272]); t_end[272] = cilk_spawn spawn_function(); if(NCILK-273 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0; } // 273
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[273]); t_end[273] = cilk_spawn spawn_function();
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[274]); t_end[274] = cilk_spawn spawn_function();
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[275]); t_end[275] = cilk_spawn spawn_function();
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[276]); t_end[276] = cilk_spawn spawn_function();
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[277]); t_end[277] = cilk_spawn spawn_function();
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[278]); t_end[278] = cilk_spawn spawn_function();
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[279]); t_end[279] = cilk_spawn spawn_function(); // if(NCILK-280 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0; } // 280
+
+		clock_gettime(CLOCK_MONOTONIC, &t_start[280]); t_end[280] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[281]); t_end[281] = cilk_spawn spawn_function();
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[282]); t_end[282] = cilk_spawn spawn_function();
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[283]); t_end[283] = cilk_spawn spawn_function();
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[284]); t_end[284] = cilk_spawn spawn_function();
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[285]); t_end[285] = cilk_spawn spawn_function();
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[286]); t_end[286] = cilk_spawn spawn_function();
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[287]); t_end[287] = cilk_spawn spawn_function();
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[288]); t_end[288] = cilk_spawn spawn_function();
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[289]); t_end[289] = cilk_spawn spawn_function(); // if(NCILK-290 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0; } // 290
+
+		clock_gettime(CLOCK_MONOTONIC, &t_start[290]); t_end[290] = cilk_spawn spawn_function(); 
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[291]); t_end[291] = cilk_spawn spawn_function();
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[292]); t_end[292] = cilk_spawn spawn_function();
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[293]); t_end[293] = cilk_spawn spawn_function();
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[294]); t_end[294] = cilk_spawn spawn_function();
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[295]); t_end[295] = cilk_spawn spawn_function();
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[296]); t_end[296] = cilk_spawn spawn_function();
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[297]); t_end[297] = cilk_spawn spawn_function();
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[298]); t_end[298] = cilk_spawn spawn_function();
+		 clock_gettime(CLOCK_MONOTONIC, &t_start[299]); t_end[299] = cilk_spawn spawn_function(); // if(NCILK-300 <= 0) { cilk_sync; end_program(t_start, t_end, NCILK); cilk_sync; return 0; } // 300
+
+		clock_gettime(CLOCK_MONOTONIC, &t_start[300]); t_end[300] = cilk_spawn spawn_function(); // 301
 
 	cilk_sync; // 
 
-	//printf("****\n");	
-	for(int i = 0; i < NCILK-1; i++){
+    struct timespec t_res;
+
+    // printf("****\n");	
+	for(int i = 0; i < NCILK; i++){
 		
 		timespec_sub(&t_res, t_end[i], t_start[i]);
 
@@ -358,8 +422,8 @@ int main(int argc, char *argv[]){
 	}
 
 	// printf("04A\n");
-	
+    
+    cilk_sync;
+
 	return 0;
 }
-
-

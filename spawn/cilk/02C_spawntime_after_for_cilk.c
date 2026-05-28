@@ -15,8 +15,6 @@
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
 
-#define NCILK __cilkrts_get_nworkers()
-
 void spawn_function(){           // Simple Function to Spawn
 
 	int x = 100; int y = 5000; int z = 1000000;
@@ -32,19 +30,35 @@ void spawn_function(){           // Simple Function to Spawn
 
 int main(int argc, char *argv[]){
 
+    int NCILK = __cilkrts_get_nworkers();
+
+    // Process Command-Line Arguments
+    if(argc >= 2){
+        if(atoi(argv[1]) == 0){
+            NCILK = __cilkrts_get_nworkers();
+        } else {
+            NCILK = atoi(argv[1]);
+            if (NCILK > 301){
+                NCILK = __cilkrts_get_nworkers();
+            }
+        }
+    }
+
+	printf("* # Spawns: %d\n", NCILK);
+
 	struct timespec t_start, t_res;
-	struct timespec t_end[NCILK-1];
+	struct timespec t_end[NCILK];
 
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
-	for(int i=0; i < NCILK-1; i++){ // seq. for loop time then spawn
+	for(int i=0; i < NCILK; i++){ // seq. for loop time then spawn
 		
 		clock_gettime(CLOCK_MONOTONIC, &t_end[i]); cilk_spawn spawn_function();
 
 	}
 
 	printf("****\n");
-	for(int i = 0; i < NCILK-1; i++){
+	for(int i = 0; i < NCILK; i++){
 		
 		timespec_sub(&t_res, t_end[i], t_start);
 
@@ -56,6 +70,3 @@ int main(int argc, char *argv[]){
 
 	return 0;
 }
-
-
-

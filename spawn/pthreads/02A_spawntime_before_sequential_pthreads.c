@@ -32,7 +32,20 @@ void* spawn_function(){           // Simple Math for Spawn Function
 
 int main(int argc, char *argv[]){
 
-	int PTH = number_threads()-1;
+	int PTH = number_threads();
+
+    // Process Command-Line Arguments
+    if(argc >= 2){
+        if(atoi(argv[1]) == 0){
+            PTH = number_threads();
+        } else {
+            PTH = atoi(argv[1]);
+            if (PTH > 301){
+                PTH = number_threads();;
+            }
+        }
+    }
+	printf("* # Spawns: %d\n", PTH);    
 
 	int ds, rc;
 	pthread_attr_t attr;
@@ -55,24 +68,24 @@ int main(int argc, char *argv[]){
 
 	/****/ 
 
-	clock_gettime(CLOCK_MONOTONIC, &t_end[0] ); pthread_create( &Threads[ 0 ], &attr, spawn_function, NULL); // all threads spawn detached,
-	clock_gettime(CLOCK_MONOTONIC, &t_end[1] ); pthread_create( &Threads[ 1 ], &attr, spawn_function, NULL); // hit the barrier,
-	clock_gettime(CLOCK_MONOTONIC, &t_end[2] ); pthread_create( &Threads[ 2 ], &attr, spawn_function, NULL); // and are immmediately freed w/o joining
-	clock_gettime(CLOCK_MONOTONIC, &t_end[3] ); pthread_create( &Threads[ 3 ], &attr, spawn_function, NULL);
-	clock_gettime(CLOCK_MONOTONIC, &t_end[4] ); pthread_create( &Threads[ 4 ], &attr, spawn_function, NULL);
-	clock_gettime(CLOCK_MONOTONIC, &t_end[5] ); pthread_create( &Threads[ 5 ], &attr, spawn_function, NULL);
-	clock_gettime(CLOCK_MONOTONIC, &t_end[6] ); pthread_create( &Threads[ 6 ], &attr, spawn_function, NULL);
-	clock_gettime(CLOCK_MONOTONIC, &t_end[7] ); pthread_create( &Threads[ 7 ], &attr, spawn_function, NULL);
-	clock_gettime(CLOCK_MONOTONIC, &t_end[8] ); pthread_create( &Threads[ 8 ], &attr, spawn_function, NULL);
-	clock_gettime(CLOCK_MONOTONIC, &t_end[9] ); pthread_create( &Threads[ 9 ], &attr, spawn_function, NULL); // 10
+	clock_gettime(CLOCK_MONOTONIC, &t_end[0] ); pthread_create( &Threads[ 0 ], &attr, spawn_function, NULL); if( (PTH-1) <= 0){ goto end; }
+	clock_gettime(CLOCK_MONOTONIC, &t_end[1] ); pthread_create( &Threads[ 1 ], &attr, spawn_function, NULL); if( (PTH-2) <= 0){ goto end; }
+	clock_gettime(CLOCK_MONOTONIC, &t_end[2] ); pthread_create( &Threads[ 2 ], &attr, spawn_function, NULL); if( (PTH-3) <= 0){ goto end; }
+	clock_gettime(CLOCK_MONOTONIC, &t_end[3] ); pthread_create( &Threads[ 3 ], &attr, spawn_function, NULL); if( (PTH-4) <= 0){ goto end; }
+	clock_gettime(CLOCK_MONOTONIC, &t_end[4] ); pthread_create( &Threads[ 4 ], &attr, spawn_function, NULL); if( (PTH-5) <= 0){ goto end; }
+	clock_gettime(CLOCK_MONOTONIC, &t_end[5] ); pthread_create( &Threads[ 5 ], &attr, spawn_function, NULL); if( (PTH-6) <= 0){ goto end; }
+	clock_gettime(CLOCK_MONOTONIC, &t_end[6] ); pthread_create( &Threads[ 6 ], &attr, spawn_function, NULL); if( (PTH-7) <= 0){ goto end; }
+	clock_gettime(CLOCK_MONOTONIC, &t_end[7] ); pthread_create( &Threads[ 7 ], &attr, spawn_function, NULL); if( (PTH-8) <= 0){ goto end; }
+	clock_gettime(CLOCK_MONOTONIC, &t_end[8] ); pthread_create( &Threads[ 8 ], &attr, spawn_function, NULL); if( (PTH-9) <= 0){ goto end; }
+	clock_gettime(CLOCK_MONOTONIC, &t_end[9] ); pthread_create( &Threads[ 9 ], &attr, spawn_function, NULL);  if( (PTH-10) <= 0){ goto end; } // 10
 
-	clock_gettime(CLOCK_MONOTONIC, &t_end[10] ); pthread_create( &Threads[ 10 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[10] ); pthread_create( &Threads[ 10 ], &attr, spawn_function, NULL); if( (PTH-11) <= 0){ goto end; }
 	clock_gettime(CLOCK_MONOTONIC, &t_end[11] ); pthread_create( &Threads[ 11 ], &attr, spawn_function, NULL);
 	clock_gettime(CLOCK_MONOTONIC, &t_end[12] ); pthread_create( &Threads[ 12 ], &attr, spawn_function, NULL);
 	clock_gettime(CLOCK_MONOTONIC, &t_end[13] ); pthread_create( &Threads[ 13 ], &attr, spawn_function, NULL);
-	clock_gettime(CLOCK_MONOTONIC, &t_end[14] ); pthread_create( &Threads[ 14 ], &attr, spawn_function, NULL);
-	clock_gettime(CLOCK_MONOTONIC, &t_end[15] ); pthread_create( &Threads[ 15 ], &attr, spawn_function, NULL);
-	clock_gettime(CLOCK_MONOTONIC, &t_end[16] ); pthread_create( &Threads[ 16 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[14] ); pthread_create( &Threads[ 14 ], &attr, spawn_function, NULL); if( (PTH-15) <= 0){ goto end; }
+	clock_gettime(CLOCK_MONOTONIC, &t_end[15] ); pthread_create( &Threads[ 15 ], &attr, spawn_function, NULL); if( (PTH-16) <= 0){ goto end; }
+	clock_gettime(CLOCK_MONOTONIC, &t_end[16] ); pthread_create( &Threads[ 16 ], &attr, spawn_function, NULL); if( (PTH-17) <= 0){ goto end; }
 	clock_gettime(CLOCK_MONOTONIC, &t_end[17] ); pthread_create( &Threads[ 17 ], &attr, spawn_function, NULL);
 	clock_gettime(CLOCK_MONOTONIC, &t_end[18] ); pthread_create( &Threads[ 18 ], &attr, spawn_function, NULL);
 	clock_gettime(CLOCK_MONOTONIC, &t_end[19] ); pthread_create( &Threads[ 19 ], &attr, spawn_function, NULL); // 20
@@ -88,9 +101,9 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_end[28] ); pthread_create( &Threads[ 28 ], &attr, spawn_function, NULL);
 	clock_gettime(CLOCK_MONOTONIC, &t_end[29] ); pthread_create( &Threads[ 29 ], &attr, spawn_function, NULL); // 30
 
-	clock_gettime(CLOCK_MONOTONIC, &t_end[30] ); pthread_create( &Threads[ 30 ], &attr, spawn_function, NULL);
-	clock_gettime(CLOCK_MONOTONIC, &t_end[31] ); pthread_create( &Threads[ 31 ], &attr, spawn_function, NULL);
-	clock_gettime(CLOCK_MONOTONIC, &t_end[32] ); pthread_create( &Threads[ 32 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[30] ); pthread_create( &Threads[ 30 ], &attr, spawn_function, NULL); if( (PTH-31) <= 0){ goto end; }
+	clock_gettime(CLOCK_MONOTONIC, &t_end[31] ); pthread_create( &Threads[ 31 ], &attr, spawn_function, NULL); if( (PTH-32) <= 0){ goto end; }
+	clock_gettime(CLOCK_MONOTONIC, &t_end[32] ); pthread_create( &Threads[ 32 ], &attr, spawn_function, NULL); if( (PTH-33) <= 0){ goto end; }
 	clock_gettime(CLOCK_MONOTONIC, &t_end[33] ); pthread_create( &Threads[ 33 ], &attr, spawn_function, NULL);
 	clock_gettime(CLOCK_MONOTONIC, &t_end[34] ); pthread_create( &Threads[ 34 ], &attr, spawn_function, NULL);
 	clock_gettime(CLOCK_MONOTONIC, &t_end[35] ); pthread_create( &Threads[ 35 ], &attr, spawn_function, NULL);
@@ -105,9 +118,9 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_end[43] ); pthread_create( &Threads[ 43 ], &attr, spawn_function, NULL);
 	clock_gettime(CLOCK_MONOTONIC, &t_end[44] ); pthread_create( &Threads[ 44 ], &attr, spawn_function, NULL);
 	clock_gettime(CLOCK_MONOTONIC, &t_end[45] ); pthread_create( &Threads[ 45 ], &attr, spawn_function, NULL);
-	clock_gettime(CLOCK_MONOTONIC, &t_end[46] ); pthread_create( &Threads[ 46 ], &attr, spawn_function, NULL);
-	clock_gettime(CLOCK_MONOTONIC, &t_end[47] ); pthread_create( &Threads[ 47 ], &attr, spawn_function, NULL);
-	clock_gettime(CLOCK_MONOTONIC, &t_end[48] ); pthread_create( &Threads[ 48 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[46] ); pthread_create( &Threads[ 46 ], &attr, spawn_function, NULL); if( (PTH-47) <= 0){ goto end; }
+	clock_gettime(CLOCK_MONOTONIC, &t_end[47] ); pthread_create( &Threads[ 47 ], &attr, spawn_function, NULL); if( (PTH-48) <= 0){ goto end; }
+	clock_gettime(CLOCK_MONOTONIC, &t_end[48] ); pthread_create( &Threads[ 48 ], &attr, spawn_function, NULL); if( (PTH-49) <= 0){ goto end; }
 	clock_gettime(CLOCK_MONOTONIC, &t_end[49] ); pthread_create( &Threads[ 49 ], &attr, spawn_function, NULL); // 50
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end[50] ); pthread_create( &Threads[ 50 ], &attr, spawn_function, NULL);
@@ -123,9 +136,9 @@ int main(int argc, char *argv[]){
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end[60] ); pthread_create( &Threads[ 60 ], &attr, spawn_function, NULL);
 	clock_gettime(CLOCK_MONOTONIC, &t_end[61] ); pthread_create( &Threads[ 61 ], &attr, spawn_function, NULL);
-	clock_gettime(CLOCK_MONOTONIC, &t_end[62] ); pthread_create( &Threads[ 62 ], &attr, spawn_function, NULL);
-	clock_gettime(CLOCK_MONOTONIC, &t_end[63] ); pthread_create( &Threads[ 63 ], &attr, spawn_function, NULL);
-	clock_gettime(CLOCK_MONOTONIC, &t_end[64] ); pthread_create( &Threads[ 64 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[62] ); pthread_create( &Threads[ 62 ], &attr, spawn_function, NULL); if( (PTH-63) <= 0){ goto end; }
+	clock_gettime(CLOCK_MONOTONIC, &t_end[63] ); pthread_create( &Threads[ 63 ], &attr, spawn_function, NULL); if( (PTH-64) <= 0){ goto end; }
+	clock_gettime(CLOCK_MONOTONIC, &t_end[64] ); pthread_create( &Threads[ 64 ], &attr, spawn_function, NULL); if( (PTH-65) <= 0){ goto end; }
 	clock_gettime(CLOCK_MONOTONIC, &t_end[65] ); pthread_create( &Threads[ 65 ], &attr, spawn_function, NULL);
 	clock_gettime(CLOCK_MONOTONIC, &t_end[66] ); pthread_create( &Threads[ 66 ], &attr, spawn_function, NULL);
 	clock_gettime(CLOCK_MONOTONIC, &t_end[67] ); pthread_create( &Threads[ 67 ], &attr, spawn_function, NULL);
@@ -193,9 +206,9 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_end[123] ); pthread_create( &Threads[ 123 ], &attr, spawn_function, NULL);
 	clock_gettime(CLOCK_MONOTONIC, &t_end[124] ); pthread_create( &Threads[ 124 ], &attr, spawn_function, NULL);
 	clock_gettime(CLOCK_MONOTONIC, &t_end[125] ); pthread_create( &Threads[ 125 ], &attr, spawn_function, NULL);
-	clock_gettime(CLOCK_MONOTONIC, &t_end[126] ); pthread_create( &Threads[ 126 ], &attr, spawn_function, NULL);
-	clock_gettime(CLOCK_MONOTONIC, &t_end[127] ); pthread_create( &Threads[ 127 ], &attr, spawn_function, NULL);
-	clock_gettime(CLOCK_MONOTONIC, &t_end[128] ); pthread_create( &Threads[ 128 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[126] ); pthread_create( &Threads[ 126 ], &attr, spawn_function, NULL); if( (PTH-127) <= 0){ goto end; }
+	clock_gettime(CLOCK_MONOTONIC, &t_end[127] ); pthread_create( &Threads[ 127 ], &attr, spawn_function, NULL); if( (PTH-128) <= 0){ goto end; }
+	clock_gettime(CLOCK_MONOTONIC, &t_end[128] ); pthread_create( &Threads[ 128 ], &attr, spawn_function, NULL); if( (PTH-129) <= 0){ goto end; }
 	clock_gettime(CLOCK_MONOTONIC, &t_end[129] ); pthread_create( &Threads[ 129 ], &attr, spawn_function, NULL); // 130
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end[130] ); pthread_create( &Threads[ 130 ], &attr, spawn_function, NULL);
@@ -334,9 +347,9 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_end[251] ); pthread_create( &Threads[ 251 ], &attr, spawn_function, NULL);
 	clock_gettime(CLOCK_MONOTONIC, &t_end[252] ); pthread_create( &Threads[ 252 ], &attr, spawn_function, NULL);
 	clock_gettime(CLOCK_MONOTONIC, &t_end[253] ); pthread_create( &Threads[ 253 ], &attr, spawn_function, NULL);
-	clock_gettime(CLOCK_MONOTONIC, &t_end[254] ); pthread_create( &Threads[ 254 ], &attr, spawn_function, NULL);
-	clock_gettime(CLOCK_MONOTONIC, &t_end[255] ); pthread_create( &Threads[ 255 ], &attr, spawn_function, NULL);
-	clock_gettime(CLOCK_MONOTONIC, &t_end[256] ); pthread_create( &Threads[ 256 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[254] ); pthread_create( &Threads[ 254 ], &attr, spawn_function, NULL); if( (PTH-255) <= 0){ goto end; }
+	clock_gettime(CLOCK_MONOTONIC, &t_end[255] ); pthread_create( &Threads[ 255 ], &attr, spawn_function, NULL); if( (PTH-256) <= 0){ goto end; }
+	clock_gettime(CLOCK_MONOTONIC, &t_end[256] ); pthread_create( &Threads[ 256 ], &attr, spawn_function, NULL); if( (PTH-257) <= 0){ goto end; }
 	clock_gettime(CLOCK_MONOTONIC, &t_end[257] ); pthread_create( &Threads[ 257 ], &attr, spawn_function, NULL);
 	clock_gettime(CLOCK_MONOTONIC, &t_end[258] ); pthread_create( &Threads[ 258 ], &attr, spawn_function, NULL);
 	clock_gettime(CLOCK_MONOTONIC, &t_end[259] ); pthread_create( &Threads[ 259 ], &attr, spawn_function, NULL); // 260
@@ -352,10 +365,43 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_end[268] ); pthread_create( &Threads[ 268 ], &attr, spawn_function, NULL);
 	clock_gettime(CLOCK_MONOTONIC, &t_end[269] ); pthread_create( &Threads[ 269 ], &attr, spawn_function, NULL); // 270
 
-	clock_gettime(CLOCK_MONOTONIC, &t_end[270] ); pthread_create( &Threads[ 270 ], &attr, spawn_function, NULL);
-	// clock_gettime(CLOCK_MONOTONIC, &t_end[271] ); pthread_create( &Threads[ 271 ], &attr, spawn_function, NULL); // 272
-	// clock_gettime(CLOCK_MONOTONIC, &t_end[272] ); pthread_create( &Threads[ 272 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[270] ); pthread_create( &Threads[ 270 ], &attr, spawn_function, NULL); if( (PTH-271) <= 0){ goto end; }
+	clock_gettime(CLOCK_MONOTONIC, &t_end[271] ); pthread_create( &Threads[ 271 ], &attr, spawn_function, NULL); if( (PTH-272) <= 0){ goto end; }
+	clock_gettime(CLOCK_MONOTONIC, &t_end[272] ); pthread_create( &Threads[ 272 ], &attr, spawn_function, NULL); if( (PTH-273) <= 0){ goto end; }
+	clock_gettime(CLOCK_MONOTONIC, &t_end[273] ); pthread_create( &Threads[ 273 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[274] ); pthread_create( &Threads[ 274 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[275] ); pthread_create( &Threads[ 275 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[276] ); pthread_create( &Threads[ 276 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[277] ); pthread_create( &Threads[ 277 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[278] ); pthread_create( &Threads[ 278 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[279] ); pthread_create( &Threads[ 279 ], &attr, spawn_function, NULL); // 280
 
+	clock_gettime(CLOCK_MONOTONIC, &t_end[280] ); pthread_create( &Threads[ 280 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[281] ); pthread_create( &Threads[ 281 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[282] ); pthread_create( &Threads[ 282 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[283] ); pthread_create( &Threads[ 283 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[284] ); pthread_create( &Threads[ 284 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[285] ); pthread_create( &Threads[ 285 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[286] ); pthread_create( &Threads[ 286 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[287] ); pthread_create( &Threads[ 287 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[288] ); pthread_create( &Threads[ 288 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[289] ); pthread_create( &Threads[ 289 ], &attr, spawn_function, NULL); // 290
+
+	clock_gettime(CLOCK_MONOTONIC, &t_end[290] ); pthread_create( &Threads[ 290 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[291] ); pthread_create( &Threads[ 291 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[292] ); pthread_create( &Threads[ 292 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[293] ); pthread_create( &Threads[ 293 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[294] ); pthread_create( &Threads[ 294 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[295] ); pthread_create( &Threads[ 295 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[296] ); pthread_create( &Threads[ 296 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[297] ); pthread_create( &Threads[ 297 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[298] ); pthread_create( &Threads[ 298 ], &attr, spawn_function, NULL);
+	clock_gettime(CLOCK_MONOTONIC, &t_end[299] ); pthread_create( &Threads[ 299 ], &attr, spawn_function, NULL);  if( (PTH-300) <= 0){ goto end; } // 300
+
+	clock_gettime(CLOCK_MONOTONIC, &t_end[300] ); pthread_create( &Threads[ 300 ], &attr, spawn_function, NULL); // 301
+
+
+end:
 
 	// each thread waits until all threads have hit the barrier, then they all return
 	pthread_barrier_wait(&sync_barrier);
