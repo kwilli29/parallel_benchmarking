@@ -388,339 +388,339 @@ int main(int argc, char *argv[]){
 	/****/
 	struct timespec* temp = (struct timespec *)&t_end[0];
 
-	pthread_join( Threads[ 0 ], (void *)&temp); temp = &t_end[1]; if(PTH-1 <= 0){ goto end; }
-	pthread_join( Threads[ 1 ], (void *)&temp); temp = &t_end[2]; if(PTH-2 <= 0){ goto end; }
-	pthread_join( Threads[ 2 ], (void *)&temp); temp = &t_end[3]; if(PTH-3 <= 0){ goto end; }
-	pthread_join( Threads[ 3 ], (void *)&temp); temp = &t_end[4]; if(PTH-4 <= 0){ goto end; }
-	pthread_join( Threads[ 4 ], (void *)&temp); temp = &t_end[5]; if(PTH-5 <= 0){ goto end; }
-	pthread_join( Threads[ 5 ], (void *)&temp); temp = &t_end[6]; if(PTH-6 <= 0){ goto end; }
-	pthread_join( Threads[ 6 ], (void *)&temp); temp = &t_end[7]; if(PTH-7 <= 0){ goto end; }
-	pthread_join( Threads[ 7 ], (void *)&temp); temp = &t_end[8]; if(PTH-8 <= 0){ goto end; }
-	pthread_join( Threads[ 8 ], (void *)&temp); temp = &t_end[9]; if(PTH-9 <= 0){ goto end; }
-	pthread_join( Threads[ 9 ], (void *)&temp); temp = &t_end[10]; if(PTH-10 <= 0){ goto end; } // 10
+if(PTH-1 >= 0){ pthread_join( Threads[ 0 ], (void *)&temp); temp = &t_end[0]; }
+	if(PTH-2 >= 0){ pthread_join( Threads[ 1 ], (void *)&temp); temp = &t_end[1]; }
+	if(PTH-3 >= 0){ pthread_join( Threads[ 2 ], (void *)&temp); temp = &t_end[2]; }
+	if(PTH-4 >= 0){ pthread_join( Threads[ 3 ], (void *)&temp); temp = &t_end[3]; }
+	if(PTH-5 >= 0){ pthread_join( Threads[ 4 ], (void *)&temp); temp = &t_end[4]; }
+	if(PTH-6 >= 0){ pthread_join( Threads[ 5 ], (void *)&temp); temp = &t_end[5]; }
+	if(PTH-7 >= 0){ pthread_join( Threads[ 6 ], (void *)&temp); temp = &t_end[6]; }
+	if(PTH-8 >= 0){ pthread_join( Threads[ 7 ], (void *)&temp); temp = &t_end[7]; }
+	if(PTH-9 >= 0){ pthread_join( Threads[ 8 ], (void *)&temp); temp = &t_end[8]; } 
+	if(PTH-10 >= 0){ pthread_join( Threads[ 9 ], (void *)&temp); temp = &t_end[9]; } // 10
 
-	pthread_join( Threads[ 10 ], (void *)&temp); temp = &t_end[11]; if(PTH-11 <= 0){ goto end; }
-	pthread_join( Threads[ 11 ], (void *)&temp); temp = &t_end[12]; if(PTH-12 <= 0){ goto end; }
-	pthread_join( Threads[ 12 ], (void *)&temp); temp = &t_end[13]; if(PTH-13 <= 0){ goto end; }
-	pthread_join( Threads[ 13 ], (void *)&temp); temp = &t_end[14]; if(PTH-14 <= 0){ goto end; }
-	pthread_join( Threads[ 14 ], (void *)&temp); temp = &t_end[15]; if(PTH-15 <= 0){ goto end; }
-	pthread_join( Threads[ 15 ], (void *)&temp); temp = &t_end[16]; if(PTH-16 <= 0){ goto end; }
-	pthread_join( Threads[ 16 ], (void *)&temp); temp = &t_end[17]; if(PTH-17 <= 0){ goto end; }
-	pthread_join( Threads[ 17 ], (void *)&temp); temp = &t_end[18]; if(PTH-18 <= 0){ goto end; }
-	pthread_join( Threads[ 18 ], (void *)&temp); temp = &t_end[19]; if(PTH-19 <= 0){ goto end; }
-	pthread_join( Threads[ 19 ], (void *)&temp); temp = &t_end[20]; if(PTH-20 <= 0){ goto end; } // 20
+	if(PTH-11 >= 0){ pthread_join( Threads[ 10 ], (void *)&temp); temp = &t_end[10]; }
+	if(PTH-12 >= 0){ pthread_join( Threads[ 11 ], (void *)&temp); temp = &t_end[11]; }
+	if(PTH-13 >= 0){ pthread_join( Threads[ 12 ], (void *)&temp); temp = &t_end[12]; }
+	if(PTH-14 >= 0){ pthread_join( Threads[ 13 ], (void *)&temp); temp = &t_end[13]; }
+	if(PTH-15 >= 0){ pthread_join( Threads[ 14 ], (void *)&temp); temp = &t_end[14]; }
+	if(PTH-16 >= 0){ pthread_join( Threads[ 15 ], (void *)&temp); temp = &t_end[15]; }
+	if(PTH-17 >= 0){ pthread_join( Threads[ 16 ], (void *)&temp); temp = &t_end[16]; }
+	if(PTH-18 >= 0){ pthread_join( Threads[ 17 ], (void *)&temp); temp = &t_end[17]; }
+	if(PTH-19 >= 0){ pthread_join( Threads[ 18 ], (void *)&temp); temp = &t_end[18]; }
+	if(PTH-20 >= 0){ pthread_join( Threads[ 19 ], (void *)&temp); temp = &t_end[19]; } // 20
 
-	pthread_join( Threads[ 20 ], (void *)&temp); temp = &t_end[21]; if(PTH-21 <= 0){ goto end; }
-	pthread_join( Threads[ 21 ], (void *)&temp); temp = &t_end[22]; if(PTH-22 <= 0){ goto end; }
-	pthread_join( Threads[ 22 ], (void *)&temp); temp = &t_end[23]; if(PTH-23 <= 0){ goto end; }
-	pthread_join( Threads[ 23 ], (void *)&temp); temp = &t_end[24]; if(PTH-24 <= 0){ goto end; }
-	pthread_join( Threads[ 24 ], (void *)&temp); temp = &t_end[25]; if(PTH-25 <= 0){ goto end; }
-	pthread_join( Threads[ 25 ], (void *)&temp); temp = &t_end[26]; if(PTH-26 <= 0){ goto end; }
-	pthread_join( Threads[ 26 ], (void *)&temp); temp = &t_end[27]; if(PTH-27 <= 0){ goto end; }
-	pthread_join( Threads[ 27 ], (void *)&temp); temp = &t_end[28]; if(PTH-28 <= 0){ goto end; }
-	pthread_join( Threads[ 28 ], (void *)&temp); temp = &t_end[29]; if(PTH-29 <= 0){ goto end; }
-	pthread_join( Threads[ 29 ], (void *)&temp); temp = &t_end[30]; if(PTH-30 <= 0){ goto end; } // 30
+	if(PTH-21 >= 0){ pthread_join( Threads[ 20 ], (void *)&temp); temp = &t_end[20]; }
+	if(PTH-22 >= 0){ pthread_join( Threads[ 21 ], (void *)&temp); temp = &t_end[21]; }
+	if(PTH-23 >= 0){ pthread_join( Threads[ 22 ], (void *)&temp); temp = &t_end[22]; }
+	if(PTH-24 >= 0){ pthread_join( Threads[ 23 ], (void *)&temp); temp = &t_end[23]; }
+	if(PTH-25 >= 0){ pthread_join( Threads[ 24 ], (void *)&temp); temp = &t_end[24]; }
+	if(PTH-26 >= 0){ pthread_join( Threads[ 25 ], (void *)&temp); temp = &t_end[25]; }
+	if(PTH-27 >= 0){ pthread_join( Threads[ 26 ], (void *)&temp); temp = &t_end[26]; }
+	if(PTH-28 >= 0){ pthread_join( Threads[ 27 ], (void *)&temp); temp = &t_end[27]; }
+	if(PTH-29 >= 0){ pthread_join( Threads[ 28 ], (void *)&temp); temp = &t_end[28]; }
+	if(PTH-30 >= 0){ pthread_join( Threads[ 29 ], (void *)&temp); temp = &t_end[29]; } // 30
 
-	pthread_join( Threads[ 30 ], (void *)&temp); temp = &t_end[31]; if(PTH-31 <= 0){ goto end; }
-	pthread_join( Threads[ 31 ], (void *)&temp); temp = &t_end[32]; if(PTH-32 <= 0){ goto end; }
-	pthread_join( Threads[ 32 ], (void *)&temp); temp = &t_end[33]; if(PTH-33 <= 0){ goto end; }
-	pthread_join( Threads[ 33 ], (void *)&temp); temp = &t_end[34]; if(PTH-34 <= 0){ goto end; }
-	pthread_join( Threads[ 34 ], (void *)&temp); temp = &t_end[35]; if(PTH-35 <= 0){ goto end; }
-	pthread_join( Threads[ 35 ], (void *)&temp); temp = &t_end[36]; if(PTH-36 <= 0){ goto end; }
-	pthread_join( Threads[ 36 ], (void *)&temp); temp = &t_end[37]; if(PTH-37 <= 0){ goto end; }
-	pthread_join( Threads[ 37 ], (void *)&temp); temp = &t_end[38]; if(PTH-38 <= 0){ goto end; }
-	pthread_join( Threads[ 38 ], (void *)&temp); temp = &t_end[39]; if(PTH-39 <= 0){ goto end; }
-	pthread_join( Threads[ 39 ], (void *)&temp); temp = &t_end[40]; if(PTH-40 <= 0){ goto end; } // 40
+	if(PTH-31 >= 0){ pthread_join( Threads[ 30 ], (void *)&temp); temp = &t_end[30]; }
+	if(PTH-32 >= 0){ pthread_join( Threads[ 31 ], (void *)&temp); temp = &t_end[31]; }
+	if(PTH-33 >= 0){ pthread_join( Threads[ 32 ], (void *)&temp); temp = &t_end[32]; }
+	if(PTH-34 >= 0){ pthread_join( Threads[ 33 ], (void *)&temp); temp = &t_end[33]; }
+	if(PTH-35 >= 0){ pthread_join( Threads[ 34 ], (void *)&temp); temp = &t_end[34]; }
+	if(PTH-36 >= 0){ pthread_join( Threads[ 35 ], (void *)&temp); temp = &t_end[35]; }
+	if(PTH-37 >= 0){ pthread_join( Threads[ 36 ], (void *)&temp); temp = &t_end[36]; }
+	if(PTH-38 >= 0){ pthread_join( Threads[ 37 ], (void *)&temp); temp = &t_end[37]; }
+	if(PTH-39 >= 0){ pthread_join( Threads[ 38 ], (void *)&temp); temp = &t_end[38]; }
+	if(PTH-40 >= 0){ pthread_join( Threads[ 39 ], (void *)&temp); temp = &t_end[39]; } // 40
 
-	pthread_join( Threads[ 40 ], (void *)&temp); temp = &t_end[41]; if(PTH-41 <= 0){ goto end; }
-	pthread_join( Threads[ 41 ], (void *)&temp); temp = &t_end[42]; if(PTH-42 <= 0){ goto end; }
-	pthread_join( Threads[ 42 ], (void *)&temp); temp = &t_end[43]; if(PTH-43 <= 0){ goto end; }
-	pthread_join( Threads[ 43 ], (void *)&temp); temp = &t_end[44]; if(PTH-44 <= 0){ goto end; }
-	pthread_join( Threads[ 44 ], (void *)&temp); temp = &t_end[45]; if(PTH-45 <= 0){ goto end; }
-	pthread_join( Threads[ 45 ], (void *)&temp); temp = &t_end[46]; if(PTH-46 <= 0){ goto end; }
-	pthread_join( Threads[ 46 ], (void *)&temp); temp = &t_end[47]; if(PTH-47 <= 0){ goto end; }
-	pthread_join( Threads[ 47 ], (void *)&temp); temp = &t_end[48]; if(PTH-48 <= 0){ goto end; }
-	pthread_join( Threads[ 48 ], (void *)&temp); temp = &t_end[49]; if(PTH-49 <= 0){ goto end; }
-	pthread_join( Threads[ 49 ], (void *)&temp); temp = &t_end[50]; if(PTH-50 <= 0){ goto end; } // 50
+	if(PTH-41 >= 0){ pthread_join( Threads[ 40 ], (void *)&temp); temp = &t_end[40]; }
+	if(PTH-42 >= 0){ pthread_join( Threads[ 41 ], (void *)&temp); temp = &t_end[41]; }
+	if(PTH-43 >= 0){ pthread_join( Threads[ 42 ], (void *)&temp); temp = &t_end[42]; }
+	if(PTH-44 >= 0){ pthread_join( Threads[ 43 ], (void *)&temp); temp = &t_end[43]; }
+	if(PTH-45 >= 0){ pthread_join( Threads[ 44 ], (void *)&temp); temp = &t_end[44]; }
+	if(PTH-46 >= 0){ pthread_join( Threads[ 45 ], (void *)&temp); temp = &t_end[45]; }
+	if(PTH-47 >= 0){ pthread_join( Threads[ 46 ], (void *)&temp); temp = &t_end[46]; }
+	if(PTH-48 >= 0){ pthread_join( Threads[ 47 ], (void *)&temp); temp = &t_end[47]; }
+	if(PTH-49 >= 0){ pthread_join( Threads[ 48 ], (void *)&temp); temp = &t_end[48]; }
+	if(PTH-50 >= 0){ pthread_join( Threads[ 49 ], (void *)&temp); temp = &t_end[49]; } // 50
 
-	pthread_join( Threads[ 50 ], (void *)&temp); temp = &t_end[51]; if(PTH-51 <= 0){ goto end; }
-	pthread_join( Threads[ 51 ], (void *)&temp); temp = &t_end[52]; if(PTH-52 <= 0){ goto end; }
-	pthread_join( Threads[ 52 ], (void *)&temp); temp = &t_end[53]; if(PTH-53 <= 0){ goto end; }
-	pthread_join( Threads[ 53 ], (void *)&temp); temp = &t_end[54]; if(PTH-54 <= 0){ goto end; }
-	pthread_join( Threads[ 54 ], (void *)&temp); temp = &t_end[55]; if(PTH-55 <= 0){ goto end; }
-	pthread_join( Threads[ 55 ], (void *)&temp); temp = &t_end[56]; if(PTH-56 <= 0){ goto end; }
-	pthread_join( Threads[ 56 ], (void *)&temp); temp = &t_end[57]; if(PTH-57 <= 0){ goto end; }
-	pthread_join( Threads[ 57 ], (void *)&temp); temp = &t_end[58]; if(PTH-58 <= 0){ goto end; }
-	pthread_join( Threads[ 58 ], (void *)&temp); temp = &t_end[59]; if(PTH-59 <= 0){ goto end; }
-	pthread_join( Threads[ 59 ], (void *)&temp); temp = &t_end[60]; if(PTH-60 <= 0){ goto end; } // 60
+	if(PTH-51 >= 0){ pthread_join( Threads[ 50 ], (void *)&temp); temp = &t_end[50]; }
+	if(PTH-52 >= 0){ pthread_join( Threads[ 51 ], (void *)&temp); temp = &t_end[51]; }
+	if(PTH-53 >= 0){ pthread_join( Threads[ 52 ], (void *)&temp); temp = &t_end[52]; }
+	if(PTH-54 >= 0){ pthread_join( Threads[ 53 ], (void *)&temp); temp = &t_end[53]; }
+	if(PTH-55 >= 0){ pthread_join( Threads[ 54 ], (void *)&temp); temp = &t_end[54]; }
+	if(PTH-56 >= 0){ pthread_join( Threads[ 55 ], (void *)&temp); temp = &t_end[55]; }
+	if(PTH-57 >= 0){ pthread_join( Threads[ 56 ], (void *)&temp); temp = &t_end[56]; }
+	if(PTH-58 >= 0){ pthread_join( Threads[ 57 ], (void *)&temp); temp = &t_end[57]; }
+	if(PTH-59 >= 0){ pthread_join( Threads[ 58 ], (void *)&temp); temp = &t_end[58]; }
+	if(PTH-60 >= 0){ pthread_join( Threads[ 59 ], (void *)&temp); temp = &t_end[59]; } // 60
 
-	pthread_join( Threads[ 60 ], (void *)&temp); temp = &t_end[61]; if(PTH-61 <= 0){ goto end; }
-	pthread_join( Threads[ 61 ], (void *)&temp); temp = &t_end[62]; if(PTH-62 <= 0){ goto end; }
-	pthread_join( Threads[ 62 ], (void *)&temp); temp = &t_end[63]; if(PTH-63 <= 0){ goto end; }
-	pthread_join( Threads[ 63 ], (void *)&temp); temp = &t_end[64]; if(PTH-64 <= 0){ goto end; }
-	pthread_join( Threads[ 64 ], (void *)&temp); temp = &t_end[65]; if(PTH-65 <= 0){ goto end; }
-	pthread_join( Threads[ 65 ], (void *)&temp); temp = &t_end[66]; if(PTH-66 <= 0){ goto end; }
-	pthread_join( Threads[ 66 ], (void *)&temp); temp = &t_end[67]; if(PTH-67 <= 0){ goto end; }
-	pthread_join( Threads[ 67 ], (void *)&temp); temp = &t_end[68]; if(PTH-68 <= 0){ goto end; }
-	pthread_join( Threads[ 68 ], (void *)&temp); temp = &t_end[69]; if(PTH-69 <= 0){ goto end; }
-	pthread_join( Threads[ 69 ], (void *)&temp); temp = &t_end[70]; if(PTH-70 <= 0){ goto end; } // 70
+	if(PTH-61 >= 0){ pthread_join( Threads[ 60 ], (void *)&temp); temp = &t_end[60]; }
+	if(PTH-62 >= 0){ pthread_join( Threads[ 61 ], (void *)&temp); temp = &t_end[61]; }
+	if(PTH-63 >= 0){ pthread_join( Threads[ 62 ], (void *)&temp); temp = &t_end[62]; }
+	if(PTH-64 >= 0){ pthread_join( Threads[ 63 ], (void *)&temp); temp = &t_end[63]; }
+	if(PTH-65 >= 0){ pthread_join( Threads[ 64 ], (void *)&temp); temp = &t_end[64]; }
+	if(PTH-66 >= 0){ pthread_join( Threads[ 65 ], (void *)&temp); temp = &t_end[65]; }
+	if(PTH-67 >= 0){ pthread_join( Threads[ 66 ], (void *)&temp); temp = &t_end[66]; }
+	if(PTH-68 >= 0){ pthread_join( Threads[ 67 ], (void *)&temp); temp = &t_end[67]; }
+	if(PTH-69 >= 0){ pthread_join( Threads[ 68 ], (void *)&temp); temp = &t_end[68]; }
+	if(PTH-70 >= 0){ pthread_join( Threads[ 69 ], (void *)&temp); temp = &t_end[69]; } // 70
 
-	pthread_join( Threads[ 70 ], (void *)&temp); temp = &t_end[71]; if(PTH-71 <= 0){ goto end; }
-	pthread_join( Threads[ 71 ], (void *)&temp); temp = &t_end[72]; if(PTH-72 <= 0){ goto end; }
-	pthread_join( Threads[ 72 ], (void *)&temp); temp = &t_end[73]; if(PTH-73 <= 0){ goto end; }
-	pthread_join( Threads[ 73 ], (void *)&temp); temp = &t_end[74]; if(PTH-74 <= 0){ goto end; }
-	pthread_join( Threads[ 74 ], (void *)&temp); temp = &t_end[75]; if(PTH-75 <= 0){ goto end; }
-	pthread_join( Threads[ 75 ], (void *)&temp); temp = &t_end[76]; if(PTH-76 <= 0){ goto end; }
-	pthread_join( Threads[ 76 ], (void *)&temp); temp = &t_end[77]; if(PTH-77 <= 0){ goto end; }
-	pthread_join( Threads[ 77 ], (void *)&temp); temp = &t_end[78]; if(PTH-78 <= 0){ goto end; }
-	pthread_join( Threads[ 78 ], (void *)&temp); temp = &t_end[79]; if(PTH-79 <= 0){ goto end; }
-	pthread_join( Threads[ 79 ], (void *)&temp); temp = &t_end[80]; if(PTH-80 <= 0){ goto end; } // 80
+	if(PTH-71 >= 0){ pthread_join( Threads[ 70 ], (void *)&temp); temp = &t_end[70]; }
+	if(PTH-72 >= 0){ pthread_join( Threads[ 71 ], (void *)&temp); temp = &t_end[71]; }
+	if(PTH-73 >= 0){ pthread_join( Threads[ 72 ], (void *)&temp); temp = &t_end[72]; }
+	if(PTH-74 >= 0){ pthread_join( Threads[ 73 ], (void *)&temp); temp = &t_end[73]; }
+	if(PTH-75 >= 0){ pthread_join( Threads[ 74 ], (void *)&temp); temp = &t_end[74]; }
+	if(PTH-76 >= 0){ pthread_join( Threads[ 75 ], (void *)&temp); temp = &t_end[75]; }
+	if(PTH-77 >= 0){ pthread_join( Threads[ 76 ], (void *)&temp); temp = &t_end[76]; }
+	if(PTH-78 >= 0){ pthread_join( Threads[ 77 ], (void *)&temp); temp = &t_end[77]; }
+	if(PTH-79 >= 0){ pthread_join( Threads[ 78 ], (void *)&temp); temp = &t_end[78]; }
+	if(PTH-80 >= 0){ pthread_join( Threads[ 79 ], (void *)&temp); temp = &t_end[79]; } // 80
 
-	pthread_join( Threads[ 80 ], (void *)&temp); temp = &t_end[81]; if(PTH-81 <= 0){ goto end; }
-	pthread_join( Threads[ 81 ], (void *)&temp); temp = &t_end[82]; if(PTH-82 <= 0){ goto end; }
-	pthread_join( Threads[ 82 ], (void *)&temp); temp = &t_end[83]; if(PTH-83 <= 0){ goto end; }
-	pthread_join( Threads[ 83 ], (void *)&temp); temp = &t_end[84]; if(PTH-84 <= 0){ goto end; }
-	pthread_join( Threads[ 84 ], (void *)&temp); temp = &t_end[85]; if(PTH-85 <= 0){ goto end; }
-	pthread_join( Threads[ 85 ], (void *)&temp); temp = &t_end[86]; if(PTH-86 <= 0){ goto end; }
-	pthread_join( Threads[ 86 ], (void *)&temp); temp = &t_end[87]; if(PTH-87 <= 0){ goto end; }
-	pthread_join( Threads[ 87 ], (void *)&temp); temp = &t_end[88]; if(PTH-88 <= 0){ goto end; }
-	pthread_join( Threads[ 88 ], (void *)&temp); temp = &t_end[89]; if(PTH-89 <= 0){ goto end; }
-	pthread_join( Threads[ 89 ], (void *)&temp); temp = &t_end[90]; if(PTH-90 <= 0){ goto end; } // 90
+	if(PTH-81 >= 0){ pthread_join( Threads[ 80 ], (void *)&temp); temp = &t_end[80]; }
+	if(PTH-82 >= 0){ pthread_join( Threads[ 81 ], (void *)&temp); temp = &t_end[81]; }
+	if(PTH-83 >= 0){ pthread_join( Threads[ 82 ], (void *)&temp); temp = &t_end[82]; }
+	if(PTH-84 >= 0){ pthread_join( Threads[ 83 ], (void *)&temp); temp = &t_end[83]; }
+	if(PTH-85 >= 0){ pthread_join( Threads[ 84 ], (void *)&temp); temp = &t_end[84]; }
+	if(PTH-86 >= 0){ pthread_join( Threads[ 85 ], (void *)&temp); temp = &t_end[85]; }
+	if(PTH-87 >= 0){ pthread_join( Threads[ 86 ], (void *)&temp); temp = &t_end[86]; }
+	if(PTH-88 >= 0){ pthread_join( Threads[ 87 ], (void *)&temp); temp = &t_end[87]; }
+	if(PTH-89 >= 0){ pthread_join( Threads[ 88 ], (void *)&temp); temp = &t_end[88]; }
+	if(PTH-90 >= 0){ pthread_join( Threads[ 89 ], (void *)&temp); temp = &t_end[89]; } // 90
 
-	pthread_join( Threads[ 90 ], (void *)&temp); temp = &t_end[91]; if(PTH-91 <= 0){ goto end; }
-	pthread_join( Threads[ 91 ], (void *)&temp); temp = &t_end[92]; if(PTH-92 <= 0){ goto end; }
-	pthread_join( Threads[ 92 ], (void *)&temp); temp = &t_end[93]; if(PTH-93 <= 0){ goto end; }
-	pthread_join( Threads[ 93 ], (void *)&temp); temp = &t_end[94]; if(PTH-94 <= 0){ goto end; }
-	pthread_join( Threads[ 94 ], (void *)&temp); temp = &t_end[95]; if(PTH-95 <= 0){ goto end; }
-	pthread_join( Threads[ 95 ], (void *)&temp); temp = &t_end[96]; if(PTH-96 <= 0){ goto end; }
-	pthread_join( Threads[ 96 ], (void *)&temp); temp = &t_end[97]; if(PTH-97 <= 0){ goto end; }
-	pthread_join( Threads[ 97 ], (void *)&temp); temp = &t_end[98]; if(PTH-98 <= 0){ goto end; }
-	pthread_join( Threads[ 98 ], (void *)&temp); temp = &t_end[99]; if(PTH-99 <= 0){ goto end; }
-	pthread_join( Threads[ 99 ], (void *)&temp); temp = &t_end[100]; if(PTH-100 <= 0){ goto end; } // 100
+	if(PTH-91 >= 0){ pthread_join( Threads[ 90 ], (void *)&temp); temp = &t_end[90]; }
+	if(PTH-92 >= 0){ pthread_join( Threads[ 91 ], (void *)&temp); temp = &t_end[91]; }
+	if(PTH-93 >= 0){ pthread_join( Threads[ 92 ], (void *)&temp); temp = &t_end[92]; }
+	if(PTH-94 >= 0){ pthread_join( Threads[ 93 ], (void *)&temp); temp = &t_end[93]; }
+	if(PTH-95 >= 0){ pthread_join( Threads[ 94 ], (void *)&temp); temp = &t_end[94]; }
+	if(PTH-96 >= 0){ pthread_join( Threads[ 95 ], (void *)&temp); temp = &t_end[95]; }
+	if(PTH-97 >= 0){ pthread_join( Threads[ 96 ], (void *)&temp); temp = &t_end[96]; }
+	if(PTH-98 >= 0){ pthread_join( Threads[ 97 ], (void *)&temp); temp = &t_end[97]; }
+	if(PTH-99 >= 0){ pthread_join( Threads[ 98 ], (void *)&temp); temp = &t_end[98]; }
+	if(PTH-100 >= 0){ pthread_join( Threads[ 99 ], (void *)&temp); temp = &t_end[99]; } // 100
 
-	pthread_join( Threads[ 100 ], (void *)&temp); temp = &t_end[101]; if(PTH-101 <= 0){ goto end; }
-	pthread_join( Threads[ 101 ], (void *)&temp); temp = &t_end[102]; if(PTH-102 <= 0){ goto end; }
-	pthread_join( Threads[ 102 ], (void *)&temp); temp = &t_end[103]; if(PTH-103 <= 0){ goto end; }
-	pthread_join( Threads[ 103 ], (void *)&temp); temp = &t_end[104]; if(PTH-104 <= 0){ goto end; }
-	pthread_join( Threads[ 104 ], (void *)&temp); temp = &t_end[105]; if(PTH-105 <= 0){ goto end; }
-	pthread_join( Threads[ 105 ], (void *)&temp); temp = &t_end[106]; if(PTH-106 <= 0){ goto end; }
-	pthread_join( Threads[ 106 ], (void *)&temp); temp = &t_end[107]; if(PTH-107 <= 0){ goto end; }
-	pthread_join( Threads[ 107 ], (void *)&temp); temp = &t_end[108]; if(PTH-108 <= 0){ goto end; }
-	pthread_join( Threads[ 108 ], (void *)&temp); temp = &t_end[109]; if(PTH-109 <= 0){ goto end; }
-	pthread_join( Threads[ 109 ], (void *)&temp); temp = &t_end[110]; if(PTH-110 <= 0){ goto end; } // 110
+	if(PTH-101 >= 0){ pthread_join( Threads[ 100 ], (void *)&temp); temp = &t_end[100]; }
+	if(PTH-102 >= 0){ pthread_join( Threads[ 101 ], (void *)&temp); temp = &t_end[101]; }
+	if(PTH-103 >= 0){ pthread_join( Threads[ 102 ], (void *)&temp); temp = &t_end[102]; }
+	if(PTH-104 >= 0){ pthread_join( Threads[ 103 ], (void *)&temp); temp = &t_end[103]; }
+	if(PTH-105 >= 0){ pthread_join( Threads[ 104 ], (void *)&temp); temp = &t_end[104]; }
+	if(PTH-106 >= 0){ pthread_join( Threads[ 105 ], (void *)&temp); temp = &t_end[105]; }
+	if(PTH-107 >= 0){ pthread_join( Threads[ 106 ], (void *)&temp); temp = &t_end[106]; }
+	if(PTH-108 >= 0){ pthread_join( Threads[ 107 ], (void *)&temp); temp = &t_end[107]; }
+	if(PTH-109 >= 0){ pthread_join( Threads[ 108 ], (void *)&temp); temp = &t_end[108]; }
+	if(PTH-110 >= 0){ pthread_join( Threads[ 109 ], (void *)&temp); temp = &t_end[109]; } // 110
 
-	pthread_join( Threads[ 110 ], (void *)&temp); temp = &t_end[111]; if(PTH-111 <= 0){ goto end; }
-	pthread_join( Threads[ 111 ], (void *)&temp); temp = &t_end[112]; if(PTH-112 <= 0){ goto end; }
-	pthread_join( Threads[ 112 ], (void *)&temp); temp = &t_end[113]; if(PTH-113 <= 0){ goto end; }
-	pthread_join( Threads[ 113 ], (void *)&temp); temp = &t_end[114]; if(PTH-114 <= 0){ goto end; }
-	pthread_join( Threads[ 114 ], (void *)&temp); temp = &t_end[115]; if(PTH-115 <= 0){ goto end; }
-	pthread_join( Threads[ 115 ], (void *)&temp); temp = &t_end[116]; if(PTH-116 <= 0){ goto end; }
-	pthread_join( Threads[ 116 ], (void *)&temp); temp = &t_end[117]; if(PTH-117 <= 0){ goto end; }
-	pthread_join( Threads[ 117 ], (void *)&temp); temp = &t_end[118]; if(PTH-118 <= 0){ goto end; }
-	pthread_join( Threads[ 118 ], (void *)&temp); temp = &t_end[119]; if(PTH-119 <= 0){ goto end; }
-	pthread_join( Threads[ 119 ], (void *)&temp); temp = &t_end[120]; if(PTH-120 <= 0){ goto end; } // 120
+	if(PTH-111 >= 0){ pthread_join( Threads[ 110 ], (void *)&temp); temp = &t_end[110]; }
+	if(PTH-112 >= 0){ pthread_join( Threads[ 111 ], (void *)&temp); temp = &t_end[111]; }
+	if(PTH-113 >= 0){ pthread_join( Threads[ 112 ], (void *)&temp); temp = &t_end[112]; }
+	if(PTH-114 >= 0){ pthread_join( Threads[ 113 ], (void *)&temp); temp = &t_end[113]; }
+	if(PTH-115 >= 0){ pthread_join( Threads[ 114 ], (void *)&temp); temp = &t_end[114]; }
+	if(PTH-116 >= 0){ pthread_join( Threads[ 115 ], (void *)&temp); temp = &t_end[115]; }
+	if(PTH-117 >= 0){ pthread_join( Threads[ 116 ], (void *)&temp); temp = &t_end[116]; }
+	if(PTH-118 >= 0){ pthread_join( Threads[ 117 ], (void *)&temp); temp = &t_end[117]; }
+	if(PTH-119 >= 0){ pthread_join( Threads[ 118 ], (void *)&temp); temp = &t_end[118]; }
+	if(PTH-120 >= 0){ pthread_join( Threads[ 119 ], (void *)&temp); temp = &t_end[119]; } // 120
 
-	pthread_join( Threads[ 120 ], (void *)&temp); temp = &t_end[121]; if(PTH-121 <= 0){ goto end; }
-	pthread_join( Threads[ 121 ], (void *)&temp); temp = &t_end[122]; if(PTH-122 <= 0){ goto end; }
-	pthread_join( Threads[ 122 ], (void *)&temp); temp = &t_end[123]; if(PTH-123 <= 0){ goto end; }
-	pthread_join( Threads[ 123 ], (void *)&temp); temp = &t_end[124]; if(PTH-124 <= 0){ goto end; }
-	pthread_join( Threads[ 124 ], (void *)&temp); temp = &t_end[125]; if(PTH-125 <= 0){ goto end; }
-	pthread_join( Threads[ 125 ], (void *)&temp); temp = &t_end[126]; if(PTH-126 <= 0){ goto end; }
-	pthread_join( Threads[ 126 ], (void *)&temp); temp = &t_end[127]; if(PTH-127 <= 0){ goto end; }
-	pthread_join( Threads[ 127 ], (void *)&temp); temp = &t_end[128]; if(PTH-128 <= 0){ goto end; }
-	pthread_join( Threads[ 128 ], (void *)&temp); temp = &t_end[129]; if(PTH-129 <= 0){ goto end; }
-	pthread_join( Threads[ 129 ], (void *)&temp); temp = &t_end[130]; if(PTH-130 <= 0){ goto end; } // 130
+	if(PTH-121 >= 0){ pthread_join( Threads[ 120 ], (void *)&temp); temp = &t_end[120]; }
+	if(PTH-122 >= 0){ pthread_join( Threads[ 121 ], (void *)&temp); temp = &t_end[121]; }
+	if(PTH-123 >= 0){ pthread_join( Threads[ 122 ], (void *)&temp); temp = &t_end[122]; }
+	if(PTH-124 >= 0){ pthread_join( Threads[ 123 ], (void *)&temp); temp = &t_end[123]; }
+	if(PTH-125 >= 0){ pthread_join( Threads[ 124 ], (void *)&temp); temp = &t_end[124]; }
+	if(PTH-126 >= 0){ pthread_join( Threads[ 125 ], (void *)&temp); temp = &t_end[125]; }
+	if(PTH-127 >= 0){ pthread_join( Threads[ 126 ], (void *)&temp); temp = &t_end[126]; }
+	if(PTH-128 >= 0){ pthread_join( Threads[ 127 ], (void *)&temp); temp = &t_end[127]; }
+	if(PTH-129 >= 0){ pthread_join( Threads[ 128 ], (void *)&temp); temp = &t_end[128]; }
+	if(PTH-130 >= 0){ pthread_join( Threads[ 129 ], (void *)&temp); temp = &t_end[129]; } // 130
 
-	pthread_join( Threads[ 130 ], (void *)&temp); temp = &t_end[131]; if(PTH-131 <= 0){ goto end; }
-	pthread_join( Threads[ 131 ], (void *)&temp); temp = &t_end[132]; if(PTH-132 <= 0){ goto end; }
-	pthread_join( Threads[ 132 ], (void *)&temp); temp = &t_end[133]; if(PTH-133 <= 0){ goto end; }
-	pthread_join( Threads[ 133 ], (void *)&temp); temp = &t_end[134]; if(PTH-134 <= 0){ goto end; }
-	pthread_join( Threads[ 134 ], (void *)&temp); temp = &t_end[135]; if(PTH-135 <= 0){ goto end; }
-	pthread_join( Threads[ 135 ], (void *)&temp); temp = &t_end[136]; if(PTH-136 <= 0){ goto end; }
-	pthread_join( Threads[ 136 ], (void *)&temp); temp = &t_end[137]; if(PTH-137 <= 0){ goto end; }
-	pthread_join( Threads[ 137 ], (void *)&temp); temp = &t_end[138]; if(PTH-138 <= 0){ goto end; }
-	pthread_join( Threads[ 138 ], (void *)&temp); temp = &t_end[139]; if(PTH-139 <= 0){ goto end; }
-	pthread_join( Threads[ 139 ], (void *)&temp); temp = &t_end[140]; if(PTH-140 <= 0){ goto end; } // 140
+	if(PTH-131 >= 0){ pthread_join( Threads[ 130 ], (void *)&temp); temp = &t_end[130]; }
+	if(PTH-132 >= 0){ pthread_join( Threads[ 131 ], (void *)&temp); temp = &t_end[131]; }
+	if(PTH-133 >= 0){ pthread_join( Threads[ 132 ], (void *)&temp); temp = &t_end[132]; }
+	if(PTH-134 >= 0){ pthread_join( Threads[ 133 ], (void *)&temp); temp = &t_end[133]; }
+	if(PTH-135 >= 0){ pthread_join( Threads[ 134 ], (void *)&temp); temp = &t_end[134]; }
+	if(PTH-136 >= 0){ pthread_join( Threads[ 135 ], (void *)&temp); temp = &t_end[135]; }
+	if(PTH-137 >= 0){ pthread_join( Threads[ 136 ], (void *)&temp); temp = &t_end[136]; }
+	if(PTH-138 >= 0){ pthread_join( Threads[ 137 ], (void *)&temp); temp = &t_end[137]; }
+	if(PTH-139 >= 0){ pthread_join( Threads[ 138 ], (void *)&temp); temp = &t_end[138]; }
+	if(PTH-140 >= 0){ pthread_join( Threads[ 139 ], (void *)&temp); temp = &t_end[139]; } // 140
 
-	pthread_join( Threads[ 140 ], (void *)&temp); temp = &t_end[141]; if(PTH-141 <= 0){ goto end; }
-	pthread_join( Threads[ 141 ], (void *)&temp); temp = &t_end[142]; if(PTH-142 <= 0){ goto end; }
-	pthread_join( Threads[ 142 ], (void *)&temp); temp = &t_end[143]; if(PTH-143 <= 0){ goto end; }
-	pthread_join( Threads[ 143 ], (void *)&temp); temp = &t_end[144]; if(PTH-144 <= 0){ goto end; }
-	pthread_join( Threads[ 144 ], (void *)&temp); temp = &t_end[145]; if(PTH-145 <= 0){ goto end; }
-	pthread_join( Threads[ 145 ], (void *)&temp); temp = &t_end[146]; if(PTH-146 <= 0){ goto end; }
-	pthread_join( Threads[ 146 ], (void *)&temp); temp = &t_end[147]; if(PTH-147 <= 0){ goto end; }
-	pthread_join( Threads[ 147 ], (void *)&temp); temp = &t_end[148]; if(PTH-148 <= 0){ goto end; }
-	pthread_join( Threads[ 148 ], (void *)&temp); temp = &t_end[149]; if(PTH-149 <= 0){ goto end; }
-	pthread_join( Threads[ 149 ], (void *)&temp); temp = &t_end[150]; if(PTH-150 <= 0){ goto end; } // 150
+	if(PTH-141 >= 0){ pthread_join( Threads[ 140 ], (void *)&temp); temp = &t_end[140]; }
+	if(PTH-142 >= 0){ pthread_join( Threads[ 141 ], (void *)&temp); temp = &t_end[141]; }
+	if(PTH-143 >= 0){ pthread_join( Threads[ 142 ], (void *)&temp); temp = &t_end[142]; }
+	if(PTH-144 >= 0){ pthread_join( Threads[ 143 ], (void *)&temp); temp = &t_end[143]; }
+	if(PTH-145 >= 0){ pthread_join( Threads[ 144 ], (void *)&temp); temp = &t_end[144]; }
+	if(PTH-146 >= 0){ pthread_join( Threads[ 145 ], (void *)&temp); temp = &t_end[145]; }
+	if(PTH-147 >= 0){ pthread_join( Threads[ 146 ], (void *)&temp); temp = &t_end[146]; }
+	if(PTH-148 >= 0){ pthread_join( Threads[ 147 ], (void *)&temp); temp = &t_end[147]; }
+	if(PTH-149 >= 0){ pthread_join( Threads[ 148 ], (void *)&temp); temp = &t_end[148]; }
+	if(PTH-150 >= 0){ pthread_join( Threads[ 149 ], (void *)&temp); temp = &t_end[149]; } // 150
 
-	pthread_join( Threads[ 150 ], (void *)&temp); temp = &t_end[151]; if(PTH-151 <= 0){ goto end; }
-	pthread_join( Threads[ 151 ], (void *)&temp); temp = &t_end[152]; if(PTH-152 <= 0){ goto end; }
-	pthread_join( Threads[ 152 ], (void *)&temp); temp = &t_end[153]; if(PTH-153 <= 0){ goto end; }
-	pthread_join( Threads[ 153 ], (void *)&temp); temp = &t_end[154]; if(PTH-154 <= 0){ goto end; }
-	pthread_join( Threads[ 154 ], (void *)&temp); temp = &t_end[155]; if(PTH-155 <= 0){ goto end; }
-	pthread_join( Threads[ 155 ], (void *)&temp); temp = &t_end[156]; if(PTH-156 <= 0){ goto end; }
-	pthread_join( Threads[ 156 ], (void *)&temp); temp = &t_end[157]; if(PTH-157 <= 0){ goto end; }
-	pthread_join( Threads[ 157 ], (void *)&temp); temp = &t_end[158]; if(PTH-158 <= 0){ goto end; }
-	pthread_join( Threads[ 158 ], (void *)&temp); temp = &t_end[159]; if(PTH-159 <= 0){ goto end; }
-	pthread_join( Threads[ 159 ], (void *)&temp); temp = &t_end[160]; if(PTH-160 <= 0){ goto end; } // 160
+	if(PTH-151 >= 0){ pthread_join( Threads[ 150 ], (void *)&temp); temp = &t_end[150]; }
+	if(PTH-152 >= 0){ pthread_join( Threads[ 151 ], (void *)&temp); temp = &t_end[151]; }
+	if(PTH-153 >= 0){ pthread_join( Threads[ 152 ], (void *)&temp); temp = &t_end[152]; }
+	if(PTH-154 >= 0){ pthread_join( Threads[ 153 ], (void *)&temp); temp = &t_end[153]; }
+	if(PTH-155 >= 0){ pthread_join( Threads[ 154 ], (void *)&temp); temp = &t_end[154]; }
+	if(PTH-156 >= 0){ pthread_join( Threads[ 155 ], (void *)&temp); temp = &t_end[155]; }
+	if(PTH-157 >= 0){ pthread_join( Threads[ 156 ], (void *)&temp); temp = &t_end[156]; }
+	if(PTH-158 >= 0){ pthread_join( Threads[ 157 ], (void *)&temp); temp = &t_end[157]; }
+	if(PTH-159 >= 0){ pthread_join( Threads[ 158 ], (void *)&temp); temp = &t_end[158]; }
+	if(PTH-160 >= 0){ pthread_join( Threads[ 159 ], (void *)&temp); temp = &t_end[159]; } // 160
 
-	pthread_join( Threads[ 160 ], (void *)&temp); temp = &t_end[161]; if(PTH-161 <= 0){ goto end; }
-	pthread_join( Threads[ 161 ], (void *)&temp); temp = &t_end[162]; if(PTH-162 <= 0){ goto end; }
-	pthread_join( Threads[ 162 ], (void *)&temp); temp = &t_end[163]; if(PTH-163 <= 0){ goto end; }
-	pthread_join( Threads[ 163 ], (void *)&temp); temp = &t_end[164]; if(PTH-164 <= 0){ goto end; }
-	pthread_join( Threads[ 164 ], (void *)&temp); temp = &t_end[165]; if(PTH-165 <= 0){ goto end; }
-	pthread_join( Threads[ 165 ], (void *)&temp); temp = &t_end[166]; if(PTH-166 <= 0){ goto end; }
-	pthread_join( Threads[ 166 ], (void *)&temp); temp = &t_end[167]; if(PTH-167 <= 0){ goto end; }
-	pthread_join( Threads[ 167 ], (void *)&temp); temp = &t_end[168]; if(PTH-168 <= 0){ goto end; }
-	pthread_join( Threads[ 168 ], (void *)&temp); temp = &t_end[169]; if(PTH-169 <= 0){ goto end; }
-	pthread_join( Threads[ 169 ], (void *)&temp); temp = &t_end[170]; if(PTH-170 <= 0){ goto end; } // 170
+	if(PTH-161 >= 0){ pthread_join( Threads[ 160 ], (void *)&temp); temp = &t_end[160]; }
+	if(PTH-162 >= 0){ pthread_join( Threads[ 161 ], (void *)&temp); temp = &t_end[161]; }
+	if(PTH-163 >= 0){ pthread_join( Threads[ 162 ], (void *)&temp); temp = &t_end[162]; }
+	if(PTH-164 >= 0){ pthread_join( Threads[ 163 ], (void *)&temp); temp = &t_end[163]; }
+	if(PTH-165 >= 0){ pthread_join( Threads[ 164 ], (void *)&temp); temp = &t_end[164]; }
+	if(PTH-166 >= 0){ pthread_join( Threads[ 165 ], (void *)&temp); temp = &t_end[165]; }
+	if(PTH-167 >= 0){ pthread_join( Threads[ 166 ], (void *)&temp); temp = &t_end[166]; }
+	if(PTH-168 >= 0){ pthread_join( Threads[ 167 ], (void *)&temp); temp = &t_end[167]; }
+	if(PTH-169 >= 0){ pthread_join( Threads[ 168 ], (void *)&temp); temp = &t_end[168]; }
+	if(PTH-170 >= 0){ pthread_join( Threads[ 169 ], (void *)&temp); temp = &t_end[169]; } // 170
 
-	pthread_join( Threads[ 170 ], (void *)&temp); temp = &t_end[171]; if(PTH-171 <= 0){ goto end; }
-	pthread_join( Threads[ 171 ], (void *)&temp); temp = &t_end[172]; if(PTH-172 <= 0){ goto end; }
-	pthread_join( Threads[ 172 ], (void *)&temp); temp = &t_end[173]; if(PTH-173 <= 0){ goto end; }
-	pthread_join( Threads[ 173 ], (void *)&temp); temp = &t_end[174]; if(PTH-174 <= 0){ goto end; }
-	pthread_join( Threads[ 174 ], (void *)&temp); temp = &t_end[175]; if(PTH-175 <= 0){ goto end; }
-	pthread_join( Threads[ 175 ], (void *)&temp); temp = &t_end[176]; if(PTH-176 <= 0){ goto end; }
-	pthread_join( Threads[ 176 ], (void *)&temp); temp = &t_end[177]; if(PTH-177 <= 0){ goto end; }
-	pthread_join( Threads[ 177 ], (void *)&temp); temp = &t_end[178]; if(PTH-178 <= 0){ goto end; }
-	pthread_join( Threads[ 178 ], (void *)&temp); temp = &t_end[179]; if(PTH-179 <= 0){ goto end; }
-	pthread_join( Threads[ 179 ], (void *)&temp); temp = &t_end[180]; if(PTH-180 <= 0){ goto end; } // 180
+	if(PTH-171 >= 0){ pthread_join( Threads[ 170 ], (void *)&temp); temp = &t_end[170]; }
+	if(PTH-172 >= 0){ pthread_join( Threads[ 171 ], (void *)&temp); temp = &t_end[171]; }
+	if(PTH-173 >= 0){ pthread_join( Threads[ 172 ], (void *)&temp); temp = &t_end[172]; }
+	if(PTH-174 >= 0){ pthread_join( Threads[ 173 ], (void *)&temp); temp = &t_end[173]; }
+	if(PTH-175 >= 0){ pthread_join( Threads[ 174 ], (void *)&temp); temp = &t_end[174]; }
+	if(PTH-176 >= 0){ pthread_join( Threads[ 175 ], (void *)&temp); temp = &t_end[175]; }
+	if(PTH-177 >= 0){ pthread_join( Threads[ 176 ], (void *)&temp); temp = &t_end[176]; }
+	if(PTH-178 >= 0){ pthread_join( Threads[ 177 ], (void *)&temp); temp = &t_end[177]; }
+	if(PTH-179 >= 0){ pthread_join( Threads[ 178 ], (void *)&temp); temp = &t_end[178]; }
+	if(PTH-180 >= 0){ pthread_join( Threads[ 179 ], (void *)&temp); temp = &t_end[179]; } // 180
 
-	pthread_join( Threads[ 180 ], (void *)&temp); temp = &t_end[181]; if(PTH-181 <= 0){ goto end; }
-	pthread_join( Threads[ 181 ], (void *)&temp); temp = &t_end[182]; if(PTH-182 <= 0){ goto end; }
-	pthread_join( Threads[ 182 ], (void *)&temp); temp = &t_end[183]; if(PTH-183 <= 0){ goto end; }
-	pthread_join( Threads[ 183 ], (void *)&temp); temp = &t_end[184]; if(PTH-184 <= 0){ goto end; }
-	pthread_join( Threads[ 184 ], (void *)&temp); temp = &t_end[185]; if(PTH-185 <= 0){ goto end; }
-	pthread_join( Threads[ 185 ], (void *)&temp); temp = &t_end[186]; if(PTH-186 <= 0){ goto end; }
-	pthread_join( Threads[ 186 ], (void *)&temp); temp = &t_end[187]; if(PTH-187 <= 0){ goto end; }
-	pthread_join( Threads[ 187 ], (void *)&temp); temp = &t_end[188]; if(PTH-188 <= 0){ goto end; }
-	pthread_join( Threads[ 188 ], (void *)&temp); temp = &t_end[189]; if(PTH-189 <= 0){ goto end; }
-	pthread_join( Threads[ 189 ], (void *)&temp); temp = &t_end[190]; if(PTH-190 <= 0){ goto end; } // 190
+	if(PTH-181 >= 0){ pthread_join( Threads[ 180 ], (void *)&temp); temp = &t_end[180]; }
+	if(PTH-182 >= 0){ pthread_join( Threads[ 181 ], (void *)&temp); temp = &t_end[181]; }
+	if(PTH-183 >= 0){ pthread_join( Threads[ 182 ], (void *)&temp); temp = &t_end[182]; }
+	if(PTH-184 >= 0){ pthread_join( Threads[ 183 ], (void *)&temp); temp = &t_end[183]; }
+	if(PTH-185 >= 0){ pthread_join( Threads[ 184 ], (void *)&temp); temp = &t_end[184]; }
+	if(PTH-186 >= 0){ pthread_join( Threads[ 185 ], (void *)&temp); temp = &t_end[185]; }
+	if(PTH-187 >= 0){ pthread_join( Threads[ 186 ], (void *)&temp); temp = &t_end[186]; }
+	if(PTH-188 >= 0){ pthread_join( Threads[ 187 ], (void *)&temp); temp = &t_end[187]; }
+	if(PTH-189 >= 0){ pthread_join( Threads[ 188 ], (void *)&temp); temp = &t_end[188]; }
+	if(PTH-190 >= 0){ pthread_join( Threads[ 189 ], (void *)&temp); temp = &t_end[189]; } // 190
 
-	pthread_join( Threads[ 190 ], (void *)&temp); temp = &t_end[191]; if(PTH-191 <= 0){ goto end; }
-	pthread_join( Threads[ 191 ], (void *)&temp); temp = &t_end[192]; if(PTH-192 <= 0){ goto end; }
-	pthread_join( Threads[ 192 ], (void *)&temp); temp = &t_end[193]; if(PTH-193 <= 0){ goto end; }
-	pthread_join( Threads[ 193 ], (void *)&temp); temp = &t_end[194]; if(PTH-194 <= 0){ goto end; }
-	pthread_join( Threads[ 194 ], (void *)&temp); temp = &t_end[195]; if(PTH-195 <= 0){ goto end; }
-	pthread_join( Threads[ 195 ], (void *)&temp); temp = &t_end[196]; if(PTH-196 <= 0){ goto end; }
-	pthread_join( Threads[ 196 ], (void *)&temp); temp = &t_end[197]; if(PTH-197 <= 0){ goto end; }
-	pthread_join( Threads[ 197 ], (void *)&temp); temp = &t_end[198]; if(PTH-198 <= 0){ goto end; }
-	pthread_join( Threads[ 198 ], (void *)&temp); temp = &t_end[199]; if(PTH-199 <= 0){ goto end; }
-	pthread_join( Threads[ 199 ], (void *)&temp); temp = &t_end[200]; if(PTH-200 <= 0){ goto end; } // 200
+	if(PTH-191 >= 0){ pthread_join( Threads[ 190 ], (void *)&temp); temp = &t_end[190]; }
+	if(PTH-192 >= 0){ pthread_join( Threads[ 191 ], (void *)&temp); temp = &t_end[191]; }
+	if(PTH-193 >= 0){ pthread_join( Threads[ 192 ], (void *)&temp); temp = &t_end[192]; }
+	if(PTH-194 >= 0){ pthread_join( Threads[ 193 ], (void *)&temp); temp = &t_end[193]; }
+	if(PTH-195 >= 0){ pthread_join( Threads[ 194 ], (void *)&temp); temp = &t_end[194]; }
+	if(PTH-196 >= 0){ pthread_join( Threads[ 195 ], (void *)&temp); temp = &t_end[195]; }
+	if(PTH-197 >= 0){ pthread_join( Threads[ 196 ], (void *)&temp); temp = &t_end[196]; }
+	if(PTH-198 >= 0){ pthread_join( Threads[ 197 ], (void *)&temp); temp = &t_end[197]; }
+	if(PTH-199 >= 0){ pthread_join( Threads[ 198 ], (void *)&temp); temp = &t_end[198]; }
+	if(PTH-200 >= 0){ pthread_join( Threads[ 199 ], (void *)&temp); temp = &t_end[199]; } // 200
 
-	pthread_join( Threads[ 200 ], (void *)&temp); temp = &t_end[201]; if(PTH-201 <= 0){ goto end; }
-	pthread_join( Threads[ 201 ], (void *)&temp); temp = &t_end[202]; if(PTH-202 <= 0){ goto end; }
-	pthread_join( Threads[ 202 ], (void *)&temp); temp = &t_end[203]; if(PTH-203 <= 0){ goto end; }
-	pthread_join( Threads[ 203 ], (void *)&temp); temp = &t_end[204]; if(PTH-204 <= 0){ goto end; }
-	pthread_join( Threads[ 204 ], (void *)&temp); temp = &t_end[205]; if(PTH-205 <= 0){ goto end; }
-	pthread_join( Threads[ 205 ], (void *)&temp); temp = &t_end[206]; if(PTH-206 <= 0){ goto end; }
-	pthread_join( Threads[ 206 ], (void *)&temp); temp = &t_end[207]; if(PTH-207 <= 0){ goto end; }
-	pthread_join( Threads[ 207 ], (void *)&temp); temp = &t_end[208]; if(PTH-208 <= 0){ goto end; }
-	pthread_join( Threads[ 208 ], (void *)&temp); temp = &t_end[209]; if(PTH-209 <= 0){ goto end; }
-	pthread_join( Threads[ 209 ], (void *)&temp); temp = &t_end[210]; if(PTH-210 <= 0){ goto end; } // 210
+	if(PTH-201 >= 0){ pthread_join( Threads[ 200 ], (void *)&temp); temp = &t_end[200]; }
+	if(PTH-202 >= 0){ pthread_join( Threads[ 201 ], (void *)&temp); temp = &t_end[201]; }
+	if(PTH-203 >= 0){ pthread_join( Threads[ 202 ], (void *)&temp); temp = &t_end[202]; }
+	if(PTH-204 >= 0){ pthread_join( Threads[ 203 ], (void *)&temp); temp = &t_end[203]; }
+	if(PTH-205 >= 0){ pthread_join( Threads[ 204 ], (void *)&temp); temp = &t_end[204]; }
+	if(PTH-206 >= 0){ pthread_join( Threads[ 205 ], (void *)&temp); temp = &t_end[205]; }
+	if(PTH-207 >= 0){ pthread_join( Threads[ 206 ], (void *)&temp); temp = &t_end[206]; }
+	if(PTH-208 >= 0){ pthread_join( Threads[ 207 ], (void *)&temp); temp = &t_end[207]; }
+	if(PTH-209 >= 0){ pthread_join( Threads[ 208 ], (void *)&temp); temp = &t_end[208]; }
+	if(PTH-210 >= 0){ pthread_join( Threads[ 209 ], (void *)&temp); temp = &t_end[209]; } // 210
 
-	pthread_join( Threads[ 210 ], (void *)&temp); temp = &t_end[211]; if(PTH-211 <= 0){ goto end; }
-	pthread_join( Threads[ 211 ], (void *)&temp); temp = &t_end[212]; if(PTH-212 <= 0){ goto end; }
-	pthread_join( Threads[ 212 ], (void *)&temp); temp = &t_end[213]; if(PTH-213 <= 0){ goto end; }
-	pthread_join( Threads[ 213 ], (void *)&temp); temp = &t_end[214]; if(PTH-214 <= 0){ goto end; }
-	pthread_join( Threads[ 214 ], (void *)&temp); temp = &t_end[215]; if(PTH-215 <= 0){ goto end; }
-	pthread_join( Threads[ 215 ], (void *)&temp); temp = &t_end[216]; if(PTH-216 <= 0){ goto end; }
-	pthread_join( Threads[ 216 ], (void *)&temp); temp = &t_end[217]; if(PTH-217 <= 0){ goto end; }
-	pthread_join( Threads[ 217 ], (void *)&temp); temp = &t_end[218]; if(PTH-218 <= 0){ goto end; }
-	pthread_join( Threads[ 218 ], (void *)&temp); temp = &t_end[219]; if(PTH-219 <= 0){ goto end; }
-	pthread_join( Threads[ 219 ], (void *)&temp); temp = &t_end[220]; if(PTH-220 <= 0){ goto end; } // 220
+	if(PTH-211 >= 0){ pthread_join( Threads[ 210 ], (void *)&temp); temp = &t_end[210]; }
+	if(PTH-212 >= 0){ pthread_join( Threads[ 211 ], (void *)&temp); temp = &t_end[211]; }
+	if(PTH-213 >= 0){ pthread_join( Threads[ 212 ], (void *)&temp); temp = &t_end[212]; }
+	if(PTH-214 >= 0){ pthread_join( Threads[ 213 ], (void *)&temp); temp = &t_end[213]; }
+	if(PTH-215 >= 0){ pthread_join( Threads[ 214 ], (void *)&temp); temp = &t_end[214]; }
+	if(PTH-216 >= 0){ pthread_join( Threads[ 215 ], (void *)&temp); temp = &t_end[215]; }
+	if(PTH-217 >= 0){ pthread_join( Threads[ 216 ], (void *)&temp); temp = &t_end[216]; }
+	if(PTH-218 >= 0){ pthread_join( Threads[ 217 ], (void *)&temp); temp = &t_end[217]; }
+	if(PTH-219 >= 0){ pthread_join( Threads[ 218 ], (void *)&temp); temp = &t_end[218]; }
+	if(PTH-220 >= 0){ pthread_join( Threads[ 219 ], (void *)&temp); temp = &t_end[219]; } // 220
 
-	pthread_join( Threads[ 220 ], (void *)&temp); temp = &t_end[221]; if(PTH-221 <= 0){ goto end; }
-	pthread_join( Threads[ 221 ], (void *)&temp); temp = &t_end[222]; if(PTH-222 <= 0){ goto end; }
-	pthread_join( Threads[ 222 ], (void *)&temp); temp = &t_end[223]; if(PTH-223 <= 0){ goto end; }
-	pthread_join( Threads[ 223 ], (void *)&temp); temp = &t_end[224]; if(PTH-224 <= 0){ goto end; }
-	pthread_join( Threads[ 224 ], (void *)&temp); temp = &t_end[225]; if(PTH-225 <= 0){ goto end; }
-	pthread_join( Threads[ 225 ], (void *)&temp); temp = &t_end[226]; if(PTH-226 <= 0){ goto end; }
-	pthread_join( Threads[ 226 ], (void *)&temp); temp = &t_end[227]; if(PTH-227 <= 0){ goto end; }
-	pthread_join( Threads[ 227 ], (void *)&temp); temp = &t_end[228]; if(PTH-228 <= 0){ goto end; }
-	pthread_join( Threads[ 228 ], (void *)&temp); temp = &t_end[229]; if(PTH-229 <= 0){ goto end; }
-	pthread_join( Threads[ 229 ], (void *)&temp); temp = &t_end[230]; if(PTH-230 <= 0){ goto end; } // 230
+	if(PTH-221 >= 0){ pthread_join( Threads[ 220 ], (void *)&temp); temp = &t_end[220]; }
+	if(PTH-222 >= 0){ pthread_join( Threads[ 221 ], (void *)&temp); temp = &t_end[221]; }
+	if(PTH-223 >= 0){ pthread_join( Threads[ 222 ], (void *)&temp); temp = &t_end[222]; }
+	if(PTH-224 >= 0){ pthread_join( Threads[ 223 ], (void *)&temp); temp = &t_end[223]; }
+	if(PTH-225 >= 0){ pthread_join( Threads[ 224 ], (void *)&temp); temp = &t_end[224]; }
+	if(PTH-226 >= 0){ pthread_join( Threads[ 225 ], (void *)&temp); temp = &t_end[225]; }
+	if(PTH-227 >= 0){ pthread_join( Threads[ 226 ], (void *)&temp); temp = &t_end[226]; }
+	if(PTH-228 >= 0){ pthread_join( Threads[ 227 ], (void *)&temp); temp = &t_end[227]; }
+	if(PTH-229 >= 0){ pthread_join( Threads[ 228 ], (void *)&temp); temp = &t_end[228]; }
+	if(PTH-230 >= 0){ pthread_join( Threads[ 229 ], (void *)&temp); temp = &t_end[229]; } // 230
 
-	pthread_join( Threads[ 230 ], (void *)&temp); temp = &t_end[231]; if(PTH-231 <= 0){ goto end; }
-	pthread_join( Threads[ 231 ], (void *)&temp); temp = &t_end[232]; if(PTH-232 <= 0){ goto end; }
-	pthread_join( Threads[ 232 ], (void *)&temp); temp = &t_end[233]; if(PTH-233 <= 0){ goto end; }
-	pthread_join( Threads[ 233 ], (void *)&temp); temp = &t_end[234]; if(PTH-234 <= 0){ goto end; }
-	pthread_join( Threads[ 234 ], (void *)&temp); temp = &t_end[235]; if(PTH-235 <= 0){ goto end; }
-	pthread_join( Threads[ 235 ], (void *)&temp); temp = &t_end[236]; if(PTH-236 <= 0){ goto end; }
-	pthread_join( Threads[ 236 ], (void *)&temp); temp = &t_end[237]; if(PTH-237 <= 0){ goto end; }
-	pthread_join( Threads[ 237 ], (void *)&temp); temp = &t_end[238]; if(PTH-238 <= 0){ goto end; }
-	pthread_join( Threads[ 238 ], (void *)&temp); temp = &t_end[239]; if(PTH-239 <= 0){ goto end; }
-	pthread_join( Threads[ 239 ], (void *)&temp); temp = &t_end[240]; if(PTH-240 <= 0){ goto end; } // 240
+	if(PTH-231 >= 0){ pthread_join( Threads[ 230 ], (void *)&temp); temp = &t_end[230]; }
+	if(PTH-232 >= 0){ pthread_join( Threads[ 231 ], (void *)&temp); temp = &t_end[231]; }
+	if(PTH-233 >= 0){ pthread_join( Threads[ 232 ], (void *)&temp); temp = &t_end[232]; }
+	if(PTH-234 >= 0){ pthread_join( Threads[ 233 ], (void *)&temp); temp = &t_end[233]; }
+	if(PTH-235 >= 0){ pthread_join( Threads[ 234 ], (void *)&temp); temp = &t_end[234]; }
+	if(PTH-236 >= 0){ pthread_join( Threads[ 235 ], (void *)&temp); temp = &t_end[235]; }
+	if(PTH-237 >= 0){ pthread_join( Threads[ 236 ], (void *)&temp); temp = &t_end[236]; }
+	if(PTH-238 >= 0){ pthread_join( Threads[ 237 ], (void *)&temp); temp = &t_end[237]; }
+	if(PTH-239 >= 0){ pthread_join( Threads[ 238 ], (void *)&temp); temp = &t_end[238]; }
+	if(PTH-240 >= 0){ pthread_join( Threads[ 239 ], (void *)&temp); temp = &t_end[239]; } // 240
 
-	pthread_join( Threads[ 240 ], (void *)&temp); temp = &t_end[241]; if(PTH-241 <= 0){ goto end; }
-	pthread_join( Threads[ 241 ], (void *)&temp); temp = &t_end[242]; if(PTH-242 <= 0){ goto end; }
-	pthread_join( Threads[ 242 ], (void *)&temp); temp = &t_end[243]; if(PTH-243 <= 0){ goto end; }
-	pthread_join( Threads[ 243 ], (void *)&temp); temp = &t_end[244]; if(PTH-244 <= 0){ goto end; }
-	pthread_join( Threads[ 244 ], (void *)&temp); temp = &t_end[245]; if(PTH-245 <= 0){ goto end; }
-	pthread_join( Threads[ 245 ], (void *)&temp); temp = &t_end[246]; if(PTH-246 <= 0){ goto end; }
-	pthread_join( Threads[ 246 ], (void *)&temp); temp = &t_end[247]; if(PTH-247 <= 0){ goto end; }
-	pthread_join( Threads[ 247 ], (void *)&temp); temp = &t_end[248]; if(PTH-248 <= 0){ goto end; }
-	pthread_join( Threads[ 248 ], (void *)&temp); temp = &t_end[249]; if(PTH-249 <= 0){ goto end; }
-	pthread_join( Threads[ 249 ], (void *)&temp); temp = &t_end[250]; if(PTH-250 <= 0){ goto end; } // 250
+	if(PTH-241 >= 0){ pthread_join( Threads[ 240 ], (void *)&temp); temp = &t_end[240]; }
+	if(PTH-242 >= 0){ pthread_join( Threads[ 241 ], (void *)&temp); temp = &t_end[241]; }
+	if(PTH-243 >= 0){ pthread_join( Threads[ 242 ], (void *)&temp); temp = &t_end[242]; }
+	if(PTH-244 >= 0){ pthread_join( Threads[ 243 ], (void *)&temp); temp = &t_end[243]; }
+	if(PTH-245 >= 0){ pthread_join( Threads[ 244 ], (void *)&temp); temp = &t_end[244]; }
+	if(PTH-246 >= 0){ pthread_join( Threads[ 245 ], (void *)&temp); temp = &t_end[245]; }
+	if(PTH-247 >= 0){ pthread_join( Threads[ 246 ], (void *)&temp); temp = &t_end[246]; }
+	if(PTH-248 >= 0){ pthread_join( Threads[ 247 ], (void *)&temp); temp = &t_end[247]; }
+	if(PTH-249 >= 0){ pthread_join( Threads[ 248 ], (void *)&temp); temp = &t_end[248]; }
+	if(PTH-250 >= 0){ pthread_join( Threads[ 249 ], (void *)&temp); temp = &t_end[249]; } // 250
 
-	pthread_join( Threads[ 250 ], (void *)&temp); temp = &t_end[251]; if(PTH-251 <= 0){ goto end; }
-	pthread_join( Threads[ 251 ], (void *)&temp); temp = &t_end[252]; if(PTH-252 <= 0){ goto end; }
-	pthread_join( Threads[ 252 ], (void *)&temp); temp = &t_end[253]; if(PTH-253 <= 0){ goto end; }
-	pthread_join( Threads[ 253 ], (void *)&temp); temp = &t_end[254]; if(PTH-254 <= 0){ goto end; }
-	pthread_join( Threads[ 254 ], (void *)&temp); temp = &t_end[255]; if(PTH-255 <= 0){ goto end; }
-	pthread_join( Threads[ 255 ], (void *)&temp); temp = &t_end[256]; if(PTH-256 <= 0){ goto end; }
-	pthread_join( Threads[ 256 ], (void *)&temp); temp = &t_end[257]; if(PTH-257 <= 0){ goto end; }
-	pthread_join( Threads[ 257 ], (void *)&temp); temp = &t_end[258]; if(PTH-258 <= 0){ goto end; }
-	pthread_join( Threads[ 258 ], (void *)&temp); temp = &t_end[259]; if(PTH-259 <= 0){ goto end; }
-	pthread_join( Threads[ 259 ], (void *)&temp); temp = &t_end[260]; if(PTH-260 <= 0){ goto end; } // 260
+	if(PTH-251 >= 0){ pthread_join( Threads[ 250 ], (void *)&temp); temp = &t_end[250]; }
+	if(PTH-252 >= 0){ pthread_join( Threads[ 251 ], (void *)&temp); temp = &t_end[251]; }
+	if(PTH-253 >= 0){ pthread_join( Threads[ 252 ], (void *)&temp); temp = &t_end[252]; }
+	if(PTH-254 >= 0){ pthread_join( Threads[ 253 ], (void *)&temp); temp = &t_end[253]; }
+	if(PTH-255 >= 0){ pthread_join( Threads[ 254 ], (void *)&temp); temp = &t_end[254]; }
+	if(PTH-256 >= 0){ pthread_join( Threads[ 255 ], (void *)&temp); temp = &t_end[255]; }
+	if(PTH-257 >= 0){ pthread_join( Threads[ 256 ], (void *)&temp); temp = &t_end[256]; }
+	if(PTH-258 >= 0){ pthread_join( Threads[ 257 ], (void *)&temp); temp = &t_end[257]; }
+	if(PTH-259 >= 0){ pthread_join( Threads[ 258 ], (void *)&temp); temp = &t_end[258]; }
+	if(PTH-260 >= 0){ pthread_join( Threads[ 259 ], (void *)&temp); temp = &t_end[259]; } // 260
 
-	pthread_join( Threads[ 260 ], (void *)&temp); temp = &t_end[261]; if(PTH-261 <= 0){ goto end; }
-	pthread_join( Threads[ 261 ], (void *)&temp); temp = &t_end[262]; if(PTH-262 <= 0){ goto end; }
-	pthread_join( Threads[ 262 ], (void *)&temp); temp = &t_end[263]; if(PTH-263 <= 0){ goto end; }
-	pthread_join( Threads[ 263 ], (void *)&temp); temp = &t_end[264]; if(PTH-264 <= 0){ goto end; }
-	pthread_join( Threads[ 264 ], (void *)&temp); temp = &t_end[265]; if(PTH-265 <= 0){ goto end; }
-	pthread_join( Threads[ 265 ], (void *)&temp); temp = &t_end[266]; if(PTH-266 <= 0){ goto end; }
-	pthread_join( Threads[ 266 ], (void *)&temp); temp = &t_end[267]; if(PTH-267 <= 0){ goto end; }
-	pthread_join( Threads[ 267 ], (void *)&temp); temp = &t_end[268]; if(PTH-268 <= 0){ goto end; }
-	pthread_join( Threads[ 268 ], (void *)&temp); temp = &t_end[269]; if(PTH-269 <= 0){ goto end; }
-	pthread_join( Threads[ 269 ], (void *)&temp); temp = &t_end[270]; if(PTH-270 <= 0){ goto end; } // 270
+	if(PTH-261 >= 0){ pthread_join( Threads[ 260 ], (void *)&temp); temp = &t_end[260]; }
+	if(PTH-262 >= 0){ pthread_join( Threads[ 261 ], (void *)&temp); temp = &t_end[261]; }
+	if(PTH-263 >= 0){ pthread_join( Threads[ 262 ], (void *)&temp); temp = &t_end[262]; }
+	if(PTH-264 >= 0){ pthread_join( Threads[ 263 ], (void *)&temp); temp = &t_end[263]; }
+	if(PTH-265 >= 0){ pthread_join( Threads[ 264 ], (void *)&temp); temp = &t_end[264]; }
+	if(PTH-266 >= 0){ pthread_join( Threads[ 265 ], (void *)&temp); temp = &t_end[265]; }
+	if(PTH-267 >= 0){ pthread_join( Threads[ 266 ], (void *)&temp); temp = &t_end[266]; }
+	if(PTH-268 >= 0){ pthread_join( Threads[ 267 ], (void *)&temp); temp = &t_end[267]; }
+	if(PTH-269 >= 0){ pthread_join( Threads[ 268 ], (void *)&temp); temp = &t_end[268]; }
+	if(PTH-270 >= 0){ pthread_join( Threads[ 269 ], (void *)&temp); temp = &t_end[269]; } // 270
 
-	pthread_join( Threads[ 270 ], (void *)&temp); temp = &t_end[271]; if(PTH-271 <= 0){ goto end; }
-	pthread_join( Threads[ 271 ], (void *)&temp); temp = &t_end[272]; if(PTH-272 <= 0){ goto end; }
-	pthread_join( Threads[ 272 ], (void *)&temp); temp = &t_end[273]; if(PTH-273 <= 0){ goto end; }
-	pthread_join( Threads[ 273 ], (void *)&temp); temp = &t_end[274]; if(PTH-274 <= 0){ goto end; }
-	pthread_join( Threads[ 274 ], (void *)&temp); temp = &t_end[275]; if(PTH-275 <= 0){ goto end; }
-	pthread_join( Threads[ 275 ], (void *)&temp); temp = &t_end[276]; if(PTH-276 <= 0){ goto end; }
-	pthread_join( Threads[ 276 ], (void *)&temp); temp = &t_end[277]; if(PTH-277 <= 0){ goto end; }
-	pthread_join( Threads[ 277 ], (void *)&temp); temp = &t_end[278]; if(PTH-278 <= 0){ goto end; }
-	pthread_join( Threads[ 278 ], (void *)&temp); temp = &t_end[279]; if(PTH-279 <= 0){ goto end; }
-	pthread_join( Threads[ 279 ], (void *)&temp); temp = &t_end[270]; if(PTH-270 <= 0){ goto end; } // 280
+	if(PTH-271 >= 0){ pthread_join( Threads[ 270 ], (void *)&temp); temp = &t_end[270]; }
+	if(PTH-272 >= 0){ pthread_join( Threads[ 271 ], (void *)&temp); temp = &t_end[271]; }
+	if(PTH-273 >= 0){ pthread_join( Threads[ 272 ], (void *)&temp); temp = &t_end[272]; }
+	if(PTH-274 >= 0){ pthread_join( Threads[ 273 ], (void *)&temp); temp = &t_end[273]; }
+	if(PTH-275 >= 0){ pthread_join( Threads[ 274 ], (void *)&temp); temp = &t_end[274]; }
+	if(PTH-276 >= 0){ pthread_join( Threads[ 275 ], (void *)&temp); temp = &t_end[275]; }
+	if(PTH-277 >= 0){ pthread_join( Threads[ 276 ], (void *)&temp); temp = &t_end[276]; }
+	if(PTH-278 >= 0){ pthread_join( Threads[ 277 ], (void *)&temp); temp = &t_end[277]; }
+	if(PTH-279 >= 0){ pthread_join( Threads[ 278 ], (void *)&temp); temp = &t_end[278]; }
+	if(PTH-280 >= 0){ pthread_join( Threads[ 279 ], (void *)&temp); temp = &t_end[279]; } // 270
 
-    pthread_join( Threads[ 280 ], (void *)&temp); temp = &t_end[281]; if(PTH-281 <= 0){ goto end; }
-	pthread_join( Threads[ 281 ], (void *)&temp); temp = &t_end[282]; if(PTH-282 <= 0){ goto end; }
-	pthread_join( Threads[ 282 ], (void *)&temp); temp = &t_end[283]; if(PTH-283 <= 0){ goto end; }
-	pthread_join( Threads[ 283 ], (void *)&temp); temp = &t_end[284]; if(PTH-284 <= 0){ goto end; }
-	pthread_join( Threads[ 284 ], (void *)&temp); temp = &t_end[285]; if(PTH-285 <= 0){ goto end; }
-	pthread_join( Threads[ 285 ], (void *)&temp); temp = &t_end[286]; if(PTH-286 <= 0){ goto end; }
-	pthread_join( Threads[ 286 ], (void *)&temp); temp = &t_end[287]; if(PTH-287 <= 0){ goto end; }
-	pthread_join( Threads[ 287 ], (void *)&temp); temp = &t_end[288]; if(PTH-288 <= 0){ goto end; }
-	pthread_join( Threads[ 288 ], (void *)&temp); temp = &t_end[289]; if(PTH-289 <= 0){ goto end; }
-	pthread_join( Threads[ 289 ], (void *)&temp); temp = &t_end[280]; if(PTH-280 <= 0){ goto end; } // 290
+	if(PTH-281 >= 0){ pthread_join( Threads[ 280 ], (void *)&temp); temp = &t_end[280]; }
+	if(PTH-282 >= 0){ pthread_join( Threads[ 281 ], (void *)&temp); temp = &t_end[281]; }
+	if(PTH-283 >= 0){ pthread_join( Threads[ 282 ], (void *)&temp); temp = &t_end[282]; }
+	if(PTH-284 >= 0){ pthread_join( Threads[ 283 ], (void *)&temp); temp = &t_end[283]; }
+	if(PTH-285 >= 0){ pthread_join( Threads[ 284 ], (void *)&temp); temp = &t_end[284]; }
+	if(PTH-286 >= 0){ pthread_join( Threads[ 285 ], (void *)&temp); temp = &t_end[285]; }
+	if(PTH-287 >= 0){ pthread_join( Threads[ 286 ], (void *)&temp); temp = &t_end[286]; }
+	if(PTH-288 >= 0){ pthread_join( Threads[ 287 ], (void *)&temp); temp = &t_end[287]; }
+	if(PTH-289 >= 0){ pthread_join( Threads[ 288 ], (void *)&temp); temp = &t_end[288]; }
+	if(PTH-290 >= 0){ pthread_join( Threads[ 289 ], (void *)&temp); temp = &t_end[289]; } // 280
 
-    pthread_join( Threads[ 290 ], (void *)&temp); temp = &t_end[291]; if(PTH-291 <= 0){ goto end; }
-	pthread_join( Threads[ 291 ], (void *)&temp); temp = &t_end[292]; if(PTH-292 <= 0){ goto end; }
-	pthread_join( Threads[ 292 ], (void *)&temp); temp = &t_end[293]; if(PTH-293 <= 0){ goto end; }
-	pthread_join( Threads[ 293 ], (void *)&temp); temp = &t_end[294]; if(PTH-294 <= 0){ goto end; }
-	pthread_join( Threads[ 294 ], (void *)&temp); temp = &t_end[295]; if(PTH-295 <= 0){ goto end; }
-	pthread_join( Threads[ 295 ], (void *)&temp); temp = &t_end[296]; if(PTH-296 <= 0){ goto end; }
-	pthread_join( Threads[ 296 ], (void *)&temp); temp = &t_end[297]; if(PTH-297 <= 0){ goto end; }
-	pthread_join( Threads[ 297 ], (void *)&temp); temp = &t_end[298]; if(PTH-298 <= 0){ goto end; }
-	pthread_join( Threads[ 298 ], (void *)&temp); temp = &t_end[299]; if(PTH-299 <= 0){ goto end; }
-	pthread_join( Threads[ 299 ], (void *)&temp); temp = &t_end[290]; if(PTH-290 <= 0){ goto end; } // 300
+	if(PTH-291 >= 0){ pthread_join( Threads[ 290 ], (void *)&temp); temp = &t_end[290]; }
+	if(PTH-292 >= 0){ pthread_join( Threads[ 291 ], (void *)&temp); temp = &t_end[291]; }
+	if(PTH-293 >= 0){ pthread_join( Threads[ 292 ], (void *)&temp); temp = &t_end[292]; }
+	if(PTH-294 >= 0){ pthread_join( Threads[ 293 ], (void *)&temp); temp = &t_end[293]; }
+	if(PTH-295 >= 0){ pthread_join( Threads[ 294 ], (void *)&temp); temp = &t_end[294]; }
+	if(PTH-296 >= 0){ pthread_join( Threads[ 295 ], (void *)&temp); temp = &t_end[295]; }
+	if(PTH-297 >= 0){ pthread_join( Threads[ 296 ], (void *)&temp); temp = &t_end[296]; }
+	if(PTH-298 >= 0){ pthread_join( Threads[ 297 ], (void *)&temp); temp = &t_end[297]; }
+	if(PTH-299 >= 0){ pthread_join( Threads[ 298 ], (void *)&temp); temp = &t_end[298]; }
+	if(PTH-300 >= 0){ pthread_join( Threads[ 299 ], (void *)&temp); temp = &t_end[299]; } // 300
 
-    pthread_join( Threads[ 300 ], (void *)&temp); temp = &t_end[300]; if(PTH-300 <= 0){ goto end; } // 301
+	if(PTH-301 >= 0){ pthread_join( Threads[ 300 ], (void *)&temp); temp = &t_end[300]; } // 301
 
-end:
+// end:
 
 	/****/
 
