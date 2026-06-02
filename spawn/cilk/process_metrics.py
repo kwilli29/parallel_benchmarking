@@ -29,6 +29,7 @@ def long_metrics(filename, runs): # for 02 benchmarks --> get the difference bet
 
     with open(filename, 'r') as file:
         for line in file:
+            if line[0] == '#': continue
             if line[0] == '*':
                 
                 if ACC > 0.0: 
@@ -68,6 +69,7 @@ def long_overhead(parallel_filename, serial_filename, runs):
 
     with open(parallel_filename, 'r') as file:
         for line in file:
+            if line[0] == '#': continue
             if line[0] == '*':
                 if PARA_ACC > 0.0: 
                     # accum. data in some way
@@ -93,6 +95,7 @@ def long_overhead(parallel_filename, serial_filename, runs):
     cntr = 0
     with open(serial_filename, 'r') as file:
         for line in file:
+            if line[0] == '#': continue
             if line[0] == '*':
                 if SERI_ACC > 0.0: 
                     # accum. data in some way
@@ -136,6 +139,7 @@ def long_tpts(parallel_filename, serial_filename, runs):
 
     with open(parallel_filename, 'r') as file:
         for line in file:
+            if line[0] == '#': continue
             if line[0] == '*':
                 if PARA_ACC > 0.0: 
                     # accum. data in some way
@@ -160,6 +164,7 @@ def long_tpts(parallel_filename, serial_filename, runs):
     cntr = 0
     with open(serial_filename, 'r') as file:
         for line in file:
+            if line[0:2] == '* #': continue
             if line[0] == '*':
                 if SERI_ACC > 0.0: 
                     # accum. data in some way
@@ -194,6 +199,7 @@ def thread_metrics(filename, runs): # Time window metric
 
     with open(filename, 'r') as file:
         for line in file:
+            if line[0] == '*': continue
             AVG += float(line.strip())
 
     AVG = (AVG / float(runs))
@@ -231,6 +237,7 @@ def short_overhead(parallel_filename, serial_filename,runs):
 
     with open(parallel_filename, 'r') as file:
         for line in file:
+            if line[0] == '*': continue
             if line:
                 PARA_ACC += float(line.strip())
                 linecnt += 1
@@ -242,7 +249,7 @@ def short_overhead(parallel_filename, serial_filename,runs):
                 SERI_ACC += float(line.strip())
 
     SHOV = (PARA_ACC) - (SERI_ACC / NUM_PROCS) # # of processors
-    SHOV = AVG*1000000000.0
+    SHOV = SHOV*1000000000.0
 
     #print(f'*SHOV,{AVG:.1f},ns, ',end='') 
     #print(f'*SHOV/#R,{(AVG/float(runs)):.1f},ns, ',end='')
@@ -260,6 +267,7 @@ def short_tpts(parallel_filename, serial_filename,runs):
 
     with open(parallel_filename, 'r') as file:
         for line in file:
+            if line[0] == '*': continue
             if line:
                 PARA_ACC += float(line.strip())
                 linecnt += 1
@@ -327,8 +335,7 @@ def main():
             else:
                 shorttpts = short_tpts(sys.argv[2], sys.argv[4],sys.argv[1])
                 shortov = short_overhead(sys.argv[2], sys.argv[4],sys.argv[1])
-        
-
+    
     if longmetrics:
         print(longmetrics,',', longtpts, ',',longov,',',longov/float(sys.argv[1]))
     elif shortmetrics:

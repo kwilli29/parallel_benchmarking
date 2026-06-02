@@ -4,17 +4,20 @@
 #include <stdint.h>
 #include <unistd.h>
 #include <string.h>
+#include <cilk/cilk.h>
+#include <cilk/cilkscale.h>
+#include <cilk/cilk_api.h>
 #include <assert.h>
 #include <sys/time.h>
 #include <math.h>
 #include "ctimer.h"
-#include "../../include numthreads.h"
+#include "../../../include/numthreads.h"
 
-/* Benchmark: 01C: Spawn time after ; For-Loop Spawns (Serial)
- * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+/* Benchmark: 01H: Spawn time after ; Sequential Spawns (Serial)
+ * Launch a bunch and measure when all done 
  */
 
-void spawn_function(){           // Simple Spawn Function
+void spawn_function(){           // Simple Spawn Function -- can be changed
 	int x = 100; int y = 5000; int z = 1000000;
 
 	x = x + y + z;
@@ -26,12 +29,9 @@ void spawn_function(){           // Simple Spawn Function
 	return; 
 }
 
-
 int main(int argc, char *argv[]){
 
-	struct timespec t_start, t_res, t_end;
-
-	int NSERIAL = number_threads();
+    int NSERIAL = number_threads();
 
     // Process Command-Line Arguments
     if(argc >= 2){
@@ -44,21 +44,21 @@ int main(int argc, char *argv[]){
             }
         }
     }
-	//int innerreps = 1000;
+	printf("* # Spawns: %d\n", NSERIAL);
 
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
-	
-	for(int i = 0; i < NSERIAL; i++){
-		spawn_function(); 
-	}
- 	
-	clock_gettime(CLOCK_MONOTONIC, &t_end);
+	struct timespec t_start, t_res, t_end;
+	clock_gettime(CLOCK_MONOTONIC, &t_start); //
+
+	// sequentially spawn functions
+    if(NSERIAL-1 >= 0) {  } // 1
+
+    clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
-
+    printf("ns: %.12ld\n", t_res.tv_nsec);
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
-	// printf("01C\n");
+	//printf("01H\n");
 
 	return 0;
 }

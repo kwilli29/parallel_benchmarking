@@ -11,6 +11,7 @@
 #include "../../include/numthreads.h"
 
 /* Benchmark: 01C: Spawn time after ; For-Loop Spawns (Serial)
+ * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
 
 void spawn_function(){           // Simple Spawn Function
@@ -25,15 +26,29 @@ void spawn_function(){           // Simple Spawn Function
 	return; 
 }
 
+
 int main(int argc, char *argv[]){
 
 	struct timespec t_start, t_res, t_end;
 
-	int N = number_threads()-1;
+	int NSERIAL = number_threads();
 
-	clock_gettime(CLOCK_MONOTONIC, &t_start);
+    // Process Command-Line Arguments
+    if(argc >= 2){
+        if(atoi(argv[1]) == 0){
+            NSERIAL = number_threads();
+        } else {
+            NSERIAL = atoi(argv[1]);
+            if (NSERIAL > 301){
+                NSERIAL = number_threads();
+            }
+        }
+    }
+	//int innerreps = 1000;
+
+	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 	
-	for(int i = 0; i < N; i++){
+	for(int i = 0; i < NSERIAL; i++){
 		spawn_function(); 
 	}
  	

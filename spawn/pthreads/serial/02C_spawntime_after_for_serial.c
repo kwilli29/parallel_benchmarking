@@ -13,8 +13,6 @@
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
 
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
-
 void spawn_function(){           // Simple Function to Spawn
 
 	int x = 100; int y = 5000; int z = 1000000;
@@ -30,21 +28,33 @@ void spawn_function(){           // Simple Function to Spawn
 
 int main(int argc, char *argv[]){
 
-	int N = 272;
+    int NSERIAL = number_threads();
+
+    // Process Command-Line Arguments
+    if(argc >= 2){
+        if(atoi(argv[1]) == 0){
+            NSERIAL = number_threads();
+        } else {
+            NSERIAL = atoi(argv[1]);
+            if (NSERIAL > 301){
+                NSERIAL = number_threads();
+            }
+        }
+    }
 
 	struct timespec t_start, t_res;
-	struct timespec t_end[N-1];
+	struct timespec t_end[NSERIAL];
 
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
-	for(int i=0; i < N-1; i++){
+	for(int i=0; i < NSERIAL; i++){
 		
 		clock_gettime(CLOCK_MONOTONIC, &t_end[i]); spawn_function();
 
 	}
 
 	printf("****\n");
-	for(int i = 0; i < N-1; i++){
+	for(int i = 0; i < NSERIAL; i++){
 		
 		timespec_sub(&t_res, t_end[i], t_start);
 

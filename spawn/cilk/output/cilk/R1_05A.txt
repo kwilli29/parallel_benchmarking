@@ -1,3 +1,0 @@
-avg, tpts, overhead
-*AV#TH,18228192.71,
-

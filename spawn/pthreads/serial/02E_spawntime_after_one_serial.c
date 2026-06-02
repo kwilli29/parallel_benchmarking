@@ -13,8 +13,6 @@
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
 
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
-
 void spawn_function(){           // Simple Function to Spawn
 
 	int x = 100; int y = 5000; int z = 1000000;
@@ -33,7 +31,7 @@ int main(int argc, char *argv[]){
 	struct timespec t_start, t_res;
 	struct timespec t_end;
 
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+	clock_gettime(CLOCK_MONOTONIC, &t_start);
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end); spawn_function();
 
@@ -42,7 +40,6 @@ int main(int argc, char *argv[]){
 	timespec_sub(&t_res, t_end, t_start);
 
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
-
 	
 	//printf("02E\n");
 

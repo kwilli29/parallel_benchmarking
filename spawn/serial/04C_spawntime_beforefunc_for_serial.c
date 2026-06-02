@@ -31,23 +31,32 @@ struct timespec spawn_function(){           // Simple Function to Spawn
 
 int main(int argc, char *argv[]){
 
-	int N = number_threads();
+	int NSERIAL = number_threads();
 
-	struct timespec t_start, t_res; 
-	struct timespec t_end[N-1];
+    // Process Command-Line Arguments
+    if(argc >= 2){
+        if(atoi(argv[1]) == 0){
+            NSERIAL = number_threads();
+        } else {
+            NSERIAL = atoi(argv[1]);
+            if (NSERIAL > 301){
+                NSERIAL = number_threads();
+            }
+        }
+    }
 
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+	struct timespec t_start[NSERIAL]; struct timespec t_res; 
+	struct timespec t_end[NSERIAL];
 
-
-	for(int i=0; i < N-1; i++){ 	
-		t_end[i] = spawn_function();
+	for(int i=0; i < NSERIAL; i++){ 	
+		clock_gettime(CLOCK_MONOTONIC, &t_start[i]); t_end[i] = spawn_function();
 
 	} 
 
 	printf("****\n");	
-	for(int i = 0; i < N-1; i++){
+	for(int i = 0; i < NSERIAL; i++){
 		
-		timespec_sub(&t_res, t_end[i], t_start);
+		timespec_sub(&t_res, t_end[i], t_start[i]);
 
 		printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 	
@@ -57,5 +66,3 @@ int main(int argc, char *argv[]){
 	
 	return 0;
 }
-
-

@@ -16,8 +16,6 @@
  * then calls 2 _spawns which invoke runbench
  */
 
-// printf(“# of Cores: %ld\n”, sysconf(_SC_NPROCESSORS_ONLN));
-
 void spawn_node(int,int,int);
 void runbench(int, int);
 
@@ -62,7 +60,7 @@ int main(int argc, char *argv[]){
 	int depcnt = 0;
 
 	struct timespec t_start, t_res, t_end;
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+	clock_gettime(CLOCK_MONOTONIC, &t_start); //
 
 	runbench(depcnt, DEPTH); // Main thread
 
@@ -75,5 +73,3 @@ int main(int argc, char *argv[]){
  
 	return 0;
 }
-
-

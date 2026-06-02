@@ -31,7 +31,7 @@ int main(int argc, char *argv[]){
 	struct timespec t_start, t_res;
 	struct timespec t_end;
 
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+	clock_gettime(CLOCK_MONOTONIC, &t_start);
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end); spawn_function();
 
@@ -40,7 +40,6 @@ int main(int argc, char *argv[]){
 	timespec_sub(&t_res, t_end, t_start);
 
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
-
 	
 	//printf("02E\n");
 
