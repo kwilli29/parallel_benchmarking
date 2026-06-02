@@ -83,8 +83,17 @@ int main(int argc, char *argv[]){
     }
     clock_gettime(CLOCK_MONOTONIC, &t_end);
 	timespec_sub(&t_res, t_end, t_start);
-	printf("ifnosp: %ld.%09ld\n\n", (long)t_res.tv_sec, t_res.tv_nsec);
+	printf("correct ifnosp: %ld.%09ld\n\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
+    clock_gettime(CLOCK_MONOTONIC, &t_start); //
+    #pragma omp parallel
+	#pragma omp single
+	{
+    if( (OMP_THREADS-2) >= 0 ) {}
+    } 
+    clock_gettime(CLOCK_MONOTONIC, &t_end);
+	timespec_sub(&t_res, t_end, t_start);
+	printf("incorrect ifnosp: %ld.%09ld\n\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
     /****************  01B ****************/
     printf("skip 01B\n\n");

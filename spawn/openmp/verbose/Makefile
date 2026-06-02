@@ -1,5 +1,6 @@
 CC=		gcc
 CFLAGS=		-fopenmp -Wall -O3 -Og -g
+INCFILES=   ../../../include/numthreads.c
 SOURCE=		$(wildcard *.c)
 TARGETS=	$(SOURCE:.c=)	
 
@@ -23,6 +24,13 @@ all:
 		name=$$(basename $$s); \
 		exe=$$(echo $$name | cut -c1-2); \
 		$(CC) $(CFLAGS) $$s -o $$exe; \
+	done
+
+1:
+	@for s in $(wildcard 01*.c); do \
+		name=$$(basename $$s); \
+		exe=$$(echo $$name | cut -c1-3); \
+		$(CC) $(CFLAGS) $(INCFILES) $$s -o $$exe; \
 	done
 
 #clang  -fopenmp -lomp -O3 -Og -g omp/fib_omp.c -o ompfib

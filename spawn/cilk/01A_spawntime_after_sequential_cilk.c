@@ -443,9 +443,9 @@ int main(int argc, char *argv[]){
 
 // end: // unused label 
 
+    clock_gettime(CLOCK_MONOTONIC, &t_end);
+
 	cilk_sync; 
-	
-	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);

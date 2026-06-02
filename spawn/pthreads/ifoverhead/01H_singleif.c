@@ -8,13 +8,12 @@
 #include <assert.h>
 #include "ctimer.h"
 #include <math.h>
-#include "../../include/numthreads.h"
-/* Benchmark: 01C: Spawn timer after ; For-Loop Spawns (Pthreads)
- * Launch a bunch and measure when all done 
+#include "../../../include/numthreads.h"
+/* Benchmark: 01A: Spawn time after ; Sequential Spawns (Pthreads)
+ * Launch a bunch and measure when all done
  */
 
-
-// pthread_barrier_t sync_barrier; /* to sync */ 
+pthread_barrier_t sync_barrier; /* to sync */
 
 void* spawn_function(){           // Simple Math for Spawn Function
 	int x = 100; int y = 5000; int z = 1000000;
@@ -25,8 +24,8 @@ void* spawn_function(){           // Simple Math for Spawn Function
 
 	z = z + y + x;	
 
-	// pthread_barrier_wait 
-	// pthread_barrier_wait(&sync_barrier);
+	// pthread_barrier_wait
+	pthread_barrier_wait(&sync_barrier);
 
 	return (void*) NULL; 
 }
@@ -34,7 +33,7 @@ void* spawn_function(){           // Simple Math for Spawn Function
 int main(int argc, char *argv[]){
 
 	int PTH = number_threads();
-    
+
     // Process Command-Line Arguments
     if(argc >= 2){
         if(atoi(argv[1]) == 0){
@@ -48,7 +47,7 @@ int main(int argc, char *argv[]){
     }
 	printf("* # Spawns: %d\n", PTH);
 
-	int ds, rc;
+	int            ds, rc;
 	pthread_attr_t attr;
 
 	rc = pthread_attr_init(&attr);
@@ -60,34 +59,34 @@ int main(int argc, char *argv[]){
 
 	pthread_t Threads[ PTH ];
 
-	// pthread_barrier_init 
-	// pthread_barrier_init(&sync_barrier, NULL, PTH+1);
+	// pthread_barrier_init
+	pthread_barrier_init(&sync_barrier, NULL, 1);
 
 	struct timespec t_start, t_res, t_end;
-
 	clock_gettime(CLOCK_MONOTONIC, &t_start);	
 
 	/****/ 
+    // all threads spawn detached,
+    // hit the barrier,
+    // and are immmediately freed w/o joining
 
-	for( int i = 0; i < PTH; i++ ) {                                     // # seq. for only
-		pthread_create( &Threads[ i ], &attr, spawn_function, NULL);
-	}
+    if(PTH-1 >= 0){  }
 
-	// does main thread need a barrier here for the "sync" ???? !!!!
-	// pthread_barrier_wait(&sync_barrier);
+// end:
+    clock_gettime(CLOCK_MONOTONIC, &t_end);
+	
+    // each thread waits until all threads have hit the barrier, then they all return
+	pthread_barrier_wait(&sync_barrier);
 
-	clock_gettime(CLOCK_MONOTONIC, &t_end);
-
-	// pthread_destroy_barrier 
-	// pthread_barrier_destroy(&sync_barrier); // sync all threads before getting endtime
+	// pthread_destroy_barrier
+	pthread_barrier_destroy(&sync_barrier);
 
 	// destroy attr
 	pthread_attr_destroy(&attr);
-	
+
 	timespec_sub(&t_res, t_end, t_start);
 
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 		
 	return 0;
 }
-

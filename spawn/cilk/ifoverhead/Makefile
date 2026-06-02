@@ -10,5 +10,49 @@ EXECS := $(foreach s,$(TARGETS),$(shell echo $(basename $(s)) | cut -c1-3))
 ove: overhead_calc.c
 	$(CC) $(CFLAGS) overhead_calc.c -o ove
 
+1:
+	@for s in $(wildcard 01*.c); do \
+		name=$$(basename $$s); \
+		exe=$$(echo $$name | cut -c1-3); \
+		$(CC) $(CFLAGS) $$s -o $$exe; \
+	done
+2:
+	@for s in $(wildcard 02*.c); do \
+		name=$$(basename $$s); \
+		exe=$$(echo $$name | cut -c1-3); \
+		$(CC) $(CFLAGS) $$s -o $$exe; \
+	done
+3:
+	@for s in $(wildcard 03*.c); do \
+		name=$$(basename $$s); \
+		exe=$$(echo $$name | cut -c1-3); \
+		$(CC) $(CFLAGS) $$s -o $$exe; \
+	done
+4:
+	@for s in $(wildcard 04*.c); do \
+		name=$$(basename $$s); \
+		exe=$$(echo $$name | cut -c1-3); \
+		$(CC) $(CFLAGS) $$s -o $$exe; \
+	done
+5:
+	@for s in $(wildcard 05*.c); do \
+		name=$$(basename $$s); \
+		exe=$$(echo $$name | cut -c1-3); \
+		$(CC) $(CFLAGS) $$s -o $$exe; \
+	done
+6:
+	@for s in $(wildcard 06*.c); do \
+		name=$$(basename $$s); \
+		exe=$$(echo $$name | cut -c1-3); \
+		$(CC) $(CFLAGS) $$s -o $$exe; \
+	done
+
+7:
+	@for s in $(wildcard 07*.c); do \
+		name=$$(basename $$s); \
+		exe=$$(echo $$name | cut -c1-3); \
+		$(CC) $(CFLAGS) $$s -o $$exe; \
+	done
+
 clean:
 	rm -f $(EXECS) *.s *.o *_.c lib*.so lib*.a

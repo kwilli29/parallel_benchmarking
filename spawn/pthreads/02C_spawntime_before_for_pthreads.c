@@ -13,7 +13,7 @@
  * Launch a bunch and measure when all done 
  */
 
-pthread_barrier_t sync_barrier; /* to sync */
+//pthread_barrier_t sync_barrier; /* to sync */
 
 void* spawn_function(){           // Simple Math for Spawn Function
 	int x = 100; int y = 5000; int z = 1000000;
@@ -25,7 +25,7 @@ void* spawn_function(){           // Simple Math for Spawn Function
 	z = z + y + x;	
 
 	// pthread_barrier_wait 
-	pthread_barrier_wait(&sync_barrier);
+	//pthread_barrier_wait(&sync_barrier);
 
 	return (void*) NULL; 
 }
@@ -60,7 +60,7 @@ int main(int argc, char *argv[]){
 	pthread_t Threads[ PTH ];
 
 	// pthread_barrier_init
-	pthread_barrier_init(&sync_barrier, NULL, PTH+1);
+	//pthread_barrier_init(&sync_barrier, NULL, PTH+1);
 
 	struct timespec t_start, t_res;
 	struct timespec t_end[PTH];
@@ -74,10 +74,10 @@ int main(int argc, char *argv[]){
 	}
 
 	// each thread waits until all threads have hit the barrier, then they all return
-	pthread_barrier_wait(&sync_barrier);
+	//pthread_barrier_wait(&sync_barrier);
 
 	// pthread_destroy_barrier
-	pthread_barrier_destroy(&sync_barrier);
+	//pthread_barrier_destroy(&sync_barrier);
 
 	// destroy attr
 	pthread_attr_destroy(&attr);

@@ -38,25 +38,21 @@ int main(int argc, char *argv[]){
 	pthread_t Thread;
 
 	struct timespec t_start, t_res;
-	clock_gettime(CLOCK_MONOTONIC, &t_start);	
 
 	/****/ 
 
-	//int status = pthread_create( &Threads[ i ], NULL, spawn_function, NULL);
 	clock_gettime(CLOCK_MONOTONIC, &t_start);
+
 	pthread_create( &Thread, NULL, spawn_function, xp);
 
 	struct timespec* temp = &t_end;
-	
 	pthread_join(Thread, (void *)&temp);
 	
 	//printf("\n%p\n", &t_end);	
 	//printf("%ld\n", t_end.tv_sec);
 
 	timespec_sub(&t_res, t_end, t_start);
-
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);	
 
 	return 0;
 }
-

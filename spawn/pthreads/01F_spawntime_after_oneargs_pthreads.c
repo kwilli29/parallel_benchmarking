@@ -13,7 +13,6 @@
  * Launch a bunch and measure when all done
  */
 
-pthread_barrier_t sync_barrier; /* to sync */
 
 void* spawn_function(void * xp){           // Simple Math for Spawn Function
 	
@@ -67,4 +66,3 @@ int main(int argc, char *argv[]){
 		
 	return 0;
 }
-

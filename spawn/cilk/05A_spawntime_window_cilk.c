@@ -37,7 +37,7 @@ int main(int argc, char *argv[]){
 
 	// spawn threads in a time window uncapped, hold a counter
 	
-	gettimeofday(&t_start, NULL); // struct timespec *tp
+	gettimeofday(&t_start, NULL);
 	gettimeofday(&t_end, NULL);	
 	
 	while( ( (t_end.tv_sec+ (double)t_end.tv_usec/1000000) - (t_start.tv_sec+(double)t_start.tv_usec/1000000)  ) < TIMER ){

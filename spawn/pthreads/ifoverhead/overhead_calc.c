@@ -85,7 +85,13 @@ int main(int argc, char *argv[]){
     if(PTH-1 >= 0){  }
     clock_gettime(CLOCK_MONOTONIC, &t_end);
 	timespec_sub(&t_res, t_end, t_start);
-	printf("ifnosp: %ld.%09ld\n\n", (long)t_res.tv_sec, t_res.tv_nsec);
+	printf("correct ifnosp: %ld.%09ld\n\n", (long)t_res.tv_sec, t_res.tv_nsec);
+
+    clock_gettime(CLOCK_MONOTONIC, &t_start); //
+    if(PTH-2 >= 0) {} 
+    clock_gettime(CLOCK_MONOTONIC, &t_end);
+	timespec_sub(&t_res, t_end, t_start);
+	printf("incorrect ifnosp: %ld.%09ld\n\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
     /****************  02A ****************/
     struct timespec t_end1[PTH];

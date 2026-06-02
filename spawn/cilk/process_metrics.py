@@ -53,9 +53,9 @@ def long_metrics(filename, runs): # for 02 benchmarks --> get the difference bet
     avgdiff_overall = sum(AVGDIFFS)/len(AVGDIFFS)
     avgdiff_overall = avgdiff_overall*1000000000.0     
 
-    print(f'*AVBW,{avgdiff_overall:.1f},ns, ',end='') 
+    # print(f'*AVBW,{avgdiff_overall:.1f},ns, ',end='') 
 
-    return
+    return avgdiff_overall
 
 def long_overhead(parallel_filename, serial_filename, runs):
 
@@ -117,10 +117,10 @@ def long_overhead(parallel_filename, serial_filename, runs):
     avgdiff_overhead= sum(PARA_AVGDIFFS) - (sum(SERI_AVGDIFFS) / NUM_PROCS) 
     avgdiff_overhead = avgdiff_overhead*1000000000.0  
 
-    print(f'*LOV,{avgdiff_overhead:.1f},ns, ',end='')
-    print(f'*LOV/#R,{(avgdiff_overhead/len(PARA_AVGDIFFS)):.1f},ns, ',end='') 
+    #print(f'*LOV,{avgdiff_overhead:.1f},ns, ',end='')
+    #print(f'*LOV/#R,{(avgdiff_overhead/len(PARA_AVGDIFFS)):.1f},ns, ',end='') 
 
-    return
+    return avgdiff_overhead
 
 def long_tpts(parallel_filename, serial_filename, runs):
 
@@ -184,9 +184,9 @@ def long_tpts(parallel_filename, serial_filename, runs):
     samediff = (sum(PARA_AVGDIFFS) - sum(SERI_AVGDIFFS))/float(len(PARA_AVGDIFFS))
     samediff = samediff*1000000000.0   
 
-    print(f'*LTPTS,{samediff:.1f},ns')
+    # print(f'*LTPTS,{samediff:.1f},ns')
 
-    return
+    return samediff
 
 def thread_metrics(filename, runs): # Time window metric
     # METRICS
@@ -198,9 +198,9 @@ def thread_metrics(filename, runs): # Time window metric
 
     AVG = (AVG / float(runs))
    
-    print(f'*AV#TH,{AVG:.2f},') 
+    # print(f'*AV#TH,{AVG:.2f},') 
 
-    return
+    return AVG
 
 def short_metrics(filename): # average times
     # METRICS
@@ -218,9 +218,9 @@ def short_metrics(filename): # average times
     
     AVG = AVG*1000000000.0
    
-    print(f'*SHAV,{AVG:.1f},ns, ',end='')
+    # print(f'*SHAV,{AVG:.1f},ns, ',end='')
  
-    return
+    return AVG
 
 def short_overhead(parallel_filename, serial_filename,runs):
 
@@ -241,12 +241,12 @@ def short_overhead(parallel_filename, serial_filename,runs):
             if line:
                 SERI_ACC += float(line.strip())
 
-    AVG = (PARA_ACC) - (SERI_ACC / NUM_PROCS) # # of processors
-    AVG = AVG*1000000000.0
+    SHOV = (PARA_ACC) - (SERI_ACC / NUM_PROCS) # # of processors
+    SHOV = AVG*1000000000.0
 
-    print(f'*SHOV,{AVG:.1f},ns, ',end='') 
-    print(f'*SHOV/#R,{(AVG/float(runs)):.1f},ns, ',end='')
-    return
+    #print(f'*SHOV,{AVG:.1f},ns, ',end='') 
+    #print(f'*SHOV/#R,{(AVG/float(runs)):.1f},ns, ',end='')
+    return SHOV
 
 def short_tpts(parallel_filename, serial_filename,runs):
 
@@ -273,25 +273,33 @@ def short_tpts(parallel_filename, serial_filename,runs):
     samediff = (PARA_ACC - SERI_ACC)/(linecnt*1.0)
     samediff = samediff*1000000000.0   
 
-    print(f'*SHTPTS,{samediff:.1f},' ,end='')
+    # print(f'*SHTPTS,{samediff:.1f},' ,end='')
 
-    return
+    return samediff
 
 def main():
+
+    longmetrics = 0.0
+    longtpts = 0.0
+    longov = 0.0
+    threadmetrics = 0.0
+    shortmetrics = 0.0
+    shorttpts = 0.0
+    shortov = 0.0
 
     # sys.argv = [ ./X , #runs , parallel filename , # , serial filename , flag ]
 
     # AVERAGES 
 
-    print('avg, tpts, overhead')
+    # print('avg, tpts, overhead')
     
     # AVERAGES   
     if sys.argv[3] == '2': 
-        long_metrics(sys.argv[2],sys.argv[1])
+        longmetrics = long_metrics(sys.argv[2],sys.argv[1])
     elif sys.argv[3] == '5':
-        thread_metrics(sys.argv[2],sys.argv[1])
+        threadmetrics = thread_metrics(sys.argv[2],sys.argv[1])
     else:
-        short_metrics(sys.argv[2])
+        shortmetrics = short_metrics(sys.argv[2])
 
     # Tp-Ts & OVERHEADS
     if len(sys.argv) > 5:
@@ -304,22 +312,29 @@ def main():
             pass
         elif flag == '1': # just Tp-Ts
             if sys.argv[3] == '2':
-                long_tpts(sys.argv[2],sys.argv[4],sys.argv[1])
+                longtpts = long_tpts(sys.argv[2],sys.argv[4],sys.argv[1])
             else:
-                short_tpts(sys.argv[2], sys.argv[4],sys.argv[1])
+                shorttpts = short_tpts(sys.argv[2], sys.argv[4],sys.argv[1])
         elif flag == '2': # just overhead
             if sys.argv[3] == '2':
-                long_overhead(sys.argv[2],sys.argv[4],sys.argv[1])
+                longov = long_overhead(sys.argv[2],sys.argv[4],sys.argv[1])
             else:
-                short_overhead(sys.argv[2], sys.argv[4],sys.argv[1])
+                shortov = short_overhead(sys.argv[2], sys.argv[4],sys.argv[1])
         else: # both
             if sys.argv[3] == '2':
-                long_tpts(sys.argv[2],sys.argv[4],sys.argv[1])
-                long_overhead(sys.argv[2],sys.argv[4],sys.argv[1])
+                longtpts = long_tpts(sys.argv[2],sys.argv[4],sys.argv[1])
+                longov = long_overhead(sys.argv[2],sys.argv[4],sys.argv[1])
             else:
-                short_tpts(sys.argv[2], sys.argv[4],sys.argv[1])
-                short_overhead(sys.argv[2], sys.argv[4],sys.argv[1])
-        print()
+                shorttpts = short_tpts(sys.argv[2], sys.argv[4],sys.argv[1])
+                shortov = short_overhead(sys.argv[2], sys.argv[4],sys.argv[1])
+        
+
+    if longmetrics:
+        print(longmetrics,',', longtpts, ',',longov,',',longov/float(sys.argv[1]))
+    elif shortmetrics:
+        print(shortmetrics,',', shorttpts, ',',shortov,',',shortov/float(sys.argv[1]))
+    elif threadmetrics():
+        print(threadmetrics)
 
     return
 

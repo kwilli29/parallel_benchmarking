@@ -10,7 +10,7 @@
 #include <assert.h>
 #include <sys/time.h>
 #include <math.h>
-#include "../ctimer.h"
+#include "ctimer.h"
 
 // Overhead Calc
 
@@ -55,7 +55,7 @@ int main(int argc, char *argv[]){
                 NCILK = __cilkrts_get_nworkers();
             }
         }
-    }
+    } printf("# Spawns: %d\n\n", NCILK);
 
     struct timespec t_start, t_end, t_res;
 
@@ -74,8 +74,13 @@ int main(int argc, char *argv[]){
     if(NCILK-1 >= 0) {} // 1
     clock_gettime(CLOCK_MONOTONIC, &t_end);
 	timespec_sub(&t_res, t_end, t_start);
-	printf("ifnosp: %ld.%09ld\n\n", (long)t_res.tv_sec, t_res.tv_nsec);
+	printf("correct ifnosp: %ld.%09ld\n\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
+    clock_gettime(CLOCK_MONOTONIC, &t_start); //
+    if(NCILK-2 >= 0) {} 
+    clock_gettime(CLOCK_MONOTONIC, &t_end);
+	timespec_sub(&t_res, t_end, t_start);
+	printf("incorrect ifnosp: %ld.%09ld\n\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
     /****************  01B ****************/
     printf("01B\n");
@@ -104,6 +109,11 @@ int main(int argc, char *argv[]){
 	timespec_sub(&t_res, t_end, t_start);
 	printf("noscopeifnotimenosp: %ld.%09ld\n\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
+    clock_gettime(CLOCK_MONOTONIC, &t_start); //
+    { if( (NCILK-2) >= 0) {} }
+    clock_gettime(CLOCK_MONOTONIC, &t_end);
+	timespec_sub(&t_res, t_end, t_start);
+	printf("incorrect noscopeifnotimenosp: %ld.%09ld\n\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
     /****************  02A ****************/
     struct timespec t_end1[NCILK];
@@ -129,6 +139,11 @@ int main(int argc, char *argv[]){
 	timespec_sub(&t_res, t_end, t_start);
 	printf("ifnotimenosp: %ld.%09ld\n\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
+    clock_gettime(CLOCK_MONOTONIC, &t_start); //
+    if(NCILK-2 >= 0) {}
+    clock_gettime(CLOCK_MONOTONIC, &t_end);
+	timespec_sub(&t_res, t_end, t_start);
+	printf("incorrect ifnotimenosp: %ld.%09ld\n\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
     /****************  02B ****************/
     printf("02B\n");
@@ -164,6 +179,12 @@ int main(int argc, char *argv[]){
 	timespec_sub(&t_res, t_end, t_start);
 	printf("noscopeifnotimenosp: %ld.%09ld\n\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
+    clock_gettime(CLOCK_MONOTONIC, &t_start); //
+    { if( (NCILK-2) >= 0) {} }
+    clock_gettime(CLOCK_MONOTONIC, &t_end);
+	timespec_sub(&t_res, t_end, t_start);
+	printf("incorrect noscopeifnotimenosp: %ld.%09ld\n\n", (long)t_res.tv_sec, t_res.tv_nsec);
+
     /****************  04A ****************/
     struct timespec t_start1[NCILK];
 
@@ -187,7 +208,13 @@ int main(int argc, char *argv[]){
     if(NCILK-1 >= 0) {} // 1 
     clock_gettime(CLOCK_MONOTONIC, &t_end);
 	timespec_sub(&t_res, t_end, t_start);
-	printf("ifnotimenosp: %ld.%09ld\n\n", (long)t_res.tv_sec, t_res.tv_nsec);
+	printf("correct ifnotimenosp: %ld.%09ld\n\n", (long)t_res.tv_sec, t_res.tv_nsec);
+
+    clock_gettime(CLOCK_MONOTONIC, &t_start); //
+    if(NCILK-2 >= 0) {}
+    clock_gettime(CLOCK_MONOTONIC, &t_end);
+	timespec_sub(&t_res, t_end, t_start);
+	printf("incorrect noscopeifnosp: %ld.%09ld\n\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
     /****************  04B ****************/
     printf("04B\n");
@@ -222,6 +249,12 @@ int main(int argc, char *argv[]){
     clock_gettime(CLOCK_MONOTONIC, &t_end);
 	timespec_sub(&t_res, t_end, t_start);
 	printf("noscopeifnotimenosp:%ld.%09ld\n\n", (long)t_res.tv_sec, t_res.tv_nsec);
+
+    clock_gettime(CLOCK_MONOTONIC, &t_start); //
+    { if(NCILK-2 >= 0) {} }
+    clock_gettime(CLOCK_MONOTONIC, &t_end);
+	timespec_sub(&t_res, t_end, t_start);
+	printf("incorrect noscopeifnotimenosp: %ld.%09ld\n\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
     return 0;
 }

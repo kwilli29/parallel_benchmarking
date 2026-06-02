@@ -31,8 +31,8 @@ int main(int argc, char *argv[]){
 	float TIMER = 2.0;
 	int counter = 0;
 
-	int DEPTH = 10000;
-	pthread_t Threads[ DEPTH ];
+	int PTH = 15000;
+	pthread_t Threads[ PTH ];
 
 	struct timeval t_start, t_end;
 	
@@ -60,5 +60,3 @@ int main(int argc, char *argv[]){
 
 	return 0;
 }
-
-

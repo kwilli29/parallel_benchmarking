@@ -22,6 +22,8 @@ int number_threads() {
 
     // Open the pipe to the command
     fp = popen("lscpu | grep '^CPU(s):'", "r");
+
+    // !!!! Mac needs lscpu ported or to run "sysctl -a | grep machdep.cpu" and get 'machdep.cpu.thread_count: #'
     
     if (fp != NULL) {
 
