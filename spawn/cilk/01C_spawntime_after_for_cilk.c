@@ -50,7 +50,7 @@ int main(int argc, char *argv[]){
 	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 	
-	for(int i = 0; i < NCILK-1; i++){ // sequentially spawn threads in a for loop
+	for(int i = 0; i < NCILK; i++){ // sequentially spawn threads in a for loop
 		cilk_spawn spawn_function(); 
 	}
  	

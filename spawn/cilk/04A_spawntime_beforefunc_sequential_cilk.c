@@ -49,10 +49,17 @@ int main(int argc, char *argv[]){
 
 	printf("* # Spawns: %d\n", NCILK);
 
+    int k = 1;
 	struct timespec t_start[NCILK]; // struct timespec *
 	struct timespec t_end[NCILK];
 
+    while(1){
+        clock_gettime(CLOCK_MONOTONIC, &t_start[k-1]); t_end[k-1] = cilk_spawn spawn_function();
+        k++;
+        if(NCILK-k <= 0) { break; }
+    }
 
+/*
 	// Time before spawn, then take time stamp at the beginning of the spawn function
 	// Time b/w spawn and beginning of function running
 
@@ -448,6 +455,7 @@ int main(int argc, char *argv[]){
 		if(NCILK-301 >= 0) { clock_gettime(CLOCK_MONOTONIC, &t_start[300]); t_end[300] = cilk_spawn spawn_function(); } // 301
 
 	cilk_sync; // 
+*/
 
     struct timespec t_res;
 

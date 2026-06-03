@@ -96,6 +96,13 @@ serial:
 		$(CC) $(CFLAGS) $$s -o $$exe; \
 	done
 
+8:
+	@for s in $(wildcard 08*.c); do \
+		name=$$(basename $$s); \
+		exe=$$(echo $$name | cut -c1-3); \
+		$(CC) $(CFLAGS) $$s -o $$exe; \
+	done
+
 #clang  -fopenmp -lomp -O3 -Og -g omp/fib_omp.c -o ompfib
 # 
 

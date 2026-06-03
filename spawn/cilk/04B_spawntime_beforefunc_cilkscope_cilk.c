@@ -395,7 +395,6 @@ int main(int argc, char *argv[]){
 	for(int i = 0; i < NCILK; i++){
 		
 		timespec_sub(&t_res, t_end[i], t_start[i]);
-
 		printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 	
 	}

@@ -15,7 +15,6 @@
  * Launch a bunch and measure when all done
  */
 
-
 void spawn_function(){           // Simple Function to Spawn
 
 	int x = 100; int y = 5000; int z = 1000000;
@@ -44,15 +43,22 @@ int main(int argc, char *argv[]){
             }
         }
     }
-
 	printf("# Spawns: %d\n", NCILK);
+
+    int k = 1;
 
 	struct timespec t_start, t_res;
 	struct timespec t_end[NCILK];
 	clock_gettime(CLOCK_MONOTONIC, &t_start); //
 
-	// sequentially spawn functions
+    while(1){
+        clock_gettime(CLOCK_MONOTONIC, &t_end[k-1]); cilk_spawn spawn_function();
+        k++;
+        if(NCILK-k <= 0) { break; }
+    }
 
+    /*
+	// sequentially spawn functions
 		if(NCILK-1 >= 0) { clock_gettime(CLOCK_MONOTONIC, &t_end[0]); cilk_spawn spawn_function(); } // 1 // Take time stamp before each spawn
 		if(NCILK-2 >= 0) { clock_gettime(CLOCK_MONOTONIC, &t_end[1]); cilk_spawn spawn_function(); } // 2
 		if(NCILK-3 >= 0) { clock_gettime(CLOCK_MONOTONIC, &t_end[2]); cilk_spawn spawn_function(); } // 3
@@ -443,8 +449,8 @@ int main(int argc, char *argv[]){
 		if(NCILK-300 >= 0) { clock_gettime(CLOCK_MONOTONIC, &t_end[299]); cilk_spawn spawn_function(); } // 300
 
 		if(NCILK-301 >= 0) { clock_gettime(CLOCK_MONOTONIC, &t_end[300]); cilk_spawn spawn_function(); }// 301 // 1 // Take time stamp before each spawn
-
     // end: // unused label 
+    */
 
 	cilk_sync; 
 
@@ -452,7 +458,6 @@ int main(int argc, char *argv[]){
 	for(int i = 0; i < NCILK; i++){
 		
 		timespec_sub(&t_res, t_end[i], t_start);
-
 		printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 	
 	}
@@ -461,6 +466,3 @@ int main(int argc, char *argv[]){
 	
 	return 0;
 }
-
-
-

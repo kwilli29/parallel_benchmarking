@@ -28,20 +28,6 @@ void spawn_function(){           // Simple Spawn Function
 	return; 
 }
 
-void end_program(struct timespec* t_start, struct timespec* t_end, int NCILK){ 
-
-    struct timespec t_res;
-		
-	timespec_sub(&t_res, *(struct timespec *)t_end, *(struct timespec *)t_start);
-
-	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
-
-	// printf("01B\n");
-
-    return;
-
-}
-
 int main(int argc, char *argv[]){
 
     int NCILK = __cilkrts_get_nworkers();
@@ -57,7 +43,6 @@ int main(int argc, char *argv[]){
             }
         }
     }
-
 	printf("* # Spawns: %d\n", NCILK);
 
 	struct timespec t_start, t_end;
