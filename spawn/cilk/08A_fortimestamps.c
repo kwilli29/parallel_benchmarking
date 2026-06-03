@@ -56,6 +56,7 @@ int main(int argc, char *argv[]){
     // run in a shell script that executes this program w/ an input argument !!!!
 
     for(int i=1; i < NCILK; i++){      //    for i=1,spawn_max
+
         clock_gettime(CLOCK_MONOTONIC, &t1);     // measure clock - t1
         for(int j=1; j < i; j++){                // for j 1,i
             clock_gettime(CLOCK_MONOTONIC, &t2); // measure clock -- t2
@@ -66,31 +67,6 @@ int main(int argc, char *argv[]){
             cilk_spawn spawn_function();         // spawn
         }
         clock_gettime(CLOCK_MONOTONIC, &t5);     // measure clock - t5
-
-        printf("**** OUTPUTS -- i=%d ****:\n", i);
-        timespec_sub(&t_res, t1, t_start);
-        printf("t1,%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t1
-
-        timespec_sub(&t_res, t2, t_start);
-        printf("t2,%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t2
-
-        timespec_sub(&t_res, t2, t1);
-        printf("t2-t1,%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t2-t1
-
-        timespec_sub(&t_res, t3, t_start);
-        printf("t3,%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t3
-
-        timespec_sub(&t_res, t4, t_start);
-        printf("t4,%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t4
-
-        timespec_sub(&t_res, t4, t3);
-        printf("t3-t4,%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t3-t4
-
-        timespec_sub(&t_res, t5, t_start);
-        printf("t5,%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t5
-
-        timespec_sub(&t_res, t5, t4);
-        printf("t5-t4,%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t5-t4
     }
     clock_gettime(CLOCK_MONOTONIC, &t6); // measure clock
     cilk_sync; // sync
@@ -98,6 +74,31 @@ int main(int argc, char *argv[]){
 
     //////////////////////////////////////////////////////
     
+    printf("**** OUTPUTS -->****:\n");
+    timespec_sub(&t_res, t1, t_start);
+    printf("t1,%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t1
+
+    timespec_sub(&t_res, t2, t_start);
+    printf("t2,%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t2
+
+    timespec_sub(&t_res, t2, t1);
+    printf("t2-t1,%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t2-t1
+
+    timespec_sub(&t_res, t3, t_start);
+    printf("t3,%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t3
+
+    timespec_sub(&t_res, t4, t_start);
+    printf("t4,%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t4
+
+    timespec_sub(&t_res, t4, t3);
+    printf("t3-t4,%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t3-t4
+
+    timespec_sub(&t_res, t5, t_start);
+    printf("t5,%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t5
+
+    timespec_sub(&t_res, t5, t4);
+    printf("t5-t4,%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t5-t4
+
     printf(" **** SYNC ****:\n");
 
     timespec_sub(&t_res, t6, t_start);
