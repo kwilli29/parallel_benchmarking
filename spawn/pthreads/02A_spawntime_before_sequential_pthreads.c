@@ -57,17 +57,26 @@ int main(int argc, char *argv[]){
 	rc = pthread_attr_setdetachstate(&attr, ds);
 	if (rc == -1) { perror("error in pthread_attr_setdetachstate"); exit(2); }
 
+    int k = 1;
+
 	pthread_t Threads[ PTH ];
 
 	// pthread_barrier_init
 	// pthread_barrier_init(&sync_barrier, NULL, PTH+1);
+
+    while(1){
+        clock_gettime(CLOCK_MONOTONIC, &t_end[k-1] );
+        pthread_create( &Threads[ k-1 ], &attr, spawn_function, NULL); 
+        k++;
+        if(PTH-k >= 0){ break; }
+    }
 
 	struct timespec t_start, t_res;
 	struct timespec t_end[PTH];
 	clock_gettime(CLOCK_MONOTONIC, &t_start);	
 
 	/****/ 
-    
+/*    
 	if(PTH-1 >= 0){ clock_gettime(CLOCK_MONOTONIC, &t_end[0] ); pthread_create( &Threads[ 0 ], &attr, spawn_function, NULL); }
 	if(PTH-2 >= 0){ clock_gettime(CLOCK_MONOTONIC, &t_end[1] ); pthread_create( &Threads[ 1 ], &attr, spawn_function, NULL); }
 	if(PTH-3 >= 0){ clock_gettime(CLOCK_MONOTONIC, &t_end[2] ); pthread_create( &Threads[ 2 ], &attr, spawn_function, NULL); }
@@ -402,7 +411,7 @@ int main(int argc, char *argv[]){
 
 
 // end:
-
+*/
 	// each thread waits until all threads have hit the barrier, then they all return
 	//pthread_barrier_wait(&sync_barrier);
 

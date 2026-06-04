@@ -45,10 +45,24 @@ int main(int argc, char *argv[]){
     }
 	printf("* # Spawns: %d\n", OMP_THREADS);
 
+    int k = 1;
+
 	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
-	#pragma omp parallel
+    #pragma omp parallel
+    #pragma omp single
+    {
+        while(1){
+            #pragma omp task
+                spawn_function();
+            k++;
+            if( (OMP_THREADS-k) <= 0 ) { break; }
+        }
+    }
+    
+/*	
+    #pragma omp parallel
 	#pragma omp single   // one threads 'allocates' tasks to other threads
 	{
 
@@ -83,7 +97,7 @@ int main(int argc, char *argv[]){
     #pragma omp task
         spawn_function(); } 
     // 10
-if( (OMP_THREADS-11) >= 0 ) {
+  if( (OMP_THREADS-11) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     if( (OMP_THREADS-12) >= 0 ) {
@@ -114,7 +128,7 @@ if( (OMP_THREADS-11) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     // 20
-if( (OMP_THREADS-21) >= 0 ) {
+  if( (OMP_THREADS-21) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     if( (OMP_THREADS-22) >= 0 ) {
@@ -145,7 +159,7 @@ if( (OMP_THREADS-21) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     // 30
-if( (OMP_THREADS-31) >= 0 ) {
+  if( (OMP_THREADS-31) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     if( (OMP_THREADS-32) >= 0 ) {
@@ -176,7 +190,7 @@ if( (OMP_THREADS-31) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     // 40
-if( (OMP_THREADS-41) >= 0 ) {
+  if( (OMP_THREADS-41) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     if( (OMP_THREADS-42) >= 0 ) {
@@ -207,7 +221,7 @@ if( (OMP_THREADS-41) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     // 50
-if( (OMP_THREADS-51) >= 0 ) {
+  if( (OMP_THREADS-51) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     if( (OMP_THREADS-52) >= 0 ) {
@@ -238,7 +252,7 @@ if( (OMP_THREADS-51) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     // 60
-if( (OMP_THREADS-61) >= 0 ) {
+  if( (OMP_THREADS-61) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     if( (OMP_THREADS-62) >= 0 ) {
@@ -269,7 +283,7 @@ if( (OMP_THREADS-61) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     // 70
-if( (OMP_THREADS-71) >= 0 ) {
+  if( (OMP_THREADS-71) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     if( (OMP_THREADS-72) >= 0 ) {
@@ -300,7 +314,7 @@ if( (OMP_THREADS-71) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     // 80
-if( (OMP_THREADS-81) >= 0 ) {
+  if( (OMP_THREADS-81) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     if( (OMP_THREADS-82) >= 0 ) {
@@ -331,7 +345,7 @@ if( (OMP_THREADS-81) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     // 90
-if( (OMP_THREADS-91) >= 0 ) {
+  if( (OMP_THREADS-91) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     if( (OMP_THREADS-92) >= 0 ) {
@@ -362,7 +376,7 @@ if( (OMP_THREADS-91) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     // 100
-if( (OMP_THREADS-101) >= 0 ) {
+  if( (OMP_THREADS-101) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     if( (OMP_THREADS-102) >= 0 ) {
@@ -393,7 +407,7 @@ if( (OMP_THREADS-101) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     // 110
-if( (OMP_THREADS-111) >= 0 ) {
+  if( (OMP_THREADS-111) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     if( (OMP_THREADS-112) >= 0 ) {
@@ -424,7 +438,7 @@ if( (OMP_THREADS-111) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     // 120
-if( (OMP_THREADS-121) >= 0 ) {
+  if( (OMP_THREADS-121) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     if( (OMP_THREADS-122) >= 0 ) {
@@ -455,7 +469,7 @@ if( (OMP_THREADS-121) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     // 130
-if( (OMP_THREADS-131) >= 0 ) {
+  if( (OMP_THREADS-131) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     if( (OMP_THREADS-132) >= 0 ) {
@@ -486,7 +500,7 @@ if( (OMP_THREADS-131) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     // 140
-if( (OMP_THREADS-141) >= 0 ) {
+  if( (OMP_THREADS-141) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     if( (OMP_THREADS-142) >= 0 ) {
@@ -517,7 +531,7 @@ if( (OMP_THREADS-141) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     // 150
-if( (OMP_THREADS-151) >= 0 ) {
+  if( (OMP_THREADS-151) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     if( (OMP_THREADS-152) >= 0 ) {
@@ -548,7 +562,7 @@ if( (OMP_THREADS-151) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     // 160
-if( (OMP_THREADS-161) >= 0 ) {
+  if( (OMP_THREADS-161) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     if( (OMP_THREADS-162) >= 0 ) {
@@ -579,7 +593,7 @@ if( (OMP_THREADS-161) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     // 170
-if( (OMP_THREADS-171) >= 0 ) {
+  if( (OMP_THREADS-171) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     if( (OMP_THREADS-172) >= 0 ) {
@@ -610,7 +624,7 @@ if( (OMP_THREADS-171) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     // 180
-if( (OMP_THREADS-181) >= 0 ) {
+  if( (OMP_THREADS-181) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     if( (OMP_THREADS-182) >= 0 ) {
@@ -641,7 +655,7 @@ if( (OMP_THREADS-181) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     // 190
-if( (OMP_THREADS-191) >= 0 ) {
+  if( (OMP_THREADS-191) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     if( (OMP_THREADS-192) >= 0 ) {
@@ -672,7 +686,7 @@ if( (OMP_THREADS-191) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     // 200
-if( (OMP_THREADS-201) >= 0 ) {
+  if( (OMP_THREADS-201) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     if( (OMP_THREADS-202) >= 0 ) {
@@ -703,7 +717,7 @@ if( (OMP_THREADS-201) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     // 210
-if( (OMP_THREADS-211) >= 0 ) {
+  if( (OMP_THREADS-211) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     if( (OMP_THREADS-212) >= 0 ) {
@@ -734,7 +748,7 @@ if( (OMP_THREADS-211) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     // 220
-if( (OMP_THREADS-221) >= 0 ) {
+  if( (OMP_THREADS-221) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     if( (OMP_THREADS-222) >= 0 ) {
@@ -765,7 +779,7 @@ if( (OMP_THREADS-221) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     // 230
-if( (OMP_THREADS-231) >= 0 ) {
+  if( (OMP_THREADS-231) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     if( (OMP_THREADS-232) >= 0 ) {
@@ -796,7 +810,7 @@ if( (OMP_THREADS-231) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     // 240
-if( (OMP_THREADS-241) >= 0 ) {
+  if( (OMP_THREADS-241) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     if( (OMP_THREADS-242) >= 0 ) {
@@ -827,7 +841,7 @@ if( (OMP_THREADS-241) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     // 250
-if( (OMP_THREADS-251) >= 0 ) {
+  if( (OMP_THREADS-251) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     if( (OMP_THREADS-252) >= 0 ) {
@@ -858,7 +872,7 @@ if( (OMP_THREADS-251) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     // 260
-if( (OMP_THREADS-261) >= 0 ) {
+  if( (OMP_THREADS-261) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     if( (OMP_THREADS-262) >= 0 ) {
@@ -889,7 +903,7 @@ if( (OMP_THREADS-261) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     // 270
-if( (OMP_THREADS-271) >= 0 ) {
+  if( (OMP_THREADS-271) >= 0 ) {
     #pragma omp task
         spawn_function(); }
     if( (OMP_THREADS-272) >= 0 ) {
@@ -988,6 +1002,7 @@ if( (OMP_THREADS-271) >= 0 ) {
         spawn_function(); } // 301
 
 	}	
+*/
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 

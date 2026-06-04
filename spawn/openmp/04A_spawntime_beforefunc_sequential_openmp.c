@@ -46,14 +46,27 @@ int main(int argc, char *argv[]){
     }
     printf("* # Spawns: %d\n", OMP_THREADS);
 
+    int k = 1;
+
 	struct timespec t_start[OMP_THREADS]; struct timespec t_res;
 	struct timespec t_end[OMP_THREADS];
 
 	// time before spawn to beginning of function
 	// thread /spawn/ sequentially
+    #pragma omp parallel
+    #pragma omp single
+    {
+        while(1){
+            clock_gettime(CLOCK_MONOTONIC, &t_start[k-1]); 
+	        #pragma omp task
+	            t_end[k-1] = spawn_function();
+            k++;
+            if( (OMP_THREADS-k) <= 0 ) { break; }
+        }
+    }
 
     // Take time stamp before each spawn
-	#pragma omp parallel
+/*	#pragma omp parallel
 	#pragma omp single
 	{
 	
@@ -1565,6 +1578,7 @@ int main(int argc, char *argv[]){
 	}
 
   }
+*/
 
 	// printf("****\n");
 	for(int i = 0; i < OMP_THREADS; i++){

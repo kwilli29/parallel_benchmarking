@@ -45,15 +45,30 @@ int main(int argc, char *argv[]){
     }
 	printf("* # Spawns: %d\n", PTH);
 
+    int k=1;
+
 	pthread_t Threads[ PTH ];
 
 	struct timespec t_start[PTH]; struct timespec t_res;
 	struct timespec t_end[PTH];
 
+    while(1){
+        clock_gettime(CLOCK_MONOTONIC, &t_start[k-1]); 
+        pthread_create( &Threads[ k-1 ], NULL, spawn_function, (void *)&t_end[k-1]);
+        k++;
+        if(PTH-k >= 0){ break; }
+    }
+
+    k = 1;
+    struct timespec* temp = (struct timespec *)&t_end[0];
+    while(1){
+        pthread_join( Threads[ k-1 ], (void *)&temp); temp = &t_end[k-1];
+    }
+
 	// all threads spawn & join
 	/****/
 
-	if( PTH-1 >= 0 ){ clock_gettime(CLOCK_MONOTONIC, &t_start[0]); pthread_create( &Threads[ 0 ], NULL, spawn_function, (void *)&t_end[0]); }
+/*	if( PTH-1 >= 0 ){ clock_gettime(CLOCK_MONOTONIC, &t_start[0]); pthread_create( &Threads[ 0 ], NULL, spawn_function, (void *)&t_end[0]); }
 	if( PTH-2 >= 0 ){ clock_gettime(CLOCK_MONOTONIC, &t_start[1]); pthread_create( &Threads[ 1 ], NULL, spawn_function, (void *)&t_end[1]); }
 	if( PTH-3 >= 0 ){ clock_gettime(CLOCK_MONOTONIC, &t_start[2]); pthread_create( &Threads[ 2 ], NULL, spawn_function, (void *)&t_end[2]); }
 	if( PTH-4 >= 0 ){ clock_gettime(CLOCK_MONOTONIC, &t_start[3]); pthread_create( &Threads[ 3 ], NULL, spawn_function, (void *)&t_end[3]); }
@@ -384,11 +399,11 @@ int main(int argc, char *argv[]){
 	if( PTH-299 >= 0 ){ clock_gettime(CLOCK_MONOTONIC, &t_start[299]); pthread_create( &Threads[ 299 ], NULL, spawn_function, (void *)&t_end[299]); } // 300
 
 	if( PTH-300 >= 0 ){ clock_gettime(CLOCK_MONOTONIC, &t_start[300]); pthread_create( &Threads[ 300 ], NULL, spawn_function, (void *)&t_end[300]); } // 301
-
+*/
 	/****/
-	struct timespec* temp = (struct timespec *)&t_end[0];
+//	struct timespec* temp = (struct timespec *)&t_end[0];
 
-if(PTH-1 >= 0){ pthread_join( Threads[ 0 ], (void *)&temp); temp = &t_end[0]; }
+/* if(PTH-1 >= 0){ pthread_join( Threads[ 0 ], (void *)&temp); temp = &t_end[0]; }
 	if(PTH-2 >= 0){ pthread_join( Threads[ 1 ], (void *)&temp); temp = &t_end[1]; }
 	if(PTH-3 >= 0){ pthread_join( Threads[ 2 ], (void *)&temp); temp = &t_end[2]; }
 	if(PTH-4 >= 0){ pthread_join( Threads[ 3 ], (void *)&temp); temp = &t_end[3]; }
@@ -721,7 +736,7 @@ if(PTH-1 >= 0){ pthread_join( Threads[ 0 ], (void *)&temp); temp = &t_end[0]; }
 	if(PTH-301 >= 0){ pthread_join( Threads[ 300 ], (void *)&temp); temp = &t_end[300]; } // 301
 
 // end:
-
+*/
 	/****/
 
 	for(int i = 0; i < PTH; i++){

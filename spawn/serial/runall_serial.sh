@@ -118,7 +118,7 @@ echo ""
 echo "Starting benchmark on 05_'s"
 
 	# A 
-	run_programs 5 E 0
+	run_programs 5 A 0
 
 	# Cleanup
 	make clean
@@ -130,7 +130,7 @@ echo ""
 echo "Starting benchmark on 06_'s"
 
 	# A
-	run_programs 6 E 0
+	run_programs 6 A 0
 
 	# Cleanup
 	make clean

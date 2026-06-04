@@ -43,6 +43,8 @@ int main(int argc, char *argv[]){
     }
     printf("# Spawns: %d\n", OMP_THREADS);
 
+    int k = 1;
+
 	struct timespec t_start, t_res;
 	struct timespec t_end[OMP_THREADS];
 
@@ -51,7 +53,19 @@ int main(int argc, char *argv[]){
 	// use sections to guarantee order of timestamp then spawn
 	// sections go in order
 
+    #pragma omp parallel
+    #pragma omp single
+    {
+        while(1){
+            clock_gettime(CLOCK_MONOTONIC, &t_end[k-1]); 
+	        spawn_function();
+            k++;
+            if( (OMP_THREADS-k) <= 0 ) { break; }
+        }
+    }
+
  // Take time stamp before each spawn
+/*
  #pragma omp parallel
  #pragma omp sections
  {
@@ -2166,8 +2180,9 @@ int main(int argc, char *argv[]){
 	} 
 
  }
-
-	printf("****\n");
+*/
+	
+    printf("****\n");
 	for(int i = 0; i < OMP_THREADS; i++){
 
 		timespec_sub(&t_res, t_end[i], t_start);

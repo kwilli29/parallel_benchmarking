@@ -62,15 +62,23 @@ int main(int argc, char *argv[]){
 	// pthread_barrier_init
 	// pthread_barrier_init(&sync_barrier, NULL, PTH+1);
 
+    int k = 1;
+
 	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start);	
+
+    while(1){
+        pthread_create( &Threads[ k-1 ], &attr, spawn_function, NULL); 
+        k++;
+        if(PTH-k >= 0){ break; }
+    }
 
 	/****/ 
     // all threads spawn detached,
     // hit the barrier,
     // and are immmediately freed w/o joining
 
-    if(PTH-1 >= 0){ pthread_create( &Threads[ 0 ], &attr, spawn_function, NULL); }
+/*    if(PTH-1 >= 0){ pthread_create( &Threads[ 0 ], &attr, spawn_function, NULL); }
 	if(PTH-2 >= 0){ pthread_create( &Threads[ 1 ], &attr, spawn_function, NULL); }
 	if(PTH-3 >= 0){ pthread_create( &Threads[ 2 ], &attr, spawn_function, NULL); }
 	if(PTH-4 >= 0){ pthread_create( &Threads[ 3 ], &attr, spawn_function, NULL); }
@@ -403,6 +411,7 @@ int main(int argc, char *argv[]){
 	if(PTH-301 >= 0){ pthread_create( &Threads[ 300 ], &attr, spawn_function, NULL); } // 301
 
 // end:
+*/
     clock_gettime(CLOCK_MONOTONIC, &t_end);
 	
     // each thread waits until all threads have hit the barrier, then they all return

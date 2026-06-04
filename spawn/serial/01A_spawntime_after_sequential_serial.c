@@ -42,11 +42,19 @@ int main(int argc, char *argv[]){
         }
     }
 
+    int k = 1;
+
 	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); //
 
-		// sequentially spawn functions
-        if(NSERIAL-1 >= 0) { spawn_function(); } // 1 // Take time stamp before each spawn
+    while(1){
+        spawn_function();
+        k++;
+        if(NSERIAL-k < 0) { break; }
+    }
+
+	// sequentially spawn functions
+/*  if(NSERIAL-1 >= 0) { spawn_function(); } // 1 // Take time stamp before each spawn
 		if(NSERIAL-2 >= 0) { spawn_function(); } // 2
 		if(NSERIAL-3 >= 0) { spawn_function(); } // 3
 		if(NSERIAL-4 >= 0) { spawn_function(); } // 4
@@ -436,6 +444,7 @@ int main(int argc, char *argv[]){
 		if(NSERIAL-300 >= 0) { spawn_function(); } // 300
 
 		if(NSERIAL-301 >= 0) { spawn_function(); } // 301
+*/
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
@@ -444,20 +453,15 @@ int main(int argc, char *argv[]){
 
 	//printf("01A\n");
 
-	
-	/*clock_gettime(CLOCK_MONOTONIC, &t_start);
-
+	/*
+    clock_gettime(CLOCK_MONOTONIC, &t_start);
 	int N = 271;
-
-	for(int i=0; i<N; i++){
-		spawn_function();
-
-	}
-	
+	for(int i=0; i<N; i++){ spawn_function(); }
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
-	printf("%ld.%09ld\n\n", (long)t_res.tv_sec, t_res.tv_nsec);*/
+	printf("%ld.%09ld\n\n", (long)t_res.tv_sec, t_res.tv_nsec);
+    */
 
 	return 0;
 }

@@ -44,13 +44,22 @@ int main(int argc, char *argv[]){
                 NSERIAL = number_threads();
             }
         }
-    }
+    }printf("# NSERIAL: %d\n", NSERIAL);
+
+    int k = 1;
 
 	struct timespec t_start[NSERIAL];
     struct timespec t_res;
 	struct timespec t_end[NSERIAL];
 
+    while(1){
+        clock_gettime(CLOCK_MONOTONIC, &t_start[k-1]); 
+        t_end[k-1] =  spawn_function();
+        k++;
+        if(NSERIAL-k < 0) { break; }
+    }
 
+/*
 	if(NSERIAL-1 >= 0) { clock_gettime(CLOCK_MONOTONIC, &t_start[0]); t_end[0] =  spawn_function(); } // 1 // Take time stamp before each spawn
 		if(NSERIAL-2 >= 0) { clock_gettime(CLOCK_MONOTONIC, &t_start[1]); t_end[1] =  spawn_function(); } // 2
 		if(NSERIAL-3 >= 0) { clock_gettime(CLOCK_MONOTONIC, &t_start[2]); t_end[2] =  spawn_function(); } // 3
@@ -441,6 +450,7 @@ int main(int argc, char *argv[]){
 		if(NSERIAL-300 >= 0) { clock_gettime(CLOCK_MONOTONIC, &t_start[299]); t_end[299] =  spawn_function(); } // 300
 
 		if(NSERIAL-301 >= 0) { clock_gettime(CLOCK_MONOTONIC, &t_start[300]); t_end[300] =  spawn_function(); }// 301
+*/
 
 	printf("****\n");	
 	for(int i = 0; i < NSERIAL; i++){

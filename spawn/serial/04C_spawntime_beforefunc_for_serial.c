@@ -43,13 +43,14 @@ int main(int argc, char *argv[]){
                 NSERIAL = number_threads();
             }
         }
-    }
+    }printf("# NSERIAL: %d\n", NSERIAL);
 
 	struct timespec t_start[NSERIAL]; struct timespec t_res; 
 	struct timespec t_end[NSERIAL];
 
 	for(int i=0; i < NSERIAL; i++){ 	
-		clock_gettime(CLOCK_MONOTONIC, &t_start[i]); t_end[i] = spawn_function();
+		clock_gettime(CLOCK_MONOTONIC, &t_start[i]); 
+        t_end[i] = spawn_function();
 
 	} 
 
