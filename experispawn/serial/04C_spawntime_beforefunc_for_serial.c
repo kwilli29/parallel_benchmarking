@@ -32,18 +32,15 @@ struct timespec spawn_function(){           // Simple Function to Spawn
 int main(int argc, char *argv[]){
 
 	int NSERIAL = number_threads();
-
+    
     // Process Command-Line Arguments
-    if(argc >= 2){
+    if(argc > 1){
         if(atoi(argv[1]) == 0){
             NSERIAL = number_threads();
         } else {
             NSERIAL = atoi(argv[1]);
-            //if (NSERIAL > 301){
-                NSERIAL = number_threads();
-            //}
         }
-    }printf("# NSERIAL: %d\n", NSERIAL);
+    }printf("*# NSERIAL: %d\n", NSERIAL);
 
 	struct timespec t_start[NSERIAL]; struct timespec t_res; 
 	struct timespec t_end[NSERIAL];

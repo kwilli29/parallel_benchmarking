@@ -28,7 +28,7 @@ run_programs() { # ex. 0 1 A
 
     for((i=0;i<($RUNS);i++)); 
 	do	
-        ./$CURRPROG >> $DATA
+        ./$CURRPROG 32 >> $DATA
     done
 
     multi_output_metrics $DATA

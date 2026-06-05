@@ -28,7 +28,7 @@ run_programs() { # ex. 0 1 A
 
 	for((i=0;i<($RUNS);i++)); 
 	do	
-        ./$CURRPROG >> $DATA
+        ./$CURRPROG 32 >> $DATA
     done
     
     multi_output_metrics $DATA
@@ -46,6 +46,9 @@ rm $OUTFILE
 ###############################
 
 echo "Starting benchmark on 01_'s"
+
+    # B
+	run_programs 0 1 B
 
 	# C
 	run_programs 0 1 C 

@@ -38,7 +38,7 @@ int main(int argc, char *argv[]){
             NCILK = __cilkrts_get_nworkers();
         } else {
             NCILK = atoi(argv[1]);
-            if (NCILK > 301){
+            if(NCILK < 1){
                 NCILK = __cilkrts_get_nworkers();
             }
         }

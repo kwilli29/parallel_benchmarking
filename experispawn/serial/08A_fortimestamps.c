@@ -37,18 +37,15 @@ int main(int argc, char *argv[]){
             NSERIAL = number_threads();
         } else {
             NSERIAL = atoi(argv[1]);
-            //if (NSERIAL > 301){
-                NSERIAL = number_threads();
-            //}
         }
     }
 	printf("* # Spawns: %d\n", NSERIAL);
 
-    struct timespec t1, t3, t5, t6, t7, t_start ,t2,t4; //,t8;
+    struct timespec t3, t4, t5;//, t_start;
     struct timespec t_res;
-    // struct timespec t2[NSERIAL]; struct timespec t4[NSERIAL];
+    struct timespec t1[NSERIAL]; struct timespec t2[NSERIAL];
 
-    clock_gettime(CLOCK_MONOTONIC, &t_start);
+    // clock_gettime(CLOCK_MONOTONIC, &t_start);
 
     //////////////////////////////////////////////////////
 
@@ -57,58 +54,43 @@ int main(int argc, char *argv[]){
 
     for(int i=1; i < NSERIAL; i++){      //    for i=1,spawn_max
 
-        clock_gettime(CLOCK_MONOTONIC, &t1);     // measure clock - t1
-        for(int j=1; j < i; j++){                // for j 1,i
-            clock_gettime(CLOCK_MONOTONIC, &t2); // measure clock -- t2
+        clock_gettime(CLOCK_MONOTONIC, &t1[0]);     // measure clock - t1[0]
+        for(int j=1; j < i; j++){                   // for j 1,i
+            clock_gettime(CLOCK_MONOTONIC, &t1[j]); // measure clock -- t1
         }
-        clock_gettime(CLOCK_MONOTONIC, &t3);     // measure clock - t3
-        for(int j=1; j < i; j++){                // for j 1,i
-            clock_gettime(CLOCK_MONOTONIC, &t4); // measure clock -- t4
-            spawn_function();         // spawn
+        clock_gettime(CLOCK_MONOTONIC, &t2[0]);     // measure clock - t2[0]
+        for(int j=1; j < i; j++){                   // for j 1,i
+            clock_gettime(CLOCK_MONOTONIC, &t2[j]); // measure clock -- t2
+            spawn_function();                       // spawn
         }
-        clock_gettime(CLOCK_MONOTONIC, &t5);     // measure clock - t5
+        clock_gettime(CLOCK_MONOTONIC, &t3);        // measure clock - t3
+
+        printf("**** OUTPUTS --> %d****:\n", i);
+        for(int k=1; k<i;k++){
+            timespec_sub(&t_res, t1[k], t1[0]);
+            printf("t1[0]-t1[%d],%ld.%09ld\n", k, (long)t_res.tv_sec, t_res.tv_nsec); // t1[0]-t1[j]
+        }
+        for(int k=1; k<i;k++){
+            timespec_sub(&t_res, t2[k], t2[0]);
+            printf("t2[0]-t2[%d],%ld.%09ld\n", k, (long)t_res.tv_sec, t_res.tv_nsec); // t2[0]-t2[j]
+        }
+
+        timespec_sub(&t_res, t3, t2[0]);
+        printf("t2[0]-t3,%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t2[0]-t2[j]
+        
+        printf("**** **** **** **** ****\n");
+
     }
-    clock_gettime(CLOCK_MONOTONIC, &t6); // measure clock
-    // sync
-    clock_gettime(CLOCK_MONOTONIC, &t7); // measure clock
+    clock_gettime(CLOCK_MONOTONIC, &t4); // measure clock
+    // no sync
+    clock_gettime(CLOCK_MONOTONIC, &t5); // measure clock
 
     //////////////////////////////////////////////////////
-    
-    printf("**** OUTPUTS -->****:\n");
-    timespec_sub(&t_res, t1, t_start);
-    printf("t1,%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t1
-
-    timespec_sub(&t_res, t2, t_start);
-    printf("t2,%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t2
-
-    timespec_sub(&t_res, t2, t1);
-    printf("t2-t1,%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t2-t1
-
-    timespec_sub(&t_res, t3, t_start);
-    printf("t3,%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t3
-
-    timespec_sub(&t_res, t4, t_start);
-    printf("t4,%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t4
-
-    timespec_sub(&t_res, t4, t3);
-    printf("t3-t4,%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t3-t4
-
-    timespec_sub(&t_res, t5, t_start);
-    printf("t5,%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t5
-
-    timespec_sub(&t_res, t5, t4);
-    printf("t5-t4,%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t5-t4
 
     printf("**** SYNC ****:\n");
 
-    timespec_sub(&t_res, t6, t_start);
-    printf("t6,%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t6
-
-    timespec_sub(&t_res, t7, t_start);
-    printf("t7,%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t7
-
-    timespec_sub(&t_res, t7, t6);
-    printf("t7-t6,%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t7-t6
+    timespec_sub(&t_res, t5, t4);
+    printf("t5-t4,%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t5-t4
 
     //timespec_sub(&t_res, t8, t_start);
     //printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t8

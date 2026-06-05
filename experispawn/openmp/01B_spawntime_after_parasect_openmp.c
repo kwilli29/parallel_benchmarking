@@ -8,12 +8,14 @@
 #include <assert.h>
 #include "ctimer.h"
 #include <math.h>
+
 #include "../../include/numthreads.h"
-/* Benchmark: 02C: Spawn time before ; For-Loop Para. Sects. Spawns (OpenMP)
- * Launch a bunch and measure when all done 
+
+/* Benchmark: 01B: Spawn time after ; Parallel Region Spawns (OpenMP)
+ * Launch a bunch and measure when all done
  */
 
-void spawn_function(){           // Simple Function to Spawn
+void spawn_function(){           // Simple Spawn Function
 
 	int x = 100; int y = 5000; int z = 1000000;
 
@@ -25,6 +27,7 @@ void spawn_function(){           // Simple Function to Spawn
 
 	return; 
 }
+
 
 int main(int argc, char *argv[]){
 
@@ -41,34 +44,27 @@ int main(int argc, char *argv[]){
             }
         }
     }
-    printf("# Spawns: %d\n", OMP_THREADS);
+	printf("* # Spawns: %d\n", OMP_THREADS);
 
-	struct timespec t_start, t_res;
-	struct timespec t_end[OMP_THREADS];
 
-	clock_gettime(CLOCK_MONOTONIC, &t_start); 
+	struct timespec t_start, t_res, t_end;
+	clock_gettime(CLOCK_MONOTONIC, &t_start);
 
-	#pragma omp parallel 
-	{
-		#pragma omp single
-		{
-			for(int i = 0; i < OMP_THREADS; i++){
-				
-				clock_gettime(CLOCK_MONOTONIC, &t_end[i]); 
-				#pragma omp task
-				spawn_function(); 
-			} 
-		}
-	}
 
-	printf("****\n");
-	for(int i = 0; i < OMP_THREADS; i++){
+	// omp parallel region will call spawn_function in parallel OMP_THREAD # of times
 
-		timespec_sub(&t_res, t_end[i], t_start);
+    #pragma omp parallel num_threads(OMP_THREADS) 
+    {
+    
+        spawn_function(); // Take time stamp before each spawn
 
-		printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
-	
-	}
+    }
+
+	clock_gettime(CLOCK_MONOTONIC, &t_end);
+
+	timespec_sub(&t_res, t_end, t_start);
+
+	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
 	return 0;
 }

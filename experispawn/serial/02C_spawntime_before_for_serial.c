@@ -37,11 +37,8 @@ int main(int argc, char *argv[]){
             NSERIAL = number_threads();
         } else {
             NSERIAL = atoi(argv[1]);
-            //if (NSERIAL > 301){
-                NSERIAL = number_threads();
-            //}
         }
-    }
+    }printf("*# NSERIAL: %d\n", NSERIAL);
 
 	struct timespec t_start, t_res;
 	struct timespec t_end[NSERIAL];

@@ -39,9 +39,6 @@ int main(int argc, char *argv[]){
             NSERIAL = number_threads();
         } else {
             NSERIAL = atoi(argv[1]);
-            //if (NSERIAL > 301){
-                NSERIAL = number_threads();
-            //}
         }
     }
 	//int innerreps = 1000;

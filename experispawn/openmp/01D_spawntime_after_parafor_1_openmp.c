@@ -37,9 +37,9 @@ int main(int argc, char *argv[]){
             OMP_THREADS = number_threads();
         } else {
             OMP_THREADS = atoi(argv[1]);
-            //if (OMP_THREADS > 301){
+            if (OMP_THREADS < 1){
                 OMP_THREADS = number_threads();;
-            //}
+            }
         }
     }
     printf("* # Spawns: %d\n", OMP_THREADS);

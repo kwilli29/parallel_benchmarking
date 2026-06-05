@@ -38,9 +38,9 @@ int main(int argc, char *argv[]){
             PTH = number_threads();
         } else {
             PTH = atoi(argv[1]);
-            //if (PTH > 301){
+            if (PTH < 1){
                 PTH = number_threads();;
-            //}
+            }
         }
     }
 	printf("* # Spawns: %d\n", PTH);
