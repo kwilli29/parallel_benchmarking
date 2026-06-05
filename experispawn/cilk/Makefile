@@ -1,0 +1,121 @@
+.PHONY: serial
+
+CC=		/opt/$$(ls /opt | grep "opencilk")/bin/clang # /opt/opencilk-2/bin/clang 
+CFLAGS=		-fopencilk -O3 -Og -g # -fcilktool=cilkscale -lm -Wall -Wextra -Wconversion -std=c11 -Werror
+SOURCE=		$(wildcard *.c)
+TARGETS=	$(SOURCE:.c=)	
+
+EXECS := $(foreach s,$(TARGETS),$(shell echo $(basename $(s)) | cut -c1-3))
+
+all:
+	@for s in $(SOURCE); do \
+		name=$$(basename $$s); \
+		exe=$$(echo $$name | cut -c1-3); \
+		$(CC) $(CFLAGS) $$s -o $$exe; \
+	done
+
+build: $(TARGETS)
+
+serial:
+	$(MAKE) -C serial all
+
+01A: 01A_spawntime_after_sequential_cilk.c
+	$(CC) $(CFLAGS) 01A_spawntime_after_sequential_cilk.c -o 01A
+
+01C: 01C_spawntime_after_for_cilk.c
+	$(CC) $(CFLAGS) 01C_spawntime_after_for_cilk.c -o 01C
+
+01D: 01D_spawntime_after_cilkfor_1_cilk.c
+	$(CC) $(CFLAGS) 01D_spawntime_after_cilkfor_1_cilk.c -o 01D
+
+01E: 01E_spawntime_after_one_cilk.c
+	$(CC) $(CFLAGS) 01E_spawntime_after_one_cilk.c -o 01E
+
+01F: 01F_spawntime_after_oneargs_cilk.c
+	$(CC) $(CFLAGS) 01F_spawntime_after_oneargs_cilk.c -o 01F
+
+02B: 02B_spawntime_before_cilkscope_cilk.c
+	$(CC) $(CFLAGS) 02B_spawntime_before_cilkscope_cilk.c -o 02B
+
+05A: 05A_spawntime_window_cilk.c
+	$(CC) $(CFLAGS) 05A_spawntime_window_cilk.c -o 05A
+
+04A: 04A_spawntime_beforefunc_sequential_cilk.c
+	$(CC) $(CFLAGS) 04A_spawntime_beforefunc_sequential_cilk.c -o 04A
+
+04B: 04B_spawntime_beforefunc_cilkscope_cilk.c
+	$(CC) $(CFLAGS) 04B_spawntime_beforefunc_cilkscope_cilk.c -o 04B
+
+04E: 04E_spawntime_beforefunc_one_cilk.c
+	$(CC) $(CFLAGS) 04E_spawntime_beforefunc_one_cilk.c -o 04E
+
+04F: 04F_spawntime_beforefunc_oneargs_cilk.c
+	$(CC) $(CFLAGS) 04F_spawntime_beforefunc_oneargs_cilk.c -o 04F
+
+1:
+	@for s in $(wildcard 01*.c); do \
+		name=$$(basename $$s); \
+		exe=$$(echo $$name | cut -c1-3); \
+		$(CC) $(CFLAGS) $$s -o $$exe; \
+	done
+2:
+	@for s in $(wildcard 02*.c); do \
+		name=$$(basename $$s); \
+		exe=$$(echo $$name | cut -c1-3); \
+		$(CC) $(CFLAGS) $$s -o $$exe; \
+	done
+3:
+	@for s in $(wildcard 03*.c); do \
+		name=$$(basename $$s); \
+		exe=$$(echo $$name | cut -c1-3); \
+		$(CC) $(CFLAGS) $$s -o $$exe; \
+	done
+4:
+	@for s in $(wildcard 04*.c); do \
+		name=$$(basename $$s); \
+		exe=$$(echo $$name | cut -c1-3); \
+		$(CC) $(CFLAGS) $$s -o $$exe; \
+	done
+5:
+	@for s in $(wildcard 05*.c); do \
+		name=$$(basename $$s); \
+		exe=$$(echo $$name | cut -c1-3); \
+		$(CC) $(CFLAGS) $$s -o $$exe; \
+	done
+6:
+	@for s in $(wildcard 06*.c); do \
+		name=$$(basename $$s); \
+		exe=$$(echo $$name | cut -c1-3); \
+		$(CC) $(CFLAGS) $$s -o $$exe; \
+	done
+
+7:
+	@for s in $(wildcard 07*.c); do \
+		name=$$(basename $$s); \
+		exe=$$(echo $$name | cut -c1-3); \
+		$(CC) $(CFLAGS) $$s -o $$exe; \
+	done
+
+8:
+	@for s in $(wildcard 08*.c); do \
+		name=$$(basename $$s); \
+		exe=$$(echo $$name | cut -c1-3); \
+		$(CC) $(CFLAGS) $$s -o $$exe; \
+	done
+
+#clang  -fopenmp -lomp -O3 -Og -g omp/fib_omp.c -o ompfib
+# 
+
+# For compilers to find libomp you may need to set:
+#  export LDFLAGS="-L/opt/homebrew/opt/libomp/lib"
+#  export CPPFLAGS="-I/opt/homebrew/opt/libomp/include"
+
+#If you need to have llvm first in your PATH, run:
+#  echo 'export PATH="/opt/homebrew/opt/llvm/bin:$PATH"' >> /Users/Kelly/.bash_profile
+
+#For compilers to find llvm you may need to set:
+#  export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
+#  export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
+
+clean:
+	rm -f $(EXECS) *.s *.o *_.c lib*.so lib*.a

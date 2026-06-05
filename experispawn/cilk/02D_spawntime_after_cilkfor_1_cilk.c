@@ -1,0 +1,73 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <unistd.h>
+#include <string.h>
+#include <cilk/cilk.h>
+#include <cilk/cilk_api.h>
+#include <assert.h>
+#include <sys/time.h>
+#include <math.h>
+#include "ctimer.h"
+
+/* Benchmark: 02D: Spawn time before ; CilkFor Spawns (Cilk)
+ * Launch a bunch and measure when all done - don’t necessarily get just spawn time
+ */
+
+void spawn_function(){           // Simple Function to Spawn
+
+	int x = 100; int y = 5000; int z = 1000000;
+
+	x = x + y + z;
+
+	y = y + x + z;
+
+	z = z + y + x;	
+
+	return; 
+}
+
+int main(int argc, char *argv[]){
+
+    int NCILK = __cilkrts_get_nworkers();
+
+    // Process Command-Line Arguments
+    if(argc >= 2){
+        if(atoi(argv[1]) == 0){
+            NCILK = __cilkrts_get_nworkers();
+        } else {
+            NCILK = atoi(argv[1]);
+            if (NCILK > 301){
+                NCILK = __cilkrts_get_nworkers();
+            }
+        }
+    }
+
+	printf("* # Spawns: %d\n", NCILK);
+
+	struct timespec t_start, t_res;
+	struct timespec t_end[NCILK];
+
+	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+
+	#pragma cilk grainsize 1
+	cilk_for(int i=0; i < NCILK; i++){ // parallel for loop time then spawn
+		
+		clock_gettime(CLOCK_MONOTONIC, &t_end[i]); cilk_spawn spawn_function();
+
+	}
+
+	printf("****\n");
+	for(int i = 0; i < NCILK; i++){
+		
+		timespec_sub(&t_res, t_end[i], t_start);
+
+		printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+	
+	}
+
+	// printf("02D\n");
+
+	return 0;
+}
