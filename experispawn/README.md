@@ -3,6 +3,7 @@
 
 ## 01:  Start timer, Spawn all threads, then stop timer after all spawns hve completed. 
 
+  - B: Individual spawn calls made within a parallel region
   - C: Regular for-loop individual spawn calls
   - D: parallel_for-loop calls the function. Grainsize = 1
   - E: Time 1 spawn call
@@ -12,7 +13,6 @@
 
 ## 02: Measure time before each spawn call -- timer; spawn x(); ... etc.
 
-  - B: Individual spawn calls made within a parallel region
   - C: Regular for-loop individual spawn calls
   - D: parallel_for-loop calls the function. Grainsize = 1
 
