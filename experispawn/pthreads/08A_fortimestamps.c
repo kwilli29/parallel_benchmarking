@@ -66,7 +66,7 @@ int main(int argc, char *argv[]){
     // !!!! An alternative way to do this is to have the outer for loop 
     // run in a shell script that executes this program w/ an input argument !!!!
 
-    for(int i=1; i < PTH; i++){      //    for i=1,spawn_max
+    for(int i=1; i <= PTH; i++){      //    for i=1,spawn_max
 
         clock_gettime(CLOCK_MONOTONIC, &t1[0]);     // measure clock - t1[0]
         for(int j=1; j < i; j++){                   // for j 1,i

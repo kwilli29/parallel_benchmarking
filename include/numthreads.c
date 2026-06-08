@@ -13,9 +13,13 @@
 
 #include "numthreads.h"
 
-// gcc -O3 -Og -g -Wall -Wconversion -lm thread_test.c // ./a.out
+// run valgrind !!
 
-int number_threads() {
+// gcc -O3 -Og -g -Wall -Wconversion -lm numthreads.c // ./a.out
+
+int linux_threads(){
+    // Parse lscpu
+
     FILE *fp;
     char buffer[buffersize];
     int NUM_THREADS = (int)2; // Default to 2 if command fails or parsing fails
@@ -23,8 +27,7 @@ int number_threads() {
     // Open the pipe to the command
     fp = popen("lscpu | grep '^CPU(s):'", "r");
 
-    // !!!! Mac needs lscpu ported or to run "sysctl -a | grep machdep.cpu" and get 'machdep.cpu.thread_count: #'
-    
+
     if (fp != NULL) {
 
         // Read the output line (e.g., "CPU(s):                          NUM_THREADS")
@@ -46,8 +49,94 @@ int number_threads() {
 
     return (int)NUM_THREADS;
 }
-/*int main(int argc, char *argv[]){
+
+int mac_threads(){
+
+    FILE *fp;
+    char buffer[buffersize];
+    int NUM_THREADS = (int)2; // Default to 2 if command fails or parsing fails
+
+    // Open the pipe to the command
+    fp = popen("sysctl -a | grep '^machdep.cpu.thread_count:'", "r");
+
+    // Mac needs to run "sysctl -a | grep machdep.cpu" and get 'machdep.cpu.thread_count: #'
+    
+    if (fp != NULL) {
+
+        // Read the output line (e.g., "machdep.cpu.thread_count: 10")
+        if (fgets(buffer, sizeof(buffer), fp) != NULL) {
+            // Find the colon and scan the integer following it 
+            if (sscanf(buffer, "machdep.cpu.thread_count: %d", &NUM_THREADS) != 1) {
+                // If parsing fails, reset to 2 
+                NUM_THREADS = (int)2;
+            }
+        }
+        
+        // Close the pipe and get exit status
+        if (pclose(fp) != 0) {
+            NUM_THREADS = (int)2;
+        }
+    }
+
+    //printf("%d\n", (int)NUM_THREADS);
+
+    return (int)NUM_THREADS;
+}
+
+int number_threads() {
+    FILE *fp;
+    char buffer[buffersize];
+    char os_buffer[256];
+
+    int NUM_THREADS = (int)2; // Default to 2 if command fails or parsing fails
+
+    // Windows needs something different that would fail on the other os options probably
+
+    // Open the pipe to the command
+    fp = popen("uname -s", "r");
+    
+    if (fp != NULL) {
+
+        // Read the output line (e.g., "Linux")
+        if (fgets(buffer, sizeof(buffer), fp) != NULL) {
+            // Find string from the uname command
+            if (sscanf(buffer, "%s", (char *)&os_buffer) != 1) {
+
+                // If parsing fails, OS = other 
+                strcpy(os_buffer, "other");
+
+            }
+
+            // printf("%s\n", os_buffer);
+
+            if (strstr((char *)&os_buffer, "Darwin") != NULL){
+                NUM_THREADS = mac_threads();
+                //strcpy(os_buffer, "mac");
+            } 
+            else if (strstr((char *)&os_buffer, "Linux") != NULL){
+                NUM_THREADS = linux_threads();
+                //strcpy(os_buffer, "linux");
+            }
+            else{
+                // Windows or other OS
+            }
+        }
+        
+        // Close the pipe and get exit status
+        if (pclose(fp) != 0) {
+            NUM_THREADS = (int)2;
+            strcpy(os_buffer, "other");
+        }
+    }
+
+    // printf("%d\n", (int)NUM_THREADS);
+
+    return (int)NUM_THREADS;
+}
+/*
+int main(int argc, char *argv[]){
     int NUM_THREADS = number_threads();
     printf("%d\n", NUM_THREADS);
     return 0;
-}*/
+}
+*/

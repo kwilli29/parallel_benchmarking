@@ -1,6 +1,20 @@
 .PHONY: serial
 
-CC=		/opt/$$(ls /opt | grep "opencilk")/bin/clang # /opt/opencilk-2/bin/clang 
+XCRUN=""
+# Check the operating system
+ifeq ($(OS),Windows_NT)
+    DETECTED_OS := Windows
+else
+    DETECTED_OS := $(shell uname -s)
+endif
+# if Mac, set xcrun
+ifeq ($(DETECTED_OS),Darwin)
+	XCRUN:=xcrun
+else
+	XCRUN=""
+endif
+
+CC=		$(XCRUN) /opt/$$(ls /opt | grep "opencilk")/bin/clang # /opt/opencilk-2/bin/clang 
 CFLAGS=		-fopencilk -O3 -Og -g # -fcilktool=cilkscale -lm -Wall -Wextra -Wconversion -std=c11 -Werror
 SOURCE=		$(wildcard *.c)
 TARGETS=	$(SOURCE:.c=)	
@@ -119,3 +133,4 @@ serial:
 
 clean:
 	rm -f $(EXECS) *.s *.o *_.c lib*.so lib*.a
+	rm -r *.dSYM

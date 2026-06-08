@@ -79,3 +79,4 @@ all:
 
 clean:
 	rm -f $(EXECS) *.s *.o *_.c lib*.so lib*.a
+	rm -r *.dSYM

@@ -1,4 +1,20 @@
-CC=		gcc
+.PHONY: serial 
+
+MACBREW_GCC=""
+# Check the operating system
+ifeq ($(OS),Windows_NT)
+    DETECTED_OS := Windows
+else
+    DETECTED_OS := $(shell uname -s)
+endif
+# if Mac, set xcrun
+ifeq ($(DETECTED_OS),Darwin)
+	MACBREW_GCC:=-14
+else
+	MACBREW_GCC=""
+endif
+
+CC=		gcc$(MACBREW_GCC)
 CFLAGS=		-fopenmp -Wall -O3 -Og -g
 INCFILES=   ../../include/numthreads.c
 SOURCE=		$(wildcard *.c)
@@ -83,3 +99,4 @@ all:
 
 clean:
 	rm -f $(EXECS) *.s *.o *_.c lib*.so lib*.a
+	rm -r *.dSYM
