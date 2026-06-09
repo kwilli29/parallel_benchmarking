@@ -2,7 +2,7 @@
 
 RUNS=100
 PLANG="openmp"
-OUTFILE="output/001.txt"
+OUTFILE="output/002.txt"
 ###############################
 
 multi_output_metrics() {	# ex. #RUNS data/01A_000.txt
@@ -28,7 +28,7 @@ run_programs() { # ex. 0 1 A
 
 	for((i=0;i<($RUNS);i++)); 
 	do	
-        ./$CURRPROG 32 >> $DATA
+        ./$CURRPROG 272 >> $DATA
     done
     
     multi_output_metrics $DATA

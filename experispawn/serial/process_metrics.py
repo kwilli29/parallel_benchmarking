@@ -164,12 +164,12 @@ def short_metrics(pfile, sfile, runs): #
 
 def main():
 
-    csvdata = [sys.argv[2]]
+    #print('here:', sys.argv[2])
 
     # sys.argv = [ ./X , #runs , parallel filename , serial filename ]
-    if '5' in sys.argv[2]: 
+    if '5' in sys.argv[2][0:7]: 
         csvdata = thread_metrics(sys.argv[2], sys.argv[1])
-    if '2' in sys.argv[2]:
+    if '2' in sys.argv[2][0:7]:
         csvdata = long_metrics(sys.argv[2] , sys.argv[3], sys.argv[1])
     else:
         csvdata = short_metrics(sys.argv[2] , sys.argv[3], sys.argv[1])

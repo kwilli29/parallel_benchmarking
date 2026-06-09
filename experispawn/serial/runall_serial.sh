@@ -2,12 +2,13 @@
 
 RUNS=100
 PLANG="serial"
-OUTFILE="output/001.txt"
+OUTFILE="output/002.txt"
+ARCH="galahad"
 ###############################
 
 single_output_metrics() {	# ex. 25 data/01A_000.txt
 
-	echo "Process $2"
+	echo "Process $1"
 
 	python3 ./process_metrics.py $RUNS "$1" "$1" >> $OUTFILE
 
@@ -25,13 +26,13 @@ run_programs() { # ex. 0 1 A
 
 	CURRPROG="$1$2$3"
 
-	EXEC="data/${CURRPROG}_001.txt"
-	touch $EXEC 
+	EXEC="data/${ARCH}/${CURRPROG}_002.txt"
+	#touch $EXEC 
 
 	for((i=0;i<($RUNS);i++)); 
 	do	
-		./$CURRPROG 32 >> $EXEC # Capture program output
-	done
+		./$CURRPROG 272 >> $EXEC # Capture program output
+    done
 
 	# Metrics
 
