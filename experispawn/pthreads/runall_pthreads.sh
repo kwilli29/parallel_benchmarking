@@ -2,7 +2,7 @@
 
 RUNS=100
 PLANG="pthreads"
-OUTFILE="output/000.txt"
+OUTFILE="output/001.txt"
 ###############################
 
 multi_output_metrics() {	# ex. #RUNS data/01A_000.txt

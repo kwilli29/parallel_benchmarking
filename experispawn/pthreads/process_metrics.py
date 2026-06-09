@@ -18,7 +18,7 @@ except Exception as e:
 
 def long_metrics(pfile, sfile, runs): # for 02 benchmarks --> get the difference between time measurements
 
-    csvdata = [0.0,0.0,0.0]
+    csvdata = [0.0,0.0,runs]
 
     # AVERAGE DIFF B/W
     PACC = 0.0
@@ -90,14 +90,14 @@ def long_metrics(pfile, sfile, runs): # for 02 benchmarks --> get the difference
     TPTS = (sum(PARA_AVGDIFFS) - sum(SERI_AVGDIFFS))/float(len(PARA_AVGDIFFS))
     TPTS = TPTS*1000000000.0 
 
-    csvdata[1] = TPTS
+    #csvdata[1] = TPTS
 
     # OVERHEAD 
     OVRHD = 0.0
     OVRHD= sum(PARA_AVGDIFFS) - (sum(SERI_AVGDIFFS) / float(NUM_PROCS) )
     OVRHD = OVRHD*1000000000.0 
 
-    csvdata[2] = OVRHD 
+    #csvdata[2] = OVRHD 
 
     return csvdata
 
@@ -120,7 +120,7 @@ def thread_metrics(filename, runs): # Time window metric
 
 def short_metrics(pfile, sfile, runs): #
 
-    csvdata = [0.0,0.0,0.0]
+    csvdata = [0.0,0.0,runs]
 
     # METRICS
     PACC = 0.0
@@ -152,13 +152,13 @@ def short_metrics(pfile, sfile, runs): #
     if linecnt>0: TPTS = (PACC - SACC)/float(linecnt)
     TPTS = TPTS*1000000000.0 
 
-    csvdata[1] = TPTS
+    #csvdata[1] = TPTS
 
     # OVERHEAD
     OVRHD = PACC - (SACC/float(NUM_PROCS))
     OVRHD = OVRHD*1000000000.0 
     
-    csvdata[2] = OVRHD
+    #csvdata[2] = OVRHD
    
     return csvdata
 
@@ -174,6 +174,7 @@ def main():
     else:
         csvdata = short_metrics(sys.argv[2] , sys.argv[3], sys.argv[1])
 
+    csvdata.append(sys.argv[2])
     print(csvdata)
 
     return

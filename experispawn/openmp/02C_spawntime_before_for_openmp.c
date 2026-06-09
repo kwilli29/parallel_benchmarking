@@ -12,7 +12,32 @@
 /* Benchmark: 02C: Spawn time before ; For-Loop Para. Sects. Spawns (OpenMP)
  * Launch a bunch and measure when all done 
  */
+static const int ITERATION = 100000;
+void spawn_function_long(){
 
+    double z = 0;
+    double i = 0.0;
+
+    double x = 15.0;
+	static const int nn = 87;
+
+    double a =0.0;
+	for (int j = 0; j < ITERATION; j++){
+        z*=acos((double)j);
+
+        for (long m = 1; m < nn; ++m){
+            a = (double)((double)m*1.0);
+            x = sin((double)x*1.0) / (double)(a*1.0 + (j * i + i + j)*1.0 / a);
+        }
+
+        z += x + z; //
+        z= tanh((double)z);
+
+        i += 1.0;
+	}
+
+	return;
+}
 void spawn_function(){           // Simple Function to Spawn
 
 	int x = 100; int y = 5000; int z = 1000000;
@@ -56,7 +81,7 @@ int main(int argc, char *argv[]){
 				
 				clock_gettime(CLOCK_MONOTONIC, &t_end[i]); 
 				#pragma omp task
-				spawn_function(); 
+				spawn_function_long(); 
 			} 
 		}
 	}

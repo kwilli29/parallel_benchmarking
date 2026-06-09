@@ -1,21 +1,23 @@
 .PHONY: serial
 
-XCRUN=""
 # Check the operating system
-ifeq ($(OS),Windows_NT)
-    DETECTED_OS := Windows
-else
-    DETECTED_OS := $(shell uname -s)
-endif
+#ifeq ($(OS),Windows_NT)
+#    DETECTED_OS := Windows
+#else
+#	DETECTED_OS := $(shell uname -s)
+#endif
+
+XCRUN=""
+DETECTED_OS= $$(uname -s)
 # if Mac, set xcrun
 ifeq ($(DETECTED_OS),Darwin)
-	XCRUN:=xcrun
+	XCRUN="xcrun ""
 else
 	XCRUN=""
 endif
 
-CC=		$(XCRUN) /opt/$$(ls /opt | grep "opencilk")/bin/clang # /opt/opencilk-2/bin/clang 
-CFLAGS=		-fopencilk -O3 -Og -g # -fcilktool=cilkscale -lm -Wall -Wextra -Wconversion -std=c11 -Werror
+CC=		$(XCRUN)/opt/$$(ls /opt | grep "opencilk")/bin/clang # /opt/opencilk-2/bin/clang 
+CFLAGS=		-fopencilk -O3 -Og -g -lm # -fcilktool=cilkscale -lm -Wall -Wextra -Wconversion -std=c11 -Werror
 SOURCE=		$(wildcard *.c)
 TARGETS=	$(SOURCE:.c=)	
 

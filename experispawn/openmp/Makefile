@@ -15,7 +15,7 @@ else
 endif
 
 CC=		gcc$(MACBREW_GCC)
-CFLAGS=		-fopenmp -Wall -O3 -Og -g
+CFLAGS=		-fopenmp -Wall -O3 -Og -g -lm
 INCFILES=   ../../include/numthreads.c
 SOURCE=		$(wildcard *.c)
 TARGETS=	$(SOURCE:.c=)	

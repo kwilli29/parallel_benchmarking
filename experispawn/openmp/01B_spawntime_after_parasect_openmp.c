@@ -14,7 +14,34 @@
 /* Benchmark: 01B: Spawn time after ; Parallel Region Spawns (OpenMP)
  * Launch a bunch and measure when all done
  */
+static const int ITERATION = 100000;
+void spawn_function_long(){
 
+    double z = 0;
+    double i = 0.0;
+
+    double x = 15.0;
+	static const int nn = 87;
+
+    double a =0.0;
+	for (int j = 0; j < ITERATION; j++){
+        z*=acos((double)j);
+
+        for (long m = 1; m < nn; ++m){
+            a = (double)((double)m*1.0);
+            x = sin((double)x*1.0) / (double)(a*1.0 + (j * i + i + j)*1.0 / a);
+        }
+
+        z += x + z; //
+        z= tanh((double)z);
+
+        i += 1.0;
+	}
+
+    // printf("**%d\t", __cilkrts_get_worker_number()); // print thread id
+
+	return;
+}
 void spawn_function(){           // Simple Spawn Function
 
 	int x = 100; int y = 5000; int z = 1000000;
@@ -56,12 +83,12 @@ int main(int argc, char *argv[]){
     #pragma omp parallel num_threads(OMP_THREADS) 
     {
     
-        spawn_function(); // Take time stamp before each spawn
+        spawn_function();
+        // spawn_function_long(); // Take time stamp before each spawn
 
     }
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
-
 	timespec_sub(&t_res, t_end, t_start);
 
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);

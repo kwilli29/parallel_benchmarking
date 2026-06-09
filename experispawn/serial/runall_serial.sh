@@ -1,8 +1,8 @@
 #!/bin/sh
 
-RUNS=25
+RUNS=100
 PLANG="serial"
-OUTFILE="output/000.txt"
+OUTFILE="output/001.txt"
 ###############################
 
 single_output_metrics() {	# ex. 25 data/01A_000.txt
@@ -25,7 +25,7 @@ run_programs() { # ex. 0 1 A
 
 	CURRPROG="$1$2$3"
 
-	EXEC="data/${CURRPROG}_000.txt"
+	EXEC="data/${CURRPROG}_001.txt"
 	touch $EXEC 
 
 	for((i=0;i<($RUNS);i++)); 

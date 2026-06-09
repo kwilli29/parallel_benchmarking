@@ -12,7 +12,32 @@
 /* Benchmark: 01E: Spawn timer after ; One Spawn (Pthreads)
  * Launch a bunch and measure when all done 
  */
+static const int ITERATION = 100000;
+void* spawn_function_long(){
 
+    double z = 0;
+    double i = 0.0;
+
+    double x = 15.0;
+	static const int nn = 87;
+
+    double a =0.0;
+	for (int j = 0; j < ITERATION; j++){
+        z*=acos((double)j);
+
+        for (long m = 1; m < nn; ++m){
+            a = (double)((double)m*1.0);
+            x = sin((double)x*1.0) / (double)(a*1.0 + (j * i + i + j)*1.0 / a);
+        }
+
+        z += x + z; //
+        z= tanh((double)z);
+
+        i += 1.0;
+	}
+
+	return (void*) NULL; 
+}
 void* spawn_function(){           // Simple Math for Spawn Function
 
 	int x = 100; int y = 5000; int z = 1000000;
@@ -46,7 +71,7 @@ int main(int argc, char *argv[]){
 
 	/****/ 
 
-	pthread_create( &Thread, &attr, spawn_function, NULL); // create a single detached thread
+	pthread_create( &Thread, &attr, spawn_function_long, NULL); // create a single detached thread
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 

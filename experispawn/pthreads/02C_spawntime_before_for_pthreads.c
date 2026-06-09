@@ -14,7 +14,32 @@
  */
 
 //pthread_barrier_t sync_barrier; /* to sync */
+static const int ITERATION = 100000;
+void* spawn_function_long(){
 
+    double z = 0;
+    double i = 0.0;
+
+    double x = 15.0;
+	static const int nn = 87;
+
+    double a =0.0;
+	for (int j = 0; j < ITERATION; j++){
+        z*=acos((double)j);
+
+        for (long m = 1; m < nn; ++m){
+            a = (double)((double)m*1.0);
+            x = sin((double)x*1.0) / (double)(a*1.0 + (j * i + i + j)*1.0 / a);
+        }
+
+        z += x + z; //
+        z= tanh((double)z);
+
+        i += 1.0;
+	}
+
+	return (void*) NULL; 
+}
 void* spawn_function(){           // Simple Math for Spawn Function
 	int x = 100; int y = 5000; int z = 1000000;
 
@@ -70,7 +95,7 @@ int main(int argc, char *argv[]){
 
 	for( int i = 0; i < PTH; i++ ) {                                     // # seq. for only
 		clock_gettime(CLOCK_MONOTONIC, &t_end[i]);
-		pthread_create( &Threads[ i ], &attr, spawn_function, NULL);
+		pthread_create( &Threads[ i ], &attr, spawn_function_long, NULL);
 	}
 
 	// each thread waits until all threads have hit the barrier, then they all return

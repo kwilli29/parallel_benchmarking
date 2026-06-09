@@ -9,10 +9,37 @@
 #include "ctimer.h"
 #include <math.h>
 
-/* Benchmark: 01E: Spawn time after ; One Spawn w/ fcn args (OpenMP)
+/* Benchmark: 01F: Spawn time after ; One Spawn w/ fcn args (OpenMP)
  * Launch a bunch and measure when all done -
  */
+static const int ITERATION = 100000;
+void spawn_function_long(double x){
 
+    double z = 0;
+    double i = 0.0;
+
+    //double x = 15.0;
+	static const int nn = 87;
+
+    double a =0.0;
+	for (int j = 0; j < ITERATION; j++){
+        z*=acos((double)j);
+
+        for (long m = 1; m < nn; ++m){
+            a = (double)((double)m*1.0);
+            x = sin((double)x*1.0) / (double)(a*1.0 + (j * i + i + j)*1.0 / a);
+        }
+
+        z += x + z; //
+        z= tanh((double)z);
+
+        i += 1.0;
+	}
+
+    // printf("**%d\t", __cilkrts_get_worker_number()); // print thread id
+
+	return;
+}
 void spawn_function(int x){           // Simple Spawn Function
 
 	int y = 5000; int z = 1000000;
@@ -29,7 +56,7 @@ void spawn_function(int x){           // Simple Spawn Function
 
 int main(int argc, char *argv[]){
 
-	int x = 100;
+	double x = 15.0;
 
 	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
@@ -43,7 +70,8 @@ int main(int argc, char *argv[]){
 	#pragma omp single
 	{
 		#pragma omp task
-		spawn_function(x);
+        spawn_function_long(x);
+		//spawn_function(x);
 	}	
 	
 	clock_gettime(CLOCK_MONOTONIC, &t_end);

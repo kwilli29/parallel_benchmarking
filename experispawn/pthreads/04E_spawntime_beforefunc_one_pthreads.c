@@ -15,6 +15,34 @@
 
 struct timespec t_end;
 
+static const int ITERATION = 100000;
+void* spawn_function_long(){
+
+    clock_gettime(CLOCK_MONOTONIC, &t_end);
+
+    double z = 0;
+    double i = 0.0;
+
+    double x = 15.0;
+	static const int nn = 87;
+
+    double a =0.0;
+	for (int j = 0; j < ITERATION; j++){
+        z*=acos((double)j);
+
+        for (long m = 1; m < nn; ++m){
+            a = (double)((double)m*1.0);
+            x = sin((double)x*1.0) / (double)(a*1.0 + (j * i + i + j)*1.0 / a);
+        }
+
+        z += x + z; //
+        z= tanh((double)z);
+
+        i += 1.0;
+	}
+
+	return (void*)&t_end;
+}
 void* spawn_function(){           // Simple Math for Spawn Function
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
@@ -40,7 +68,7 @@ int main(int argc, char *argv[]){
 
 	clock_gettime(CLOCK_MONOTONIC, &t_start);
     
-	pthread_create( &Thread, NULL, spawn_function, NULL);
+	pthread_create( &Thread, NULL, spawn_function_long, NULL);
 
 	struct timespec* temp = &t_end;
 	pthread_join(Thread, (void *)&temp);

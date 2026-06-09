@@ -12,7 +12,34 @@
 /* Benchmark: 04C: Spawn time before function ; For-Loop Spawns (Pthreads)
  * Launch a bunch and measure when all done 
  */
+static const int ITERATION = 100000;
+void* spawn_function_long(void* t_end){
 
+    clock_gettime(CLOCK_MONOTONIC, (struct timespec *)t_end);
+
+    double z = 0;
+    double i = 0.0;
+
+    double x = 15.0;
+	static const int nn = 87;
+
+    double a =0.0;
+	for (int j = 0; j < ITERATION; j++){
+        z*=acos((double)j);
+
+        for (long m = 1; m < nn; ++m){
+            a = (double)((double)m*1.0);
+            x = sin((double)x*1.0) / (double)(a*1.0 + (j * i + i + j)*1.0 / a);
+        }
+
+        z += x + z; //
+        z= tanh((double)z);
+
+        i += 1.0;
+	}
+
+	return (void*)t_end;
+}
 void* spawn_function(void* t_end){           // Simple Math for Spawn Function
 
 	clock_gettime(CLOCK_MONOTONIC, (struct timespec *)t_end);
@@ -54,7 +81,7 @@ int main(int argc, char *argv[]){
 
 	for( int i = 0; i < PTH; i++ ) {                                     // # seq. for only
 		clock_gettime(CLOCK_MONOTONIC, &t_start[i]);
-		pthread_create( &Threads[ i ], NULL, spawn_function, (void*)&t_end[i]);
+		pthread_create( &Threads[ i ], NULL, spawn_function_long, (void*)&t_end[i]);
 	}
 
 	struct timespec* temp = (struct timespec *)&t_end[0];

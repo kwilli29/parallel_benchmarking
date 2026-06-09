@@ -13,7 +13,33 @@
  * Launch a bunch and measure when all done
  */
 
+static const int ITERATION = 100000;
+void* spawn_function_long(void* xp){
 
+    double z = 0;
+    double i = 0.0;
+
+    //double x = 15.0;
+    double x = (double)*(double*)xp;
+	static const int nn = 87;
+
+    double a =0.0;
+	for (int j = 0; j < ITERATION; j++){
+        z*=acos((double)j);
+
+        for (long m = 1; m < nn; ++m){
+            a = (double)((double)m*1.0);
+            x = sin((double)x*1.0) / (double)(a*1.0 + (j * i + i + j)*1.0 / a);
+        }
+
+        z += x + z; //
+        z= tanh((double)z);
+
+        i += 1.0;
+	}
+
+	return (void*) NULL; 
+}
 void* spawn_function(void * xp){           // Simple Math for Spawn Function
 	
 	int x = (int)(intptr_t)xp; int y = 5000; int z = 1000000;
@@ -29,8 +55,8 @@ void* spawn_function(void * xp){           // Simple Math for Spawn Function
 
 int main(int argc, char *argv[]){
 
-	int x = 100;
-	int* xp = &x;
+	double x = 15.0;
+	double* xp = &x;
 
 	int ds, rc;
 	pthread_attr_t attr;
@@ -50,7 +76,7 @@ int main(int argc, char *argv[]){
 
 	/****/ 
 
-	pthread_create( &Thread, &attr, spawn_function, (void *)(intptr_t) xp);
+	pthread_create( &Thread, &attr, spawn_function_long, (void *)(double*) xp);
 
 	// sync?
 

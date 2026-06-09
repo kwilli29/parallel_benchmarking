@@ -16,7 +16,34 @@
  * Benchmark: 01D: Spawn time after ; CilkFor Spawns (Cilk)
  * Launch a bunch and measure when all done 
  */
+static const int ITERATION = 100000;
+void spawn_function_long(){
 
+    double z = 0;
+    double i = 0.0;
+
+    double x = 15.0;
+	static const int nn = 87;
+
+    double a =0.0;
+	for (int j = 0; j < ITERATION; j++){
+        z*=acos((double)j);
+
+        for (long m = 1; m < nn; ++m){
+            a = (double)((double)m*1.0);
+            x = sin((double)x*1.0) / (double)(a*1.0 + (j * i + i + j)*1.0 / a);
+        }
+
+        z += x + z; //
+        z= tanh((double)z);
+
+        i += 1.0;
+	}
+
+    // printf("**%d\t", __cilkrts_get_worker_number()); // print thread id
+
+	return;
+}
 void spawn_function(){           // Simple Spawn Function
 
 	int x = 100; int y = 5000; int z = 1000000;
@@ -53,8 +80,8 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_start); //
 
 	#pragma cilk grainsize 1
-	cilk_for(int i = 0; i < NCILK-1; i++){ // use parallel for to spawn simple function threads in parallel
-		spawn_function();
+	cilk_for(int i = 0; i < NCILK; i++){ // use parallel for to spawn simple function threads in parallel
+		spawn_function_long();
 	} 
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
