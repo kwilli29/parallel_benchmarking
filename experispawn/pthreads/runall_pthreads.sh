@@ -51,6 +51,12 @@ echo "Starting benchmark on 01_'s"
 	# C
 	run_programs 0 1 C
 
+	# N
+	run_programs 0 1 N
+
+	# W
+	# run_programs 0 1 W # don't know if necessary
+
 	# E
 	run_programs 0 1 E
 
@@ -81,10 +87,19 @@ echo "Cleanup 02_'s"
 echo ""
 ###############################
 
-#echo "Starting benchmark on 03_'s"
+echo "Starting benchmark on 03_'s"
 
-#echo "Cleanup 03_'s"
-#echo ""
+	# C
+	run_programs 0 3 C
+
+	# E
+	run_programs 0 3 E
+
+	# F
+	run_programs 0 3 F
+
+echo "Cleanup 03_'s"
+echo ""
 ###############################
 
 echo "Starting benchmark on 04_'s"

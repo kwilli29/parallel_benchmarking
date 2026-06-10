@@ -2,7 +2,7 @@
 
 RUNS=100
 PLANG="openmp"
-ARCH="rb" # "galahad"
+ARCH="galahad" # "rb"
 OUTFILE="output/${ARCH}/000.txt"
 ###############################
 
@@ -54,6 +54,9 @@ echo "Starting benchmark on 01_'s"
 	# C
 	run_programs 0 1 C 
 
+	# N
+	run_programs 0 1 N    
+
 	# D
 	run_programs 0 1 D
 
@@ -93,10 +96,25 @@ echo "Cleanup 02_'s"
 echo ""
 ###############################
 
-#echo "Starting benchmark on 03_'s"
+echo "Starting benchmark on 03_'s"
 
-#echo "Cleanup 03_'s"
-#echo ""
+	# C
+	run_programs 0 3 C
+
+	# D
+	run_programs 0 3 D
+
+	# E  -- 
+	run_programs 0 3 E
+
+	# F -- 
+	run_programs 0 3 F
+
+	# Cleanup
+	make clean
+
+echo "Cleanup 03_'s"
+echo ""
 ###############################
 
 echo "Starting benchmark on 04_'s"
@@ -113,10 +131,10 @@ echo "Starting benchmark on 04_'s"
 	# D
 	run_programs 0 4 D
 
-	# E  -- make sure it runs the single print process
+	# E  -- 
 	run_programs 0 4 E
 
-	# F -- make sure it runs the single print process
+	# F -- 
 	run_programs 0 4 F
 
 	# Cleanup

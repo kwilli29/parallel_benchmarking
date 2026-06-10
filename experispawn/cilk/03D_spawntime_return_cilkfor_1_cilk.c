@@ -10,14 +10,11 @@
 #include "ctimer.h"
 #include <math.h>
 
-/* Benchmark: 04C: Spawn time before thread function begins ; For-Loop Spawns (Cilk) 
- * Launch a bunch and measure when all done
+/* Benchmark: 03D: Spawn time return from function begins ; CilkFor-Loop Spawns (Cilk) 
+ * 
  */
 static const int ITERATION = 100000;
 struct timespec spawn_function_long(){
-
-    struct timespec t_end;
-	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
     double z = 0;
     double i = 0.0;
@@ -42,12 +39,12 @@ struct timespec spawn_function_long(){
 
     // printf("**%d\t", __cilkrts_get_worker_number()); // print thread id
 
-	return t_end; // 
+    struct timespec t_start;
+	clock_gettime(CLOCK_MONOTONIC, &t_start);
+
+	return t_start; //
 }
 struct timespec spawn_function(){           // Simple Function to Spawn
-
-	struct timespec t_end;
-	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	int x = 100; int y = 5000; int z = 1000000;
 
@@ -57,7 +54,10 @@ struct timespec spawn_function(){           // Simple Function to Spawn
 
 	z = z + y + x;	
 
-	return t_end; //  end_time; 
+    struct timespec t_start;
+	clock_gettime(CLOCK_MONOTONIC, &t_start);
+
+	return t_start; //  end_time; 
 }
 
 int main(int argc, char *argv[]){
@@ -75,7 +75,6 @@ int main(int argc, char *argv[]){
             }
         }
     }
-
 	printf("* # Spawns: %d\n", NCILK);
 
 	struct timespec t_start[NCILK]; struct timespec t_res; 
@@ -83,11 +82,11 @@ int main(int argc, char *argv[]){
 
 	// Use for loop, timestamp before spawn to right at start of spawn_function
 
-	for(int i=0; i < NCILK; i++){ 	
-		clock_gettime(CLOCK_MONOTONIC, &t_start[i]); t_end[i] = cilk_spawn spawn_function_long();
+    #pragma cilk grainsize 1
+	cilk_for(int i=0; i < NCILK; i++){ 	
+		t_start[i] = cilk_spawn spawn_function_long(); clock_gettime(CLOCK_MONOTONIC, &t_end[i]);
 
 	} 
-    
     cilk_sync;
     
 	//printf("****\n");	
@@ -99,7 +98,7 @@ int main(int argc, char *argv[]){
 	
 	}
 
-	// printf("04C\n");
+	// printf("03D\n");
 	
 	return 0;
 }
