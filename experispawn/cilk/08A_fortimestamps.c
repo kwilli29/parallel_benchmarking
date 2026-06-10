@@ -96,19 +96,19 @@ int main(int argc, char *argv[]){
         clock_gettime(CLOCK_MONOTONIC, &t3);     // measure clock - t3
 
 
-        printf("**** OUTPUTS --> %d****:\n", i);
+        printf("**** OUTPUTS --> %d ****:\n", i);
 
         for(int k=1; k<i;k++){
             timespec_sub(&t_res, t1[k], t1[0]);
-            printf("t1[0]-t1[%d],%ld.%09ld\n", k, (long)t_res.tv_sec, t_res.tv_nsec); // t1[0]-t1[j]
+            printf("t1[%d]-t1[0],%ld.%09ld\n", k, (long)t_res.tv_sec, t_res.tv_nsec); // t1[j]-t1[0]
         }
         for(int k=1; k<i;k++){
             timespec_sub(&t_res, t2[k], t2[0]);
-            printf("t2[0]-t2[%d],%ld.%09ld\n", k, (long)t_res.tv_sec, t_res.tv_nsec); // t2[0]-t2[j]
+            printf("t2[%d]-t2[0],%ld.%09ld\n", k, (long)t_res.tv_sec, t_res.tv_nsec); // t2[j]-t2[0]
         }
 
         timespec_sub(&t_res, t3, t2[0]);
-        printf("t2[0]-t3,%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t2[0]-t2[j]
+        printf("t3-t2[0],%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t3-t2[0]
         
         printf("**** **** **** **** ****\n");
 

@@ -79,7 +79,7 @@ int main(int argc, char *argv[]){
 	struct timespec t_start[OMP_THREADS]; struct timespec t_res;
 	struct timespec t_end[OMP_THREADS];
 
-	#pragma omp parallel
+	#pragma omp parallel num_threads(OMP_THREADS) 
 	{
 		#pragma omp single
 		{

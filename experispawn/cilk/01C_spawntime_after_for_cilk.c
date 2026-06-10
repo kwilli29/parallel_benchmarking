@@ -79,12 +79,12 @@ int main(int argc, char *argv[]){
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 	
 	for(int i = 0; i < NCILK; i++){ // sequentially spawn threads in a for loop
-		// cilk_spawn spawn_function(); 
-        cilk_spawn spawn_function_long();
+//		cilk_spawn spawn_function(); 
+      		cilk_spawn spawn_function_long();
 	}
-    
     cilk_sync;
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
+    
     // printf("here %d\n", z);
 	timespec_sub(&t_res, t_end, t_start);
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);

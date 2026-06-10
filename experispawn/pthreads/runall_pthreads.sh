@@ -2,8 +2,8 @@
 
 RUNS=100
 PLANG="pthreads"
-OUTFILE="output/002.txt"
-ARCH="galahad"
+ARCH="rb" # "galahad"
+OUTFILE="output/${ARCH}/002.txt"
 ###############################
 
 multi_output_metrics() {	# ex. #RUNS data/01A_000.txt
@@ -11,7 +11,7 @@ multi_output_metrics() {	# ex. #RUNS data/01A_000.txt
     echo "Python Process $1"
     # echo
 
-	python3 ./process_metrics.py $RUNS "$1" "../serial/${ARCH}/$1" >> $OUTFILE
+	python3 ./process_metrics.py $RUNS "$1" "../serial/$1" >> $OUTFILE
 
 	# cat $OUTFILE
 }
@@ -24,12 +24,12 @@ run_programs() { # ex. 0 1 A
 
     CURRPROG="$1$2$3"
 
-    DATA="data/${ARCH}/${CURRPROG}_000.txt"
+    DATA="data/${ARCH}/${CURRPROG}_002.txt"
     touch $DATA
 
     for((i=0;i<($RUNS);i++)); 
 	do	
-        ./$CURRPROG 32 >> $DATA
+        ./$CURRPROG 272 >> $DATA
     done
 
     multi_output_metrics $DATA
@@ -44,7 +44,7 @@ rm $OUTFILE
 #cd serial
 #./runall_serial.sh
 #cd ..
-###############################
+##############################
 
 echo "Starting benchmark on 01_'s"
 
@@ -146,3 +146,17 @@ echo "Starting benchmark on 08_'s"
 echo "Cleanup 08_'s"
 echo ""
 ###############################
+
+echo "Starting benchmark on 07_'s"
+
+	# D
+    run_programs 0 7 C
+
+    # D
+    run_programs 0 7 D
+
+    # Cleanup
+    make clean
+
+echo "Cleanup 07_'s"
+echo ""

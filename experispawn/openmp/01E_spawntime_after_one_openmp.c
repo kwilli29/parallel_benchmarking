@@ -8,6 +8,7 @@
 #include <assert.h>
 #include "ctimer.h"
 #include <math.h>
+#include "../../include/numthreads.h"
 
 /* Benchmark: 01E: Spawn time after ; One Spawns (OpenMP)
  * Launch a bunch and measure when all done 
@@ -56,13 +57,28 @@ void spawn_function(){           // Simple Spawn Function
 
 int main(int argc, char *argv[]){
 
+	int OMP_THREADS = number_threads();
+
+    // Process Command-Line Arguments
+    if(argc >= 2){
+        if(atoi(argv[1]) == 0){
+            OMP_THREADS = number_threads();
+        } else {
+            OMP_THREADS = atoi(argv[1]);
+            if (OMP_THREADS < 1){
+                OMP_THREADS = number_threads();;
+            }
+        }
+    }
+	printf("* # Spawns: %d\n", OMP_THREADS);
+
 	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // 
 
 	// I really think this is the most representative way to spawn 1 "thread" in a pool of 200
 	// Not really what openmp is for
 
-	#pragma omp parallel //num_threads(1) 
+	#pragma omp parallel num_threads(OMP_THREADS) //num_threads(1) 
 	#pragma omp single
 	{
 		#pragma omp task

@@ -4,16 +4,16 @@
 #include <stdint.h>
 #include <unistd.h>
 #include <string.h>
-#include <omp.h>
+#include <pthread.h>
 #include <assert.h>
 #include "ctimer.h"
 #include <math.h>
 #include "../../include/numthreads.h"
-/* Benchmark: 02D: Spawn time before ; ParallelFor-Loop Spawns (OpenMP)
+/* Benchmark: 07D Spawn time before ; For-Loop + Join Spawns (Pthreads)
  * Launch a bunch and measure when all done 
  */
 static const int ITERATION = 100000;
-void spawn_function_long(){
+void* spawn_function_long(){
 
     double z = 0;
     double i = 0.0;
@@ -36,10 +36,9 @@ void spawn_function_long(){
         i += 1.0;
 	}
 
-	return;
+	return (void*) NULL; 
 }
-void spawn_function(){           // Simple Function to Spawn
-
+void* spawn_function(){           // Simple Math for Spawn Function
 	int x = 100; int y = 5000; int z = 1000000;
 
 	x = x + y + z;
@@ -48,45 +47,49 @@ void spawn_function(){           // Simple Function to Spawn
 
 	z = z + y + x;	
 
-	return; 
+	return (void*) NULL; 
 }
 
 int main(int argc, char *argv[]){
 
-    int OMP_THREADS = number_threads();
+	int PTH = number_threads();
 
     // Process Command-Line Arguments
     if(argc >= 2){
         if(atoi(argv[1]) == 0){
-            OMP_THREADS = number_threads();
+            PTH = number_threads();
         } else {
-            OMP_THREADS = atoi(argv[1]);
-            if (OMP_THREADS < 1){
-                OMP_THREADS = number_threads();;
+            PTH = atoi(argv[1]);
+            if (PTH < 1){
+                PTH = number_threads();
             }
         }
     }
-    printf("# Spawns: %d\n", OMP_THREADS);
+	printf("* # Spawns: %d\n", PTH);
 
-	struct timespec t_start, t_res;
-	struct timespec t_end[OMP_THREADS];
+	pthread_t Threads[ PTH ];
 
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // 
+	struct timespec t_start, t_res; struct timespec t_end[PTH];
+	clock_gettime(CLOCK_MONOTONIC, &t_start);
 
-	#pragma omp parallel for schedule (static, 1) num_threads(OMP_THREADS) // grainsize=1
-	for(int i = 0; i < OMP_THREADS; i++){	
-		clock_gettime(CLOCK_MONOTONIC, &t_end[i]); spawn_function_long(); 
-	} 
-	printf("****\n");
-	for(int i = 0; i < OMP_THREADS; i++){
+	/****/ 
+
+	for( int i = 0; i < PTH; i++ ) {                                     // # seq. for only
+		clock_gettime(CLOCK_MONOTONIC, &t_end[i]);
+		pthread_create( &Threads[ i ], NULL, spawn_function_long, NULL);
+	}
+
+	for( int i = 0; i < PTH; i++ ) {                                     // # seq. for only
+		pthread_join( Threads[ i ],NULL);
+	}
+
+    printf("****\n");
+	for(int i = 0; i < PTH; i++){
 
 		timespec_sub(&t_res, t_end[i], t_start);
 
 		printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
-	
 	}
 
 	return 0;
 }
-
-

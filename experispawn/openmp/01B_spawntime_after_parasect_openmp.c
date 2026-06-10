@@ -83,8 +83,8 @@ int main(int argc, char *argv[]){
     #pragma omp parallel num_threads(OMP_THREADS) 
     {
     
-        spawn_function();
-        // spawn_function_long(); // Take time stamp before each spawn
+        // spawn_function();
+        spawn_function_long(); // Take time stamp before each spawn
 
     }
 

@@ -72,7 +72,7 @@ int main(int argc, char *argv[]){
 	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // 
 
-	#pragma omp parallel  
+	#pragma omp parallel num_threads(OMP_THREADS) 
 	{									// thread pool
 		#pragma omp single		// one thread on the for loop
 		{

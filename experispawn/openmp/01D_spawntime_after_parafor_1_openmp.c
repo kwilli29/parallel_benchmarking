@@ -72,7 +72,7 @@ int main(int argc, char *argv[]){
 	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // 
 
-	#pragma omp parallel for schedule (static, 1) // grainsize=1
+	#pragma omp parallel for schedule (static, 1) num_threads(OMP_THREADS) // grainsize=1
 	for(int i = 0; i < OMP_THREADS; i++){
 		spawn_function_long(); 
 	} 

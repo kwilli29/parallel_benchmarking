@@ -73,7 +73,7 @@ int main(int argc, char *argv[]){
 
 	clock_gettime(CLOCK_MONOTONIC, &t_start); 
 
-	#pragma omp parallel 
+	#pragma omp parallel num_threads(OMP_THREADS) 
 	{
 		#pragma omp single
 		{

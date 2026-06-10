@@ -2,8 +2,8 @@
 
 RUNS=100
 PLANG="openmp"
-OUTFILE="output/002.txt"
-ARCH="galahad"
+ARCH="rb" # "galahad"
+OUTFILE="output/${ARCH}/000.txt"
 ###############################
 
 multi_output_metrics() {	# ex. #RUNS data/01A_000.txt
@@ -11,7 +11,7 @@ multi_output_metrics() {	# ex. #RUNS data/01A_000.txt
     echo "Python Process $1"
     # echo
 
-	python3 ./process_metrics.py $RUNS "$1" "../serial/${ARCH}/$1" >> $OUTFILE
+	python3 ./process_metrics.py $RUNS "$1" "../serial/$1" >> $OUTFILE
 
 	# cat $OUTFILE
 }
@@ -29,7 +29,7 @@ run_programs() { # ex. 0 1 A
 
 	for((i=0;i<($RUNS);i++)); 
 	do	
-        ./$CURRPROG 272 >> $DATA
+        ./$CURRPROG 32 >> $DATA
     done
     
     multi_output_metrics $DATA

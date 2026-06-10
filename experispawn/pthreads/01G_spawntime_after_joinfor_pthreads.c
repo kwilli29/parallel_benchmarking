@@ -4,21 +4,21 @@
 #include <stdint.h>
 #include <unistd.h>
 #include <string.h>
-#include <omp.h>
+#include <pthread.h>
 #include <assert.h>
 #include "ctimer.h"
 #include <math.h>
 #include "../../include/numthreads.h"
-/* Benchmark: 01F: Spawn time after ; One Spawn w/ fcn args (OpenMP)
- * Launch a bunch and measure when all done -
+/* Benchmark: 07C: Spawn timer after ; For-Loop+Join Spawns (Pthreads)
  */
+
 static const int ITERATION = 100000;
-void spawn_function_long(double x){
+void* spawn_function_long(){
 
     double z = 0;
     double i = 0.0;
 
-    //double x = 15.0;
+    double x = 15.0;
 	static const int nn = 87;
 
     double a =0.0;
@@ -36,13 +36,10 @@ void spawn_function_long(double x){
         i += 1.0;
 	}
 
-    // printf("**%d\t", __cilkrts_get_worker_number()); // print thread id
-
-	return;
+	return (void*) NULL; 
 }
-void spawn_function(int x){           // Simple Spawn Function
-
-	int y = 5000; int z = 1000000;
+void* spawn_function(){           // Simple Math for Spawn Function
+	int x = 100; int y = 5000; int z = 1000000;
 
 	x = x + y + z;
 
@@ -50,50 +47,48 @@ void spawn_function(int x){           // Simple Spawn Function
 
 	z = z + y + x;	
 
-	return; 
+	return (void*) NULL; 
 }
-
 
 int main(int argc, char *argv[]){
 
-	int OMP_THREADS = number_threads();
+	int PTH = number_threads();
 
     // Process Command-Line Arguments
     if(argc >= 2){
         if(atoi(argv[1]) == 0){
-            OMP_THREADS = number_threads();
+            PTH = number_threads();
         } else {
-            OMP_THREADS = atoi(argv[1]);
-            if (OMP_THREADS < 1){
-                OMP_THREADS = number_threads();;
+            PTH = atoi(argv[1]);
+            if (PTH < 1){
+                PTH = number_threads();
             }
         }
     }
-	printf("* # Spawns: %d\n", OMP_THREADS);
+	printf("* # Spawns: %d\n", PTH);
 
-	double x = 15.0;
+	pthread_t Threads[ PTH ];
+
 
 	struct timespec t_start, t_res, t_end;
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
-	// I really think this is the most representative way to spawn 1 "thread" in a pool of 200
-	// not what openmp is for
-	
-	// one int arg
+	clock_gettime(CLOCK_MONOTONIC, &t_start);	
 
-	#pragma omp parallel num_threads(OMP_THREADS) //num_threads(1) 
-	#pragma omp single
-	{
-		#pragma omp task
-        spawn_function_long(x);
-		//spawn_function(x);
-	}	
-	
+	/****/ 
+
+	for( int i = 0; i < PTH; i++ ) {                                     // # seq. for only
+		pthread_create( &Threads[ i ], NULL, spawn_function_long, NULL);
+	}
+
+	for( int i = 0; i < PTH; i++ ) {                                     // # seq. for only
+		pthread_join( Threads[ i ], NULL);
+	}
+
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);
 
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
-
+		
 	return 0;
 }
