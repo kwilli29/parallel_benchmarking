@@ -108,11 +108,11 @@ def pseudocode_metrics(pfile, runs): #
                 #print(outputs, overheads, sync, line, line[0],line[1])
                 if outputs:
                     if line[1] == '1':
-                        print('j,',j,'k,',k,',','tkt1[j-1][k-1],',float(line.split(',')[1]))
+                        #print('j,',j,'k,',k,',','tkt1[j-1][k-1],',float(line.split(',')[1]))
                         tkt1[j-1][k-1] += float(line.split(',')[1]) # t1[k]-t1[0]
                         k+=1
                     elif line[1] == '2':
-                        print('j,',j,'k,',k,',','tkt2[j-1][k-1],',float(line.split(',')[1]))
+                        #print('j,',j,'k,',k,',','tkt2[j-1][k-1],',float(line.split(',')[1]))
                         tkt2[j-1][k-1] += float(line.split(',')[1]) # t2[k]-t2[0]
                         k+=1
                 
@@ -126,14 +126,14 @@ def pseudocode_metrics(pfile, runs): #
                 
                 if sync:
                     if line[1] == '5':
-                        print('j,',j,',t5t4,',float(line.split(',')[1]))
+                        #print('j,',j,',t5t4,',float(line.split(',')[1]))
                         t5t4 += float(line.split(',')[1]) # t5-t4
                 else: pass
 
             if line[0] == '(' and line[1] == 't':
                 if overheads:
                     result = r2-r1
-                    print('j,',j,'t3-t2-t2-t1,', result)
+                    #print('j,',j,'t3-t2-t2-t1,', result)
                     resultst3t2t2t1[j-1] += result # (t3-t2[0])-(t2[0]-t1[0])
 
     # AVERAGE

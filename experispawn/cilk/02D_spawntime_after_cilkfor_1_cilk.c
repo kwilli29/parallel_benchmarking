@@ -82,6 +82,7 @@ int main(int argc, char *argv[]){
 	cilk_for(int i=0; i < NCILK; i++){ // parallel for loop time then spawn
 		
 		clock_gettime(CLOCK_MONOTONIC, &t_end[i]); cilk_spawn spawn_function_long();
+        //cilk_spawn spawn_function();
 
 	}
 

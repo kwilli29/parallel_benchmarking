@@ -3,7 +3,7 @@
 RUNS=100
 PLANG="openmp"
 ARCH="galahad" # "rb"
-OUTFILE="output/${ARCH}/000.txt"
+OUTFILE="output/${ARCH}/005.txt"
 ###############################
 
 multi_output_metrics() {	# ex. #RUNS data/01A_000.txt
@@ -24,7 +24,7 @@ run_programs() { # ex. 0 1 A
 
     CURRPROG="$1$2$3"
 
-    DATA="data/${ARCH}/${CURRPROG}_000.txt"
+    DATA="data/${ARCH}/${CURRPROG}_005.txt"
     touch $DATA
 
 	for((i=0;i<($RUNS);i++)); 

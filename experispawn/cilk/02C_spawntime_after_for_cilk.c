@@ -81,7 +81,7 @@ int main(int argc, char *argv[]){
 	for(int i=0; i < NCILK; i++){ // seq. for loop time then spawn
 		
 		clock_gettime(CLOCK_MONOTONIC, &t_end[i]); cilk_spawn spawn_function_long();
-
+        //cilk_spawn spawn_function();
 	}
     cilk_sync;
 	printf("****\n");

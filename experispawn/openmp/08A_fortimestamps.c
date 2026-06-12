@@ -72,7 +72,7 @@ int main(int argc, char *argv[]){
     printf("* # Spawns: %d\n", OMP_THREADS);
 
     struct timespec t3, t4, t5;//, t_start;
-    struct timespec t_res;
+    struct timespec t_res, t_temp1, t_temp2;
     struct timespec t1[OMP_THREADS]; struct timespec t2[OMP_THREADS];
 
     // clock_gettime(CLOCK_MONOTONIC, &t_start);
@@ -99,36 +99,58 @@ int main(int argc, char *argv[]){
         }
         clock_gettime(CLOCK_MONOTONIC, &t3);     // measure clock - t3
 
+    
         printf("**** OUTPUTS --> %d ****:\n", i);
+
         for(int k=1; k<i;k++){
             timespec_sub(&t_res, t1[k], t1[0]);
-            printf("t1[%d]-t1[0],%ld.%09ld\n", k, (long)t_res.tv_sec, t_res.tv_nsec); // t1[j]-t1[0]
-        }
+            printf("t1[%d]-t1[0],", k);
+            if(t_res.tv_nsec < 0 && t_res.tv_sec >= 0){ t_res.tv_nsec *= -1; printf("-");}
+            printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t1[j]-t1[0]
+        } printf("\n");
         for(int k=1; k<i;k++){
             timespec_sub(&t_res, t2[k], t2[0]);
-            printf("t2[%d]-t2[0],%ld.%09ld\n", k, (long)t_res.tv_sec, t_res.tv_nsec); // t2[j]-t2[0]
+            printf("t2[%d]-t2[0],", k);
+            if(t_res.tv_nsec < 0 && t_res.tv_sec >= 0){ t_res.tv_nsec *= -1; printf("-");}
+            printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t2[j]-t2[0]
         }
 
-        timespec_sub(&t_res, t3, t2[0]);
-        printf("t3-t2[0],%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t3-t2[0]
+        printf("**** OVERHEADS --> %d ****:\n", i);
+        timespec_sub(&t_temp1, t2[0], t1[0]);
+        printf("t2[0]-t1[0],");
+        if(t_temp1.tv_nsec < 0 && t_temp1.tv_sec >= 0){ t_temp1.tv_nsec *= -1; printf("-");}
+        printf("%ld.%09ld\n", (long)t_temp1.tv_sec, t_temp1.tv_nsec); // t2[0]-t1
+
+        timespec_sub(&t_temp2, t3, t2[0]);
+        printf("t3-t2[0],");
+        if(t_temp2.tv_nsec < 0 && t_temp2.tv_sec >= 0){ t_temp2.tv_nsec *= -1;  printf("-"); }
+        printf("%ld.%09ld\n", (long)t_temp2.tv_sec, t_temp2.tv_nsec); // t3-t2[0]
+
+        timespec_sub(&t_res, t_temp2, t_temp1);
+        printf("(t3-t2[0])-(t2[0]-t1[0]),");
+        if(t_res.tv_nsec < 0 && t_res.tv_sec >= 0){ t_res.tv_nsec *= -1; printf("-"); }
+        printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // (t3-t2[0]) - (t2[0]-t1)
         
         printf("**** **** **** **** ****\n");
 
-      }
-
-        clock_gettime(CLOCK_MONOTONIC, &t4); // measure clock t4
-    }   // sync
-    clock_gettime(CLOCK_MONOTONIC, &t5); // measure clock t5
+        }
+    clock_gettime(CLOCK_MONOTONIC, &t4); // measure clock
+    }
+    clock_gettime(CLOCK_MONOTONIC, &t5); // measure clock
 
     //////////////////////////////////////////////////////
-    
+
     printf("**** SYNC ****:\n");
 
     timespec_sub(&t_res, t5, t4);
-    printf("t5-t4,%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t5-t4
+    printf("t5-t4,");
+    if(t_res.tv_nsec < 0 && t_res.tv_sec >= 0){ t_res.tv_nsec *= -1; printf("-");}
+    printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t5-t4
 
     //timespec_sub(&t_res, t8, t_start);
     //printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec); // t8
 
-	return 0;
+    printf("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n");
+
+    return 0;
 }

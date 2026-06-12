@@ -76,7 +76,7 @@ int main(int argc, char *argv[]){
         }
     }
 
-	printf("* # Spawns: %d\n", NCILK);
+	printf("* # Spawns: %d ** spawn -> fcn, t1 return t1 -> var=t1, t2, t1-t2 ** \n", NCILK);
 
 	struct timespec t_start[NCILK]; struct timespec t_res; 
 	struct timespec t_end[NCILK];
@@ -84,16 +84,17 @@ int main(int argc, char *argv[]){
 	// Use for loop, timestamp before spawn to right at start of spawn_function
 
 	for(int i=0; i < NCILK; i++){ 	
-		t_start[i] = cilk_spawn spawn_function_long(); clock_gettime(CLOCK_MONOTONIC, &t_end[i]);
+		t_start[i] = cilk_spawn spawn_function_long(); 
+        clock_gettime(CLOCK_MONOTONIC, &t_end[i]);
 
 	} 
     cilk_sync;
     
 	//printf("****\n");	
 	for(int i = 0; i < NCILK; i++){
-		
-		timespec_sub(&t_res, t_end[i], t_start[i]);
 
+		timespec_sub(&t_res, t_start[i], t_end[i]); // t_end happens before t_start
+        if(t_res.tv_nsec < 0 && t_res.tv_sec >= 0){ t_res.tv_nsec *= -1; printf("-");}
 		printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 	
 	}

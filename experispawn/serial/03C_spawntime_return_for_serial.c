@@ -71,14 +71,15 @@ int main(int argc, char *argv[]){
 	struct timespec t_end[NSERIAL];
 
 	for(int i=0; i < NSERIAL; i++){ 	
-        t_start[i] = spawn_function_long(); clock_gettime(CLOCK_MONOTONIC, &t_end[i]); 
+        t_start[i] = spawn_function_long(); 
+        clock_gettime(CLOCK_MONOTONIC, &t_end[i]); 
 	} 
 
 	printf("****\n");	
 	for(int i = 0; i < NSERIAL; i++){
 		
 		timespec_sub(&t_res, t_end[i], t_start[i]);
-
+        if(t_res.tv_nsec < 0 && t_res.tv_sec >= 0){ t_res.tv_nsec *= -1; printf("-");}
 		printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 	
 	}

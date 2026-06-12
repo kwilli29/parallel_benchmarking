@@ -69,11 +69,13 @@ int main(int argc, char *argv[]){
 
 	struct timespec t_start, t_res, t_end;
 
-    t_start = spawn_function_long(); clock_gettime(CLOCK_MONOTONIC, &t_end); 
+    t_start = spawn_function_long(); 
+    clock_gettime(CLOCK_MONOTONIC, &t_end); 
 
 	printf("****\n");	
 
 	timespec_sub(&t_res, t_end, t_start);
+    if(t_res.tv_nsec < 0 && t_res.tv_sec >= 0){ t_res.tv_nsec *= -1; printf("-");}
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
 	// printf("03E\n");

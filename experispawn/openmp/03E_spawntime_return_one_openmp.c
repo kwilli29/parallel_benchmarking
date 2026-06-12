@@ -88,7 +88,8 @@ int main(int argc, char *argv[]){
 	// printf("****\n");
 
     timespec_sub(&t_res, t_end, t_start);
-    printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+    if(t_res.tv_nsec < 0 && t_res.tv_sec >= 0){ t_res.tv_nsec *= -1; printf("-");} 
+	 printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 	
 
 	return 0;

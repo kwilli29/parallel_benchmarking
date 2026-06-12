@@ -2,8 +2,8 @@
 
 RUNS=100
 PLANG="pthreads"
-ARCH="rb" # "galahad"
-OUTFILE="output/${ARCH}/002.txt"
+ARCH="galahad" #"rb" # 
+OUTFILE="output/${ARCH}/006.txt"
 ###############################
 
 multi_output_metrics() {	# ex. #RUNS data/01A_000.txt
@@ -11,7 +11,7 @@ multi_output_metrics() {	# ex. #RUNS data/01A_000.txt
     echo "Python Process $1"
     # echo
 
-	python3 ./process_metrics.py $RUNS "$1" "../serial/$1" >> $OUTFILE
+	python3 ./process_metrics.py $RUNS "$1" >> $OUTFILE
 
 	# cat $OUTFILE
 }
@@ -24,12 +24,12 @@ run_programs() { # ex. 0 1 A
 
     CURRPROG="$1$2$3"
 
-    DATA="data/${ARCH}/${CURRPROG}_002.txt"
+    DATA="data/${ARCH}/${CURRPROG}_006.txt"
     touch $DATA
 
     for((i=0;i<($RUNS);i++)); 
 	do	
-        ./$CURRPROG 272 >> $DATA
+        ./$CURRPROG 32 >> $DATA
     done
 
     multi_output_metrics $DATA
@@ -55,7 +55,7 @@ echo "Starting benchmark on 01_'s"
 	run_programs 0 1 N
 
 	# W
-	# run_programs 0 1 W # don't know if necessary
+	# run_programs 0 1 W # don't think it's necessary
 
 	# E
 	run_programs 0 1 E
@@ -80,6 +80,9 @@ echo "Starting benchmark on 02_'s"
 	# C
     run_programs 0 2 C
 
+    # G
+    run_programs 0 2 G
+
 	# Cleanup
 	make clean
 
@@ -97,6 +100,8 @@ echo "Starting benchmark on 03_'s"
 
 	# F
 	run_programs 0 3 F
+
+    make clean
 
 echo "Cleanup 03_'s"
 echo ""
@@ -161,17 +166,3 @@ echo "Starting benchmark on 08_'s"
 echo "Cleanup 08_'s"
 echo ""
 ###############################
-
-echo "Starting benchmark on 07_'s"
-
-	# D
-    run_programs 0 7 C
-
-    # D
-    run_programs 0 7 D
-
-    # Cleanup
-    make clean
-
-echo "Cleanup 07_'s"
-echo ""

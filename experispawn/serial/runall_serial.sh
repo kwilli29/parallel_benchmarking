@@ -2,8 +2,8 @@
 
 RUNS=100
 PLANG="serial"
-ARCH="rb" # "galahad"
-OUTFILE="output/${ARCH}/001.txt"
+ARCH="galahad" #"rb" # 
+OUTFILE="output/${ARCH}/007.txt"
 ###############################
 
 single_output_metrics() {	# ex. 25 data/01A_000.txt
@@ -26,12 +26,12 @@ run_programs() { # ex. 0 1 A
 
 	CURRPROG="$1$2$3"
 
-	EXEC="data/${ARCH}/${CURRPROG}_001.txt"
+	EXEC="data/${ARCH}/${CURRPROG}_007.txt"
 	#touch $EXEC 
 
 	for((i=0;i<($RUNS);i++)); 
 	do	
-		./$CURRPROG 32 >> $EXEC # Capture program output
+		./$CURRPROG 272 >> $EXEC # Capture program output
     done
 
 	# Metrics
@@ -44,6 +44,22 @@ run_programs() { # ex. 0 1 A
 make clean
 ###############################
 rm $OUTFILE
+
+
+echo "Starting benchmark on 03_'s"
+
+	# C
+	run_programs 0 3 C
+
+	# E  -- 
+	run_programs 0 3 E
+
+	# F -- 
+	run_programs 0 3 F
+
+echo "Cleanup 03_'s"
+echo ""
+
 ###############################
 echo "Starting benchmark on 01_'s"
 
@@ -86,19 +102,6 @@ echo "Cleanup 02_'s"
 echo ""
 ###############################
 
-echo "Starting benchmark on 03_'s"
-
-	# C
-	run_programs 0 3 C
-
-	# E  -- 
-	run_programs 0 3 E
-
-	# F -- 
-	run_programs 0 3 F
-
-echo "Cleanup 03_'s"
-echo ""
 ###############################
 
 echo "Starting benchmark on 04_'s"

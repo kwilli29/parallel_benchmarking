@@ -84,7 +84,8 @@ int main(int argc, char *argv[]){
 
     #pragma cilk grainsize 1
 	cilk_for(int i=0; i < NCILK; i++){ 	
-		t_start[i] = cilk_spawn spawn_function_long(); clock_gettime(CLOCK_MONOTONIC, &t_end[i]);
+		t_start[i] = cilk_spawn spawn_function_long(); 
+        clock_gettime(CLOCK_MONOTONIC, &t_end[i]);
 
 	} 
     cilk_sync;
@@ -92,7 +93,8 @@ int main(int argc, char *argv[]){
 	//printf("****\n");	
 	for(int i = 0; i < NCILK; i++){
 		
-		timespec_sub(&t_res, t_end[i], t_start[i]);
+		timespec_sub(&t_res, t_start[i], t_end[i]); // t_end happens before t_start
+        if(t_res.tv_nsec < 0 && t_res.tv_sec >= 0){ t_res.tv_nsec *= -1; printf("-");}
 
 		printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 	

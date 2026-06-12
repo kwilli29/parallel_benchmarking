@@ -81,7 +81,8 @@ int main(int argc, char *argv[]){
 
 	#pragma cilk grainsize 1
 	cilk_for(int i = 0; i < NCILK; i++){ // use parallel for to spawn simple function threads in parallel
-		spawn_function_long();
+		//spawn_function();
+        spawn_function_long();
 	} 
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
