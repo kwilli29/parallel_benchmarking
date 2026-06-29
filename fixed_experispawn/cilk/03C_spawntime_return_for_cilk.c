@@ -9,6 +9,7 @@
 #include <assert.h>
 #include "ctimer.h"
 #include <math.h>
+#include <sys/time.h>
 
 /* Benchmark: 03C: Spawn time return from function begins ; For-Loop Spawns (Cilk) 
  * 

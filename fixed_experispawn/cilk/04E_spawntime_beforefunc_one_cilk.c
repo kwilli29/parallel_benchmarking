@@ -83,12 +83,12 @@ int main(int argc, char *argv[]){
     
 	struct timespec t_start, t_res;
 	struct timespec t_end;
+    
 
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 	
 	t_end = cilk_spawn spawn_function_long(); // single instance of time, spawn, end time before function 
 	
-	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	cilk_sync;
 

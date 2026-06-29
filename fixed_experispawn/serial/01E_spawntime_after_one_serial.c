@@ -8,7 +8,7 @@
 #include <sys/time.h>
 #include <math.h>
 #include "ctimer.h"
-
+#include "../../include/numthreads.h"
 /* Benchmark: 01E: Spawn time after ; One Spawn (Serial)
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */

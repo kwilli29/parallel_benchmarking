@@ -8,7 +8,7 @@
 #include <assert.h>
 #include "ctimer.h"
 #include <math.h>
-
+#include "../../include/numthreads.h"
 /* Benchmark: 01F: Spawn timer after ; One Spawn w/ fcn args (Pthreads)
  * Launch a bunch and measure when all done
  */

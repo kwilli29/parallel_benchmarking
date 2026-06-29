@@ -9,6 +9,7 @@
 #include <assert.h>
 #include "ctimer.h"
 #include <math.h>
+#include <sys/time.h>
 
 /* Benchmark: 04C: Spawn time before thread function begins ; For-Loop Spawns (Cilk) 
  * Launch a bunch and measure when all done
@@ -94,7 +95,6 @@ int main(int argc, char *argv[]){
 	for(int i = 0; i < iter; i++){
 		
 		timespec_sub(&t_res, t_end[i], t_start[i]);
-
 		printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 	
 	}

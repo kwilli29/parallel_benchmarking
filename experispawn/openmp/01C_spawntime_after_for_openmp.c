@@ -72,6 +72,10 @@ int main(int argc, char *argv[]){
 	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // 
 
+    //double start; 
+    //double end; 
+    //start = omp_get_wtime(); 
+
 	#pragma omp parallel num_threads(OMP_THREADS) 
 	{									// thread pool
 		#pragma omp single		// one thread on the for loop
@@ -85,8 +89,10 @@ int main(int argc, char *argv[]){
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 	timespec_sub(&t_res, t_end, t_start);
-
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+
+    //end = omp_get_wtime(); 
+    //printf("Work took %.9f seconds\n", end - start);
 
 	return 0;
 }

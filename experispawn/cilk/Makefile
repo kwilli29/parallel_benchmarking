@@ -17,7 +17,7 @@ else
 endif
 
 CC=		$(XCRUN)/opt/$$(ls /opt | grep "opencilk")/bin/clang # /opt/opencilk-2/bin/clang 
-CFLAGS=		-fopencilk -O3 -Og -g #-lm # -fcilktool=cilkscale -lm -Wall -Wextra -Wconversion -std=c11 -Werror
+CFLAGS=		-fopencilk -O3 -Og -g #-fcilktool=cilkscale-benchmark #-lm # -Wall -Wextra -Wconversion -std=c11 -Werror
 SOURCE=		$(wildcard *.c)
 TARGETS=	$(SOURCE:.c=)	
 

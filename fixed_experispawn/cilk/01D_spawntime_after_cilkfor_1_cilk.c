@@ -80,11 +80,19 @@ int main(int argc, char *argv[]){
  	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); //
 
+    // struct timeval t_start, t_end;
+    // double result=0.0;
+    // gettimeofday(&t_start, NULL);
+
 	#pragma cilk grainsize 1
 	cilk_for(int i = 0; i < iter; i++){ // use parallel for to spawn simple function threads in parallel
 		//spawn_function();
         spawn_function_long();
 	} 
+
+    // gettimeofday(&t_end, NULL); 
+    // result = (t_end.tv_sec+ (double)t_end.tv_usec/1000000) - (t_start.tv_sec+(double)t_start.tv_usec/1000000);
+    // printf("%09f\n", result);
 
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 

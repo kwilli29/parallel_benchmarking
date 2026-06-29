@@ -9,6 +9,7 @@
 #include <assert.h>
 #include "ctimer.h"
 #include <math.h>
+#include <sys/time.h>
 
 /* Benchmark: 03F: Spawn time return from function ; One+Arg Spawn (Cilk) 
  * 
@@ -57,6 +58,7 @@ struct timespec spawn_function(int x){           // Simple Function to Spawn
 
     struct timespec t_start;
 	clock_gettime(CLOCK_MONOTONIC, &t_start);
+    
 
 	return t_start; //  end_time; 
 }

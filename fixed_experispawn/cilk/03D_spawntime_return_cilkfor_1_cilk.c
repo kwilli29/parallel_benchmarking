@@ -9,6 +9,7 @@
 #include <assert.h>
 #include "ctimer.h"
 #include <math.h>
+#include <sys/time.h>
 
 /* Benchmark: 03D: Spawn time return from function begins ; CilkFor-Loop Spawns (Cilk) 
  * 
@@ -79,6 +80,7 @@ int main(int argc, char *argv[]){
 
 	struct timespec t_start[iter]; struct timespec t_res; 
 	struct timespec t_end[iter];
+    double result=0.0;
 
 	// Use for loop, timestamp before spawn to right at start of spawn_function
 
@@ -95,7 +97,6 @@ int main(int argc, char *argv[]){
 		
 		timespec_sub(&t_res, t_start[i], t_end[i]); // t_end happens before t_start
         if(t_res.tv_nsec < 0 && t_res.tv_sec >= 0){ t_res.tv_nsec *= -1; printf("-");}
-
 		printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 	
 	}

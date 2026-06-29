@@ -8,7 +8,7 @@
 #include <sys/time.h>
 #include <math.h>
 #include "ctimer.h"
-
+#include "../../include/numthreads.h"
 /* Benchmark: 04E: Spawn time beforefunc ; Sequential Spawns (Serial)
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */

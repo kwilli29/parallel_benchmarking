@@ -73,6 +73,8 @@ int main(int argc, char *argv[]){
     int iters=50;
 	double x = 15.0;
 
+// double t_start,t_end; 
+// t_start = omp_get_wtime(); 
 	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
@@ -88,7 +90,8 @@ int main(int argc, char *argv[]){
         spawn_function_long(x);
 		//spawn_function(x);
 	}	
-	
+// t_end = omp_get_wtime(); 
+// printf("%f\n", t_end - t_start);	
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);

@@ -1,9 +1,15 @@
 #!/bin/bash
 
-RUNS=100
+## ./runpthreads.sh NT ARCH SLOW RUNS TIMER
+
+RUNS=$4
 PLANG="pthreads"
-ARCH="galahad" #"rb" # 
-OUTFILE="output/${ARCH}/fixed_slow32.txt"
+ARCH=$2 # galahad/rb
+FCNSL="$3"
+FILEEND="fixed_${3}_${1}"
+OUTFILE="output/${ARCH}/${FILEEND}.txt"
+TIMER=$5
+NT=$1
 ###############################
 
 multi_output_metrics() {	# ex. #RUNS data/01A_000.txt
@@ -11,7 +17,8 @@ multi_output_metrics() {	# ex. #RUNS data/01A_000.txt
     echo "Python Process $1"
     # echo
 
-	python3 ./process_metrics.py $RUNS "$1" >> $OUTFILE
+	# B2		ARCH3		LANG4		#TH5		#RUNS1	FCN6		AVERAGE
+    python3 ./process_metrics.py $RUNS "$1" $ARCH $PLANG $NT $FCNSL $TIMER # >> $OUTFILE
 
 	# cat $OUTFILE
 }
@@ -24,12 +31,12 @@ run_programs() { # ex. 0 1 A
 
     CURRPROG="$1$2$3"
 
-    DATA="data/${ARCH}/${CURRPROG}_fixed_slow32.txt"
+    DATA="data/${ARCH}/${CURRPROG}_${FILEEND}.txt"
     touch $DATA
 
     for((i=0;i<($RUNS);i++)); 
 	do	
-        ./$CURRPROG 32 >> $DATA
+        ./$CURRPROG $NT >> $DATA
     done
 
     multi_output_metrics $DATA
@@ -140,16 +147,16 @@ echo ""
 #echo ""
 ###############################
 
-#echo "Starting benchmark on 06_'s"
+echo "Starting benchmark on 06_'s"
 
 	# A
-#	run_programs 0 6 A
+	run_programs 0 6 A
 
 	# Cleanup
-#	make clean
+	make clean
 
-#echo "Cleanup 06_'s"
-#echo ""
+echo "Cleanup 06_'s"
+echo ""
 ###############################
 
 echo "Starting benchmark on 08_'s"
@@ -161,7 +168,7 @@ echo "Starting benchmark on 08_'s"
     #run_programs 0 8 B
 
     # Cleanup
-    make clean
+    #make clean
 
 echo "Cleanup 08_'s"
 echo ""

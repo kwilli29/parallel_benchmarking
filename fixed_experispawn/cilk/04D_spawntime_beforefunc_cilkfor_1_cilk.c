@@ -9,6 +9,7 @@
 #include <assert.h>
 #include "ctimer.h"
 #include <math.h>
+#include <sys/time.h>
 
 /* Benchmark: 04D: Spawn time before thread function begins ; CilkFor Spawns (Cilk) 
  * Launch a bunch and measure when all done
@@ -46,7 +47,7 @@ struct timespec spawn_function_long(){
 }
 struct timespec spawn_function(){           // Simple Function to Spawn
 
-	struct timespec t_end; 
+    struct timespec t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	int x = 100; int y = 5000; int z = 1000000;
@@ -78,7 +79,7 @@ int main(int argc, char *argv[]){
 	printf("* # Spawns: %d\n", NCILK);
     int iter = 50;
 
-	struct timespec t_start[iter]; struct timespec t_res;
+	struct timespec t_start[iter]; struct timespec t_res; 
 	struct timespec t_end[iter];
 
 	// parallel for timestamp before spawn to beginning of spawned function
@@ -93,7 +94,6 @@ int main(int argc, char *argv[]){
 	for(int i = 0; i < iter; i++){
 		
 		timespec_sub(&t_res, t_end[i], t_start[i]);
-
 		printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
 	}

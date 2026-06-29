@@ -72,6 +72,9 @@ int main(int argc, char *argv[]){
     }
 	printf("* # Spawns: %d\n", OMP_THREADS);
     int iters=50;
+
+// double t_start,t_end; 
+// t_start = omp_get_wtime();     
 	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // 
 
@@ -85,6 +88,8 @@ int main(int argc, char *argv[]){
 		spawn_function_long();
 	}	
 	
+// t_end = omp_get_wtime(); 
+// printf("%f\n", t_end - t_start);
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	timespec_sub(&t_res, t_end, t_start);

@@ -8,7 +8,7 @@
 #include <assert.h>
 #include "ctimer.h"
 #include <math.h>
-
+#include "../../include/numthreads.h"
 /* Benchmark: 04E: Spawn time before function ; One Spawn (Pthreads)
  * Launch a bunch and measure when all done 
  */

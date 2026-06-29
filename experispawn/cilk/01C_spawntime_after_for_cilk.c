@@ -44,7 +44,6 @@ void spawn_function_long(){
 
 	return;
 }
-
 void spawn_function(){           // Simple Spawn Function
 	int x = 100; int y = 5000; int z = 1000000;
 
@@ -72,9 +71,10 @@ int main(int argc, char *argv[]){
             }
         }
     }
-
 	printf("* # Spawns: %d\n", NCILK);
 
+    //struct timeval t_start, t_end;
+    //gettimeofday(&t_start, NULL);
 	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 	
@@ -83,12 +83,15 @@ int main(int argc, char *argv[]){
       		cilk_spawn spawn_function_long();
 	}
     cilk_sync;
+    //gettimeofday(&t_end, NULL);	
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
     
     // printf("here %d\n", z);
 	timespec_sub(&t_res, t_end, t_start);
 	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
+    //double result_time = ( (t_end.tv_sec+ (double)t_end.tv_usec/1000000)-(t_start.tv_sec+(double)t_start.tv_usec/1000000) );
+    //printf("%.4lf\n", result_time);
 	// printf("01C\n");
 
 	return 0;

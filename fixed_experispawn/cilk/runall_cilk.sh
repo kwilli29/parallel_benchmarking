@@ -1,36 +1,40 @@
 #!/bin/bash
 
-RUNS=100
+## ./runcilk.sh NT ARCH SLOW RUNS TIMER
+
+RUNS=$4
 PLANG="cilk"
-ARCH="galahad" # rb
-OUTFILE="output/${ARCH}/fixed_slow_32.txt"
-NT=32
+ARCH=$2 # galahad/rb
+FCNSL="$3"
+FILEEND="fixed_${3}_${1}"
+OUTFILE="output/${ARCH}/${FILEEND}.txt"
+TIMER=$5
+NT=$1
 ###############################
 
-multi_output_metrics() {	# ex. #RUNS data/01A_000.txt
+multi_output_metrics() {    # ex. #RUNS data/01A_000.txt
 
     echo "Python Process $1"
-    # echo
+    # 
+    # B2		ARCH3		LANG4		#TH5		#RUNS1	FCN6		AVERAGE
+    python3 ./process_metrics.py $RUNS "$1" $ARCH $PLANG $NT $FCNSL $TIMER # >> $OUTFILE
 
-	python3 ./process_metrics.py $RUNS "$1" >> $OUTFILE
-
-	# cat $OUTFILE
+    # cat $OUTFILE
 }
-pseudocode_output_metrics() {	# ex. #RUNS data/01A_000.txt
-
+pseudocode_output_metrics() {   # ex. #RUNS data/08A_000.txt
     echo "Python Process $1"
-	python3 ./p8proc.py $RUNS "$1" >> "output/${ARCH}/08_000.txt"
+    python3 ./p8proc.py $RUNS "$1" >> "output/${ARCH}/08_000.txt"
 }
 
 run_programs() { # ex. 0 1 A
 
-	make "$2" # Number
+    make "$2" # Number
  
-	echo "$3" # Letter
+    echo "$3" # Letter
 
     CURRPROG="$1$2$3"
 
-    DATA="data/${ARCH}/${CURRPROG}_fixed_slow_32.txt"
+    DATA="data/${ARCH}/${CURRPROG}_${FILEEND}.txt"
     touch $DATA
 
 	for((i=0;i<($RUNS);i++)); 
@@ -45,7 +49,7 @@ run_programs() { # ex. 0 1 A
     fi
 
 	#echo "Deleting Data Files $1$2$3"
-
+    rm $DATA
 }
 
 make clean
@@ -97,7 +101,7 @@ echo "Starting benchmark on 02_'s"
 	run_programs 0 2 D
 
 	# Cleanup
-	make clean
+#	make clean
 
 echo "Cleanup 02_'s"
 echo ""
@@ -162,16 +166,16 @@ echo ""
 #echo ""
 ###############################
 
-#echo "Starting benchmark on 06_'s"
+echo "Starting benchmark on 06_'s"
 
 	# A
-#	run_programs 0 6 A
+	run_programs 0 6 A
 
 	# Cleanup
-#	make clean
+	make clean
 
-#echo "Cleanup 06_'s"
-#echo ""
+echo "Cleanup 06_'s"
+echo ""
 ###############################
 
 echo "Starting benchmark on 08_'s"

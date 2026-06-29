@@ -74,9 +74,12 @@ int main(int argc, char *argv[]){
 	printf("* # Spawns: %d\n", OMP_THREADS);
 
     int iters =50;
+
+// double t_start,t_end; 
+// t_start = omp_get_wtime(); 
+
 	struct timespec t_start, t_res, t_end;
 	clock_gettime(CLOCK_MONOTONIC, &t_start);
-
 
 	// omp parallel region will call spawn_function in parallel OMP_THREAD # of times
 
@@ -88,10 +91,12 @@ int main(int argc, char *argv[]){
 
     }
 
+// t_end = omp_get_wtime(); 
+// printf("%f\n", t_end - t_start);
 	clock_gettime(CLOCK_MONOTONIC, &t_end);
 	timespec_sub(&t_res, t_end, t_start);
 
-	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+	// printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
 	return 0;
 }

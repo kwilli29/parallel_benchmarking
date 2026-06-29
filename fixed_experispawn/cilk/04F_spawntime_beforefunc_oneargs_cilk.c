@@ -91,7 +91,6 @@ int main(int argc, char *argv[]){
 	
 	t_end = cilk_spawn spawn_function_long(x); // spawn with one int argument
 	
-	clock_gettime(CLOCK_MONOTONIC, &t_end);
 
 	cilk_sync;
 

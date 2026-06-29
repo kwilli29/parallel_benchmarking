@@ -3,14 +3,14 @@
 RUNS=100
 PLANG="serial"
 ARCH="galahad" #"rb" # 
-OUTFILE="output/${ARCH}/fixed_slow32.txt"
+OUTFILE="output/${ARCH}/fixed_slow272.txt"
 ###############################
 
 single_output_metrics() {	# ex. 25 data/01A_000.txt
 
 	echo "Process $1"
 
-	python3 ./process_metrics.py $RUNS "$1" "$1" >> $OUTFILE
+	python3 ./process_metrics.py $RUNS "$1" >> $OUTFILE
 
 	#cat $OUTFILE
 
@@ -26,19 +26,19 @@ run_programs() { # ex. 0 1 A
 
 	CURRPROG="$1$2$3"
 
-	EXEC="data/${ARCH}/${CURRPROG}_fixed_slow32.txt"
-	#touch $EXEC 
+	EXEC="data/${ARCH}/${CURRPROG}_fixed_slow272.txt"
+	touch $EXEC 
 
 	for((i=0;i<($RUNS);i++)); 
 	do	
-		./$CURRPROG 32 >> $EXEC # Capture program output
+		./$CURRPROG 272 >> $EXEC # Capture program output
     done
 
 	# Metrics
 
 	single_output_metrics $EXEC
 
-	# rm $EXEC
+	rm $EXEC
 }
 
 make clean

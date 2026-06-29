@@ -2,6 +2,9 @@
 
 import sys
 import time
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from toexcel import panda_to_excel
 
 # Get # of processors
 NUM_PROCS=2
@@ -57,7 +60,7 @@ def long_metrics(pfile, runs): # for 02 benchmarks --> get the difference betwee
     return csvdata
 
 def thread_metrics(filename, runs): # Time window metric
-    csvdata = []
+    csvdata = [0.0,0.0,runs]
 
     # METRICS
     AVG = 0.0
@@ -68,10 +71,11 @@ def thread_metrics(filename, runs): # Time window metric
             AVG += float(line.strip())
 
     AVG = (AVG / float(runs))
+    csvdata[0] = AVG
    
     # print(f'*AV#TH,{AVG:.2f},') 
 
-    return AVG
+    return csvdata
 
 def short_metrics(pfile, runs): #
 
@@ -112,7 +116,18 @@ def main():
 
     csvdata.append(sys.argv[2])
 
-    print(csvdata)
+    bk = sys.argv[2].split('/')[2][0:3]
+
+    # B2		ARCH3		LANG4		#TH5		#RUNS1	FCN6		AVERAGE
+    print(bk, sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[1], sys.argv[6], csvdata[0],sys.argv[7])
+
+    #try:
+    panda_to_excel(bk, sys.argv[3], sys.argv[4], sys.argv[5], sys.argv[1], sys.argv[6], csvdata[0],sys.argv[7])
+
+    #except Exception as e:
+    #print('error in printing to sheet')
+
+    print(csvdata, 'yay')
 
     return
 

@@ -3,7 +3,7 @@
 RUNS=100
 PLANG="cilk"
 ARCH="galahad" # rb
-OUTFILE="output/${ARCH}/005.txt"
+OUTFILE="output/${ARCH}/slow_272.txt"
 ###############################
 
 multi_output_metrics() {	# ex. #RUNS data/01A_000.txt
@@ -29,12 +29,12 @@ run_programs() { # ex. 0 1 A
 
     CURRPROG="$1$2$3"
 
-    DATA="data/${ARCH}/${CURRPROG}_005.txt"
+    DATA="data/${ARCH}/${CURRPROG}_slow_272.txt"
     touch $DATA
 
 	for((i=0;i<($RUNS);i++)); 
 	do	
-        ./$CURRPROG 32 >> $DATA
+        ./$CURRPROG 272 >> $DATA
     done 
     
     if [ "$2" == "8" ]; then
@@ -44,11 +44,11 @@ run_programs() { # ex. 0 1 A
     fi
 
 	#echo "Deleting Data Files $1$2$3"
-	rm $DATA
+
 }
 
 make clean
-rm $OUTFILE
+
 ###############################
 #cd serial
 #./runall_serial.sh
@@ -176,7 +176,7 @@ echo ""
 echo "Starting benchmark on 08_'s"
 
 	# A
-    run_programs 0 8 A
+    #run_programs 0 8 A
 
     # B
     # run_programs 0 8 B
