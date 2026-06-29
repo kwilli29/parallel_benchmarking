@@ -1,16 +1,23 @@
 #!/bin/bash
 
-RUNS=100
+## ./runserial.sh NT ARCH SLOW RUNS TIMER
+
+RUNS=$4
 PLANG="serial"
-ARCH="galahad" #"rb" # 
-OUTFILE="output/${ARCH}/fixed_slow272.txt"
+ARCH=$2 # galahad / rb
+FCNSL="$3"
+FILEEND="fixed_${3}_${1}"
+OUTFILE="output/${ARCH}/${FILEEND}.txt"
+TIMER=$5
+NT=$1
 ###############################
 
 single_output_metrics() {	# ex. 25 data/01A_000.txt
 
 	echo "Process $1"
 
-	python3 ./process_metrics.py $RUNS "$1" >> $OUTFILE
+    # B2		ARCH3		LANG4		#TH5		#RUNS1	FCN6		AVERAGE
+    python3 ./process_metrics.py $RUNS "$1" $ARCH $PLANG $NT $FCNSL $TIMER # >> $OUTFILE
 
 	#cat $OUTFILE
 
@@ -18,27 +25,25 @@ single_output_metrics() {	# ex. 25 data/01A_000.txt
 
 run_programs() { # ex. 0 1 A
 
-	make "$2" # Number
+    make "$2" # Number
  
-	echo "$3" # Letter
+    echo "$3" # Letter
 
-	#	Run the Programs
+    CURRPROG="$1$2$3"
 
-	CURRPROG="$1$2$3"
-
-	EXEC="data/${ARCH}/${CURRPROG}_fixed_slow272.txt"
-	touch $EXEC 
+    DATA="data/${ARCH}/${CURRPROG}_${FILEEND}.txt"
+    touch $DATA
 
 	for((i=0;i<($RUNS);i++)); 
 	do	
-		./$CURRPROG 272 >> $EXEC # Capture program output
+        ./$CURRPROG $NT >> $DATA
     done
 
 	# Metrics
 
-	single_output_metrics $EXEC
+	single_output_metrics $DATA
 
-	rm $EXEC
+	rm $DATA
 }
 
 make clean
@@ -137,16 +142,16 @@ echo ""
 #echo ""
 ###############################
 
-#echo "Starting benchmark on 06_'s"
+echo "Starting benchmark on 06_'s"
 
 	# A
-#	run_programs 0 6 A
+	run_programs 0 6 A
 
 	# Cleanup
-#	make clean
+	make clean
 
-#echo "Cleanup 06_'s"
-#echo ""
+echo "Cleanup 06_'s"
+echo ""
 ###############################
 
 echo "Starting benchmark on 08_'s"
@@ -163,4 +168,4 @@ echo "Starting benchmark on 08_'s"
 echo "Cleanup 08_'s"
 echo ""
 ###############################
-cat $OUTFILE
+#cat $OUTFILE
