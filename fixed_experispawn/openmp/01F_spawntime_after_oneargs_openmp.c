@@ -8,6 +8,7 @@
 #include <assert.h>
 #include "ctimer.h"
 #include <math.h>
+#include <sys/time.h>
 #include "../../include/numthreads.h"
 /* Benchmark: 01F: Spawn time after ; One Spawn w/ fcn args (OpenMP)
  * Launch a bunch and measure when all done -
@@ -73,10 +74,15 @@ int main(int argc, char *argv[]){
     int iters=50;
 	double x = 15.0;
 
-// double t_start,t_end; 
-// t_start = omp_get_wtime(); 
-	struct timespec t_start, t_res, t_end;
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+double t_start,t_end; 
+t_start = omp_get_wtime(); 
+
+	// struct timespec t_start, t_res, t_end;
+	// clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+
+    // struct timeval t_start, t_end;
+    // double result=0.0;
+    // gettimeofday(&t_start, NULL);
 
 	// I really think this is the most representative way to spawn 1 "thread" in a pool of 200
 	// not what openmp is for
@@ -90,13 +96,14 @@ int main(int argc, char *argv[]){
         spawn_function_long(x);
 		//spawn_function(x);
 	}	
-// t_end = omp_get_wtime(); 
-// printf("%f\n", t_end - t_start);	
-	clock_gettime(CLOCK_MONOTONIC, &t_end);
+t_end = omp_get_wtime(); 
+printf("%f\n", t_end - t_start);	
 
-	timespec_sub(&t_res, t_end, t_start);
-
-	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+	// clock_gettime(CLOCK_MONOTONIC, &t_end);
+    
+    // gettimeofday(&t_end, NULL);
+    // result = (t_end.tv_sec+ (double)t_end.tv_usec/1000000) - (t_start.tv_sec+(double)t_start.tv_usec/1000000);
+    // printf("%09f\n", result);
 
 	return 0;
 }

@@ -73,15 +73,22 @@ int main(int argc, char *argv[]){
 	printf("* # Spawns: %d\n", NCILK);
     
     int iter = 50;
-	struct timespec t_start, t_res;
-	struct timespec t_end[iter];
 
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+	// struct timespec t_start, t_res;
+	// struct timespec t_end[iter];
+	// clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+
+    struct timeval t_start; struct timeval t_end[iter];
+    double result=0.0;
+    gettimeofday(&t_start, NULL);
 
 	#pragma cilk grainsize 1
 	cilk_for(int i=0; i < iter; i++){ // parallel for loop time then spawn
 		
-		clock_gettime(CLOCK_MONOTONIC, &t_end[i]); cilk_spawn spawn_function_long();
+		//clock_gettime(CLOCK_MONOTONIC, &t_end[i]); 
+        gettimeofday(&t_end[i], NULL);
+        
+        cilk_spawn spawn_function_long();
         //cilk_spawn spawn_function();
 
 	}
@@ -89,9 +96,11 @@ int main(int argc, char *argv[]){
 	printf("****\n");
 	for(int i = 0; i < iter; i++){
 		
-		timespec_sub(&t_res, t_end[i], t_start);
+		// timespec_sub(&t_res, t_end[i], t_start);
+		// printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
-		printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+        result = (t_end[i].tv_sec+ (double)t_end[i].tv_usec/1000000) - (t_start.tv_sec+(double)t_start.tv_usec/1000000);
+        printf("%09f\n", result);
 	
 	}
 

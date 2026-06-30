@@ -55,8 +55,6 @@ void spawn_function(){           // Simple Spawn Function
 
 int main(int argc, char *argv[]){
 
-	struct timespec t_start, t_res, t_end;
-
 	int NSERIAL = number_threads();
 
     // Process Command-Line Arguments
@@ -70,17 +68,24 @@ int main(int argc, char *argv[]){
 
     int iters = 50;
 
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+    // struct timespec t_start, t_res, t_end;
+	// clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+
+    struct timeval t_start, t_end;
+    double result=0.0;
+    gettimeofday(&t_start, NULL);
 	
 	for(int i = 0; i < iters; i++){
 		spawn_function_long(); 
 	}
  	
-	clock_gettime(CLOCK_MONOTONIC, &t_end);
+	// clock_gettime(CLOCK_MONOTONIC, &t_end);
+	// timespec_sub(&t_res, t_end, t_start);
+	// printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
-	timespec_sub(&t_res, t_end, t_start);
-
-	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+    gettimeofday(&t_end, NULL); 
+    result = (t_end.tv_sec+(double)t_end.tv_usec/1000000) - (t_start.tv_sec+(double)t_start.tv_usec/1000000);
+    printf("%09f\n", result);
 
 	// printf("01C\n");
 

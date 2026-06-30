@@ -8,6 +8,7 @@
 #include <assert.h>
 #include "ctimer.h"
 #include <math.h>
+#include <sys/time.h>
 #include "../../include/numthreads.h"
 /* Benchmark: 03C: Spawn time return; For-Loop Spawns (Pthreads)
  * Launch a bunch and measure when all done 
@@ -36,7 +37,9 @@ void* spawn_function_long(void* t_start){
         i += 1.0;
 	}
 
-    clock_gettime(CLOCK_MONOTONIC, (struct timespec *)t_start);
+    // clock_gettime(CLOCK_MONOTONIC, (struct timespec *)t_start);
+    gettimeofday((struct timeval *)t_start, NULL);
+
 	return (void*)t_start;
 }
 void* spawn_function(void* t_start){           // Simple Math for Spawn Function
@@ -49,7 +52,9 @@ void* spawn_function(void* t_start){           // Simple Math for Spawn Function
 
 	z = z + y + x;	
 
-    clock_gettime(CLOCK_MONOTONIC, (struct timespec *)t_start);
+    // clock_gettime(CLOCK_MONOTONIC, (struct timespec *)t_start);
+    gettimeofday((struct timeval *)t_start, NULL);
+
 	return (void*)t_start; 
 }
 
@@ -72,8 +77,11 @@ int main(int argc, char *argv[]){
     int iters=50;
 	pthread_t Threads[ iters ];
 
-	struct timespec t_start[iters]; struct timespec t_res;
-	struct timespec t_end[iters];
+	// struct timespec t_start[iters]; struct timespec t_res;
+	// struct timespec t_end[iters];
+
+    struct timeval t_start[iters]; double result=0.0;
+	struct timeval t_end[iters];
 
 	/****/ 
 
@@ -81,22 +89,27 @@ int main(int argc, char *argv[]){
 		pthread_create( &Threads[ i ], NULL, spawn_function_long, (void*)&t_start[i]);
 	}
 
-	struct timespec* temp = (struct timespec *)&t_start[0];
+	// struct timespec* temp = (struct timespec *)&t_start[0];
+    struct timeval* temp = (struct timeval *)&t_start[0];
 	
 	for( int i = 0; i < iters; i++ ) {                                     // join
 		pthread_join( Threads[ i ], (void*)&temp);
-        clock_gettime(CLOCK_MONOTONIC, &t_end[i]);
+        
+        // clock_gettime(CLOCK_MONOTONIC, &t_end[i]);
+        gettimeofday(&t_end[i], NULL);
 
 		// if(i < 5){ printf("\n%p\n", &t_end); printf("%ld\n", t_end[i].tv_nsec); }
-
 		if (i < PTH-1){ temp = &t_start[i+1]; }
 	}
 
 	for(int i = 0; i < iters; i++){
 
-		timespec_sub(&t_res, t_end[i], t_start[i]);
-        if(t_res.tv_nsec < 0 && t_res.tv_sec >= 0){ t_res.tv_nsec *= -1; printf("-");}
-		printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);	
+		// timespec_sub(&t_res, t_end[i], t_start[i]);
+        // if(t_res.tv_nsec < 0 && t_res.tv_sec >= 0){ t_res.tv_nsec *= -1; printf("-");}
+		// printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+    
+        result = (t_end[i].tv_sec+ (double)t_end[i].tv_usec/1000000) - (t_start[i].tv_sec+(double)t_start[i].tv_usec/1000000);
+        printf("%09f\n", result);	
 
 	}
 

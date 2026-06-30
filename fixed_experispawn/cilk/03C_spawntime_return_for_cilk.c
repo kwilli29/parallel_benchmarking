@@ -15,7 +15,8 @@
  * 
  */
 static const int ITERATION = 100000;
-struct timespec spawn_function_long(){
+// struct timespec spawn_function_long(){
+struct timeval spawn_function_long(){
 
     double z = 0;
     double i = 0.0;
@@ -40,12 +41,16 @@ struct timespec spawn_function_long(){
 
     // printf("**%d\t", __cilkrts_get_worker_number()); // print thread id
 
-    struct timespec t_start;
-	clock_gettime(CLOCK_MONOTONIC, &t_start);
+    // struct timespec t_start;
+	// clock_gettime(CLOCK_MONOTONIC, &t_start);
+
+    struct timeval t_start;
+    gettimeofday(&t_start, NULL);
 
 	return t_start; // 
 }
-struct timespec spawn_function(){           // Simple Function to Spawn
+// struct timespec spawn_function(){           // Simple Function to Spawn
+struct timeval spawn_function(){
 
 	int x = 100; int y = 5000; int z = 1000000;
 
@@ -55,8 +60,11 @@ struct timespec spawn_function(){           // Simple Function to Spawn
 
 	z = z + y + x;	
 
-    struct timespec t_start;
-	clock_gettime(CLOCK_MONOTONIC, &t_start);
+    // struct timespec t_start;
+	// clock_gettime(CLOCK_MONOTONIC, &t_start);
+
+    struct timeval t_start;
+    gettimeofday(&t_start, NULL);;
 
 	return t_start; //  end_time; 
 }
@@ -80,14 +88,18 @@ int main(int argc, char *argv[]){
 	printf("* # Spawns: %d ** spawn -> fcn, t1 return t1 -> var=t1, t2, t1-t2 ** \n", NCILK);
     int iter = 50;
 
-	struct timespec t_start[iter]; struct timespec t_res; 
-	struct timespec t_end[iter];
+	// struct timespec t_start[iter]; struct timespec t_res; 
+	// struct timespec t_end[iter];
+
+    struct timeval t_start[iter]; struct timeval t_end[iter];
+    double result=0.0;
 
 	// Use for loop, timestamp before spawn to right at start of spawn_function
 
 	for(int i=0; i < iter; i++){ 	
 		t_start[i] = cilk_spawn spawn_function_long(); 
-        clock_gettime(CLOCK_MONOTONIC, &t_end[i]);
+        // clock_gettime(CLOCK_MONOTONIC, &t_end[i]);
+        gettimeofday(&t_end[i], NULL);
 
 	} 
     cilk_sync;
@@ -95,10 +107,13 @@ int main(int argc, char *argv[]){
 	//printf("****\n");	
 	for(int i = 0; i < iter; i++){
 
-		timespec_sub(&t_res, t_start[i], t_end[i]); // t_end happens before t_start
-        if(t_res.tv_nsec < 0 && t_res.tv_sec >= 0){ t_res.tv_nsec *= -1; printf("-");}
-		printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
-	
+		// timespec_sub(&t_res, t_start[i], t_end[i]); // t_end happens before t_start
+        // if(t_res.tv_nsec < 0 && t_res.tv_sec >= 0){ t_res.tv_nsec *= -1; printf("-");}
+		// printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+
+        result = (t_end[i].tv_sec+ (double)t_end[i].tv_usec/1000000) - (t_start[i].tv_sec+(double)t_start[i].tv_usec/1000000);
+        printf("%09f\n", result);
+
 	}
 
 	// printf("03C\n");

@@ -14,7 +14,7 @@ def panda_to_excel(bmk, arch, lang, nth, nruns, fcn, avg, timer=''):
 
     # dictionary of data  
     dct = {'BNCHMRK': [bmk],  
-        #'TIMER': [timer], # optional
+        'TIMER': [timer], # optional
         'ARCH': [arch], 
         'LANG':[lang],
         '#TH':[nth],
@@ -27,7 +27,7 @@ def panda_to_excel(bmk, arch, lang, nth, nruns, fcn, avg, timer=''):
     # 
 
     ss = '../fixedexperispawn_data.xlsx'
-    sheetname="Sheet3"
+    sheetname="Sheet4"
 
     # forming dataframe 
     df = pandas.DataFrame(data=dct)  

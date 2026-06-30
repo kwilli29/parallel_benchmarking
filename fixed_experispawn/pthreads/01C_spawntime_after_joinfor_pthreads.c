@@ -8,6 +8,7 @@
 #include <assert.h>
 #include "ctimer.h"
 #include <math.h>
+#include <sys/time.h>
 #include "../../include/numthreads.h"
 /* Benchmark: 01C: Spawn timer after ; For-Loop+Join Spawns (Pthreads)
  */
@@ -69,9 +70,11 @@ int main(int argc, char *argv[]){
     int iters=50;
 	pthread_t Threads[ iters ];
 
-	struct timespec t_start, t_res, t_end;
+	// struct timespec t_start, t_res, t_end;
+	// clock_gettime(CLOCK_MONOTONIC, &t_start);	
 
-	clock_gettime(CLOCK_MONOTONIC, &t_start);	
+    struct timeval t_start, t_end; double result=0.0;
+    gettimeofday(&t_start, NULL);
 
 	/****/ 
 
@@ -83,11 +86,14 @@ int main(int argc, char *argv[]){
 		pthread_join( Threads[ i ], NULL);
 	}
 
-	clock_gettime(CLOCK_MONOTONIC, &t_end);
+	// clock_gettime(CLOCK_MONOTONIC, &t_end);
+    gettimeofday(&t_end, NULL);
+	
+	// timespec_sub(&t_res, t_end, t_start);
+	// printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
-	timespec_sub(&t_res, t_end, t_start);
-
-	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+    result = (t_end.tv_sec+ (double)t_end.tv_usec/1000000) - (t_start.tv_sec+(double)t_start.tv_usec/1000000);
+    printf("%09f\n", result);
 		
 	return 0;
 }

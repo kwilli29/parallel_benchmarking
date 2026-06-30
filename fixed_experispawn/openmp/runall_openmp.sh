@@ -59,7 +59,7 @@ echo "Starting benchmark on 01_'s"
 	run_programs 0 1 B
 
 	# C
-	run_programs 0 1 C 
+	run_programs 0 1 C
 
 	# N
 	run_programs 0 1 N    
@@ -76,116 +76,115 @@ echo "Starting benchmark on 01_'s"
 	# Cleanup
 	make clean
 
-
 echo "Cleanup 01_'s"
 echo ""
 
 ###############################
 
-# echo "Starting benchmark on 02_'s"
+ echo "Starting benchmark on 02_'s"
 
-# 	# A
-# #	run_programs 0 2 A
+ 	# A
+#	run_programs 0 2 A
 
-# 	# B
-# #	run_programs 0 2 B
+ 	# B
+#	run_programs 0 2 B
 
-# 	# C
-# 	run_programs 0 2 C
+ 	# C
+ 	run_programs 0 2 C
 
-# 	# D
-# 	run_programs 0 2 D
+ 	# D
+ 	run_programs 0 2 D
 
-# 	# Cleanup
-# 	make clean
+ 	# Cleanup
+ 	make clean
 
-# echo "Cleanup 02_'s"
-# echo ""
-# ###############################
+ echo "Cleanup 02_'s"
+ echo ""
+###############################
 
-# echo "Starting benchmark on 03_'s"
+ echo "Starting benchmark on 03_'s"
 
-# 	# C
-# 	run_programs 0 3 C
+ 	# C
+ 	run_programs 0 3 C
 
-# 	# D
-# 	run_programs 0 3 D
+ 	# D
+ 	run_programs 0 3 D
 
-# 	# E  -- 
-# 	run_programs 0 3 E
+ 	# E  -- 
+ 	run_programs 0 3 E
 
-# 	# F -- 
-# 	run_programs 0 3 F
+ 	# F -- 
+ 	run_programs 0 3 F
 
-# 	# Cleanup
-# 	make clean
+ 	# Cleanup
+ 	make clean
 
-# echo "Cleanup 03_'s"
-# echo ""
-# ###############################
+ echo "Cleanup 03_'s"
+ echo ""
+###############################
 
-# echo "Starting benchmark on 04_'s"
+echo "Starting benchmark on 04_'s"
 
-# 	# A
-# #	run_programs 0 4 A
+ 	# A
+#	run_programs 0 4 A
 
-# 	# B
-# #	run_programs 0 4 B
+ 	# B
+#	run_programs 0 4 B
 
-# 	# C
-# 	run_programs 0 4 C
+ 	# C
+ 	run_programs 0 4 C
 
-# 	# D
-# 	run_programs 0 4 D
+ 	# D
+ 	run_programs 0 4 D
 
-# 	# E  -- 
-# 	run_programs 0 4 E
+ 	# E  -- 
+ 	run_programs 0 4 E
 
-# 	# F -- 
-# 	run_programs 0 4 F
+ 	# F -- 
+ 	run_programs 0 4 F
 
-# 	# Cleanup
-# 	make clean
+ 	# Cleanup
+ 	make clean
 
-# echo "Cleanup 04_'s"
-# echo ""
-# ###############################
+ echo "Cleanup 04_'s"
+ echo ""
+###############################
 
-# #echo "Starting benchmark on 05_'s"
+#echo "Starting benchmark on 05_'s"
 
-# 	# A 
-# #	run_programs 0 5 A
+	# A 
+#	run_programs 0 5 A
 
-# 	# Cleanup
-# #	make clean
+	# Cleanup
+#	make clean
 
-# #echo "Cleanup 05_'s"
-# #echo ""
-# ###############################
+#echo "Cleanup 05_'s"
+#echo ""
+###############################
 
-# #echo "Starting benchmark on 06_'s"
+echo "Starting benchmark on 06_'s"
 
-# 	# A
-# #	run_programs 0 6 A
+ 	# A
+	run_programs 0 6 A
 
-# 	# Cleanup
-# #	make clean
+ 	# Cleanup
+	make clean
 
-# #echo "Cleanup 06_'s"
-# #echo ""
-# ###############################
+echo "Cleanup 06_'s"
+echo ""
+##############################
 
-# echo "Starting benchmark on 08_'s"
+echo "Starting benchmark on 08_'s"
 
-# 	# A
-#     #run_programs 0 8 A
+	# A
+    #run_programs 0 8 A
 
-#     # B
-#     # run_programs 0 8 B
+    # B
+    # run_programs 0 8 B
 
-#     # Cleanup
-#     make clean
+    # Cleanup
+    make clean
 
-# echo "Cleanup 08_'s"
-# echo ""
-# ###############################
+echo "Cleanup 08_'s"
+echo ""
+###############################

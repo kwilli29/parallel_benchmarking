@@ -8,12 +8,14 @@
 #include <assert.h>
 #include "ctimer.h"
 #include <math.h>
+#include <sys/time.h>
 #include "../../include/numthreads.h"
 /* Benchmark: 0eF: Spawn time before function ; One Spawn w/ fcn arg (Pthreads)
  * Launch a bunch and measure when all done
  */
 
-static struct timespec t_start; 
+//static struct timespec t_start; 
+static struct timeval t_start;
 
 static const int ITERATION = 100000;
 void* spawn_function_long(void* x){
@@ -39,7 +41,9 @@ void* spawn_function_long(void* x){
         i += 1.0;
 	}
 
-    clock_gettime(CLOCK_MONOTONIC, &t_start);
+    //clock_gettime(CLOCK_MONOTONIC, &t_start);
+    gettimeofday(&t_start, NULL);
+
 	return (void*)&t_start;
 }
 void* spawn_function(void* x){           // Simple Math for Spawn Function
@@ -52,7 +56,9 @@ void* spawn_function(void* x){           // Simple Math for Spawn Function
 
 	z = z + y + *(int *)x;	
 
-    clock_gettime(CLOCK_MONOTONIC, &t_start);
+    //clock_gettime(CLOCK_MONOTONIC, &t_start);
+    gettimeofday(&t_start, NULL);
+
 	return (void*)&t_start; 
 }
 
@@ -78,20 +84,26 @@ int main(int argc, char *argv[]){
 
 	pthread_t Thread;
 
-	struct timespec t_end, t_res;
+	// struct timespec t_end, t_res;
+    struct timeval t_end;
+    double result=0.0;
 
 	/****/ 
 
 	pthread_create( &Thread, NULL, spawn_function_long, xp);
 
-	struct timespec* temp = &t_start;
+	// struct timespec* temp = &t_start;
+    struct timeval* temp = &t_start;
 	pthread_join(Thread, (void *)&temp);
 
-	clock_gettime(CLOCK_MONOTONIC, &t_end);
+	// clock_gettime(CLOCK_MONOTONIC, &t_end);
+	// timespec_sub(&t_res, t_end, t_start);
+    // if(t_res.tv_nsec < 0 && t_res.tv_sec >= 0){ t_res.tv_nsec *= -1; printf("-");}
+	// printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
-	timespec_sub(&t_res, t_end, t_start);
-    if(t_res.tv_nsec < 0 && t_res.tv_sec >= 0){ t_res.tv_nsec *= -1; printf("-");}
-	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);	
+    gettimeofday(&t_end, NULL);     
+    result = (t_end.tv_sec+ (double)t_end.tv_usec/1000000) - (t_start.tv_sec+(double)t_start.tv_usec/1000000);
+    printf("%09f\n", result);	
 
 	return 0;
 }

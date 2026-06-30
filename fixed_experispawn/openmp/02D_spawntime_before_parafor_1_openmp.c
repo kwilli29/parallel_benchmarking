@@ -8,6 +8,7 @@
 #include <assert.h>
 #include "ctimer.h"
 #include <math.h>
+#include <sys/time.h>
 #include "../../include/numthreads.h"
 /* Benchmark: 02D: Spawn time before ; ParallelFor-Loop Spawns (OpenMP)
  * Launch a bunch and measure when all done 
@@ -68,25 +69,39 @@ int main(int argc, char *argv[]){
     }
     printf("# Spawns: %d\n", OMP_THREADS);
     int iters=50;
-	struct timespec t_start, t_res;
-	struct timespec t_end[iters];
 
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // 
+double t_start; double t_end[iters]; 
+t_start = omp_get_wtime(); 
 
+	// struct timespec t_start, t_res;
+	// struct timespec t_end[iters];
+    // clock_gettime(CLOCK_MONOTONIC, &t_start); // 
+
+    // struct timeval t_start; struct timeval t_end[iters]; 
+    // double result=0.0;
+    // gettimeofday(&t_start, NULL);
+	
 	#pragma omp parallel for schedule (static, 1) num_threads(OMP_THREADS) // grainsize=1
 	for(int i = 0; i < iters; i++){	
-		clock_gettime(CLOCK_MONOTONIC, &t_end[i]); spawn_function_long(); 
+        t_end[i] = omp_get_wtime();
+		// clock_gettime(CLOCK_MONOTONIC, &t_end[i]); 
+        // gettimeofday(&t_end[i], NULL);
+
+        spawn_function_long(); 
 	} 
 	printf("****\n");
 	for(int i = 0; i < iters; i++){
 
-		timespec_sub(&t_res, t_end[i], t_start);
+        t_end[i] = omp_get_wtime(); 
+        printf("%f\n", t_end[i] - t_start);
 
-		printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+		// timespec_sub(&t_res, t_end[i], t_start);
+		// printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+
+        // result = (t_end[i].tv_sec+ (double)t_end[i].tv_usec/1000000) - (t_start.tv_sec+(double)t_start.tv_usec/1000000);
+        // printf("%09f\n", result);
 	
 	}
 
 	return 0;
 }
-
-

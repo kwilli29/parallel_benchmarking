@@ -1,5 +1,5 @@
 CC=		gcc 
-CFLAGS=		-O3 -Og -g -Wall -Wconversion #-lm
+CFLAGS=		-O3 -Og -g # -Wall -Wconversion #-lm
 INCFILES=   ../../include/numthreads.c
 SOURCE=		$(wildcard *.c)
 TARGETS=	$(SOURCE:.c=)	

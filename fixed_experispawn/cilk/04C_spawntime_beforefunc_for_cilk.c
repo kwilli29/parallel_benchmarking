@@ -15,10 +15,14 @@
  * Launch a bunch and measure when all done
  */
 static const int ITERATION = 100000;
-struct timespec spawn_function_long(){
+// struct timespec spawn_function_long(){
+struct timeval spawn_function_long(){
 
-    struct timespec t_end;
-	clock_gettime(CLOCK_MONOTONIC, &t_end);
+	// struct timespec t_end; 
+	// clock_gettime(CLOCK_MONOTONIC, &t_end);
+
+    struct timeval t_end;
+    gettimeofday(&t_end,NULL);
 
     double z = 0;
     double i = 0.0;
@@ -45,10 +49,14 @@ struct timespec spawn_function_long(){
 
 	return t_end; // 
 }
-struct timespec spawn_function(){           // Simple Function to Spawn
+// struct timespec spawn_function(){           // Simple Function to Spawn
+struct timeval spawn_function(){
 
-	struct timespec t_end;
-	clock_gettime(CLOCK_MONOTONIC, &t_end);
+	// struct timespec t_end; 
+	// clock_gettime(CLOCK_MONOTONIC, &t_end);
+
+    struct timeval t_end;
+    gettimeofday(&t_end,NULL);
 
 	int x = 100; int y = 5000; int z = 1000000;
 
@@ -79,13 +87,19 @@ int main(int argc, char *argv[]){
 	printf("* # Spawns: %d\n", NCILK);
     int iter = 50;
 
-	struct timespec t_start[iter]; struct timespec t_res; 
-	struct timespec t_end[iter];
+	// struct timespec t_start[iter]; struct timespec t_res; 
+	// struct timespec t_end[iter];
+
+    struct timeval t_start[iter]; struct timeval t_end[iter];
+    double result=0.0;
 
 	// Use for loop, timestamp before spawn to right at start of spawn_function
 
 	for(int i=0; i < iter; i++){ 	
-		clock_gettime(CLOCK_MONOTONIC, &t_start[i]); t_end[i] = cilk_spawn spawn_function_long();
+        // clock_gettime(CLOCK_MONOTONIC, &t_start[i]); 
+        gettimeofday(&t_start[i], NULL);
+        
+        t_end[i] = cilk_spawn spawn_function_long();
 
 	} 
     
@@ -94,8 +108,11 @@ int main(int argc, char *argv[]){
 	//printf("****\n");	
 	for(int i = 0; i < iter; i++){
 		
-		timespec_sub(&t_res, t_end[i], t_start[i]);
-		printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+		// timespec_sub(&t_res, t_end[i], t_start[i]);
+		// printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+
+        result = (t_end[i].tv_sec+ (double)t_end[i].tv_usec/1000000) - (t_start[i].tv_sec+(double)t_start[i].tv_usec/1000000);
+        printf("%09f\n", result);
 	
 	}
 

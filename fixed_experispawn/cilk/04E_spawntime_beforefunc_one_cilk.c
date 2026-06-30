@@ -18,10 +18,14 @@
  */
 
 static const int ITERATION = 100000;
-struct timespec spawn_function_long(){
+// struct timespec spawn_function_long(){
+struct timeval spawn_function_long(){
 
-    struct timespec t_end;
-	clock_gettime(CLOCK_MONOTONIC, &t_end);
+	// struct timespec t_end; 
+	// clock_gettime(CLOCK_MONOTONIC, &t_end);
+
+    struct timeval t_end;
+    gettimeofday(&t_end,NULL);
 
     double z = 0;
     double i = 0.0;
@@ -48,10 +52,14 @@ struct timespec spawn_function_long(){
 
 	return t_end; // 
 }
-struct timespec spawn_function(){           // Simple Function to Spawn
+// struct timespec spawn_function(){           // Simple Function to Spawn
+struct timeval spawn_function(){
 
-	struct timespec t_end; 
-	clock_gettime(CLOCK_MONOTONIC, &t_end);
+	// struct timespec t_end; 
+	// clock_gettime(CLOCK_MONOTONIC, &t_end);
+
+    struct timeval t_end;
+    gettimeofday(&t_end,NULL);
 
 	int x = 100; int y = 5000; int z = 1000000;
 
@@ -81,19 +89,23 @@ int main(int argc, char *argv[]){
 	printf("* # Spawns: %d\n", NCILK);
     int iter = 50;
     
-	struct timespec t_start, t_res;
-	struct timespec t_end;
-    
+	// struct timespec t_start, t_res;
+	// struct timespec t_end;
+	// clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 
-	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+    struct timeval t_start, t_end;
+    double result=0.0;
+    gettimeofday(&t_start, NULL);
 	
 	t_end = cilk_spawn spawn_function_long(); // single instance of time, spawn, end time before function 
 	
-
 	cilk_sync;
 
-	timespec_sub(&t_res, t_end, t_start);
-	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+	// timespec_sub(&t_res, t_end, t_start);
+	// printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+
+    result = (t_end.tv_sec+ (double)t_end.tv_usec/1000000) - (t_start.tv_sec+(double)t_start.tv_usec/1000000);
+    printf("%09f\n", result);
 
 	// printf("04E\n");
 

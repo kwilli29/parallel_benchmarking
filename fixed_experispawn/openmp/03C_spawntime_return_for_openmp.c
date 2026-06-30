@@ -8,12 +8,15 @@
 #include <assert.h>
 #include "ctimer.h"
 #include <math.h>
+#include <sys/time.h>
 #include "../../include/numthreads.h"
 /* Benchmark: 03C: Spawn time beforefunc ; For-Loop Spawns (OpenMP)
  * Launch a bunch and measure when all done 
  */
 static const int ITERATION = 100000;
-struct timespec spawn_function_long(){
+// struct timespec spawn_function_long(){
+// struct timeval spawn_function_long(){
+double spawn_function_long(){
 
     double z = 0;
     double i = 0.0;
@@ -38,12 +41,20 @@ struct timespec spawn_function_long(){
 
     // printf("**%d\t", __cilkrts_get_worker_number()); // print thread id
 
-    struct timespec t_start;
-	clock_gettime(CLOCK_MONOTONIC, &t_start);
+    double t_start = 0.0;
+    t_start = omp_get_wtime();
+
+    // struct timespec t_start;
+	// clock_gettime(CLOCK_MONOTONIC, &t_start);
+
+    // struct timeval t_start;
+    // gettimeofday(&t_start, NULL);
 
 	return t_start;
 }
-struct timespec spawn_function(){           // Simple Function to Spawn
+// struct timespec spawn_function(){           // Simple Function to Spawn
+// struct timeval spawn_function(){ 
+double spawn_function(){ 
 
     int x = 100; int y = 5000; int z = 1000000;
 
@@ -53,8 +64,14 @@ struct timespec spawn_function(){           // Simple Function to Spawn
 
 	z = z + y + x;	
 
-	struct timespec t_start;
-	clock_gettime(CLOCK_MONOTONIC, &t_start);
+    double t_start = 0.0;
+    t_start = omp_get_wtime();
+
+    // struct timespec t_start;
+	// clock_gettime(CLOCK_MONOTONIC, &t_start);
+
+    // struct timeval t_start;
+    // gettimeofday(&t_start, NULL);
 
 	return t_start; 
 }
@@ -76,8 +93,14 @@ int main(int argc, char *argv[]){
     }    
     printf("* # Spawns: %d\n", OMP_THREADS);
     int iters=50;
-	struct timespec t_start[iters]; struct timespec t_res;
-	struct timespec t_end[iters];
+
+    double t_start[iters]; double t_end[iters]; 
+
+	// struct timespec t_start[iters]; struct timespec t_res;
+	// struct timespec t_end[iters];
+
+    // struct timeval t_start[iters]; struct timeval t_end[iters]; 
+    // double result=0.0;
 
 	#pragma omp parallel num_threads(OMP_THREADS) 
 	{
@@ -87,16 +110,24 @@ int main(int argc, char *argv[]){
 				
 				#pragma omp task	
 				t_start[i] = spawn_function_long(); 
-                clock_gettime(CLOCK_MONOTONIC, &t_end[i]);
+                
+                t_end[i] = omp_get_wtime();
+                // clock_gettime(CLOCK_MONOTONIC, &t_end[i]);
+                // gettimeofday(&t_end[i], NULL);
 			} 
 		}
 	}
 	// printf("****\n");
 	for(int i = 0; i < iters; i++){
 
-		timespec_sub(&t_res, t_end[i], t_start[i]);
-		if(t_res.tv_nsec < 0 && t_res.tv_sec >= 0){ t_res.tv_nsec *= -1; printf("-");}
-		printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+        printf("%f\n", t_end[i] - t_start[i]);
+
+		// timespec_sub(&t_res, t_end[i], t_start[i]);
+		// if(t_res.tv_nsec < 0 && t_res.tv_sec >= 0){ t_res.tv_nsec *= -1; printf("-");}
+		// printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+
+        // result = (t_end[i].tv_sec+ (double)t_end[i].tv_usec/1000000) - (t_start[i].tv_sec+(double)t_start[i].tv_usec/1000000);
+        // printf("%09f\n", result);        
 	
 	}
 
