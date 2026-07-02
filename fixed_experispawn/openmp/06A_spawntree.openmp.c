@@ -6,10 +6,21 @@
 #include <string.h>
 #include <omp.h>
 #include <assert.h>
-#include "ctimer.h"
 #include <math.h>
 #include <sys/time.h>
 #include "../../include/numthreads.h"
+#include <time.h>
+
+void timespec_sub( struct timespec * t_diff, struct timespec const  t_end,  struct timespec const  t_start ) {
+    /**<[out] time difference */ /**<[in]  end time */ /**<[in]  start time */
+    t_diff->tv_nsec = t_end.tv_nsec - t_start.tv_nsec; t_diff->tv_sec  = t_end.tv_sec  - t_start.tv_sec;
+    if ((t_diff->tv_sec > 0) && (t_diff->tv_nsec < 0)) {
+        t_diff->tv_nsec += _NSEC_PER_SEC; t_diff->tv_sec--;
+    } else if ((t_diff->tv_sec < 0) && (t_diff->tv_nsec > 0)) {
+        t_diff->tv_nsec -= _NSEC_PER_SEC; t_diff->tv_sec++;
+    }
+    /* (s > 0 & ns > 0) : do nothing (t_start < t_end) */ /* (s < 0 & ns < 0) : do nothing (t_start > t_end) */
+}
 /* Benchmark: 06A: Spawn Tree ; Parallel Region , Recursion (OpenMP)
  * Optional argument to specify the depth of the spawn tree. 
  * Main thread calls runbench function
