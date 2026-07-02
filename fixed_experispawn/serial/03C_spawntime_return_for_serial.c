@@ -9,7 +9,11 @@
 #include <sys/time.h>
 #include "../../include/numthreads.h"
 #include <time.h>
-
+enum {
+    _MSEC_PER_SEC = 1000,
+    _USEC_PER_SEC = 1000 * 1000,
+    _NSEC_PER_SEC = 1000 * 1000 * 1000
+};
 void timespec_sub( struct timespec * t_diff, struct timespec const  t_end,  struct timespec const  t_start ) {
     /**<[out] time difference */ /**<[in]  end time */ /**<[in]  start time */
     t_diff->tv_nsec = t_end.tv_nsec - t_start.tv_nsec; t_diff->tv_sec  = t_end.tv_sec  - t_start.tv_sec;
@@ -24,8 +28,8 @@ void timespec_sub( struct timespec * t_diff, struct timespec const  t_end,  stru
  * Launch a bunch and measure when all done - don’t necessarily get just spawn time
  */
 static const int ITERATION = 100000;
-//struct timespec spawn_function_long(){
-struct timeval spawn_function_long(){
+struct timespec spawn_function_long(){
+// struct timeval spawn_function_long(){
 
     double z = 0;
     double i = 0.0;
@@ -47,16 +51,16 @@ struct timeval spawn_function_long(){
         i += 1.0;
 	}
 
-    // struct timespec t_start; 						  
-	// clock_gettime(CLOCK_MONOTONIC, &t_start);
+    struct timespec t_start; 						  
+	clock_gettime(CLOCK_MONOTONIC, &t_start);
 
-    struct timeval t_start;
-    gettimeofday(&t_start, NULL);
+    // struct timeval t_start;
+    // gettimeofday(&t_start, NULL);
 
 	return t_start;
 }
-//struct timespec spawn_function(){           // Simple Function to Spawn
-struct timeval spawn_function(){
+struct timespec spawn_function(){           // Simple Function to Spawn
+// struct timeval spawn_function(){
 
 	int x = 100; 
     int y = 5000; int z = 1000000;
@@ -67,11 +71,11 @@ struct timeval spawn_function(){
 
 	z = z + y + x;	
 
-    // struct timespec t_start; 						  
-	// clock_gettime(CLOCK_MONOTONIC, &t_start);
+    struct timespec t_start; 						  
+	clock_gettime(CLOCK_MONOTONIC, &t_start);
 
-    struct timeval t_start;
-    gettimeofday(&t_start, NULL);
+    // struct timeval t_start;
+    // gettimeofday(&t_start, NULL);
 
 	return t_start; 
 }
@@ -91,27 +95,27 @@ int main(int argc, char *argv[]){
 
     int iters =50;
     
-	// struct timespec t_start[iters]; struct timespec t_res; 
-	// struct timespec t_end[iters];
+	struct timespec t_start[iters]; struct timespec t_res; 
+	struct timespec t_end[iters];
 
-    struct timeval t_start[iters]; struct timeval t_end[iters];
-    double result=0.0;
+    // struct timeval t_start[iters]; struct timeval t_end[iters];
+    // double result=0.0;
 
 	for(int i=0; i < iters; i++){ 	
         t_start[i] = spawn_function_long(); 
-        // clock_gettime(CLOCK_MONOTONIC, &t_end[i]); 
-        gettimeofday(&t_end[i], NULL); 
+        clock_gettime(CLOCK_MONOTONIC, &t_end[i]); 
+        // gettimeofday(&t_end[i], NULL); 
 	} 
 
 	printf("****\n");	
 	for(int i = 0; i < iters; i++){
 		
-		// timespec_sub(&t_res, t_end[i], t_start[i]);
-        // if(t_res.tv_nsec < 0 && t_res.tv_sec >= 0){ t_res.tv_nsec *= -1; printf("-");}
-		// printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+		timespec_sub(&t_res, t_end[i], t_start[i]);
+        if(t_res.tv_nsec < 0 && t_res.tv_sec >= 0){ t_res.tv_nsec *= -1; printf("-");}
+		printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
                     
-        result = (t_end[i].tv_sec+ (double)t_end[i].tv_usec/1000000) - (t_start[i].tv_sec+(double)t_start[i].tv_usec/1000000);
-        printf("%09f\n", result);
+        // result = (t_end[i].tv_sec+ (double)t_end[i].tv_usec/1000000) - (t_start[i].tv_sec+(double)t_start[i].tv_usec/1000000);
+        // printf("%09f\n", result);
 	
 	}
 

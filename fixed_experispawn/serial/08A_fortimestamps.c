@@ -9,7 +9,11 @@
 #include <math.h>
 #include "../../include/numthreads.h"
 #include <time.h>
-
+enum {
+    _MSEC_PER_SEC = 1000,
+    _USEC_PER_SEC = 1000 * 1000,
+    _NSEC_PER_SEC = 1000 * 1000 * 1000
+};
 void timespec_sub( struct timespec * t_diff, struct timespec const  t_end,  struct timespec const  t_start ) {
     /**<[out] time difference */ /**<[in]  end time */ /**<[in]  start time */
     t_diff->tv_nsec = t_end.tv_nsec - t_start.tv_nsec; t_diff->tv_sec  = t_end.tv_sec  - t_start.tv_sec;
