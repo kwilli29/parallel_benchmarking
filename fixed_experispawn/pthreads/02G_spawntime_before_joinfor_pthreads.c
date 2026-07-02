@@ -10,7 +10,11 @@
 #include <sys/time.h>
 #include "../../include/numthreads.h"
 #include <time.h>
-
+enum {
+    _MSEC_PER_SEC = 1000,
+    _USEC_PER_SEC = 1000 * 1000,
+    _NSEC_PER_SEC = 1000 * 1000 * 1000
+};
 void timespec_sub( struct timespec * t_diff, struct timespec const  t_end,  struct timespec const  t_start ) {
     /**<[out] time difference */ /**<[in]  end time */ /**<[in]  start time */
     t_diff->tv_nsec = t_end.tv_nsec - t_start.tv_nsec; t_diff->tv_sec  = t_end.tv_sec  - t_start.tv_sec;
@@ -81,18 +85,18 @@ int main(int argc, char *argv[]){
     int iters=50;
 	pthread_t Threads[ iters ];
 
-	// struct timespec t_start, t_res; struct timespec t_end[iters];
-	// clock_gettime(CLOCK_MONOTONIC, &t_start);
+	struct timespec t_start, t_res; struct timespec t_end[iters];
+	clock_gettime(CLOCK_MONOTONIC, &t_start);
 
-    struct timeval t_start; double result=0.0;
-	struct timeval t_end[iters];
-    gettimeofday(&t_start, NULL);
+    // struct timeval t_start; double result=0.0;
+	// struct timeval t_end[iters];
+    // gettimeofday(&t_start, NULL);
 
 	/****/ 
 
 	for( int i = 0; i < iters; i++ ) {                                     // # seq. for only
-		// clock_gettime(CLOCK_MONOTONIC, &t_end[i]);
-        gettimeofday(&t_end[i], NULL);
+		clock_gettime(CLOCK_MONOTONIC, &t_end[i]);
+        // gettimeofday(&t_end[i], NULL);
 
 		pthread_create( &Threads[ i ], NULL, spawn_function_long, NULL);
 	}
@@ -104,11 +108,11 @@ int main(int argc, char *argv[]){
     printf("****\n");
 	for(int i = 0; i < iters; i++){
 
-		// timespec_sub(&t_res, t_end[i], t_start);
-		// printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+		timespec_sub(&t_res, t_end[i], t_start);
+		printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
-        result = (t_end[i].tv_sec+ (double)t_end[i].tv_usec/1000000) - (t_start.tv_sec+(double)t_start.tv_usec/1000000);
-        printf("%09f\n", result);
+        // result = (t_end[i].tv_sec+ (double)t_end[i].tv_usec/1000000) - (t_start.tv_sec+(double)t_start.tv_usec/1000000);
+        // printf("%09f\n", result);
 	}
 
 	return 0;

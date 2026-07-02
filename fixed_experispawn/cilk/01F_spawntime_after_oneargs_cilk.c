@@ -11,7 +11,11 @@
 #include <sys/time.h>
 #include <math.h>
 #include <time.h>
-
+enum {
+    _MSEC_PER_SEC = 1000,
+    _USEC_PER_SEC = 1000 * 1000,
+    _NSEC_PER_SEC = 1000 * 1000 * 1000
+};
 void timespec_sub( struct timespec * t_diff, struct timespec const  t_end,  struct timespec const  t_start ) {
     /**<[out] time difference */ /**<[in]  end time */ /**<[in]  start time */
     t_diff->tv_nsec = t_end.tv_nsec - t_start.tv_nsec; t_diff->tv_sec  = t_end.tv_sec  - t_start.tv_sec;
@@ -88,26 +92,26 @@ int main(int argc, char *argv[]){
     
 	double x = 15.0;
 
-	// struct timespec t_start, t_res, t_end;
-	// clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
+	struct timespec t_start, t_res, t_end;
+	clock_gettime(CLOCK_MONOTONIC, &t_start); // struct timespec *tp
 	
-    struct timeval t_start, t_end;
-    double result=0.0;
-    gettimeofday(&t_start, NULL);
+    // struct timeval t_start, t_end;
+    // double result=0.0;
+    // gettimeofday(&t_start, NULL);
 
 	//cilk_spawn spawn_function(x); // single spawn with one int arg, can adjust 
     cilk_spawn spawn_function_long(x);
 	
-	// clock_gettime(CLOCK_MONOTONIC, &t_end);
-    gettimeofday(&t_end, NULL); 
+	clock_gettime(CLOCK_MONOTONIC, &t_end);
+    // gettimeofday(&t_end, NULL); 
 
 	cilk_sync;
 
-    // timespec_sub(&t_res, t_end, t_start);
-	// printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
+    timespec_sub(&t_res, t_end, t_start);
+	printf("%ld.%09ld\n", (long)t_res.tv_sec, t_res.tv_nsec);
 
-    result = (t_end.tv_sec+ (double)t_end.tv_usec/1000000) - (t_start.tv_sec+(double)t_start.tv_usec/1000000);
-    printf("%09f\n", result);
+    // result = (t_end.tv_sec+ (double)t_end.tv_usec/1000000) - (t_start.tv_sec+(double)t_start.tv_usec/1000000);
+    // printf("%09f\n", result);
 
 	// printf("01F\n");
 
